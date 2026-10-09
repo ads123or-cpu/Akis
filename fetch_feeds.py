@@ -120,6 +120,7 @@ def main():
             else:
                 failed.append((s['id'], err))
                 if s['id'] in old: feeds[s['id']] = old[s['id']]   # eski haberleri koru
+    import os; os.makedirs('site', exist_ok=True)
     json.dump(dict(generated=now, feeds=feeds), open('site/feeds.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     n = sum(len(f['items']) for f in feeds.values())
     print(f"{len(feeds)} kaynak, {n} haber, {len(failed)} başarısız", *failed, sep='\n  ')
