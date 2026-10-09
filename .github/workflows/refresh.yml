@@ -1,0 +1,38 @@
+name: Akışı yenile
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # her 30 dakikada bir
+  workflow_dispatch:          # Actions sekmesinden elle de çalıştırılabilir
+  push:
+    paths: [sources.json, fetch_feeds.py, index.tpl.html, build.py]
+permissions:
+  contents: write
+concurrency: refresh
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python fetch_feeds.py
+      - run: python build.py
+      - name: Değişiklik varsa kaydet
+        run: |
+          git config user.name "akis-bot"
+          git config user.email "akis-bot@users.noreply.github.com"
+          git add site
+          git diff --cached --quiet || (git commit -m "Akış yenilendi" && git push)
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    permissions: { pages: write, id-token: write, contents: read }
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: d
+        uses: actions/deploy-pages@v4
