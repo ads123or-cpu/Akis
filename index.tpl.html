@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Akış</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Düzen: sert köşeli, ince çizgili "kontrol paneli" hissi. Solda dil/kategori, üstte canlı şerit, ortada kare kenarlı kartlar. */
+:root{
+  --bg:#07080c; --surface:#0e1017; --surface2:#151822; --line:#252a37; --strong:#3b4254; --fg:#f1f3f8; --mute:#8c95aa;
+  --accent:#ffc62e; --accent-fg:#0a0a0a; --live:#ff4b4b; --grid:rgba(255,255,255,.035);
+  --c-tr:#ff6b70; --c-world:#6aa3ff; --c-tech:#2dd4bf; --c-eco:#f2b83a; --c-sci:#a78bfa; --c-cool:#ff915a; --c-viral:#ff6db3; --c-ent:#8b97ff; --c-sport:#97d93f;
+  --display:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif; --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  --bg:#e9ebf0; --surface:#ffffff; --surface2:#f1f3f7; --line:#cdd2dd; --strong:#0b0e14; --fg:#0b0e14; --mute:#566075; --accent:#ffb800; --grid:rgba(0,0,0,.045);
+  --c-tr:#d8262c; --c-world:#1f5fd6; --c-tech:#0a8f87; --c-eco:#a87400; --c-sci:#6b3fd1; --c-cool:#d4540f; --c-viral:#c01f72; --c-ent:#3a49d6; --c-sport:#4a8a00; color-scheme:light}}
+:root[data-theme="light"]{
+  --bg:#e9ebf0; --surface:#ffffff; --surface2:#f1f3f7; --line:#cdd2dd; --strong:#0b0e14; --fg:#0b0e14; --mute:#566075; --accent:#ffb800; --grid:rgba(0,0,0,.045);
+  --c-tr:#d8262c; --c-world:#1f5fd6; --c-tech:#0a8f87; --c-eco:#a87400; --c-sci:#6b3fd1; --c-cool:#d4540f; --c-viral:#c01f72; --c-ent:#3a49d6; --c-sport:#4a8a00; color-scheme:light}
+*{box-sizing:border-box;border-radius:0}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+svg{width:17px;height:17px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:var(--strong)}::-webkit-scrollbar-track{background:transparent}
+.shell{display:grid;grid-template-columns:276px minmax(0,1fr);min-height:100vh}
+/* kenar çubuğu */
+.side{position:sticky;top:0;height:100vh;overflow:auto;padding:20px 16px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:22px;background:var(--bg);scrollbar-width:thin}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;background:var(--accent);color:var(--accent-fg);display:grid;place-items:center;font:800 24px var(--display);letter-spacing:-.05em}
+.brand b{font:800 24px/1 var(--display);letter-spacing:-.03em;text-transform:uppercase;display:block}
+.brand small{display:block;font:500 10.5px var(--mono);color:var(--mute);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
+.search{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);padding:0 12px;color:var(--mute)}
+.search input{flex:1;min-width:0;border:0;background:none;padding:11px 0;outline:none;color:var(--fg)}
+.search:focus-within{border-color:var(--accent)}
+.sec{display:grid;gap:8px}
+.sec h3{margin:0;font:600 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:8px}
+.sec h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--surface)}
+.seg button{border:0;border-right:1px solid var(--line);background:none;padding:9px 2px;font:600 12px var(--font);color:var(--mute);white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg)}
+.sublang{display:flex;flex-wrap:wrap;gap:4px}
+.mini{border:1px solid var(--line);background:var(--surface);padding:3px 8px;font:500 11.5px var(--mono);color:var(--mute)}
+.mini[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.nav{display:grid;gap:1px}
+.nav button{display:flex;align-items:center;gap:10px;border:0;border-left:3px solid transparent;background:none;text-align:left;padding:8px 10px;font-weight:600;font-size:13.5px;color:var(--fg)}
+.nav button:hover{background:var(--surface2)}
+.nav button[aria-pressed="true"]{background:var(--surface2);border-left-color:var(--c,var(--accent))}
+.nav .d{width:8px;height:8px;background:var(--c,var(--mute));flex:none}
+.nav em{margin-left:auto;font:500 11px var(--mono);color:var(--mute);font-style:normal}
+.nav button[aria-pressed="true"] em{color:var(--fg)}
+.side .foot{margin-top:auto;display:grid;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--strong);background:var(--surface);padding:9px 14px;font:600 13px var(--font);text-transform:uppercase;letter-spacing:.04em}
+.btn:hover{background:var(--surface2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn[disabled]{opacity:.6;cursor:progress}
+.btn.spin svg{animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+/* ana alan */
+.main{min-width:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px;background-position:-1px -1px}
+.ticker{display:flex;align-items:stretch;border-bottom:1px solid var(--line);background:var(--surface);height:38px;overflow:hidden;position:sticky;top:0;z-index:6}
+.live{display:flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-fg);padding:0 14px;font:700 11.5px var(--mono);letter-spacing:.12em;flex:none}
+.live i{width:8px;height:8px;background:var(--live);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.tk{flex:1;min-width:0;overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+.tk-in{display:flex;gap:0;width:max-content;height:100%;align-items:center;animation:marq var(--dur,160s) linear infinite}
+.tk:hover .tk-in{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.tk a{display:inline-flex;align-items:center;gap:10px;padding:0 22px;font:500 13px var(--font);white-space:nowrap;border-right:1px solid var(--line);height:100%}
+.tk a:hover{background:var(--surface2)}
+.tk a b{font:600 10.5px var(--mono);color:var(--c);letter-spacing:.06em;text-transform:uppercase}
+.wrapm{padding:20px clamp(16px,3vw,36px) 90px}
+.top{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;padding-bottom:16px;border-bottom:2px solid var(--fg);margin-bottom:6px}
+.top h1{margin:0;font:800 clamp(26px,3.2vw,40px)/1 var(--display);letter-spacing:-.035em;text-transform:uppercase;flex:1 1 280px;min-width:0}
+.top h1 small{display:block;font:500 11.5px var(--mono);color:var(--mute);letter-spacing:.04em;margin-top:8px;text-transform:uppercase}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.vseg{display:inline-flex;border:1px solid var(--strong);background:var(--surface)}
+.vseg button{border:0;border-right:1px solid var(--line);background:none;padding:8px 11px;font:600 12px var(--font);color:var(--mute);display:inline-flex;gap:6px;align-items:center;text-transform:uppercase;letter-spacing:.03em}
+.vseg button:last-child{border-right:0}
+.vseg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+select.sel{background:var(--surface);border:1px solid var(--strong);padding:8px 10px;font:600 12px var(--font);text-transform:uppercase;letter-spacing:.03em}
+.menu{display:none}
+.status{display:flex;gap:18px;flex-wrap:wrap;font:500 11.5px var(--mono);color:var(--mute);margin:12px 0 16px;text-transform:uppercase;letter-spacing:.04em}
+.status b{color:var(--fg);font-weight:600}
+/* kartlar */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;min-width:0;position:relative;transition:transform .14s,box-shadow .14s,border-color .14s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--c);border-color:var(--c)}
+.media{display:block;aspect-ratio:16/9;background:var(--surface2);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.media.noimg{aspect-ratio:16/5}
+.media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)}
+.ph{width:100%;height:100%;display:grid;place-items:center;font:800 46px var(--display);color:color-mix(in srgb,var(--c) 80%,var(--fg));background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--c) 14%,var(--surface)) 0 10px,color-mix(in srgb,var(--c) 6%,var(--surface)) 10px 20px)}
+.badge{position:absolute;left:0;top:0;background:var(--c);color:#0a0a0a;font:700 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 9px}
+.age{position:absolute;right:0;bottom:0;background:var(--bg);color:var(--fg);font:600 11px var(--mono);padding:4px 9px;display:flex;align-items:center;gap:6px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.age.fresh::before{content:"";width:7px;height:7px;background:var(--live);animation:pulse 1.4s infinite}
+.body{padding:14px 15px 12px;display:flex;flex-direction:column;gap:9px;flex:1;min-width:0}
+.meta{display:flex;align-items:center;gap:8px;font:500 11.5px var(--mono);color:var(--mute);min-width:0;flex-wrap:wrap;text-transform:uppercase;letter-spacing:.03em}
+.meta .src{color:var(--fg);font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.meta .lg{border:1px solid var(--strong);padding:0 5px;font-size:10px}
+.title{font:700 18px/1.22 var(--display);letter-spacing:-.015em;overflow-wrap:anywhere}
+.title:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--c)}
+.card[data-read="1"] .title{color:var(--mute);font-weight:600}
+.sum{margin:0;color:var(--mute);font-size:13.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.cfoot{margin-top:auto;display:flex;align-items:center;gap:8px;padding-top:6px}
+.save{margin-left:auto;border:1px solid var(--line);background:none;color:var(--mute);width:32px;height:32px;display:grid;place-items:center}
+.save:hover{background:var(--surface2);color:var(--fg);border-color:var(--strong)}
+.save[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.save[aria-pressed="true"] svg{fill:currentColor}
+.unread{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 22px 22px 0;border-color:transparent var(--accent) transparent transparent;z-index:2}
+.card[data-read="1"] .unread{display:none}
+.card.hero{grid-column:span 2}
+.card.hero .media{aspect-ratio:21/9}
+.card.hero .title{font-size:30px;line-height:1.1;letter-spacing:-.03em}
+.card.hero .sum{font-size:15px}
+/* liste */
+.list{display:grid;gap:10px}
+.list .card{flex-direction:row}
+.list .card:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--c)}
+.list .media{aspect-ratio:auto;width:200px;flex:none;order:2;min-height:120px;border-bottom:0;border-left:1px solid var(--line)}
+.list .ph{font-size:30px}
+.list .sum{-webkit-line-clamp:2}
+.list .title{font-size:17px}
+/* kompakt */
+.compact{display:grid;background:var(--surface);border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:4px 64px minmax(0,1fr) auto;gap:12px;align-items:center;padding:0 14px 0 0;min-height:40px;border-bottom:1px solid var(--line);min-width:0}
+.row:last-child{border-bottom:0}
+.row:hover{background:var(--surface2)}
+.row i{align-self:stretch;background:var(--c)}
+.row .tm{font:500 11.5px var(--mono);color:var(--mute);white-space:nowrap;padding-left:8px}
+.row .tm.fresh{color:var(--live);font-weight:600}
+.row .title{font:600 14px var(--font);letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:9px 0}
+.row[data-read="1"] .title{color:var(--mute);font-weight:500}
+.row .s{font:500 11px var(--mono);color:var(--mute);white-space:nowrap;text-transform:uppercase;max-width:200px;overflow:hidden;text-overflow:ellipsis}
+.empty{padding:70px 16px;text-align:center;color:var(--mute);grid-column:1/-1;border:1px dashed var(--strong)}
+.empty b{display:block;font:800 22px var(--display);color:var(--fg);margin-bottom:6px;text-transform:uppercase}
+.more{margin:28px auto 0;display:flex}
+/* pencere */
+dialog{border:2px solid var(--fg);background:var(--surface);color:var(--fg);padding:0;width:min(760px,calc(100vw - 24px));max-height:calc(100vh - 40px);box-shadow:10px 10px 0 var(--accent)}
+dialog::backdrop{background:rgba(3,4,8,.7)}
+.dlg{display:grid;grid-template-rows:auto auto minmax(0,1fr);max-height:calc(100vh - 44px)}
+.dh{display:flex;align-items:center;gap:10px;padding:18px 20px 8px}
+.dh h2{margin:0;font:800 24px var(--display);letter-spacing:-.03em;text-transform:uppercase;flex:1}
+.dh button{border:1px solid var(--strong);background:none;width:34px;height:34px}
+.add{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;padding:8px 20px 12px}
+.add input,.add select{background:var(--bg);border:1px solid var(--strong);padding:9px 11px;min-width:0;width:100%}
+.add .url{grid-column:1/-1}
+.tools{display:flex;gap:8px;flex-wrap:wrap;padding:0 20px 12px}
+.srcs{overflow:auto;padding:0 20px 20px;border-top:1px solid var(--line)}
+.srcs h4{margin:16px 0 4px;font:600 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.src{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);min-width:0}
+.src label{flex:1;display:flex;align-items:center;gap:9px;min-width:0;cursor:pointer}
+.src .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.src .c{font:11px var(--mono);color:var(--mute);white-space:nowrap}
+.src .x{border:0;background:none;color:var(--mute);font:500 11px var(--mono);text-transform:uppercase;padding:4px 8px}
+.src .x:hover{color:var(--live);background:var(--surface2)}
+input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(22px + env(safe-area-inset-bottom,0px));background:var(--accent);color:var(--accent-fg);padding:10px 16px;font:600 13px var(--mono);text-transform:uppercase;letter-spacing:.04em;z-index:30;max-width:calc(100% - 32px);box-shadow:5px 5px 0 var(--fg)}
+.scrim{display:none}
+/* mobil */
+@media (max-width:980px){
+  .shell{grid-template-columns:1fr}
+  .side{position:fixed;inset:0 auto 0 0;width:min(86vw,320px);z-index:20;transform:translateX(-102%);transition:transform .2s;border-right:2px solid var(--fg)}
+  .side.open{transform:none}
+  .scrim.on{display:block;position:fixed;inset:0;background:rgba(3,4,8,.65);z-index:15}
+  .menu{display:inline-grid;place-items:center;width:40px;height:40px;border:1px solid var(--strong);background:var(--surface)}
+  .card.hero{grid-column:auto}
+  .ticker{top:0}
+}
+@media (max-width:620px){
+  .grid{grid-template-columns:1fr}
+  .list .card{flex-direction:column}
+  .list .media{width:100%;order:0;aspect-ratio:16/9;min-height:0;border-left:0;border-bottom:1px solid var(--line)}
+  .row{grid-template-columns:4px minmax(0,1fr) auto}
+  .row .s{display:none}
+  .row .tm{grid-column:3;grid-row:1}
+  .vseg button span{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.tk-in{animation:none!important;overflow-x:auto}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand"><div class="logo">A</div><div><b>Akış</b><small id="gen"></small></div></div>
+    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Haberlerde ara" aria-label="Ara"></label>
+    <div class="sec"><h3>Dil</h3>
+      <div class="seg" id="langseg"></div>
+      <div class="sublang" id="sublang" hidden></div>
+    </div>
+    <div class="sec"><h3>Kategori</h3><div class="nav" id="cats"></div></div>
+    <div class="sec"><h3>Koleksiyon</h3><div class="nav" id="coll"></div></div>
+    <div class="foot">
+      <button class="btn" id="srcbtn"><svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.2"/></svg>Kaynaklar</button>
+      <button class="btn" id="theme"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="themelbl">Tema</span></button>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main">
+    <div class="ticker"><div class="live"><i></i>CANLI</div><div class="tk"><div class="tk-in" id="tk"></div></div></div>
+    <div class="wrapm">
+    <div class="top">
+      <button class="menu" id="menu" aria-label="Menü"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <h1 id="h1">Tüm haberler<small id="count"></small></h1>
+      <div class="ctl">
+        <div class="vseg" role="group" aria-label="Zaman" id="timeseg">
+          <button data-t="0" aria-pressed="true">Hepsi</button><button data-t="1" aria-pressed="false">1 sa</button><button data-t="3" aria-pressed="false">3 sa</button><button data-t="24" aria-pressed="false">24 sa</button>
+        </div>
+        <div class="vseg" role="group" aria-label="Görünüm">
+          <button id="v-grid" aria-pressed="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg><span>Kart</span></button>
+          <button id="v-list" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Liste</span></button>
+          <button id="v-compact" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 9.7h16M4 14.3h16M4 19h16"/></svg><span>Kompakt</span></button>
+        </div>
+        <select class="sel" id="sort" aria-label="Sıralama"><option value="new">En yeni</option><option value="unread">Okunmamış önce</option></select>
+        <button class="btn primary" id="refresh"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg>Yenile</button>
+      </div>
+    </div>
+    <div class="status" id="status"></div>
+    <div id="out"></div>
+    <button class="btn more" id="more" hidden>Daha fazla göster</button>
+    </div>
+  </main>
+</div>
+<dialog id="dlg"><div class="dlg">
+  <div class="dh"><h2>Kaynaklar</h2><button id="dclose" aria-label="Kapat">✕</button></div>
+  <div>
+    <form class="add" id="addform">
+      <input id="a-name" placeholder="Ad (ör. Webrazzi)" required>
+      <select id="a-lang" aria-label="Dil"></select>
+      <select id="a-cat" aria-label="Kategori"></select>
+      <input class="url" id="a-url" type="url" placeholder="https://site.com/feed" required>
+      <button class="btn primary" type="submit">Kaynak ekle</button>
+    </form>
+    <div class="tools">
+      <button class="btn" id="export" type="button">Dışa aktar</button>
+      <button class="btn" id="import" type="button">İçe aktar</button>
+      <button class="btn" id="reset" type="button">Varsayılana dön</button>
+      <input id="file" type="file" accept="application/json" hidden>
+    </div>
+  </div>
+  <div class="srcs" id="srclist"></div>
+</div></dialog>
+<div class="toast" id="toast" hidden></div>
+
+<script type="application/json" id="snap">/*SNAP*/</script>
+<script>
+const LANG={tr:"Türkçe",en:"English",zh:"中文",es:"Español",fr:"Français",de:"Deutsch",ar:"العربية",ru:"Русский",ja:"日本語",ko:"한국어",pt:"Português",hi:"हिन्दी",id:"Indonesia",fa:"فارسی",vi:"Tiếng Việt",it:"Italiano",pl:"Polski",nl:"Nederlands",uk:"Українська",he:"עברית",th:"ไทย",el:"Ελληνικά",sv:"Svenska"};
+const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
+const CAT=Object.fromEntries(CATS);
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let DEF=JSON.parse($("snap").textContent), GEN=DEF.generated; DEF=DEF.feeds;
+let custom=store.get("custom",{}), deleted=new Set(store.get("deleted",[])), cache=store.get("cache",{}), hidden=new Set(store.get("hidden",[]));
+let saved=store.get("saved",{}), read=new Set(store.get("read",[]));
+let live={}, feeds={}, lang="all", cat="all", q="", view=store.get("view","grid"), sort="new", tfilter=0, limit=60, busy=false, progress="";
+const icon={mark:'<svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'};
+
+function buildFeeds(){feeds={};
+  for(const [id,f] of Object.entries(DEF)) if(!deleted.has(id)){feeds[id]={...f};const lv=live[id];
+    if(lv){const seen=new Set(lv.items.map(x=>x.l));feeds[id].items=lv.items.concat((f.items||[]).filter(x=>!seen.has(x.l)));feeds[id].updated=lv.updated}}
+  for(const [id,f] of Object.entries(custom)) feeds[id]={items:[],...f,...(cache[id]||{})};}
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safe=u=>/^https?:\/\//i.test(u||"")?u:"#";
+function hash(s){let h=5381;for(let i=0;i<s.length;i++)h=((h<<5)+h+s.charCodeAt(i))|0;return (h>>>0).toString(36)}
+function ago(t){const m=Math.max(0,(Date.now()-t)/60000);if(m<1)return"şimdi";if(m<60)return Math.floor(m)+" dk";if(m<1440)return Math.floor(m/60)+" sa";if(m<43200)return Math.floor(m/1440)+" gün";return new Date(t).toLocaleDateString("tr-TR",{day:"numeric",month:"short"})}
+function toast(s){const t=$("toast");t.textContent=s;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,3200)}
+const group=l=>l==="tr"||l==="en"?l:"other";
+const colorOf=c=>`var(--c-${CAT[c]?c:"world"})`;
+const stripSrc=(t,p)=>p&&t.endsWith(" - "+p)?t.slice(0,-(p.length+3)):t;
+
+function allItems(){
+  const out=[],now=Date.now();
+  for(const [sid,f] of Object.entries(feeds)){
+    if(hidden.has(sid))continue;
+    const fb=f.updated?Date.parse(f.updated):now;
+    for(const it of f.items||[]){
+      const ts=it.d?Date.parse(it.d):fb;
+      out.push({id:hash(it.l),sid,src:it.p||f.name||sid,lang:f.lang,cat:f.cat,t:stripSrc(it.t,it.p),l:it.l,s:it.s||"",i:it.i,ts:Math.min(ts||fb,now)});
+    }
+  }
+  // aynı haberi birden çok kaynaktan gösterme (bağlantı ya da başlık aynıysa)
+  const seen=new Map(),res=[];
+  for(const x of out){
+    const key=x.id,tk=x.t.toLowerCase().replace(/[^\p{L}\p{N}]+/gu,"").slice(0,70);
+    let j=seen.get(key);if(j===undefined&&tk.length>25)j=seen.get("t"+tk);
+    if(j!==undefined){if(!res[j].i&&x.i)res[j]=x;continue}
+    seen.set(key,res.length);if(tk.length>25)seen.set("t"+tk,res.length);res.push(x);
+  }
+  return res;
+}
+function matches(x){
+  if(lang==="all")return true;
+  if(lang==="other")return group(x.lang)==="other";
+  return x.lang===lang;
+}
+function render(){
+  const all=allItems(),q2=q.trim().toLowerCase(),cut=tfilter?Date.now()-tfilter*3600e3:0;
+  const sq=x=>(!q2||x.t.toLowerCase().includes(q2)||x.s.toLowerCase().includes(q2))&&x.ts>=cut;
+  const bySearch=all.filter(sq);
+  const lc={all:bySearch.length,tr:0,en:0,other:0};bySearch.forEach(x=>lc[group(x.lang)]++);
+  $("langseg").innerHTML=[["all","Tümü"],["tr","Türkçe"],["en","English"],["other","Diğer"]].map(([k,l])=>`<button data-k="${k}" aria-pressed="${(lang===k)||(k==="other"&&!["all","tr","en"].includes(lang))}" title="${lc[k]} haber">${l}</button>`).join("");
+  const showSub=!["all","tr","en"].includes(lang);
+  $("sublang").hidden=!showSub;
+  if(showSub){const oc={};bySearch.filter(x=>group(x.lang)==="other").forEach(x=>oc[x.lang]=(oc[x.lang]||0)+1);
+    $("sublang").innerHTML=`<button class="mini" data-k="other" aria-pressed="${lang==="other"}">Hepsi</button>`+Object.keys(oc).sort((a,b)=>oc[b]-oc[a]).map(k=>`<button class="mini" data-k="${k}" aria-pressed="${lang===k}">${esc(LANG[k]||k)} ${oc[k]}</button>`).join("")}
+  const inLang=bySearch.filter(matches),cc={};inLang.forEach(x=>cc[x.cat]=(cc[x.cat]||0)+1);
+  $("cats").innerHTML=`<button data-k="all" aria-pressed="${cat==="all"}"><span class="d"></span>Tümü<em>${inLang.length}</em></button>`+CATS.filter(([k])=>cc[k]||cat===k).map(([k,l])=>`<button data-k="${k}" aria-pressed="${cat===k}" style="--c:${colorOf(k)}"><span class="d"></span>${l}<em>${cc[k]||0}</em></button>`).join("");
+  const nUn=inLang.filter(x=>!read.has(x.id)).length,nSv=Object.keys(saved).length;
+  $("coll").innerHTML=`<button data-k="unread" aria-pressed="${cat==="unread"}" style="--c:var(--accent)"><span class="d"></span>Okunmamış<em>${nUn}</em></button><button data-k="saved" aria-pressed="${cat==="saved"}" style="--c:var(--c-eco)"><span class="d"></span>Kaydedilenler<em>${nSv}</em></button>`;
+  let list;
+  if(cat==="saved")list=Object.values(saved).map(x=>({...x})).filter(x=>sq(x)&&matches(x));
+  else list=inLang.filter(x=>cat==="all"||(cat==="unread"?!read.has(x.id):x.cat===cat));
+  list.sort(sort==="unread"?(a,b)=>(read.has(a.id)-read.has(b.id))||b.ts-a.ts:(a,b)=>b.ts-a.ts);
+  const shown=list.slice(0,limit),out=$("out");
+  out.className=view==="grid"?"grid":view==="list"?"list":"compact";
+  out.innerHTML=shown.length?shown.map((x,i)=>view==="compact"?rowHTML(x):cardHTML(x,i)).join(""):`<div class="empty"><b>${cat==="saved"?"Henüz kaydettiğin haber yok":"Eşleşen haber yok"}</b>${cat==="saved"?"Kartlardaki yer imi simgesiyle haber kaydedebilirsin.":"Filtreyi, zaman aralığını ya da aramayı değiştir."}</div>`;
+  $("more").hidden=list.length<=limit;
+  const lbl=cat==="all"?"Tüm haberler":cat==="unread"?"Okunmamış":cat==="saved"?"Kaydedilenler":CAT[cat];
+  const lg=lang==="all"?"":lang==="tr"?" · Türkçe":lang==="en"?" · English":lang==="other"?" · Diğer diller":" · "+(LANG[lang]||lang);
+  $("h1").firstChild.nodeValue=lbl+lg;
+  const nsrc=Object.keys(feeds).filter(k=>!hidden.has(k)).length;
+  $("count").textContent=list.length.toLocaleString("tr-TR")+" haber · "+nsrc+" kaynak";
+  const h1=all.filter(x=>Date.now()-x.ts<=3600e3).length,h3=all.filter(x=>Date.now()-x.ts<=3*3600e3).length;
+  const upd=Object.values(feeds).map(f=>f.updated).filter(Boolean).sort().pop()||GEN;
+  $("status").innerHTML=progress?`<span>${esc(progress)}</span>`:`<span>Son saat <b>${h1.toLocaleString("tr-TR")}</b></span><span>Son 3 saat <b>${h3.toLocaleString("tr-TR")}</b></span><span>Güncelleme <b>${upd?ago(Date.parse(upd))+" önce":"-"}</b></span>`;
+  $("gen").textContent=nsrc+" kaynak · "+all.length.toLocaleString("tr-TR")+" haber";
+  ["grid","list","compact"].forEach(v=>$("v-"+v).setAttribute("aria-pressed",view===v));
+  [...$("timeseg").children].forEach(b=>b.setAttribute("aria-pressed",+b.dataset.t===tfilter));
+  ticker(inLang.length?inLang:all);
+  if($("dlg").open)renderSources();
+}
+function ticker(list){
+  const top=[...list].sort((a,b)=>b.ts-a.ts).slice(0,16);
+  const h=top.map(x=>`<a href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" style="--c:${colorOf(x.cat)}"><b>${ago(x.ts)}</b>${esc(x.t)}</a>`).join("");
+  const tk=$("tk");if(tk.dataset.h===h)return;tk.dataset.h=h;tk.innerHTML=h+h;tk.style.setProperty("--dur",Math.max(60,top.length*9)+"s");
+}
+function mediaHTML(x){
+  const ph=`<div class="ph" aria-hidden="true">${esc((x.src||"?").trim().charAt(0).toUpperCase())}</div>`;
+  return x.i?`<img src="${esc(safe(x.i))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML=this.dataset.ph" data-ph="${esc(ph)}">`:ph;
+}
+function cardHTML(x,i){
+  const r=read.has(x.id)?1:0,sv=saved[x.id]?"true":"false",hero=view==="grid"&&i===0&&x.i&&cat!=="saved",fresh=Date.now()-x.ts<3600e3;
+  return `<article class="card${hero?" hero":""}" data-id="${x.id}" data-read="${r}" style="--c:${colorOf(x.cat)}">
+   <a class="media${x.i?"":" noimg"}" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${mediaHTML(x)}<span class="badge">${esc(CAT[x.cat]||x.cat)}</span><span class="age${fresh?" fresh":""}">${ago(x.ts)}</span></a>
+   <span class="unread"></span>
+   <div class="body"><div class="meta"><span class="src">${esc(x.src)}</span><span class="lg">${esc(x.lang)}</span></div>
+   <a class="title" dir="auto" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a>
+   ${x.s?`<p class="sum" dir="auto">${esc(x.s)}</p>`:""}
+   <div class="cfoot"><button class="save" data-save="${x.id}" aria-pressed="${sv}" aria-label="Kaydet" title="Kaydet">${icon.mark}</button></div></div></article>`;
+}
+function rowHTML(x){
+  const fresh=Date.now()-x.ts<3600e3;
+  return `<a class="row" data-id="${x.id}" data-read="${read.has(x.id)?1:0}" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" style="--c:${colorOf(x.cat)}"><i></i><span class="tm${fresh?" fresh":""}">${ago(x.ts)}</span><span class="title" dir="auto">${esc(x.t)}</span><span class="s">${esc(x.src)}</span></a>`;
+}
+function pick(el,fn){el.addEventListener("click",e=>{const b=e.target.closest("button[data-k]");if(b){fn(b.dataset.k);limit=60;render();closeSide()}})}
+pick($("langseg"),k=>lang=k);pick($("sublang"),k=>lang=k);pick($("cats"),k=>cat=k);pick($("coll"),k=>cat=k);
+$("timeseg").addEventListener("click",e=>{const b=e.target.closest("button[data-t]");if(!b)return;tfilter=+b.dataset.t;limit=60;render()});
+$("out").addEventListener("click",e=>{
+  const sb=e.target.closest("[data-save]");
+  if(sb){const id=sb.dataset.save;if(saved[id]){delete saved[id];toast("Kayıtlardan çıkarıldı")}else{const x=allItems().find(i=>i.id===id);if(x){saved[id]=x;toast("Kaydedildi")}}store.set("saved",saved);render();return}
+  const a=e.target.closest("a.title,a.media,a.row");if(!a)return;
+  const el=a.closest("[data-id]");read.add(el.dataset.id);el.dataset.read="1";clearTimeout(window.ph);window.ph=setTimeout(()=>store.set("read",[...read].slice(-6000)),400);
+});
+$("v-grid").onclick=()=>setView("grid");$("v-list").onclick=()=>setView("list");$("v-compact").onclick=()=>setView("compact");
+function setView(v){view=v;store.set("view",v);render()}
+$("q").oninput=e=>{q=e.target.value;limit=60;render()};
+$("sort").onchange=e=>{sort=e.target.value;render()};
+$("more").onclick=()=>{limit+=60;render()};
+function closeSide(){$("side").classList.remove("open");$("scrim").classList.remove("on")}
+$("menu").onclick=()=>{$("side").classList.add("open");$("scrim").classList.add("on")};$("scrim").onclick=closeSide;
+function applyTheme(t){if(t==="auto")document.documentElement.removeAttribute("data-theme");else document.documentElement.setAttribute("data-theme",t);
+  $("themelbl").textContent=t==="auto"?"Tema: otomatik":t==="dark"?"Tema: koyu":"Tema: açık"}
+let theme=store.get("theme","auto");applyTheme(theme);
+$("theme").onclick=()=>{theme=theme==="auto"?"dark":theme==="dark"?"light":"auto";store.set("theme",theme);applyTheme(theme)};
+/* yenileme */
+const plain=h=>{try{return (new DOMParser().parseFromString(h||"","text/html").body.textContent||"").replace(/\s+/g," ").trim()}catch(e){return""}};
+function pdate(s){if(!s)return null;let d=new Date(s);if(isNaN(d)&&/^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d$/.test(s))d=new Date(s.replace(" ","T")+"Z");return isNaN(d)?null:d.toISOString()}
+function parseXML(text){
+  const doc=new DOMParser().parseFromString(text,"text/xml");if(doc.querySelector("parsererror"))throw new Error("xml");
+  const out=[];
+  for(const n of doc.querySelectorAll("item,entry")){
+    let t="",l="",d=null,desc="",img="";
+    for(const c of n.children){const k=c.localName,v=(c.textContent||"").trim();
+      if(k==="title")t=plain(v);
+      else if(k==="link"){const h=c.getAttribute("href")||v;if(h&&(!c.getAttribute("rel")||c.getAttribute("rel")==="alternate")&&!l)l=h}
+      else if((k==="pubDate"||k==="published"||k==="updated"||k==="date")&&!d)d=pdate(v);
+      else if((k==="description"||k==="summary"||k==="content"||k==="encoded")&&c.children.length===0&&v.length>desc.length)desc=v;
+      else if((k==="thumbnail"||k==="content")&&c.getAttribute("url")&&!img&&(c.getAttribute("type")||"image").includes("image"))img=c.getAttribute("url");
+      else if(k==="enclosure"&&(c.getAttribute("type")||"").includes("image")&&!img)img=c.getAttribute("url");}
+    if(!img){const m=desc.match(/<img[^>]+src=["']([^"']+)/i);if(m)img=m[1].replace(/&amp;/g,"&")}
+    if(t&&l)out.push({t,l,d,s:plain(desc).slice(0,200),i:/^https?:/.test(img)?img:undefined});
+    if(out.length>=40)break;}
+  if(!out.length)throw new Error("empty");return out;
+}
+async function get(url,ms){const ac=new AbortController(),h=setTimeout(()=>ac.abort(),ms);try{const r=await fetch(url,{signal:ac.signal});if(!r.ok)throw new Error(r.status);return r}finally{clearTimeout(h)}}
+async function fetchFeed(url){
+  const e=encodeURIComponent(url);
+  const tries=[
+    async()=>{const j=await (await get("https://api.rss2json.com/v1/api.json?rss_url="+e,15000)).json();if(j.status!=="ok")throw 0;
+      return j.items.slice(0,40).map(x=>({t:plain(x.title),l:x.link,d:pdate(x.pubDate),s:plain(x.description).slice(0,200),i:x.thumbnail||(x.enclosure&&x.enclosure.link)||undefined})).filter(x=>x.t&&x.l)},
+    async()=>parseXML(await (await get("https://corsproxy.io/?url="+e,10000)).text()),
+    async()=>parseXML(await (await get("https://api.allorigins.win/raw?url="+e,10000)).text())];
+  for(const f of tries){try{const r=await f();if(r&&r.length)return r}catch(e){}}
+  throw new Error("fetch");
+}
+async function loadJson(){
+  try{const r=await fetch("feeds.json?"+Date.now(),{cache:"no-store"});if(!r.ok)throw 0;const j=await r.json();
+    if(j&&j.feeds&&Object.keys(j.feeds).length){DEF=j.feeds;GEN=j.generated||GEN;return true}}catch(e){}return false}
+async function refresh(){
+  if(busy)return;busy=true;$("refresh").disabled=true;$("refresh").classList.add("spin");progress="Yenileniyor…";render();
+  const fresh=await loadJson();buildFeeds();render();
+  /* feeds.json bayatsa (sunucu yenilemiyorsa) öncelikli kaynakları tarayıcıdan canlı çek */
+  const stale=!GEN||Date.now()-Date.parse(GEN)>45*60e3;
+  if(stale){
+    const pri=Object.entries(DEF).filter(([id,f])=>!deleted.has(id)&&!hidden.has(id)&&(id.startsWith("gn-tr")||id.startsWith("gnq-")||id.startsWith("gn-en")||["tr","world","tech"].includes(f.cat)&&(f.lang==="tr"||f.lang==="en"))).map(([id])=>id).slice(0,70);
+    let done=0,okc=0;const q=pri.slice();
+    const worker=async()=>{while(q.length){const id=q.shift();try{const items=await fetchFeed(DEF[id].url);live[id]={items,updated:new Date().toISOString()};okc++}catch(e){}
+      done++;if(done%4===0||!q.length){progress=`Canlı çekiliyor ${done}/${pri.length}`;buildFeeds();render()}}};
+    await Promise.all([worker(),worker(),worker(),worker(),worker(),worker()]);
+    buildFeeds();render();
+    if(okc===0)toast("Sunucu verisi bayat ve canlı çekim engellendi: GitHub Actions çalışmıyor olabilir");
+  }
+  const ids=Object.keys(custom).filter(id=>!hidden.has(id));
+  for(let i=0;i<ids.length;i++){progress=`Eklediğin kaynaklar ${i+1}/${ids.length}`;render();
+    try{const items=await fetchFeed(custom[ids[i]].url);cache[ids[i]]={items,updated:new Date().toISOString()}}catch(e){}buildFeeds();}
+  store.set("cache",cache);busy=false;progress="";$("refresh").disabled=false;$("refresh").classList.remove("spin");render();
+  toast(fresh?(stale?"Canlı kaynaklarla güncellendi":"Akış yenilendi"):(location.protocol==="file:"?"Dosyadan açıldı: hazır kopya":"feeds.json okunamadı: hazır kopya"));
+}
+$("refresh").onclick=refresh;
+setInterval(()=>{if(!busy&&!document.hidden)refresh()},10*60*1000);
+/* kaynaklar penceresi */
+function renderSources(){
+  const groups={};for(const [id,f] of Object.entries(feeds)){(groups[f.lang]=groups[f.lang]||[]).push([id,f])}
+  const order=Object.keys(groups).sort((a,b)=>(a==="tr"?-2:a==="en"?-1:0)-(b==="tr"?-2:b==="en"?-1:0)||(LANG[a]||a).localeCompare(LANG[b]||b));
+  $("srclist").innerHTML=order.map(l=>`<h4>${esc(LANG[l]||l)} · ${groups[l].length}</h4>`+groups[l].sort((a,b)=>(a[1].cat||"").localeCompare(b[1].cat||"")||a[1].name.localeCompare(b[1].name)).map(([id,f])=>
+    `<div class="src"><label><input type="checkbox" data-id="${esc(id)}" ${hidden.has(id)?"":"checked"}><span class="n">${esc(f.name)}</span></label><span class="c">${esc(CAT[f.cat]||f.cat)} · ${(f.items||[]).length}</span><button class="x" data-del="${esc(id)}">Sil</button></div>`).join("")).join("");
+}
+$("srcbtn").onclick=()=>{closeSide();renderSources();$("dlg").showModal()};$("dclose").onclick=()=>$("dlg").close();
+$("dlg").addEventListener("click",e=>{if(e.target===$("dlg"))$("dlg").close()});
+$("srclist").addEventListener("change",e=>{const id=e.target.dataset.id;if(!id)return;e.target.checked?hidden.delete(id):hidden.add(id);store.set("hidden",[...hidden]);render()});
+$("srclist").addEventListener("click",e=>{const id=e.target.dataset.del;if(!id)return;const b=e.target;
+  if(b.dataset.arm!=="1"){b.dataset.arm="1";b.textContent="Emin misin?";setTimeout(()=>{b.dataset.arm="";b.textContent="Sil"},3000);return}
+  delete custom[id];delete cache[id];deleted.add(id);store.set("custom",custom);store.set("deleted",[...deleted]);store.set("cache",cache);buildFeeds();render();toast("Kaynak silindi")});
+$("a-lang").innerHTML=Object.entries(LANG).map(([k,v])=>`<option value="${k}">${v}</option>`).join("");
+$("a-cat").innerHTML=CATS.map(([k,v])=>`<option value="${k}">${v}</option>`).join("");
+$("addform").addEventListener("submit",async e=>{e.preventDefault();
+  const name=$("a-name").value.trim(),url=$("a-url").value.trim(),l=$("a-lang").value,c=$("a-cat").value;
+  const id=(name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"kaynak")+"-"+hash(url).slice(0,4);
+  const btn=e.submitter;if(btn)btn.disabled=true;
+  try{const items=await fetchFeed(url);custom[id]={name,url,lang:l,cat:c};cache[id]={items,updated:new Date().toISOString()};
+    store.set("custom",custom);store.set("cache",cache);buildFeeds();$("addform").reset();render();toast(`${name} eklendi (${items.length} haber)`)}
+  catch(err){toast("Bu adresten akış okunamadı. Adresin RSS/Atom olduğundan emin ol.")}
+  if(btn)btn.disabled=false;});
+$("export").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify({custom,deleted:[...deleted],hidden:[...hidden],saved},null,2)],{type:"application/json"}));a.download="akis-ayarlar.json";a.click()};
+$("import").onclick=()=>$("file").click();
+$("file").onchange=async e=>{try{const j=JSON.parse(await e.target.files[0].text());custom=j.custom||{};deleted=new Set(j.deleted||[]);hidden=new Set(j.hidden||[]);saved=j.saved||saved;
+  store.set("custom",custom);store.set("deleted",[...deleted]);store.set("hidden",[...hidden]);store.set("saved",saved);buildFeeds();render();toast("İçe aktarıldı")}catch(err){toast("Dosya okunamadı")}e.target.value=""};
+$("reset").onclick=()=>{const b=$("reset");if(b.dataset.arm!=="1"){b.dataset.arm="1";b.textContent="Emin misin?";setTimeout(()=>{b.dataset.arm="";b.textContent="Varsayılana dön"},3000);return}
+  custom={};deleted=new Set();hidden=new Set();store.set("custom",{});store.set("deleted",[]);store.set("hidden",[]);buildFeeds();render();toast("Varsayılan kaynaklar geri geldi")};
+
+buildFeeds();render();refresh();
+</script>
+</body>
+</html>
