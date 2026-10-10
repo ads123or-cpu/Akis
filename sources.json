@@ -1765,7 +1765,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/headlines/section/geo/Turkey?hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-tr-son",
@@ -1773,7 +1773,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=son+dakika+when:3h&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-tr-dunya",
@@ -1781,7 +1781,7 @@
   "lang": "tr",
   "cat": "world",
   "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-tr-eko",
@@ -1789,7 +1789,7 @@
   "lang": "tr",
   "cat": "eco",
   "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-tr-spor",
@@ -1797,7 +1797,7 @@
   "lang": "tr",
   "cat": "sport",
   "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-tr-saglik",
@@ -1805,7 +1805,7 @@
   "lang": "tr",
   "cat": "sci",
   "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-tr-eglence",
@@ -1813,7 +1813,7 @@
   "lang": "tr",
   "cat": "ent",
   "url": "https://news.google.com/rss/headlines/section/topic/ENTERTAINMENT?hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-ana",
@@ -1821,7 +1821,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-world",
@@ -1829,7 +1829,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-biz",
@@ -1837,7 +1837,7 @@
   "lang": "en",
   "cat": "eco",
   "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-tech",
@@ -1845,7 +1845,7 @@
   "lang": "en",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-sci",
@@ -1853,7 +1853,7 @@
   "lang": "en",
   "cat": "sci",
   "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-sport",
@@ -1861,7 +1861,7 @@
   "lang": "en",
   "cat": "sport",
   "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-ent",
@@ -1869,7 +1869,7 @@
   "lang": "en",
   "cat": "ent",
   "url": "https://news.google.com/rss/headlines/section/topic/ENTERTAINMENT?hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-gb",
@@ -1877,7 +1877,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=en-GB&gl=GB&ceid=GB:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-tr",
@@ -1885,7 +1885,7 @@
   "lang": "en",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=Turkey+when:1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-en-ai",
@@ -1893,7 +1893,7 @@
   "lang": "en",
   "cat": "sci",
   "url": "https://news.google.com/rss/search?q=artificial+intelligence+when:1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-de",
@@ -1901,7 +1901,7 @@
   "lang": "de",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=de&gl=DE&ceid=DE:de",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-de-tech",
@@ -1909,7 +1909,7 @@
   "lang": "de",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=de&gl=DE&ceid=DE:de",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-fr",
@@ -1917,7 +1917,7 @@
   "lang": "fr",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-fr-tech",
@@ -1925,7 +1925,7 @@
   "lang": "fr",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=fr&gl=FR&ceid=FR:fr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-es",
@@ -1933,7 +1933,7 @@
   "lang": "es",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=es&gl=ES&ceid=ES:es",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-es-tech",
@@ -1941,7 +1941,7 @@
   "lang": "es",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=es&gl=ES&ceid=ES:es",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-es-mx",
@@ -1949,7 +1949,7 @@
   "lang": "es",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=es-419&gl=MX&ceid=MX:es-419",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-it",
@@ -1957,7 +1957,7 @@
   "lang": "it",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=it&gl=IT&ceid=IT:it",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-it-tech",
@@ -1965,7 +1965,7 @@
   "lang": "it",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=it&gl=IT&ceid=IT:it",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-pt",
@@ -1973,7 +1973,7 @@
   "lang": "pt",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-pt-tech",
@@ -1981,7 +1981,7 @@
   "lang": "pt",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=pt-BR&gl=BR&ceid=BR:pt-419",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ru",
@@ -1989,7 +1989,7 @@
   "lang": "ru",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=ru&gl=RU&ceid=RU:ru",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ru-tech",
@@ -1997,7 +1997,7 @@
   "lang": "ru",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ja",
@@ -2005,7 +2005,7 @@
   "lang": "ja",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ja-tech",
@@ -2013,7 +2013,7 @@
   "lang": "ja",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ja&gl=JP&ceid=JP:ja",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ko",
@@ -2021,7 +2021,7 @@
   "lang": "ko",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ko-tech",
@@ -2029,7 +2029,7 @@
   "lang": "ko",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-zh",
@@ -2037,7 +2037,7 @@
   "lang": "zh",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-zh-tech",
@@ -2045,7 +2045,7 @@
   "lang": "zh",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-zh-tw",
@@ -2053,7 +2053,7 @@
   "lang": "zh",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ar",
@@ -2061,7 +2061,7 @@
   "lang": "ar",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=ar&gl=SA&ceid=SA:ar",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-ar-tech",
@@ -2069,7 +2069,7 @@
   "lang": "ar",
   "cat": "tech",
   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ar&gl=SA&ceid=SA:ar",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-hi",
@@ -2077,7 +2077,7 @@
   "lang": "hi",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=hi&gl=IN&ceid=IN:hi",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-id",
@@ -2085,7 +2085,7 @@
   "lang": "id",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=id&gl=ID&ceid=ID:id",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-pl",
@@ -2093,7 +2093,7 @@
   "lang": "pl",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=pl&gl=PL&ceid=PL:pl",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-nl",
@@ -2101,7 +2101,7 @@
   "lang": "nl",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=nl&gl=NL&ceid=NL:nl",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-vi",
@@ -2109,7 +2109,7 @@
   "lang": "vi",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-uk",
@@ -2117,7 +2117,7 @@
   "lang": "uk",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=uk&gl=UA&ceid=UA:uk",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-th",
@@ -2125,7 +2125,7 @@
   "lang": "th",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=th&gl=TH&ceid=TH:th",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-el",
@@ -2133,7 +2133,7 @@
   "lang": "el",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=el&gl=GR&ceid=GR:el",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-he",
@@ -2141,7 +2141,7 @@
   "lang": "he",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=he&gl=IL&ceid=IL:he",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gn-sv",
@@ -2149,7 +2149,7 @@
   "lang": "sv",
   "cat": "world",
   "url": "https://news.google.com/rss?hl=sv&gl=SE&ceid=SE:sv",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "lavanguardia",
@@ -2645,7 +2645,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=son%20dakika%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-deprem",
@@ -2653,7 +2653,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=deprem%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-dolar",
@@ -2661,7 +2661,7 @@
   "lang": "tr",
   "cat": "eco",
   "url": "https://news.google.com/rss/search?q=dolar%20alt%C4%B1n%20borsa%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-gs",
@@ -2669,7 +2669,7 @@
   "lang": "tr",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=Galatasaray%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-fb",
@@ -2677,7 +2677,7 @@
   "lang": "tr",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=Fenerbah%C3%A7e%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-bjk",
@@ -2685,7 +2685,7 @@
   "lang": "tr",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=Be%C5%9Fikta%C5%9F%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-ts",
@@ -2693,7 +2693,7 @@
   "lang": "tr",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=Trabzonspor%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-milli",
@@ -2701,7 +2701,7 @@
   "lang": "tr",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=A%20Milli%20Tak%C4%B1m%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-basket",
@@ -2709,7 +2709,7 @@
   "lang": "tr",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=basketbol%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-magazin",
@@ -2717,7 +2717,7 @@
   "lang": "tr",
   "cat": "ent",
   "url": "https://news.google.com/rss/search?q=magazin%20%C3%BCnl%C3%BC%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-dizi",
@@ -2725,7 +2725,7 @@
   "lang": "tr",
   "cat": "ent",
   "url": "https://news.google.com/rss/search?q=dizi%20reyting%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-ai",
@@ -2733,7 +2733,7 @@
   "lang": "tr",
   "cat": "tech",
   "url": "https://news.google.com/rss/search?q=yapay%20zeka%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-iphone",
@@ -2741,7 +2741,7 @@
   "lang": "tr",
   "cat": "tech",
   "url": "https://news.google.com/rss/search?q=iPhone%20Apple%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-uzay",
@@ -2749,7 +2749,7 @@
   "lang": "tr",
   "cat": "sci",
   "url": "https://news.google.com/rss/search?q=uzay%20NASA%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-hava",
@@ -2757,7 +2757,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=hava%20durumu%20uyar%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-polis",
@@ -2765,7 +2765,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=polis%20operasyon%20g%C3%B6zalt%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-mecliss",
@@ -2773,7 +2773,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=TBMM%20siyaset%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-ekonomi",
@@ -2781,7 +2781,7 @@
   "lang": "tr",
   "cat": "eco",
   "url": "https://news.google.com/rss/search?q=enflasyon%20faiz%20Merkez%20Bankas%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-viral",
@@ -2789,7 +2789,7 @@
   "lang": "tr",
   "cat": "viral",
   "url": "https://news.google.com/rss/search?q=sosyal%20medya%20g%C3%BCndem%20viral%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-ilginc",
@@ -2797,7 +2797,7 @@
   "lang": "tr",
   "cat": "cool",
   "url": "https://news.google.com/rss/search?q=ilgin%C3%A7%20haber%20%C5%9Fa%C5%9F%C4%B1rtan%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-egitim",
@@ -2805,7 +2805,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=MEB%20s%C4%B1nav%20YKS%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-trafik",
@@ -2813,7 +2813,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=kaza%20trafik%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-oyun",
@@ -2821,7 +2821,7 @@
   "lang": "tr",
   "cat": "tech",
   "url": "https://news.google.com/rss/search?q=oyun%20PlayStation%20Steam%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-kripto",
@@ -2829,7 +2829,7 @@
   "lang": "tr",
   "cat": "eco",
   "url": "https://news.google.com/rss/search?q=bitcoin%20kripto%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-savunma",
@@ -2837,7 +2837,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=savunma%20sanayii%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-istanbul",
@@ -2845,7 +2845,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=%C4%B0stanbul%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-ankara",
@@ -2853,7 +2853,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=Ankara%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-izmir",
@@ -2861,7 +2861,7 @@
   "lang": "tr",
   "cat": "tr",
   "url": "https://news.google.com/rss/search?q=%C4%B0zmir%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-breaking",
@@ -2869,7 +2869,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss/search?q=breaking%20news%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-ai",
@@ -2877,7 +2877,7 @@
   "lang": "en",
   "cat": "tech",
   "url": "https://news.google.com/rss/search?q=artificial%20intelligence%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-viral",
@@ -2885,7 +2885,7 @@
   "lang": "en",
   "cat": "viral",
   "url": "https://news.google.com/rss/search?q=viral%20trending%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-weird",
@@ -2893,7 +2893,7 @@
   "lang": "en",
   "cat": "cool",
   "url": "https://news.google.com/rss/search?q=weird%20news%20bizarre%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-celeb",
@@ -2901,7 +2901,7 @@
   "lang": "en",
   "cat": "ent",
   "url": "https://news.google.com/rss/search?q=celebrity%20news%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-nfl",
@@ -2909,7 +2909,7 @@
   "lang": "en",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=NBA%20NFL%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-crypto",
@@ -2917,7 +2917,7 @@
   "lang": "en",
   "cat": "eco",
   "url": "https://news.google.com/rss/search?q=bitcoin%20crypto%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-space",
@@ -2925,7 +2925,7 @@
   "lang": "en",
   "cat": "sci",
   "url": "https://news.google.com/rss/search?q=space%20NASA%20SpaceX%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-health",
@@ -2933,7 +2933,7 @@
   "lang": "en",
   "cat": "sci",
   "url": "https://news.google.com/rss/search?q=health%20study%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-turkey",
@@ -2941,7 +2941,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss/search?q=Turkey%20Erdogan%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-ukr",
@@ -2949,7 +2949,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss/search?q=Ukraine%20Gaza%20Iran%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnqe-ev",
@@ -2957,7 +2957,7 @@
   "lang": "en",
   "cat": "tech",
   "url": "https://news.google.com/rss/search?q=Tesla%20electric%20vehicle%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "hurriyet-son",
@@ -3093,7 +3093,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss/search?q=site:reuters.com+when:1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "ap-gn",
@@ -3101,7 +3101,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss/search?q=site:apnews.com+when:1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "independent",
@@ -3173,7 +3173,7 @@
   "lang": "en",
   "cat": "tech",
   "url": "https://news.google.com/rss/search?q=Anthropic+Claude+when:7d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "fastco",
@@ -3213,7 +3213,7 @@
   "lang": "en",
   "cat": "sport",
   "url": "https://news.google.com/rss/search?q=football+transfer+when:1d&hl=en-GB&gl=GB&ceid=GB:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "bbc-football",
@@ -3261,7 +3261,7 @@
   "lang": "en",
   "cat": "eco",
   "url": "https://news.google.com/rss/search?q=site:ft.com+when:1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "nytzh",
@@ -3485,7 +3485,7 @@
   "lang": "en",
   "cat": "world",
   "url": "https://news.google.com/rss/search?q=site:haaretz.com+when:1d&hl=en-US&gl=US&ceid=US:en",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "isna",
@@ -4276,7 +4276,7 @@
   "name": "Anthropic News (GN)",
   "lang": "en",
   "cat": "tech",
-  "plat": "web",
+  "plat": "gnews",
   "url": "https://news.google.com/rss/search?q=site:anthropic.com&hl=en-US&gl=US&ceid=US:en"
  },
  {
@@ -4292,7 +4292,7 @@
   "name": "Meta AI (GN)",
   "lang": "en",
   "cat": "tech",
-  "plat": "web",
+  "plat": "gnews",
   "url": "https://news.google.com/rss/search?q=%22Meta+AI%22+when:3d&hl=en-US&gl=US&ceid=US:en"
  },
  {
@@ -4300,7 +4300,7 @@
   "name": "Instagram/Sosyal medya (GN)",
   "lang": "tr",
   "cat": "viral",
-  "plat": "web",
+  "plat": "gnews",
   "url": "https://news.google.com/rss/search?q=instagram+OR+tiktok+OR+youtube+when:1d&hl=tr&gl=TR&ceid=TR:tr"
  },
  {
@@ -4308,7 +4308,7 @@
   "name": "Fenomen/Influencer (GN)",
   "lang": "tr",
   "cat": "viral",
-  "plat": "web",
+  "plat": "gnews",
   "url": "https://news.google.com/rss/search?q=fenomen+OR+influencer+OR+youtuber+when:2d&hl=tr&gl=TR&ceid=TR:tr"
  },
  {
@@ -4317,7 +4317,7 @@
   "lang": "tr",
   "cat": "sci",
   "url": "https://news.google.com/rss/search?q=kanser%20OR%20diyabet%20OR%20kalp%20OR%20vitamin%20uzman%20uyard%C4%B1%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
  },
  {
   "id": "gnq-bilim2",
@@ -4325,6 +4325,1318 @@
   "lang": "tr",
   "cat": "sci",
   "url": "https://news.google.com/rss/search?q=bilim%20insanlar%C4%B1%20ke%C5%9Ffetti%20OR%20ara%C5%9Ft%C4%B1rma%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
-  "plat": "web"
+  "plat": "gnews"
+ },
+ {
+  "id": "bs-nytimes",
+  "name": "Bluesky · NYTimes",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/nytimes.com/rss"
+ },
+ {
+  "id": "bs-washingtonpost",
+  "name": "Bluesky · Washington Post",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/washingtonpost.com/rss"
+ },
+ {
+  "id": "bs-theguardian",
+  "name": "Bluesky · The Guardian",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/theguardian.com/rss"
+ },
+ {
+  "id": "bs-apnews",
+  "name": "Bluesky · AP",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/apnews.com/rss"
+ },
+ {
+  "id": "bs-reuters",
+  "name": "Bluesky · Reuters",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/reuters.com/rss"
+ },
+ {
+  "id": "bs-theverge",
+  "name": "Bluesky · The Verge",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/theverge.com/rss"
+ },
+ {
+  "id": "bs-techcrunch",
+  "name": "Bluesky · TechCrunch",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/techcrunch.com/rss"
+ },
+ {
+  "id": "bs-wired",
+  "name": "Bluesky · WIRED",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/wired.com/rss"
+ },
+ {
+  "id": "bs-arstechnica",
+  "name": "Bluesky · Ars Technica",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/arstechnica.com/rss"
+ },
+ {
+  "id": "bs-bloomberg",
+  "name": "Bluesky · Bloomberg",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/bloomberg.com/rss"
+ },
+ {
+  "id": "bs-npr",
+  "name": "Bluesky · NPR",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/npr.org/rss"
+ },
+ {
+  "id": "bs-aljazeera",
+  "name": "Bluesky · Al Jazeera",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/aljazeera.com/rss"
+ },
+ {
+  "id": "bs-cnn",
+  "name": "Bluesky · CNN",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/cnn.com/rss"
+ },
+ {
+  "id": "bs-espn",
+  "name": "Bluesky · ESPN",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/espn.com/rss"
+ },
+ {
+  "id": "bs-space",
+  "name": "Bluesky · Space.com",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/space.com/rss"
+ },
+ {
+  "id": "bs-politico",
+  "name": "Bluesky · Politico",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/politico.com/rss"
+ },
+ {
+  "id": "bs-axios",
+  "name": "Bluesky · Axios",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/axios.com/rss"
+ },
+ {
+  "id": "bs-theatlantic",
+  "name": "Bluesky · The Atlantic",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/theatlantic.com/rss"
+ },
+ {
+  "id": "bs-vox",
+  "name": "Bluesky · Vox",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/vox.com/rss"
+ },
+ {
+  "id": "bs-404media",
+  "name": "Bluesky · 404 Media",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/404media.co/rss"
+ },
+ {
+  "id": "bs-theonion",
+  "name": "Bluesky · The Onion",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/theonion.com/rss"
+ },
+ {
+  "id": "bs-kotaku",
+  "name": "Bluesky · Kotaku",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/kotaku.com/rss"
+ },
+ {
+  "id": "bs-ign",
+  "name": "Bluesky · IGN",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/ign.com/rss"
+ },
+ {
+  "id": "bs-polygon",
+  "name": "Bluesky · Polygon",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/polygon.com/rss"
+ },
+ {
+  "id": "bs-cnet",
+  "name": "Bluesky · CNET",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/cnet.com/rss"
+ },
+ {
+  "id": "bs-engadget",
+  "name": "Bluesky · Engadget",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/engadget.com/rss"
+ },
+ {
+  "id": "bs-9to5mac",
+  "name": "Bluesky · 9to5Mac",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/9to5mac.com/rss"
+ },
+ {
+  "id": "bs-euronews",
+  "name": "Bluesky · Euronews",
+  "lang": "en",
+  "cat": "world",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/euronews.com/rss"
+ },
+ {
+  "id": "bs-haberturk",
+  "name": "Bluesky · Habertürk",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/haberturk.com/rss"
+ },
+ {
+  "id": "bs-t24",
+  "name": "Bluesky · T24",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/t24.com.tr/rss"
+ },
+ {
+  "id": "bs-birgun",
+  "name": "Bluesky · BirGün",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/birgun.net/rss"
+ },
+ {
+  "id": "bs-bianet",
+  "name": "Bluesky · bianet",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/bianet.org/rss"
+ },
+ {
+  "id": "bs-medyascope",
+  "name": "Bluesky · Medyascope",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/medyascope.tv/rss"
+ },
+ {
+  "id": "bs-diken",
+  "name": "Bluesky · Diken",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/diken.com.tr/rss"
+ },
+ {
+  "id": "bs-webrazzi",
+  "name": "Bluesky · Webrazzi",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/webrazzi.com/rss"
+ },
+ {
+  "id": "bs-evrimagaci",
+  "name": "Bluesky · Evrim Ağacı",
+  "lang": "tr",
+  "cat": "sci",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/evrimagaci.org/rss"
+ },
+ {
+  "id": "bs-onedio",
+  "name": "Bluesky · Onedio",
+  "lang": "tr",
+  "cat": "viral",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/onedio.com/rss"
+ },
+ {
+  "id": "bs-turkiye",
+  "name": "Bluesky · Türkiye",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/turkiye.bsky.social/rss"
+ },
+ {
+  "id": "bs-futurism",
+  "name": "Bluesky · Futurism",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/futurism.com/rss"
+ },
+ {
+  "id": "bs-quantamagazine",
+  "name": "Bluesky · Quanta",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/quantamagazine.org/rss"
+ },
+ {
+  "id": "bs-newscientist",
+  "name": "Bluesky · New Scientist",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/newscientist.com/rss"
+ },
+ {
+  "id": "bs-bsky",
+  "name": "Bluesky · Bluesky",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "bsky",
+  "url": "https://bsky.app/profile/bsky.app/rss"
+ },
+ {
+  "id": "ms-haber",
+  "name": "Mastodon #haber",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/haber.rss"
+ },
+ {
+  "id": "ms-turkiye",
+  "name": "Mastodon #turkiye",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/turkiye.rss"
+ },
+ {
+  "id": "ms-türkiye",
+  "name": "Mastodon #türkiye",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/t%C3%BCrkiye.rss"
+ },
+ {
+  "id": "ms-teknoloji",
+  "name": "Mastodon #teknoloji",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/teknoloji.rss"
+ },
+ {
+  "id": "ms-yapayzeka",
+  "name": "Mastodon #yapayzeka",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/yapayzeka.rss"
+ },
+ {
+  "id": "ms-gundem",
+  "name": "Mastodon #gundem",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/gundem.rss"
+ },
+ {
+  "id": "ms-bilim",
+  "name": "Mastodon #bilim",
+  "lang": "tr",
+  "cat": "sci",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/bilim.rss"
+ },
+ {
+  "id": "ms-spor",
+  "name": "Mastodon #spor",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/spor.rss"
+ },
+ {
+  "id": "ms-breaking",
+  "name": "Mastodon #breaking",
+  "lang": "en",
+  "cat": "world",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/breaking.rss"
+ },
+ {
+  "id": "ms-news",
+  "name": "Mastodon #news",
+  "lang": "en",
+  "cat": "world",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/news.rss"
+ },
+ {
+  "id": "ms-worldnews",
+  "name": "Mastodon #worldnews",
+  "lang": "en",
+  "cat": "world",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/worldnews.rss"
+ },
+ {
+  "id": "ms-ai",
+  "name": "Mastodon #ai",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/ai.rss"
+ },
+ {
+  "id": "ms-llm",
+  "name": "Mastodon #llm",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/llm.rss"
+ },
+ {
+  "id": "ms-technology",
+  "name": "Mastodon #technology",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/technology.rss"
+ },
+ {
+  "id": "ms-opensource",
+  "name": "Mastodon #opensource",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/opensource.rss"
+ },
+ {
+  "id": "ms-infosec",
+  "name": "Mastodon #infosec",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/infosec.rss"
+ },
+ {
+  "id": "ms-science",
+  "name": "Mastodon #science",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/science.rss"
+ },
+ {
+  "id": "ms-space",
+  "name": "Mastodon #space",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/space.rss"
+ },
+ {
+  "id": "ms-politics",
+  "name": "Mastodon #politics",
+  "lang": "en",
+  "cat": "world",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/politics.rss"
+ },
+ {
+  "id": "ms-climate",
+  "name": "Mastodon #climate",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/climate.rss"
+ },
+ {
+  "id": "ms-gaming",
+  "name": "Mastodon #gaming",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/gaming.rss"
+ },
+ {
+  "id": "ms-music",
+  "name": "Mastodon #music",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/music.rss"
+ },
+ {
+  "id": "ms-film",
+  "name": "Mastodon #film",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/film.rss"
+ },
+ {
+  "id": "ms-art",
+  "name": "Mastodon #art",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/art.rss"
+ },
+ {
+  "id": "ms-photography",
+  "name": "Mastodon #photography",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/photography.rss"
+ },
+ {
+  "id": "ms-economy",
+  "name": "Mastodon #economy",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/economy.rss"
+ },
+ {
+  "id": "ms-football",
+  "name": "Mastodon #football",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/football.rss"
+ },
+ {
+  "id": "ms-formula1",
+  "name": "Mastodon #formula1",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/formula1.rss"
+ },
+ {
+  "id": "ms-history",
+  "name": "Mastodon #history",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/history.rss"
+ },
+ {
+  "id": "ms-memes",
+  "name": "Mastodon #memes",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/tags/memes.rss"
+ },
+ {
+  "id": "msu-gargron",
+  "name": "Mastodon · @Gargron",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/@Gargron.rss"
+ },
+ {
+  "id": "msu-mastodon",
+  "name": "Mastodon · @Mastodon",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "mastodon",
+  "url": "https://mastodon.social/@Mastodon.rss"
+ },
+ {
+  "id": "x-bbcbreaking",
+  "name": "X · BBC Breaking",
+  "lang": "en",
+  "cat": "world",
+  "plat": "x",
+  "url": "x://BBCBreaking"
+ },
+ {
+  "id": "x-reuters",
+  "name": "X · Reuters",
+  "lang": "en",
+  "cat": "world",
+  "plat": "x",
+  "url": "x://Reuters"
+ },
+ {
+  "id": "x-ap",
+  "name": "X · AP",
+  "lang": "en",
+  "cat": "world",
+  "plat": "x",
+  "url": "x://AP"
+ },
+ {
+  "id": "x-nytimes",
+  "name": "X · NYTimes",
+  "lang": "en",
+  "cat": "world",
+  "plat": "x",
+  "url": "x://nytimes"
+ },
+ {
+  "id": "x-cnn",
+  "name": "X · CNN",
+  "lang": "en",
+  "cat": "world",
+  "plat": "x",
+  "url": "x://CNN"
+ },
+ {
+  "id": "x-elonmusk",
+  "name": "X · Elon Musk",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://elonmusk"
+ },
+ {
+  "id": "x-openai",
+  "name": "X · OpenAI",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://OpenAI"
+ },
+ {
+  "id": "x-sama",
+  "name": "X · Sam Altman",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://sama"
+ },
+ {
+  "id": "x-anthropicai",
+  "name": "X · Anthropic",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://AnthropicAI"
+ },
+ {
+  "id": "x-google",
+  "name": "X · Google",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://Google"
+ },
+ {
+  "id": "x-apple",
+  "name": "X · Apple",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://Apple"
+ },
+ {
+  "id": "x-techcrunch",
+  "name": "X · TechCrunch",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://TechCrunch"
+ },
+ {
+  "id": "x-verge",
+  "name": "X · The Verge",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://verge"
+ },
+ {
+  "id": "x-nasa",
+  "name": "X · NASA",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "x",
+  "url": "x://NASA"
+ },
+ {
+  "id": "x-spacex",
+  "name": "X · SpaceX",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "x",
+  "url": "x://SpaceX"
+ },
+ {
+  "id": "x-youtube",
+  "name": "X · YouTube",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://YouTube"
+ },
+ {
+  "id": "x-instagram",
+  "name": "X · Instagram",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://instagram"
+ },
+ {
+  "id": "x-aacomtr",
+  "name": "X · Anadolu Ajansı",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://AAcomtr"
+ },
+ {
+  "id": "x-trthaber",
+  "name": "X · TRT Haber",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://trthaber"
+ },
+ {
+  "id": "x-hurriyet",
+  "name": "X · Hürriyet",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://hurriyet"
+ },
+ {
+  "id": "x-sabah",
+  "name": "X · Sabah",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://sabah"
+ },
+ {
+  "id": "x-sozcucomtr",
+  "name": "X · Sözcü",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://sozcucomtr"
+ },
+ {
+  "id": "x-haberturk",
+  "name": "X · Habertürk",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://haberturk"
+ },
+ {
+  "id": "x-cnnturk",
+  "name": "X · CNN Türk",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://cnnturk"
+ },
+ {
+  "id": "x-ntvcomtr",
+  "name": "X · NTV",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://ntvcomtr"
+ },
+ {
+  "id": "x-bbcturkce",
+  "name": "X · BBC Türkçe",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "x",
+  "url": "x://BBCTurkce"
+ },
+ {
+  "id": "x-webtekno",
+  "name": "X · Webtekno",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://webtekno"
+ },
+ {
+  "id": "x-shiftdeletenet",
+  "name": "X · ShiftDelete",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "x",
+  "url": "x://shiftdeletenet"
+ },
+ {
+  "id": "x-galatasaray",
+  "name": "X · Galatasaray",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "x",
+  "url": "x://Galatasaray"
+ },
+ {
+  "id": "x-fenerbahce",
+  "name": "X · Fenerbahçe",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "x",
+  "url": "x://Fenerbahce"
+ },
+ {
+  "id": "x-besiktas",
+  "name": "X · Beşiktaş",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "x",
+  "url": "x://Besiktas"
+ },
+ {
+  "id": "x-tff_org",
+  "name": "X · TFF",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "x",
+  "url": "x://TFF_Org"
+ },
+ {
+  "id": "gnq-t24",
+  "name": "T24 (GN)",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=site%3At24.com.tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-bbc",
+  "name": "BBC Türkçe (GN)",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=site%3Abbc.com/turkce%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-dw",
+  "name": "DW Türkçe (GN)",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=site%3Adw.com/tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-aa",
+  "name": "Anadolu Ajansı (GN)",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=site%3Aaa.com.tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-trt",
+  "name": "TRT Haber (GN)",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=site%3Atrthaber.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-webtekno",
+  "name": "Webtekno (GN)",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=site%3Awebtekno.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-onedio",
+  "name": "Onedio (GN)",
+  "lang": "tr",
+  "cat": "viral",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=site%3Aonedio.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-kripto2",
+  "name": "Kripto Gündem (GN)",
+  "lang": "tr",
+  "cat": "eco",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=bitcoin%20OR%20ethereum%20OR%20kripto%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-yapayzeka2",
+  "name": "Yapay Zeka (GN)",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=yapay%20zeka%20OR%20ChatGPT%20OR%20OpenAI%20OR%20Gemini%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-siber",
+  "name": "Siber Güvenlik (GN)",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=siber%20sald%C4%B1r%C4%B1%20OR%20veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%20OR%20hackerlar%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-dunya",
+  "name": "Dünyadan (GN)",
+  "lang": "tr",
+  "cat": "world",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=d%C3%BCnya%20g%C3%BCndemi%20OR%20ABD%20OR%20Avrupa%20OR%20Rusya%20OR%20%C3%87in%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-savas",
+  "name": "Savaş/Orta Doğu (GN)",
+  "lang": "tr",
+  "cat": "world",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=Gazze%20OR%20Ukrayna%20OR%20%C4%B0ran%20OR%20Suriye%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-enerji",
+  "name": "Enerji (GN)",
+  "lang": "tr",
+  "cat": "eco",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=elektrik%20zamm%C4%B1%20OR%20do%C4%9Falgaz%20OR%20akaryak%C4%B1t%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-futbol-tr",
+  "name": "Süper Lig (GN)",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=S%C3%BCper%20Lig%20OR%20TFF%20OR%20hakem%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-euroleague",
+  "name": "Euroleague/Basket (GN)",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=Euroleague%20OR%20Basketbol%20S%C3%BCper%20Ligi%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-film",
+  "name": "Sinema (GN)",
+  "lang": "tr",
+  "cat": "ent",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=vizyon%20OR%20sinema%20OR%20fragman%20OR%20Netflix%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-muzik",
+  "name": "Müzik (GN)",
+  "lang": "tr",
+  "cat": "ent",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=%C5%9Fark%C4%B1c%C4%B1%20OR%20alb%C3%BCm%20OR%20konser%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-seyahat",
+  "name": "Seyahat (GN)",
+  "lang": "tr",
+  "cat": "cool",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=tatil%20OR%20seyahat%20OR%20gezi%20rotas%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-yasam",
+  "name": "Yaşam (GN)",
+  "lang": "tr",
+  "cat": "cool",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=ya%C5%9Fam%20OR%20psikoloji%20OR%20ili%C5%9Fkiler%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gne-bbk",
+  "name": "Breaking (GN, UK)",
+  "lang": "en",
+  "cat": "world",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=breaking%20news%20when%3A1d&hl=en-GB&gl=GB&ceid=GB:en"
+ },
+ {
+  "id": "gne-au",
+  "name": "Australia (GN)",
+  "lang": "en",
+  "cat": "world",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=australia%20news%20when%3A1d&hl=en-AU&gl=AU&ceid=AU:en"
+ },
+ {
+  "id": "gne-in",
+  "name": "India (GN)",
+  "lang": "en",
+  "cat": "world",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=india%20news%20when%3A1d&hl=en-IN&gl=IN&ceid=IN:en"
+ },
+ {
+  "id": "gne-ca",
+  "name": "Canada (GN)",
+  "lang": "en",
+  "cat": "world",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=canada%20news%20when%3A1d&hl=en-CA&gl=CA&ceid=CA:en"
+ },
+ {
+  "id": "gne-startup",
+  "name": "Startups (GN)",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=startup%20funding%20OR%20raises%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gne-chips",
+  "name": "Semiconductors (GN)",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=semiconductor%20OR%20chips%20OR%20nvidia%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gne-movies",
+  "name": "Movies (GN)",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=box%20office%20OR%20trailer%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gne-music",
+  "name": "Music (GN)",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=album%20OR%20tour%20OR%20billboard%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gne-soccer",
+  "name": "Soccer (GN)",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=premier%20league%20OR%20champions%20league%20OR%20la%20liga%20when%3A1d&hl=en-GB&gl=GB&ceid=GB:en"
+ },
+ {
+  "id": "gne-f1",
+  "name": "Formula 1 (GN)",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=formula%201%20when%3A1d&hl=en-GB&gl=GB&ceid=GB:en"
+ },
+ {
+  "id": "gne-viral",
+  "name": "Trending (GN)",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=viral%20OR%20trending%20OR%20goes%20viral%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gne-gaming",
+  "name": "Gaming (GN)",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=gaming%20OR%20playstation%20OR%20xbox%20OR%20nintendo%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "rd-news",
+  "name": "r/news",
+  "lang": "en",
+  "cat": "world",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/news/.rss"
+ },
+ {
+  "id": "rd-nba",
+  "name": "r/nba",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/nba/.rss"
+ },
+ {
+  "id": "rd-technology",
+  "name": "r/technology",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/technology/.rss"
+ },
+ {
+  "id": "rd-gadgets",
+  "name": "r/gadgets",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/gadgets/.rss"
+ },
+ {
+  "id": "rd-science",
+  "name": "r/science",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/science/.rss"
+ },
+ {
+  "id": "rd-space",
+  "name": "r/space",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/space/.rss"
+ },
+ {
+  "id": "rd-futurology",
+  "name": "r/Futurology",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/Futurology/.rss"
+ },
+ {
+  "id": "rd-openai",
+  "name": "r/OpenAI",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/OpenAI/.rss"
+ },
+ {
+  "id": "rd-claudeai",
+  "name": "r/ClaudeAI",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/ClaudeAI/.rss"
+ },
+ {
+  "id": "rd-localllama",
+  "name": "r/LocalLLaMA",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/LocalLLaMA/.rss"
+ },
+ {
+  "id": "rd-apple",
+  "name": "r/apple",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/apple/.rss"
+ },
+ {
+  "id": "rd-programming",
+  "name": "r/programming",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/programming/.rss"
+ },
+ {
+  "id": "rd-interestingasfuck",
+  "name": "r/interestingasfuck",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/interestingasfuck/.rss"
+ },
+ {
+  "id": "rd-todayilearned",
+  "name": "r/todayilearned",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/todayilearned/.rss"
+ },
+ {
+  "id": "rd-nextfuckinglevel",
+  "name": "r/nextfuckinglevel",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/nextfuckinglevel/.rss"
+ },
+ {
+  "id": "rd-memes",
+  "name": "r/memes",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/memes/.rss"
+ },
+ {
+  "id": "rd-movies",
+  "name": "r/movies",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/movies/.rss"
+ },
+ {
+  "id": "rd-gaming",
+  "name": "r/gaming",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/gaming/.rss"
+ },
+ {
+  "id": "rd-soccer",
+  "name": "r/soccer",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/soccer/.rss"
+ },
+ {
+  "id": "rd-economics",
+  "name": "r/economics",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/economics/.rss"
+ },
+ {
+  "id": "rd-cryptocurrency",
+  "name": "r/CryptoCurrency",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/CryptoCurrency/.rss"
+ },
+ {
+  "id": "rd-turkey",
+  "name": "r/Turkey",
+  "lang": "en",
+  "cat": "tr",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/Turkey/.rss"
+ },
+ {
+  "id": "rd-kgbtr",
+  "name": "r/KGBTR",
+  "lang": "tr",
+  "cat": "viral",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/KGBTR/.rss"
+ },
+ {
+  "id": "rd-turkeyjerky",
+  "name": "r/TurkeyJerky",
+  "lang": "en",
+  "cat": "tr",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/TurkeyJerky/.rss"
+ },
+ {
+  "id": "rd-turkiye",
+  "name": "r/Turkiye",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/Turkiye/.rss"
+ },
+ {
+  "id": "rd-sorun",
+  "name": "r/sorun",
+  "lang": "tr",
+  "cat": "viral",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/sorun/.rss"
+ },
+ {
+  "id": "rd-burdurland",
+  "name": "r/burdurland",
+  "lang": "tr",
+  "cat": "viral",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/burdurland/.rss"
  }
 ]

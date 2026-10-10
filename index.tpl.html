@@ -57,7 +57,7 @@ svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke
 .chip[aria-pressed="true"] em{color:inherit;opacity:.65}
 .chip[aria-pressed="true"] .d{box-shadow:0 0 0 3px color-mix(in srgb,var(--c,#fff) 40%,transparent)}
 .row2{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:6px 0 18px}
-.seg{display:inline-flex;background:var(--bg3);border-radius:12px;padding:3px;gap:2px}
+.seg{display:inline-flex;flex-wrap:wrap;background:var(--bg3);border-radius:12px;padding:3px;gap:2px}
 .seg button{height:34px;padding:0 13px;border-radius:9px;font-weight:600;font-size:13px;color:var(--ink2);display:inline-flex;align-items:center;gap:6px}
 .seg button[aria-pressed="true"]{background:var(--bg2);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 .seg svg{width:16px;height:16px}
@@ -236,8 +236,8 @@ dialog::backdrop{background:rgba(5,7,15,.6);backdrop-filter:blur(4px)}
 const LANG={tr:"Türkçe",en:"English",zh:"中文",es:"Español",fr:"Français",de:"Deutsch",ar:"العربية",ru:"Русский",ja:"日本語",ko:"한국어",pt:"Português",hi:"हिन्दी",id:"Indonesia",fa:"فارسی",vi:"Tiếng Việt",it:"Italiano",pl:"Polski",nl:"Nederlands",uk:"Українська",he:"עברית",th:"ไทย",el:"Ελληνικά",sv:"Svenska"};
 const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
 const CAT=Object.fromEntries(CATS);
-const PLAT={web:"Haber siteleri",youtube:"YouTube",reddit:"Reddit",medium:"Medium",dev:"DEV / Blog",hn:"Hacker News",mastodon:"Mastodon",wiki:"Wikipedia"};
-const PLATSHORT={web:"Web",youtube:"▶ YouTube",reddit:"Reddit",medium:"Medium",dev:"DEV",hn:"HN",mastodon:"Mastodon",wiki:"Wiki"};
+const PLAT={web:"Haber siteleri",gnews:"Google Haberler",x:"X (Twitter)",bsky:"Bluesky",mastodon:"Mastodon",reddit:"Reddit",youtube:"YouTube",medium:"Medium",dev:"DEV / Blog",hn:"Hacker News",wiki:"Wikipedia"};
+const PLATSHORT={web:"Haber siteleri",gnews:"Google Haberler",x:"𝕏",bsky:"Bluesky",mastodon:"Mastodon",reddit:"Reddit",youtube:"▶ YouTube",medium:"Medium",dev:"DEV",hn:"HN",wiki:"Wiki"};
 const $=id=>document.getElementById(id);
 const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let DEF=JSON.parse($("snap").textContent), GEN=DEF.generated; DEF=DEF.feeds;
@@ -296,7 +296,7 @@ function render(){
   // platform
   const pc={};bySearch.filter(langOK).forEach(x=>pc[x.plat]=(pc[x.plat]||0)+1);
   const plist=Object.keys(PLAT).filter(k=>pc[k]||plat===k);
-  $("platseg").innerHTML=`<button data-k="all" aria-pressed="${plat==="all"}">Tüm platformlar</button>`+plist.map(k=>`<button data-k="${k}" aria-pressed="${plat===k}" title="${pc[k]||0} haber">${esc(PLATSHORT[k])}</button>`).join("");
+  $("platseg").innerHTML=`<button data-k="all" aria-pressed="${plat==="all"}">Tüm kaynaklar</button>`+plist.map(k=>`<button data-k="${k}" aria-pressed="${plat===k}" title="${pc[k]||0} haber">${esc(PLATSHORT[k])}</button>`).join("");
   // kategori
   const inLang=bySearch.filter(x=>langOK(x)&&platOK(x)),cc={};inLang.forEach(x=>cc[x.cat]=(cc[x.cat]||0)+1);
   const nUn=inLang.filter(x=>!read.has(x.id)).length,nSv=Object.keys(saved).length;
@@ -410,7 +410,7 @@ async function refresh(){
   const fresh=await loadJson();buildFeeds();render();
   const stale=!GEN||Date.now()-Date.parse(GEN)>45*60e3;
   if(stale){
-    const pri=Object.entries(DEF).filter(([id,f])=>!deleted.has(id)&&!hidden.has(id)&&(f.plat||"web")==="web"&&(id.startsWith("gn-tr")||id.startsWith("gnq-")||id.startsWith("gn-en")||["tr","world","tech"].includes(f.cat)&&(f.lang==="tr"||f.lang==="en"))).map(([id])=>id).slice(0,70);
+    const pri=Object.entries(DEF).filter(([id,f])=>!deleted.has(id)&&!hidden.has(id)&&["web","gnews"].includes(f.plat||"web")&&(id.startsWith("gn-tr")||id.startsWith("gnq-")||id.startsWith("gn-en")||["tr","world","tech"].includes(f.cat)&&(f.lang==="tr"||f.lang==="en"))).map(([id])=>id).slice(0,70);
     let done=0,okc=0;const qq=pri.slice();
     const worker=async()=>{while(qq.length){const id=qq.shift();try{const items=await fetchFeed(DEF[id].url);live[id]={items,updated:new Date().toISOString()};okc++}catch(e){}
       done++;if(done%4===0||!qq.length){progress=`Canlı çekiliyor ${done}/${pri.length}`;buildFeeds();render()}}};

@@ -134,12 +134,34 @@ def fetch(url):
     if r.headers.get('Content-Encoding') == 'gzip' or data[:2] == b'\x1f\x8b': data = gzip.decompress(data)
     return data
 
+
+def fetch_x(handle):
+    """X (Twitter) herkese açık gömme zaman tünelinden gönderileri çeker (giriş gerektirmez; X engellerse boş döner)."""
+    u = 'https://syndication.twitter.com/srv/timeline-profile/screen-name/' + handle
+    req = urllib.request.Request(u, headers={'User-Agent': UA, 'Accept-Language': 'en-US,en;q=0.9'})
+    raw = urllib.request.urlopen(req, timeout=25).read().decode('utf-8', 'ignore')
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', raw, re.S)
+    if not m: return []
+    j = json.loads(m.group(1)); out = []
+    for e in j.get('props', {}).get('pageProps', {}).get('timeline', {}).get('entries', []):
+        tw = (e.get('content') or {}).get('tweet') or {}
+        txt = html.unescape(tw.get('full_text') or tw.get('text') or '')
+        if not txt or tw.get('in_reply_to_status_id_str'): continue
+        txt = re.sub(r'https://t\.co/\w+', '', txt).strip()
+        link = 'https://x.com' + (tw.get('permalink') or '/%s/status/%s' % (handle, tw.get('id_str')))
+        media = ((tw.get('entities') or {}).get('media') or [{}])[0].get('media_url_https')
+        it = dict(t=txt[:140], l=link, d=pdate(tw.get('created_at')), s=txt[:200])
+        if media: it['i'] = media
+        out.append(it)
+    out.sort(key=lambda x: x.get('d') or '', reverse=True)
+    return out[:MAX_ITEMS]
+
 def go(s):
     err = 'bos'
     for attempt in range(2):
         try:
             host_wait(s['url'])
-            items = parse(fetch(s['url']))
+            items = fetch_x(s['url'][4:]) if s['url'].startswith('x://') else parse(fetch(s['url']))
             if items: return s, items, None
         except Exception as e:
             err = str(e)[:80]
