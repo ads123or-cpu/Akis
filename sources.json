@@ -4,3205 +4,4327 @@
   "name": "Hürriyet",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.hurriyet.com.tr/rss/gundem"
+  "url": "https://www.hurriyet.com.tr/rss/gundem",
+  "plat": "web"
  },
  {
   "id": "sozcu",
   "name": "Sözcü",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.sozcu.com.tr/feeds-rss-category-sozcu"
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-sozcu",
+  "plat": "web"
  },
  {
   "id": "haberturk",
   "name": "Habertürk",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.haberturk.com/rss"
+  "url": "https://www.haberturk.com/rss",
+  "plat": "web"
  },
  {
   "id": "bbc-tr",
   "name": "BBC Türkçe",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://feeds.bbci.co.uk/turkce/rss.xml"
+  "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
+  "plat": "web"
  },
  {
   "id": "dw-tr",
   "name": "DW Türkçe",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://rss.dw.com/rdf/rss-tur-all"
+  "url": "https://rss.dw.com/rdf/rss-tur-all",
+  "plat": "web"
  },
  {
   "id": "ntv",
   "name": "NTV",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.ntv.com.tr/gundem.rss"
+  "url": "https://www.ntv.com.tr/gundem.rss",
+  "plat": "web"
  },
  {
   "id": "cnnturk",
   "name": "CNN Türk",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.cnnturk.com/feed/rss/all/news"
+  "url": "https://www.cnnturk.com/feed/rss/all/news",
+  "plat": "web"
  },
  {
   "id": "trthaber",
   "name": "TRT Haber",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.trthaber.com/sondakika.rss"
+  "url": "https://www.trthaber.com/sondakika.rss",
+  "plat": "web"
  },
  {
   "id": "aa",
   "name": "Anadolu Ajansı",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel"
+  "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel",
+  "plat": "web"
  },
  {
   "id": "cumhuriyet",
   "name": "Cumhuriyet",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
+  "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
+  "plat": "web"
  },
  {
   "id": "milliyet",
   "name": "Milliyet",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.milliyet.com.tr/rss/rssnew/gundemrss.xml"
+  "url": "https://www.milliyet.com.tr/rss/rssnew/gundemrss.xml",
+  "plat": "web"
  },
  {
   "id": "sabah",
   "name": "Sabah",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.sabah.com.tr/rss/gundem.xml"
+  "url": "https://www.sabah.com.tr/rss/gundem.xml",
+  "plat": "web"
  },
  {
   "id": "birgun",
   "name": "BirGün",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.birgun.net/rss/home"
+  "url": "https://www.birgun.net/rss/home",
+  "plat": "web"
  },
  {
   "id": "gazeteduvar",
   "name": "Gazete Duvar",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.gazeteduvar.com.tr/export/rss"
+  "url": "https://www.gazeteduvar.com.tr/export/rss",
+  "plat": "web"
  },
  {
   "id": "bianet",
   "name": "bianet",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://bianet.org/rss/bianet"
+  "url": "https://bianet.org/rss/bianet",
+  "plat": "web"
  },
  {
   "id": "medyascope",
   "name": "Medyascope",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://medyascope.tv/feed/"
+  "url": "https://medyascope.tv/feed/",
+  "plat": "web"
  },
  {
   "id": "diken",
   "name": "Diken",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.diken.com.tr/feed/"
+  "url": "https://www.diken.com.tr/feed/",
+  "plat": "web"
  },
  {
   "id": "euronews-tr",
   "name": "Euronews Türkçe",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://tr.euronews.com/rss?format=mrss"
+  "url": "https://tr.euronews.com/rss?format=mrss",
+  "plat": "web"
  },
  {
   "id": "indyturk",
   "name": "Independent Türkçe",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.indyturk.com/rss.xml"
+  "url": "https://www.indyturk.com/rss.xml",
+  "plat": "web"
  },
  {
   "id": "karar",
   "name": "Karar",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.karar.com/rss"
+  "url": "https://www.karar.com/rss",
+  "plat": "web"
  },
  {
   "id": "internethaber",
   "name": "İnternet Haber",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.internethaber.com/rss"
+  "url": "https://www.internethaber.com/rss",
+  "plat": "web"
  },
  {
   "id": "ensonhaber",
   "name": "En Son Haber",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.ensonhaber.com/rss/ensonhaber.xml"
+  "url": "https://www.ensonhaber.com/rss/ensonhaber.xml",
+  "plat": "web"
  },
  {
   "id": "hurriyet-dunya",
   "name": "Hürriyet Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.hurriyet.com.tr/rss/dunya"
+  "url": "https://www.hurriyet.com.tr/rss/dunya",
+  "plat": "web"
  },
  {
   "id": "sabah-dunya",
   "name": "Sabah Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.sabah.com.tr/rss/dunya.xml"
+  "url": "https://www.sabah.com.tr/rss/dunya.xml",
+  "plat": "web"
  },
  {
   "id": "ntv-dunya",
   "name": "NTV Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.ntv.com.tr/dunya.rss"
+  "url": "https://www.ntv.com.tr/dunya.rss",
+  "plat": "web"
  },
  {
   "id": "haberturk-dunya",
   "name": "Habertürk Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.haberturk.com/rss/dunya.xml"
+  "url": "https://www.haberturk.com/rss/dunya.xml",
+  "plat": "web"
  },
  {
   "id": "bloomberght",
   "name": "Bloomberg HT",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.bloomberght.com/rss"
+  "url": "https://www.bloomberght.com/rss",
+  "plat": "web"
  },
  {
   "id": "ekonomim",
   "name": "Ekonomim",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.ekonomim.com/rss"
+  "url": "https://www.ekonomim.com/rss",
+  "plat": "web"
  },
  {
   "id": "dunya-gzt",
   "name": "Dünya Gazetesi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.dunya.com/rss"
+  "url": "https://www.dunya.com/rss",
+  "plat": "web"
  },
  {
   "id": "fotomac",
   "name": "Fotomaç",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.fotomac.com.tr/rss/anasayfa.xml"
+  "url": "https://www.fotomac.com.tr/rss/anasayfa.xml",
+  "plat": "web"
  },
  {
   "id": "webrazzi",
   "name": "Webrazzi",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://webrazzi.com/feed/"
+  "url": "https://webrazzi.com/feed/",
+  "plat": "web"
  },
  {
   "id": "shiftdelete",
   "name": "ShiftDelete.Net",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://shiftdelete.net/feed"
+  "url": "https://shiftdelete.net/feed",
+  "plat": "web"
  },
  {
   "id": "donanimhaber",
   "name": "DonanımHaber",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.donanimhaber.com/rss/tum/"
+  "url": "https://www.donanimhaber.com/rss/tum/",
+  "plat": "web"
  },
  {
   "id": "webtekno",
   "name": "Webtekno",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.webtekno.com/rss.xml"
+  "url": "https://www.webtekno.com/rss.xml",
+  "plat": "web"
  },
  {
   "id": "technopat",
   "name": "Technopat",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.technopat.net/feed/"
+  "url": "https://www.technopat.net/feed/",
+  "plat": "web"
  },
  {
   "id": "log",
   "name": "LOG",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.log.com.tr/feed/"
+  "url": "https://www.log.com.tr/feed/",
+  "plat": "web"
  },
  {
   "id": "teknoseyir",
   "name": "Teknoseyir",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://teknoseyir.com/feed"
+  "url": "https://teknoseyir.com/feed",
+  "plat": "web"
  },
  {
   "id": "chip-tr",
   "name": "CHIP Online",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.chip.com.tr/rss"
+  "url": "https://www.chip.com.tr/rss",
+  "plat": "web"
  },
  {
   "id": "tamindir",
   "name": "Tamindir",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.tamindir.com/feed/"
+  "url": "https://www.tamindir.com/feed/",
+  "plat": "web"
  },
  {
   "id": "evrim",
   "name": "Evrim Ağacı",
   "lang": "tr",
   "cat": "sci",
-  "url": "https://evrimagaci.org/rss.xml"
+  "url": "https://evrimagaci.org/rss.xml",
+  "plat": "web"
  },
  {
   "id": "trends-tr",
   "name": "Google Trends TR",
   "lang": "tr",
   "cat": "viral",
-  "url": "https://trends.google.com/trending/rss?geo=TR"
+  "url": "https://trends.google.com/trending/rss?geo=TR",
+  "plat": "web"
  },
  {
   "id": "hn",
   "name": "Hacker News",
   "lang": "en",
   "cat": "tech",
-  "url": "https://hnrss.org/frontpage"
+  "url": "https://hnrss.org/frontpage",
+  "plat": "web"
  },
  {
   "id": "verge",
   "name": "The Verge",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.theverge.com/rss/index.xml"
+  "url": "https://www.theverge.com/rss/index.xml",
+  "plat": "web"
  },
  {
   "id": "techcrunch",
   "name": "TechCrunch",
   "lang": "en",
   "cat": "tech",
-  "url": "https://techcrunch.com/feed/"
+  "url": "https://techcrunch.com/feed/",
+  "plat": "web"
  },
  {
   "id": "ars",
   "name": "Ars Technica",
   "lang": "en",
   "cat": "tech",
-  "url": "https://feeds.arstechnica.com/arstechnica/index"
+  "url": "https://feeds.arstechnica.com/arstechnica/index",
+  "plat": "web"
  },
  {
   "id": "wired",
   "name": "Wired",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.wired.com/feed/rss"
+  "url": "https://www.wired.com/feed/rss",
+  "plat": "web"
  },
  {
   "id": "engadget",
   "name": "Engadget",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.engadget.com/rss.xml"
+  "url": "https://www.engadget.com/rss.xml",
+  "plat": "web"
  },
  {
   "id": "gizmodo",
   "name": "Gizmodo",
   "lang": "en",
   "cat": "tech",
-  "url": "https://gizmodo.com/rss"
+  "url": "https://gizmodo.com/rss",
+  "plat": "web"
  },
  {
   "id": "9to5mac",
   "name": "9to5Mac",
   "lang": "en",
   "cat": "tech",
-  "url": "https://9to5mac.com/feed/"
+  "url": "https://9to5mac.com/feed/",
+  "plat": "web"
  },
  {
   "id": "9to5google",
   "name": "9to5Google",
   "lang": "en",
   "cat": "tech",
-  "url": "https://9to5google.com/feed/"
+  "url": "https://9to5google.com/feed/",
+  "plat": "web"
  },
  {
   "id": "macrumors",
   "name": "MacRumors",
   "lang": "en",
   "cat": "tech",
-  "url": "https://feeds.macrumors.com/MacRumors-All"
+  "url": "https://feeds.macrumors.com/MacRumors-All",
+  "plat": "web"
  },
  {
   "id": "mit-tr",
   "name": "MIT Technology Review",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.technologyreview.com/feed/"
+  "url": "https://www.technologyreview.com/feed/",
+  "plat": "web"
  },
  {
   "id": "cnet",
   "name": "CNET",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.cnet.com/rss/news/"
+  "url": "https://www.cnet.com/rss/news/",
+  "plat": "web"
  },
  {
   "id": "zdnet",
   "name": "ZDNet",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.zdnet.com/news/rss.xml"
+  "url": "https://www.zdnet.com/news/rss.xml",
+  "plat": "web"
  },
  {
   "id": "techmeme",
   "name": "Techmeme",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.techmeme.com/feed.xml"
+  "url": "https://www.techmeme.com/feed.xml",
+  "plat": "web"
  },
  {
   "id": "theregister",
   "name": "The Register",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.theregister.com/headlines.atom"
+  "url": "https://www.theregister.com/headlines.atom",
+  "plat": "web"
  },
  {
   "id": "androidauthority",
   "name": "Android Authority",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.androidauthority.com/feed/"
+  "url": "https://www.androidauthority.com/feed/",
+  "plat": "web"
  },
  {
   "id": "tomshardware",
   "name": "Tom's Hardware",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.tomshardware.com/feeds/all"
+  "url": "https://www.tomshardware.com/feeds/all",
+  "plat": "web"
  },
  {
   "id": "thenextweb",
   "name": "TNW",
   "lang": "en",
   "cat": "tech",
-  "url": "https://thenextweb.com/feed"
+  "url": "https://thenextweb.com/feed",
+  "plat": "web"
  },
  {
   "id": "hackaday",
   "name": "Hackaday",
   "lang": "en",
   "cat": "tech",
-  "url": "https://hackaday.com/blog/feed/"
+  "url": "https://hackaday.com/blog/feed/",
+  "plat": "web"
  },
  {
   "id": "producthunt",
   "name": "Product Hunt",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.producthunt.com/feed"
+  "url": "https://www.producthunt.com/feed",
+  "plat": "web"
  },
  {
   "id": "the-decoder",
   "name": "The Decoder (AI)",
   "lang": "en",
   "cat": "sci",
-  "url": "https://the-decoder.com/feed/"
+  "url": "https://the-decoder.com/feed/",
+  "plat": "web"
  },
  {
   "id": "hf-blog",
   "name": "Hugging Face Blog",
   "lang": "en",
   "cat": "sci",
-  "url": "https://huggingface.co/blog/feed.xml"
+  "url": "https://huggingface.co/blog/feed.xml",
+  "plat": "web"
  },
  {
   "id": "openai",
   "name": "OpenAI",
   "lang": "en",
   "cat": "sci",
-  "url": "https://openai.com/news/rss.xml"
+  "url": "https://openai.com/news/rss.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-world",
   "name": "BBC World",
   "lang": "en",
   "cat": "world",
-  "url": "http://feeds.bbci.co.uk/news/world/rss.xml"
+  "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+  "plat": "web"
  },
  {
   "id": "guardian",
   "name": "The Guardian",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.theguardian.com/world/rss"
+  "url": "https://www.theguardian.com/world/rss",
+  "plat": "web"
  },
  {
   "id": "aljazeera",
   "name": "Al Jazeera",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.aljazeera.com/xml/rss/all.xml"
+  "url": "https://www.aljazeera.com/xml/rss/all.xml",
+  "plat": "web"
  },
  {
   "id": "npr",
   "name": "NPR",
   "lang": "en",
   "cat": "world",
-  "url": "https://feeds.npr.org/1001/rss.xml"
+  "url": "https://feeds.npr.org/1001/rss.xml",
+  "plat": "web"
  },
  {
   "id": "nyt",
   "name": "New York Times",
   "lang": "en",
   "cat": "world",
-  "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
- },
- {
-  "id": "cnn",
-  "name": "CNN",
-  "lang": "en",
-  "cat": "world",
-  "url": "http://rss.cnn.com/rss/edition.rss"
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+  "plat": "web"
  },
  {
   "id": "sky",
   "name": "Sky News",
   "lang": "en",
   "cat": "world",
-  "url": "https://feeds.skynews.com/feeds/rss/world.xml"
+  "url": "https://feeds.skynews.com/feeds/rss/world.xml",
+  "plat": "web"
  },
  {
   "id": "wapo",
   "name": "Washington Post",
   "lang": "en",
   "cat": "world",
-  "url": "https://feeds.washingtonpost.com/rss/world"
+  "url": "https://feeds.washingtonpost.com/rss/world",
+  "plat": "web"
  },
  {
   "id": "dw-en",
   "name": "DW English",
   "lang": "en",
   "cat": "world",
-  "url": "https://rss.dw.com/rdf/rss-en-all"
+  "url": "https://rss.dw.com/rdf/rss-en-all",
+  "plat": "web"
  },
  {
   "id": "france24-en",
   "name": "France 24",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.france24.com/en/rss"
+  "url": "https://www.france24.com/en/rss",
+  "plat": "web"
  },
  {
   "id": "axios",
   "name": "Axios",
   "lang": "en",
   "cat": "world",
-  "url": "https://api.axios.com/feed/"
+  "url": "https://api.axios.com/feed/",
+  "plat": "web"
  },
  {
   "id": "abc-au",
   "name": "ABC Australia",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.abc.net.au/news/feed/51120/rss.xml"
+  "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+  "plat": "web"
  },
  {
   "id": "cbs",
   "name": "CBS News",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.cbsnews.com/latest/rss/main"
+  "url": "https://www.cbsnews.com/latest/rss/main",
+  "plat": "web"
  },
  {
   "id": "scmp",
   "name": "SCMP",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.scmp.com/rss/91/feed"
+  "url": "https://www.scmp.com/rss/91/feed",
+  "plat": "web"
  },
  {
   "id": "japantimes",
   "name": "Japan Times",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.japantimes.co.jp/feed/"
+  "url": "https://www.japantimes.co.jp/feed/",
+  "plat": "web"
  },
  {
   "id": "mee",
   "name": "Middle East Eye",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.middleeasteye.net/rss"
+  "url": "https://www.middleeasteye.net/rss",
+  "plat": "web"
  },
  {
   "id": "dailysabah",
   "name": "Daily Sabah",
   "lang": "en",
   "cat": "tr",
-  "url": "https://www.dailysabah.com/rssFeed/turkey"
+  "url": "https://www.dailysabah.com/rssFeed/turkey",
+  "plat": "web"
  },
  {
   "id": "cnbc",
   "name": "CNBC",
   "lang": "en",
   "cat": "eco",
-  "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+  "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+  "plat": "web"
  },
  {
   "id": "bloomberg",
   "name": "Bloomberg",
   "lang": "en",
   "cat": "eco",
-  "url": "https://feeds.bloomberg.com/markets/news.rss"
+  "url": "https://feeds.bloomberg.com/markets/news.rss",
+  "plat": "web"
  },
  {
   "id": "marketwatch",
   "name": "MarketWatch",
   "lang": "en",
   "cat": "eco",
-  "url": "http://feeds.marketwatch.com/marketwatch/topstories/"
+  "url": "http://feeds.marketwatch.com/marketwatch/topstories/",
+  "plat": "web"
  },
  {
   "id": "businessinsider",
   "name": "Business Insider",
   "lang": "en",
   "cat": "eco",
-  "url": "https://feeds.businessinsider.com/custom/all"
+  "url": "https://feeds.businessinsider.com/custom/all",
+  "plat": "web"
  },
  {
   "id": "nasa",
   "name": "NASA",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss"
+  "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+  "plat": "web"
  },
  {
   "id": "sciencedaily",
   "name": "ScienceDaily",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.sciencedaily.com/rss/all.xml"
+  "url": "https://www.sciencedaily.com/rss/all.xml",
+  "plat": "web"
  },
  {
   "id": "newscientist",
   "name": "New Scientist",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.newscientist.com/feed/home/"
+  "url": "https://www.newscientist.com/feed/home/",
+  "plat": "web"
  },
  {
   "id": "quanta",
   "name": "Quanta Magazine",
   "lang": "en",
   "cat": "sci",
-  "url": "https://api.quantamagazine.org/feed/"
+  "url": "https://api.quantamagazine.org/feed/",
+  "plat": "web"
  },
  {
   "id": "nature",
   "name": "Nature",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.nature.com/nature.rss"
+  "url": "https://www.nature.com/nature.rss",
+  "plat": "web"
  },
  {
   "id": "livescience",
   "name": "Live Science",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.livescience.com/feeds/all"
+  "url": "https://www.livescience.com/feeds/all",
+  "plat": "web"
  },
  {
   "id": "physorg",
   "name": "Phys.org",
   "lang": "en",
   "cat": "sci",
-  "url": "https://phys.org/rss-feed/"
+  "url": "https://phys.org/rss-feed/",
+  "plat": "web"
  },
  {
   "id": "smithsonian",
   "name": "Smithsonian",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.smithsonianmag.com/rss/latest_articles/"
+  "url": "https://www.smithsonianmag.com/rss/latest_articles/",
+  "plat": "web"
  },
  {
   "id": "atlas",
   "name": "Atlas Obscura",
   "lang": "en",
   "cat": "cool",
-  "url": "https://www.atlasobscura.com/feeds/latest"
+  "url": "https://www.atlasobscura.com/feeds/latest",
+  "plat": "web"
  },
  {
   "id": "boingboing",
   "name": "Boing Boing",
   "lang": "en",
   "cat": "cool",
-  "url": "https://boingboing.net/feed"
+  "url": "https://boingboing.net/feed",
+  "plat": "web"
  },
  {
   "id": "goodnews",
   "name": "Good News Network",
   "lang": "en",
   "cat": "cool",
-  "url": "https://www.goodnewsnetwork.org/feed/"
+  "url": "https://www.goodnewsnetwork.org/feed/",
+  "plat": "web"
  },
  {
   "id": "futurism",
   "name": "Futurism",
   "lang": "en",
   "cat": "cool",
-  "url": "https://futurism.com/feed"
+  "url": "https://futurism.com/feed",
+  "plat": "web"
  },
  {
   "id": "kottke",
   "name": "Kottke.org",
   "lang": "en",
   "cat": "cool",
-  "url": "https://feeds.kottke.org/main"
+  "url": "https://feeds.kottke.org/main",
+  "plat": "web"
  },
  {
   "id": "mashable",
   "name": "Mashable",
   "lang": "en",
   "cat": "viral",
-  "url": "https://mashable.com/feeds/rss/all"
+  "url": "https://mashable.com/feeds/rss/all",
+  "plat": "web"
  },
  {
   "id": "buzzfeed",
   "name": "BuzzFeed",
   "lang": "en",
   "cat": "viral",
-  "url": "https://www.buzzfeed.com/index.xml"
+  "url": "https://www.buzzfeed.com/index.xml",
+  "plat": "web"
  },
  {
   "id": "knowyourmeme",
   "name": "Know Your Meme",
   "lang": "en",
   "cat": "viral",
-  "url": "https://knowyourmeme.com/newsfeed.rss"
+  "url": "https://knowyourmeme.com/newsfeed.rss",
+  "plat": "web"
  },
  {
   "id": "theonion",
   "name": "The Onion",
   "lang": "en",
   "cat": "viral",
-  "url": "https://theonion.com/feed/"
+  "url": "https://theonion.com/feed/",
+  "plat": "web"
  },
  {
   "id": "r-iaf",
   "name": "r/interestingasfuck",
   "lang": "en",
   "cat": "viral",
-  "url": "https://www.reddit.com/r/interestingasfuck/top/.rss?t=day"
+  "url": "https://www.reddit.com/r/interestingasfuck/top/.rss?t=day",
+  "plat": "web"
  },
  {
   "id": "trends-us",
   "name": "Google Trends US",
   "lang": "en",
   "cat": "viral",
-  "url": "https://trends.google.com/trending/rss?geo=US"
+  "url": "https://trends.google.com/trending/rss?geo=US",
+  "plat": "web"
  },
  {
   "id": "trends-gb",
   "name": "Google Trends UK",
   "lang": "en",
   "cat": "viral",
-  "url": "https://trends.google.com/trending/rss?geo=GB"
+  "url": "https://trends.google.com/trending/rss?geo=GB",
+  "plat": "web"
  },
  {
   "id": "variety",
   "name": "Variety",
   "lang": "en",
   "cat": "ent",
-  "url": "https://variety.com/feed/"
+  "url": "https://variety.com/feed/",
+  "plat": "web"
  },
  {
   "id": "thr",
   "name": "Hollywood Reporter",
   "lang": "en",
   "cat": "ent",
-  "url": "https://www.hollywoodreporter.com/feed/"
+  "url": "https://www.hollywoodreporter.com/feed/",
+  "plat": "web"
  },
  {
   "id": "deadline",
   "name": "Deadline",
   "lang": "en",
   "cat": "ent",
-  "url": "https://deadline.com/feed/"
+  "url": "https://deadline.com/feed/",
+  "plat": "web"
  },
  {
   "id": "rollingstone",
   "name": "Rolling Stone",
   "lang": "en",
   "cat": "ent",
-  "url": "https://www.rollingstone.com/feed/"
+  "url": "https://www.rollingstone.com/feed/",
+  "plat": "web"
  },
  {
   "id": "pitchfork",
   "name": "Pitchfork",
   "lang": "en",
   "cat": "ent",
-  "url": "https://pitchfork.com/feed/feed-news/rss"
+  "url": "https://pitchfork.com/feed/feed-news/rss",
+  "plat": "web"
  },
  {
   "id": "polygon",
   "name": "Polygon",
   "lang": "en",
   "cat": "ent",
-  "url": "https://www.polygon.com/rss/index.xml"
+  "url": "https://www.polygon.com/rss/index.xml",
+  "plat": "web"
  },
  {
   "id": "ign",
   "name": "IGN",
   "lang": "en",
   "cat": "ent",
-  "url": "https://feeds.ign.com/ign/all"
+  "url": "https://feeds.ign.com/ign/all",
+  "plat": "web"
  },
  {
   "id": "kotaku",
   "name": "Kotaku",
   "lang": "en",
   "cat": "ent",
-  "url": "https://kotaku.com/rss"
+  "url": "https://kotaku.com/rss",
+  "plat": "web"
  },
  {
   "id": "pcgamer",
   "name": "PC Gamer",
   "lang": "en",
   "cat": "ent",
-  "url": "https://www.pcgamer.com/rss/"
+  "url": "https://www.pcgamer.com/rss/",
+  "plat": "web"
  },
  {
   "id": "espn",
   "name": "ESPN",
   "lang": "en",
   "cat": "sport",
-  "url": "https://www.espn.com/espn/rss/news"
+  "url": "https://www.espn.com/espn/rss/news",
+  "plat": "web"
  },
  {
   "id": "bbc-sport",
   "name": "BBC Sport",
   "lang": "en",
   "cat": "sport",
-  "url": "https://feeds.bbci.co.uk/sport/rss.xml"
+  "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+  "plat": "web"
  },
  {
   "id": "skysports",
   "name": "Sky Sports",
   "lang": "en",
   "cat": "sport",
-  "url": "https://www.skysports.com/rss/12040"
+  "url": "https://www.skysports.com/rss/12040",
+  "plat": "web"
  },
  {
   "id": "guardian-football",
   "name": "Guardian Football",
   "lang": "en",
   "cat": "sport",
-  "url": "https://www.theguardian.com/football/rss"
+  "url": "https://www.theguardian.com/football/rss",
+  "plat": "web"
  },
  {
   "id": "ithome",
   "name": "IT之家",
   "lang": "zh",
   "cat": "tech",
-  "url": "https://www.ithome.com/rss/"
+  "url": "https://www.ithome.com/rss/",
+  "plat": "web"
  },
  {
   "id": "cnbeta",
   "name": "cnBeta",
   "lang": "zh",
   "cat": "tech",
-  "url": "https://rss.cnbeta.com.tw/rss"
+  "url": "https://rss.cnbeta.com.tw/rss",
+  "plat": "web"
  },
  {
   "id": "solidot",
   "name": "Solidot",
   "lang": "zh",
   "cat": "tech",
-  "url": "https://www.solidot.org/index.rss"
+  "url": "https://www.solidot.org/index.rss",
+  "plat": "web"
  },
  {
   "id": "sspai",
   "name": "少数派",
   "lang": "zh",
   "cat": "tech",
-  "url": "https://sspai.com/feed"
+  "url": "https://sspai.com/feed",
+  "plat": "web"
  },
  {
   "id": "ifanr",
   "name": "爱范儿",
   "lang": "zh",
   "cat": "tech",
-  "url": "https://www.ifanr.com/feed"
+  "url": "https://www.ifanr.com/feed",
+  "plat": "web"
  },
  {
   "id": "bbc-zh",
   "name": "BBC 中文",
   "lang": "zh",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"
+  "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
+  "plat": "web"
  },
  {
   "id": "dw-zh",
   "name": "DW 中文",
   "lang": "zh",
   "cat": "world",
-  "url": "https://rss.dw.com/rdf/rss-chi-all"
+  "url": "https://rss.dw.com/rdf/rss-chi-all",
+  "plat": "web"
  },
  {
   "id": "chinanews",
   "name": "中国新闻网",
   "lang": "zh",
   "cat": "world",
-  "url": "https://www.chinanews.com.cn/rss/scroll-news.xml"
+  "url": "https://www.chinanews.com.cn/rss/scroll-news.xml",
+  "plat": "web"
  },
  {
   "id": "rfi-zh",
   "name": "RFI 中文",
   "lang": "zh",
   "cat": "world",
-  "url": "https://www.rfi.fr/cn/rss"
+  "url": "https://www.rfi.fr/cn/rss",
+  "plat": "web"
  },
  {
   "id": "elpais",
   "name": "El País",
   "lang": "es",
   "cat": "world",
-  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"
+  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+  "plat": "web"
  },
  {
   "id": "elmundo",
   "name": "El Mundo",
   "lang": "es",
   "cat": "world",
-  "url": "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml"
+  "url": "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-es",
   "name": "BBC Mundo",
   "lang": "es",
   "cat": "world",
-  "url": "http://feeds.bbci.co.uk/mundo/rss.xml"
+  "url": "http://feeds.bbci.co.uk/mundo/rss.xml",
+  "plat": "web"
  },
  {
   "id": "xataka",
   "name": "Xataka",
   "lang": "es",
   "cat": "tech",
-  "url": "https://www.xataka.com/feedburner.xml"
+  "url": "https://www.xataka.com/feedburner.xml",
+  "plat": "web"
  },
  {
   "id": "lemonde",
   "name": "Le Monde",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.lemonde.fr/rss/une.xml"
+  "url": "https://www.lemonde.fr/rss/une.xml",
+  "plat": "web"
  },
  {
   "id": "lefigaro",
   "name": "Le Figaro",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.lefigaro.fr/rss/figaro_actualites.xml"
+  "url": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
+  "plat": "web"
  },
  {
   "id": "france24",
   "name": "France 24",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.france24.com/fr/rss"
+  "url": "https://www.france24.com/fr/rss",
+  "plat": "web"
  },
  {
   "id": "numerama",
   "name": "Numerama",
   "lang": "fr",
   "cat": "tech",
-  "url": "https://www.numerama.com/feed/"
+  "url": "https://www.numerama.com/feed/",
+  "plat": "web"
  },
  {
   "id": "spiegel",
   "name": "Der Spiegel",
   "lang": "de",
   "cat": "world",
-  "url": "https://www.spiegel.de/schlagzeilen/index.rss"
+  "url": "https://www.spiegel.de/schlagzeilen/index.rss",
+  "plat": "web"
  },
  {
   "id": "tagesschau",
   "name": "Tagesschau",
   "lang": "de",
   "cat": "world",
-  "url": "https://www.tagesschau.de/index~rss2.xml"
+  "url": "https://www.tagesschau.de/index~rss2.xml",
+  "plat": "web"
  },
  {
   "id": "zeit",
   "name": "Die Zeit",
   "lang": "de",
   "cat": "world",
-  "url": "https://newsfeed.zeit.de/index"
+  "url": "https://newsfeed.zeit.de/index",
+  "plat": "web"
  },
  {
   "id": "faz",
   "name": "FAZ",
   "lang": "de",
   "cat": "world",
-  "url": "https://www.faz.net/rss/aktuell/"
+  "url": "https://www.faz.net/rss/aktuell/",
+  "plat": "web"
  },
  {
   "id": "heise",
   "name": "heise online",
   "lang": "de",
   "cat": "tech",
-  "url": "https://www.heise.de/rss/heise-atom.xml"
+  "url": "https://www.heise.de/rss/heise-atom.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-ar",
   "name": "BBC عربي",
   "lang": "ar",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/arabic/rss.xml"
+  "url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+  "plat": "web"
  },
  {
   "id": "aljazeera-ar",
   "name": "الجزيرة",
   "lang": "ar",
   "cat": "world",
-  "url": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9"
+  "url": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9",
+  "plat": "web"
  },
  {
   "id": "skynews-ar",
   "name": "سكاي نيوز عربية",
   "lang": "ar",
   "cat": "world",
-  "url": "https://www.skynewsarabia.com/web/rss"
+  "url": "https://www.skynewsarabia.com/web/rss",
+  "plat": "web"
  },
  {
   "id": "meduza",
   "name": "Meduza",
   "lang": "ru",
   "cat": "world",
-  "url": "https://meduza.io/rss/all"
+  "url": "https://meduza.io/rss/all",
+  "plat": "web"
  },
  {
   "id": "lenta",
   "name": "Lenta.ru",
   "lang": "ru",
   "cat": "world",
-  "url": "https://lenta.ru/rss/news"
+  "url": "https://lenta.ru/rss/news",
+  "plat": "web"
  },
  {
   "id": "bbc-ru",
   "name": "BBC Русская служба",
   "lang": "ru",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/russian/rss.xml"
- },
- {
-  "id": "nhk",
-  "name": "NHK",
-  "lang": "ja",
-  "cat": "world",
-  "url": "https://www3.nhk.or.jp/rss/news/cat0.xml"
+  "url": "https://feeds.bbci.co.uk/russian/rss.xml",
+  "plat": "web"
  },
  {
   "id": "asahi",
   "name": "朝日新聞",
   "lang": "ja",
   "cat": "world",
-  "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf"
+  "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
+  "plat": "web"
  },
  {
   "id": "itmedia",
   "name": "ITmedia",
   "lang": "ja",
   "cat": "tech",
-  "url": "https://rss.itmedia.co.jp/rss/2.0/itmedia_all.xml"
+  "url": "https://rss.itmedia.co.jp/rss/2.0/itmedia_all.xml",
+  "plat": "web"
  },
  {
   "id": "gigazine",
   "name": "Gigazine",
   "lang": "ja",
   "cat": "tech",
-  "url": "https://gigazine.net/news/rss_2.0/"
+  "url": "https://gigazine.net/news/rss_2.0/",
+  "plat": "web"
  },
  {
   "id": "yonhap",
   "name": "연합뉴스",
   "lang": "ko",
   "cat": "world",
-  "url": "https://www.yna.co.kr/rss/news.xml"
+  "url": "https://www.yna.co.kr/rss/news.xml",
+  "plat": "web"
  },
  {
   "id": "hani",
   "name": "한겨레",
   "lang": "ko",
   "cat": "world",
-  "url": "https://www.hani.co.kr/rss/"
+  "url": "https://www.hani.co.kr/rss/",
+  "plat": "web"
  },
  {
   "id": "bbc-ko",
   "name": "BBC 코리아",
   "lang": "ko",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/korean/rss.xml"
+  "url": "https://feeds.bbci.co.uk/korean/rss.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-pt",
   "name": "BBC Brasil",
   "lang": "pt",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/portuguese/rss.xml"
+  "url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
+  "plat": "web"
  },
  {
   "id": "g1",
   "name": "G1",
   "lang": "pt",
   "cat": "world",
-  "url": "https://g1.globo.com/rss/g1/"
+  "url": "https://g1.globo.com/rss/g1/",
+  "plat": "web"
  },
  {
   "id": "folha",
   "name": "Folha",
   "lang": "pt",
   "cat": "world",
-  "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml"
+  "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-hi",
   "name": "BBC हिंदी",
   "lang": "hi",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/hindi/rss.xml"
+  "url": "https://feeds.bbci.co.uk/hindi/rss.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-id",
   "name": "BBC Indonesia",
   "lang": "id",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/indonesia/rss.xml"
+  "url": "https://feeds.bbci.co.uk/indonesia/rss.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-fa",
   "name": "BBC فارسی",
   "lang": "fa",
   "cat": "world",
-  "url": "https://feeds.bbci.co.uk/persian/index.xml"
+  "url": "https://feeds.bbci.co.uk/persian/index.xml",
+  "plat": "web"
  },
  {
   "id": "vnexpress",
   "name": "VnExpress",
   "lang": "vi",
   "cat": "world",
-  "url": "https://vnexpress.net/rss/tin-moi-nhat.rss"
+  "url": "https://vnexpress.net/rss/tin-moi-nhat.rss",
+  "plat": "web"
  },
  {
   "id": "ansa",
   "name": "ANSA",
   "lang": "it",
   "cat": "world",
-  "url": "https://www.ansa.it/sito/ansait_rss.xml"
+  "url": "https://www.ansa.it/sito/ansait_rss.xml",
+  "plat": "web"
  },
  {
   "id": "repubblica",
   "name": "la Repubblica",
   "lang": "it",
   "cat": "world",
-  "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml"
+  "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
+  "plat": "web"
  },
  {
   "id": "aa-eko",
   "name": "AA Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi"
+  "url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+  "plat": "web"
  },
  {
   "id": "aa-dunya",
   "name": "AA Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=dunya"
+  "url": "https://www.aa.com.tr/tr/rss/default?cat=dunya",
+  "plat": "web"
  },
  {
   "id": "aa-spor",
   "name": "AA Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=spor"
+  "url": "https://www.aa.com.tr/tr/rss/default?cat=spor",
+  "plat": "web"
  },
  {
   "id": "aa-bilim",
   "name": "AA Bilim-Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=bilim-teknoloji"
+  "url": "https://www.aa.com.tr/tr/rss/default?cat=bilim-teknoloji",
+  "plat": "web"
  },
  {
   "id": "ntv-son",
   "name": "NTV Son Dakika",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.ntv.com.tr/son-dakika.rss"
+  "url": "https://www.ntv.com.tr/son-dakika.rss",
+  "plat": "web"
  },
  {
   "id": "ntv-eko",
   "name": "NTV Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.ntv.com.tr/ekonomi.rss"
+  "url": "https://www.ntv.com.tr/ekonomi.rss",
+  "plat": "web"
  },
  {
   "id": "ntv-tek",
   "name": "NTV Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.ntv.com.tr/teknoloji.rss"
+  "url": "https://www.ntv.com.tr/teknoloji.rss",
+  "plat": "web"
  },
  {
   "id": "ntv-saglik",
   "name": "NTV Sağlık",
   "lang": "tr",
   "cat": "sci",
-  "url": "https://www.ntv.com.tr/saglik.rss"
+  "url": "https://www.ntv.com.tr/saglik.rss",
+  "plat": "web"
  },
  {
   "id": "cnnturk-tr",
   "name": "CNN Türk Türkiye",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.cnnturk.com/feed/rss/turkiye/news"
+  "url": "https://www.cnnturk.com/feed/rss/turkiye/news",
+  "plat": "web"
  },
  {
   "id": "cnnturk-dunya",
   "name": "CNN Türk Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.cnnturk.com/feed/rss/dunya/news"
+  "url": "https://www.cnnturk.com/feed/rss/dunya/news",
+  "plat": "web"
  },
  {
   "id": "cnnturk-eko",
   "name": "CNN Türk Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.cnnturk.com/feed/rss/ekonomi/news"
+  "url": "https://www.cnnturk.com/feed/rss/ekonomi/news",
+  "plat": "web"
  },
  {
   "id": "cnnturk-spor",
   "name": "CNN Türk Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.cnnturk.com/feed/rss/spor/news"
+  "url": "https://www.cnnturk.com/feed/rss/spor/news",
+  "plat": "web"
  },
  {
   "id": "cnnturk-magazin",
   "name": "CNN Türk Magazin",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://www.cnnturk.com/feed/rss/magazin/news"
+  "url": "https://www.cnnturk.com/feed/rss/magazin/news",
+  "plat": "web"
  },
  {
   "id": "hurriyet-eko",
   "name": "Hürriyet Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.hurriyet.com.tr/rss/ekonomi"
+  "url": "https://www.hurriyet.com.tr/rss/ekonomi",
+  "plat": "web"
  },
  {
   "id": "hurriyet-spor",
   "name": "Hürriyet Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.hurriyet.com.tr/rss/spor"
+  "url": "https://www.hurriyet.com.tr/rss/spor",
+  "plat": "web"
  },
  {
   "id": "hurriyet-tek",
   "name": "Hürriyet Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.hurriyet.com.tr/rss/teknoloji"
+  "url": "https://www.hurriyet.com.tr/rss/teknoloji",
+  "plat": "web"
  },
  {
   "id": "hurriyet-magazin",
   "name": "Hürriyet Magazin",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://www.hurriyet.com.tr/rss/magazin"
+  "url": "https://www.hurriyet.com.tr/rss/magazin",
+  "plat": "web"
  },
  {
   "id": "hurriyet-ana",
   "name": "Hürriyet Ana Sayfa",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.hurriyet.com.tr/rss/anasayfa"
+  "url": "https://www.hurriyet.com.tr/rss/anasayfa",
+  "plat": "web"
  },
  {
   "id": "milliyet-son",
   "name": "Milliyet Son Dakika",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.milliyet.com.tr/rss/rssnew/sondakikarss.xml"
+  "url": "https://www.milliyet.com.tr/rss/rssnew/sondakikarss.xml",
+  "plat": "web"
  },
  {
   "id": "milliyet-eko",
   "name": "Milliyet Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.milliyet.com.tr/rss/rssnew/ekonomirss.xml"
+  "url": "https://www.milliyet.com.tr/rss/rssnew/ekonomirss.xml",
+  "plat": "web"
  },
  {
   "id": "milliyet-dunya",
   "name": "Milliyet Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.milliyet.com.tr/rss/rssnew/dunyarss.xml"
+  "url": "https://www.milliyet.com.tr/rss/rssnew/dunyarss.xml",
+  "plat": "web"
  },
  {
   "id": "milliyet-tek",
   "name": "Milliyet Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.milliyet.com.tr/rss/rssnew/teknolojirss.xml"
+  "url": "https://www.milliyet.com.tr/rss/rssnew/teknolojirss.xml",
+  "plat": "web"
  },
  {
   "id": "sabah-eko",
   "name": "Sabah Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.sabah.com.tr/rss/ekonomi.xml"
+  "url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+  "plat": "web"
  },
  {
   "id": "sabah-spor",
   "name": "Sabah Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.sabah.com.tr/rss/spor.xml"
+  "url": "https://www.sabah.com.tr/rss/spor.xml",
+  "plat": "web"
  },
  {
   "id": "sabah-tek",
   "name": "Sabah Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.sabah.com.tr/rss/teknoloji.xml"
+  "url": "https://www.sabah.com.tr/rss/teknoloji.xml",
+  "plat": "web"
  },
  {
   "id": "sabah-ana",
   "name": "Sabah Ana Sayfa",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.sabah.com.tr/rss/anasayfa.xml"
+  "url": "https://www.sabah.com.tr/rss/anasayfa.xml",
+  "plat": "web"
  },
  {
   "id": "sabah-son",
   "name": "Sabah Son Dakika",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.sabah.com.tr/rss/sondakika.xml"
+  "url": "https://www.sabah.com.tr/rss/sondakika.xml",
+  "plat": "web"
  },
  {
   "id": "haberturk-eko",
   "name": "Habertürk Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.haberturk.com/rss/ekonomi.xml"
+  "url": "https://www.haberturk.com/rss/ekonomi.xml",
+  "plat": "web"
  },
  {
   "id": "haberturk-spor",
   "name": "Habertürk Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.haberturk.com/rss/spor.xml"
+  "url": "https://www.haberturk.com/rss/spor.xml",
+  "plat": "web"
  },
  {
   "id": "haberturk-tek",
   "name": "Habertürk Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.haberturk.com/rss/teknoloji.xml"
+  "url": "https://www.haberturk.com/rss/teknoloji.xml",
+  "plat": "web"
  },
  {
   "id": "haberturk-gundem",
   "name": "Habertürk Gündem",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.haberturk.com/rss/gundem.xml"
+  "url": "https://www.haberturk.com/rss/gundem.xml",
+  "plat": "web"
  },
  {
   "id": "haberturk-magazin",
   "name": "Habertürk Magazin",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://www.haberturk.com/rss/magazin.xml"
+  "url": "https://www.haberturk.com/rss/magazin.xml",
+  "plat": "web"
  },
  {
   "id": "sozcu-gundem",
   "name": "Sözcü Gündem",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.sozcu.com.tr/feeds-rss-category-gundem"
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-gundem",
+  "plat": "web"
  },
  {
   "id": "sozcu-eko",
   "name": "Sözcü Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.sozcu.com.tr/feeds-rss-category-ekonomi"
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-ekonomi",
+  "plat": "web"
  },
  {
   "id": "sozcu-spor",
   "name": "Sözcü Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.sozcu.com.tr/feeds-rss-category-spor"
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-spor",
+  "plat": "web"
  },
  {
   "id": "sozcu-dunya",
   "name": "Sözcü Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.sozcu.com.tr/feeds-rss-category-dunya"
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-dunya",
+  "plat": "web"
  },
  {
   "id": "sozcu-tek",
   "name": "Sözcü Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.sozcu.com.tr/feeds-rss-category-bilim-teknoloji"
- },
- {
-  "id": "cumhuriyet-eko",
-  "name": "Cumhuriyet Ekonomi",
-  "lang": "tr",
-  "cat": "eco",
-  "url": "https://www.cumhuriyet.com.tr/rss/ekonomi.xml"
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-bilim-teknoloji",
+  "plat": "web"
  },
  {
   "id": "trthaber-eko",
   "name": "TRT Haber Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://www.trthaber.com/ekonomi_articles.rss"
+  "url": "https://www.trthaber.com/ekonomi_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trthaber-dunya",
   "name": "TRT Haber Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://www.trthaber.com/dunya_articles.rss"
+  "url": "https://www.trthaber.com/dunya_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trthaber-spor",
   "name": "TRT Haber Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.trthaber.com/spor_articles.rss"
+  "url": "https://www.trthaber.com/spor_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trthaber-gundem",
   "name": "TRT Haber Gündem",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.trthaber.com/gundem_articles.rss"
+  "url": "https://www.trthaber.com/gundem_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trthaber-bilim",
   "name": "TRT Haber Bilim-Teknoloji",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.trthaber.com/bilim_teknoloji_articles.rss"
+  "url": "https://www.trthaber.com/bilim_teknoloji_articles.rss",
+  "plat": "web"
  },
  {
   "id": "star",
   "name": "Star",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.star.com.tr/rss/rss.asp"
+  "url": "https://www.star.com.tr/rss/rss.asp",
+  "plat": "web"
  },
  {
   "id": "takvim",
   "name": "Takvim",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.takvim.com.tr/rss/guncel.xml"
+  "url": "https://www.takvim.com.tr/rss/guncel.xml",
+  "plat": "web"
  },
  {
   "id": "aksam",
   "name": "Akşam",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.aksam.com.tr/rss/rss.asp?xml=gundem"
+  "url": "https://www.aksam.com.tr/rss/rss.asp?xml=gundem",
+  "plat": "web"
  },
  {
   "id": "vatan",
   "name": "Vatan",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.gazetevatan.com/rss/gundem.xml"
+  "url": "https://www.gazetevatan.com/rss/gundem.xml",
+  "plat": "web"
  },
  {
   "id": "mynet",
   "name": "Mynet Haber",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.mynet.com/haber/rss/sondakika"
+  "url": "https://www.mynet.com/haber/rss/sondakika",
+  "plat": "web"
  },
  {
   "id": "ahaber",
   "name": "A Haber",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.ahaber.com.tr/rss/anasayfa.xml"
+  "url": "https://www.ahaber.com.tr/rss/anasayfa.xml",
+  "plat": "web"
  },
  {
   "id": "haberglobal",
   "name": "Haber Global",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://haberglobal.com.tr/rss"
+  "url": "https://haberglobal.com.tr/rss",
+  "plat": "web"
  },
  {
   "id": "halktv",
   "name": "Halk TV",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://halktv.com.tr/service/rss.php"
+  "url": "https://halktv.com.tr/service/rss.php",
+  "plat": "web"
  },
  {
   "id": "evrensel",
   "name": "Evrensel",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.evrensel.net/rss/haber.xml"
+  "url": "https://www.evrensel.net/rss/haber.xml",
+  "plat": "web"
  },
  {
   "id": "odatv",
   "name": "Oda TV",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.odatv4.com/rss.php"
+  "url": "https://www.odatv4.com/rss.php",
+  "plat": "web"
  },
  {
   "id": "yenicag",
   "name": "Yeniçağ",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.yenicaggazetesi.com.tr/rss"
+  "url": "https://www.yenicaggazetesi.com.tr/rss",
+  "plat": "web"
  },
  {
   "id": "aspor",
   "name": "A Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://www.aspor.com.tr/rss/anasayfa.xml"
- },
- {
-  "id": "dunya-b",
-  "name": "Dünya Son Dakika",
-  "lang": "tr",
-  "cat": "eco",
-  "url": "https://www.dunya.com/rss?dunya"
+  "url": "https://www.aspor.com.tr/rss/anasayfa.xml",
+  "plat": "web"
  },
  {
   "id": "donanimarsivi",
   "name": "Donanım Arşivi",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://donanimarsivi.com/feed"
+  "url": "https://donanimarsivi.com/feed",
+  "plat": "web"
  },
  {
   "id": "merlin",
   "name": "Merlin'in Kazanı",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.merlininkazani.com/feed/"
+  "url": "https://www.merlininkazani.com/feed/",
+  "plat": "web"
  },
  {
   "id": "techinside",
   "name": "Tech Inside",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.techinside.com/feed/"
+  "url": "https://www.techinside.com/feed/",
+  "plat": "web"
  },
  {
   "id": "bilimgenc",
   "name": "Bilim Genç",
   "lang": "tr",
   "cat": "sci",
-  "url": "https://bilimgenc.tubitak.gov.tr/rss.xml"
+  "url": "https://bilimgenc.tubitak.gov.tr/rss.xml",
+  "plat": "web"
  },
  {
   "id": "fizikist",
   "name": "Fizikist",
   "lang": "tr",
   "cat": "sci",
-  "url": "https://fizikist.com/feed/"
+  "url": "https://fizikist.com/feed/",
+  "plat": "web"
  },
  {
   "id": "gzt-ent",
   "name": "Habertürk Sinema",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://www.haberturk.com/rss/kategori/sinema.xml"
- },
- {
-  "id": "gn-tr-ana",
-  "name": "Google Haberler TR",
-  "lang": "tr",
-  "cat": "tr",
-  "url": "https://news.google.com/rss?hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://www.haberturk.com/rss/kategori/sinema.xml",
+  "plat": "web"
  },
  {
   "id": "gn-tr-turkiye",
   "name": "Google Haberler Türkiye",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/headlines/section/geo/Turkey?hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/headlines/section/geo/Turkey?hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gn-tr-son",
   "name": "Google Haberler Son Dakika",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=son+dakika+when:3h&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=son+dakika+when:3h&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gn-tr-dunya",
   "name": "Google Haberler Dünya",
   "lang": "tr",
   "cat": "world",
-  "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gn-tr-eko",
   "name": "Google Haberler Ekonomi",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr"
- },
- {
-  "id": "gn-tr-tek",
-  "name": "Google Haberler Teknoloji",
-  "lang": "tr",
-  "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gn-tr-spor",
   "name": "Google Haberler Spor",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr"
- },
- {
-  "id": "gn-tr-bilim",
-  "name": "Google Haberler Bilim",
-  "lang": "tr",
-  "cat": "sci",
-  "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gn-tr-saglik",
   "name": "Google Haberler Sağlık",
   "lang": "tr",
   "cat": "sci",
-  "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gn-tr-eglence",
   "name": "Google Haberler Eğlence",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://news.google.com/rss/headlines/section/topic/ENTERTAINMENT?hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/headlines/section/topic/ENTERTAINMENT?hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gn-en-ana",
   "name": "Google News US",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-world",
   "name": "Google News World",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-biz",
   "name": "Google News Business",
   "lang": "en",
   "cat": "eco",
-  "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-tech",
   "name": "Google News Tech",
   "lang": "en",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-sci",
   "name": "Google News Science",
   "lang": "en",
   "cat": "sci",
-  "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-sport",
   "name": "Google News Sports",
   "lang": "en",
   "cat": "sport",
-  "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-ent",
   "name": "Google News Entertainment",
   "lang": "en",
   "cat": "ent",
-  "url": "https://news.google.com/rss/headlines/section/topic/ENTERTAINMENT?hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/headlines/section/topic/ENTERTAINMENT?hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-gb",
   "name": "Google News UK",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=en-GB&gl=GB&ceid=GB:en"
+  "url": "https://news.google.com/rss?hl=en-GB&gl=GB&ceid=GB:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-tr",
   "name": "Google News Turkey (EN)",
   "lang": "en",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=Turkey+when:1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=Turkey+when:1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-en-ai",
   "name": "Google News AI",
   "lang": "en",
   "cat": "sci",
-  "url": "https://news.google.com/rss/search?q=artificial+intelligence+when:1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=artificial+intelligence+when:1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gn-de",
   "name": "Google News DE",
   "lang": "de",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=de&gl=DE&ceid=DE:de"
+  "url": "https://news.google.com/rss?hl=de&gl=DE&ceid=DE:de",
+  "plat": "web"
  },
  {
   "id": "gn-de-tech",
   "name": "Google News DE Technik",
   "lang": "de",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=de&gl=DE&ceid=DE:de"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=de&gl=DE&ceid=DE:de",
+  "plat": "web"
  },
  {
   "id": "gn-fr",
   "name": "Google News FR",
   "lang": "fr",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"
+  "url": "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr",
+  "plat": "web"
  },
  {
   "id": "gn-fr-tech",
   "name": "Google News FR Tech",
   "lang": "fr",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=fr&gl=FR&ceid=FR:fr"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=fr&gl=FR&ceid=FR:fr",
+  "plat": "web"
  },
  {
   "id": "gn-es",
   "name": "Google News ES",
   "lang": "es",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=es&gl=ES&ceid=ES:es"
+  "url": "https://news.google.com/rss?hl=es&gl=ES&ceid=ES:es",
+  "plat": "web"
  },
  {
   "id": "gn-es-tech",
   "name": "Google News ES Tecnología",
   "lang": "es",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=es&gl=ES&ceid=ES:es"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=es&gl=ES&ceid=ES:es",
+  "plat": "web"
  },
  {
   "id": "gn-es-mx",
   "name": "Google News México",
   "lang": "es",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=es-419&gl=MX&ceid=MX:es-419"
+  "url": "https://news.google.com/rss?hl=es-419&gl=MX&ceid=MX:es-419",
+  "plat": "web"
  },
  {
   "id": "gn-it",
   "name": "Google News IT",
   "lang": "it",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=it&gl=IT&ceid=IT:it"
+  "url": "https://news.google.com/rss?hl=it&gl=IT&ceid=IT:it",
+  "plat": "web"
  },
  {
   "id": "gn-it-tech",
   "name": "Google News IT Tech",
   "lang": "it",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=it&gl=IT&ceid=IT:it"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=it&gl=IT&ceid=IT:it",
+  "plat": "web"
  },
  {
   "id": "gn-pt",
   "name": "Google News Brasil",
   "lang": "pt",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419"
+  "url": "https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "plat": "web"
  },
  {
   "id": "gn-pt-tech",
   "name": "Google News Brasil Tech",
   "lang": "pt",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=pt-BR&gl=BR&ceid=BR:pt-419"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "plat": "web"
  },
  {
   "id": "gn-ru",
   "name": "Google News RU",
   "lang": "ru",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=ru&gl=RU&ceid=RU:ru"
+  "url": "https://news.google.com/rss?hl=ru&gl=RU&ceid=RU:ru",
+  "plat": "web"
  },
  {
   "id": "gn-ru-tech",
   "name": "Google News RU Tech",
   "lang": "ru",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru",
+  "plat": "web"
  },
  {
   "id": "gn-ja",
   "name": "Google News JP",
   "lang": "ja",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja"
+  "url": "https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja",
+  "plat": "web"
  },
  {
   "id": "gn-ja-tech",
   "name": "Google News JP Tech",
   "lang": "ja",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ja&gl=JP&ceid=JP:ja"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ja&gl=JP&ceid=JP:ja",
+  "plat": "web"
  },
  {
   "id": "gn-ko",
   "name": "Google News KR",
   "lang": "ko",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko"
+  "url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
+  "plat": "web"
  },
  {
   "id": "gn-ko-tech",
   "name": "Google News KR Tech",
   "lang": "ko",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko",
+  "plat": "web"
  },
  {
   "id": "gn-zh",
   "name": "Google News CN",
   "lang": "zh",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+  "url": "https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+  "plat": "web"
  },
  {
   "id": "gn-zh-tech",
   "name": "Google News CN Tech",
   "lang": "zh",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+  "plat": "web"
  },
  {
   "id": "gn-zh-tw",
   "name": "Google News TW",
   "lang": "zh",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+  "url": "https://news.google.com/rss?hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+  "plat": "web"
  },
  {
   "id": "gn-ar",
   "name": "Google News AR",
   "lang": "ar",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=ar&gl=SA&ceid=SA:ar"
+  "url": "https://news.google.com/rss?hl=ar&gl=SA&ceid=SA:ar",
+  "plat": "web"
  },
  {
   "id": "gn-ar-tech",
   "name": "Google News AR Tech",
   "lang": "ar",
   "cat": "tech",
-  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ar&gl=SA&ceid=SA:ar"
+  "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ar&gl=SA&ceid=SA:ar",
+  "plat": "web"
  },
  {
   "id": "gn-hi",
   "name": "Google News IN",
   "lang": "hi",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=hi&gl=IN&ceid=IN:hi"
+  "url": "https://news.google.com/rss?hl=hi&gl=IN&ceid=IN:hi",
+  "plat": "web"
  },
  {
   "id": "gn-id",
   "name": "Google News ID",
   "lang": "id",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=id&gl=ID&ceid=ID:id"
+  "url": "https://news.google.com/rss?hl=id&gl=ID&ceid=ID:id",
+  "plat": "web"
  },
  {
   "id": "gn-pl",
   "name": "Google News PL",
   "lang": "pl",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=pl&gl=PL&ceid=PL:pl"
+  "url": "https://news.google.com/rss?hl=pl&gl=PL&ceid=PL:pl",
+  "plat": "web"
  },
  {
   "id": "gn-nl",
   "name": "Google News NL",
   "lang": "nl",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=nl&gl=NL&ceid=NL:nl"
+  "url": "https://news.google.com/rss?hl=nl&gl=NL&ceid=NL:nl",
+  "plat": "web"
  },
  {
   "id": "gn-vi",
   "name": "Google News VN",
   "lang": "vi",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi"
+  "url": "https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi",
+  "plat": "web"
  },
  {
   "id": "gn-uk",
   "name": "Google News UA",
   "lang": "uk",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=uk&gl=UA&ceid=UA:uk"
+  "url": "https://news.google.com/rss?hl=uk&gl=UA&ceid=UA:uk",
+  "plat": "web"
  },
  {
   "id": "gn-th",
   "name": "Google News TH",
   "lang": "th",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=th&gl=TH&ceid=TH:th"
+  "url": "https://news.google.com/rss?hl=th&gl=TH&ceid=TH:th",
+  "plat": "web"
  },
  {
   "id": "gn-el",
   "name": "Google News GR",
   "lang": "el",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=el&gl=GR&ceid=GR:el"
+  "url": "https://news.google.com/rss?hl=el&gl=GR&ceid=GR:el",
+  "plat": "web"
  },
  {
   "id": "gn-he",
   "name": "Google News IL",
   "lang": "he",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=he&gl=IL&ceid=IL:he"
+  "url": "https://news.google.com/rss?hl=he&gl=IL&ceid=IL:he",
+  "plat": "web"
  },
  {
   "id": "gn-sv",
   "name": "Google News SE",
   "lang": "sv",
   "cat": "world",
-  "url": "https://news.google.com/rss?hl=sv&gl=SE&ceid=SE:sv"
+  "url": "https://news.google.com/rss?hl=sv&gl=SE&ceid=SE:sv",
+  "plat": "web"
  },
  {
   "id": "lavanguardia",
   "name": "La Vanguardia",
   "lang": "es",
   "cat": "world",
-  "url": "https://www.lavanguardia.com/rss/home.xml"
+  "url": "https://www.lavanguardia.com/rss/home.xml",
+  "plat": "web"
  },
  {
   "id": "infobae",
   "name": "Infobae",
   "lang": "es",
   "cat": "world",
-  "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/",
+  "plat": "web"
  },
  {
   "id": "20minutos",
   "name": "20minutos",
   "lang": "es",
   "cat": "world",
-  "url": "https://www.20minutos.es/rss/"
+  "url": "https://www.20minutos.es/rss/",
+  "plat": "web"
  },
  {
   "id": "liberation",
   "name": "Libération",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.liberation.fr/arc/outboundfeeds/rss-all/collection/accueil-une/?outputType=xml"
+  "url": "https://www.liberation.fr/arc/outboundfeeds/rss-all/collection/accueil-une/?outputType=xml",
+  "plat": "web"
  },
  {
   "id": "francetvinfo",
   "name": "franceinfo",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.francetvinfo.fr/titres.rss"
+  "url": "https://www.francetvinfo.fr/titres.rss",
+  "plat": "web"
  },
  {
   "id": "rfi-fr",
   "name": "RFI Français",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.rfi.fr/fr/rss"
+  "url": "https://www.rfi.fr/fr/rss",
+  "plat": "web"
  },
  {
   "id": "welt",
   "name": "WELT",
   "lang": "de",
   "cat": "world",
-  "url": "https://www.welt.de/feeds/latest.rss"
+  "url": "https://www.welt.de/feeds/latest.rss",
+  "plat": "web"
  },
  {
   "id": "sz",
   "name": "Süddeutsche",
   "lang": "de",
   "cat": "world",
-  "url": "https://rss.sueddeutsche.de/rss/Topthemen"
+  "url": "https://rss.sueddeutsche.de/rss/Topthemen",
+  "plat": "web"
  },
  {
   "id": "ntv-de",
   "name": "n-tv",
   "lang": "de",
   "cat": "world",
-  "url": "https://www.n-tv.de/rss"
+  "url": "https://www.n-tv.de/rss",
+  "plat": "web"
  },
  {
   "id": "golem",
   "name": "Golem",
   "lang": "de",
   "cat": "tech",
-  "url": "https://rss.golem.de/rss.php?feed=RSS2.0"
+  "url": "https://rss.golem.de/rss.php?feed=RSS2.0",
+  "plat": "web"
  },
  {
   "id": "t3n",
   "name": "t3n",
   "lang": "de",
   "cat": "tech",
-  "url": "https://t3n.de/rss.xml"
+  "url": "https://t3n.de/rss.xml",
+  "plat": "web"
  },
  {
   "id": "stern",
   "name": "stern",
   "lang": "de",
   "cat": "world",
-  "url": "https://www.stern.de/feed/standard/alle-nachrichten/"
+  "url": "https://www.stern.de/feed/standard/alle-nachrichten/",
+  "plat": "web"
  },
  {
   "id": "hdblog",
   "name": "HDblog",
   "lang": "it",
   "cat": "tech",
-  "url": "https://www.hdblog.it/feed/"
+  "url": "https://www.hdblog.it/feed/",
+  "plat": "web"
  },
  {
   "id": "ilsole",
   "name": "Il Sole 24 Ore",
   "lang": "it",
   "cat": "eco",
-  "url": "https://www.ilsole24ore.com/rss/italia.xml"
+  "url": "https://www.ilsole24ore.com/rss/italia.xml",
+  "plat": "web"
  },
  {
   "id": "estadao",
   "name": "Estadão",
   "lang": "pt",
   "cat": "world",
-  "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/brasil/?outputType=xml"
+  "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/brasil/?outputType=xml",
+  "plat": "web"
  },
  {
   "id": "publico",
   "name": "Público",
   "lang": "pt",
   "cat": "world",
-  "url": "https://feeds.feedburner.com/PublicoRSS"
+  "url": "https://feeds.feedburner.com/PublicoRSS",
+  "plat": "web"
  },
  {
   "id": "uol",
   "name": "UOL",
   "lang": "pt",
   "cat": "world",
-  "url": "https://rss.uol.com.br/feed/noticias.xml"
+  "url": "https://rss.uol.com.br/feed/noticias.xml",
+  "plat": "web"
  },
  {
   "id": "rbc",
   "name": "RBC",
   "lang": "ru",
   "cat": "world",
-  "url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss"
+  "url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss",
+  "plat": "web"
  },
  {
   "id": "kommersant",
   "name": "Коммерсантъ",
   "lang": "ru",
   "cat": "world",
-  "url": "https://www.kommersant.ru/RSS/news.xml"
+  "url": "https://www.kommersant.ru/RSS/news.xml",
+  "plat": "web"
  },
  {
   "id": "tass",
   "name": "TASS",
   "lang": "ru",
   "cat": "world",
-  "url": "https://tass.ru/rss/v2.xml"
+  "url": "https://tass.ru/rss/v2.xml",
+  "plat": "web"
  },
  {
   "id": "vedomosti",
   "name": "Ведомости",
   "lang": "ru",
   "cat": "eco",
-  "url": "https://www.vedomosti.ru/rss/news"
+  "url": "https://www.vedomosti.ru/rss/news",
+  "plat": "web"
  },
  {
   "id": "youm7",
   "name": "اليوم السابع",
   "lang": "ar",
   "cat": "world",
-  "url": "https://www.youm7.com/rss/SectionRss?SectionID=65"
- },
- {
-  "id": "sina",
-  "name": "新浪新闻",
-  "lang": "zh",
-  "cat": "world",
-  "url": "https://rss.sina.com.cn/news/china/focus15.xml"
+  "url": "https://www.youm7.com/rss/SectionRss?SectionID=65",
+  "plat": "web"
  },
  {
   "id": "yahoojp",
   "name": "Yahoo!ニュース",
   "lang": "ja",
   "cat": "world",
-  "url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml"
+  "url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml",
+  "plat": "web"
  },
  {
   "id": "mainichi",
   "name": "毎日新聞",
   "lang": "ja",
   "cat": "world",
-  "url": "https://mainichi.jp/rss/etc/mainichi-flash.rss"
+  "url": "https://mainichi.jp/rss/etc/mainichi-flash.rss",
+  "plat": "web"
  },
  {
   "id": "impress",
   "name": "Impress Watch",
   "lang": "ja",
   "cat": "tech",
-  "url": "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf"
+  "url": "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf",
+  "plat": "web"
  },
  {
   "id": "chosun",
   "name": "조선일보",
   "lang": "ko",
   "cat": "world",
-  "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml"
+  "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",
+  "plat": "web"
  },
  {
   "id": "ndtv-hi",
   "name": "NDTV Khabar",
   "lang": "hi",
   "cat": "world",
-  "url": "https://feeds.feedburner.com/ndtvkhabar-latest"
+  "url": "https://feeds.feedburner.com/ndtvkhabar-latest",
+  "plat": "web"
  },
  {
   "id": "aajtak",
   "name": "आज तक",
   "lang": "hi",
   "cat": "world",
-  "url": "https://www.aajtak.in/rssfeeds/?id=home"
+  "url": "https://www.aajtak.in/rssfeeds/?id=home",
+  "plat": "web"
  },
  {
   "id": "tempo",
   "name": "Tempo",
   "lang": "id",
   "cat": "world",
-  "url": "https://rss.tempo.co/nasional"
+  "url": "https://rss.tempo.co/nasional",
+  "plat": "web"
  },
  {
   "id": "tuoitre",
   "name": "Tuổi Trẻ",
   "lang": "vi",
   "cat": "world",
-  "url": "https://tuoitre.vn/rss/tin-moi-nhat.rss"
+  "url": "https://tuoitre.vn/rss/tin-moi-nhat.rss",
+  "plat": "web"
  },
  {
   "id": "thanhnien",
   "name": "Thanh Niên",
   "lang": "vi",
   "cat": "world",
-  "url": "https://thanhnien.vn/rss/home.rss"
+  "url": "https://thanhnien.vn/rss/home.rss",
+  "plat": "web"
  },
  {
   "id": "tvn24",
   "name": "TVN24",
   "lang": "pl",
   "cat": "world",
-  "url": "https://tvn24.pl/najnowsze.xml"
+  "url": "https://tvn24.pl/najnowsze.xml",
+  "plat": "web"
  },
  {
   "id": "onet",
   "name": "Onet",
   "lang": "pl",
   "cat": "world",
-  "url": "https://wiadomosci.onet.pl/.feed"
+  "url": "https://wiadomosci.onet.pl/.feed",
+  "plat": "web"
  },
  {
   "id": "nos",
   "name": "NOS",
   "lang": "nl",
   "cat": "world",
-  "url": "https://feeds.nos.nl/nosnieuwsalgemeen"
+  "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
+  "plat": "web"
  },
  {
   "id": "nu-nl",
   "name": "NU.nl",
   "lang": "nl",
   "cat": "world",
-  "url": "https://www.nu.nl/rss/Algemeen"
+  "url": "https://www.nu.nl/rss/Algemeen",
+  "plat": "web"
  },
  {
   "id": "pravda-ua",
   "name": "Українська правда",
   "lang": "uk",
   "cat": "world",
-  "url": "https://www.pravda.com.ua/rss/"
+  "url": "https://www.pravda.com.ua/rss/",
+  "plat": "web"
  },
  {
   "id": "svt",
   "name": "SVT Nyheter",
   "lang": "sv",
   "cat": "world",
-  "url": "https://www.svt.se/nyheter/rss.xml"
+  "url": "https://www.svt.se/nyheter/rss.xml",
+  "plat": "web"
  },
  {
   "id": "ynet",
   "name": "Ynet",
   "lang": "he",
   "cat": "world",
-  "url": "https://www.ynet.co.il/Integration/StoryRss2.xml"
+  "url": "https://www.ynet.co.il/Integration/StoryRss2.xml",
+  "plat": "web"
  },
  {
   "id": "toi",
   "name": "Times of India",
   "lang": "en",
   "cat": "world",
-  "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"
+  "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+  "plat": "web"
  },
  {
   "id": "thehindu",
   "name": "The Hindu",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.thehindu.com/news/national/feeder/default.rss"
+  "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+  "plat": "web"
  },
  {
   "id": "straitstimes",
   "name": "Straits Times",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.straitstimes.com/news/world/rss.xml"
+  "url": "https://www.straitstimes.com/news/world/rss.xml",
+  "plat": "web"
  },
  {
   "id": "abc-news",
   "name": "ABC News",
   "lang": "en",
   "cat": "world",
-  "url": "https://abcnews.go.com/abcnews/topstories"
+  "url": "https://abcnews.go.com/abcnews/topstories",
+  "plat": "web"
  },
  {
   "id": "nbc",
   "name": "NBC News",
   "lang": "en",
   "cat": "world",
-  "url": "https://feeds.nbcnews.com/nbcnews/public/news"
+  "url": "https://feeds.nbcnews.com/nbcnews/public/news",
+  "plat": "web"
  },
  {
   "id": "foxnews",
   "name": "Fox News",
   "lang": "en",
   "cat": "world",
-  "url": "https://moxie.foxnews.com/google-publisher/latest.xml"
+  "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
+  "plat": "web"
  },
  {
   "id": "latimes",
   "name": "LA Times",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.latimes.com/world-nation/rss2.0.xml"
+  "url": "https://www.latimes.com/world-nation/rss2.0.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-tech",
   "name": "BBC Technology",
   "lang": "en",
   "cat": "tech",
-  "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+  "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-sci",
   "name": "BBC Science",
   "lang": "en",
   "cat": "sci",
-  "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"
+  "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-biz",
   "name": "BBC Business",
   "lang": "en",
   "cat": "eco",
-  "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+  "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+  "plat": "web"
  },
  {
   "id": "bbc-ent",
   "name": "BBC Entertainment",
   "lang": "en",
   "cat": "ent",
-  "url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml"
+  "url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+  "plat": "web"
  },
  {
   "id": "guardian-tech",
   "name": "Guardian Tech",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.theguardian.com/technology/rss"
+  "url": "https://www.theguardian.com/technology/rss",
+  "plat": "web"
  },
  {
   "id": "guardian-biz",
   "name": "Guardian Business",
   "lang": "en",
   "cat": "eco",
-  "url": "https://www.theguardian.com/uk/business/rss"
+  "url": "https://www.theguardian.com/uk/business/rss",
+  "plat": "web"
  },
  {
   "id": "guardian-sci",
   "name": "Guardian Science",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.theguardian.com/science/rss"
+  "url": "https://www.theguardian.com/science/rss",
+  "plat": "web"
  },
  {
   "id": "npr-tech",
   "name": "NPR Technology",
   "lang": "en",
   "cat": "tech",
-  "url": "https://feeds.npr.org/1019/rss.xml"
+  "url": "https://feeds.npr.org/1019/rss.xml",
+  "plat": "web"
  },
  {
   "id": "nyt-tech",
   "name": "NYT Technology",
   "lang": "en",
   "cat": "tech",
-  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+  "plat": "web"
  },
  {
   "id": "nyt-world",
   "name": "NYT World",
   "lang": "en",
   "cat": "world",
-  "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
- },
- {
-  "id": "nyt-biz",
-  "name": "NYT Business",
-  "lang": "en",
-  "cat": "eco",
-  "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml"
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+  "plat": "web"
  },
  {
   "id": "xda",
   "name": "XDA",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.xda-developers.com/feed/"
+  "url": "https://www.xda-developers.com/feed/",
+  "plat": "web"
  },
  {
   "id": "gsmarena",
   "name": "GSMArena",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.gsmarena.com/rss-news-reviews.php3"
+  "url": "https://www.gsmarena.com/rss-news-reviews.php3",
+  "plat": "web"
  },
  {
   "id": "sammobile",
   "name": "SamMobile",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.sammobile.com/feed/"
+  "url": "https://www.sammobile.com/feed/",
+  "plat": "web"
  },
  {
   "id": "appleinsider",
   "name": "AppleInsider",
   "lang": "en",
   "cat": "tech",
-  "url": "https://appleinsider.com/rss/news/"
+  "url": "https://appleinsider.com/rss/news/",
+  "plat": "web"
  },
  {
   "id": "bleepingcomputer",
   "name": "BleepingComputer",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.bleepingcomputer.com/feed/"
+  "url": "https://www.bleepingcomputer.com/feed/",
+  "plat": "web"
  },
  {
   "id": "krebs",
   "name": "Krebs on Security",
   "lang": "en",
   "cat": "tech",
-  "url": "https://krebsonsecurity.com/feed/"
+  "url": "https://krebsonsecurity.com/feed/",
+  "plat": "web"
  },
  {
   "id": "gnq-sondakika",
   "name": "Son Dakika (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=son%20dakika%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=son%20dakika%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-deprem",
   "name": "Deprem (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=deprem%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=deprem%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-dolar",
   "name": "Dolar/Altın (GN)",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://news.google.com/rss/search?q=dolar%20alt%C4%B1n%20borsa%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=dolar%20alt%C4%B1n%20borsa%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-gs",
   "name": "Galatasaray (GN)",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=Galatasaray%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=Galatasaray%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-fb",
   "name": "Fenerbahçe (GN)",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=Fenerbah%C3%A7e%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=Fenerbah%C3%A7e%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-bjk",
   "name": "Beşiktaş (GN)",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=Be%C5%9Fikta%C5%9F%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=Be%C5%9Fikta%C5%9F%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-ts",
   "name": "Trabzonspor (GN)",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=Trabzonspor%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=Trabzonspor%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-milli",
   "name": "Milli Takım (GN)",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=A%20Milli%20Tak%C4%B1m%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=A%20Milli%20Tak%C4%B1m%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-basket",
   "name": "Basketbol (GN)",
   "lang": "tr",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=basketbol%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=basketbol%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-magazin",
   "name": "Magazin (GN)",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://news.google.com/rss/search?q=magazin%20%C3%BCnl%C3%BC%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=magazin%20%C3%BCnl%C3%BC%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-dizi",
   "name": "Dizi/TV (GN)",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://news.google.com/rss/search?q=dizi%20reyting%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=dizi%20reyting%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-ai",
   "name": "Yapay Zeka (GN)",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://news.google.com/rss/search?q=yapay%20zeka%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
- },
- {
-  "id": "gnq-oto",
-  "name": "Otomobil (GN)",
-  "lang": "tr",
-  "cat": "tech",
-  "url": "https://news.google.com/rss/search?q=otomobil%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=yapay%20zeka%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-iphone",
   "name": "Apple/iPhone (GN)",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://news.google.com/rss/search?q=iPhone%20Apple%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=iPhone%20Apple%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-uzay",
   "name": "Uzay (GN)",
   "lang": "tr",
   "cat": "sci",
-  "url": "https://news.google.com/rss/search?q=uzay%20NASA%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
- },
- {
-  "id": "gnq-saglik",
-  "name": "Sağlık (GN)",
-  "lang": "tr",
-  "cat": "sci",
-  "url": "https://news.google.com/rss/search?q=sa%C4%9Fl%C4%B1k%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=uzay%20NASA%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-hava",
   "name": "Hava Durumu (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=hava%20durumu%20uyar%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=hava%20durumu%20uyar%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-polis",
   "name": "Asayiş (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=polis%20operasyon%20g%C3%B6zalt%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=polis%20operasyon%20g%C3%B6zalt%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-mecliss",
   "name": "Siyaset (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=TBMM%20siyaset%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=TBMM%20siyaset%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-ekonomi",
   "name": "Ekonomi Gündemi (GN)",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://news.google.com/rss/search?q=enflasyon%20faiz%20Merkez%20Bankas%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=enflasyon%20faiz%20Merkez%20Bankas%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-viral",
   "name": "Viral/Sosyal Medya (GN)",
   "lang": "tr",
   "cat": "viral",
-  "url": "https://news.google.com/rss/search?q=sosyal%20medya%20g%C3%BCndem%20viral%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=sosyal%20medya%20g%C3%BCndem%20viral%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-ilginc",
   "name": "İlginç Haberler (GN)",
   "lang": "tr",
   "cat": "cool",
-  "url": "https://news.google.com/rss/search?q=ilgin%C3%A7%20haber%20%C5%9Fa%C5%9F%C4%B1rtan%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=ilgin%C3%A7%20haber%20%C5%9Fa%C5%9F%C4%B1rtan%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-egitim",
   "name": "Eğitim (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=MEB%20s%C4%B1nav%20YKS%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=MEB%20s%C4%B1nav%20YKS%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-trafik",
   "name": "Trafik/Kaza (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=kaza%20trafik%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=kaza%20trafik%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-oyun",
   "name": "Oyun (GN)",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://news.google.com/rss/search?q=oyun%20PlayStation%20Steam%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=oyun%20PlayStation%20Steam%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-kripto",
   "name": "Kripto (GN)",
   "lang": "tr",
   "cat": "eco",
-  "url": "https://news.google.com/rss/search?q=bitcoin%20kripto%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=bitcoin%20kripto%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-savunma",
   "name": "Savunma (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=savunma%20sanayii%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=savunma%20sanayii%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-istanbul",
   "name": "İstanbul (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=%C4%B0stanbul%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=%C4%B0stanbul%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-ankara",
   "name": "Ankara (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=Ankara%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=Ankara%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnq-izmir",
   "name": "İzmir (GN)",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://news.google.com/rss/search?q=%C4%B0zmir%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+  "url": "https://news.google.com/rss/search?q=%C4%B0zmir%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  },
  {
   "id": "gnqe-breaking",
   "name": "Breaking News (GN)",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss/search?q=breaking%20news%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=breaking%20news%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-ai",
   "name": "AI News (GN)",
   "lang": "en",
   "cat": "tech",
-  "url": "https://news.google.com/rss/search?q=artificial%20intelligence%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=artificial%20intelligence%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-viral",
   "name": "Viral (GN)",
   "lang": "en",
   "cat": "viral",
-  "url": "https://news.google.com/rss/search?q=viral%20trending%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=viral%20trending%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-weird",
   "name": "Weird News (GN)",
   "lang": "en",
   "cat": "cool",
-  "url": "https://news.google.com/rss/search?q=weird%20news%20bizarre%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=weird%20news%20bizarre%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-celeb",
   "name": "Celebrity (GN)",
   "lang": "en",
   "cat": "ent",
-  "url": "https://news.google.com/rss/search?q=celebrity%20news%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=celebrity%20news%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-nfl",
   "name": "NBA/NFL (GN)",
   "lang": "en",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=NBA%20NFL%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=NBA%20NFL%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-crypto",
   "name": "Crypto (GN)",
   "lang": "en",
   "cat": "eco",
-  "url": "https://news.google.com/rss/search?q=bitcoin%20crypto%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=bitcoin%20crypto%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-space",
   "name": "Space (GN)",
   "lang": "en",
   "cat": "sci",
-  "url": "https://news.google.com/rss/search?q=space%20NASA%20SpaceX%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=space%20NASA%20SpaceX%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-health",
   "name": "Health (GN)",
   "lang": "en",
   "cat": "sci",
-  "url": "https://news.google.com/rss/search?q=health%20study%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=health%20study%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-turkey",
   "name": "Turkey (GN)",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss/search?q=Turkey%20Erdogan%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=Turkey%20Erdogan%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-ukr",
   "name": "Ukraine/Middle East (GN)",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss/search?q=Ukraine%20Gaza%20Iran%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=Ukraine%20Gaza%20Iran%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "gnqe-ev",
   "name": "EV/Tesla (GN)",
   "lang": "en",
   "cat": "tech",
-  "url": "https://news.google.com/rss/search?q=Tesla%20electric%20vehicle%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=Tesla%20electric%20vehicle%20when%3A1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "hurriyet-son",
   "name": "Hürriyet Son Dakika",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.hurriyet.com.tr/rss/son-dakika"
+  "url": "https://www.hurriyet.com.tr/rss/son-dakika",
+  "plat": "web"
  },
  {
   "id": "sozcu-son",
   "name": "Sözcü Son",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.sozcu.com.tr/feeds-son-dakika"
+  "url": "https://www.sozcu.com.tr/feeds-son-dakika",
+  "plat": "web"
  },
  {
   "id": "yenisafak",
   "name": "Yeni Şafak",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.yenisafak.com/rss"
+  "url": "https://www.yenisafak.com/rss",
+  "plat": "web"
  },
  {
   "id": "sabah-magazin",
   "name": "Sabah Magazin",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://www.sabah.com.tr/rss/magazin.xml"
+  "url": "https://www.sabah.com.tr/rss/magazin.xml",
+  "plat": "web"
  },
  {
   "id": "haberler",
   "name": "Haberler.com",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://rss.haberler.com/rss.asp"
+  "url": "https://rss.haberler.com/rss.asp",
+  "plat": "web"
  },
  {
   "id": "onedio",
   "name": "Onedio",
   "lang": "tr",
   "cat": "viral",
-  "url": "https://onedio.com/support/rss.xml"
+  "url": "https://onedio.com/support/rss.xml",
+  "plat": "web"
  },
  {
   "id": "ntv-yasam",
   "name": "NTV Yaşam",
   "lang": "tr",
   "cat": "cool",
-  "url": "https://www.ntv.com.tr/yasam.rss"
+  "url": "https://www.ntv.com.tr/yasam.rss",
+  "plat": "web"
  },
  {
   "id": "ntv-turkiye",
   "name": "NTV Türkiye",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.ntv.com.tr/turkiye.rss"
+  "url": "https://www.ntv.com.tr/turkiye.rss",
+  "plat": "web"
  },
  {
   "id": "ntv-otomobil",
   "name": "NTV Otomobil",
   "lang": "tr",
   "cat": "tech",
-  "url": "https://www.ntv.com.tr/otomobil.rss"
+  "url": "https://www.ntv.com.tr/otomobil.rss",
+  "plat": "web"
  },
  {
   "id": "trt-kultur",
   "name": "TRT Haber Kültür-Sanat",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://www.trthaber.com/kultur_sanat_articles.rss"
+  "url": "https://www.trthaber.com/kultur_sanat_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trt-saglik",
   "name": "TRT Haber Sağlık",
   "lang": "tr",
   "cat": "sci",
-  "url": "https://www.trthaber.com/saglik_articles.rss"
+  "url": "https://www.trthaber.com/saglik_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trt-yasam",
   "name": "TRT Haber Yaşam",
   "lang": "tr",
   "cat": "cool",
-  "url": "https://www.trthaber.com/yasam_articles.rss"
+  "url": "https://www.trthaber.com/yasam_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trt-turkiye",
   "name": "TRT Haber Türkiye",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.trthaber.com/turkiye_articles.rss"
+  "url": "https://www.trthaber.com/turkiye_articles.rss",
+  "plat": "web"
  },
  {
   "id": "trt-sondakika",
   "name": "TRT Haber Son",
   "lang": "tr",
   "cat": "tr",
-  "url": "https://www.trthaber.com/sondakika_articles.rss"
+  "url": "https://www.trthaber.com/sondakika_articles.rss",
+  "plat": "web"
  },
  {
   "id": "aa-kultur",
   "name": "AA Kültür",
   "lang": "tr",
   "cat": "ent",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=kultur"
- },
- {
-  "id": "aa-saglik",
-  "name": "AA Sağlık",
-  "lang": "tr",
-  "cat": "sci",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=saglik"
- },
- {
-  "id": "aa-politika",
-  "name": "AA Politika",
-  "lang": "tr",
-  "cat": "tr",
-  "url": "https://www.aa.com.tr/tr/rss/default?cat=politika"
- },
- {
-  "id": "fotospor",
-  "name": "Fotomaç Futbol",
-  "lang": "tr",
-  "cat": "sport",
-  "url": "https://www.fotomac.com.tr/rss/futbol.xml"
+  "url": "https://www.aa.com.tr/tr/rss/default?cat=kultur",
+  "plat": "web"
  },
  {
   "id": "euronews-en",
   "name": "Euronews",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.euronews.com/rss?format=mrss"
+  "url": "https://www.euronews.com/rss?format=mrss",
+  "plat": "web"
  },
  {
   "id": "reuters-gn",
   "name": "Reuters (GN)",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss/search?q=site:reuters.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=site:reuters.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "ap-gn",
   "name": "AP News (GN)",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss/search?q=site:apnews.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=site:apnews.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "independent",
   "name": "The Independent",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.independent.co.uk/news/rss"
+  "url": "https://www.independent.co.uk/news/rss",
+  "plat": "web"
  },
  {
   "id": "dailymail",
   "name": "Daily Mail",
   "lang": "en",
   "cat": "viral",
-  "url": "https://www.dailymail.co.uk/news/index.rss"
+  "url": "https://www.dailymail.co.uk/news/index.rss",
+  "plat": "web"
  },
  {
   "id": "nypost",
   "name": "NY Post",
   "lang": "en",
   "cat": "viral",
-  "url": "https://nypost.com/feed/"
+  "url": "https://nypost.com/feed/",
+  "plat": "web"
  },
  {
   "id": "tmz",
   "name": "TMZ",
   "lang": "en",
   "cat": "ent",
-  "url": "https://www.tmz.com/rss.xml"
+  "url": "https://www.tmz.com/rss.xml",
+  "plat": "web"
  },
  {
   "id": "eonline",
   "name": "E! News",
   "lang": "en",
   "cat": "ent",
-  "url": "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml"
+  "url": "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
+  "plat": "web"
  },
  {
   "id": "politico",
   "name": "Politico",
   "lang": "en",
   "cat": "world",
-  "url": "https://rss.politico.com/politics-news.xml"
+  "url": "https://rss.politico.com/politics-news.xml",
+  "plat": "web"
  },
  {
   "id": "vice",
   "name": "VICE",
   "lang": "en",
   "cat": "cool",
-  "url": "https://www.vice.com/en/rss"
+  "url": "https://www.vice.com/en/rss",
+  "plat": "web"
  },
  {
   "id": "oddity",
   "name": "Oddity Central",
   "lang": "en",
   "cat": "cool",
-  "url": "https://www.odditycentral.com/feed"
+  "url": "https://www.odditycentral.com/feed",
+  "plat": "web"
  },
  {
   "id": "anthropic-gn",
   "name": "Anthropic/Claude (GN)",
   "lang": "en",
   "cat": "tech",
-  "url": "https://news.google.com/rss/search?q=Anthropic+Claude+when:7d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=Anthropic+Claude+when:7d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "fastco",
   "name": "Fast Company",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.fastcompany.com/latest/rss"
+  "url": "https://www.fastcompany.com/latest/rss",
+  "plat": "web"
  },
  {
   "id": "electrek",
   "name": "Electrek",
   "lang": "en",
   "cat": "tech",
-  "url": "https://electrek.co/feed/"
+  "url": "https://electrek.co/feed/",
+  "plat": "web"
  },
  {
   "id": "sciencealert",
   "name": "ScienceAlert",
   "lang": "en",
   "cat": "sci",
-  "url": "https://www.sciencealert.com/feed"
+  "url": "https://www.sciencealert.com/feed",
+  "plat": "web"
  },
  {
   "id": "eurogamer",
   "name": "Eurogamer",
   "lang": "en",
   "cat": "tech",
-  "url": "https://www.eurogamer.net/feed"
+  "url": "https://www.eurogamer.net/feed",
+  "plat": "web"
  },
  {
   "id": "theathletic-gn",
   "name": "Football (GN)",
   "lang": "en",
   "cat": "sport",
-  "url": "https://news.google.com/rss/search?q=football+transfer+when:1d&hl=en-GB&gl=GB&ceid=GB:en"
+  "url": "https://news.google.com/rss/search?q=football+transfer+when:1d&hl=en-GB&gl=GB&ceid=GB:en",
+  "plat": "web"
  },
  {
   "id": "bbc-football",
   "name": "BBC Football",
   "lang": "en",
   "cat": "sport",
-  "url": "https://feeds.bbci.co.uk/sport/football/rss.xml"
+  "url": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+  "plat": "web"
  },
  {
   "id": "fortune",
   "name": "Fortune",
   "lang": "en",
   "cat": "eco",
-  "url": "https://fortune.com/feed/"
+  "url": "https://fortune.com/feed/",
+  "plat": "web"
  },
  {
   "id": "coindesk",
   "name": "CoinDesk",
   "lang": "en",
   "cat": "eco",
-  "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+  "plat": "web"
  },
  {
   "id": "cointelegraph",
   "name": "Cointelegraph",
   "lang": "en",
   "cat": "eco",
-  "url": "https://cointelegraph.com/rss"
+  "url": "https://cointelegraph.com/rss",
+  "plat": "web"
  },
  {
   "id": "economist",
   "name": "The Economist",
   "lang": "en",
   "cat": "eco",
-  "url": "https://www.economist.com/latest/rss.xml"
+  "url": "https://www.economist.com/latest/rss.xml",
+  "plat": "web"
  },
  {
   "id": "ft-gn",
   "name": "Financial Times (GN)",
   "lang": "en",
   "cat": "eco",
-  "url": "https://news.google.com/rss/search?q=site:ft.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=site:ft.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "nytzh",
   "name": "纽约时报中文",
   "lang": "zh",
   "cat": "world",
-  "url": "https://cn.nytimes.com/rss/"
+  "url": "https://cn.nytimes.com/rss/",
+  "plat": "web"
  },
  {
   "id": "rfa-zh",
   "name": "自由亚洲",
   "lang": "zh",
   "cat": "world",
-  "url": "https://www.rfa.org/mandarin/RSS"
+  "url": "https://www.rfa.org/mandarin/RSS",
+  "plat": "web"
  },
  {
   "id": "marca",
   "name": "Marca",
   "lang": "es",
   "cat": "sport",
-  "url": "https://e00-marca.uecdn.es/rss/portada.xml"
+  "url": "https://e00-marca.uecdn.es/rss/portada.xml",
+  "plat": "web"
  },
  {
   "id": "clarin",
   "name": "Clarín",
   "lang": "es",
   "cat": "world",
-  "url": "https://www.clarin.com/rss/lo-ultimo/"
+  "url": "https://www.clarin.com/rss/lo-ultimo/",
+  "plat": "web"
  },
  {
   "id": "elconfidencial",
   "name": "El Confidencial",
   "lang": "es",
   "cat": "world",
-  "url": "https://rss.elconfidencial.com/espana/"
+  "url": "https://rss.elconfidencial.com/espana/",
+  "plat": "web"
  },
  {
   "id": "20min-fr",
   "name": "20 Minutes",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.20minutes.fr/feeds/rss-une.xml"
+  "url": "https://www.20minutes.fr/feeds/rss-une.xml",
+  "plat": "web"
  },
  {
   "id": "lexpress",
   "name": "L'Express",
   "lang": "fr",
   "cat": "world",
-  "url": "https://www.lexpress.fr/arc/outboundfeeds/rss/alaune.xml"
+  "url": "https://www.lexpress.fr/arc/outboundfeeds/rss/alaune.xml",
+  "plat": "web"
  },
  {
   "id": "bild",
   "name": "Bild",
   "lang": "de",
   "cat": "world",
-  "url": "https://www.bild.de/feed/alles.xml"
- },
- {
-  "id": "corriere",
-  "name": "Corriere",
-  "lang": "it",
-  "cat": "world",
-  "url": "https://xml2.corriereobjects.it/rss/homepage.xml"
- },
- {
-  "id": "gazzetta",
-  "name": "Gazzetta",
-  "lang": "it",
-  "cat": "sport",
-  "url": "https://www.gazzetta.it/rss/home.xml"
+  "url": "https://www.bild.de/feed/alles.xml",
+  "plat": "web"
  },
  {
   "id": "globo",
   "name": "Globo",
   "lang": "pt",
   "cat": "world",
-  "url": "https://pox.globo.com/rss/g1/"
+  "url": "https://pox.globo.com/rss/g1/",
+  "plat": "web"
  },
  {
   "id": "interfax",
   "name": "Interfax",
   "lang": "ru",
   "cat": "world",
-  "url": "https://www.interfax.ru/rss.asp"
+  "url": "https://www.interfax.ru/rss.asp",
+  "plat": "web"
  },
  {
   "id": "rt-ru",
   "name": "RT",
   "lang": "ru",
   "cat": "world",
-  "url": "https://russian.rt.com/rss"
+  "url": "https://russian.rt.com/rss",
+  "plat": "web"
  },
  {
   "id": "ria",
   "name": "РИА",
   "lang": "ru",
   "cat": "world",
-  "url": "https://ria.ru/export/rss2/archive/index.xml"
+  "url": "https://ria.ru/export/rss2/archive/index.xml",
+  "plat": "web"
  },
  {
   "id": "livedoor",
   "name": "livedoor",
   "lang": "ja",
   "cat": "viral",
-  "url": "https://news.livedoor.com/topics/rss/top.xml"
+  "url": "https://news.livedoor.com/topics/rss/top.xml",
+  "plat": "web"
  },
  {
   "id": "mk",
   "name": "매일경제",
   "lang": "ko",
   "cat": "eco",
-  "url": "https://www.mk.co.kr/rss/30000001/"
+  "url": "https://www.mk.co.kr/rss/30000001/",
+  "plat": "web"
  },
  {
   "id": "cnn-ar",
   "name": "CNN Arabic",
   "lang": "ar",
   "cat": "world",
-  "url": "https://arabic.cnn.com/rss"
+  "url": "https://arabic.cnn.com/rss",
+  "plat": "web"
  },
  {
   "id": "france24-ar",
   "name": "France24 AR",
   "lang": "ar",
   "cat": "world",
-  "url": "https://www.france24.com/ar/rss"
+  "url": "https://www.france24.com/ar/rss",
+  "plat": "web"
  },
  {
   "id": "rt-ar",
   "name": "RT Arabic",
   "lang": "ar",
   "cat": "world",
-  "url": "https://arabic.rt.com/rss/"
+  "url": "https://arabic.rt.com/rss/",
+  "plat": "web"
  },
  {
   "id": "ndtv-en",
   "name": "NDTV",
   "lang": "en",
   "cat": "world",
-  "url": "https://feeds.feedburner.com/ndtvnews-top-stories"
+  "url": "https://feeds.feedburner.com/ndtvnews-top-stories",
+  "plat": "web"
  },
  {
   "id": "indiatoday",
   "name": "India Today",
   "lang": "en",
   "cat": "world",
-  "url": "https://www.indiatoday.in/rss/1206578"
+  "url": "https://www.indiatoday.in/rss/1206578",
+  "plat": "web"
  },
  {
   "id": "dantri",
   "name": "Dân trí",
   "lang": "vi",
   "cat": "world",
-  "url": "https://dantri.com.vn/rss/home.rss"
+  "url": "https://dantri.com.vn/rss/home.rss",
+  "plat": "web"
  },
  {
   "id": "rp",
   "name": "Rzeczpospolita",
   "lang": "pl",
   "cat": "world",
-  "url": "https://www.rp.pl/rss_main"
+  "url": "https://www.rp.pl/rss_main",
+  "plat": "web"
  },
  {
   "id": "wp-pl",
   "name": "WP",
   "lang": "pl",
   "cat": "world",
-  "url": "https://wiadomosci.wp.pl/rss.xml"
+  "url": "https://wiadomosci.wp.pl/rss.xml",
+  "plat": "web"
  },
  {
   "id": "nu-sport",
   "name": "NU Sport",
   "lang": "nl",
   "cat": "sport",
-  "url": "https://www.nu.nl/rss/Sport"
+  "url": "https://www.nu.nl/rss/Sport",
+  "plat": "web"
  },
  {
   "id": "rtl-nl",
   "name": "RTL Nieuws",
   "lang": "nl",
   "cat": "world",
-  "url": "https://www.rtlnieuws.nl/rss.xml"
+  "url": "https://www.rtlnieuws.nl/rss.xml",
+  "plat": "web"
  },
  {
   "id": "aftonbladet",
   "name": "Aftonbladet",
   "lang": "sv",
   "cat": "world",
-  "url": "https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt"
+  "url": "https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt",
+  "plat": "web"
  },
  {
   "id": "dn",
   "name": "DN",
   "lang": "sv",
   "cat": "world",
-  "url": "https://www.dn.se/rss/"
+  "url": "https://www.dn.se/rss/",
+  "plat": "web"
  },
  {
   "id": "bangkokpost",
   "name": "Bangkok Post",
   "lang": "th",
   "cat": "world",
-  "url": "https://www.bangkokpost.com/rss/data/topstories.xml"
- },
- {
-  "id": "jpost",
-  "name": "Jerusalem Post",
-  "lang": "he",
-  "cat": "world",
-  "url": "https://www.jpost.com/rss/rssfeedsheadlines.aspx"
+  "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
+  "plat": "web"
  },
  {
   "id": "haaretz-gn",
   "name": "Haaretz (GN)",
   "lang": "en",
   "cat": "world",
-  "url": "https://news.google.com/rss/search?q=site:haaretz.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+  "url": "https://news.google.com/rss/search?q=site:haaretz.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+  "plat": "web"
  },
  {
   "id": "isna",
   "name": "ISNA",
   "lang": "fa",
   "cat": "world",
-  "url": "https://www.isna.ir/rss"
+  "url": "https://www.isna.ir/rss",
+  "plat": "web"
  },
  {
   "id": "unian",
   "name": "UNIAN",
   "lang": "uk",
   "cat": "world",
-  "url": "https://rss.unian.net/site/news_ukr.rss"
+  "url": "https://rss.unian.net/site/news_ukr.rss",
+  "plat": "web"
  },
  {
   "id": "abc-es",
   "name": "ABC",
   "lang": "es",
   "cat": "world",
-  "url": "https://www.abc.es/rss/2.0/portada/"
+  "url": "https://www.abc.es/rss/2.0/portada/",
+  "plat": "web"
  },
  {
   "id": "sport-es",
   "name": "Sport",
   "lang": "es",
   "cat": "sport",
-  "url": "https://www.sport.es/es/rss/last-news/news.xml"
+  "url": "https://www.sport.es/es/rss/last-news/news.xml",
+  "plat": "web"
  },
  {
   "id": "mundodeportivo",
   "name": "Mundo Deportivo",
   "lang": "es",
   "cat": "sport",
-  "url": "https://www.mundodeportivo.com/feed/rss/home"
+  "url": "https://www.mundodeportivo.com/feed/rss/home",
+  "plat": "web"
+ },
+ {
+  "id": "yt-mkbhd",
+  "name": "MKBHD",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCG7J20LhUeLl6y_Emi7OJrA"
+ },
+ {
+  "id": "yt-linustechtips",
+  "name": "Linus Tech Tips",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCdBK94H6oZT2Q7l0-b0xmMg"
+ },
+ {
+  "id": "yt-mrwhosetheboss",
+  "name": "Mrwhosetheboss",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMiJRAwDNSNzuYeN2uWa0pA"
+ },
+ {
+  "id": "yt-jerryrigeverything",
+  "name": "JerryRigEverything",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWFKCr40YwOZQx8FHU_ZqqQ"
+ },
+ {
+  "id": "yt-twominutepapers",
+  "name": "Two Minute Papers",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"
+ },
+ {
+  "id": "yt-veritasium",
+  "name": "Veritasium",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCin0m13qWv3-051xlWlHamA"
+ },
+ {
+  "id": "yt-vsauce",
+  "name": "Vsauce",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6nSFpj9HTCZ5t-N3Rm3-HA"
+ },
+ {
+  "id": "yt-nasa",
+  "name": "NASA",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9SM7V7J1pAhPabOUST01fw"
+ },
+ {
+  "id": "yt-spacex",
+  "name": "SpaceX",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtI0Hodo5o5dUb67FeUjDeA"
+ },
+ {
+  "id": "yt-bbcnews",
+  "name": "BBC News",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC16niRr50-MSBwiO3YDb3RA"
+ },
+ {
+  "id": "yt-aljazeeraenglish",
+  "name": "Al Jazeera English",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCfiwzLy-8yKzIbsmZTzxDgw"
+ },
+ {
+  "id": "yt-dwnews",
+  "name": "DW News",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbbS1GE942k3UVqpLklyhIA"
+ },
+ {
+  "id": "yt-cnn",
+  "name": "CNN",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCupvZG-5ko_eiXAupbDfxWw"
+ },
+ {
+  "id": "yt-reuters",
+  "name": "Reuters",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UChqUTb7kYRX8-EiaN3XFrSQ"
+ },
+ {
+  "id": "yt-associatedpress",
+  "name": "Associated Press",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC52X5wxOL_s5yw0dQk7NtgA"
+ },
+ {
+  "id": "yt-vox",
+  "name": "Vox",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCLXo7UDZvByw2ixzpQCufnA"
+ },
+ {
+  "id": "yt-vice",
+  "name": "VICE News",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn8zNIfYAQNdrFRrr8oibKw"
+ },
+ {
+  "id": "yt-france24_en",
+  "name": "France 24",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCCPCZNChQdGa9EkATeye4g"
+ },
+ {
+  "id": "yt-euronews",
+  "name": "Euronews",
+  "lang": "en",
+  "cat": "world",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSrZ3UV4jOidv8ppoVuvW9Q"
+ },
+ {
+  "id": "yt-cnbctelevision",
+  "name": "CNBC",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvJJ_dzjViJCoLf5uKUTwoA"
+ },
+ {
+  "id": "yt-business",
+  "name": "Bloomberg",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+ },
+ {
+  "id": "yt-mrbeast",
+  "name": "MrBeast",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAiLfjNXkNv24uhpzUgPa6A"
+ },
+ {
+  "id": "yt-netflix",
+  "name": "Netflix",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGie8GMlUo3kBKIopdvumVQ"
+ },
+ {
+  "id": "yt-ign",
+  "name": "IGN",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKy1dAqELo0zrOtPkf0eTMw"
+ },
+ {
+  "id": "yt-ted",
+  "name": "TED",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q"
+ },
+ {
+  "id": "yt-mark_rober",
+  "name": "Mark Rober",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCj4zC1Hfj-uc90FUXzRamNw"
+ },
+ {
+  "id": "yt-dudeperfect",
+  "name": "Dude Perfect",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJrWyyCRROi8NlQ6Xd9dx5Q"
+ },
+ {
+  "id": "yt-espn",
+  "name": "ESPN",
+  "lang": "en",
+  "cat": "sport",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCiio0ydw439X13KyZgMIcHw"
+ },
+ {
+  "id": "yt-ntv",
+  "name": "NTV",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGMghpDmBAqhz2p7eLHX-eg"
+ },
+ {
+  "id": "yt-cnnturk",
+  "name": "CNN Türk",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJCYKGZ4ZyjjshYa6fhRgRw"
+ },
+ {
+  "id": "yt-haberturktv",
+  "name": "Habertürk TV",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn6dNfiRE_Xunu7iMyvD7AA"
+ },
+ {
+  "id": "yt-trthaber",
+  "name": "TRT Haber",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCBgTP2LOFVPmq15W-RH-WXA"
+ },
+ {
+  "id": "yt-haberglobal",
+  "name": "Haber Global",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHjbBVD4yRI7vU-S9Pwpnkw"
+ },
+ {
+  "id": "yt-sozcutelevizyonu",
+  "name": "Sözcü TV",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOulx_rep5O4i9y6AyDqVvw"
+ },
+ {
+  "id": "yt-ahaber",
+  "name": "A Haber",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKQhfw-lzz0uKnE1fY1PsAA"
+ },
+ {
+  "id": "yt-dwturkce",
+  "name": "DW Türkçe",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpi_jv70749NkAmkdugyiPQ"
+ },
+ {
+  "id": "yt-tgrthaber",
+  "name": "TGRT Haber",
+  "lang": "tr",
+  "cat": "tr",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCzgrZ-CndOoylh2_e72nSBQ"
+ },
+ {
+  "id": "yt-showtv",
+  "name": "Show TV",
+  "lang": "tr",
+  "cat": "ent",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRfLDCtkSwmTdwHrbmC78Xg"
+ },
+ {
+  "id": "yt-kanald",
+  "name": "Kanal D",
+  "lang": "tr",
+  "cat": "ent",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFoe1tg8MuHjRzmqXtV816A"
+ },
+ {
+  "id": "yt-trtspor",
+  "name": "TRT Spor",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCebdo7-2NdjcktKzco64iNw"
+ },
+ {
+  "id": "yt-shiftdeletenet",
+  "name": "ShiftDelete.Net",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCek3UNSj6gq4FOPIOZkjc1g"
+ },
+ {
+  "id": "yt-teknoseyir",
+  "name": "Teknoseyir",
+  "lang": "tr",
+  "cat": "tech",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFIHrIGT0MBMRHzQtmzOWlQ"
+ },
+ {
+  "id": "yt-evrimagaci",
+  "name": "Evrim Ağacı",
+  "lang": "tr",
+  "cat": "sci",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCatnasFAiXUvWwH8NlSdd3A"
+ },
+ {
+  "id": "yt-fenerbahce",
+  "name": "Fenerbahçe",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-iIZndhvtEtZepuBwWYdPw"
+ },
+ {
+  "id": "yt-galatasaray",
+  "name": "Galatasaray",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQpeujIamj2ZOKXZnrxTRhA"
+ },
+ {
+  "id": "yt-besiktas",
+  "name": "Beşiktaş JK",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCLJVUlpsxZcIMECVDcZaM2g"
+ },
+ {
+  "id": "yt-trabzonspor",
+  "name": "Trabzonspor",
+  "lang": "tr",
+  "cat": "sport",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnZoe1ncVK7ApLBPfpZ_LEA"
+ },
+ {
+  "id": "yt-bloomberght",
+  "name": "Bloomberg HT",
+  "lang": "tr",
+  "cat": "eco",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWgGEIw9k_BB0VRMhy_w21Q"
+ },
+ {
+  "id": "yt-basakkarahan",
+  "name": "Başak Karahan",
+  "lang": "tr",
+  "cat": "cool",
+  "plat": "youtube",
+  "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC8OWw58bmGim6oVK0TzgIeQ"
+ },
+ {
+  "id": "rd-worldnews",
+  "name": "r/worldnews",
+  "lang": "en",
+  "cat": "world",
+  "plat": "reddit",
+  "url": "https://www.reddit.com/r/worldnews/.rss"
+ },
+ {
+  "id": "md-artificial-intelligence",
+  "name": "Medium · artificial-intelligence",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/artificial-intelligence"
+ },
+ {
+  "id": "md-technology",
+  "name": "Medium · technology",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/technology"
+ },
+ {
+  "id": "md-programming",
+  "name": "Medium · programming",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/programming"
+ },
+ {
+  "id": "md-startup",
+  "name": "Medium · startup",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/startup"
+ },
+ {
+  "id": "md-politics",
+  "name": "Medium · politics",
+  "lang": "en",
+  "cat": "world",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/politics"
+ },
+ {
+  "id": "md-science",
+  "name": "Medium · science",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/science"
+ },
+ {
+  "id": "md-health",
+  "name": "Medium · health",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/health"
+ },
+ {
+  "id": "md-productivity",
+  "name": "Medium · productivity",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/productivity"
+ },
+ {
+  "id": "md-psychology",
+  "name": "Medium · psychology",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/psychology"
+ },
+ {
+  "id": "md-culture",
+  "name": "Medium · culture",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/culture"
+ },
+ {
+  "id": "md-economics",
+  "name": "Medium · economics",
+  "lang": "en",
+  "cat": "eco",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/economics"
+ },
+ {
+  "id": "md-space",
+  "name": "Medium · space",
+  "lang": "en",
+  "cat": "sci",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/space"
+ },
+ {
+  "id": "md-cybersecurity",
+  "name": "Medium · cybersecurity",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/cybersecurity"
+ },
+ {
+  "id": "md-elon-musk",
+  "name": "Medium · elon-musk",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/elon-musk"
+ },
+ {
+  "id": "md-future",
+  "name": "Medium · future",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "medium",
+  "url": "https://medium.com/feed/tag/future"
+ },
+ {
+  "id": "dv-ai",
+  "name": "DEV · ai",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/ai"
+ },
+ {
+  "id": "dv-webdev",
+  "name": "DEV · webdev",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/webdev"
+ },
+ {
+  "id": "dv-python",
+  "name": "DEV · python",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/python"
+ },
+ {
+  "id": "dv-javascript",
+  "name": "DEV · javascript",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/javascript"
+ },
+ {
+  "id": "dv-devops",
+  "name": "DEV · devops",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/devops"
+ },
+ {
+  "id": "dv-security",
+  "name": "DEV · security",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/security"
+ },
+ {
+  "id": "dv-opensource",
+  "name": "DEV · opensource",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/opensource"
+ },
+ {
+  "id": "dv-machinelearning",
+  "name": "DEV · machinelearning",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed/tag/machinelearning"
+ },
+ {
+  "id": "hn-best",
+  "name": "Hacker News · Best",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "hn",
+  "url": "https://hnrss.org/best"
+ },
+ {
+  "id": "hn-show",
+  "name": "Hacker News · Show",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "hn",
+  "url": "https://hnrss.org/show"
+ },
+ {
+  "id": "hn-ask",
+  "name": "Hacker News · Ask",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "hn",
+  "url": "https://hnrss.org/ask?points=50"
+ },
+ {
+  "id": "lobsters",
+  "name": "Lobsters",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "hn",
+  "url": "https://lobste.rs/rss"
+ },
+ {
+  "id": "gh-blog",
+  "name": "GitHub Blog",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://github.blog/feed/"
+ },
+ {
+  "id": "so-blog",
+  "name": "Stack Overflow Blog",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://stackoverflow.blog/feed/"
+ },
+ {
+  "id": "wiki-onthisday",
+  "name": "Wikipedia · Bugün",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "wiki",
+  "url": "https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday&feedformat=atom"
+ },
+ {
+  "id": "wiki-featured",
+  "name": "Wikipedia · Seçkin",
+  "lang": "en",
+  "cat": "cool",
+  "plat": "wiki",
+  "url": "https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=featured&feedformat=atom"
+ },
+ {
+  "id": "steam-news",
+  "name": "Steam News",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "web",
+  "url": "https://store.steampowered.com/feeds/news/"
+ },
+ {
+  "id": "tumblr-staff",
+  "name": "Tumblr Staff",
+  "lang": "en",
+  "cat": "viral",
+  "plat": "web",
+  "url": "https://staff.tumblr.com/rss"
+ },
+ {
+  "id": "slashdot",
+  "name": "Slashdot",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://rss.slashdot.org/Slashdot/slashdotMain"
+ },
+ {
+  "id": "devto",
+  "name": "DEV Community",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "dev",
+  "url": "https://dev.to/feed"
+ },
+ {
+  "id": "spotify-newsroom",
+  "name": "Spotify Newsroom",
+  "lang": "en",
+  "cat": "ent",
+  "plat": "web",
+  "url": "https://newsroom.spotify.com/feed/"
+ },
+ {
+  "id": "meta-news",
+  "name": "Meta Newsroom",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://about.fb.com/news/feed/"
+ },
+ {
+  "id": "yt-blog",
+  "name": "YouTube Official Blog",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "youtube",
+  "url": "https://blog.youtube/rss/"
+ },
+ {
+  "id": "google-blog",
+  "name": "Google Blog",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://blog.google/rss/"
+ },
+ {
+  "id": "ms-blog",
+  "name": "Microsoft Blog",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://blogs.microsoft.com/feed/"
+ },
+ {
+  "id": "apple-news",
+  "name": "Apple Newsroom",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://www.apple.com/newsroom/rss-feed.rss"
+ },
+ {
+  "id": "aws-news",
+  "name": "AWS News",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://aws.amazon.com/blogs/aws/feed/"
+ },
+ {
+  "id": "nvidia-blog",
+  "name": "NVIDIA Blog",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://blogs.nvidia.com/feed/"
+ },
+ {
+  "id": "anthropic-news",
+  "name": "Anthropic News (GN)",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://news.google.com/rss/search?q=site:anthropic.com&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "deepmind",
+  "name": "Google DeepMind",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://deepmind.google/blog/rss.xml"
+ },
+ {
+  "id": "meta-ai",
+  "name": "Meta AI (GN)",
+  "lang": "en",
+  "cat": "tech",
+  "plat": "web",
+  "url": "https://news.google.com/rss/search?q=%22Meta+AI%22+when:3d&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gn-tr-instagram",
+  "name": "Instagram/Sosyal medya (GN)",
+  "lang": "tr",
+  "cat": "viral",
+  "plat": "web",
+  "url": "https://news.google.com/rss/search?q=instagram+OR+tiktok+OR+youtube+when:1d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gn-tr-fenomen",
+  "name": "Fenomen/Influencer (GN)",
+  "lang": "tr",
+  "cat": "viral",
+  "plat": "web",
+  "url": "https://news.google.com/rss/search?q=fenomen+OR+influencer+OR+youtuber+when:2d&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gnq-saglik2",
+  "name": "Sağlık (GN)",
+  "lang": "tr",
+  "cat": "sci",
+  "url": "https://news.google.com/rss/search?q=kanser%20OR%20diyabet%20OR%20kalp%20OR%20vitamin%20uzman%20uyard%C4%B1%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
+ },
+ {
+  "id": "gnq-bilim2",
+  "name": "Bilim (GN)",
+  "lang": "tr",
+  "cat": "sci",
+  "url": "https://news.google.com/rss/search?q=bilim%20insanlar%C4%B1%20ke%C5%9Ffetti%20OR%20ara%C5%9Ft%C4%B1rma%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "plat": "web"
  }
 ]

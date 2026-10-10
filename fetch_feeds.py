@@ -52,6 +52,7 @@ def parse_et(data):
             if m: img = m.group(1)
         d['s'] = '' if 'news.google.com' in d.get('l', '') else strip(desc)[:200]
         if img and img.startswith('http'): d['i'] = img
+        if not d.get('t') and d.get('s'): d['t'] = d['s'][:110]
         if d.get('t') and d.get('l'): out.append(d)
     return out
 
@@ -70,8 +71,43 @@ def parse_re(data):
         img = (re.search(r'<(?:media:thumbnail|media:content|enclosure)[^>]+url=["\']([^"\']+)', blk) or re.search(r'<img[^>]+src=["\']([^"\']+)', html.unescape(desc)) or [None, ''])[1]
         it = dict(t=t, l=html.unescape(l), d=d, s=strip(desc)[:200])
         if img.startswith('http'): it['i'] = html.unescape(img)
+        if not it['t'] and it['s']: it['t'] = it['s'][:110]
         if it['t'] and it['l']: out.append(it)
     return out
+
+
+import threading, time, unicodedata
+_rl = threading.Lock()
+def host_wait(url):
+    if 'reddit.com' in url:
+        with _rl: time.sleep(1.3)
+
+TRUST = set("""webrazzi shiftdelete donanimhaber webtekno technopat log teknoseyir chip-tr tamindir hn verge techcrunch ars wired engadget gizmodo 9to5mac 9to5google macrumors mit-tr cnet zdnet techmeme theregister androidauthority tomshardware thenextweb hackaday producthunt xda gsmarena sammobile appleinsider bleepingcomputer krebs merlin donanimarsivi techinside electrek eurogamer the-decoder hf-blog openai nasa sciencedaily newscientist quanta nature livescience physorg smithsonian bilimgenc fizikist evrim sciencealert bloomberght ekonomim dunya-gzt cnbc bloomberg marketwatch coindesk cointelegraph economist fortune variety thr deadline rollingstone pitchfork polygon ign kotaku pcgamer tmz eonline espn bbc-sport skysports guardian-football fotomac aspor bbc-football aa-spor trthaber-spor atlas boingboing goodnews futurism kottke oddity vice mashable buzzfeed knowyourmeme theonion onedio gnq-gs gnq-fb gnq-bjk gnq-ts gnq-milli gnq-basket gnqe-nfl gnqe-celeb gnqe-crypto gnq-kripto gnq-dolar gnq-ekonomi gnq-ai gnqe-ai gnq-iphone gnq-oyun gnqe-ev gnqe-space gnq-uzay anthropic-gn""".split())
+MIXED = set("""hurriyet-tek milliyet-tek sabah-tek haberturk-tek sozcu-tek aa-bilim trthaber-bilim ntv-tek cnnturk-tek hurriyet-eko milliyet-eko sabah-eko haberturk-eko sozcu-eko aa-eko trthaber-eko cumhuriyet-eko""".split())
+KW = {
+ 'tech': r"iphone|ipad|macbook|android|samsung|galaxy|xiaomi|huawei|apple|google|microsoft|windows|linux|openai|chatgpt|claude|gemini|anthropic|yapay zek|artificial intel|\bai\b|işlemci|ekran kart|nvidia|intel|amd|qualcomm|telefon|akıllı|bilgisayar|laptop|yazılım|uygulama|siber|hack|güvenlik açığ|robot|drone|tesla|elektrikli|togg|otomobil|oyun|playstation|xbox|steam|nintendo|teknoloji|teknofest|internet|5g|chip|çip|startup|girişim|güncelleme|whatsapp|instagram|tiktok|youtube|netflix|spotify|starlink|spacex|roket|uydu|bulut|veri|algoritma|kripto cüzdan|batarya|şarj|kamera|tablet|kulaklık|monitör|ssd|ram",
+ 'sport': r"maç|gol\b|futbol|basketbol|voleybol|lig\b|süper lig|şampiyon|transfer|teknik direktör|hakem|galatasaray|fenerbahçe|beşiktaş|trabzonspor|başakşehir|milli takım|euroleague|nba|nfl|uefa|fifa|olimpiyat|formula|f1\b|tenis|güreş|boks|ufc|premier league|champions|football|soccer|goal|coach|match|tournament|cup\b|stadyum|kupa",
+ 'eco': r"dolar|euro|altın|borsa|bist|enflasyon|faiz|merkez bankası|ekonomi|zam\b|maaş|asgari ücret|emekli|vergi|ihracat|ithalat|bütçe|kredi|banka|yatırım|hisse|petrol|akaryakıt|benzin|motorin|konut|kira|bitcoin|kripto|ethereum|fed\b|inflation|stock|market|economy|gdp|earnings|bank|tariff|oil|currency|sanayi|şirket|ticaret|piyasa",
+ 'sci': r"nasa|uzay|gezegen|astronom|bilim|araştırma|keşfetti|fosil|iklim|deprem|kanser|tedavi|hastalık|aşı|vitamin|beslenme|sağlık|doktor|ilaç|genetik|dna|evren|teleskop|asteroid|study|scientists|researchers|climate|vaccine|disease|health|planet|space|physics|biology|quantum|güneş|mars",
+ 'ent': r"dizi|film|sinema|oyuncu|şarkıcı|ünlü|magazin|konser|albüm|festival|ödül|oscar|netflix|gişe|fragman|yönetmen|survivor|masterchef|sanatçı|aktris|aktör|celebrity|movie|series|actor|actress|singer|album|box office|trailer|hollywood|streaming",
+}
+KWC = {k: re.compile(v, re.I) for k, v in KW.items()}
+GENERAL = re.compile(r"cinayet|gözaltı|tutuklandı|erdoğan|cumhurbaşkanı|bakan\b|belediye|savcılık|operasyon|kaza\b|yaralandı|hayatını kaybetti|polis|cezaevi|soruşturma|başkan\b|seçim|chp|akp|mhp|meclis|tbmm|savaş|gaza|ukrayna|israil|iran|rusya|putin|trump|biden|police|killed|arrested|election|war\b|president", re.I)
+
+def classify(it, s):
+    """Kategori kaynağın bölümünden farklıysa (ör. teknoloji bölümünde gündem haberi) madde bazında düzelt."""
+    c = s['cat']
+    if c not in KWC or s['lang'] not in ('tr', 'en'): return c
+    if not (s['id'] in MIXED or s['id'].startswith('gn-')): return c
+    text = (it.get('t', '') + ' ' + it.get('s', '')[:120])
+    if KWC[c].search(text): return c
+    best, bn = None, 0
+    for k, rx in KWC.items():
+        if k == c: continue
+        n = len(rx.findall(text))
+        if n > bn: best, bn = k, n
+    if best and bn >= 1 and not GENERAL.search(text): return best
+    return 'tr' if s['lang'] == 'tr' else 'world'
 
 def fix_future(items):
     """Yerel saati GMT diye işaretleyen kaynakları (ör. CNN Türk) düzelt."""
@@ -102,6 +138,7 @@ def go(s):
     err = 'bos'
     for attempt in range(2):
         try:
+            host_wait(s['url'])
             items = parse(fetch(s['url']))
             if items: return s, items, None
         except Exception as e:
@@ -116,7 +153,13 @@ def main():
     with cf.ThreadPoolExecutor(24) as ex:
         for s, items, err in ex.map(go, sources):
             if items:
-                feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], url=s['url'], items=items, updated=now)
+                lim = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
+                items = [i for i in items if not i.get('d') or i['d'] >= lim]
+                for i in items:
+                    c = classify(i, s)
+                    if c != s['cat']: i['c'] = c
+                if not items: failed.append((s['id'], 'eski')); continue
+                feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], plat=s.get('plat') or 'web', url=s['url'], items=items, updated=now)
             else:
                 failed.append((s['id'], err))
                 if s['id'] in old: feeds[s['id']] = old[s['id']]   # eski haberleri koru
