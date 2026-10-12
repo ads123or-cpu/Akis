@@ -4664,262 +4664,6 @@
   "url": "https://bsky.app/profile/bsky.app/rss"
  },
  {
-  "id": "ms-haber",
-  "name": "Mastodon #haber",
-  "lang": "tr",
-  "cat": "tr",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/haber.rss"
- },
- {
-  "id": "ms-turkiye",
-  "name": "Mastodon #turkiye",
-  "lang": "tr",
-  "cat": "tr",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/turkiye.rss"
- },
- {
-  "id": "ms-türkiye",
-  "name": "Mastodon #türkiye",
-  "lang": "tr",
-  "cat": "tr",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/t%C3%BCrkiye.rss"
- },
- {
-  "id": "ms-teknoloji",
-  "name": "Mastodon #teknoloji",
-  "lang": "tr",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/teknoloji.rss"
- },
- {
-  "id": "ms-yapayzeka",
-  "name": "Mastodon #yapayzeka",
-  "lang": "tr",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/yapayzeka.rss"
- },
- {
-  "id": "ms-gundem",
-  "name": "Mastodon #gundem",
-  "lang": "tr",
-  "cat": "tr",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/gundem.rss"
- },
- {
-  "id": "ms-bilim",
-  "name": "Mastodon #bilim",
-  "lang": "tr",
-  "cat": "sci",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/bilim.rss"
- },
- {
-  "id": "ms-spor",
-  "name": "Mastodon #spor",
-  "lang": "tr",
-  "cat": "sport",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/spor.rss"
- },
- {
-  "id": "ms-breaking",
-  "name": "Mastodon #breaking",
-  "lang": "en",
-  "cat": "world",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/breaking.rss"
- },
- {
-  "id": "ms-news",
-  "name": "Mastodon #news",
-  "lang": "en",
-  "cat": "world",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/news.rss"
- },
- {
-  "id": "ms-worldnews",
-  "name": "Mastodon #worldnews",
-  "lang": "en",
-  "cat": "world",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/worldnews.rss"
- },
- {
-  "id": "ms-ai",
-  "name": "Mastodon #ai",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/ai.rss"
- },
- {
-  "id": "ms-llm",
-  "name": "Mastodon #llm",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/llm.rss"
- },
- {
-  "id": "ms-technology",
-  "name": "Mastodon #technology",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/technology.rss"
- },
- {
-  "id": "ms-opensource",
-  "name": "Mastodon #opensource",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/opensource.rss"
- },
- {
-  "id": "ms-infosec",
-  "name": "Mastodon #infosec",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/infosec.rss"
- },
- {
-  "id": "ms-science",
-  "name": "Mastodon #science",
-  "lang": "en",
-  "cat": "sci",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/science.rss"
- },
- {
-  "id": "ms-space",
-  "name": "Mastodon #space",
-  "lang": "en",
-  "cat": "sci",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/space.rss"
- },
- {
-  "id": "ms-politics",
-  "name": "Mastodon #politics",
-  "lang": "en",
-  "cat": "world",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/politics.rss"
- },
- {
-  "id": "ms-climate",
-  "name": "Mastodon #climate",
-  "lang": "en",
-  "cat": "sci",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/climate.rss"
- },
- {
-  "id": "ms-gaming",
-  "name": "Mastodon #gaming",
-  "lang": "en",
-  "cat": "ent",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/gaming.rss"
- },
- {
-  "id": "ms-music",
-  "name": "Mastodon #music",
-  "lang": "en",
-  "cat": "ent",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/music.rss"
- },
- {
-  "id": "ms-film",
-  "name": "Mastodon #film",
-  "lang": "en",
-  "cat": "ent",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/film.rss"
- },
- {
-  "id": "ms-art",
-  "name": "Mastodon #art",
-  "lang": "en",
-  "cat": "cool",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/art.rss"
- },
- {
-  "id": "ms-photography",
-  "name": "Mastodon #photography",
-  "lang": "en",
-  "cat": "cool",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/photography.rss"
- },
- {
-  "id": "ms-economy",
-  "name": "Mastodon #economy",
-  "lang": "en",
-  "cat": "eco",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/economy.rss"
- },
- {
-  "id": "ms-football",
-  "name": "Mastodon #football",
-  "lang": "en",
-  "cat": "sport",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/football.rss"
- },
- {
-  "id": "ms-formula1",
-  "name": "Mastodon #formula1",
-  "lang": "en",
-  "cat": "sport",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/formula1.rss"
- },
- {
-  "id": "ms-history",
-  "name": "Mastodon #history",
-  "lang": "en",
-  "cat": "cool",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/history.rss"
- },
- {
-  "id": "ms-memes",
-  "name": "Mastodon #memes",
-  "lang": "en",
-  "cat": "viral",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/tags/memes.rss"
- },
- {
-  "id": "msu-gargron",
-  "name": "Mastodon · @Gargron",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/@Gargron.rss"
- },
- {
-  "id": "msu-mastodon",
-  "name": "Mastodon · @Mastodon",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "mastodon",
-  "url": "https://mastodon.social/@Mastodon.rss"
- },
- {
   "id": "x-bbcbreaking",
   "name": "X · BBC Breaking",
   "lang": "en",
@@ -5638,5 +5382,341 @@
   "cat": "viral",
   "plat": "reddit",
   "url": "https://www.reddit.com/r/burdurland/.rss"
+ },
+ {
+  "id": "win-central",
+  "name": "Windows Central",
+  "lang": "en",
+  "cat": "win",
+  "plat": "web",
+  "url": "https://www.windowscentral.com/feeds.xml"
+ },
+ {
+  "id": "win-neowin",
+  "name": "Neowin",
+  "lang": "en",
+  "cat": "win",
+  "plat": "web",
+  "url": "https://www.neowin.net/news/rss/"
+ },
+ {
+  "id": "win-blog",
+  "name": "Windows Blog",
+  "lang": "en",
+  "cat": "win",
+  "plat": "web",
+  "url": "https://blogs.windows.com/feed/"
+ },
+ {
+  "id": "win-latest",
+  "name": "Windows Latest",
+  "lang": "en",
+  "cat": "win",
+  "plat": "web",
+  "url": "https://www.windowslatest.com/feed/"
+ },
+ {
+  "id": "win-thurrott",
+  "name": "Thurrott",
+  "lang": "en",
+  "cat": "win",
+  "plat": "web",
+  "url": "https://www.thurrott.com/feed"
+ },
+ {
+  "id": "win-msedge",
+  "name": "Windows Insider",
+  "lang": "en",
+  "cat": "win",
+  "plat": "web",
+  "url": "https://blogs.windows.com/windows-insider/feed/"
+ },
+ {
+  "id": "ios-9to5",
+  "name": "9to5Mac",
+  "lang": "en",
+  "cat": "ios",
+  "plat": "web",
+  "url": "https://9to5mac.com/feed/"
+ },
+ {
+  "id": "ios-macrumors",
+  "name": "MacRumors",
+  "lang": "en",
+  "cat": "ios",
+  "plat": "web",
+  "url": "https://feeds.macrumors.com/MacRumors-All"
+ },
+ {
+  "id": "ios-appleinsider",
+  "name": "AppleInsider",
+  "lang": "en",
+  "cat": "ios",
+  "plat": "web",
+  "url": "https://appleinsider.com/rss/news"
+ },
+ {
+  "id": "mac-macstories",
+  "name": "MacStories",
+  "lang": "en",
+  "cat": "mac",
+  "plat": "web",
+  "url": "https://www.macstories.net/feed/"
+ },
+ {
+  "id": "mac-newsroom",
+  "name": "Apple Newsroom",
+  "lang": "en",
+  "cat": "ios",
+  "plat": "web",
+  "url": "https://www.apple.com/newsroom/rss-feed.rss"
+ },
+ {
+  "id": "mac-9to5",
+  "name": "9to5Mac macOS",
+  "lang": "en",
+  "cat": "mac",
+  "plat": "web",
+  "url": "https://9to5mac.com/guides/macos/feed/"
+ },
+ {
+  "id": "mac-macworld",
+  "name": "Macworld",
+  "lang": "en",
+  "cat": "mac",
+  "plat": "web",
+  "url": "https://www.macworld.com/feed"
+ },
+ {
+  "id": "mac-cultofmac",
+  "name": "Cult of Mac",
+  "lang": "en",
+  "cat": "mac",
+  "plat": "web",
+  "url": "https://www.cultofmac.com/feed"
+ },
+ {
+  "id": "ios-gn-tr-ios",
+  "name": "GN iOS (TR)",
+  "lang": "tr",
+  "cat": "ios",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=iOS+OR+iPhone&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "mac-gn-tr",
+  "name": "GN macOS (TR)",
+  "lang": "tr",
+  "cat": "mac",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=macOS+OR+MacBook&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "win-gn-tr",
+  "name": "GN Windows (TR)",
+  "lang": "tr",
+  "cat": "win",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=Windows+11+OR+Windows+Microsoft&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "auto-gn-tr",
+  "name": "GN Otomobil (TR)",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=otomobil+OR+otomotiv&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "auto-motor1-tr",
+  "name": "Motor1 Türkiye",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://tr.motor1.com/rss/articles/all/"
+ },
+ {
+  "id": "auto-oto-haberturk",
+  "name": "Habertürk Otomobil",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.haberturk.com/rss/otomobil.xml"
+ },
+ {
+  "id": "auto-oto-ntv",
+  "name": "NTV Otomobil",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.ntv.com.tr/otomobil.rss"
+ },
+ {
+  "id": "auto-oto-cnnturk",
+  "name": "CNN Türk Otomobil",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.cnnturk.com/feed/rss/otomobil/news"
+ },
+ {
+  "id": "auto-sdn",
+  "name": "ShiftDelete Otomobil",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://shiftdelete.net/otomobil/feed"
+ },
+ {
+  "id": "auto-caranddriver",
+  "name": "Car and Driver",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.caranddriver.com/rss/all.xml/"
+ },
+ {
+  "id": "auto-motor1",
+  "name": "Motor1",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.motor1.com/rss/articles/all/"
+ },
+ {
+  "id": "auto-carscoops",
+  "name": "Carscoops",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.carscoops.com/feed/"
+ },
+ {
+  "id": "auto-thedrive",
+  "name": "The Drive",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.thedrive.com/feed"
+ },
+ {
+  "id": "auto-jalopnik",
+  "name": "Jalopnik",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://jalopnik.com/rss"
+ },
+ {
+  "id": "auto-autocar",
+  "name": "Autocar",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.autocar.co.uk/rss"
+ },
+ {
+  "id": "auto-roadandtrack",
+  "name": "Road & Track",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.roadandtrack.com/rss/all.xml/"
+ },
+ {
+  "id": "auto-electrek",
+  "name": "Electrek",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://electrek.co/feed/"
+ },
+ {
+  "id": "auto-insideevs",
+  "name": "InsideEVs",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://insideevs.com/rss/news/all/"
+ },
+ {
+  "id": "auto-teslarati",
+  "name": "Teslarati",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "web",
+  "url": "https://www.teslarati.com/feed/"
+ },
+ {
+  "id": "gn-win-tr2",
+  "name": "Windows 11 haberleri",
+  "lang": "tr",
+  "cat": "win",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=Windows+11+g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gn-ios-tr2",
+  "name": "iOS güncellemesi",
+  "lang": "tr",
+  "cat": "ios",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=iOS+g%C3%BCncelleme+iPhone&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gn-mac-tr2",
+  "name": "macOS ve Mac haberleri",
+  "lang": "tr",
+  "cat": "mac",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=macOS+Apple+Mac&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gn-auto-ev",
+  "name": "Elektrikli araç haberleri",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=elektrikli+ara%C3%A7+OR+Togg&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gn-auto-yeni",
+  "name": "Yeni model araba",
+  "lang": "tr",
+  "cat": "auto",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=yeni+model+araba+fiyat&hl=tr&gl=TR&ceid=TR:tr"
+ },
+ {
+  "id": "gn-auto-en",
+  "name": "Car news (EN)",
+  "lang": "en",
+  "cat": "auto",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=new+car+launch+OR+electric+vehicle&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gn-win-en",
+  "name": "Windows news (EN)",
+  "lang": "en",
+  "cat": "win",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=Windows+11+update&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gn-ios-en",
+  "name": "iOS news (EN)",
+  "lang": "en",
+  "cat": "ios",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=iOS+27+iPhone&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "gn-mac-en",
+  "name": "macOS news (EN)",
+  "lang": "en",
+  "cat": "mac",
+  "plat": "gnews",
+  "url": "https://news.google.com/rss/search?q=macOS+27+MacBook&hl=en-US&gl=US&ceid=US:en"
  }
 ]

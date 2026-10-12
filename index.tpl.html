@@ -13,7 +13,7 @@
   --bg:#f4f5f9;--bg2:#ffffff;--bg3:#eceef5;--ink:#0f1222;--ink2:#4b5169;--ink3:#8a90a8;--line:#e2e5f0;
   --ac:#5b5bf6;--ac2:#c026d3;--glass:rgba(255,255,255,.72);--shadow:0 1px 2px rgba(15,18,34,.05),0 8px 24px -12px rgba(15,18,34,.18);
   --r:18px;
-  --c-tr:#ef4444;--c-world:#3b82f6;--c-tech:#8b5cf6;--c-eco:#10b981;--c-sci:#06b6d4;--c-cool:#f59e0b;--c-viral:#ec4899;--c-ent:#f97316;--c-sport:#22c55e;
+  --c-tr:#ef4444;--c-world:#3b82f6;--c-tech:#8b5cf6;--c-ios:#14b8a6;--c-mac:#64748b;--c-win:#0ea5e9;--c-auto:#ca8a04;--c-eco:#10b981;--c-sci:#06b6d4;--c-cool:#f59e0b;--c-viral:#ec4899;--c-ent:#d946ef;--c-sport:#22c55e;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0a0c14;--bg2:#12151f;--bg3:#1a1e2c;--ink:#eef0f8;--ink2:#a9afc6;--ink3:#6b7390;--line:#222738;--glass:rgba(14,17,28,.72);
@@ -50,12 +50,12 @@ svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke
 .chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0 6px}
 .chips::-webkit-scrollbar{display:none}
 .chip{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 15px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);font-weight:600;font-size:14px;white-space:nowrap;color:var(--ink2);transition:.15s;flex:none}
-.chip .d{width:8px;height:8px;border-radius:50%;background:var(--c,var(--ink3))}
+.chip .d{width:auto;height:auto;font-size:15px;line-height:1;background:none;border-radius:0}
 .chip em{font-style:normal;font-size:12px;color:var(--ink3);font-weight:600}
 .chip:hover{border-color:color-mix(in srgb,var(--c,var(--ac)) 60%,var(--line));color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .chip[aria-pressed="true"] em{color:inherit;opacity:.65}
-.chip[aria-pressed="true"] .d{box-shadow:0 0 0 3px color-mix(in srgb,var(--c,#fff) 40%,transparent)}
+
 .row2{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:6px 0 18px}
 .seg{display:inline-flex;flex-wrap:wrap;background:var(--bg3);border-radius:12px;padding:3px;gap:2px}
 .seg button{height:34px;padding:0 13px;border-radius:9px;font-weight:600;font-size:13px;color:var(--ink2);display:inline-flex;align-items:center;gap:6px}
@@ -175,6 +175,41 @@ dialog::backdrop{background:rgba(5,7,15,.6);backdrop-filter:blur(4px)}
   .add{grid-template-columns:1fr 1fr}.add .url{grid-column:1/-1}.sp{display:none}
   .feat .in{padding:20px}.feat{min-height:300px;border-radius:20px}
 }
+
+/* ---- yenilenmiş görünüm ---- */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(900px 500px at 8% -10%,color-mix(in srgb,var(--ac) 16%,transparent),transparent 60%),
+             radial-gradient(800px 480px at 100% 0%,color-mix(in srgb,var(--ac2) 13%,transparent),transparent 60%),
+             radial-gradient(700px 500px at 50% 110%,color-mix(in srgb,var(--c-win) 10%,transparent),transparent 60%)}
+.logo span{background:linear-gradient(90deg,var(--ink),color-mix(in srgb,var(--ac) 70%,var(--ink)));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{-webkit-text-fill-color:var(--ink3)}
+.top{box-shadow:0 10px 30px -22px rgba(15,18,34,.35)}
+.chip{height:42px;padding:0 16px;border-radius:14px;box-shadow:0 1px 2px rgba(15,18,34,.04)}
+.chip[aria-pressed="true"]{background:linear-gradient(135deg,color-mix(in srgb,var(--c,var(--ink)) 92%,#000),color-mix(in srgb,var(--c,var(--ink)) 70%,#000));color:#fff;border-color:transparent;box-shadow:0 10px 22px -10px var(--c,var(--ink))}
+.chip[aria-pressed="true"] em{color:#fff;opacity:.8}
+.seg{background:color-mix(in srgb,var(--bg3) 85%,transparent);border:1px solid var(--line)}
+.grid{gap:22px}
+.card{border-radius:22px;border:1px solid color-mix(in srgb,var(--line) 80%,transparent);box-shadow:0 1px 2px rgba(15,18,34,.05),0 14px 30px -18px rgba(15,18,34,.28);animation:rise .5s both}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 40%,transparent));z-index:2}
+.card:hover{transform:translateY(-5px);box-shadow:0 2px 4px rgba(15,18,34,.06),0 26px 44px -22px color-mix(in srgb,var(--c) 55%,rgba(15,18,34,.4))}
+.media::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(180deg,transparent,rgba(5,7,15,.55));pointer-events:none}
+.media .pill{z-index:2;background:rgba(10,12,20,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);height:28px}
+.media .plat{z-index:2}
+.title{font-size:17px;font-weight:750;letter-spacing:-.015em}
+.av{background:linear-gradient(135deg,color-mix(in srgb,var(--c) 85%,#fff),var(--c));color:#fff;border-radius:8px}
+.cfoot{border-top:1px dashed var(--line);padding-top:8px;margin-top:6px}
+.feat{border-radius:28px;min-height:460px}
+.feat h2{font-size:clamp(26px,3.2vw,42px);text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.feat::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 15% 100%,color-mix(in srgb,var(--c) 45%,transparent),transparent 70%);z-index:-1}
+.side{border-radius:28px;background:color-mix(in srgb,var(--bg2) 88%,transparent);backdrop-filter:blur(12px)}
+.side a{transition:.15s}.side a:hover{padding-left:6px}
+.more{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border:0;box-shadow:0 14px 28px -14px var(--ac)}
+.more:hover{color:#fff;filter:brightness(1.08)}
+.compact{border-radius:22px}
+.row{border-left:3px solid transparent}.row:hover{border-left-color:var(--c)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.card:nth-child(2){animation-delay:.03s}.card:nth-child(3){animation-delay:.06s}.card:nth-child(4){animation-delay:.09s}.card:nth-child(5){animation-delay:.12s}.card:nth-child(6){animation-delay:.15s}
+@media (prefers-reduced-motion:reduce){.card{animation:none}}
 </style>
 </head>
 <body>
@@ -234,10 +269,11 @@ dialog::backdrop{background:rgba(5,7,15,.6);backdrop-filter:blur(4px)}
 <script type="application/json" id="snap">/*SNAP*/</script>
 <script>
 const LANG={tr:"Türkçe",en:"English",zh:"中文",es:"Español",fr:"Français",de:"Deutsch",ar:"العربية",ru:"Русский",ja:"日本語",ko:"한국어",pt:"Português",hi:"हिन्दी",id:"Indonesia",fa:"فارسی",vi:"Tiếng Việt",it:"Italiano",pl:"Polski",nl:"Nederlands",uk:"Українська",he:"עברית",th:"ไทย",el:"Ελληνικά",sv:"Svenska"};
-const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
+const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["ios","iPhone / iOS"],["mac","Mac / macOS"],["win","Windows"],["auto","Otomobil"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
+const EMO={tr:"🇹🇷",world:"🌍",tech:"⚡",ios:"📱",mac:"💻",win:"🪟",auto:"🚗",eco:"📈",sci:"🔬",cool:"✨",viral:"🔥",ent:"🎬",sport:"⚽"};
 const CAT=Object.fromEntries(CATS);
-const PLAT={web:"Haber siteleri",gnews:"Google Haberler",x:"X (Twitter)",bsky:"Bluesky",mastodon:"Mastodon",reddit:"Reddit",youtube:"YouTube",medium:"Medium",dev:"DEV / Blog",hn:"Hacker News",wiki:"Wikipedia"};
-const PLATSHORT={web:"Haber siteleri",gnews:"Google Haberler",x:"𝕏",bsky:"Bluesky",mastodon:"Mastodon",reddit:"Reddit",youtube:"▶ YouTube",medium:"Medium",dev:"DEV",hn:"HN",wiki:"Wiki"};
+const PLAT={web:"Haber siteleri",gnews:"Google Haberler",x:"X (Twitter)",bsky:"Bluesky",reddit:"Reddit",youtube:"YouTube",medium:"Medium",dev:"DEV / Blog",hn:"Hacker News",wiki:"Wikipedia"};
+const PLATSHORT={web:"Haber siteleri",gnews:"Google Haberler",x:"𝕏",bsky:"Bluesky",reddit:"Reddit",youtube:"▶ YouTube",medium:"Medium",dev:"DEV",hn:"HN",wiki:"Wiki"};
 const $=id=>document.getElementById(id);
 const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let DEF=JSON.parse($("snap").textContent), GEN=DEF.generated; DEF=DEF.feeds;
@@ -301,7 +337,7 @@ function render(){
   const inLang=bySearch.filter(x=>langOK(x)&&platOK(x)),cc={};inLang.forEach(x=>cc[x.cat]=(cc[x.cat]||0)+1);
   const nUn=inLang.filter(x=>!read.has(x.id)).length,nSv=Object.keys(saved).length;
   $("cats").innerHTML=`<button class="chip" data-k="all" aria-pressed="${cat==="all"}">Tümü<em>${inLang.length.toLocaleString("tr-TR")}</em></button>`
-   +CATS.filter(([k])=>cc[k]||cat===k).map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${cat===k}" style="--c:${colorOf(k)}"><span class="d"></span>${l}<em>${(cc[k]||0).toLocaleString("tr-TR")}</em></button>`).join("")
+   +CATS.filter(([k])=>cc[k]||cat===k).map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${cat===k}" style="--c:${colorOf(k)}"><span class="d">${EMO[k]||""}</span>${l}<em>${(cc[k]||0).toLocaleString("tr-TR")}</em></button>`).join("")
    +`<button class="chip" data-k="unread" aria-pressed="${cat==="unread"}" style="--c:var(--ac)"><span class="d"></span>Okunmamış<em>${nUn.toLocaleString("tr-TR")}</em></button><button class="chip" data-k="saved" aria-pressed="${cat==="saved"}" style="--c:var(--c-cool)"><span class="d"></span>Kaydedilenler<em>${nSv}</em></button>`;
   let list;
   if(cat==="saved")list=Object.values(saved).map(x=>({...x})).filter(x=>sq(x)&&langOK(x)&&platOK(x));
@@ -314,7 +350,7 @@ function render(){
     const hero=pool[0]||list.find(x=>x.i);
     if(hero){
       const rest=list.filter(x=>x!==hero).slice(0,5);
-      heroHTML=`<div class="hero skeleton"><a class="feat" href="${esc(safe(hero.l))}" target="_blank" rel="noopener noreferrer" data-id="${hero.id}" style="--c:${colorOf(hero.cat)}"><img src="${esc(safe(hero.i))}" alt="" referrerpolicy="no-referrer" onerror="this.remove()"><div class="in"><span class="pill glass">${esc(CAT[hero.cat]||hero.cat)} · ${esc(hero.src)} · ${ago(hero.ts)}</span><h2 dir="auto">${esc(hero.t)}</h2>${hero.s?`<p dir="auto">${esc(hero.s)}</p>`:""}</div></a>
+      heroHTML=`<div class="hero skeleton"><a class="feat" href="${esc(safe(hero.l))}" target="_blank" rel="noopener noreferrer" data-id="${hero.id}" style="--c:${colorOf(hero.cat)}"><img src="${esc(safe(hero.i))}" alt="" referrerpolicy="no-referrer" onerror="this.remove()"><div class="in"><span class="pill glass">${EMO[hero.cat]||""} ${esc(CAT[hero.cat]||hero.cat)} · ${esc(hero.src)} · ${ago(hero.ts)}</span><h2 dir="auto">${esc(hero.t)}</h2>${hero.s?`<p dir="auto">${esc(hero.s)}</p>`:""}</div></a>
         <aside class="side"><h3><span class="live">Son dakika</span></h3>${rest.map(x=>`<a href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" data-id="${x.id}" style="--c:${colorOf(x.cat)}"><small><i></i>${esc(x.src)} · ${ago(x.ts)}</small><span dir="auto">${esc(x.t)}</span></a>`).join("")}</aside></div>`;
       const ex=new Set([hero.id,...rest.map(x=>x.id)]);list=list.filter(x=>!ex.has(x.id));
     }
@@ -340,7 +376,7 @@ function mediaHTML(x){
 function cardHTML(x){
   const r=read.has(x.id)?1:0,sv=saved[x.id]?"true":"false",fresh=Date.now()-x.ts<3600e3;
   return `<article class="card" data-id="${x.id}" data-read="${r}" style="--c:${colorOf(x.cat)}">
-   <a class="media" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${mediaHTML(x)}<span class="pill">${esc(CAT[x.cat]||x.cat)}</span>${x.plat&&x.plat!=="web"?`<span class="plat">${esc(PLATSHORT[x.plat]||x.plat)}</span>`:""}</a>
+   <a class="media" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${mediaHTML(x)}<span class="pill">${EMO[x.cat]||""} ${esc(CAT[x.cat]||x.cat)}</span>${x.plat&&x.plat!=="web"?`<span class="plat">${esc(PLATSHORT[x.plat]||x.plat)}</span>`:""}</a>
    <span class="unread"></span>
    <div class="body"><div class="meta"><span class="av">${esc((x.src||"?").trim().charAt(0).toUpperCase())}</span><span class="src">${esc(x.src)}</span><span class="age${fresh?" fresh":""}">${ago(x.ts)}</span></div>
    <a class="title" dir="auto" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a>
@@ -410,7 +446,7 @@ async function refresh(){
   const fresh=await loadJson();buildFeeds();render();
   const stale=!GEN||Date.now()-Date.parse(GEN)>45*60e3;
   if(stale){
-    const pri=Object.entries(DEF).filter(([id,f])=>!deleted.has(id)&&!hidden.has(id)&&["web","gnews"].includes(f.plat||"web")&&(id.startsWith("gn-tr")||id.startsWith("gnq-")||id.startsWith("gn-en")||["tr","world","tech"].includes(f.cat)&&(f.lang==="tr"||f.lang==="en"))).map(([id])=>id).slice(0,70);
+    const pri=Object.entries(DEF).filter(([id,f])=>!deleted.has(id)&&!hidden.has(id)&&["web","gnews"].includes(f.plat||"web")&&(id.startsWith("gn-tr")||id.startsWith("gnq-")||id.startsWith("gn-en")||["tr","world","tech","ios","mac","win","auto"].includes(f.cat)&&(f.lang==="tr"||f.lang==="en"))).map(([id])=>id).slice(0,70);
     let done=0,okc=0;const qq=pri.slice();
     const worker=async()=>{while(qq.length){const id=qq.shift();try{const items=await fetchFeed(DEF[id].url);live[id]={items,updated:new Date().toISOString()};okc++}catch(e){}
       done++;if(done%4===0||!qq.length){progress=`Canlı çekiliyor ${done}/${pri.length}`;buildFeeds();render()}}};

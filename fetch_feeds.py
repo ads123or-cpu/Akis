@@ -92,10 +92,33 @@ KW = {
  'ent': r"dizi|film|sinema|oyuncu|şarkıcı|ünlü|magazin|konser|albüm|festival|ödül|oscar|netflix|gişe|fragman|yönetmen|survivor|masterchef|sanatçı|aktris|aktör|celebrity|movie|series|actor|actress|singer|album|box office|trailer|hollywood|streaming",
 }
 KWC = {k: re.compile(v, re.I) for k, v in KW.items()}
+SUB = {
+ 'mac': re.compile(r"\bmacos|macbook|\bimac\b|mac mini|mac studio|mac pro|apple silicon|\bm[1-5] (?:pro|max|ultra|chip|çip)|\bmacs?\b", re.I),
+ 'ios': re.compile(r"\biphone|\bios ?\d*\b|\bipados|\bwatchos|\bairpods|apple watch|\bipad\b|vision pro|\bapple\b|app store", re.I),
+ 'win': re.compile(r"\bwindows\b|\bwin ?1[01]\b|copilot\+? ?pc|surface (?:pro|laptop|go)|microsoft edge|\bnotepad\b|microsoft 365", re.I),
+ 'auto': re.compile(r"otomobil|\baraba|otomotiv|elektrikli (?:araç|otomobil|araba|suv|model)|\btogg\b|\btesla\b|\bbmw\b|mercedes|\baudi\b|volkswagen|porsche|ferrari|\bford\b|\bfiat\b|renault|hyundai|toyota|\bhonda\b|\bopel\b|peugeot|citro|skoda|\bkia\b|volvo|\bbyd\b|tofaş|\begea\b|\bsuv\b|sedan|hatchback|electric (?:car|vehicle|suv)|\bcars?\b|motor show|lamborghini|mclaren|nissan|mazda|suzuki|leapmotor|chery|xpeng|lucid|rivian|\bjeep\b|dacia|paris otomobil|yeni model", re.I),
+}
+SUB_ORDER = ('mac', 'ios', 'win', 'auto')
+def subclass(it):
+    title = it.get('t', ''); summ = it.get('s', '')[:140]
+    best, bs = None, 0
+    for k in SUB_ORDER:
+        sc = 3 * len(SUB[k].findall(title)) + len(SUB[k].findall(summ))
+        if sc > bs: best, bs = k, sc
+    return best if bs >= 3 else None
+
+ACCIDENT = re.compile(r"kaza|yaralan|yaralı|hayatını kaybet|çarpış|şarampol|cinayet|gözaltı|tutuklan|devrildi|ölü|crash kills|killed|dies", re.I)
 GENERAL = re.compile(r"cinayet|gözaltı|tutuklandı|erdoğan|cumhurbaşkanı|bakan\b|belediye|savcılık|operasyon|kaza\b|yaralandı|hayatını kaybetti|polis|cezaevi|soruşturma|başkan\b|seçim|chp|akp|mhp|meclis|tbmm|savaş|gaza|ukrayna|israil|iran|rusya|putin|trump|biden|police|killed|arrested|election|war\b|president", re.I)
 
 def classify(it, s):
     """Kategori kaynağın bölümünden farklıysa (ör. teknoloji bölümünde gündem haberi) madde bazında düzelt."""
+    c = _classify(it, s)
+    if c == 'tech' and s['lang'] in ('tr', 'en'):
+        sub = subclass(it)
+        if sub: return sub
+    return c
+
+def _classify(it, s):
     c = s['cat']
     if c not in KWC or s['lang'] not in ('tr', 'en'): return c
     if not (s['id'] in MIXED or s['id'].startswith('gn-')): return c
@@ -180,6 +203,7 @@ def main():
                 for i in items:
                     c = classify(i, s)
                     if c != s['cat']: i['c'] = c
+                if s['cat'] == 'auto': items = [i for i in items if not ACCIDENT.search(i.get('t', ''))]
                 if not items: failed.append((s['id'], 'eski')); continue
                 feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], plat=s.get('plat') or 'web', url=s['url'], items=items, updated=now)
             else:
