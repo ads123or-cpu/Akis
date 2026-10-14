@@ -283,7 +283,7 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
 let DEF=JSON.parse($("snap").textContent), GEN=DEF.generated; DEF=DEF.feeds;
 let custom=store.get("custom",{}), deleted=new Set(store.get("deleted",[])), cache=store.get("cache",{}), hidden=new Set(store.get("hidden",[]));
 let read=new Set(store.get("read",[])), saved=store.get("saved",{});
-let live={}, feeds={}, lang=store.get("lang","tren"), cat="all", plat="all", q="", view=store.get("view","grid"), sort="new", tfilter=0, limit=60, busy=false, progress="";
+let live={}, feeds={}, lang=store.get("lang","tren"), cat=store.get("cat","mine"), plat="all", q="", view=store.get("view","grid"), sort="new", tfilter=0, limit=60, busy=false, progress="";
 const icon={mark:'<svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'};
 
 function buildFeeds(){feeds={};
@@ -340,12 +340,13 @@ function render(){
   // kategori
   const inLang=bySearch.filter(x=>langOK(x)&&platOK(x)),cc={};inLang.forEach(x=>cc[x.cat]=(cc[x.cat]||0)+1);
   const nUn=inLang.filter(x=>!read.has(x.id)).length,nSv=Object.keys(saved).length;
-  $("cats").innerHTML=`<button class="chip" data-k="all" aria-pressed="${cat==="all"}">Tümü<em>${inLang.length.toLocaleString("tr-TR")}</em></button>`
+  const MINE=["tech","ios","mac","win","auto","sci"],nMine=inLang.filter(x=>MINE.includes(x.cat)).length;
+  $("cats").innerHTML=`<button class="chip" data-k="mine" aria-pressed="${cat==="mine"}" style="--c:var(--ac)"><span class="d">★</span>Konularım<em>${nMine.toLocaleString("tr-TR")}</em></button><button class="chip" data-k="all" aria-pressed="${cat==="all"}">Tümü<em>${inLang.length.toLocaleString("tr-TR")}</em></button>`
    +CATS.filter(([k])=>cc[k]||cat===k).map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${cat===k}" style="--c:${colorOf(k)}"><span class="d">${EMO[k]||""}</span>${l}<em>${(cc[k]||0).toLocaleString("tr-TR")}</em></button>`).join("")
    +`<button class="chip" data-k="unread" aria-pressed="${cat==="unread"}" style="--c:var(--ac)"><span class="d"></span>Okunmamış<em>${nUn.toLocaleString("tr-TR")}</em></button><button class="chip" data-k="saved" aria-pressed="${cat==="saved"}" style="--c:var(--c-cool)"><span class="d"></span>Kaydedilenler<em>${nSv}</em></button>`;
   let list;
   if(cat==="saved")list=Object.values(saved).map(x=>({...x})).filter(x=>sq(x)&&langOK(x)&&platOK(x));
-  else list=inLang.filter(x=>cat==="all"||(cat==="unread"?!read.has(x.id):x.cat===cat));
+  else list=inLang.filter(x=>cat==="all"||(cat==="mine"?MINE.includes(x.cat):(cat==="unread"?!read.has(x.id):x.cat===cat)));
   list.sort(sort==="unread"?(a,b)=>(read.has(a.id)-read.has(b.id))||b.ts-a.ts:(a,b)=>b.ts-a.ts);
   // hero
   let skip=0,heroHTML="";
@@ -437,7 +438,7 @@ async function trAll(){
   btn.disabled=false;btn.textContent="Görünenleri çevir";toast(n+" başlık çevrildi");
 }
 function pick(el,fn){el.addEventListener("click",e=>{const b=e.target.closest("button[data-k]");if(b){fn(b.dataset.k);limit=60;render()}})}
-pick($("langseg"),k=>{lang=k;store.set("lang",k)});pick($("sublang"),k=>{lang=k;store.set("lang",k)});pick($("platseg"),k=>plat=k);pick($("cats"),k=>cat=k);
+pick($("langseg"),k=>{lang=k;store.set("lang",k)});pick($("sublang"),k=>{lang=k;store.set("lang",k)});pick($("platseg"),k=>plat=k);pick($("cats"),k=>{cat=k;store.set("cat",k)});
 $("trall").addEventListener("click",trAll);
 $("timeseg").addEventListener("click",e=>{const b=e.target.closest("button[data-t]");if(!b)return;tfilter=+b.dataset.t;limit=60;render()});
 function markRead(el){if(!el||!el.dataset.id)return;read.add(el.dataset.id);el.dataset.read="1";clearTimeout(window.ph);window.ph=setTimeout(()=>store.set("read",[...read].slice(-6000)),400)}
