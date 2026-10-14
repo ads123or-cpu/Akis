@@ -190,6 +190,25 @@ def go(s):
             err = str(e)[:80]
     return s, [], err
 
+
+# --- Spam süzgeci (14.10.2026) -------------------------------------------
+# Ele geçirilmiş üniversite/kurum sitelerinden gelen bahis-izle spam'i ve
+# sembol yığını başlıklar akışı kirletiyordu (ör. uco.es "canlı izle" başlıkları).
+SPAM_KELIME = re.compile(r'(canlı\s*izle|şifresiz|bedava|bahis|casino|jackpot|selçuk\s*sport|taraftarium|justin\s*tv|izle\b.*\b(maç|film))', re.I)
+SPAM_ALAN = re.compile(r'(\.edu(\.[a-z]{2})?$|\.ac\.[a-z]{2}$|(^|\.)uco\.es$|\.gov(\.[a-z]{2})?$)', re.I)
+def spam_mi(it):
+    t = it.get('t', '') or ''
+    l = it.get('l', '') or ''
+    host = re.sub(r'^https?://([^/]+).*$', r'\1', l).lower()
+    sembol = len(re.findall(r'[^\w\s\-\.,:;!?\'"()%/&]', t))
+    yayinci = it.get('p', '') or ''
+    kurum = SPAM_ALAN.search(host) or re.search(r'(universidad|university|üniversite|college|\.edu\b)', yayinci, re.I)
+    if kurum and re.search(r'(izle|canlı|maç|bahis|bedava|şifresiz|bein|trt\s*1)', t, re.I):
+        return True
+    if sembol >= 5 and SPAM_KELIME.search(t):
+        return True
+    return False
+
 def main():
     sources = json.load(open('sources.json'))
     try: old = json.load(open('site/feeds.json')).get('feeds', {})
@@ -204,6 +223,7 @@ def main():
                     c = classify(i, s)
                     if c != s['cat']: i['c'] = c
                 if s['cat'] == 'auto': items = [i for i in items if not ACCIDENT.search(i.get('t', ''))]
+                items = [i for i in items if not spam_mi(i)]
                 if not items: failed.append((s['id'], 'eski')); continue
                 feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], plat=s.get('plat') or 'web', url=s['url'], items=items, updated=now)
             else:
