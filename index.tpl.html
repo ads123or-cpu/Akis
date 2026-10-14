@@ -63,6 +63,9 @@ svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke
 .seg svg{width:16px;height:16px}
 .sel{height:40px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);padding:0 12px;font-weight:600;font-size:13px;outline:0}
 .sp{flex:1}
+.trres{margin:6px 0 0;font-size:13px;font-weight:600;color:var(--ac)}
+.cfoot .mini{height:28px;font-size:12px;display:inline-flex;align-items:center;margin-right:6px}
+#langseg em{font-style:normal;opacity:.6;font-weight:500;margin-left:4px}
 .mini{height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--line);font-size:12.5px;font-weight:600;color:var(--ink2);background:var(--bg2)}
 .mini[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:#fff}
 .sub{display:flex;gap:6px;flex-wrap:wrap;padding:0 0 12px}
@@ -236,6 +239,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
         <button id="v-list" aria-pressed="false" aria-label="Liste"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
         <button id="v-compact" aria-pressed="false" aria-label="Kompakt"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 9.7h16M4 14.3h16M4 19h16"/></svg></button>
       </div>
+      <button class="mini" id="trall" type="button" title="Görünen yabancı başlıkları Türkçeye çevir">Görünenleri çevir</button>
       <select class="sel" id="sort" aria-label="Sıralama"><option value="new">En yeni</option><option value="unread">Okunmamış önce</option></select>
     </div>
     <div class="sub" id="sublang" hidden></div>
@@ -279,7 +283,7 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
 let DEF=JSON.parse($("snap").textContent), GEN=DEF.generated; DEF=DEF.feeds;
 let custom=store.get("custom",{}), deleted=new Set(store.get("deleted",[])), cache=store.get("cache",{}), hidden=new Set(store.get("hidden",[]));
 let read=new Set(store.get("read",[])), saved=store.get("saved",{});
-let live={}, feeds={}, lang=store.get("lang","tr"), cat="all", plat="all", q="", view=store.get("view","grid"), sort="new", tfilter=0, limit=60, busy=false, progress="";
+let live={}, feeds={}, lang=store.get("lang","tren"), cat="all", plat="all", q="", view=store.get("view","grid"), sort="new", tfilter=0, limit=60, busy=false, progress="";
 const icon={mark:'<svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'};
 
 function buildFeeds(){feeds={};
@@ -314,7 +318,7 @@ function allItems(){
   }
   return res;
 }
-const langOK=x=>lang==="all"||(lang==="other"?group(x.lang)==="other":x.lang===lang);
+const langOK=x=>lang==="all"||(lang==="tren"?(x.lang==="tr"||x.lang==="en"):(lang==="other"?group(x.lang)==="other":x.lang===lang));
 const platOK=x=>plat==="all"||x.plat===plat;
 
 function render(){
@@ -324,8 +328,8 @@ function render(){
   // dil
   const lc={all:0,tr:0,en:0,other:0};const byPlat=bySearch.filter(platOK);
   byPlat.forEach(x=>{lc.all++;lc[group(x.lang)]++});
-  $("langseg").innerHTML=[["all","Tümü"],["tr","Türkçe"],["en","English"],["other","Diğer"]].map(([k,l])=>`<button data-k="${k}" aria-pressed="${(lang===k)||(k==="other"&&!["all","tr","en"].includes(lang))}">${l}</button>`).join("");
-  const showSub=!["all","tr","en"].includes(lang);
+  $("langseg").innerHTML=[["tren","TR + EN"],["tr","Türkçe"],["en","English"],["other","Diğer diller"],["all","Tümü"]].map(([k,l])=>`<button data-k="${k}" aria-pressed="${(lang===k)||(k==="other"&&!["all","tr","en","tren"].includes(lang))}">${l}${k==="tren"?" <em>"+(lc.tr+lc.en)+"</em>":k==="all"?" <em>"+lc.all+"</em>":lc[k]!==undefined?" <em>"+lc[k]+"</em>":""}</button>`).join("");
+  const showSub=!["all","tr","en","tren"].includes(lang);
   $("sublang").hidden=!showSub;
   if(showSub){const oc={};byPlat.filter(x=>group(x.lang)==="other").forEach(x=>oc[x.lang]=(oc[x.lang]||0)+1);
     $("sublang").innerHTML=`<button class="mini" data-k="other" aria-pressed="${lang==="other"}">Hepsi</button>`+Object.keys(oc).sort((a,b)=>oc[b]-oc[a]).map(k=>`<button class="mini" data-k="${k}" aria-pressed="${lang===k}">${esc(LANG[k]||k)} ${oc[k]}</button>`).join("")}
@@ -375,20 +379,66 @@ function mediaHTML(x){
 }
 function cardHTML(x){
   const r=read.has(x.id)?1:0,sv=saved[x.id]?"true":"false",fresh=Date.now()-x.ts<3600e3;
-  return `<article class="card" data-id="${x.id}" data-read="${r}" style="--c:${colorOf(x.cat)}">
+  return `<article class="card" data-id="${x.id}" data-lang="${esc(x.lang)}" data-read="${r}" style="--c:${colorOf(x.cat)}">
    <a class="media" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${mediaHTML(x)}<span class="pill">${EMO[x.cat]||""} ${esc(CAT[x.cat]||x.cat)}</span>${x.plat&&x.plat!=="web"?`<span class="plat">${esc(PLATSHORT[x.plat]||x.plat)}</span>`:""}</a>
    <span class="unread"></span>
    <div class="body"><div class="meta"><span class="av">${esc((x.src||"?").trim().charAt(0).toUpperCase())}</span><span class="src">${esc(x.src)}</span><span class="age${fresh?" fresh":""}">${ago(x.ts)}</span></div>
-   <a class="title" dir="auto" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a>
+   <a class="title" dir="auto" lang="${esc(x.lang)}" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a>
+   <p class="trres" dir="auto" hidden></p>
    ${x.s&&view!=="grid"?`<p class="sum" dir="auto">${esc(x.s)}</p>`:x.s&&!x.i?`<p class="sum" dir="auto">${esc(x.s)}</p>`:""}
-   <div class="cfoot"><button class="save" data-save="${x.id}" aria-pressed="${sv}" aria-label="Kaydet" title="Kaydet">${icon.mark}</button></div></div></article>`;
+   <div class="cfoot">${x.lang!=="tr"?`<button class="mini trbtn" data-tr="${x.id}" title="Başlığı Türkçeye çevir">Çevir</button>`:""}<a class="mini" href="${panelUrl(x)}" target="_blank" rel="noopener" title="Panelde Hızlı Yaz'a gönder">Hızlı Yaz</a><button class="save" data-save="${x.id}" aria-pressed="${sv}" aria-label="Kaydet" title="Kaydet">${icon.mark}</button></div></div></article>`;
 }
 function rowHTML(x){
   const fresh=Date.now()-x.ts<3600e3;
   return `<a class="row" data-id="${x.id}" data-read="${read.has(x.id)?1:0}" href="${esc(safe(x.l))}" target="_blank" rel="noopener noreferrer" style="--c:${colorOf(x.cat)}"><i></i><span class="tm${fresh?" fresh":""}">${ago(x.ts)}</span><span class="title" dir="auto">${esc(x.t)}</span><span class="s">${esc(x.src)}</span></a>`;
 }
+
+/* ---- Panel baglantisi ve ceviri (14.10.2026) ---- */
+const PANEL_HIZLI="https://cms.techturco.com/hizli-yaz";
+function panelUrl(x){
+  const m=(x.t||"")+"\n\n"+(x.s||"")+"\n\nKaynak: "+(x.l||"");
+  return PANEL_HIZLI+"?metin="+encodeURIComponent(m.slice(0,1800));
+}
+/* Cevirmen: Chrome'un tarayici ici Translator API'si (ucretsiz, anahtarsiz).
+   Yoksa Google Translate sayfasina acilir. */
+const trCache={};
+async function trText(text,src){
+  const key=src+"|"+text;if(trCache[key])return trCache[key];
+  if("Translator" in self){
+    try{
+      const av=await Translator.availability({sourceLanguage:src,targetLanguage:"tr"});
+      if(av!=="unavailable"){
+        const t=await Translator.create({sourceLanguage:src,targetLanguage:"tr"});
+        const out=await t.translate(text);trCache[key]=out;return out;
+      }
+    }catch(e){}
+  }
+  return null;
+}
+function gtUrl(text,src){return "https://translate.google.com/?sl="+encodeURIComponent(src||"auto")+"&tl=tr&op=translate&text="+encodeURIComponent(text)}
+async function trCard(card){
+  const t=card.querySelector(".title");const out=card.querySelector(".trres");if(!t||!out||out.dataset.done)return true;
+  const r=await trText(t.textContent,card.dataset.lang||"en");
+  if(r){out.textContent="TR: "+r;out.hidden=false;out.dataset.done="1";return true}
+  return false;
+}
+document.addEventListener("click",async e=>{
+  const b=e.target.closest("button[data-tr]");if(!b)return;
+  e.preventDefault();e.stopPropagation();
+  const card=b.closest(".card");const ok=await trCard(card);
+  if(!ok){const t=card.querySelector(".title").textContent;window.open(gtUrl(t,card.dataset.lang),"_blank","noopener")}
+},true);
+async function trAll(){
+  const btn=$("trall");const cards=[...document.querySelectorAll(".card")].filter(c=>c.dataset.lang!=="tr").slice(0,40);
+  if(!cards.length){toast("Çevrilecek yabancı dilde haber yok");return}
+  if(!("Translator" in self)){toast("Tarayıcınız toplu çeviriyi desteklemiyor; kartlardaki Çevir düğmesi Google Çeviri'yi açar");return}
+  btn.disabled=true;btn.textContent="Çevriliyor…";let n=0;
+  for(const c of cards){if(await trCard(c))n++}
+  btn.disabled=false;btn.textContent="Görünenleri çevir";toast(n+" başlık çevrildi");
+}
 function pick(el,fn){el.addEventListener("click",e=>{const b=e.target.closest("button[data-k]");if(b){fn(b.dataset.k);limit=60;render()}})}
 pick($("langseg"),k=>{lang=k;store.set("lang",k)});pick($("sublang"),k=>{lang=k;store.set("lang",k)});pick($("platseg"),k=>plat=k);pick($("cats"),k=>cat=k);
+$("trall").addEventListener("click",trAll);
 $("timeseg").addEventListener("click",e=>{const b=e.target.closest("button[data-t]");if(!b)return;tfilter=+b.dataset.t;limit=60;render()});
 function markRead(el){if(!el||!el.dataset.id)return;read.add(el.dataset.id);el.dataset.read="1";clearTimeout(window.ph);window.ph=setTimeout(()=>store.set("read",[...read].slice(-6000)),400)}
 document.addEventListener("click",e=>{
