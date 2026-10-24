@@ -328,27 +328,11 @@
   "plat": "web"
  },
  {
-  "id": "hn",
-  "name": "Hacker News",
-  "lang": "en",
-  "cat": "tech",
-  "url": "https://hnrss.org/frontpage",
-  "plat": "web"
- },
- {
   "id": "verge",
   "name": "The Verge",
   "lang": "en",
   "cat": "tech",
   "url": "https://www.theverge.com/rss/index.xml",
-  "plat": "web"
- },
- {
-  "id": "techcrunch",
-  "name": "TechCrunch",
-  "lang": "en",
-  "cat": "tech",
-  "url": "https://techcrunch.com/feed/",
   "plat": "web"
  },
  {
@@ -477,14 +461,6 @@
   "lang": "en",
   "cat": "tech",
   "url": "https://hackaday.com/blog/feed/",
-  "plat": "web"
- },
- {
-  "id": "producthunt",
-  "name": "Product Hunt",
-  "lang": "en",
-  "cat": "tech",
-  "url": "https://www.producthunt.com/feed",
   "plat": "web"
  },
  {
@@ -3928,38 +3904,6 @@
   "url": "https://www.reddit.com/r/worldnews/.rss"
  },
  {
-  "id": "md-artificial-intelligence",
-  "name": "Medium · artificial-intelligence",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "medium",
-  "url": "https://medium.com/feed/tag/artificial-intelligence"
- },
- {
-  "id": "md-technology",
-  "name": "Medium · technology",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "medium",
-  "url": "https://medium.com/feed/tag/technology"
- },
- {
-  "id": "md-programming",
-  "name": "Medium · programming",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "medium",
-  "url": "https://medium.com/feed/tag/programming"
- },
- {
-  "id": "md-startup",
-  "name": "Medium · startup",
-  "lang": "en",
-  "cat": "eco",
-  "plat": "medium",
-  "url": "https://medium.com/feed/tag/startup"
- },
- {
   "id": "md-politics",
   "name": "Medium · politics",
   "lang": "en",
@@ -4024,118 +3968,6 @@
   "url": "https://medium.com/feed/tag/space"
  },
  {
-  "id": "md-cybersecurity",
-  "name": "Medium · cybersecurity",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "medium",
-  "url": "https://medium.com/feed/tag/cybersecurity"
- },
- {
-  "id": "md-elon-musk",
-  "name": "Medium · elon-musk",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "medium",
-  "url": "https://medium.com/feed/tag/elon-musk"
- },
- {
-  "id": "md-future",
-  "name": "Medium · future",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "medium",
-  "url": "https://medium.com/feed/tag/future"
- },
- {
-  "id": "dv-ai",
-  "name": "DEV · ai",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/ai"
- },
- {
-  "id": "dv-webdev",
-  "name": "DEV · webdev",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/webdev"
- },
- {
-  "id": "dv-python",
-  "name": "DEV · python",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/python"
- },
- {
-  "id": "dv-javascript",
-  "name": "DEV · javascript",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/javascript"
- },
- {
-  "id": "dv-devops",
-  "name": "DEV · devops",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/devops"
- },
- {
-  "id": "dv-security",
-  "name": "DEV · security",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/security"
- },
- {
-  "id": "dv-opensource",
-  "name": "DEV · opensource",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/opensource"
- },
- {
-  "id": "dv-machinelearning",
-  "name": "DEV · machinelearning",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed/tag/machinelearning"
- },
- {
-  "id": "hn-best",
-  "name": "Hacker News · Best",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "hn",
-  "url": "https://hnrss.org/best"
- },
- {
-  "id": "hn-show",
-  "name": "Hacker News · Show",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "hn",
-  "url": "https://hnrss.org/show"
- },
- {
-  "id": "hn-ask",
-  "name": "Hacker News · Ask",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "hn",
-  "url": "https://hnrss.org/ask?points=50"
- },
- {
   "id": "lobsters",
   "name": "Lobsters",
   "lang": "en",
@@ -4198,14 +4030,6 @@
   "cat": "tech",
   "plat": "web",
   "url": "https://rss.slashdot.org/Slashdot/slashdotMain"
- },
- {
-  "id": "devto",
-  "name": "DEV Community",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "dev",
-  "url": "https://dev.to/feed"
  },
  {
   "id": "spotify-newsroom",
@@ -4374,14 +4198,6 @@
   "cat": "tech",
   "plat": "bsky",
   "url": "https://bsky.app/profile/theverge.com/rss"
- },
- {
-  "id": "bs-techcrunch",
-  "name": "Bluesky · TechCrunch",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "bsky",
-  "url": "https://bsky.app/profile/techcrunch.com/rss"
  },
  {
   "id": "bs-wired",
@@ -4752,14 +4568,6 @@
   "url": "x://Apple"
  },
  {
-  "id": "x-techcrunch",
-  "name": "X · TechCrunch",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "x",
-  "url": "x://TechCrunch"
- },
- {
   "id": "x-verge",
   "name": "X · The Verge",
   "lang": "en",
@@ -5102,14 +4910,6 @@
   "cat": "world",
   "plat": "gnews",
   "url": "https://news.google.com/rss/search?q=canada%20news%20when%3A1d&hl=en-CA&gl=CA&ceid=CA:en"
- },
- {
-  "id": "gne-startup",
-  "name": "Startups (GN)",
-  "lang": "en",
-  "cat": "tech",
-  "plat": "gnews",
-  "url": "https://news.google.com/rss/search?q=startup%20funding%20OR%20raises%20when%3A1d&hl=en-US&gl=US&ceid=US:en"
  },
  {
   "id": "gne-chips",
@@ -5718,5 +5518,21 @@
   "cat": "mac",
   "plat": "gnews",
   "url": "https://news.google.com/rss/search?q=macOS+27+MacBook&hl=en-US&gl=US&ceid=US:en"
+ },
+ {
+  "id": "space-com",
+  "name": "Space.com",
+  "lang": "en",
+  "cat": "sci",
+  "url": "https://www.space.com/feeds/all",
+  "plat": "web"
+ },
+ {
+  "id": "popmech",
+  "name": "Popular Mechanics",
+  "lang": "en",
+  "cat": "cool",
+  "url": "https://www.popularmechanics.com/rss/all.xml",
+  "plat": "web"
  }
 ]
