@@ -93,12 +93,13 @@ KW = {
 }
 KWC = {k: re.compile(v, re.I) for k, v in KW.items()}
 SUB = {
+ 'samsung': re.compile(r"\bsamsung\b|\bgalaxy\b|\bone\s?ui\b|\bexynos\b|\bsammobile\b", re.I),
  'mac': re.compile(r"\bmacos|macbook|\bimac\b|mac mini|mac studio|mac pro|apple silicon|\bm[1-5] (?:pro|max|ultra|chip|çip)|\bmacs?\b", re.I),
  'ios': re.compile(r"\biphone|\bios ?\d*\b|\bipados|\bwatchos|\bairpods|apple watch|\bipad\b|vision pro|\bapple\b|app store", re.I),
  'win': re.compile(r"\bwindows\b|\bwin ?1[01]\b|copilot\+? ?pc|surface (?:pro|laptop|go)|microsoft edge|\bnotepad\b|microsoft 365", re.I),
  'auto': re.compile(r"otomobil|\baraba|otomotiv|elektrikli (?:araç|otomobil|araba|suv|model)|\btogg\b|\btesla\b|\bbmw\b|mercedes|\baudi\b|volkswagen|porsche|ferrari|\bford\b|\bfiat\b|renault|hyundai|toyota|\bhonda\b|\bopel\b|peugeot|citro|skoda|\bkia\b|volvo|\bbyd\b|tofaş|\begea\b|\bsuv\b|sedan|hatchback|electric (?:car|vehicle|suv)|\bcars?\b|motor show|lamborghini|mclaren|nissan|mazda|suzuki|leapmotor|chery|xpeng|lucid|rivian|\bjeep\b|dacia|paris otomobil|yeni model", re.I),
 }
-SUB_ORDER = ('mac', 'ios', 'win', 'auto')
+SUB_ORDER = ('samsung', 'mac', 'ios', 'win', 'auto')
 def subclass(it):
     title = it.get('t', ''); summ = it.get('s', '')[:140]
     best, bs = None, 0
@@ -228,10 +229,16 @@ def main():
                 feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], plat=s.get('plat') or 'web', url=s['url'], items=items, updated=now)
             else:
                 failed.append((s['id'], err))
-                if s['id'] in old: feeds[s['id']] = old[s['id']]   # eski haberleri koru
+                # Bayat kopya 12 saatten eskiyse dusurulur: kaynak yanit vermediginde
+                # eski haber 'yeni' gibi akisa dolmasin.
+                lim12 = (datetime.now(timezone.utc) - timedelta(hours=12)).isoformat()
+                if s['id'] in old:
+                    taze = [i for i in old[s['id']].get('items', []) if i.get('d') and i['d'] >= lim12]
+                    if taze: feeds[s['id']] = {**old[s['id']], 'items': taze, 'bayat': True}
     import os; os.makedirs('site', exist_ok=True)
-    json.dump(dict(generated=now, feeds=feeds), open('site/feeds.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     n = sum(len(f['items']) for f in feeds.values())
+    saglik = dict(kaynak=len(sources), basarili=len(feeds) - sum(1 for f in feeds.values() if f.get('bayat')), bayat=sum(1 for f in feeds.values() if f.get('bayat')), basarisiz=len(failed))
+    json.dump(dict(generated=now, saglik=saglik, feeds=feeds), open('site/feeds.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print(f"{len(feeds)} kaynak, {n} haber, {len(failed)} başarısız", *failed, sep='\n  ')
 
 if __name__ == '__main__': main()

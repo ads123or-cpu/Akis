@@ -13,7 +13,7 @@
   --bg:#f4f5f9;--bg2:#ffffff;--bg3:#eceef5;--ink:#0f1222;--ink2:#4b5169;--ink3:#8a90a8;--line:#e2e5f0;
   --ac:#5b5bf6;--ac2:#c026d3;--glass:rgba(255,255,255,.72);--shadow:0 1px 2px rgba(15,18,34,.05),0 8px 24px -12px rgba(15,18,34,.18);
   --r:18px;
-  --c-tr:#ef4444;--c-world:#3b82f6;--c-tech:#8b5cf6;--c-ios:#14b8a6;--c-mac:#64748b;--c-win:#0ea5e9;--c-auto:#ca8a04;--c-eco:#10b981;--c-sci:#06b6d4;--c-cool:#f59e0b;--c-viral:#ec4899;--c-ent:#d946ef;--c-sport:#22c55e;
+  --c-tr:#ef4444;--c-world:#3b82f6;--c-tech:#8b5cf6;--c-ios:#14b8a6;--c-mac:#64748b;--c-win:#0ea5e9;--c-auto:#ca8a04;--c-eco:#10b981;--c-sci:#06b6d4;--c-cool:#f59e0b;--c-viral:#ec4899;--c-ent:#d946ef;--c-sport:#22c55e;--c-samsung:#1428a0;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0a0c14;--bg2:#12151f;--bg3:#1a1e2c;--ink:#eef0f8;--ink2:#a9afc6;--ink3:#6b7390;--line:#222738;--glass:rgba(14,17,28,.72);
@@ -213,6 +213,17 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .card:nth-child(2){animation-delay:.03s}.card:nth-child(3){animation-delay:.06s}.card:nth-child(4){animation-delay:.09s}.card:nth-child(5){animation-delay:.12s}.card:nth-child(6){animation-delay:.15s}
 @media (prefers-reduced-motion:reduce){.card{animation:none}}
+/* Dergi düzeni: ilk iki haber geniş, gerisi ızgara. */
+.grid.dergi{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.dergi .card:nth-child(-n+2){grid-column:span 2}
+.dergi .card:nth-child(-n+2) .media{aspect-ratio:21/9}
+.dergi .card:nth-child(-n+2) .title{font-size:24px}
+@media (max-width:640px){.dergi .card:nth-child(-n+2){grid-column:auto}.dergi .card:nth-child(-n+2) .media{aspect-ratio:16/9}}
+/* Renk paletleri (Klasik = varsayılan). Koyu/açık tema düğmesiyle birlikte çalışır. */
+:root[data-palette="gece"]{--bg:#0b1220;--bg2:#121b2e;--bg3:#1a2540;--ink:#e6edf7;--ink2:#a3b1c9;--ink3:#6f7f9c;--line:#24314d;--ac:#38bdf8;--glass:rgba(18,27,46,.72)}
+:root[data-palette="kagit"]{--bg:#f5efe3;--bg2:#fbf7ef;--bg3:#efe7d6;--ink:#2a2118;--ink2:#6b5c48;--ink3:#9a8a72;--line:#e3d8c3;--ac:#b45309;--glass:rgba(251,247,239,.72)}
+:root[data-palette="okyanus"]{--bg:#eef8f7;--bg2:#ffffff;--bg3:#dff1ef;--ink:#0b2b2b;--ink2:#3f6b69;--ink3:#7aa3a1;--line:#cfe6e3;--ac:#0d9488;--glass:rgba(255,255,255,.72)}
+:root[data-palette="mor"]{--bg:#f6f3ff;--bg2:#ffffff;--bg3:#ece7fb;--ink:#1e1537;--ink2:#5b4f82;--ink3:#9186b3;--line:#e2dcf6;--ac:#7c3aed;--glass:rgba(255,255,255,.72)}
 </style>
 </head>
 <body>
@@ -237,9 +248,11 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
       <div class="seg" role="group" aria-label="Görünüm">
         <button id="v-grid" aria-pressed="true" aria-label="Kart"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg></button>
         <button id="v-list" aria-pressed="false" aria-label="Liste"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <button id="v-dergi" aria-pressed="false" aria-label="Dergi" title="Dergi düzeni"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="8" rx="2"/><rect x="3" y="15" width="8.5" height="5" rx="1.5"/><rect x="12.5" y="15" width="8.5" height="5" rx="1.5"/></svg></button>
         <button id="v-compact" aria-pressed="false" aria-label="Kompakt"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 9.7h16M4 14.3h16M4 19h16"/></svg></button>
       </div>
       <button class="mini" id="trall" type="button" title="Görünen yabancı başlıkları Türkçeye çevir">Görünenleri çevir</button>
+      <select class="sel" id="palette" aria-label="Renk paleti" title="Renk paleti"><option value="klasik">Klasik</option><option value="gece">Gece</option><option value="kagit">Kağıt</option><option value="okyanus">Okyanus</option><option value="mor">Mor</option></select>
       <select class="sel" id="sort" aria-label="Sıralama"><option value="new">En yeni</option><option value="unread">Okunmamış önce</option></select>
     </div>
     <div class="sub" id="sublang" hidden></div>
@@ -273,8 +286,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 <script type="application/json" id="snap">/*SNAP*/</script>
 <script>
 const LANG={tr:"Türkçe",en:"English",zh:"中文",es:"Español",fr:"Français",de:"Deutsch",ar:"العربية",ru:"Русский",ja:"日本語",ko:"한국어",pt:"Português",hi:"हिन्दी",id:"Indonesia",fa:"فارسی",vi:"Tiếng Việt",it:"Italiano",pl:"Polski",nl:"Nederlands",uk:"Українська",he:"עברית",th:"ไทย",el:"Ελληνικά",sv:"Svenska"};
-const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["ios","iPhone / iOS"],["mac","Mac / macOS"],["win","Windows"],["auto","Otomobil"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
-const EMO={tr:"🇹🇷",world:"🌍",tech:"⚡",ios:"📱",mac:"💻",win:"🪟",auto:"🚗",eco:"📈",sci:"🔬",cool:"✨",viral:"🔥",ent:"🎬",sport:"⚽"};
+const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["samsung","Samsung / Galaxy / One UI"],["ios","iPhone / iOS"],["mac","Mac / macOS"],["win","Windows"],["auto","Otomobil"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
+const EMO={tr:"🇹🇷",world:"🌍",tech:"⚡",samsung:"📲",ios:"📱",mac:"💻",win:"🪟",auto:"🚗",eco:"📈",sci:"🔬",cool:"✨",viral:"🔥",ent:"🎬",sport:"⚽"};
 const CAT=Object.fromEntries(CATS);
 const PLAT={web:"Haber siteleri",gnews:"Google Haberler",x:"X (Twitter)",bsky:"Bluesky",reddit:"Reddit",youtube:"YouTube",medium:"Medium",dev:"DEV / Blog",hn:"Hacker News",wiki:"Wikipedia"};
 const PLATSHORT={web:"Haber siteleri",gnews:"Google Haberler",x:"𝕏",bsky:"Bluesky",reddit:"Reddit",youtube:"▶ YouTube",medium:"Medium",dev:"DEV",hn:"HN",wiki:"Wiki"};
@@ -340,7 +353,7 @@ function render(){
   // kategori
   const inLang=bySearch.filter(x=>langOK(x)&&platOK(x)),cc={};inLang.forEach(x=>cc[x.cat]=(cc[x.cat]||0)+1);
   const nUn=inLang.filter(x=>!read.has(x.id)).length,nSv=Object.keys(saved).length;
-  const MINE=["tech","ios","mac","win","auto","sci"],nMine=inLang.filter(x=>MINE.includes(x.cat)).length;
+  const MINE=["tech","samsung","ios","mac","win","auto","sci"],nMine=inLang.filter(x=>MINE.includes(x.cat)).length;
   $("cats").innerHTML=`<button class="chip" data-k="mine" aria-pressed="${cat==="mine"}" style="--c:var(--ac)"><span class="d">★</span>Konularım<em>${nMine.toLocaleString("tr-TR")}</em></button><button class="chip" data-k="all" aria-pressed="${cat==="all"}">Tümü<em>${inLang.length.toLocaleString("tr-TR")}</em></button>`
    +CATS.filter(([k])=>cc[k]||cat===k).map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${cat===k}" style="--c:${colorOf(k)}"><span class="d">${EMO[k]||""}</span>${l}<em>${(cc[k]||0).toLocaleString("tr-TR")}</em></button>`).join("")
    +`<button class="chip" data-k="unread" aria-pressed="${cat==="unread"}" style="--c:var(--ac)"><span class="d"></span>Okunmamış<em>${nUn.toLocaleString("tr-TR")}</em></button><button class="chip" data-k="saved" aria-pressed="${cat==="saved"}" style="--c:var(--c-cool)"><span class="d"></span>Kaydedilenler<em>${nSv}</em></button>`;
@@ -362,7 +375,7 @@ function render(){
   }
   $("heroBox").innerHTML=heroHTML;
   const shown=list.slice(0,limit),out=$("out");
-  out.className=view==="grid"?"grid":view==="list"?"list":"compact";
+  out.className=view==="grid"?"grid":view==="list"?"list":view==="dergi"?"grid dergi":"compact";
   out.innerHTML=shown.length?shown.map(x=>view==="compact"?rowHTML(x):cardHTML(x)).join(""):`<div class="empty"><b>${cat==="saved"?"Henüz kaydettiğin haber yok":"Eşleşen haber yok"}</b>${cat==="saved"?"Kartlardaki yer imi simgesiyle haber kaydedebilirsin.":"Filtreyi, platformu, zaman aralığını ya da aramayı değiştir."}</div>`;
   $("more").hidden=list.length<=limit;
   const h1=all.filter(x=>Date.now()-x.ts<=3600e3).length,h3=all.filter(x=>Date.now()-x.ts<=3*3600e3).length;
@@ -370,7 +383,7 @@ function render(){
   const nsrc=Object.keys(feeds).filter(k=>!hidden.has(k)).length;
   $("status").innerHTML=progress?`<span class="live">${esc(progress)}</span>`:`<span class="live">Canlı</span><span>Son saat <b>${h1.toLocaleString("tr-TR")}</b></span><span>Son 3 saat <b>${h3.toLocaleString("tr-TR")}</b></span><span><b>${list.length.toLocaleString("tr-TR")}</b> haber gösteriliyor</span><span>Güncelleme <b>${upd?ago(Date.parse(upd))+" önce":"-"}</b></span>`;
   $("gen").textContent=nsrc+" kaynak";$("gen2").textContent=nsrc+" kaynak · "+all.length.toLocaleString("tr-TR")+" haber";
-  ["grid","list","compact"].forEach(v=>$("v-"+v).setAttribute("aria-pressed",view===v));
+  ["grid","list","dergi","compact"].forEach(v=>$("v-"+v).setAttribute("aria-pressed",view===v));
   [...$("timeseg").children].forEach(b=>b.setAttribute("aria-pressed",+b.dataset.t===tfilter));
   if($("dlg").open)renderSources();
 }
@@ -447,10 +460,13 @@ document.addEventListener("click",e=>{
   if(sb){const id=sb.dataset.save;if(saved[id]){delete saved[id];toast("Kayıtlardan çıkarıldı")}else{const x=allItems().find(i=>i.id===id);if(x){saved[id]=x;toast("Kaydedildi")}}store.set("saved",saved);render();return}
   const a=e.target.closest("#out a.title,#out a.media,#out a.row,.feat,.side a");if(a)markRead(a.closest("[data-id]")||a);
 });
-$("v-grid").onclick=()=>setView("grid");$("v-list").onclick=()=>setView("list");$("v-compact").onclick=()=>setView("compact");
+$("v-grid").onclick=()=>setView("grid");$("v-list").onclick=()=>setView("list");$("v-dergi").onclick=()=>setView("dergi");$("v-compact").onclick=()=>setView("compact");
 function setView(v){view=v;store.set("view",v);render()}
 $("q").oninput=e=>{q=e.target.value;limit=60;render()};
 $("sort").onchange=e=>{sort=e.target.value;render()};
+function applyPalette(p){document.documentElement.dataset.palette=p;$("palette").value=p}
+applyPalette(store.get("palette","klasik"));
+$("palette").onchange=e=>{store.set("palette",e.target.value);applyPalette(e.target.value)};
 $("more").onclick=()=>{limit+=60;render()};
 document.addEventListener("keydown",e=>{const t=e.target.tagName;if(e.key==="/"&&t!=="INPUT"&&t!=="SELECT"){e.preventDefault();$("q").focus()}else if(e.key==="r"&&t!=="INPUT"&&!e.metaKey&&!e.ctrlKey){refresh()}else if(e.key==="Escape"){$("q").blur()}});
 function applyTheme(t){if(t==="auto")document.documentElement.removeAttribute("data-theme");else document.documentElement.setAttribute("data-theme",t);$("theme").title="Tema: "+(t==="auto"?"otomatik":t==="dark"?"koyu":"açık")}
