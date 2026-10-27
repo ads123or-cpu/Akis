@@ -13,7 +13,7 @@
   --bg:#f4f5f9;--bg2:#ffffff;--bg3:#eceef5;--ink:#0f1222;--ink2:#4b5169;--ink3:#8a90a8;--line:#e2e5f0;
   --ac:#5b5bf6;--ac2:#c026d3;--glass:rgba(255,255,255,.72);--shadow:0 1px 2px rgba(15,18,34,.05),0 8px 24px -12px rgba(15,18,34,.18);
   --r:18px;
-  --c-tr:#ef4444;--c-world:#3b82f6;--c-tech:#8b5cf6;--c-ios:#14b8a6;--c-mac:#64748b;--c-win:#0ea5e9;--c-auto:#ca8a04;--c-eco:#10b981;--c-sci:#06b6d4;--c-cool:#f59e0b;--c-viral:#ec4899;--c-ent:#d946ef;--c-sport:#22c55e;--c-samsung:#1428a0;
+  --c-tr:#ef4444;--c-world:#3b82f6;--c-tech:#8b5cf6;--c-ios:#14b8a6;--c-mac:#64748b;--c-win:#0ea5e9;--c-mobil:#3ddc84;--c-auto:#ca8a04;--c-eco:#10b981;--c-sci:#06b6d4;--c-cool:#f59e0b;--c-viral:#ec4899;--c-ent:#d946ef;--c-sport:#22c55e;--c-samsung:#1428a0;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0a0c14;--bg2:#12151f;--bg3:#1a1e2c;--ink:#eef0f8;--ink2:#a9afc6;--ink3:#6b7390;--line:#222738;--glass:rgba(14,17,28,.72);
@@ -286,8 +286,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 <script type="application/json" id="snap">/*SNAP*/</script>
 <script>
 const LANG={tr:"Türkçe",en:"English",zh:"中文",es:"Español",fr:"Français",de:"Deutsch",ar:"العربية",ru:"Русский",ja:"日本語",ko:"한국어",pt:"Português",hi:"हिन्दी",id:"Indonesia",fa:"فارسی",vi:"Tiếng Việt",it:"Italiano",pl:"Polski",nl:"Nederlands",uk:"Українська",he:"עברית",th:"ไทย",el:"Ελληνικά",sv:"Svenska"};
-const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["samsung","Samsung / Galaxy / One UI"],["ios","iPhone / iOS"],["mac","Mac / macOS"],["win","Windows"],["auto","Otomobil"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
-const EMO={tr:"🇹🇷",world:"🌍",tech:"⚡",samsung:"📲",ios:"📱",mac:"💻",win:"🪟",auto:"🚗",eco:"📈",sci:"🔬",cool:"✨",viral:"🔥",ent:"🎬",sport:"⚽"};
+const CATS=[["tr","Türkiye Gündemi"],["world","Dünya"],["tech","Teknoloji"],["samsung","Samsung / Galaxy / One UI"],["ios","iPhone / iOS"],["mac","Mac / macOS"],["mobil","Android / Xiaomi / Huawei"],["win","Windows"],["auto","Otomobil"],["eco","Ekonomi"],["sci","Bilim ve Sağlık"],["cool","İlginç"],["viral","Reels / Viral"],["ent","Eğlence"],["sport","Spor"]];
+const EMO={tr:"🇹🇷",world:"🌍",tech:"⚡",samsung:"📲",ios:"📱",mac:"💻",mobil:"🤖",win:"🪟",auto:"🚗",eco:"📈",sci:"🔬",cool:"✨",viral:"🔥",ent:"🎬",sport:"⚽"};
 const CAT=Object.fromEntries(CATS);
 const PLAT={web:"Haber siteleri",gnews:"Google Haberler",x:"X (Twitter)",bsky:"Bluesky",reddit:"Reddit",youtube:"YouTube",medium:"Medium",dev:"DEV / Blog",hn:"Hacker News",wiki:"Wikipedia"};
 const PLATSHORT={web:"Haber siteleri",gnews:"Google Haberler",x:"𝕏",bsky:"Bluesky",reddit:"Reddit",youtube:"▶ YouTube",medium:"Medium",dev:"DEV",hn:"HN",wiki:"Wiki"};
@@ -353,7 +353,7 @@ function render(){
   // kategori
   const inLang=bySearch.filter(x=>langOK(x)&&platOK(x)),cc={};inLang.forEach(x=>cc[x.cat]=(cc[x.cat]||0)+1);
   const nUn=inLang.filter(x=>!read.has(x.id)).length,nSv=Object.keys(saved).length;
-  const MINE=["tech","samsung","ios","mac","win","auto","sci"],nMine=inLang.filter(x=>MINE.includes(x.cat)).length;
+  const MINE=["tech","samsung","mobil","ios","mac","win","auto","sci"],nMine=inLang.filter(x=>MINE.includes(x.cat)).length;
   $("cats").innerHTML=`<button class="chip" data-k="mine" aria-pressed="${cat==="mine"}" style="--c:var(--ac)"><span class="d">★</span>Konularım<em>${nMine.toLocaleString("tr-TR")}</em></button><button class="chip" data-k="all" aria-pressed="${cat==="all"}">Tümü<em>${inLang.length.toLocaleString("tr-TR")}</em></button>`
    +CATS.filter(([k])=>cc[k]||cat===k).map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="${cat===k}" style="--c:${colorOf(k)}"><span class="d">${EMO[k]||""}</span>${l}<em>${(cc[k]||0).toLocaleString("tr-TR")}</em></button>`).join("")
    +`<button class="chip" data-k="unread" aria-pressed="${cat==="unread"}" style="--c:var(--ac)"><span class="d"></span>Okunmamış<em>${nUn.toLocaleString("tr-TR")}</em></button><button class="chip" data-k="saved" aria-pressed="${cat==="saved"}" style="--c:var(--c-cool)"><span class="d"></span>Kaydedilenler<em>${nSv}</em></button>`;

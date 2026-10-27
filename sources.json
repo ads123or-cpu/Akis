@@ -5454,5 +5454,77 @@
     "cat": "cool",
     "url": "https://www.popularmechanics.com/rss/all.xml",
     "plat": "web"
+  },
+  {
+    "id": "androidpolice",
+    "name": "Android Police",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "web",
+    "url": "https://www.androidpolice.com/feed/"
+  },
+  {
+    "id": "androidcentral",
+    "name": "Android Central",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "web",
+    "url": "https://www.androidcentral.com/feed"
+  },
+  {
+    "id": "gizmochina",
+    "name": "Gizmochina",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "web",
+    "url": "https://www.gizmochina.com/feed/"
+  },
+  {
+    "id": "huaweicentral",
+    "name": "Huawei Central",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "web",
+    "url": "https://www.huaweicentral.com/feed/"
+  },
+  {
+    "id": "xiaomitime",
+    "name": "XiaomiTime",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "web",
+    "url": "https://xiaomitime.com/feed/"
+  },
+  {
+    "id": "droidlife",
+    "name": "Droid Life",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "web",
+    "url": "https://www.droid-life.com/feed/"
+  },
+  {
+    "id": "phonearena",
+    "name": "PhoneArena",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "web",
+    "url": "https://www.phonearena.com/feed/news"
+  },
+  {
+    "id": "gn-tr-mobil",
+    "name": "GN Android / Xiaomi / Huawei (TR)",
+    "lang": "tr",
+    "cat": "tech",
+    "plat": "gnews",
+    "url": "https://news.google.com/rss/search?q=Xiaomi+OR+Huawei+OR+Android+OR+Redmi+OR+Honor&hl=tr&gl=TR&ceid=TR:tr"
+  },
+  {
+    "id": "gn-en-mobil",
+    "name": "Android / Pixel / Xiaomi news (EN)",
+    "lang": "en",
+    "cat": "tech",
+    "plat": "gnews",
+    "url": "https://news.google.com/rss/search?q=Android+OR+Pixel+OR+Xiaomi+OR+Huawei+OR+OnePlus&hl=en-US&gl=US&ceid=US:en"
   }
 ]
