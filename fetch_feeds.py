@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """sources.json içindeki RSS/Atom kaynaklarını çekip site/feeds.json dosyasına yazar."""
-import json, re, html, gzip, concurrent.futures as cf, urllib.request, xml.etree.ElementTree as ET
+import json, re, html, gzip, random, concurrent.futures as cf, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone, timedelta
 
@@ -181,15 +181,57 @@ def fetch_x(handle):
     return out[:MAX_ITEMS]
 
 def go(s):
-    err = 'bos'
+    """(kaynak, haberler, hata, http_kodu, retry_after_sn). 429'da ayni turda tekrar denenmez."""
+    err = 'bos'; kod = None; bekle = None
     for attempt in range(2):
         try:
             host_wait(s['url'])
             items = fetch_x(s['url'][4:]) if s['url'].startswith('x://') else parse(fetch(s['url']))
-            if items: return s, items, None
+            if items: return s, items, None, 200, None
+        except urllib.error.HTTPError as e:
+            err = str(e)[:80]; kod = e.code
+            bekle = retry_after(e.headers.get('Retry-After') if e.headers else None)
+            if e.code == 429: break   # hemen tekrar denemek yalnizca sinirin uzamasina yol acar
         except Exception as e:
             err = str(e)[:80]
-    return s, [], err
+    return s, [], err, kod, bekle
+
+
+def retry_after(deger):
+    """Retry-After basligi: saniye ya da HTTP tarihi. Okunamazsa None."""
+    if not deger: return None
+    deger = deger.strip()
+    if deger.isdigit(): return int(deger)
+    try: return max(0, int((parsedate_to_datetime(deger) - datetime.now(timezone.utc)).total_seconds()))
+    except Exception: return None
+
+
+# --- Devre kesici (27.10.2026) -----------------------------------------
+# X ve Reddit kaynaklari her turda 429 aliyordu; her tur yeniden istek atmak
+# sinirin surmesine yol aciyor ve tur suresini uzatiyordu. Kaynak durumu
+# site/kaynak-durum.json'da turlar arasi saklanir (is akisi site/ klasorunu
+# commit ediyor). 429 ya da ardisik 3 hatada kaynak bir sure atlanir:
+# min(2^(n-1) x 30 dk, 24 sa) + rastgele pay; Retry-After varsa o kullanilir.
+DURUM_DOSYASI = 'site/kaynak-durum.json'
+TABAN_DK = 30
+TAVAN_SN = 24 * 3600
+
+def bekleme_suresi(ardisik, retry_sn):
+    if retry_sn: return min(retry_sn, TAVAN_SN)
+    sn = min(TABAN_DK * 60 * (2 ** max(0, ardisik - 1)), TAVAN_SN)
+    return int(sn * random.uniform(1.0, 1.2))
+
+def durum_guncelle(durum, sid, basarili, kod, hata, retry_sn, simdi):
+    d = durum.setdefault(sid, {})
+    if basarili:
+        durum[sid] = {'ardisik_basarisiz': 0, 'son_basari': simdi.isoformat(), 'son_kod': 200}
+        return
+    n = d.get('ardisik_basarisiz', 0) + 1
+    d.update(ardisik_basarisiz=n, son_hata=simdi.isoformat(), son_kod=kod, hata=hata)
+    if kod == 429 or n >= 3:
+        d['bekle_kadar'] = (simdi + timedelta(seconds=bekleme_suresi(n, retry_sn))).isoformat()
+    else:
+        d.pop('bekle_kadar', None)
 
 
 # --- Spam süzgeci (14.10.2026) -------------------------------------------
@@ -214,9 +256,19 @@ def main():
     sources = json.load(open('sources.json'))
     try: old = json.load(open('site/feeds.json')).get('feeds', {})
     except Exception: old = {}
-    now = datetime.now(timezone.utc).isoformat(); feeds = {}; failed = []
+    try: durum = json.load(open(DURUM_DOSYASI))
+    except Exception: durum = {}
+    simdi = datetime.now(timezone.utc)
+    now = simdi.isoformat(); feeds = {}; failed = []
+    # Beklemedeki kaynaklar bu tur cekilmez; eski verisi asagidaki 12 saat kuralina tabidir.
+    beklemede = {s['id'] for s in sources if (durum.get(s['id']) or {}).get('bekle_kadar', '') > now}
+    cekilecek = [s for s in sources if s['id'] not in beklemede]
+    sonuclar = [(s, [], 'beklemede', None, None) for s in sources if s['id'] in beklemede]
     with cf.ThreadPoolExecutor(24) as ex:
-        for s, items, err in ex.map(go, sources):
+        sonuclar += list(ex.map(go, cekilecek))
+    for s, items, err, kod, retry_sn in sonuclar:
+            if s['id'] not in beklemede:
+                durum_guncelle(durum, s['id'], bool(items), kod, err, retry_sn, simdi)
             if items:
                 lim = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
                 items = [i for i in items if not i.get('d') or i['d'] >= lim]
@@ -237,7 +289,9 @@ def main():
                     if taze: feeds[s['id']] = {**old[s['id']], 'items': taze, 'bayat': True}
     import os; os.makedirs('site', exist_ok=True)
     n = sum(len(f['items']) for f in feeds.values())
-    saglik = dict(kaynak=len(sources), basarili=len(feeds) - sum(1 for f in feeds.values() if f.get('bayat')), bayat=sum(1 for f in feeds.values() if f.get('bayat')), basarisiz=len(failed))
+    saglik = dict(kaynak=len(sources), basarili=len(feeds) - sum(1 for f in feeds.values() if f.get('bayat')), bayat=sum(1 for f in feeds.values() if f.get('bayat')), basarisiz=sum(1 for _, e in failed if e != 'beklemede'), beklemede=len(beklemede))
+    gecerli = {s['id'] for s in sources}
+    json.dump({k: v for k, v in durum.items() if k in gecerli}, open(DURUM_DOSYASI, 'w'), ensure_ascii=False, indent=1, sort_keys=True)
     json.dump(dict(generated=now, saglik=saglik, feeds=feeds), open('site/feeds.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print(f"{len(feeds)} kaynak, {n} haber, {len(failed)} başarısız", *failed, sep='\n  ')
 
