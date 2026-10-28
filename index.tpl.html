@@ -224,6 +224,17 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 :root[data-palette="kagit"]{--bg:#f5efe3;--bg2:#fbf7ef;--bg3:#efe7d6;--ink:#2a2118;--ink2:#6b5c48;--ink3:#9a8a72;--line:#e3d8c3;--ac:#b45309;--glass:rgba(251,247,239,.72)}
 :root[data-palette="okyanus"]{--bg:#eef8f7;--bg2:#ffffff;--bg3:#dff1ef;--ink:#0b2b2b;--ink2:#3f6b69;--ink3:#7aa3a1;--line:#cfe6e3;--ac:#0d9488;--glass:rgba(255,255,255,.72)}
 :root[data-palette="mor"]{--bg:#f6f3ff;--bg2:#ffffff;--bg3:#ece7fb;--ink:#1e1537;--ink2:#5b4f82;--ink3:#9186b3;--line:#e2dcf6;--ac:#7c3aed;--glass:rgba(255,255,255,.72)}
+
+/* Inoreader tarzı düzen: sol klasör kenar çubuğu + liste */
+.app{display:grid;grid-template-columns:232px minmax(0,1fr);gap:22px;align-items:start;max-width:1400px}
+.rail{position:sticky;top:78px;max-height:calc(100vh - 96px);overflow:auto;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:12px 10px}
+.rail-h{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);font-weight:700;padding:4px 10px 8px}
+.rail .chips{flex-direction:column;overflow:visible;padding:0;gap:2px}
+.rail .chip{width:100%;height:auto;min-height:38px;padding:8px 12px;border-radius:10px;border-color:transparent;background:transparent;box-shadow:none;justify-content:space-between}
+.rail .chip[aria-pressed="true"]{background:color-mix(in srgb,var(--ink) 10%,transparent);color:var(--ink);border-color:transparent}
+.main{min-width:0}
+.bar .row2{flex-wrap:wrap}
+@media (max-width:900px){.app{grid-template-columns:1fr}.rail{position:static;max-height:none}.rail .chips{flex-direction:row;overflow-x:auto}.rail .chip{width:auto}}
 </style>
 </head>
 <body>
@@ -235,11 +246,13 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   <button class="iconbtn go" id="refresh" aria-label="Yenile" title="Yenile (r)"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg></button>
 </div></header>
 
-<div class="wrap">
+<div class="wrap app">
+  <aside class="rail" aria-label="Klasörler"><div class="rail-h">Klasörler</div><nav class="chips" id="cats" aria-label="Kategoriler"></nav></aside>
+  <main class="main">
   <div class="bar">
-    <nav class="chips" id="cats" aria-label="Kategoriler"></nav>
     <div class="row2">
-      <div class="seg" id="langseg" role="group" aria-label="Dil"></div>
+      <button class="mini" id="markall" type="button" title="Görünen haberleri okundu işaretle">✓✓ Tümünü okundu işaretle</button>
+    <div class="seg" id="langseg" role="group" aria-label="Dil"></div>
       <div class="seg" id="platseg" role="group" aria-label="Platform"></div>
       <span class="sp"></span>
       <div class="seg" role="group" aria-label="Zaman" id="timeseg">
@@ -262,6 +275,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   <div id="out"></div>
   <button class="more" id="more" hidden>Daha fazla göster</button>
   <div class="foot"><span id="gen2"></span><span>Kısayollar: <b>/</b> ara · <b>r</b> yenile</span></div>
+  </main>
 </div>
 
 <dialog id="dlg"><div class="dlg">
@@ -296,7 +310,7 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
 let DEF=JSON.parse($("snap").textContent), GEN=DEF.generated; DEF=DEF.feeds;
 let custom=store.get("custom",{}), deleted=new Set(store.get("deleted",[])), cache=store.get("cache",{}), hidden=new Set(store.get("hidden",[]));
 let read=new Set(store.get("read",[])), saved=store.get("saved",{});
-let live={}, feeds={}, lang=store.get("lang","tren"), cat=store.get("cat","mine"), plat="all", q="", view=store.get("view","grid"), sort="new", tfilter=0, limit=60, busy=false, progress="";
+let live={}, feeds={}, lang=store.get("lang","tren"), cat=store.get("cat","mine"), plat="all", q="", view=store.get("view","compact"), sort="new", tfilter=0, limit=60, busy=false, progress="";
 const icon={mark:'<svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>'};
 
 function buildFeeds(){feeds={};
@@ -563,6 +577,13 @@ $("reset").onclick=()=>{const b=$("reset");if(b.dataset.arm!=="1"){b.dataset.arm
   custom={};deleted=new Set();hidden=new Set();store.set("custom",{});store.set("deleted",[]);store.set("hidden",[]);buildFeeds();render();toast("Varsayılan kaynaklar geri geldi")};
 
 buildFeeds();render();refresh();
+</script>
+<script>
+document.getElementById("markall").addEventListener("click",function(){
+  document.querySelectorAll("#out [data-id]").forEach(function(el){ if(el.dataset.id){ read.add(el.dataset.id); el.dataset.read="1"; } });
+  store.set("read",[...read].slice(-6000));
+  toast("Görünen haberler okundu olarak işaretlendi");
+});
 </script>
 </body>
 </html>
