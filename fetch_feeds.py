@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """sources.json içindeki RSS/Atom kaynaklarını çekip site/feeds.json dosyasına yazar."""
-import json, re, html, gzip, random, concurrent.futures as cf, urllib.request, urllib.error, xml.etree.ElementTree as ET
+import json, re, html, gzip, random, concurrent.futures as cf, urllib.request, urllib.error, urllib.parse, xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone, timedelta
 
@@ -10,7 +10,7 @@ class R(urllib.request.HTTPRedirectHandler):
 urllib.request.install_opener(urllib.request.build_opener(R))
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
-MAX_ITEMS = 40
+MAX_ITEMS = 25
 
 def strip(s):
     s = re.sub(r'<[^>]+>', ' ', s or ''); s = html.unescape(s)
@@ -43,7 +43,7 @@ def parse_et(data):
                 l = c.get('href') or t
                 if l and c.get('rel') in (None, 'alternate'): d['l'] = d.get('l') or l
             elif k in ('pubDate', 'published', 'updated', 'date') and 'd' not in d: d['d'] = pdate(t)
-            elif k == 'source' and t: d['p'] = strip(t)
+            elif k == 'source' and t and not t.startswith('http'): d['p'] = strip(t)
             elif k in ('description', 'summary', 'content', 'encoded') and len(t) > len(desc): desc = t
             elif k in ('thumbnail', 'content') and c.get('url') and not img and (c.get('medium') in (None, 'image') or 'image' in (c.get('type') or 'image')): img = c.get('url')
             elif k == 'enclosure' and c.get('url') and 'image' in (c.get('type') or ''): img = c.get('url')
@@ -53,7 +53,18 @@ def parse_et(data):
         d['s'] = '' if 'news.google.com' in d.get('l', '') else strip(desc)[:200]
         if img and img.startswith('http'): d['i'] = img
         if not d.get('t') and d.get('s'): d['t'] = d['s'][:110]
-        if d.get('t') and d.get('l'): out.append(d)
+        if d.get('t') and d.get('l'):
+            yt = re.search(r'youtube\.com/watch\?v=([\w-]{6,})', d['l'])
+            if yt and not d.get('i'): d['i'] = 'https://i.ytimg.com/vi/%s/hqdefault.jpg' % yt.group(1)
+            if 'news.google.com' in d['l']:
+                gn = re.match(r'^(.{15,}) - ([^-]{2,50})$', d['t'])
+                if gn: d['t'], d['p'] = gn.group(1).strip(), d.get('p') or gn.group(2).strip()
+            if 'points' not in d:
+                pts = re.search(r'Points:\s*(\d+)', desc)
+                if pts: d['n'] = int(pts.group(1))
+            if 'trends.google.com' in d['l']:
+                d['l'] = 'https://www.google.com/search?q=' + urllib.parse.quote(d['t'])
+            out.append(d)
     return out
 
 def parse_re(data):
@@ -254,6 +265,50 @@ def spam_mi(it):
         return True
     return False
 
+# Okura degeri olmayan icerik: indirim, kupon, burc, bulmaca, SEO rehberi. Akisin alakasiz gorunmesinin bir sebebi.
+COP = re.compile(r"(\b\d+% off\b|\$\d+ off\b|\bsave \$?\d|\bdeals?\b|\bcoupon|black friday|prime day|\bbest .{0,40}\b(for|under|to buy)\b|\bindirim kodu|kupon|\bburç|horoscope|wordle|nyt connections|connections hints|\bquordle|192\.168|\bpromosyon|\bsponsored\b|hoş ?geldin bonusu|how to (connect|fix|download|install)\b|nasıl (kullanılır|indirilir|yapılır)\??$)", re.I)
+def cop_mu(it): return bool(COP.search(it.get('t', '') or ''))
+
+# Gorseli olmayan yeni haberlere sayfanin og:image'i (kaynak basina degil haber basina, onbellekli).
+GORSEL_DOSYA = 'site/gorsel.json'
+GORSEL_TUR = 300
+KOTU_GORSEL = re.compile(r"(logo|favicon|placeholder|default[-_]|sprite|blank\.|1x1|avatar|gravatar|/icons?/)", re.I)
+def og_gorsel(url):
+    req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'text/html'})
+    r = urllib.request.urlopen(req, timeout=7)
+    h = r.read(160000).decode('utf-8', 'ignore')
+    m = re.search(r'<meta[^>]+(?:property|name)=["\'](?:og:image(?::secure_url)?|twitter:image)["\'][^>]+content=["\']([^"\']+)', h, re.I) or re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:image|twitter:image)', h, re.I)
+    u = html.unescape(m.group(1)) if m else ''
+    return urllib.parse.urljoin(url, u) if u else ''
+
+def gorselleri_doldur(feeds):
+    try: on = json.load(open(GORSEL_DOSYA))
+    except Exception: on = {}
+    sinir = (datetime.now(timezone.utc) - timedelta(hours=72)).isoformat()
+    bos = []
+    for f in feeds.values():
+        for it in f['items']:
+            if it.get('i') and KOTU_GORSEL.search(it['i']): it.pop('i')
+            if it.get('i'): continue
+            l = it.get('l', '')
+            if l in on:
+                if on[l]: it['i'] = on[l]
+            elif f.get('plat') in ('web', 'hn') and (it.get('d') or '') >= sinir and 'news.google.com' not in l and f.get('cat') != 'viral':
+                bos.append((it, l))
+    bos.sort(key=lambda x: x[0].get('d') or '', reverse=True)
+    def al(p):
+        try:
+            u = og_gorsel(p[1])
+            return p, (u if u.startswith('http') and not KOTU_GORSEL.search(u) else '')
+        except Exception:
+            return p, ''
+    with cf.ThreadPoolExecutor(20) as ex:
+        for (it, l), u in ex.map(al, bos[:GORSEL_TUR]):
+            on[l] = u
+            if u: it['i'] = u
+    json.dump(dict(list(on.items())[-4000:]), open(GORSEL_DOSYA, 'w'), ensure_ascii=False, separators=(',', ':'))
+    print('og:image denendi', len(bos[:GORSEL_TUR]))
+
 def main():
     sources = json.load(open('sources.json'))
     try: old = json.load(open('site/feeds.json')).get('feeds', {})
@@ -278,7 +333,7 @@ def main():
                     c = classify(i, s)
                     if c != s['cat']: i['c'] = c
                 if s['cat'] == 'auto': items = [i for i in items if not ACCIDENT.search(i.get('t', ''))]
-                items = [i for i in items if not spam_mi(i)]
+                items = [i for i in items if not spam_mi(i) and not cop_mu(i)]
                 if not items: failed.append((s['id'], 'eski')); continue
                 feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], plat=s.get('plat') or 'web', url=s['url'], items=items, updated=now)
             else:
@@ -290,6 +345,7 @@ def main():
                     taze = [i for i in old[s['id']].get('items', []) if i.get('d') and i['d'] >= lim12]
                     if taze: feeds[s['id']] = {**old[s['id']], 'items': taze, 'bayat': True}
     import os; os.makedirs('site', exist_ok=True)
+    gorselleri_doldur(feeds)
     n = sum(len(f['items']) for f in feeds.values())
     saglik = dict(kaynak=len(sources), basarili=len(feeds) - sum(1 for f in feeds.values() if f.get('bayat')), bayat=sum(1 for f in feeds.values() if f.get('bayat')), basarisiz=sum(1 for _, e in failed if e != 'beklemede'), beklemede=len(beklemede))
     gecerli = {s['id'] for s in sources}

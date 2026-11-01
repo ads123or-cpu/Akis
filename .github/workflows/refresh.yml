@@ -4,7 +4,7 @@ on:
     - cron: "*/30 * * * *"   # her 30 dakikada bir
   workflow_dispatch:          # Actions sekmesinden elle de çalıştırılabilir
   push:
-    paths: [sources.json, fetch_feeds.py, index.tpl.html, build.py]
+    paths: [sources.json, fetch_feeds.py, masa.py, index.tpl.html, build.py]
 permissions:
   contents: write
 concurrency: refresh
@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python fetch_feeds.py
+      - run: python masa.py
       - run: python build.py
       - name: Değişiklik varsa kaydet
         run: |
