@@ -3278,5 +3278,29 @@
 "cat": "viral",
 "url": "https://hnrss.org/newest?points=100",
 "plat": "hn"
+},
+{
+"id": "ithome",
+"name": "IT之家",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.ithome.com/rss/",
+"plat": "web"
+},
+{
+"id": "cnbeta",
+"name": "cnBeta",
+"lang": "zh",
+"cat": "tech",
+"url": "https://rss.cnbeta.com.tw/",
+"plat": "web"
+},
+{
+"id": "mydrivers",
+"name": "驱动之家",
+"lang": "zh",
+"cat": "tech",
+"url": "https://rss.mydrivers.com/rss.aspx",
+"plat": "web"
 }
 ]

@@ -140,7 +140,7 @@ function eylem(c){
   var ozet=c.s||'',kayitli=!!kayit[c.id];
   var stud=PANEL+'/sosyal-studyo?baslik='+encodeURIComponent(c.t)+'&ozet='+encodeURIComponent(ozet)+'&link='+encodeURIComponent(c.l);
   var hizli=PANEL+'/hizli-yaz?metin='+encodeURIComponent((c.t+'\n\n'+ozet+'\n\nKaynak: '+c.l).slice(0,1500));
-  var cevir=c.dil==='en'?'<a class="dg" target="_blank" rel="noopener" href="https://translate.google.com/translate?sl=auto&tl=tr&u='+encodeURIComponent(c.l)+'">Çevir</a>':'';
+  var cevir=c.dil!=='tr'?'<a class="dg" target="_blank" rel="noopener" href="https://translate.google.com/translate?sl=auto&tl=tr&u='+encodeURIComponent(c.l)+'">Çevir</a>':'';
   var kaynak=c.og&&c.og.length>1?'<button class="dg" data-ac="'+c.id+'" aria-expanded="'+(S.acik[c.id]?'true':'false')+'">'+c.og.length+' haberi gör</button>':'';
   return '<div class="eylem">'+(S.sekme==='reels'?'<a class="dg birincil" target="_blank" rel="noopener" href="'+x(stud)+'">Stüdyo\'ya aktar</a><a class="dg" target="_blank" rel="noopener" href="'+x(hizli)+'">Hızlı Yaz</a>':'<a class="dg" target="_blank" rel="noopener" href="'+x(hizli)+'">Hızlı Yaz</a><a class="dg" target="_blank" rel="noopener" href="'+x(stud)+'">Stüdyo</a>')+kaynak+cevir+'<button class="dg" data-kaydet="'+c.id+'" aria-pressed="'+kayitli+'">'+(kayitli?'Kaydedildi':'Kaydet')+'</button></div>';
 }
@@ -151,7 +151,7 @@ function kart(c,i){
   var kaynakAd=c.og&&c.og[0]?c.og[0].p:'';
   return '<article class="kart'+(okundu[c.id]?' okundu':'')+(S.secili===i?' secili':'')+'" data-i="'+i+'">'+resim(c.i,konu||kaynakAd,c.l)+'<div>'+
     '<h2>'+(S.sekme==='reels'?'<span class="sira">'+(i+1)+'</span>':'')+'<a href="'+x(c.l)+'" target="_blank" rel="noopener" data-okundu="'+c.id+'">'+x(c.t)+'</a></h2>'+
-    '<div class="meta"><span class="ks'+(ks<2?' tek':'')+'">'+(ks>1?ks+' kaynak':x(kaynakAd))+'</span><span>'+kac(c.son)+' önce</span>'+(konu?'<span>'+x(konu)+'</span>':'')+(c.dil==='en'?'<span class="dil">EN</span>':'')+'</div>'+
+    '<div class="meta"><span class="ks'+(ks<2?' tek':'')+'">'+(ks>1?ks+' kaynak':x(kaynakAd))+'</span><span>'+kac(c.son)+' önce</span>'+(konu?'<span>'+x(konu)+'</span>':'')+(c.dil!=='tr'?'<span class="dil">'+(c.dil==='zh'?'ZH':'EN')+'</span>':'')+'</div>'+
     ned+(c.s?'<p class="ozet">'+x(c.s)+'</p>':'')+eylem(c)+liste+'</div></article>';
 }
 function suz(l){
@@ -160,7 +160,8 @@ function suz(l){
     if(c.son<sinir)return false;
     if(S.konu!=='hepsi'&&c.k!==S.konu)return false;
     if(S.dil==='tr'&&c.dil!=='tr')return false;
-    if(S.dil==='en'&&c.dil!=='en')return false;
+    if(S.dil==='en'&&c.dil==='tr')return false;
+    if(S.dil==='zh'&&c.dil!=='zh')return false;
     if(q&&norm(c.t+' '+(c.s||'')+' '+(c.og||[]).map(function(o){return o.t+' '+o.p}).join(' ')).indexOf(q)<0)return false;
     return true;
   });
@@ -201,7 +202,7 @@ function ciz(){
   var a=$('ana'),h='';
   document.querySelectorAll('[data-sekme]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.sekme===S.sekme)});
   yanCiz();
-  var filtre=cipler(S.dil,[['hepsi','Tüm diller'],['tr','Türkçe'],['en','Yabancı']],'dil')+cipler(S.saat,[[6,'6 saat'],[24,'24 saat'],[72,'3 gün']],'saat');
+  var filtre=cipler(S.dil,[['hepsi','Tüm diller'],['tr','Türkçe'],['en','Yabancı'],['zh','Çince']],'dil')+cipler(S.saat,[[6,'6 saat'],[24,'24 saat'],[72,'3 gün']],'saat');
   if(S.sekme==='gundem'){
     h='<div class="ana-ust"><h1>Gündem</h1>'+filtre+'</div>'+liste(suz(M.kumeler),'Bu süzgeçte haber yok.');
   }else if(S.sekme==='reels'){
@@ -211,7 +212,7 @@ function ciz(){
     h+=liste(l,'Bu türde aday yok. Başka bir tür seçin.');
   }else if(S.sekme==='son'){
     var q=norm(S.q),ls=sonHaberler().filter(function(c){return(S.dil==='hepsi'||c.dil===S.dil)&&(!q||norm(c.t).indexOf(q)>=0)});
-    h='<div class="ana-ust"><h1>Son haberler</h1>'+cipler(S.dil,[['hepsi','Tüm diller'],['tr','Türkçe'],['en','Yabancı']],'dil')+'</div>'+liste(ls,'Bu bölümde haber yok.');
+    h='<div class="ana-ust"><h1>Son haberler</h1>'+cipler(S.dil,[['hepsi','Tüm diller'],['tr','Türkçe'],['en','Yabancı'],['zh','Çince']],'dil')+'</div>'+liste(ls,'Bu bölümde haber yok.');
   }else if(S.sekme==='kayit'){
     var kl=Object.keys(kayit).map(function(k){return kayit[k]}).sort(function(a,b){return b.son-a.son});
     h='<div class="ana-ust"><h1>Kaydedilenler</h1></div>'+liste(kl,'Kaydettiğin haberler burada durur. Yalnız bu tarayıcıda saklanır.');
