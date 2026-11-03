@@ -1,14 +1,16 @@
 name: Akışı yenile
 on:
   schedule:
-    # Yedek: GitHub zamanlanmis isleri geciktirir (pratikte saatte bir). Asil tetik disaridan,
-    # workflow_dispatch ile 10 dakikada bir verilir (cron-job.org ya da Cloudflare Worker).
+    # Yedek: GitHub zamanlanmis isleri geciktirir (pratikte saatte bir). Asil dongu asagidaki
+    # "tekrar" isi: her calisma bitince ~8 dk bekleyip kendini workflow_dispatch ile yeniden baslatir.
+    # Zincir bir sebeple kopsa bu cron (ya da elle calistirma) yeniden baslatir.
     - cron: "*/30 * * * *"
   workflow_dispatch:          # Actions sekmesinden elle de çalıştırılabilir
   push:
     paths: [sources.json, fetch_feeds.py, masa.py, index.tpl.html, build.py]
 permissions:
   contents: write
+  actions: write
 concurrency: refresh
 jobs:
   refresh:
@@ -39,3 +41,15 @@ jobs:
         with: { path: site }
       - id: d
         uses: actions/deploy-pages@v4
+  tekrar:
+    needs: deploy
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    permissions: { actions: write }
+    steps:
+      - name: Bekle ve kendini yeniden başlat
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 480
+          gh workflow run refresh.yml --repo "$GITHUB_REPOSITORY" --ref main
