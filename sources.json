@@ -248,14 +248,6 @@
 "plat": "web"
 },
 {
-"id": "shiftdelete",
-"name": "ShiftDelete.Net",
-"lang": "tr",
-"cat": "tech",
-"url": "https://shiftdelete.net/feed",
-"plat": "web"
-},
-{
 "id": "donanimhaber",
 "name": "DonanımHaber",
 "lang": "tr",
@@ -2336,14 +2328,6 @@
 "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCebdo7-2NdjcktKzco64iNw"
 },
 {
-"id": "yt-shiftdeletenet",
-"name": "ShiftDelete.Net",
-"lang": "tr",
-"cat": "tech",
-"plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCek3UNSj6gq4FOPIOZkjc1g"
-},
-{
 "id": "yt-teknoseyir",
 "name": "Teknoseyir",
 "lang": "tr",
@@ -2912,14 +2896,6 @@
 "url": "https://www.cnnturk.com/feed/rss/otomobil/news"
 },
 {
-"id": "auto-sdn",
-"name": "ShiftDelete Otomobil",
-"lang": "tr",
-"cat": "auto",
-"plat": "web",
-"url": "https://shiftdelete.net/otomobil/feed"
-},
-{
 "id": "auto-caranddriver",
 "name": "Car and Driver",
 "lang": "en",
@@ -3245,14 +3221,6 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.savunmasanayist.com/feed/",
-"plat": "web"
-},
-{
-"id": "shiftdelete-oyun",
-"name": "ShiftDelete Oyun",
-"lang": "tr",
-"cat": "tech",
-"url": "https://shiftdelete.net/oyun/feed",
 "plat": "web"
 },
 {
