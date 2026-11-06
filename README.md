@@ -15,4 +15,7 @@ Teknoloji gündemi ve Reels konu masası. GitHub Actions her 30 dakikada kaynakl
 
 TechTurco paneli `site/index.html` içindeki `id="snap"` verisini okur; bu biçim değişirse panel de değişmeli.
 
-Klavye: `/` ara, `j`/`k` gezin, `o` aç, `s` kaydet.
+Klavye: `/` ara, `j`/`k` gezin, `o` aç, `s` kaydet, `x` ilgisiz (listeden kaldırır, "Gizlenenler" ile geri gelir).
+
+## Reels seçimi
+Kanal Türkçe tüketici teknolojisi: telefon, uygulama, güvenlik, yapay zekâ kullanıcısı. `masa.py` içinde `KITLE` (ürün/uygulama adı) ve `ETKI` (kullanıcıya etki) kuralları puan verir; `REELS_RED` (kaza, dizi/film, borsa, yabancı ülke kampanyası, dava) Reels'e hiç almaz; `REELS_CEZA` puan düşürür. Aynı olayı anlatan kümeler `birlestir()` ile tek kartta toplanır, tek konu listeyi 12 adaydan fazla dolduramaz. Yeni bir alakasız konu görürsen ilgili deseni ekle.

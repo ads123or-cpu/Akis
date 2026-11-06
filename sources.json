@@ -3302,5 +3302,245 @@
 "cat": "tech",
 "url": "https://rss.mydrivers.com/rss.aspx",
 "plat": "web"
+},
+{
+"id": "y-wabetainfo",
+"name": "WABetaInfo",
+"lang": "en",
+"cat": "tech",
+"url": "https://wabetainfo.com/feed/",
+"plat": "web"
+},
+{
+"id": "y-howtogeek",
+"name": "How-To Geek",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.howtogeek.com/feed/",
+"plat": "web"
+},
+{
+"id": "y-androidheadlines",
+"name": "Android Headlines",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.androidheadlines.com/feed",
+"plat": "web"
+},
+{
+"id": "y-bgr",
+"name": "BGR",
+"lang": "en",
+"cat": "tech",
+"url": "https://bgr.com/feed/",
+"plat": "web"
+},
+{
+"id": "y-malwarebytes",
+"name": "Malwarebytes Labs",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.malwarebytes.com/blog/feed/index.xml",
+"plat": "web"
+},
+{
+"id": "y-darkreading",
+"name": "Dark Reading",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.darkreading.com/rss.xml",
+"plat": "web"
+},
+{
+"id": "y-sammyfans",
+"name": "Sammy Fans",
+"lang": "en",
+"cat": "samsung",
+"url": "https://www.sammyfans.com/feed/",
+"plat": "web"
+},
+{
+"id": "y-galaxyclub",
+"name": "GalaxyClub",
+"lang": "en",
+"cat": "samsung",
+"url": "https://www.galaxyclub.nl/feed/",
+"plat": "web"
+},
+{
+"id": "y-techspot",
+"name": "TechSpot",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.techspot.com/backend.xml",
+"plat": "web"
+},
+{
+"id": "y-teknoburada",
+"name": "Teknoburada",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.teknoburada.net/feed",
+"plat": "web"
+},
+{
+"id": "y-teknodiot",
+"name": "Teknodiot",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.teknodiot.com/feed",
+"plat": "web"
+},
+{
+"id": "y-socialmediatoday",
+"name": "Social Media Today",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.socialmediatoday.com/feeds/news/",
+"plat": "web"
+},
+{
+"id": "y-idownloadblog",
+"name": "iDownloadBlog",
+"lang": "en",
+"cat": "ios",
+"url": "https://www.idownloadblog.com/feed/",
+"plat": "web"
+},
+{
+"id": "y-welivesecurity",
+"name": "ESET WeLiveSecurity",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.welivesecurity.com/en/rss/feed/",
+"plat": "web"
+},
+{
+"id": "y-kaspersky",
+"name": "Kaspersky Daily",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.kaspersky.com/blog/feed/",
+"plat": "web"
+},
+{
+"id": "y-helpnetsecurity",
+"name": "Help Net Security",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.helpnetsecurity.com/feed/",
+"plat": "web"
+},
+{
+"id": "y-securityweek",
+"name": "SecurityWeek",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.securityweek.com/feed/",
+"plat": "web"
+},
+{
+"id": "y-phandroid",
+"name": "Phandroid",
+"lang": "en",
+"cat": "tech",
+"url": "https://phandroid.com/feed/",
+"plat": "web"
+},
+{
+"id": "gn-tr-whatsapp",
+"name": "WhatsApp (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=WhatsApp%20(%C3%B6zellik%20OR%20g%C3%BCncelleme%20OR%20yasak%20OR%20doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k%20OR%20yedek)%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-instagram2",
+"name": "Instagram özellik (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(Instagram%20OR%20\"Instagram%20Reels\")%20(\"yeni%20%C3%B6zellik\"%20OR%20\"g%C3%BCncelleme\"%20OR%20\"eri%C5%9Fim%20sorunu\"%20OR%20\"%C3%A7%C3%B6kt%C3%BC\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-platform",
+"name": "TikTok/Telegram/X (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(TikTok%20OR%20Telegram%20OR%20Threads)%20(\"yeni%20%C3%B6zellik\"%20OR%20yasakland%C4%B1%20OR%20g%C3%BCncelleme%20OR%20\"eri%C5%9Fim\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-samsung",
+"name": "Samsung Galaxy (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=Samsung%20(Galaxy%20OR%20\"One%20UI\")%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-iphonegizli",
+"name": "iPhone ipucu (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=iPhone%20(gizli%20%C3%B6zellik%20OR%20ipucu%20OR%20sorun%20OR%20g%C3%BCncelleme)%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-androidg",
+"name": "Android özellik (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=Android%20(g%C3%BCncelleme%20OR%20%C3%B6zellik%20OR%20Pixel%20OR%20Gemini)%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-dolandirici",
+"name": "Dolandırıcılık (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k%20OR%20oltalama%20OR%20\"sahte%20SMS\"%20OR%20\"sahte%20uygulama\"%20OR%20\"hesab%C4%B1n%C4%B1z%20%C3%A7al%C4%B1nd%C4%B1\")%20(telefon%20OR%20WhatsApp%20OR%20banka%20OR%20e-Devlet)%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-operator",
+"name": "Operatör (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(Turkcell%20OR%20Vodafone%20OR%20\"T%C3%BCrk%20Telekom\")%20(kampanya%20OR%20kesinti%20OR%205G%20OR%20tarife%20OR%20\"abonelik\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-btk",
+"name": "BTK/IMEI (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(BTK%20OR%20IMEI%20OR%20\"e-Devlet\"%20OR%20\"yurt%20d%C4%B1%C5%9F%C4%B1%20telefon\")%20when:3d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-bedava",
+"name": "Ücretsiz (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(%C3%BCcretsiz%20OR%20bedava)%20(oyun%20OR%20uygulama%20OR%20\"yapay%20zeka\"%20OR%20abonelik)%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-aiarac",
+"name": "Yapay zekâ araçları (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(ChatGPT%20OR%20Gemini%20OR%20Claude%20OR%20Grok%20OR%20Copilot)%20(\"yeni%20%C3%B6zellik\"%20OR%20%C3%BCcretsiz%20OR%20T%C3%BCrk%C3%A7e%20OR%20kullan%C4%B1c%C4%B1lar)%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+},
+{
+"id": "gn-tr-telefonfiyat",
+"name": "Telefon fiyat (GN)",
+"lang": "tr",
+"cat": "tech",
+"plat": "gnews",
+"url": "https://news.google.com/rss/search?q=(telefon%20OR%20iPhone%20OR%20Samsung%20OR%20Xiaomi)%20(fiyat%20OR%20zam%20OR%20indirim)%20T%C3%BCrkiye%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
 }
 ]
