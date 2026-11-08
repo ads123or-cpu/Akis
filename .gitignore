@@ -1,0 +1,4 @@
+# akis2.py ciktisi: her tur yeniden uretilir, yayin paketine girer, git gecmisine girmez
+site/data/
+.DS_Store
+/tools/kaynak_test_sonuc*.json.tmp
