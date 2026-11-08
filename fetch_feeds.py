@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """sources.json içindeki RSS/Atom kaynaklarını çekip site/feeds.json dosyasına yazar."""
-import json, re, html, gzip, random, concurrent.futures as cf, urllib.request, urllib.error, urllib.parse, xml.etree.ElementTree as ET
+import json, re, html, gzip, random, time, concurrent.futures as cf, urllib.request, urllib.error, urllib.parse, xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone, timedelta
 
@@ -87,7 +87,7 @@ def parse_re(data):
     return out
 
 
-import threading, time, unicodedata
+import threading, unicodedata
 _rl = threading.Lock()
 def host_wait(url):
     if 'reddit.com' in url:
@@ -165,11 +165,23 @@ def parse(data):
     items.sort(key=lambda x: x.get('d') or '', reverse=True)
     return items[:MAX_ITEMS]
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/rss+xml,application/atom+xml,application/xml,text/xml,*/*', 'Accept-Encoding': 'gzip'})
-    r = urllib.request.urlopen(req, timeout=25); data = r.read()
+class DegismedI(Exception):
+    """Sunucu 304 dondurdu: kaynak son istekten beri degismedi."""
+
+def fetch(url, etag=None, lm=None):
+    """(veri, ETag, Last-Modified). Dogrulayici verildiyse ve sunucu 304 dondururse DegismedI firlatir."""
+    basl = {'User-Agent': UA, 'Accept': 'application/rss+xml,application/atom+xml,application/xml,text/xml,*/*', 'Accept-Encoding': 'gzip'}
+    if etag: basl['If-None-Match'] = etag
+    if lm: basl['If-Modified-Since'] = lm
+    req = urllib.request.Request(url, headers=basl)
+    try:
+        r = urllib.request.urlopen(req, timeout=25)
+    except urllib.error.HTTPError as e:
+        if e.code == 304: raise DegismedI()
+        raise
+    data = r.read()
     if r.headers.get('Content-Encoding') == 'gzip' or data[:2] == b'\x1f\x8b': data = gzip.decompress(data)
-    return data
+    return data, r.headers.get('ETag'), r.headers.get('Last-Modified')
 
 
 def fetch_x(handle):
@@ -193,21 +205,35 @@ def fetch_x(handle):
     out.sort(key=lambda x: x.get('d') or '', reverse=True)
     return out[:MAX_ITEMS]
 
+ESKI_DURUM = {}   # main() doldurur: kaynak -> onceki durum (ETag, Last-Modified)
+
 def go(s):
-    """(kaynak, haberler, hata, http_kodu, retry_after_sn). 429'da ayni turda tekrar denenmez."""
+    """(kaynak, haberler, hata, http_kodu, retry_after_sn, ek). 429'da ayni turda tekrar denenmez.
+    ek: {'ms': yanit suresi, 'etag':..., 'lm':..., 'degismedi': bool}"""
     err = 'bos'; kod = None; bekle = None
+    ek = {}
+    od = ESKI_DURUM.get(s['id']) or {}
     for attempt in range(2):
         try:
             host_wait(s['url'])
-            items = fetch_x(s['url'][4:]) if s['url'].startswith('x://') else parse(fetch(s['url']))
-            if items: return s, items, None, 200, None
+            t0 = time.time()
+            if s['url'].startswith('x://'):
+                items = fetch_x(s['url'][4:]); et = lm = None
+            else:
+                data, et, lm = fetch(s['url'], od.get('etag') if attempt == 0 else None, od.get('lm') if attempt == 0 else None)
+                items = parse(data)
+            ek = {'ms': int((time.time() - t0) * 1000), 'etag': et, 'lm': lm}
+            if items: return s, items, None, 200, None, ek
+        except DegismedI:
+            ek = {'ms': int((time.time() - t0) * 1000), 'degismedi': True}
+            return s, [], None, 304, None, ek
         except urllib.error.HTTPError as e:
             err = str(e)[:80]; kod = e.code
             bekle = retry_after(e.headers.get('Retry-After') if e.headers else None)
             if e.code == 429: break   # hemen tekrar denemek yalnizca sinirin uzamasina yol acar
         except Exception as e:
             err = str(e)[:80]
-    return s, [], err, kod, bekle
+    return s, [], err, kod, bekle, ek
 
 
 def retry_after(deger):
@@ -234,15 +260,31 @@ def bekleme_suresi(ardisik, retry_sn):
     sn = min(TABAN_DK * 60 * (2 ** max(0, ardisik - 1)), TAVAN_SN)
     return int(sn * random.uniform(1.0, 1.2))
 
-def durum_guncelle(durum, sid, basarili, kod, hata, retry_sn, simdi):
+def durum_guncelle(durum, sid, basarili, kod, hata, retry_sn, simdi, ek=None, n=None, son_haber=None):
+    """Kaynak sagligi: son kontrol, son basari, son haber, yanit suresi (hareketli ortalama), ETag."""
+    ek = ek or {}
     d = durum.setdefault(sid, {})
+    d['son_kontrol'] = simdi.isoformat()
+    if ek.get('ms') is not None:
+        d['ms'] = int(ek['ms'] if not d.get('ms') else d['ms'] * .7 + ek['ms'] * .3)
     if basarili:
-        durum[sid] = {'ardisik_basarisiz': 0, 'son_basari': simdi.isoformat(), 'son_kod': 200}
+        yeni = {'ardisik_basarisiz': 0, 'son_basari': simdi.isoformat(), 'son_kod': kod or 200,
+                'son_kontrol': d['son_kontrol'], 'ms': d.get('ms')}
+        if not ek.get('degismedi'):
+            if ek.get('etag'): yeni['etag'] = ek['etag']
+            if ek.get('lm'): yeni['lm'] = ek['lm']
+        else:
+            for a in ('etag', 'lm'):
+                if d.get(a): yeni[a] = d[a]
+        if n is not None: yeni['n'] = n
+        if son_haber: yeni['son_haber'] = son_haber
+        elif d.get('son_haber'): yeni['son_haber'] = d['son_haber']
+        durum[sid] = yeni
         return
-    n = d.get('ardisik_basarisiz', 0) + 1
-    d.update(ardisik_basarisiz=n, son_hata=simdi.isoformat(), son_kod=kod, hata=hata)
-    if kod == 429 or n >= 3:
-        d['bekle_kadar'] = (simdi + timedelta(seconds=bekleme_suresi(n, retry_sn))).isoformat()
+    n_ = d.get('ardisik_basarisiz', 0) + 1
+    d.update(ardisik_basarisiz=n_, son_hata=simdi.isoformat(), son_kod=kod, hata=hata)
+    if kod == 429 or n_ >= 3:
+        d['bekle_kadar'] = (simdi + timedelta(seconds=bekleme_suresi(n_, retry_sn))).isoformat()
     else:
         d.pop('bekle_kadar', None)
 
@@ -309,23 +351,43 @@ def gorselleri_doldur(feeds):
     json.dump(dict(list(on.items())[-4000:]), open(GORSEL_DOSYA, 'w'), ensure_ascii=False, separators=(',', ':'))
     print('og:image denendi', len(bos[:GORSEL_TUR]))
 
+# Kaynak olarak yasak yayincilar (kullanici karari): haber karti ve kaynak listesinde gorunmez.
+# Google News gibi toplayicilarda yayinci adi "p" alanindadir ya da baslik sonundaki " - Yayinci" ekindedir.
+YASAK_YAYINCI = re.compile(r'shift\s*delete|shiftdelete', re.I)
+def yasak_mi(it):
+    return bool(YASAK_YAYINCI.search((it.get('p') or '') + ' ' + (it.get('l') or '') + ' ' + (it.get('t') or '')[-40:]))
+
 def main():
-    sources = json.load(open('sources.json'))
+    sources = [s for s in json.load(open('sources.json')) if not YASAK_YAYINCI.search(s['id'] + s['name'] + s['url'])]
     try: old = json.load(open('site/feeds.json')).get('feeds', {})
     except Exception: old = {}
     try: durum = json.load(open(DURUM_DOSYASI))
     except Exception: durum = {}
+    ESKI_DURUM.update(durum)
     simdi = datetime.now(timezone.utc)
     now = simdi.isoformat(); feeds = {}; failed = []
     # Beklemedeki kaynaklar bu tur cekilmez; eski verisi asagidaki 12 saat kuralina tabidir.
-    beklemede = {s['id'] for s in sources if (durum.get(s['id']) or {}).get('bekle_kadar', '') > now}
-    cekilecek = [s for s in sources if s['id'] not in beklemede]
-    sonuclar = [(s, [], 'beklemede', None, None) for s in sources if s['id'] in beklemede]
+    # aktif=false kaynaklar (devre disi) hic cekilmez ve hata sayilmaz.
+    pasif = {s['id'] for s in sources if s.get('aktif') is False}
+    beklemede = {s['id'] for s in sources if (durum.get(s['id']) or {}).get('bekle_kadar', '') > now and s['id'] not in pasif}
+    cekilecek = [s for s in sources if s['id'] not in beklemede and s['id'] not in pasif]
+    sonuclar = [(s, [], 'beklemede', None, None, {}) for s in sources if s['id'] in beklemede]
     with cf.ThreadPoolExecutor(24) as ex:
         sonuclar += list(ex.map(go, cekilecek))
-    for s, items, err, kod, retry_sn in sonuclar:
-            if s['id'] not in beklemede:
-                durum_guncelle(durum, s['id'], bool(items), kod, err, retry_sn, simdi)
+    for s, items, err, kod, retry_sn, ek in sonuclar:
+            if ek.get('degismedi') and s['id'] in old:
+                # 304: kaynak degismedi. Eski haberler 30 gun kuralina tabi, "bayat" sayilmaz.
+                lim = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
+                items = [i for i in old[s['id']].get('items', []) if not i.get('d') or i['d'] >= lim]
+                if items:
+                    durum_guncelle(durum, s['id'], True, 304, None, None, simdi, ek, len(items), max((i.get('d') or '' for i in items), default=''))
+                    feeds[s['id']] = {**{a: b for a, b in old[s['id']].items() if a != 'bayat'}, 'items': items}
+                    continue
+                ek = {}; err = 'eski'; kod = 304
+            elif ek.get('degismedi'):
+                # Eski kopya yok ama sunucu 304 dedi (dogrulayici kaldi): bu turu atla, sonraki tur dogrulayicisiz denenir
+                durum.get(s['id'], {}).pop('etag', None); durum.get(s['id'], {}).pop('lm', None)
+                failed.append((s['id'], 'beklemede')); continue
             if items:
                 lim = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
                 items = [i for i in items if not i.get('d') or i['d'] >= lim]
@@ -333,16 +395,21 @@ def main():
                     c = classify(i, s)
                     if c != s['cat']: i['c'] = c
                 if s['cat'] == 'auto': items = [i for i in items if not ACCIDENT.search(i.get('t', ''))]
-                items = [i for i in items if not spam_mi(i) and not cop_mu(i)]
-                if not items: failed.append((s['id'], 'eski')); continue
+                items = [i for i in items if not spam_mi(i) and not cop_mu(i) and not yasak_mi(i)]
+            if s['id'] not in beklemede and s['id'] not in pasif:
+                durum_guncelle(durum, s['id'], bool(items), kod, err, retry_sn, simdi, ek, len(items) if items else 0,
+                               max((i.get('d') or '' for i in items), default='') if items else None)
+            if items:
                 feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], plat=s.get('plat') or 'web', url=s['url'], items=items, updated=now)
+            elif s['id'] in pasif:
+                continue
             else:
                 failed.append((s['id'], err))
                 # Bayat kopya 12 saatten eskiyse dusurulur: kaynak yanit vermediginde
                 # eski haber 'yeni' gibi akisa dolmasin.
                 lim12 = (datetime.now(timezone.utc) - timedelta(hours=12)).isoformat()
                 if s['id'] in old:
-                    taze = [i for i in old[s['id']].get('items', []) if i.get('d') and i['d'] >= lim12]
+                    taze = [i for i in old[s['id']].get('items', []) if i.get('d') and i['d'] >= lim12 and not yasak_mi(i)]
                     if taze: feeds[s['id']] = {**old[s['id']], 'items': taze, 'bayat': True}
     import os; os.makedirs('site', exist_ok=True)
     gorselleri_doldur(feeds)
