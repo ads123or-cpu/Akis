@@ -7,7 +7,8 @@ on:
     - cron: "*/30 * * * *"
   workflow_dispatch:          # Actions sekmesinden elle de çalıştırılabilir
   push:
-    paths: [sources.json, fetch_feeds.py, masa.py, index.tpl.html, build.py]
+    branches: [main]            # gelistirme dallari yayin zincirini baslatmasin
+    paths: [sources.json, fetch_feeds.py, masa.py, akis2.py, index.tpl.html, build.py, tests/**, .github/workflows/refresh.yml]
 permissions:
   contents: write
   actions: write
@@ -19,9 +20,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
+      # Testler agsiz ve ~5 sn: kirik kod yayina girmez. Veri zinciri yine de kopmaz: 'tekrar' isi basarisizlikta da calisir.
+      - name: Testler
+        run: python -m unittest discover -s tests -t .
       - run: python fetch_feeds.py
-      - run: python masa.py
-      - run: python build.py
+      - run: python masa.py          # eski cikti (masa.json): TechTurco paneli okur
+      - run: python akis2.py         # yeni arayuzun parcali verisi (site/data/*.json)
+      - run: python build.py         # site/index.html (+ panelin okudugu id="snap" blogu)
+      - name: Cikti dogrulama (bozuk uretim commitlenmez; onceki site yayinda kalir)
+        run: python -m unittest tests.test_sozlesme tests.test_cikti -v
       - name: Değişiklik varsa kaydet
         run: |
           git config user.name "akis-bot"
