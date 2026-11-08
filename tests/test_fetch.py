@@ -21,7 +21,7 @@ class H(http.server.BaseHTTPRequestHandler):
         elif self.path == '/gz':
             b = gzip.compress(rss()); self.send_response(200); self.send_header('Content-Encoding', 'gzip'); self.end_headers(); self.wfile.write(b)
         elif self.path == '/bozuk':
-            self.send_response(200); self.end_headers(); self.wfile.write(b'<rss><channel><item><title>Kirik</title><link>http://x/1</link></rss>')
+            self.send_response(200); self.end_headers(); self.wfile.write(b'<rss><channel><item><title>Kirik</title><link>http://x/1</link></item><item><title>Yarim</title></rss>')
         elif self.path == '/429':
             self.send_response(429); self.send_header('Retry-After', '120'); self.end_headers()
         elif self.path == '/403':
