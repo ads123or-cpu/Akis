@@ -231,6 +231,15 @@ def kumele2(ogeler):
         k['ogeler'].append(o); k['tok'] |= o['tok']; k['son'] = max(k['son'], o['z'])
     return kumeler
 
+def kumele_tam(ogeler):
+    """kumele2 + ikinci geçiş: aynı olayı farklı başlıkla anlatan kümeler ortak SEYREK özel adlarla birleşir
+    (masa.birlestir: zincirleme yok; üç ortak seyrek ad ya da kelime benzerliği ≥.35 ve ortak seyrek ad)."""
+    ks = kumele2(ogeler)
+    for o in ogeler: o['var_tam'] = o['var']; o['var'] = {v for v in o['var'] if not v.startswith('@')}   # sözlük jetonları (ülke/lider) ikinci geçişte sayılmaz
+    try: return M.birlestir(ks)
+    finally:
+        for o in ogeler: o['var'] = o.pop('var_tam')
+
 def bagimsiz_say(og):
     """Bağımsız doğrulama sayısı: kurum başına 1; ajans kopyaları ve aynı bültenden türeyenler ilk yayıncıyla bir sayılır.
     Dönüş: (sayı, {öğe_id: kopya_oldugu_kurum})"""
@@ -472,13 +481,17 @@ def main():
             p = (it.get('p') or '').strip()
             if not p or p.startswith('http'): p = f['name']
             org = kurum(p, sid)
+            # aynı kurumun aynı başlığı farklı adreslerle (bölüm/sürüm akışları) tek haber sayılır
+            tek = (org, re.sub(r'\W+', '', t.lower())[:80])
+            if tek in gor: continue
+            gor.add(tek)
             cat = it.get('c') or f['cat']
             metin = t + ' ' + (it.get('s') or '')[:120]
             o = dict(id=hashlib.md5(l.encode()).hexdigest()[:10], t=t, l=l, z=z, s=(it.get('s') or '')[:220], i=it.get('i'), cat=cat, dil=f['lang'], kaynak=p, sid=sid, org=org,
                      plat=f.get('plat', 'web'), n=it.get('n'), tip=s.get('tip', 'ana akim'), nit=set(s.get('nitelik') or []), cal=s.get('calisma') or 'gundem', ulke=s.get('ulke', ''))
             o['tok'] = tok2(t); o['ent'] = canon_bul(t); o['var'] = M.varlik(t) | {'@' + e for e in o['ent']}
             ogeler.append(o)
-    kumeler = kumele2(ogeler)
+    kumeler = kumele_tam(ogeler)
     # Büyük kümeleri ve olay bütünlüğünü korumak için: çok büyük kümelerde (>40 haber) yalnız en yakın 40 haber tutulur.
     cikti = []
     for k in kumeler:

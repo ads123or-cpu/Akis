@@ -12,7 +12,7 @@ def oge(t, dil='tr', org='x', dk=10, s='', nit=(), plat='web', cal='gundem'):
              plat=plat, n=None, tip='ana akim', nit=set(nit), cal=cal, ulke='')
     o['tok'] = A.tok2(t); o['ent'] = A.canon_bul(t); o['var'] = M.varlik(t) | {'@' + e for e in o['ent']}
     return o
-def kume_say(ogeler): return sorted(len(k['ogeler']) for k in A.kumele2(ogeler))
+def kume_say(ogeler): return sorted(len(k['ogeler']) for k in A.kumele_tam(ogeler))
 
 class Kumeleme(unittest.TestCase):
     def test_ayni_olay_farkli_basliklar(self):
@@ -35,6 +35,11 @@ class Kumeleme(unittest.TestCase):
         a = [oge("İsrail Gazze'de iki Filistinliyi öldürdü", 'tr', 'a'), oge('Israel deports journalist among 14 on Palestinian solidarity flotilla to Gaza', 'en', 'b'),
              oge('Israel to release body of Palestinian teen who died in prison', 'en', 'c')]
         self.assertEqual(kume_say(a), [1, 1, 1])
+
+    def test_ayni_olay_farkli_anlatim_ikinci_gecis(self):
+        a = [oge("Trump offers UFC boss White House press secretary role: 'Dana, please take the job!'", 'en', 'a'), oge("Will Dana White Take Trump's Job Offer? UFC Chief Keeps Reporters Guessing", 'en', 'b', 20),
+             oge("Trump asks UFC boss Dana White to be White House press secretary", 'en', 'c', 30)]
+        self.assertEqual(kume_say(a), [3])
 
     def test_etiketi_yanlis_dil_ayni_baslik(self):
         k = A.kumele2([oge('Israël : Eisenkot, opposant à Netanyahu, au défi de former une coalition', 'fr', 'a'), oge('Israël : Eisenkot, opposant à Netanyahu, au défi de former une coalition', 'en', 'b', 12)])

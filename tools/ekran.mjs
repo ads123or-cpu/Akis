@@ -19,7 +19,7 @@ const MOBIL = { width: 390, height: 844, deviceScaleFactor: 2, mobile: true };
 const MASA = { width: 1440, height: 1000, deviceScaleFactor: 1, mobile: false };
 async function git(c, url, ol, bekleMs = 4500) {
   await c.cmd('Emulation.setDeviceMetricsOverride', ol); await c.cmd('Page.enable'); await c.cmd('Network.enable'); await c.cmd('Network.setCacheDisabled', { cacheDisabled: true });
-  c.olay.length = 0; await c.cmd('Page.navigate', { url }); await bekle(bekleMs)
+  await c.cmd('Page.navigate', { url: 'about:blank' }); await bekle(300); c.olay.length = 0; await c.cmd('Page.navigate', { url }); await bekle(bekleMs)
 }
 const calis = async (c, js) => (await c.cmd('Runtime.evaluate', { expression: js, awaitPromise: true, returnByValue: true })).result?.result?.value;
 const mod = process.argv[2];
