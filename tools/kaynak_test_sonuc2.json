@@ -1,0 +1,790 @@
+[
+ {
+  "id": "gn-resmi-resmigazete",
+  "url": "https://news.google.com/rss/search?q=site%3Aresmigazete.gov.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 691,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T11:42:09+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Türkiye Yeşil Taksonomisi Yönetmeliği - Resmi Gazete",
+   "7578 sayılı Sosyal Hizmetler Kanunu ve Bazı Kanunlarda Değişiklik Yapılmasına Da"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-tbmm",
+  "url": "https://news.google.com/rss/search?q=site%3Atbmm.gov.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 650,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T10:09:15+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "TBMM'DE BU HAFTA",
+   "TBMM BAŞKANI KURTULMUŞ'TAN VAN'DAKİ TRAFİK KAZASINDA HAYATINI KAYBEDENLER İÇİN T"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-ysk",
+  "url": "https://news.google.com/rss/search?q=%22Y%C3%BCksek%20Se%C3%A7im%20Kurulu%22%20OR%20YSK&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 916,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T12:04:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "YSK AÇIKLADI: AD ÇEKME 9 KASIM'DA SAAT 13.30'DA!",
+   "YSK’de ad seçme işlem 9 Kasım’da"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-tuik",
+  "url": "https://news.google.com/rss/search?q=site%3Atuik.gov.tr%20OR%20T%C3%9C%C4%B0K%20b%C3%BClten&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 728,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T03:56:06+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "İnşaat Maliyet Endeksi - Ağustos 2026 - Veri Portalı - Veri Portalı",
+   "Tarım Ürünleri Üretici Fiyat Endeksi - Ağustos 2026 - Veri Portalı - Veri Portal"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-tcmb",
+  "url": "https://news.google.com/rss/search?q=site%3Atcmb.gov.tr%20OR%20%22Merkez%20Bankas%C4%B1%22%20faiz%20karar%C4%B1&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 568,
+  "kod": 200,
+  "n": 16,
+  "n_tarihli": 16,
+  "son_haber": "2026-10-22T07:00:00+00:00",
+  "son_gun": 17,
+  "ortak": 0.0,
+  "ornek": [
+   "Faiz Oranlarına İlişkin Basın Duyurusu (2026-45)",
+   "Faiz Oranlarına İlişkin Basın Duyurusu (2026-38)"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-btk",
+  "url": "https://news.google.com/rss/search?q=BTK%20OR%20%22Bilgi%20Teknolojileri%20ve%20%C4%B0leti%C5%9Fim%20Kurumu%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 989,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T12:31:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.6,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (60%)"
+ },
+ {
+  "id": "gn-resmi-kvkk",
+  "url": "https://news.google.com/rss/search?q=KVKK%20OR%20%22Ki%C5%9Fisel%20Verileri%20Koruma%20Kurulu%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 650,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-05T06:54:54+00:00",
+  "son_gun": 3,
+  "ortak": 0.0,
+  "ornek": [
+   "Hepsiburada veri ihlali: 9.882 kişinin bilgisi etkilendi",
+   "Özel sektörde çalışan milyonları ilgilendiriyor: Patronlara KVKK sınırı!"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-afad",
+  "url": "https://news.google.com/rss/search?q=site%3Aafad.gov.tr%20OR%20AFAD%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 688,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2025-10-02T07:00:00+00:00",
+  "son_gun": 402,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "gn-resmi-kandilli",
+  "url": "https://news.google.com/rss/search?q=Kandilli%20Rasathanesi%20deprem&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 860,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:47:44+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "Bugün deprem mi oldu? İşte son dakika depremleri",
+   "SON DAKİKA DEPREM 8 KASIM! Bugün deprem mi oldu, nerede, kaç şiddetinde? 8 Kasım"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-dismer",
+  "url": "https://news.google.com/rss/search?q=%22D%C4%B1%C5%9Fi%C5%9Fleri%20Bakanl%C4%B1%C4%9F%C4%B1%22%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 762,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T12:09:38+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Dışişleri Bakanlığı Polonya’daki terör saldırısına taziye mesajı yayımladı",
+   "Dışişleri'nden Polonya Krakow saldırısına taziye mesajı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-meb",
+  "url": "https://news.google.com/rss/search?q=%22Milli%20E%C4%9Fitim%20Bakanl%C4%B1%C4%9F%C4%B1%22%20MEB%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 841,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T22:33:25+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "MEB'den Öğrenciler ve Veliler İçin Atarlı Yeşil Vatan Projesi",
+   "MEB Kasım Ayındaki Ortak Yazılı Sınavları İçin Denetimleri Artırıyor"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-resmi-saglik",
+  "url": "https://news.google.com/rss/search?q=%22Sa%C4%9Fl%C4%B1k%20Bakanl%C4%B1%C4%9F%C4%B1%22%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 832,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:01:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Sağlık Bakanlığı hemşire alımı 2027 kontenjanı kaç kişi? 31 bin 54 kişilik kadro",
+   "Sağlık Bakanlığı 2026 Yılı 3. Dönem Atama Kurası İsim Listesi Sorgulama"
+  ],
+  "ok": true
+ },
+ {
+  "id": "mfa-en",
+  "url": "https://www.mfa.gov.tr/en.rss.mfa?45b45ccf-8814-4029-9224-5685e8ca3542",
+  "tarih": "2026-11-08",
+  "ms": 348,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2016-02-12T17:36:19+00:00",
+  "son_gun": 3921,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "mfa-en2",
+  "url": "https://www.mfa.gov.tr/en.rss.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4",
+  "tarih": "2026-11-08",
+  "ms": 635,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T08:05:38+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "No: 215, 8 November 2026, Regarding the Terrorist Attack in Poland",
+   "No: 214, 6 November 2026, Regarding the Attempt by a French-Flagged Vessel to Co"
+  ],
+  "ok": true
+ },
+ {
+  "id": "usgs-ay",
+  "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.atom",
+  "tarih": "2026-11-08",
+  "ms": 348,
+  "kod": 200,
+  "n": 14,
+  "n_tarihli": 14,
+  "son_haber": "2026-11-07T13:08:38.951000+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "M 7.7 - 10 km WSW of Pitaloza Arriba, Panama",
+   "M 5.7 - 47 km WNW of Khuzdar, Pakistan"
+  ],
+  "ok": true
+ },
+ {
+  "id": "usgs-45",
+  "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.atom",
+  "tarih": "2026-11-08",
+  "ms": 412,
+  "kod": 200,
+  "n": 11,
+  "n_tarihli": 11,
+  "son_haber": "2026-11-08T14:54:07.131000+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "M 4.7 - 46 km NW of Huara, Chile",
+   "M 4.7 - Southwest Indian Ridge"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trtworld2",
+  "url": "https://www.trtworld.com/feed/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 455,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:40:58+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Ankara and Baghdad reaffirm commitment to ending PKK presence in Sinjar",
+   "Four killed, dozens injured in train derailment in Egypt's Giza province"
+  ],
+  "ok": true
+ },
+ {
+  "id": "whitehouse2",
+  "url": "https://www.whitehouse.gov/news/feed/",
+  "tarih": "2026-11-08",
+  "ms": 744,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T19:31:59+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "First Lady Melania Trump and LSU Establish $7.2 Million Fostering the Future End",
+   "President Trump Names Stephen Miller as 33rd White House Chief of Staff"
+  ],
+  "ok": true
+ },
+ {
+  "id": "un-tr2",
+  "url": "https://news.un.org/feed/subscribe/tr/news/all/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 456,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "un-ar",
+  "url": "https://news.un.org/feed/subscribe/ar/news/all/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 392,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T12:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "أمطار غزيرة تغرق خيام النازحين في غزة، ومياه الصرف الصحي تزيد معاناتهم",
+   "الأطفال المهاجرون – أحلام منسية على طرق محفوفة بالمخاطر"
+  ],
+  "ok": true
+ },
+ {
+  "id": "un-zh",
+  "url": "https://news.un.org/feed/subscribe/zh/news/all/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 327,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T12:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "【子午播报】2026年11月7日",
+   "【世界进行时】2026年11月6日"
+  ],
+  "ok": true
+ },
+ {
+  "id": "un-fr",
+  "url": "https://news.un.org/feed/subscribe/fr/news/all/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 343,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T12:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "L’IA pense de plus en plus à notre place. Que devient notre cerveau ?",
+   "Afghanistan : les conséquences désastreuses du désengagement international"
+  ],
+  "ok": true
+ },
+ {
+  "id": "nato2",
+  "url": "https://www.nato.int/cps/en/natohq/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 491,
+  "kesif": []
+ },
+ {
+  "id": "esa2",
+  "url": "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 738,
+  "kesif": []
+ },
+ {
+  "id": "eurekalert2",
+  "url": "https://www.eurekalert.org/rss/technology_engineering.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1005,
+  "kesif": []
+ },
+ {
+  "id": "eurekalert3",
+  "url": "https://www.eurekalert.org/rss/medicine_health.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 982,
+  "kesif": []
+ },
+ {
+  "id": "ntvspor2",
+  "url": "https://www.ntvspor.net/rss/anasayfa",
+  "tarih": "2026-11-08",
+  "ms": 333,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:05:32+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Alanyaspor - Trabzonspor (Canlı anlatım)",
+   "Emre Belözoğlu \"İnanıyorum\" diyerek 5-0'lık galibiyeti ve geleceklerini yorumlad"
+  ],
+  "ok": true
+ },
+ {
+  "id": "hdn2",
+  "url": "https://www.hurriyetdailynews.com/rss/turkey",
+  "tarih": "2026-11-08",
+  "ms": 405,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T13:24:31+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Türkiye, Greece at odds over maritime notices",
+   "More suspects detained in fund investigation"
+  ],
+  "ok": true
+ },
+ {
+  "id": "tff-gn",
+  "url": "https://news.google.com/rss/search?q=TFF%20%22T%C3%BCrkiye%20Futbol%20Federasyonu%22%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 708,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T11:49:13+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Ay-yıldızlılarda Sergen Yalçın dönemi: TFF yönetiminden iddialı Belçika ve Frans",
+   "TFF’den Fenerbahçeli yıldız oyuncu hakkında açıklama: Cezası onandı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "tbf-gn",
+  "url": "https://news.google.com/rss/search?q=TBF%20%22T%C3%BCrkiye%20Basketbol%20Federasyonu%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 550,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T17:42:48+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Cedi Osman menisküs ameliyatı oldu: TBF’den milli basketbolcu için geçmiş olsun ",
+   "Cedi Osman ameliyat oldu! TBF açıkladı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "tvf-gn",
+  "url": "https://news.google.com/rss/search?q=%22T%C3%BCrkiye%20Voleybol%20Federasyonu%22%20OR%20TVF%20voleybol&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 911,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:51:18+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "TVF Spor Lisesi, CEV Plaj Voleybolu Kulüpler Avrupa Kupası Final Etabını Dördünc",
+   "Bugün maç var mı? 8 Kasım 2026 maç programı ve yayın kanalları - İLKHABER-Gazete"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-f1",
+  "url": "https://news.google.com/rss/search?q=Formula%201%20F1&hl=en&gl=US&ceid=US:en",
+  "tarih": "2026-11-08",
+  "ms": 1149,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "LIVE COVERAGE: All the action from the Sao Paulo GP",
+   "F1 Sao Paulo GP LIVE: Race updates, results, stream and highlights from 20th rou"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-nba",
+  "url": "https://news.google.com/rss/search?q=NBA&hl=en&gl=US&ceid=US:en",
+  "tarih": "2026-11-08",
+  "ms": 1329,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:02:59+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Dunk of the Night: Julius Randle - November 7",
+   "NBA Nightly Recap | November 7, 2026"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-futbol",
+  "url": "https://news.google.com/rss/search?q=S%C3%BCper%20Lig%20OR%20Galatasaray%20OR%20Fenerbah%C3%A7e%20OR%20Be%C5%9Fikta%C5%9F%20OR%20Trabzonspor&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 918,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:02:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "Alanyaspor - Trabzonspor maçında gol: Wagner Pina perdeyi açtı",
+   "Fenerbahçe'de İrfan Can Kahveci: İnşallah şampiyon oluruz!"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-basket",
+  "url": "https://news.google.com/rss/search?q=basketbol%20OR%20voleybol%20OR%20%22Filenin%20Sultanlar%C4%B1%22%20OR%20%22A%20Milli%20Basketbol%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 828,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:53:49+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Sultanlar Ligi'nde VakıfBank, Nilüfer Belediyespor'u set vermeden geçti",
+   "Anadolu Efes evinde TOFAŞ'a 93-87 mağlup oldu!"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-espor",
+  "url": "https://news.google.com/rss/search?q=espor%20OR%20e-spor%20OR%20%22League%20of%20Legends%22%20OR%20Valorant&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 550,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T12:28:11+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Cloud9 2027 Valorant kadrosunu alym, Derrek ve nightz ile kurdu",
+   "Chovy, League of Legends Worlds 2026 Finalinde"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-transfer",
+  "url": "https://news.google.com/rss/search?q=transfer%20resmi%20OR%20%22transfer%20haberleri%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 688,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T06:04:25+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "TRANSFER HABERİ: Galatasaray’da şok ayrılık iddiası! Resmi görüşme yapıldı ve...",
+   "Beşiktaş'tan Massire Sylla hamlesi! Vincenzo Italiano transferi onayladı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-motor",
+  "url": "https://news.google.com/rss/search?q=Formula%201%20OR%20MotoGP%20OR%20%22Kenan%20Sofuo%C4%9Flu%22%20OR%20WRC&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 744,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:42:33+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Russell’dan Brezilya uyarısı: Yarışta böyle sürülseydi korkunç bir kaza görme ih",
+   "Kravitz: Racing Bulls artık Lawson’ı gözden çıkaramaz"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-robotik",
+  "url": "https://news.google.com/rss/search?q=robot%20OR%20%22ak%C4%B1ll%C4%B1%20saat%22%20OR%20%22giyilebilir%20teknoloji%22%20OR%20%22insans%C4%B1%20robot%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 789,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:10:40+00:00",
+  "son_gun": 0,
+  "ortak": 0.2,
+  "ornek": [
+   "Serve Robotics robot verisini şirketlere açtı",
+   "Physicl robot eğitimi için 10 milyon dolar aldı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-cip",
+  "url": "https://news.google.com/rss/search?q=NVIDIA%20OR%20i%C5%9Flemci%20OR%20yar%C4%B1%20iletken%20OR%20TSMC&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 579,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T08:49:55+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Nghe An ve küresel yarı iletken tedarik zincirine katılma fırsatı.",
+   "NVIDIA'nın Özel HBM Çözümü Samsung ve TSMC'yi İş Birliğine Götürüyor"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-eev",
+  "url": "https://news.google.com/rss/search?q=elektrikli%20ara%C3%A7%20OR%20Togg%20OR%20Tesla%20OR%20%C5%9Farj%20istasyonu&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 554,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:30:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.2,
+  "ornek": [
+   "ASPİLSAN Enerji, Elektrikli Araçlar İçin DC Hızlı Şarj Cihazı Üretti",
+   "Otoyollarda şarj istasyonu bulunmuyor:"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-israil",
+  "url": "https://news.google.com/rss/search?q=%C4%B0srail%20Filistin%20Gazze%20ate%C5%9Fkes&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 561,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T14:23:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Filistin Dışişleri Bakanı Şahin: \"Gazze'de sağlanan ateşkes İsrail'in soykırımın",
+   "Filistin’den ateşkes ihlallerine tepki: Uluslararası topluma çağrı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-abd",
+  "url": "https://news.google.com/rss/search?q=ABD%20Trump%20Kongre%20Beyaz%20Saray&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 851,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T10:24:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Beyaz Saray’da çatlak derinleşti: Trump yardımcısını kovabilir mi?",
+   "Suudi Arabistan’da 3 kentte tehlike alarmı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-avrupa",
+  "url": "https://news.google.com/rss/search?q=Avrupa%20Birli%C4%9Fi%20OR%20Almanya%20OR%20Fransa%20OR%20Macron%20OR%20Br%C3%BCksel&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 653,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:17:43+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "Abu Dabi'deki kritik zirve için Fransa'dan net mesaj: Masada biz de varız",
+   "Kanarya Adaları'na göç baskısı arttı: İspanya hükümeti acil toplanıyor"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-cinrus",
+  "url": "https://news.google.com/rss/search?q=%C3%87in%20OR%20Rusya%20OR%20Putin%20OR%20%C5%9Ei%20Cinping&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 577,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T19:21:49+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Dengeleri değiştirecek zirve: ABD-ÇİN-RUSYA masaya oturacak mı?",
+   "Şi: Çin, Avrupa'nın sorunlarının sebebi değil, çözüm ortağı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-ortadogu",
+  "url": "https://news.google.com/rss/search?q=Suriye%20OR%20Irak%20OR%20%C4%B0ran%20OR%20L%C3%BCbnan%20OR%20Yemen&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 851,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:00:40+00:00",
+  "son_gun": 0,
+  "ortak": 0.12,
+  "ornek": [
+   "İran’da 5 protestocu bir haftadan kısa sürede idam edildi",
+   "Türkiye ve Irak’tan ortak güvenlik mutabakatı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-bm",
+  "url": "https://news.google.com/rss/search?q=BM%20G%C3%BCvenlik%20Konseyi%20OR%20diplomatik%20kriz%20OR%20yapt%C4%B1r%C4%B1m%20OR%20zirve&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 687,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-09-23T07:00:00+00:00",
+  "son_gun": 46,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "gn-tr-kultur",
+  "url": "https://news.google.com/rss/search?q=sinema%20OR%20tiyatro%20OR%20m%C3%BCzik%20OR%20sergi%20OR%20kitap&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 874,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:33:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "Rizeli Tiyatro Ve Dizi Oyuncusu Şafak Karali Hayatını Kaybetti",
+   "Tiyatro Dünyasının Acı Kaybı - Oyuncu Şafak Karali yaşamını yitirdi"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-yazilim",
+  "url": "https://news.google.com/rss/search?q=yaz%C4%B1l%C4%B1m%20g%C3%BCncellemesi%20OR%20uygulama%20OR%20%22siber%20sald%C4%B1r%C4%B1%22%20OR%20%22veri%20ihlali%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 549,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T13:04:17+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "iPhone Duo’da Yazılım Eksikliği Kapanıyor: Binlerce Uygulama Güncellendi",
+   "MECOOL ve diğer Android TV kutularındaki botnet tehlikesine yerli çözüm"
+  ],
+  "ok": true
+ }
+]

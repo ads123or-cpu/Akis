@@ -1,0 +1,481 @@
+{
+ "eklenen": [
+  "t24",
+  "teyit",
+  "turkishminute",
+  "aa-en",
+  "bianet-en",
+  "kisa-dalga",
+  "france24-fr",
+  "france24-ar",
+  "dw-de",
+  "dw-ar",
+  "dw-zh",
+  "bbc-zh",
+  "bbc-ar",
+  "aljazeera-ar",
+  "ft",
+  "wsj-world",
+  "wsj-tech",
+  "lemonde",
+  "spiegel",
+  "tagesschau",
+  "zeit",
+  "elpais",
+  "yonhap",
+  "tass",
+  "rt",
+  "haaretz",
+  "kyivindependent",
+  "euractiv",
+  "politico-eu",
+  "foreignpolicy",
+  "crisisgroup",
+  "un-news",
+  "eu-komisyon",
+  "us-state",
+  "us-defense",
+  "cisa-uyari",
+  "cisa-haber",
+  "who",
+  "fed",
+  "ecb",
+  "theinformation",
+  "google-ai",
+  "apple-ml",
+  "aws-ml",
+  "nvidia-dev",
+  "samsung-news",
+  "arstechnica-ai",
+  "9to5toys",
+  "schneier",
+  "sans-isc",
+  "talos",
+  "mandiant",
+  "rest-of-world",
+  "techcrunch-ai",
+  "sifted",
+  "espn-soccer",
+  "athletic",
+  "motorsport",
+  "autosport",
+  "marca",
+  "bbc-f1",
+  "bbc-tenis",
+  "bbc-basket",
+  "dexerto",
+  "science",
+  "biorxiv",
+  "spacenews",
+  "universetoday",
+  "medicalxpress",
+  "lancet",
+  "plos",
+  "bmwblog",
+  "evmagazin",
+  "billboard",
+  "ann",
+  "vgc",
+  "rockpapershotgun",
+  "pushsquare",
+  "indiewire",
+  "ign-tr",
+  "screenrant",
+  "guardian-culture",
+  "guardian-games",
+  "producthunt",
+  "gh-ollama",
+  "gh-llamacpp",
+  "gh-vscode",
+  "gh-linux",
+  "hn-best",
+  "devto",
+  "trends-de",
+  "trends-fr",
+  "trends-jp",
+  "trends-kr",
+  "gn-tr-ekonomi",
+  "gn-tr-dunya",
+  "gn-tr-spor",
+  "gn-tr-bilim",
+  "gn-de-welt",
+  "gn-fr-monde",
+  "gn-ar",
+  "gn-ja",
+  "gn-ko",
+  "gn-zh",
+  "gn-en-politics",
+  "gn-en-defense",
+  "gn-tr-siyaset",
+  "gn-tr-hukuk",
+  "gn-tr-egitim",
+  "gn-tr-savas",
+  "gn-tr-afet",
+  "gn-resmi-resmigazete",
+  "gn-resmi-tbmm",
+  "gn-resmi-ysk",
+  "gn-resmi-tuik",
+  "gn-resmi-tcmb",
+  "gn-resmi-kvkk",
+  "gn-resmi-kandilli",
+  "gn-resmi-dismer",
+  "gn-resmi-meb",
+  "gn-resmi-saglik",
+  "mfa-en2",
+  "usgs-ay",
+  "usgs-45",
+  "trtworld2",
+  "whitehouse2",
+  "un-ar",
+  "un-zh",
+  "un-fr",
+  "ntvspor2",
+  "hdn2",
+  "tff-gn",
+  "tbf-gn",
+  "tvf-gn",
+  "gn-f1",
+  "gn-nba",
+  "gn-tr-futbol",
+  "gn-tr-basket",
+  "gn-espor",
+  "gn-tr-transfer",
+  "gn-motor",
+  "gn-tr-robotik",
+  "gn-tr-cip",
+  "gn-tr-eev",
+  "gn-tr-israil",
+  "gn-tr-abd",
+  "gn-tr-avrupa",
+  "gn-tr-cinrus",
+  "gn-tr-ortadogu",
+  "gn-tr-kultur",
+  "gn-tr-yazilim"
+ ],
+ "atlanan": [
+  [
+   "anka",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "voa-tr",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "dogrulukpayi",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "duvar-en",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "hdn",
+   "3 kayittan az"
+  ],
+  [
+   "trtworld",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "t24-gundem",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "xinhua",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "chinadaily",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "nhk",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "nhk-world",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "timesofisrael",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "cfr",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "un-news-tr",
+   "3 kayittan az"
+  ],
+  [
+   "nato",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "eu-parlamento",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "us-whitehouse",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "us-congress",
+   "3 kayittan az"
+  ],
+  [
+   "nist-nvd",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "usom",
+   "3 kayittan az"
+  ],
+  [
+   "imf",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "worldbank",
+   "3 kayittan az"
+  ],
+  [
+   "tcmb",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "tuik",
+   "3 kayittan az"
+  ],
+  [
+   "resmigazete",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "tbmm",
+   "3 kayittan az"
+  ],
+  [
+   "ysk",
+   "<urlopen error [Errno 54] Connection reset by peer>"
+  ],
+  [
+   "btk",
+   "3 kayittan az"
+  ],
+  [
+   "kvkk",
+   "3 kayittan az"
+  ],
+  [
+   "afad",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "usgs-deprem",
+   "3 kayittan az"
+  ],
+  [
+   "emsc",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "dismer",
+   "3 kayittan az"
+  ],
+  [
+   "mfa-en",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "mem",
+   "HTTP Error 404: Sayfa BulunamadÄ±"
+  ],
+  [
+   "saglik-bak",
+   "3 kayittan az"
+  ],
+  [
+   "ticaret-bak",
+   "3 kayittan az"
+  ],
+  [
+   "sanayi-bak",
+   "3 kayittan az"
+  ],
+  [
+   "imore",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "ms-ai",
+   "HTTP Error 410: Gone"
+  ],
+  [
+   "meta-ai",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "anthropic-news",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "samsung-tr",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "venturebeat",
+   "HTTP Error 429: Too Many Requests"
+  ],
+  [
+   "uefa",
+   "The read operation timed out"
+  ],
+  [
+   "fifa",
+   "3 kayittan az"
+  ],
+  [
+   "nba",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "f1",
+   "tarihli kayit yok"
+  ],
+  [
+   "atp",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "wta",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "olympics",
+   "The read operation timed out"
+  ],
+  [
+   "tff",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "tbf",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "tvf",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "trtspor",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "ntvspor",
+   "3 kayittan az"
+  ],
+  [
+   "fanatik",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "sporx",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "bein",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "eurosport",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "lequipe",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "esports-insider",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "esa",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "eurekalert",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "arxiv-ai",
+   "3 kayittan az"
+  ],
+  [
+   "arxiv-lg",
+   "3 kayittan az"
+  ],
+  [
+   "autonews",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "topgear",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "motortrend",
+   "3 kayittan az"
+  ],
+  [
+   "autoblog",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "otomobilgunlugu",
+   "3 kayittan az"
+  ],
+  [
+   "carwow",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "empire",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "gn-resmi-btk",
+   "mevcut akislarla kopya (60%)"
+  ],
+  [
+   "gn-resmi-afad",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "un-tr2",
+   "3 kayittan az"
+  ],
+  [
+   "nato2",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "esa2",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "eurekalert2",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "eurekalert3",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "gn-tr-bm",
+   "45 gunden eski (guncellenmiyor)"
+  ]
+ ]
+}

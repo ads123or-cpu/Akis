@@ -5,7 +5,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.hurriyet.com.tr/rss/gundem",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sozcu",
@@ -13,7 +19,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.sozcu.com.tr/feeds-rss-category-sozcu",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberturk",
@@ -21,7 +33,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.haberturk.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bbc-tr",
@@ -29,7 +47,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "dw-tr",
@@ -37,7 +61,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://rss.dw.com/rdf/rss-tur-all",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ntv",
@@ -45,7 +75,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.ntv.com.tr/gundem.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnnturk",
@@ -53,7 +89,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.cnnturk.com/feed/rss/all/news",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trthaber",
@@ -61,7 +103,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.trthaber.com/sondakika.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "aa",
@@ -69,7 +117,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [
+"ajans"
+],
+"aktif": true
 },
 {
 "id": "cumhuriyet",
@@ -77,7 +133,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "milliyet",
@@ -85,7 +147,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.milliyet.com.tr/rss/rssnew/gundemrss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah",
@@ -93,7 +161,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.sabah.com.tr/rss/gundem.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "birgun",
@@ -101,7 +175,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.birgun.net/rss/home",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gazeteduvar",
@@ -109,7 +189,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.gazeteduvar.com.tr/export/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bianet",
@@ -117,7 +203,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://bianet.org/rss/bianet",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "medyascope",
@@ -125,7 +217,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://medyascope.tv/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "diken",
@@ -133,7 +231,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.diken.com.tr/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "euronews-tr",
@@ -141,7 +245,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://tr.euronews.com/rss?format=mrss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "indyturk",
@@ -149,7 +259,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.indyturk.com/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "karar",
@@ -157,7 +273,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.karar.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "internethaber",
@@ -165,7 +287,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.internethaber.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ensonhaber",
@@ -173,7 +301,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.ensonhaber.com/rss/ensonhaber.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hurriyet-dunya",
@@ -181,7 +315,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.hurriyet.com.tr/rss/dunya",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah-dunya",
@@ -189,7 +329,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.sabah.com.tr/rss/dunya.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ntv-dunya",
@@ -197,7 +343,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.ntv.com.tr/dunya.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberturk-dunya",
@@ -205,7 +357,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.haberturk.com/rss/dunya.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bloomberght",
@@ -213,7 +371,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.bloomberght.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ekonomim",
@@ -221,7 +385,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.ekonomim.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "dunya-gzt",
@@ -229,7 +399,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.dunya.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "fotomac",
@@ -237,7 +413,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.fotomac.com.tr/rss/anasayfa.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "webrazzi",
@@ -245,7 +427,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://webrazzi.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "donanimhaber",
@@ -253,7 +441,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.donanimhaber.com/rss/tum/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "webtekno",
@@ -261,7 +455,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.webtekno.com/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "technopat",
@@ -269,7 +469,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.technopat.net/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "log",
@@ -277,7 +483,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.log.com.tr/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "teknoseyir",
@@ -285,7 +497,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://teknoseyir.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "chip-tr",
@@ -293,7 +511,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.chip.com.tr/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "tamindir",
@@ -301,7 +525,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.tamindir.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "evrim",
@@ -309,7 +539,13 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://evrimagaci.org/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trends-tr",
@@ -317,7 +553,16 @@
 "lang": "tr",
 "cat": "viral",
 "url": "https://trends.google.com/trending/rss?geo=TR",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "verge",
@@ -325,7 +570,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.theverge.com/rss/index.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ars",
@@ -333,7 +584,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://feeds.arstechnica.com/arstechnica/index",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "wired",
@@ -341,7 +598,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.wired.com/feed/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "engadget",
@@ -349,7 +612,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.engadget.com/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gizmodo",
@@ -357,7 +626,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://gizmodo.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "9to5mac",
@@ -365,7 +640,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://9to5mac.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "9to5google",
@@ -373,7 +654,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://9to5google.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "macrumors",
@@ -381,7 +668,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://feeds.macrumors.com/MacRumors-All",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mit-tr",
@@ -389,7 +682,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.technologyreview.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnet",
@@ -397,7 +696,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.cnet.com/rss/news/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "zdnet",
@@ -405,7 +710,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.zdnet.com/news/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "techmeme",
@@ -413,7 +724,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.techmeme.com/feed.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "theregister",
@@ -421,7 +738,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.theregister.com/headlines.atom",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "androidauthority",
@@ -429,7 +752,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.androidauthority.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "tomshardware",
@@ -437,7 +766,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.tomshardware.com/feeds/all",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "thenextweb",
@@ -445,7 +780,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://thenextweb.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hackaday",
@@ -453,7 +794,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://hackaday.com/blog/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "the-decoder",
@@ -461,7 +808,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://the-decoder.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "hf-blog",
@@ -469,7 +824,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://huggingface.co/blog/feed.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "openai",
@@ -477,7 +840,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://openai.com/news/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "bbc-world",
@@ -485,7 +856,13 @@
 "lang": "en",
 "cat": "world",
 "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "guardian",
@@ -493,7 +870,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.theguardian.com/world/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "aljazeera",
@@ -501,7 +884,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.aljazeera.com/xml/rss/all.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "QA",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "npr",
@@ -509,7 +898,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://feeds.npr.org/1001/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "nyt",
@@ -517,7 +912,15 @@
 "lang": "en",
 "cat": "world",
 "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
 },
 {
 "id": "sky",
@@ -525,7 +928,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://feeds.skynews.com/feeds/rss/world.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "wapo",
@@ -533,7 +942,15 @@
 "lang": "en",
 "cat": "world",
 "url": "https://feeds.washingtonpost.com/rss/world",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
 },
 {
 "id": "dw-en",
@@ -541,7 +958,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://rss.dw.com/rdf/rss-en-all",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "france24-en",
@@ -549,7 +972,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.france24.com/en/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "axios",
@@ -557,7 +986,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://api.axios.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "abc-au",
@@ -565,7 +1000,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "AU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cbs",
@@ -573,7 +1014,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.cbsnews.com/latest/rss/main",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "scmp",
@@ -581,7 +1028,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.scmp.com/rss/91/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "HK",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "japantimes",
@@ -589,7 +1042,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.japantimes.co.jp/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mee",
@@ -597,7 +1056,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.middleeasteye.net/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "dailysabah",
@@ -605,7 +1070,13 @@
 "lang": "en",
 "cat": "tr",
 "url": "https://www.dailysabah.com/rssFeed/turkey",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnbc",
@@ -613,7 +1084,13 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bloomberg",
@@ -621,7 +1098,15 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://feeds.bloomberg.com/markets/news.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
 },
 {
 "id": "marketwatch",
@@ -629,7 +1114,13 @@
 "lang": "en",
 "cat": "eco",
 "url": "http://feeds.marketwatch.com/marketwatch/topstories/",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "businessinsider",
@@ -637,7 +1128,13 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://feeds.businessinsider.com/custom/all",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "nasa",
@@ -645,7 +1142,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "sciencedaily",
@@ -653,7 +1158,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.sciencedaily.com/rss/all.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "newscientist",
@@ -661,7 +1174,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.newscientist.com/feed/home/",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "quanta",
@@ -669,7 +1190,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://api.quantamagazine.org/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "nature",
@@ -677,7 +1206,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.nature.com/nature.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "livescience",
@@ -685,7 +1222,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.livescience.com/feeds/all",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "physorg",
@@ -693,7 +1238,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://phys.org/rss-feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "smithsonian",
@@ -701,7 +1254,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.smithsonianmag.com/rss/latest_articles/",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "atlas",
@@ -709,7 +1270,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://www.atlasobscura.com/feeds/latest",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "boingboing",
@@ -717,7 +1284,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://boingboing.net/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "goodnews",
@@ -725,7 +1298,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://www.goodnewsnetwork.org/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "futurism",
@@ -733,7 +1312,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://futurism.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "kottke",
@@ -741,7 +1326,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://feeds.kottke.org/main",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mashable",
@@ -749,7 +1340,13 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://mashable.com/feeds/rss/all",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "buzzfeed",
@@ -757,7 +1354,13 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://www.buzzfeed.com/index.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "knowyourmeme",
@@ -765,7 +1368,13 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://knowyourmeme.com/newsfeed.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "theonion",
@@ -773,7 +1382,13 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://theonion.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "r-iaf",
@@ -781,7 +1396,13 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://www.reddit.com/r/interestingasfuck/top/.rss?t=day",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trends-us",
@@ -789,7 +1410,16 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://trends.google.com/trending/rss?geo=US",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "trends-gb",
@@ -797,7 +1427,16 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://trends.google.com/trending/rss?geo=GB",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "variety",
@@ -805,7 +1444,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://variety.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "thr",
@@ -813,7 +1458,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://www.hollywoodreporter.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "deadline",
@@ -821,7 +1472,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://deadline.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "rollingstone",
@@ -829,7 +1486,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://www.rollingstone.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "pitchfork",
@@ -837,7 +1500,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://pitchfork.com/feed/feed-news/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "polygon",
@@ -845,7 +1514,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://www.polygon.com/rss/index.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ign",
@@ -853,7 +1528,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://feeds.ign.com/ign/all",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "kotaku",
@@ -861,7 +1542,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://kotaku.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "pcgamer",
@@ -869,7 +1556,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://www.pcgamer.com/rss/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "espn",
@@ -877,7 +1570,13 @@
 "lang": "en",
 "cat": "sport",
 "url": "https://www.espn.com/espn/rss/news",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bbc-sport",
@@ -885,7 +1584,13 @@
 "lang": "en",
 "cat": "sport",
 "url": "https://feeds.bbci.co.uk/sport/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "skysports",
@@ -893,7 +1598,13 @@
 "lang": "en",
 "cat": "sport",
 "url": "https://www.skysports.com/rss/12040",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "guardian-football",
@@ -901,7 +1612,13 @@
 "lang": "en",
 "cat": "sport",
 "url": "https://www.theguardian.com/football/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "aa-eko",
@@ -909,7 +1626,15 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"ajans"
+],
+"aktif": true
 },
 {
 "id": "aa-dunya",
@@ -917,7 +1642,15 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.aa.com.tr/tr/rss/default?cat=dunya",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"ajans"
+],
+"aktif": true
 },
 {
 "id": "aa-spor",
@@ -925,7 +1658,15 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.aa.com.tr/tr/rss/default?cat=spor",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"ajans"
+],
+"aktif": true
 },
 {
 "id": "aa-bilim",
@@ -933,7 +1674,15 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.aa.com.tr/tr/rss/default?cat=bilim-teknoloji",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"ajans"
+],
+"aktif": true
 },
 {
 "id": "ntv-son",
@@ -941,7 +1690,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.ntv.com.tr/son-dakika.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"ajans"
+],
+"aktif": true
 },
 {
 "id": "ntv-eko",
@@ -949,7 +1706,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.ntv.com.tr/ekonomi.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ntv-tek",
@@ -957,7 +1720,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.ntv.com.tr/teknoloji.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ntv-saglik",
@@ -965,7 +1734,13 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://www.ntv.com.tr/saglik.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnnturk-tr",
@@ -973,7 +1748,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.cnnturk.com/feed/rss/turkiye/news",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnnturk-dunya",
@@ -981,7 +1762,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.cnnturk.com/feed/rss/dunya/news",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnnturk-eko",
@@ -989,7 +1776,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.cnnturk.com/feed/rss/ekonomi/news",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnnturk-spor",
@@ -997,7 +1790,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.cnnturk.com/feed/rss/spor/news",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnnturk-magazin",
@@ -1005,7 +1804,13 @@
 "lang": "tr",
 "cat": "ent",
 "url": "https://www.cnnturk.com/feed/rss/magazin/news",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hurriyet-eko",
@@ -1013,7 +1818,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.hurriyet.com.tr/rss/ekonomi",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hurriyet-spor",
@@ -1021,7 +1832,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.hurriyet.com.tr/rss/spor",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hurriyet-tek",
@@ -1029,7 +1846,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.hurriyet.com.tr/rss/teknoloji",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hurriyet-magazin",
@@ -1037,7 +1860,13 @@
 "lang": "tr",
 "cat": "ent",
 "url": "https://www.hurriyet.com.tr/rss/magazin",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hurriyet-ana",
@@ -1045,7 +1874,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.hurriyet.com.tr/rss/anasayfa",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "milliyet-son",
@@ -1053,7 +1888,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.milliyet.com.tr/rss/rssnew/sondakikarss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "milliyet-eko",
@@ -1061,7 +1902,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.milliyet.com.tr/rss/rssnew/ekonomirss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "milliyet-dunya",
@@ -1069,7 +1916,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.milliyet.com.tr/rss/rssnew/dunyarss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "milliyet-tek",
@@ -1077,7 +1930,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.milliyet.com.tr/rss/rssnew/teknolojirss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah-eko",
@@ -1085,7 +1944,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.sabah.com.tr/rss/ekonomi.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah-spor",
@@ -1093,7 +1958,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.sabah.com.tr/rss/spor.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah-tek",
@@ -1101,7 +1972,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.sabah.com.tr/rss/teknoloji.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah-ana",
@@ -1109,7 +1986,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.sabah.com.tr/rss/anasayfa.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah-son",
@@ -1117,7 +2000,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.sabah.com.tr/rss/sondakika.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberturk-eko",
@@ -1125,7 +2014,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.haberturk.com/rss/ekonomi.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberturk-spor",
@@ -1133,7 +2028,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.haberturk.com/rss/spor.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberturk-tek",
@@ -1141,7 +2042,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.haberturk.com/rss/teknoloji.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberturk-gundem",
@@ -1149,7 +2056,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.haberturk.com/rss/gundem.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberturk-magazin",
@@ -1157,7 +2070,13 @@
 "lang": "tr",
 "cat": "ent",
 "url": "https://www.haberturk.com/rss/magazin.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sozcu-gundem",
@@ -1165,7 +2084,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.sozcu.com.tr/feeds-rss-category-gundem",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sozcu-eko",
@@ -1173,7 +2098,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.sozcu.com.tr/feeds-rss-category-ekonomi",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sozcu-spor",
@@ -1181,7 +2112,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.sozcu.com.tr/feeds-rss-category-spor",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sozcu-dunya",
@@ -1189,7 +2126,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.sozcu.com.tr/feeds-rss-category-dunya",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sozcu-tek",
@@ -1197,7 +2140,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.sozcu.com.tr/feeds-rss-category-bilim-teknoloji",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trthaber-eko",
@@ -1205,7 +2154,13 @@
 "lang": "tr",
 "cat": "eco",
 "url": "https://www.trthaber.com/ekonomi_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trthaber-dunya",
@@ -1213,7 +2168,13 @@
 "lang": "tr",
 "cat": "world",
 "url": "https://www.trthaber.com/dunya_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trthaber-spor",
@@ -1221,7 +2182,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.trthaber.com/spor_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trthaber-gundem",
@@ -1229,7 +2196,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.trthaber.com/gundem_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trthaber-bilim",
@@ -1237,7 +2210,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.trthaber.com/bilim_teknoloji_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "star",
@@ -1245,7 +2224,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.star.com.tr/rss/rss.asp",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "takvim",
@@ -1253,7 +2238,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.takvim.com.tr/rss/guncel.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "aksam",
@@ -1261,7 +2252,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.aksam.com.tr/rss/rss.asp?xml=gundem",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "vatan",
@@ -1269,7 +2266,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.gazetevatan.com/rss/gundem.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mynet",
@@ -1277,7 +2280,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.mynet.com/haber/rss/sondakika",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ahaber",
@@ -1285,7 +2294,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.ahaber.com.tr/rss/anasayfa.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberglobal",
@@ -1293,7 +2308,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://haberglobal.com.tr/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "halktv",
@@ -1301,7 +2322,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://halktv.com.tr/service/rss.php",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "evrensel",
@@ -1309,7 +2336,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.evrensel.net/rss/haber.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "odatv",
@@ -1317,7 +2350,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.odatv4.com/rss.php",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "yenicag",
@@ -1325,7 +2364,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.yenicaggazetesi.com.tr/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "aspor",
@@ -1333,7 +2378,13 @@
 "lang": "tr",
 "cat": "sport",
 "url": "https://www.aspor.com.tr/rss/anasayfa.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "donanimarsivi",
@@ -1341,7 +2392,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://donanimarsivi.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "merlin",
@@ -1349,7 +2406,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.merlininkazani.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "techinside",
@@ -1357,7 +2420,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.techinside.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bilimgenc",
@@ -1365,7 +2434,13 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://bilimgenc.tubitak.gov.tr/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "fizikist",
@@ -1373,7 +2448,13 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://fizikist.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gzt-ent",
@@ -1381,7 +2462,13 @@
 "lang": "tr",
 "cat": "ent",
 "url": "https://www.haberturk.com/rss/kategori/sinema.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gn-tr-turkiye",
@@ -1389,7 +2476,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/headlines/section/geo/Turkey?hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-son",
@@ -1397,7 +2492,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=son+dakika+when:3h&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-saglik",
@@ -1405,7 +2508,15 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "bilim",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "toi",
@@ -1413,7 +2524,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "thehindu",
@@ -1421,7 +2538,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.thehindu.com/news/national/feeder/default.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "straitstimes",
@@ -1429,7 +2552,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.straitstimes.com/news/world/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "SG",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "abc-news",
@@ -1437,7 +2566,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://abcnews.go.com/abcnews/topstories",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "nbc",
@@ -1445,7 +2580,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://feeds.nbcnews.com/nbcnews/public/news",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "foxnews",
@@ -1453,7 +2594,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "latimes",
@@ -1461,7 +2608,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.latimes.com/world-nation/rss2.0.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bbc-tech",
@@ -1469,7 +2622,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bbc-sci",
@@ -1477,7 +2636,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "bbc-biz",
@@ -1485,7 +2652,13 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bbc-ent",
@@ -1493,7 +2666,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "guardian-tech",
@@ -1501,7 +2680,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.theguardian.com/technology/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "guardian-biz",
@@ -1509,7 +2694,13 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://www.theguardian.com/uk/business/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "guardian-sci",
@@ -1517,7 +2708,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.theguardian.com/science/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "npr-tech",
@@ -1525,7 +2724,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://feeds.npr.org/1019/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "nyt-tech",
@@ -1533,7 +2738,15 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
 },
 {
 "id": "nyt-world",
@@ -1541,7 +2754,15 @@
 "lang": "en",
 "cat": "world",
 "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
 },
 {
 "id": "xda",
@@ -1549,7 +2770,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.xda-developers.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gsmarena",
@@ -1557,7 +2784,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.gsmarena.com/rss-news-reviews.php3",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "BG",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sammobile",
@@ -1565,7 +2798,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.sammobile.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "appleinsider",
@@ -1573,7 +2812,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://appleinsider.com/rss/news/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bleepingcomputer",
@@ -1581,7 +2826,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.bleepingcomputer.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "krebs",
@@ -1589,7 +2840,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://krebsonsecurity.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gnq-sondakika",
@@ -1597,7 +2854,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=son%20dakika%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-deprem",
@@ -1605,7 +2870,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=deprem%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-ai",
@@ -1613,7 +2886,15 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://news.google.com/rss/search?q=yapay%20zeka%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-iphone",
@@ -1621,7 +2902,15 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://news.google.com/rss/search?q=iPhone%20Apple%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-uzay",
@@ -1629,7 +2918,15 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://news.google.com/rss/search?q=uzay%20NASA%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "bilim",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-hava",
@@ -1637,7 +2934,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=hava%20durumu%20uyar%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-polis",
@@ -1645,7 +2950,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=polis%20operasyon%20g%C3%B6zalt%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-mecliss",
@@ -1653,7 +2966,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=TBMM%20siyaset%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-viral",
@@ -1661,7 +2982,15 @@
 "lang": "tr",
 "cat": "viral",
 "url": "https://news.google.com/rss/search?q=sosyal%20medya%20g%C3%BCndem%20viral%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-ilginc",
@@ -1669,7 +2998,15 @@
 "lang": "tr",
 "cat": "cool",
 "url": "https://news.google.com/rss/search?q=ilgin%C3%A7%20haber%20%C5%9Fa%C5%9F%C4%B1rtan%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-egitim",
@@ -1677,7 +3014,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=MEB%20s%C4%B1nav%20YKS%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-trafik",
@@ -1685,7 +3030,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=kaza%20trafik%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-oyun",
@@ -1693,7 +3046,15 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://news.google.com/rss/search?q=oyun%20PlayStation%20Steam%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-savunma",
@@ -1701,7 +3062,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=savunma%20sanayii%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-istanbul",
@@ -1709,7 +3078,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=%C4%B0stanbul%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-ankara",
@@ -1717,7 +3094,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=Ankara%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-izmir",
@@ -1725,7 +3110,15 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=%C4%B0zmir%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "hurriyet-son",
@@ -1733,7 +3126,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.hurriyet.com.tr/rss/son-dakika",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sozcu-son",
@@ -1741,7 +3140,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.sozcu.com.tr/feeds-son-dakika",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "yenisafak",
@@ -1749,7 +3154,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.yenisafak.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sabah-magazin",
@@ -1757,7 +3168,13 @@
 "lang": "tr",
 "cat": "ent",
 "url": "https://www.sabah.com.tr/rss/magazin.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "haberler",
@@ -1765,7 +3182,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://rss.haberler.com/rss.asp",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "onedio",
@@ -1773,7 +3196,13 @@
 "lang": "tr",
 "cat": "viral",
 "url": "https://onedio.com/support/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ntv-yasam",
@@ -1781,7 +3210,13 @@
 "lang": "tr",
 "cat": "cool",
 "url": "https://www.ntv.com.tr/yasam.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ntv-turkiye",
@@ -1789,7 +3224,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.ntv.com.tr/turkiye.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ntv-otomobil",
@@ -1797,7 +3238,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.ntv.com.tr/otomobil.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trt-kultur",
@@ -1805,7 +3252,13 @@
 "lang": "tr",
 "cat": "ent",
 "url": "https://www.trthaber.com/kultur_sanat_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trt-saglik",
@@ -1813,7 +3266,13 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://www.trthaber.com/saglik_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trt-yasam",
@@ -1821,7 +3280,13 @@
 "lang": "tr",
 "cat": "cool",
 "url": "https://www.trthaber.com/yasam_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trt-turkiye",
@@ -1829,7 +3294,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.trthaber.com/turkiye_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "trt-sondakika",
@@ -1837,7 +3308,13 @@
 "lang": "tr",
 "cat": "tr",
 "url": "https://www.trthaber.com/sondakika_articles.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "aa-kultur",
@@ -1845,7 +3322,15 @@
 "lang": "tr",
 "cat": "ent",
 "url": "https://www.aa.com.tr/tr/rss/default?cat=kultur",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"ajans"
+],
+"aktif": true
 },
 {
 "id": "euronews-en",
@@ -1853,7 +3338,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.euronews.com/rss?format=mrss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "EU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "independent",
@@ -1861,7 +3352,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.independent.co.uk/news/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "dailymail",
@@ -1869,7 +3366,13 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://www.dailymail.co.uk/news/index.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "nypost",
@@ -1877,7 +3380,13 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://nypost.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "tmz",
@@ -1885,7 +3394,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://www.tmz.com/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "eonline",
@@ -1893,7 +3408,13 @@
 "lang": "en",
 "cat": "ent",
 "url": "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "politico",
@@ -1901,7 +3422,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://rss.politico.com/politics-news.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "vice",
@@ -1909,7 +3436,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://www.vice.com/en/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "oddity",
@@ -1917,7 +3450,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://www.odditycentral.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "fastco",
@@ -1925,7 +3464,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.fastcompany.com/latest/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "electrek",
@@ -1933,7 +3478,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://electrek.co/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "sciencealert",
@@ -1941,7 +3492,15 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.sciencealert.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bilimsel"
+],
+"aktif": true
 },
 {
 "id": "eurogamer",
@@ -1949,7 +3508,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.eurogamer.net/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "bbc-football",
@@ -1957,7 +3522,13 @@
 "lang": "en",
 "cat": "sport",
 "url": "https://feeds.bbci.co.uk/sport/football/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "fortune",
@@ -1965,7 +3536,15 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://fortune.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
 },
 {
 "id": "coindesk",
@@ -1973,7 +3552,13 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cointelegraph",
@@ -1981,7 +3566,13 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://cointelegraph.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "economist",
@@ -1989,7 +3580,15 @@
 "lang": "en",
 "cat": "eco",
 "url": "https://www.economist.com/latest/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
 },
 {
 "id": "ndtv-en",
@@ -1997,7 +3596,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://feeds.feedburner.com/ndtvnews-top-stories",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "indiatoday",
@@ -2005,7 +3610,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.indiatoday.in/rss/1206578",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "yt-mkbhd",
@@ -2013,7 +3624,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCG7J20LhUeLl6y_Emi7OJrA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCG7J20LhUeLl6y_Emi7OJrA",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-linustechtips",
@@ -2021,7 +3640,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCdBK94H6oZT2Q7l0-b0xmMg"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCdBK94H6oZT2Q7l0-b0xmMg",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-mrwhosetheboss",
@@ -2029,7 +3656,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMiJRAwDNSNzuYeN2uWa0pA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMiJRAwDNSNzuYeN2uWa0pA",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-jerryrigeverything",
@@ -2037,7 +3672,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWFKCr40YwOZQx8FHU_ZqqQ"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWFKCr40YwOZQx8FHU_ZqqQ",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-twominutepapers",
@@ -2045,7 +3688,15 @@
 "lang": "en",
 "cat": "sci",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg",
+"calisma": "bilim",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-veritasium",
@@ -2053,7 +3704,15 @@
 "lang": "en",
 "cat": "sci",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCin0m13qWv3-051xlWlHamA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCin0m13qWv3-051xlWlHamA",
+"calisma": "bilim",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-vsauce",
@@ -2061,7 +3720,15 @@
 "lang": "en",
 "cat": "sci",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6nSFpj9HTCZ5t-N3Rm3-HA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6nSFpj9HTCZ5t-N3Rm3-HA",
+"calisma": "bilim",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-nasa",
@@ -2069,7 +3736,15 @@
 "lang": "en",
 "cat": "sci",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9SM7V7J1pAhPabOUST01fw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9SM7V7J1pAhPabOUST01fw",
+"calisma": "bilim",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-spacex",
@@ -2077,7 +3752,16 @@
 "lang": "en",
 "cat": "sci",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtI0Hodo5o5dUb67FeUjDeA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtI0Hodo5o5dUb67FeUjDeA",
+"calisma": "bilim",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": false,
+"pasif_neden": "YouTube kanal akisi 404 (kanal kimligi gecersiz); 5 ardisik hata"
 },
 {
 "id": "yt-bbcnews",
@@ -2085,7 +3769,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC16niRr50-MSBwiO3YDb3RA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC16niRr50-MSBwiO3YDb3RA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-aljazeeraenglish",
@@ -2093,7 +3785,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCfiwzLy-8yKzIbsmZTzxDgw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCfiwzLy-8yKzIbsmZTzxDgw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-dwnews",
@@ -2101,7 +3801,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbbS1GE942k3UVqpLklyhIA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbbS1GE942k3UVqpLklyhIA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-cnn",
@@ -2109,7 +3817,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCupvZG-5ko_eiXAupbDfxWw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCupvZG-5ko_eiXAupbDfxWw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-reuters",
@@ -2117,7 +3833,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UChqUTb7kYRX8-EiaN3XFrSQ"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UChqUTb7kYRX8-EiaN3XFrSQ",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-associatedpress",
@@ -2125,7 +3849,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC52X5wxOL_s5yw0dQk7NtgA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC52X5wxOL_s5yw0dQk7NtgA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-vox",
@@ -2133,7 +3865,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCLXo7UDZvByw2ixzpQCufnA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCLXo7UDZvByw2ixzpQCufnA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-vice",
@@ -2141,7 +3881,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn8zNIfYAQNdrFRrr8oibKw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn8zNIfYAQNdrFRrr8oibKw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-france24_en",
@@ -2149,7 +3897,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCCPCZNChQdGa9EkATeye4g"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCCPCZNChQdGa9EkATeye4g",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-euronews",
@@ -2157,7 +3913,15 @@
 "lang": "en",
 "cat": "world",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSrZ3UV4jOidv8ppoVuvW9Q"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSrZ3UV4jOidv8ppoVuvW9Q",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-cnbctelevision",
@@ -2165,7 +3929,15 @@
 "lang": "en",
 "cat": "eco",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvJJ_dzjViJCoLf5uKUTwoA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvJJ_dzjViJCoLf5uKUTwoA",
+"calisma": "ekonomi",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-business",
@@ -2173,7 +3945,15 @@
 "lang": "en",
 "cat": "eco",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg",
+"calisma": "ekonomi",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-mrbeast",
@@ -2181,7 +3961,15 @@
 "lang": "en",
 "cat": "viral",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAiLfjNXkNv24uhpzUgPa6A"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAiLfjNXkNv24uhpzUgPa6A",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-netflix",
@@ -2189,7 +3977,15 @@
 "lang": "en",
 "cat": "ent",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGie8GMlUo3kBKIopdvumVQ"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGie8GMlUo3kBKIopdvumVQ",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-ign",
@@ -2197,7 +3993,15 @@
 "lang": "en",
 "cat": "ent",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKy1dAqELo0zrOtPkf0eTMw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKy1dAqELo0zrOtPkf0eTMw",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-ted",
@@ -2205,7 +4009,15 @@
 "lang": "en",
 "cat": "cool",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-mark_rober",
@@ -2213,7 +4025,15 @@
 "lang": "en",
 "cat": "cool",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCj4zC1Hfj-uc90FUXzRamNw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCj4zC1Hfj-uc90FUXzRamNw",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-dudeperfect",
@@ -2221,7 +4041,15 @@
 "lang": "en",
 "cat": "viral",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJrWyyCRROi8NlQ6Xd9dx5Q"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJrWyyCRROi8NlQ6Xd9dx5Q",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-espn",
@@ -2229,7 +4057,15 @@
 "lang": "en",
 "cat": "sport",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCiio0ydw439X13KyZgMIcHw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCiio0ydw439X13KyZgMIcHw",
+"calisma": "spor",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-ntv",
@@ -2237,7 +4073,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGMghpDmBAqhz2p7eLHX-eg"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGMghpDmBAqhz2p7eLHX-eg",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-cnnturk",
@@ -2245,7 +4089,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJCYKGZ4ZyjjshYa6fhRgRw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJCYKGZ4ZyjjshYa6fhRgRw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-haberturktv",
@@ -2253,7 +4105,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn6dNfiRE_Xunu7iMyvD7AA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCn6dNfiRE_Xunu7iMyvD7AA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-trthaber",
@@ -2261,7 +4121,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCBgTP2LOFVPmq15W-RH-WXA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCBgTP2LOFVPmq15W-RH-WXA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-haberglobal",
@@ -2269,7 +4137,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHjbBVD4yRI7vU-S9Pwpnkw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHjbBVD4yRI7vU-S9Pwpnkw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-sozcutelevizyonu",
@@ -2277,7 +4153,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOulx_rep5O4i9y6AyDqVvw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOulx_rep5O4i9y6AyDqVvw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-ahaber",
@@ -2285,7 +4169,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKQhfw-lzz0uKnE1fY1PsAA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKQhfw-lzz0uKnE1fY1PsAA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-dwturkce",
@@ -2293,7 +4185,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpi_jv70749NkAmkdugyiPQ"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpi_jv70749NkAmkdugyiPQ",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-tgrthaber",
@@ -2301,7 +4201,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCzgrZ-CndOoylh2_e72nSBQ"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCzgrZ-CndOoylh2_e72nSBQ",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-showtv",
@@ -2309,7 +4217,15 @@
 "lang": "tr",
 "cat": "ent",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRfLDCtkSwmTdwHrbmC78Xg"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRfLDCtkSwmTdwHrbmC78Xg",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-kanald",
@@ -2317,7 +4233,15 @@
 "lang": "tr",
 "cat": "ent",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFoe1tg8MuHjRzmqXtV816A"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFoe1tg8MuHjRzmqXtV816A",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-trtspor",
@@ -2325,7 +4249,15 @@
 "lang": "tr",
 "cat": "sport",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCebdo7-2NdjcktKzco64iNw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCebdo7-2NdjcktKzco64iNw",
+"calisma": "spor",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-teknoseyir",
@@ -2333,7 +4265,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFIHrIGT0MBMRHzQtmzOWlQ"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFIHrIGT0MBMRHzQtmzOWlQ",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-evrimagaci",
@@ -2341,7 +4281,15 @@
 "lang": "tr",
 "cat": "sci",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCatnasFAiXUvWwH8NlSdd3A"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCatnasFAiXUvWwH8NlSdd3A",
+"calisma": "bilim",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-fenerbahce",
@@ -2349,7 +4297,15 @@
 "lang": "tr",
 "cat": "sport",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-iIZndhvtEtZepuBwWYdPw"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-iIZndhvtEtZepuBwWYdPw",
+"calisma": "spor",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-galatasaray",
@@ -2357,7 +4313,15 @@
 "lang": "tr",
 "cat": "sport",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQpeujIamj2ZOKXZnrxTRhA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQpeujIamj2ZOKXZnrxTRhA",
+"calisma": "spor",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-besiktas",
@@ -2365,7 +4329,15 @@
 "lang": "tr",
 "cat": "sport",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCLJVUlpsxZcIMECVDcZaM2g"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCLJVUlpsxZcIMECVDcZaM2g",
+"calisma": "spor",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-trabzonspor",
@@ -2373,7 +4345,15 @@
 "lang": "tr",
 "cat": "sport",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnZoe1ncVK7ApLBPfpZ_LEA"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnZoe1ncVK7ApLBPfpZ_LEA",
+"calisma": "spor",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-bloomberght",
@@ -2381,7 +4361,15 @@
 "lang": "tr",
 "cat": "eco",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWgGEIw9k_BB0VRMhy_w21Q"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWgGEIw9k_BB0VRMhy_w21Q",
+"calisma": "ekonomi",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "yt-basakkarahan",
@@ -2389,7 +4377,15 @@
 "lang": "tr",
 "cat": "cool",
 "plat": "youtube",
-"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC8OWw58bmGim6oVK0TzgIeQ"
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC8OWw58bmGim6oVK0TzgIeQ",
+"calisma": "eglence",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true
 },
 {
 "id": "lobsters",
@@ -2397,7 +4393,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "hn",
-"url": "https://lobste.rs/rss"
+"url": "https://lobste.rs/rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "steam-news",
@@ -2405,7 +4410,15 @@
 "lang": "en",
 "cat": "ent",
 "plat": "web",
-"url": "https://store.steampowered.com/feeds/news/"
+"url": "https://store.steampowered.com/feeds/news/",
+"calisma": "eglence",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "tumblr-staff",
@@ -2413,7 +4426,15 @@
 "lang": "en",
 "cat": "viral",
 "plat": "web",
-"url": "https://staff.tumblr.com/rss"
+"url": "https://staff.tumblr.com/rss",
+"calisma": "eglence",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "slashdot",
@@ -2421,7 +4442,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://rss.slashdot.org/Slashdot/slashdotMain"
+"url": "https://rss.slashdot.org/Slashdot/slashdotMain",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "spotify-newsroom",
@@ -2429,7 +4456,15 @@
 "lang": "en",
 "cat": "ent",
 "plat": "web",
-"url": "https://newsroom.spotify.com/feed/"
+"url": "https://newsroom.spotify.com/feed/",
+"calisma": "eglence",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "meta-news",
@@ -2437,7 +4472,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://about.fb.com/news/feed/"
+"url": "https://about.fb.com/news/feed/",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "yt-blog",
@@ -2445,7 +4488,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "youtube",
-"url": "https://blog.youtube/rss/"
+"url": "https://blog.youtube/rss/",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video",
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "google-blog",
@@ -2453,7 +4505,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://blog.google/rss/"
+"url": "https://blog.google/rss/",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "ms-blog",
@@ -2461,7 +4521,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://blogs.microsoft.com/feed/"
+"url": "https://blogs.microsoft.com/feed/",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "apple-news",
@@ -2469,7 +4537,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://www.apple.com/newsroom/rss-feed.rss"
+"url": "https://www.apple.com/newsroom/rss-feed.rss",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "aws-news",
@@ -2477,7 +4553,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://aws.amazon.com/blogs/aws/feed/"
+"url": "https://aws.amazon.com/blogs/aws/feed/",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "nvidia-blog",
@@ -2485,7 +4569,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://blogs.nvidia.com/feed/"
+"url": "https://blogs.nvidia.com/feed/",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "deepmind",
@@ -2493,7 +4585,15 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://deepmind.google/blog/rss.xml"
+"url": "https://deepmind.google/blog/rss.xml",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-instagram",
@@ -2501,7 +4601,15 @@
 "lang": "tr",
 "cat": "viral",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=instagram+OR+tiktok+OR+youtube+when:1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=instagram+OR+tiktok+OR+youtube+when:1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-fenomen",
@@ -2509,7 +4617,15 @@
 "lang": "tr",
 "cat": "viral",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=fenomen+OR+influencer+OR+youtuber+when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=fenomen+OR+influencer+OR+youtuber+when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-saglik2",
@@ -2517,7 +4633,15 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://news.google.com/rss/search?q=kanser%20OR%20diyabet%20OR%20kalp%20OR%20vitamin%20uzman%20uyard%C4%B1%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "bilim",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-bilim2",
@@ -2525,7 +4649,15 @@
 "lang": "tr",
 "cat": "sci",
 "url": "https://news.google.com/rss/search?q=bilim%20insanlar%C4%B1%20ke%C5%9Ffetti%20OR%20ara%C5%9Ft%C4%B1rma%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
-"plat": "gnews"
+"plat": "gnews",
+"calisma": "bilim",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-t24",
@@ -2533,7 +4665,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=site%3At24.com.tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=site%3At24.com.tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-bbc",
@@ -2541,7 +4681,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=site%3Abbc.com/turkce%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=site%3Abbc.com/turkce%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-dw",
@@ -2549,7 +4697,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=site%3Adw.com/tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=site%3Adw.com/tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-aa",
@@ -2557,7 +4713,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=site%3Aaa.com.tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=site%3Aaa.com.tr%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-trt",
@@ -2565,7 +4729,15 @@
 "lang": "tr",
 "cat": "tr",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=site%3Atrthaber.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=site%3Atrthaber.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-webtekno",
@@ -2573,7 +4745,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=site%3Awebtekno.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=site%3Awebtekno.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-onedio",
@@ -2581,7 +4761,15 @@
 "lang": "tr",
 "cat": "viral",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=site%3Aonedio.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=site%3Aonedio.com%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-yapayzeka2",
@@ -2589,7 +4777,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=yapay%20zeka%20OR%20ChatGPT%20OR%20OpenAI%20OR%20Gemini%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=yapay%20zeka%20OR%20ChatGPT%20OR%20OpenAI%20OR%20Gemini%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-siber",
@@ -2597,7 +4793,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=siber%20sald%C4%B1r%C4%B1%20OR%20veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%20OR%20hackerlar%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=siber%20sald%C4%B1r%C4%B1%20OR%20veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%20OR%20hackerlar%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-seyahat",
@@ -2605,7 +4809,15 @@
 "lang": "tr",
 "cat": "cool",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=tatil%20OR%20seyahat%20OR%20gezi%20rotas%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=tatil%20OR%20seyahat%20OR%20gezi%20rotas%C4%B1%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gnq-yasam",
@@ -2613,7 +4825,15 @@
 "lang": "tr",
 "cat": "cool",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=ya%C5%9Fam%20OR%20psikoloji%20OR%20ili%C5%9Fkiler%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=ya%C5%9Fam%20OR%20psikoloji%20OR%20ili%C5%9Fkiler%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "rd-technology",
@@ -2621,7 +4841,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/technology/.rss"
+"url": "https://www.reddit.com/r/technology/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-gadgets",
@@ -2629,7 +4858,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/gadgets/.rss"
+"url": "https://www.reddit.com/r/gadgets/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-futurology",
@@ -2637,7 +4875,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/Futurology/.rss"
+"url": "https://www.reddit.com/r/Futurology/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-openai",
@@ -2645,7 +4892,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/OpenAI/.rss"
+"url": "https://www.reddit.com/r/OpenAI/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-claudeai",
@@ -2653,7 +4909,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/ClaudeAI/.rss"
+"url": "https://www.reddit.com/r/ClaudeAI/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-localllama",
@@ -2661,7 +4926,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/LocalLLaMA/.rss"
+"url": "https://www.reddit.com/r/LocalLLaMA/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-apple",
@@ -2669,7 +4943,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/apple/.rss"
+"url": "https://www.reddit.com/r/apple/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-programming",
@@ -2677,7 +4960,16 @@
 "lang": "en",
 "cat": "tech",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/programming/.rss"
+"url": "https://www.reddit.com/r/programming/.rss",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-nextfuckinglevel",
@@ -2685,7 +4977,16 @@
 "lang": "en",
 "cat": "viral",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/nextfuckinglevel/.rss"
+"url": "https://www.reddit.com/r/nextfuckinglevel/.rss",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-memes",
@@ -2693,7 +4994,16 @@
 "lang": "en",
 "cat": "viral",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/memes/.rss"
+"url": "https://www.reddit.com/r/memes/.rss",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-kgbtr",
@@ -2701,7 +5011,16 @@
 "lang": "tr",
 "cat": "viral",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/KGBTR/.rss"
+"url": "https://www.reddit.com/r/KGBTR/.rss",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-sorun",
@@ -2709,7 +5028,16 @@
 "lang": "tr",
 "cat": "viral",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/sorun/.rss"
+"url": "https://www.reddit.com/r/sorun/.rss",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "rd-burdurland",
@@ -2717,7 +5045,16 @@
 "lang": "tr",
 "cat": "viral",
 "plat": "reddit",
-"url": "https://www.reddit.com/r/burdurland/.rss"
+"url": "https://www.reddit.com/r/burdurland/.rss",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "win-central",
@@ -2725,7 +5062,13 @@
 "lang": "en",
 "cat": "win",
 "plat": "web",
-"url": "https://www.windowscentral.com/feeds.xml"
+"url": "https://www.windowscentral.com/feeds.xml",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "win-neowin",
@@ -2733,7 +5076,13 @@
 "lang": "en",
 "cat": "win",
 "plat": "web",
-"url": "https://www.neowin.net/news/rss/"
+"url": "https://www.neowin.net/news/rss/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "win-blog",
@@ -2741,7 +5090,15 @@
 "lang": "en",
 "cat": "win",
 "plat": "web",
-"url": "https://blogs.windows.com/feed/"
+"url": "https://blogs.windows.com/feed/",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "win-latest",
@@ -2749,7 +5106,13 @@
 "lang": "en",
 "cat": "win",
 "plat": "web",
-"url": "https://www.windowslatest.com/feed/"
+"url": "https://www.windowslatest.com/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "win-thurrott",
@@ -2757,7 +5120,13 @@
 "lang": "en",
 "cat": "win",
 "plat": "web",
-"url": "https://www.thurrott.com/feed"
+"url": "https://www.thurrott.com/feed",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "win-msedge",
@@ -2765,7 +5134,15 @@
 "lang": "en",
 "cat": "win",
 "plat": "web",
-"url": "https://blogs.windows.com/windows-insider/feed/"
+"url": "https://blogs.windows.com/windows-insider/feed/",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "ios-9to5",
@@ -2773,7 +5150,13 @@
 "lang": "en",
 "cat": "ios",
 "plat": "web",
-"url": "https://9to5mac.com/feed/"
+"url": "https://9to5mac.com/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ios-macrumors",
@@ -2781,7 +5164,13 @@
 "lang": "en",
 "cat": "ios",
 "plat": "web",
-"url": "https://feeds.macrumors.com/MacRumors-All"
+"url": "https://feeds.macrumors.com/MacRumors-All",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ios-appleinsider",
@@ -2789,7 +5178,13 @@
 "lang": "en",
 "cat": "ios",
 "plat": "web",
-"url": "https://appleinsider.com/rss/news"
+"url": "https://appleinsider.com/rss/news",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mac-macstories",
@@ -2797,7 +5192,13 @@
 "lang": "en",
 "cat": "mac",
 "plat": "web",
-"url": "https://www.macstories.net/feed/"
+"url": "https://www.macstories.net/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mac-newsroom",
@@ -2805,7 +5206,15 @@
 "lang": "en",
 "cat": "ios",
 "plat": "web",
-"url": "https://www.apple.com/newsroom/rss-feed.rss"
+"url": "https://www.apple.com/newsroom/rss-feed.rss",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true
 },
 {
 "id": "mac-9to5",
@@ -2813,7 +5222,13 @@
 "lang": "en",
 "cat": "mac",
 "plat": "web",
-"url": "https://9to5mac.com/guides/macos/feed/"
+"url": "https://9to5mac.com/guides/macos/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mac-macworld",
@@ -2821,7 +5236,13 @@
 "lang": "en",
 "cat": "mac",
 "plat": "web",
-"url": "https://www.macworld.com/feed"
+"url": "https://www.macworld.com/feed",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mac-cultofmac",
@@ -2829,7 +5250,13 @@
 "lang": "en",
 "cat": "mac",
 "plat": "web",
-"url": "https://www.cultofmac.com/feed"
+"url": "https://www.cultofmac.com/feed",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "ios-gn-tr-ios",
@@ -2837,7 +5264,15 @@
 "lang": "tr",
 "cat": "ios",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=iOS+OR+iPhone&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=iOS+OR+iPhone&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "mac-gn-tr",
@@ -2845,7 +5280,15 @@
 "lang": "tr",
 "cat": "mac",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=macOS+OR+MacBook&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=macOS+OR+MacBook&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "win-gn-tr",
@@ -2853,7 +5296,15 @@
 "lang": "tr",
 "cat": "win",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=Windows+11+OR+Windows+Microsoft&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=Windows+11+OR+Windows+Microsoft&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "auto-gn-tr",
@@ -2861,7 +5312,15 @@
 "lang": "tr",
 "cat": "auto",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=otomobil+OR+otomotiv&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=otomobil+OR+otomotiv&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "oto",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "auto-motor1-tr",
@@ -2869,7 +5328,13 @@
 "lang": "tr",
 "cat": "auto",
 "plat": "web",
-"url": "https://tr.motor1.com/rss/articles/all/"
+"url": "https://tr.motor1.com/rss/articles/all/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-oto-haberturk",
@@ -2877,7 +5342,13 @@
 "lang": "tr",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.haberturk.com/rss/otomobil.xml"
+"url": "https://www.haberturk.com/rss/otomobil.xml",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-oto-ntv",
@@ -2885,7 +5356,13 @@
 "lang": "tr",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.ntv.com.tr/otomobil.rss"
+"url": "https://www.ntv.com.tr/otomobil.rss",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-oto-cnnturk",
@@ -2893,7 +5370,13 @@
 "lang": "tr",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.cnnturk.com/feed/rss/otomobil/news"
+"url": "https://www.cnnturk.com/feed/rss/otomobil/news",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-caranddriver",
@@ -2901,7 +5384,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.caranddriver.com/rss/all.xml/"
+"url": "https://www.caranddriver.com/rss/all.xml/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-motor1",
@@ -2909,7 +5398,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.motor1.com/rss/articles/all/"
+"url": "https://www.motor1.com/rss/articles/all/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-carscoops",
@@ -2917,7 +5412,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.carscoops.com/feed/"
+"url": "https://www.carscoops.com/feed/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-thedrive",
@@ -2925,7 +5426,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.thedrive.com/feed"
+"url": "https://www.thedrive.com/feed",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-jalopnik",
@@ -2933,7 +5440,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://jalopnik.com/rss"
+"url": "https://jalopnik.com/rss",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-autocar",
@@ -2941,7 +5454,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.autocar.co.uk/rss"
+"url": "https://www.autocar.co.uk/rss",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-roadandtrack",
@@ -2949,7 +5468,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.roadandtrack.com/rss/all.xml/"
+"url": "https://www.roadandtrack.com/rss/all.xml/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-electrek",
@@ -2957,7 +5482,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://electrek.co/feed/"
+"url": "https://electrek.co/feed/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-insideevs",
@@ -2965,7 +5496,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://insideevs.com/rss/news/all/"
+"url": "https://insideevs.com/rss/news/all/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "auto-teslarati",
@@ -2973,7 +5510,13 @@
 "lang": "en",
 "cat": "auto",
 "plat": "web",
-"url": "https://www.teslarati.com/feed/"
+"url": "https://www.teslarati.com/feed/",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gn-win-tr2",
@@ -2981,7 +5524,15 @@
 "lang": "tr",
 "cat": "win",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=Windows+11+g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=Windows+11+g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-ios-tr2",
@@ -2989,7 +5540,15 @@
 "lang": "tr",
 "cat": "ios",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=iOS+g%C3%BCncelleme+iPhone&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=iOS+g%C3%BCncelleme+iPhone&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-mac-tr2",
@@ -2997,7 +5556,15 @@
 "lang": "tr",
 "cat": "mac",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=macOS+Apple+Mac&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=macOS+Apple+Mac&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-auto-ev",
@@ -3005,7 +5572,15 @@
 "lang": "tr",
 "cat": "auto",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=elektrikli+ara%C3%A7+OR+Togg&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=elektrikli+ara%C3%A7+OR+Togg&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "oto",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-auto-yeni",
@@ -3013,7 +5588,15 @@
 "lang": "tr",
 "cat": "auto",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=yeni+model+araba+fiyat&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=yeni+model+araba+fiyat&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "oto",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "space-com",
@@ -3021,7 +5604,13 @@
 "lang": "en",
 "cat": "sci",
 "url": "https://www.space.com/feeds/all",
-"plat": "web"
+"plat": "web",
+"calisma": "bilim",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "popmech",
@@ -3029,7 +5618,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://www.popularmechanics.com/rss/all.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "androidpolice",
@@ -3037,7 +5632,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://www.androidpolice.com/feed/"
+"url": "https://www.androidpolice.com/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "androidcentral",
@@ -3045,7 +5646,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://www.androidcentral.com/feed"
+"url": "https://www.androidcentral.com/feed",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gizmochina",
@@ -3053,7 +5660,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://www.gizmochina.com/feed/"
+"url": "https://www.gizmochina.com/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "huaweicentral",
@@ -3061,7 +5674,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://www.huaweicentral.com/feed/"
+"url": "https://www.huaweicentral.com/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "xiaomitime",
@@ -3069,7 +5688,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://xiaomitime.com/feed/"
+"url": "https://xiaomitime.com/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "droidlife",
@@ -3077,7 +5702,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://www.droid-life.com/feed/"
+"url": "https://www.droid-life.com/feed/",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "phonearena",
@@ -3085,7 +5716,13 @@
 "lang": "en",
 "cat": "tech",
 "plat": "web",
-"url": "https://www.phonearena.com/feed/news"
+"url": "https://www.phonearena.com/feed/news",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gn-tr-mobil",
@@ -3093,7 +5730,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=Xiaomi+OR+Huawei+OR+Android+OR+Redmi+OR+Honor&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=Xiaomi+OR+Huawei+OR+Android+OR+Redmi+OR+Honor&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "wccftech",
@@ -3101,7 +5746,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://wccftech.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "notebookcheck",
@@ -3109,7 +5760,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.notebookcheck.net/News.152.100.html?type=rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "digitaltrends",
@@ -3117,7 +5774,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.digitaltrends.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "techradar",
@@ -3125,7 +5788,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.techradar.com/feeds/all",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "tomsguide",
@@ -3133,7 +5802,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.tomsguide.com/feeds/all",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "theverge2",
@@ -3141,7 +5816,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "techcrunch",
@@ -3149,7 +5830,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://techcrunch.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "arstech2",
@@ -3157,7 +5844,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://feeds.arstechnica.com/arstechnica/gadgets",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "interesting-eng",
@@ -3165,7 +5858,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://interestingengineering.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "newatlas",
@@ -3173,7 +5872,13 @@
 "lang": "en",
 "cat": "cool",
 "url": "https://newatlas.com/index.rss",
-"plat": "web"
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hacker-news-sec",
@@ -3181,7 +5886,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://feeds.feedburner.com/TheHackersNews",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gamespot",
@@ -3189,7 +5900,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.gamespot.com/feeds/mashup/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "breakingdefense",
@@ -3197,7 +5914,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://breakingdefense.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "twz",
@@ -3205,7 +5928,13 @@
 "lang": "en",
 "cat": "world",
 "url": "https://www.twz.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "defenceturk",
@@ -3213,7 +5942,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.defenceturk.net/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "savunmasanayist",
@@ -3221,7 +5956,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.savunmasanayist.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "oyungezer",
@@ -3229,7 +5970,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://oyungezer.com.tr/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gamingturk",
@@ -3237,7 +5984,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.merlininkazani.com/rss",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "hn-front",
@@ -3245,7 +5998,16 @@
 "lang": "en",
 "cat": "viral",
 "url": "https://hnrss.org/newest?points=100",
-"plat": "hn"
+"plat": "hn",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true
 },
 {
 "id": "ithome",
@@ -3253,7 +6015,13 @@
 "lang": "zh",
 "cat": "tech",
 "url": "https://www.ithome.com/rss/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "cnbeta",
@@ -3261,7 +6029,13 @@
 "lang": "zh",
 "cat": "tech",
 "url": "https://rss.cnbeta.com.tw/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "mydrivers",
@@ -3269,7 +6043,13 @@
 "lang": "zh",
 "cat": "tech",
 "url": "https://rss.mydrivers.com/rss.aspx",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-wabetainfo",
@@ -3277,7 +6057,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://wabetainfo.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-howtogeek",
@@ -3285,7 +6071,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.howtogeek.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-androidheadlines",
@@ -3293,7 +6085,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.androidheadlines.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-bgr",
@@ -3301,7 +6099,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://bgr.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-malwarebytes",
@@ -3309,7 +6113,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.malwarebytes.com/blog/feed/index.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-darkreading",
@@ -3317,7 +6127,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.darkreading.com/rss.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-sammyfans",
@@ -3325,7 +6141,13 @@
 "lang": "en",
 "cat": "samsung",
 "url": "https://www.sammyfans.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-galaxyclub",
@@ -3333,7 +6155,13 @@
 "lang": "en",
 "cat": "samsung",
 "url": "https://www.galaxyclub.nl/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-techspot",
@@ -3341,7 +6169,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.techspot.com/backend.xml",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-teknoburada",
@@ -3349,7 +6183,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.teknoburada.net/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-teknodiot",
@@ -3357,7 +6197,13 @@
 "lang": "tr",
 "cat": "tech",
 "url": "https://www.teknodiot.com/feed",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-socialmediatoday",
@@ -3365,7 +6211,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.socialmediatoday.com/feeds/news/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-idownloadblog",
@@ -3373,7 +6225,13 @@
 "lang": "en",
 "cat": "ios",
 "url": "https://www.idownloadblog.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-welivesecurity",
@@ -3381,7 +6239,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.welivesecurity.com/en/rss/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-kaspersky",
@@ -3389,7 +6253,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.kaspersky.com/blog/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-helpnetsecurity",
@@ -3397,7 +6267,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.helpnetsecurity.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-securityweek",
@@ -3405,7 +6281,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://www.securityweek.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "y-phandroid",
@@ -3413,7 +6295,13 @@
 "lang": "en",
 "cat": "tech",
 "url": "https://phandroid.com/feed/",
-"plat": "web"
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
 },
 {
 "id": "gn-tr-whatsapp",
@@ -3421,7 +6309,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=WhatsApp%20(%C3%B6zellik%20OR%20g%C3%BCncelleme%20OR%20yasak%20OR%20doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k%20OR%20yedek)%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=WhatsApp%20(%C3%B6zellik%20OR%20g%C3%BCncelleme%20OR%20yasak%20OR%20doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k%20OR%20yedek)%20when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-instagram2",
@@ -3429,7 +6325,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(Instagram%20OR%20\"Instagram%20Reels\")%20(\"yeni%20%C3%B6zellik\"%20OR%20\"g%C3%BCncelleme\"%20OR%20\"eri%C5%9Fim%20sorunu\"%20OR%20\"%C3%A7%C3%B6kt%C3%BC\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(Instagram%20OR%20\"Instagram%20Reels\")%20(\"yeni%20%C3%B6zellik\"%20OR%20\"g%C3%BCncelleme\"%20OR%20\"eri%C5%9Fim%20sorunu\"%20OR%20\"%C3%A7%C3%B6kt%C3%BC\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-platform",
@@ -3437,7 +6341,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(TikTok%20OR%20Telegram%20OR%20Threads)%20(\"yeni%20%C3%B6zellik\"%20OR%20yasakland%C4%B1%20OR%20g%C3%BCncelleme%20OR%20\"eri%C5%9Fim\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(TikTok%20OR%20Telegram%20OR%20Threads)%20(\"yeni%20%C3%B6zellik\"%20OR%20yasakland%C4%B1%20OR%20g%C3%BCncelleme%20OR%20\"eri%C5%9Fim\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-samsung",
@@ -3445,7 +6357,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=Samsung%20(Galaxy%20OR%20\"One%20UI\")%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=Samsung%20(Galaxy%20OR%20\"One%20UI\")%20when:1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-iphonegizli",
@@ -3453,7 +6373,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=iPhone%20(gizli%20%C3%B6zellik%20OR%20ipucu%20OR%20sorun%20OR%20g%C3%BCncelleme)%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=iPhone%20(gizli%20%C3%B6zellik%20OR%20ipucu%20OR%20sorun%20OR%20g%C3%BCncelleme)%20when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-androidg",
@@ -3461,7 +6389,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=Android%20(g%C3%BCncelleme%20OR%20%C3%B6zellik%20OR%20Pixel%20OR%20Gemini)%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=Android%20(g%C3%BCncelleme%20OR%20%C3%B6zellik%20OR%20Pixel%20OR%20Gemini)%20when:1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-dolandirici",
@@ -3469,7 +6405,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k%20OR%20oltalama%20OR%20\"sahte%20SMS\"%20OR%20\"sahte%20uygulama\"%20OR%20\"hesab%C4%B1n%C4%B1z%20%C3%A7al%C4%B1nd%C4%B1\")%20(telefon%20OR%20WhatsApp%20OR%20banka%20OR%20e-Devlet)%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k%20OR%20oltalama%20OR%20\"sahte%20SMS\"%20OR%20\"sahte%20uygulama\"%20OR%20\"hesab%C4%B1n%C4%B1z%20%C3%A7al%C4%B1nd%C4%B1\")%20(telefon%20OR%20WhatsApp%20OR%20banka%20OR%20e-Devlet)%20when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-operator",
@@ -3477,7 +6421,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(Turkcell%20OR%20Vodafone%20OR%20\"T%C3%BCrk%20Telekom\")%20(kampanya%20OR%20kesinti%20OR%205G%20OR%20tarife%20OR%20\"abonelik\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(Turkcell%20OR%20Vodafone%20OR%20\"T%C3%BCrk%20Telekom\")%20(kampanya%20OR%20kesinti%20OR%205G%20OR%20tarife%20OR%20\"abonelik\")%20when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-btk",
@@ -3485,7 +6437,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(BTK%20OR%20IMEI%20OR%20\"e-Devlet\"%20OR%20\"yurt%20d%C4%B1%C5%9F%C4%B1%20telefon\")%20when:3d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(BTK%20OR%20IMEI%20OR%20\"e-Devlet\"%20OR%20\"yurt%20d%C4%B1%C5%9F%C4%B1%20telefon\")%20when:3d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-bedava",
@@ -3493,7 +6453,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(%C3%BCcretsiz%20OR%20bedava)%20(oyun%20OR%20uygulama%20OR%20\"yapay%20zeka\"%20OR%20abonelik)%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(%C3%BCcretsiz%20OR%20bedava)%20(oyun%20OR%20uygulama%20OR%20\"yapay%20zeka\"%20OR%20abonelik)%20when:1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-aiarac",
@@ -3501,7 +6469,15 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(ChatGPT%20OR%20Gemini%20OR%20Claude%20OR%20Grok%20OR%20Copilot)%20(\"yeni%20%C3%B6zellik\"%20OR%20%C3%BCcretsiz%20OR%20T%C3%BCrk%C3%A7e%20OR%20kullan%C4%B1c%C4%B1lar)%20when:1d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(ChatGPT%20OR%20Gemini%20OR%20Claude%20OR%20Grok%20OR%20Copilot)%20(\"yeni%20%C3%B6zellik\"%20OR%20%C3%BCcretsiz%20OR%20T%C3%BCrk%C3%A7e%20OR%20kullan%C4%B1c%C4%B1lar)%20when:1d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
 },
 {
 "id": "gn-tr-telefonfiyat",
@@ -3509,6 +6485,3360 @@
 "lang": "tr",
 "cat": "tech",
 "plat": "gnews",
-"url": "https://news.google.com/rss/search?q=(telefon%20OR%20iPhone%20OR%20Samsung%20OR%20Xiaomi)%20(fiyat%20OR%20zam%20OR%20indirim)%20T%C3%BCrkiye%20when:2d&hl=tr&gl=TR&ceid=TR:tr"
+"url": "https://news.google.com/rss/search?q=(telefon%20OR%20iPhone%20OR%20Samsung%20OR%20Xiaomi)%20(fiyat%20OR%20zam%20OR%20indirim)%20T%C3%BCrkiye%20when:2d&hl=tr&gl=TR&ceid=TR:tr",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true
+},
+{
+"id": "t24",
+"name": "T24",
+"lang": "tr",
+"cat": "tr",
+"url": "https://t24.com.tr/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "bekliyor",
+"tarih": "2026-11-08",
+"not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
+}
+},
+{
+"id": "teyit",
+"name": "Teyit",
+"lang": "tr",
+"cat": "tr",
+"url": "https://teyit.org/feed",
+"plat": "web",
+"calisma": "gundem",
+"tip": "dogrulama",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [
+"dogrulama"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 256
+}
+},
+{
+"id": "turkishminute",
+"name": "Turkish Minute",
+"lang": "en",
+"cat": "tr",
+"url": "https://www.turkishminute.com/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "bekliyor",
+"tarih": "2026-11-08",
+"not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
+}
+},
+{
+"id": "aa-en",
+"name": "Anadolu Agency English",
+"lang": "en",
+"cat": "world",
+"url": "https://www.aa.com.tr/en/rss/default?cat=world",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [
+"ajans"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 278
+}
+},
+{
+"id": "bianet-en",
+"name": "Bianet English",
+"lang": "en",
+"cat": "tr",
+"url": "https://bianet.org/rss/english",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 232
+}
+},
+{
+"id": "kisa-dalga",
+"name": "Kısadalga",
+"lang": "tr",
+"cat": "tr",
+"url": "https://kisadalga.net/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 943
+}
+},
+{
+"id": "france24-fr",
+"name": "France 24 Français",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.france24.com/fr/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 336
+}
+},
+{
+"id": "france24-ar",
+"name": "France 24 العربية",
+"lang": "ar",
+"cat": "world",
+"url": "https://www.france24.com/ar/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 354
+}
+},
+{
+"id": "dw-de",
+"name": "DW Deutsch",
+"lang": "de",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-de-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 512
+}
+},
+{
+"id": "dw-ar",
+"name": "DW عربية",
+"lang": "ar",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-ar-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 501
+}
+},
+{
+"id": "dw-zh",
+"name": "DW 中文",
+"lang": "zh",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-chi-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 503
+}
+},
+{
+"id": "bbc-zh",
+"name": "BBC 中文",
+"lang": "zh",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 826
+}
+},
+{
+"id": "bbc-ar",
+"name": "BBC عربي",
+"lang": "ar",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 396
+}
+},
+{
+"id": "aljazeera-ar",
+"name": "الجزيرة",
+"lang": "ar",
+"cat": "world",
+"url": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "QA",
+"oncelik": 2,
+"nitelik": [
+"yayin-grubu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 343
+}
+},
+{
+"id": "ft",
+"name": "Financial Times",
+"lang": "en",
+"cat": "eco",
+"url": "https://www.ft.com/rss/home",
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 9,
+"ms": 1406
+}
+},
+{
+"id": "wsj-world",
+"name": "Wall Street Journal",
+"lang": "en",
+"cat": "world",
+"url": "https://feeds.a.dowjones.com/rss/RSSWorldNews",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "bekliyor",
+"tarih": "2026-11-08",
+"not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
+}
+},
+{
+"id": "wsj-tech",
+"name": "WSJ Technology",
+"lang": "en",
+"cat": "tech",
+"url": "https://feeds.a.dowjones.com/rss/RSSWSJD",
+"plat": "web",
+"calisma": "tekno",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "bekliyor",
+"tarih": "2026-11-08",
+"not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
+}
+},
+{
+"id": "lemonde",
+"name": "Le Monde",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.lemonde.fr/rss/une.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 16,
+"ms": 378
+}
+},
+{
+"id": "spiegel",
+"name": "Der Spiegel",
+"lang": "de",
+"cat": "world",
+"url": "https://www.spiegel.de/schlagzeilen/index.rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 292
+}
+},
+{
+"id": "tagesschau",
+"name": "Tagesschau",
+"lang": "de",
+"cat": "world",
+"url": "https://www.tagesschau.de/index~rss2.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 521
+}
+},
+{
+"id": "zeit",
+"name": "Die Zeit",
+"lang": "de",
+"cat": "world",
+"url": "https://newsfeed.zeit.de/index",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 15,
+"ms": 303
+}
+},
+{
+"id": "elpais",
+"name": "El País",
+"lang": "es",
+"cat": "world",
+"url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 642
+}
+},
+{
+"id": "yonhap",
+"name": "Yonhap English",
+"lang": "en",
+"cat": "world",
+"url": "https://en.yna.co.kr/RSS/news.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "KR",
+"oncelik": 1,
+"nitelik": [
+"ajans"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 2184
+}
+},
+{
+"id": "tass",
+"name": "TASS English",
+"lang": "en",
+"cat": "world",
+"url": "https://tass.com/rss/v2.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ajans",
+"ulke": "RU",
+"oncelik": 1,
+"nitelik": [
+"devlet-ajansi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 551
+}
+},
+{
+"id": "rt",
+"name": "RT",
+"lang": "en",
+"cat": "world",
+"url": "https://www.rt.com/rss/news/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [
+"devlet-yayini"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1758
+}
+},
+{
+"id": "haaretz",
+"name": "Haaretz",
+"lang": "en",
+"cat": "world",
+"url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "IL",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 496
+}
+},
+{
+"id": "kyivindependent",
+"name": "Kyiv Independent",
+"lang": "en",
+"cat": "world",
+"url": "https://kyivindependent.com/news-archive/rss",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "UA",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 15,
+"ms": 595
+}
+},
+{
+"id": "euractiv",
+"name": "Euractiv",
+"lang": "en",
+"cat": "world",
+"url": "https://www.euractiv.com/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "BE",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 797
+}
+},
+{
+"id": "politico-eu",
+"name": "Politico Europe",
+"lang": "en",
+"cat": "world",
+"url": "https://www.politico.eu/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "BE",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 309
+}
+},
+{
+"id": "foreignpolicy",
+"name": "Foreign Policy",
+"lang": "en",
+"cat": "world",
+"url": "https://foreignpolicy.com/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 309
+}
+},
+{
+"id": "crisisgroup",
+"name": "International Crisis Group",
+"lang": "en",
+"cat": "world",
+"url": "https://www.crisisgroup.org/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "BE",
+"oncelik": 1,
+"nitelik": [
+"dusunce-kurulusu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 682
+}
+},
+{
+"id": "un-news",
+"name": "UN News",
+"lang": "en",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 384
+}
+},
+{
+"id": "eu-komisyon",
+"name": "AB Komisyonu Basın",
+"lang": "en",
+"cat": "world",
+"url": "https://ec.europa.eu/commission/presscorner/api/rss?language=en",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "EU",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 885
+}
+},
+{
+"id": "us-state",
+"name": "ABD Dışişleri",
+"lang": "en",
+"cat": "world",
+"url": "https://www.state.gov/rss-feed/press-releases/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 265
+}
+},
+{
+"id": "us-defense",
+"name": "ABD Savunma Bakanlığı",
+"lang": "en",
+"cat": "world",
+"url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 2227
+}
+},
+{
+"id": "cisa-uyari",
+"name": "CISA Siber Güvenlik Uyarıları",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+"plat": "web",
+"calisma": "siber",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi",
+"siber-uyari"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 692
+}
+},
+{
+"id": "cisa-haber",
+"name": "CISA Haberleri",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.cisa.gov/news.xml",
+"plat": "web",
+"calisma": "siber",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 400
+}
+},
+{
+"id": "who",
+"name": "Dünya Sağlık Örgütü",
+"lang": "en",
+"cat": "sci",
+"url": "https://www.who.int/rss-feeds/news-english.xml",
+"plat": "web",
+"calisma": "bilim",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 372
+}
+},
+{
+"id": "fed",
+"name": "ABD Merkez Bankası (Fed)",
+"lang": "en",
+"cat": "eco",
+"url": "https://www.federalreserve.gov/feeds/press_all.xml",
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi",
+"resmi-veri"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 365
+}
+},
+{
+"id": "ecb",
+"name": "Avrupa Merkez Bankası",
+"lang": "en",
+"cat": "eco",
+"url": "https://www.ecb.europa.eu/rss/press.xml",
+"plat": "web",
+"calisma": "ekonomi",
+"tip": "resmi kurum",
+"ulke": "EU",
+"oncelik": 1,
+"nitelik": [
+"resmi",
+"resmi-veri"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 15,
+"ms": 441
+}
+},
+{
+"id": "theinformation",
+"name": "The Information",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.theinformation.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 995
+}
+},
+{
+"id": "google-ai",
+"name": "Google AI Blog",
+"lang": "en",
+"cat": "tech",
+"url": "https://blog.google/technology/ai/rss/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 1128
+}
+},
+{
+"id": "apple-ml",
+"name": "Apple Machine Learning",
+"lang": "en",
+"cat": "ios",
+"url": "https://machinelearning.apple.com/rss.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 479
+}
+},
+{
+"id": "aws-ml",
+"name": "AWS Machine Learning",
+"lang": "en",
+"cat": "tech",
+"url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 542
+}
+},
+{
+"id": "nvidia-dev",
+"name": "NVIDIA Developer Blog",
+"lang": "en",
+"cat": "tech",
+"url": "https://developer.nvidia.com/blog/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 485
+}
+},
+{
+"id": "samsung-news",
+"name": "Samsung Newsroom",
+"lang": "en",
+"cat": "samsung",
+"url": "https://news.samsung.com/global/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 710
+}
+},
+{
+"id": "arstechnica-ai",
+"name": "Ars Technica AI",
+"lang": "en",
+"cat": "tech",
+"url": "https://arstechnica.com/ai/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 1105
+}
+},
+{
+"id": "9to5toys",
+"name": "9to5Toys",
+"lang": "en",
+"cat": "tech",
+"url": "https://9to5toys.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1258
+}
+},
+{
+"id": "schneier",
+"name": "Schneier on Security",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.schneier.com/feed/atom/",
+"plat": "web",
+"calisma": "siber",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 312
+}
+},
+{
+"id": "sans-isc",
+"name": "SANS Internet Storm Center",
+"lang": "en",
+"cat": "tech",
+"url": "https://isc.sans.edu/rssfeed.xml",
+"plat": "web",
+"calisma": "siber",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 451
+}
+},
+{
+"id": "talos",
+"name": "Cisco Talos",
+"lang": "en",
+"cat": "tech",
+"url": "https://blog.talosintelligence.com/rss/",
+"plat": "web",
+"calisma": "siber",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 15,
+"ms": 435
+}
+},
+{
+"id": "mandiant",
+"name": "Google Cloud Threat Intelligence",
+"lang": "en",
+"cat": "tech",
+"url": "https://cloudblog.withgoogle.com/topics/threat-intelligence/rss/",
+"plat": "web",
+"calisma": "siber",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"sirket-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 2151
+}
+},
+{
+"id": "rest-of-world",
+"name": "Rest of World",
+"lang": "en",
+"cat": "tech",
+"url": "https://restofworld.org/feed/latest",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 12,
+"ms": 433
+}
+},
+{
+"id": "techcrunch-ai",
+"name": "TechCrunch AI",
+"lang": "en",
+"cat": "tech",
+"url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 293
+}
+},
+{
+"id": "sifted",
+"name": "Sifted",
+"lang": "en",
+"cat": "tech",
+"url": "https://sifted.eu/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 843
+}
+},
+{
+"id": "espn-soccer",
+"name": "ESPN Soccer",
+"lang": "en",
+"cat": "sport",
+"url": "https://www.espn.com/espn/rss/soccer/news",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 17,
+"ms": 242
+}
+},
+{
+"id": "athletic",
+"name": "The Athletic",
+"lang": "en",
+"cat": "sport",
+"url": "https://www.nytimes.com/athletic/rss/news/",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 518
+}
+},
+{
+"id": "motorsport",
+"name": "Motorsport.com",
+"lang": "en",
+"cat": "sport",
+"url": "https://www.motorsport.com/rss/all/news/",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "INT",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 189
+}
+},
+{
+"id": "autosport",
+"name": "Autosport",
+"lang": "en",
+"cat": "sport",
+"url": "https://www.autosport.com/rss/feed/all",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 543
+}
+},
+{
+"id": "marca",
+"name": "Marca",
+"lang": "es",
+"cat": "sport",
+"url": "https://e00-marca.uecdn.es/rss/portada.xml",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 698
+}
+},
+{
+"id": "bbc-f1",
+"name": "BBC Sport Formula 1",
+"lang": "en",
+"cat": "sport",
+"url": "https://feeds.bbci.co.uk/sport/formula1/rss.xml",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 499
+}
+},
+{
+"id": "bbc-tenis",
+"name": "BBC Sport Tennis",
+"lang": "en",
+"cat": "sport",
+"url": "https://feeds.bbci.co.uk/sport/tennis/rss.xml",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 512
+}
+},
+{
+"id": "bbc-basket",
+"name": "BBC Sport Basketball",
+"lang": "en",
+"cat": "sport",
+"url": "https://feeds.bbci.co.uk/sport/basketball/rss.xml",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 17,
+"ms": 438
+}
+},
+{
+"id": "dexerto",
+"name": "Dexerto",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.dexerto.com/feed/",
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"espor",
+"viral"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 972
+}
+},
+{
+"id": "science",
+"name": "Science News (AAAS)",
+"lang": "en",
+"cat": "sci",
+"url": "https://www.science.org/rss/news_current.xml",
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"hakemli-dergi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 434
+}
+},
+{
+"id": "biorxiv",
+"name": "bioRxiv",
+"lang": "en",
+"cat": "sci",
+"url": "https://connect.biorxiv.org/biorxiv_xml.php?subject=all",
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "INT",
+"oncelik": 2,
+"nitelik": [
+"on-calisma"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 971
+}
+},
+{
+"id": "spacenews",
+"name": "SpaceNews",
+"lang": "en",
+"cat": "sci",
+"url": "https://spacenews.com/feed/",
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 13,
+"ms": 361
+}
+},
+{
+"id": "universetoday",
+"name": "Universe Today",
+"lang": "en",
+"cat": "sci",
+"url": "https://www.universetoday.com/feed/",
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "CA",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 20,
+"ms": 524
+}
+},
+{
+"id": "medicalxpress",
+"name": "Medical Xpress",
+"lang": "en",
+"cat": "sci",
+"url": "https://medicalxpress.com/rss-feed/",
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"basin-bulteni"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 729
+}
+},
+{
+"id": "lancet",
+"name": "The Lancet",
+"lang": "en",
+"cat": "sci",
+"url": "https://www.thelancet.com/rssfeed/lancet_current.xml",
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"hakemli-dergi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 473
+}
+},
+{
+"id": "plos",
+"name": "PLOS ONE",
+"lang": "en",
+"cat": "sci",
+"url": "https://journals.plos.org/plosone/feed/atom",
+"plat": "web",
+"calisma": "bilim",
+"tip": "bilimsel",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"hakemli-dergi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 660
+}
+},
+{
+"id": "bmwblog",
+"name": "BMWBlog",
+"lang": "en",
+"cat": "auto",
+"url": "https://www.bmwblog.com/feed/",
+"plat": "web",
+"calisma": "oto",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 15,
+"ms": 515
+}
+},
+{
+"id": "evmagazin",
+"name": "Electrive",
+"lang": "en",
+"cat": "auto",
+"url": "https://www.electrive.com/feed/",
+"plat": "web",
+"calisma": "oto",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 322
+}
+},
+{
+"id": "billboard",
+"name": "Billboard",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.billboard.com/feed/",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 483
+}
+},
+{
+"id": "ann",
+"name": "Anime News Network",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.animenewsnetwork.com/all/rss.xml",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 811
+}
+},
+{
+"id": "vgc",
+"name": "VideoGamesChronicle",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.videogameschronicle.com/feed/",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 355
+}
+},
+{
+"id": "rockpapershotgun",
+"name": "Rock Paper Shotgun",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.rockpapershotgun.com/feed",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 492
+}
+},
+{
+"id": "pushsquare",
+"name": "Push Square",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.pushsquare.com/feeds/latest",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 427
+}
+},
+{
+"id": "indiewire",
+"name": "IndieWire",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.indiewire.com/feed/",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 12,
+"ms": 335
+}
+},
+{
+"id": "ign-tr",
+"name": "IGN Türkiye",
+"lang": "tr",
+"cat": "ent",
+"url": "https://tr.ign.com/feed.xml",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"uzman"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 264
+}
+},
+{
+"id": "screenrant",
+"name": "Screen Rant",
+"lang": "en",
+"cat": "ent",
+"url": "https://screenrant.com/feed/",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 863
+}
+},
+{
+"id": "guardian-culture",
+"name": "Guardian Culture",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.theguardian.com/culture/rss",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 707
+}
+},
+{
+"id": "guardian-games",
+"name": "Guardian Games",
+"lang": "en",
+"cat": "ent",
+"url": "https://www.theguardian.com/games/rss",
+"plat": "web",
+"calisma": "eglence",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 7,
+"ms": 338
+}
+},
+{
+"id": "producthunt",
+"name": "Product Hunt",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.producthunt.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 342
+}
+},
+{
+"id": "gh-ollama",
+"name": "GitHub: ollama sürümleri",
+"lang": "en",
+"cat": "tech",
+"url": "https://github.com/ollama/ollama/releases.atom",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"yazilim-surum"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 817
+}
+},
+{
+"id": "gh-llamacpp",
+"name": "GitHub: llama.cpp sürümleri",
+"lang": "en",
+"cat": "tech",
+"url": "https://github.com/ggml-org/llama.cpp/releases.atom",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"yazilim-surum"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 1159
+}
+},
+{
+"id": "gh-vscode",
+"name": "GitHub: VS Code sürümleri",
+"lang": "en",
+"cat": "tech",
+"url": "https://github.com/microsoft/vscode/releases.atom",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"yazilim-surum"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 627
+}
+},
+{
+"id": "gh-linux",
+"name": "GitHub: Linux çekirdeği etiketleri",
+"lang": "en",
+"cat": "tech",
+"url": "https://github.com/torvalds/linux/tags.atom",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"yazilim-surum"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 620
+}
+},
+{
+"id": "hn-best",
+"name": "Hacker News Best",
+"lang": "en",
+"cat": "tech",
+"url": "https://hnrss.org/best",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1979
+}
+},
+{
+"id": "devto",
+"name": "DEV Community",
+"lang": "en",
+"cat": "tech",
+"url": "https://dev.to/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal",
+"topluluk"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 12,
+"ms": 347
+}
+},
+{
+"id": "trends-de",
+"name": "Google Trends DE",
+"lang": "de",
+"cat": "viral",
+"url": "https://trends.google.com/trending/rss?geo=DE",
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 1065
+}
+},
+{
+"id": "trends-fr",
+"name": "Google Trends FR",
+"lang": "fr",
+"cat": "viral",
+"url": "https://trends.google.com/trending/rss?geo=FR",
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 951
+}
+},
+{
+"id": "trends-jp",
+"name": "Google Trends JP",
+"lang": "ja",
+"cat": "viral",
+"url": "https://trends.google.com/trending/rss?geo=JP",
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 989
+}
+},
+{
+"id": "trends-kr",
+"name": "Google Trends KR",
+"lang": "ko",
+"cat": "viral",
+"url": "https://trends.google.com/trending/rss?geo=KR",
+"plat": "web",
+"calisma": "eglence",
+"tip": "topluluk/trend",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [
+"erken-sinyal"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 918
+}
+},
+{
+"id": "gn-tr-ekonomi",
+"name": "Google Haberler: Ekonomi (TR)",
+"lang": "tr",
+"cat": "eco",
+"url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "ekonomi",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1020
+}
+},
+{
+"id": "gn-tr-dunya",
+"name": "Google Haberler: Dünya (TR)",
+"lang": "tr",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 991
+}
+},
+{
+"id": "gn-tr-spor",
+"name": "Google Haberler: Spor (TR)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 884
+}
+},
+{
+"id": "gn-tr-bilim",
+"name": "Google Haberler: Bilim (TR)",
+"lang": "tr",
+"cat": "sci",
+"url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "bilim",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 688
+}
+},
+{
+"id": "gn-de-welt",
+"name": "Google News: Welt (DE)",
+"lang": "de",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=de&gl=DE&ceid=DE:de",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "DE",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 754
+}
+},
+{
+"id": "gn-fr-monde",
+"name": "Google Actualités (FR)",
+"lang": "fr",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "FR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1114
+}
+},
+{
+"id": "gn-ar",
+"name": "Google أخبار (AR)",
+"lang": "ar",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=ar&gl=SA&ceid=SA:ar",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "SA",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 792
+}
+},
+{
+"id": "gn-ja",
+"name": "Google ニュース (JA)",
+"lang": "ja",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "JP",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 331
+}
+},
+{
+"id": "gn-ko",
+"name": "Google 뉴스 (KO)",
+"lang": "ko",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "KR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 507
+}
+},
+{
+"id": "gn-zh",
+"name": "Google 新闻 (ZH)",
+"lang": "zh",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "CN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 235
+}
+},
+{
+"id": "gn-en-politics",
+"name": "Google News: Politics (EN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1043
+}
+},
+{
+"id": "gn-en-defense",
+"name": "Google News: Defense (EN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=defense+OR+NATO+OR+sanctions&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 656
+}
+},
+{
+"id": "gn-tr-siyaset",
+"name": "Google Haberler: Siyaset (TR)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=siyaset+OR+TBMM+OR+se%C3%A7im&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 631
+}
+},
+{
+"id": "gn-tr-hukuk",
+"name": "Google Haberler: Hukuk (TR)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=mahkeme+OR+Anayasa+Mahkemesi+OR+yarg%C4%B1tay&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 983
+}
+},
+{
+"id": "gn-tr-egitim",
+"name": "Google Haberler: Eğitim (TR)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=e%C4%9Fitim+OR+MEB+OR+YKS+OR+%C3%BCniversite&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 738
+}
+},
+{
+"id": "gn-tr-savas",
+"name": "Google Haberler: Savaş ve güvenlik (TR)",
+"lang": "tr",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=sava%C5%9F+OR+ate%C5%9Fkes+OR+NATO+OR+Ukrayna+OR+Gazze&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 652
+}
+},
+{
+"id": "gn-tr-afet",
+"name": "Google Haberler: Afet (TR)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=deprem+OR+sel+OR+yang%C4%B1n+OR+AFAD&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 587
+}
+},
+{
+"id": "gn-resmi-resmigazete",
+"name": "Resmî Gazete (Google News site: araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site%3Aresmigazete.gov.tr&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 691
+}
+},
+{
+"id": "gn-resmi-tbmm",
+"name": "TBMM (Google News site: araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site%3Atbmm.gov.tr&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 650
+}
+},
+{
+"id": "gn-resmi-ysk",
+"name": "YSK (Google News araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=%22Y%C3%BCksek%20Se%C3%A7im%20Kurulu%22%20OR%20YSK&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 916
+}
+},
+{
+"id": "gn-resmi-tuik",
+"name": "TÜİK (Google News site: araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site%3Atuik.gov.tr%20OR%20T%C3%9C%C4%B0K%20b%C3%BClten&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "ekonomi",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 728
+}
+},
+{
+"id": "gn-resmi-tcmb",
+"name": "TCMB (Google News site: araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site%3Atcmb.gov.tr%20OR%20%22Merkez%20Bankas%C4%B1%22%20faiz%20karar%C4%B1&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "ekonomi",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 16,
+"ms": 568
+}
+},
+{
+"id": "gn-resmi-kvkk",
+"name": "KVKK (Google News araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=KVKK%20OR%20%22Ki%C5%9Fisel%20Verileri%20Koruma%20Kurulu%22&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siber",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 650
+}
+},
+{
+"id": "gn-resmi-kandilli",
+"name": "Kandilli Rasathanesi (Google News araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=Kandilli%20Rasathanesi%20deprem&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 860
+}
+},
+{
+"id": "gn-resmi-dismer",
+"name": "Dışişleri Bakanlığı (Google News araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=%22D%C4%B1%C5%9Fi%C5%9Fleri%20Bakanl%C4%B1%C4%9F%C4%B1%22%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 762
+}
+},
+{
+"id": "gn-resmi-meb",
+"name": "Milli Eğitim Bakanlığı (Google News araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=%22Milli%20E%C4%9Fitim%20Bakanl%C4%B1%C4%9F%C4%B1%22%20MEB%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 841
+}
+},
+{
+"id": "gn-resmi-saglik",
+"name": "Sağlık Bakanlığı (Google News araması)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=%22Sa%C4%9Fl%C4%B1k%20Bakanl%C4%B1%C4%9F%C4%B1%22%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"resmi-kaynak-haberi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 832
+}
+},
+{
+"id": "mfa-en2",
+"name": "Dışişleri Bakanlığı Duyurular (EN)",
+"lang": "en",
+"cat": "tr",
+"url": "https://www.mfa.gov.tr/en.rss.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "resmi kurum",
+"ulke": "TR",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 635
+}
+},
+{
+"id": "usgs-ay",
+"name": "USGS Önemli Depremler (30 gün)",
+"lang": "en",
+"cat": "sci",
+"url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.atom",
+"plat": "web",
+"calisma": "gundem",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi",
+"afet"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 14,
+"ms": 348
+}
+},
+{
+"id": "usgs-45",
+"name": "USGS M4.5+ Depremler (1 gün)",
+"lang": "en",
+"cat": "sci",
+"url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.atom",
+"plat": "web",
+"calisma": "gundem",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi",
+"afet"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 11,
+"ms": 412
+}
+},
+{
+"id": "trtworld2",
+"name": "TRT World",
+"lang": "en",
+"cat": "world",
+"url": "https://www.trtworld.com/feed/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 455
+}
+},
+{
+"id": "whitehouse2",
+"name": "Beyaz Saray Haberleri",
+"lang": "en",
+"cat": "world",
+"url": "https://www.whitehouse.gov/news/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 744
+}
+},
+{
+"id": "un-ar",
+"name": "UN News Arabic",
+"lang": "ar",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/ar/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 392
+}
+},
+{
+"id": "un-zh",
+"name": "UN News 中文",
+"lang": "zh",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/zh/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 327
+}
+},
+{
+"id": "un-fr",
+"name": "UN News Français",
+"lang": "fr",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/fr/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 343
+}
+},
+{
+"id": "ntvspor2",
+"name": "NTV Spor",
+"lang": "tr",
+"cat": "sport",
+"url": "https://www.ntvspor.net/rss/anasayfa",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 333
+}
+},
+{
+"id": "hdn2",
+"name": "Hürriyet Daily News",
+"lang": "en",
+"cat": "tr",
+"url": "https://www.hurriyetdailynews.com/rss/turkey",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [
+"yayin-grubu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 405
+}
+},
+{
+"id": "tff-gn",
+"name": "TFF (Google News araması)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=TFF%20%22T%C3%BCrkiye%20Futbol%20Federasyonu%22%20a%C3%A7%C4%B1klama&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"federasyon"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 708
+}
+},
+{
+"id": "tbf-gn",
+"name": "TBF (Google News araması)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=TBF%20%22T%C3%BCrkiye%20Basketbol%20Federasyonu%22&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"federasyon"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 550
+}
+},
+{
+"id": "tvf-gn",
+"name": "TVF (Google News araması)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=%22T%C3%BCrkiye%20Voleybol%20Federasyonu%22%20OR%20TVF%20voleybol&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"federasyon"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 911
+}
+},
+{
+"id": "gn-f1",
+"name": "Formula 1 (Google News araması)",
+"lang": "en",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=Formula%201%20F1&hl=en&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1149
+}
+},
+{
+"id": "gn-nba",
+"name": "NBA (Google News araması)",
+"lang": "en",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=NBA&hl=en&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1329
+}
+},
+{
+"id": "gn-tr-futbol",
+"name": "Futbol (Google News araması, TR)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=S%C3%BCper%20Lig%20OR%20Galatasaray%20OR%20Fenerbah%C3%A7e%20OR%20Be%C5%9Fikta%C5%9F%20OR%20Trabzonspor&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 918
+}
+},
+{
+"id": "gn-tr-basket",
+"name": "Basketbol ve voleybol (Google News, TR)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=basketbol%20OR%20voleybol%20OR%20%22Filenin%20Sultanlar%C4%B1%22%20OR%20%22A%20Milli%20Basketbol%22&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 828
+}
+},
+{
+"id": "gn-espor",
+"name": "E-spor (Google News araması)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=espor%20OR%20e-spor%20OR%20%22League%20of%20Legends%22%20OR%20Valorant&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"espor"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 550
+}
+},
+{
+"id": "gn-tr-transfer",
+"name": "Transfer (Google News araması, TR)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=transfer%20resmi%20OR%20%22transfer%20haberleri%22&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici",
+"transfer"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 688
+}
+},
+{
+"id": "gn-motor",
+"name": "Motor sporları (Google News araması)",
+"lang": "tr",
+"cat": "sport",
+"url": "https://news.google.com/rss/search?q=Formula%201%20OR%20MotoGP%20OR%20%22Kenan%20Sofuo%C4%9Flu%22%20OR%20WRC&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "spor",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 744
+}
+},
+{
+"id": "gn-tr-robotik",
+"name": "Robotik ve giyilebilir (Google News, TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=robot%20OR%20%22ak%C4%B1ll%C4%B1%20saat%22%20OR%20%22giyilebilir%20teknoloji%22%20OR%20%22insans%C4%B1%20robot%22&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 789
+}
+},
+{
+"id": "gn-tr-cip",
+"name": "Çip ve donanım (Google News, TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=NVIDIA%20OR%20i%C5%9Flemci%20OR%20yar%C4%B1%20iletken%20OR%20TSMC&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 579
+}
+},
+{
+"id": "gn-tr-eev",
+"name": "Elektrikli araç (Google News, TR)",
+"lang": "tr",
+"cat": "auto",
+"url": "https://news.google.com/rss/search?q=elektrikli%20ara%C3%A7%20OR%20Togg%20OR%20Tesla%20OR%20%C5%9Farj%20istasyonu&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "oto",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 554
+}
+},
+{
+"id": "gn-tr-israil",
+"name": "İsrail-Filistin (Google News, TR)",
+"lang": "tr",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=%C4%B0srail%20Filistin%20Gazze%20ate%C5%9Fkes&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 561
+}
+},
+{
+"id": "gn-tr-abd",
+"name": "ABD siyaseti (Google News, TR)",
+"lang": "tr",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=ABD%20Trump%20Kongre%20Beyaz%20Saray&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 851
+}
+},
+{
+"id": "gn-tr-avrupa",
+"name": "Avrupa (Google News, TR)",
+"lang": "tr",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=Avrupa%20Birli%C4%9Fi%20OR%20Almanya%20OR%20Fransa%20OR%20Macron%20OR%20Br%C3%BCksel&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 653
+}
+},
+{
+"id": "gn-tr-cinrus",
+"name": "Çin ve Rusya (Google News, TR)",
+"lang": "tr",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=%C3%87in%20OR%20Rusya%20OR%20Putin%20OR%20%C5%9Ei%20Cinping&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 577
+}
+},
+{
+"id": "gn-tr-ortadogu",
+"name": "Orta Doğu (Google News, TR)",
+"lang": "tr",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=Suriye%20OR%20Irak%20OR%20%C4%B0ran%20OR%20L%C3%BCbnan%20OR%20Yemen&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 851
+}
+},
+{
+"id": "gn-tr-kultur",
+"name": "Kültür-sanat (Google News, TR)",
+"lang": "tr",
+"cat": "ent",
+"url": "https://news.google.com/rss/search?q=sinema%20OR%20tiyatro%20OR%20m%C3%BCzik%20OR%20sergi%20OR%20kitap&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 874
+}
+},
+{
+"id": "gn-tr-yazilim",
+"name": "Yazılım ve uygulama (Google News, TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=yaz%C4%B1l%C4%B1m%20g%C3%BCncellemesi%20OR%20uygulama%20OR%20%22siber%20sald%C4%B1r%C4%B1%22%20OR%20%22veri%20ihlali%22&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 549
+}
 }
 ]

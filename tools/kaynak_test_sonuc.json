@@ -1,0 +1,2801 @@
+[
+ {
+  "id": "t24",
+  "url": "https://t24.com.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 6047,
+  "kesif": []
+ },
+ {
+  "id": "anka",
+  "url": "https://ankahaber.net/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 275,
+  "kesif": []
+ },
+ {
+  "id": "voa-tr",
+  "url": "https://www.voaturkce.com/api/zyqq_qmqyt",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 6046,
+  "kesif": []
+ },
+ {
+  "id": "teyit",
+  "url": "https://teyit.org/feed",
+  "tarih": "2026-11-08",
+  "ms": 256,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-07T07:30:03+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Hamburg'da bir köprüye asılan Erdoğan pankartını gösteren görsel gerçek mi?",
+   "Görüntülerdeki Arapça dükkan tabelalarının Trabzon'dan olduğu iddiası"
+  ],
+  "ok": true
+ },
+ {
+  "id": "dogrulukpayi",
+  "url": "https://www.dogrulukpayi.com/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 874,
+  "kesif": []
+ },
+ {
+  "id": "duvar-en",
+  "url": "https://www.duvarenglish.com/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 547,
+  "kesif": []
+ },
+ {
+  "id": "hdn",
+  "url": "https://www.hurriyetdailynews.com/rss",
+  "tarih": "2026-11-08",
+  "ms": 260,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "turkishminute",
+  "url": "https://www.turkishminute.com/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 6047,
+  "kesif": []
+ },
+ {
+  "id": "aa-en",
+  "url": "https://www.aa.com.tr/en/rss/default?cat=world",
+  "tarih": "2026-11-08",
+  "ms": 278,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:27:21+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "EU flags fly at half-mast after deadly Krakow shooting",
+   "Messi becomes first player to win back-to-back MLS Golden Boots"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trtworld",
+  "url": "https://www.trtworld.com/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 475,
+  "kesif": [
+   "https://www.trtworld.com/feed/rss.xml"
+  ]
+ },
+ {
+  "id": "bianet-en",
+  "url": "https://bianet.org/rss/english",
+  "tarih": "2026-11-08",
+  "ms": 232,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T16:45:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Weekly Roundup: November 1-7",
+   "Iman"
+  ],
+  "ok": true
+ },
+ {
+  "id": "kisa-dalga",
+  "url": "https://kisadalga.net/rss",
+  "tarih": "2026-11-08",
+  "ms": 943,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:54:20+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Windrush skandalı gibi... İngiltere'de Ankara Anlaşmalılara ret ve geri gönderme",
+   "Fon soruşturmasında bugün ne oldu? Tutuklamalar, liste tartışmaları, iddiaları y"
+  ],
+  "ok": true
+ },
+ {
+  "id": "t24-gundem",
+  "url": "https://t24.com.tr/rss/haber/gundem",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 6046,
+  "kesif": []
+ },
+ {
+  "id": "reuters-ajans",
+  "url": "https://www.reutersagency.com/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 2278,
+  "kesif": []
+ },
+ {
+  "id": "france24-fr",
+  "url": "https://www.france24.com/fr/rss",
+  "tarih": "2026-11-08",
+  "ms": 336,
+  "kod": 200,
+  "n": 24,
+  "n_tarihli": 24,
+  "son_haber": "2026-11-08T15:13:35+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "🔴 En direct : Gadi Eisenkot officiellement chargé de former le prochain gouverne",
+   "Débâcle de Trump aux midterms, revendications lycéennes, JOJ de Dakar : la semai"
+  ],
+  "ok": true
+ },
+ {
+  "id": "france24-ar",
+  "url": "https://www.france24.com/ar/rss",
+  "tarih": "2026-11-08",
+  "ms": 354,
+  "kod": 200,
+  "n": 24,
+  "n_tarihli": 24,
+  "son_haber": "2026-11-08T15:26:26+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "الرئيس الإسرائيلي إسحق هرتسوغ يكلف رسميا غادي أيزنكوت بتشكيل الحكومة المقبلة",
+   "إسرائيل: هرتسوغ يكلف رسميا أيزنكوت بتشكيل الحكومة محذرا من الضبابية السياسية بعد"
+  ],
+  "ok": true
+ },
+ {
+  "id": "dw-de",
+  "url": "https://rss.dw.com/rdf/rss-de-all",
+  "tarih": "2026-11-08",
+  "ms": 512,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:03:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Israel: Netanjahu-Rivale Gadi Eisenkot soll Regierung bilden",
+   "Mali: Fast 4.000 Vertriebene nach Angriff auf Souleye"
+  ],
+  "ok": true
+ },
+ {
+  "id": "dw-ar",
+  "url": "https://rss.dw.com/rdf/rss-ar-all",
+  "tarih": "2026-11-08",
+  "ms": 501,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:06:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "قتلى ومفقودون في غرق قارب مهاجرين قبالة السنغال",
+   "تحقيقات مرتقبة تشعل مواجهة جديدة بين ترامب والديمقراطيين"
+  ],
+  "ok": true
+ },
+ {
+  "id": "dw-zh",
+  "url": "https://rss.dw.com/rdf/rss-chi-all",
+  "tarih": "2026-11-08",
+  "ms": 503,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:32:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "法国周末再示威 抗议者数量减少",
+   "查尔斯三世希望访华？"
+  ],
+  "ok": true
+ },
+ {
+  "id": "bbc-zh",
+  "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 826,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T13:42:01+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "間諜、線人與秘密警察：匈牙利公開共產統治時期檔案",
+   "波蘭克拉科夫「極右翼」槍擊案致六人死亡 我們所知多少"
+  ],
+  "ok": true
+ },
+ {
+  "id": "bbc-ar",
+  "url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 396,
+  "kod": 200,
+  "n": 24,
+  "n_tarihli": 24,
+  "son_haber": "2026-11-08T15:46:09+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "إسرائيل تؤكد أنها \"لم تنجز مهمتها بعد في إيران\"، وطهران تتوعد بإفشال أي خطة لحصا",
+   "مقتل أربعة أشخاص وإصابة 88 في انقلاب قطار بمصر"
+  ],
+  "ok": true
+ },
+ {
+  "id": "aljazeera-ar",
+  "url": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9",
+  "tarih": "2026-11-08",
+  "ms": 343,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T12:38:30+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "احتياطيات قطر الدولية ترتفع إلى 262.3 مليار ريال",
+   "كيف سيحكم ستيفن ميلر البيت الأبيض؟"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ft",
+  "url": "https://www.ft.com/rss/home",
+  "tarih": "2026-11-08",
+  "ms": 1406,
+  "kod": 200,
+  "n": 9,
+  "n_tarihli": 9,
+  "son_haber": "2026-11-08T14:32:40+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Private equity firm seeks to take control of LIV Golf from Saudi wealth fund",
+   "Republican infighting mounts over corruption claims after midterms wipeout"
+  ],
+  "ok": true
+ },
+ {
+  "id": "wsj-world",
+  "url": "https://feeds.a.dowjones.com/rss/RSSWorldNews",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 170,
+  "kesif": []
+ },
+ {
+  "id": "wsj-tech",
+  "url": "https://feeds.a.dowjones.com/rss/RSSWSJD",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 70,
+  "kesif": []
+ },
+ {
+  "id": "lemonde",
+  "url": "https://www.lemonde.fr/rss/une.xml",
+  "tarih": "2026-11-08",
+  "ms": 378,
+  "kod": 200,
+  "n": 16,
+  "n_tarihli": 16,
+  "son_haber": "2026-11-08T14:50:22+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Le pape Léon XIV appelle les hommes à traiter leurs épouses « avec respect », lo",
+   "Midterms 2026 : Donald Trump estime que « l’Amérique a fait un gigantesque pas e"
+  ],
+  "ok": true
+ },
+ {
+  "id": "spiegel",
+  "url": "https://www.spiegel.de/schlagzeilen/index.rss",
+  "tarih": "2026-11-08",
+  "ms": 292,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:06:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Evolution der Haustierhaltung: »Die Jungaffen versuchten, auf Schweinen zu reite",
+   "»Dass es eine heftige Rolle ist, wusste ich - aber ich hatte keine Ahnung, wie h"
+  ],
+  "ok": true
+ },
+ {
+  "id": "tagesschau",
+  "url": "https://www.tagesschau.de/index~rss2.xml",
+  "tarih": "2026-11-08",
+  "ms": 521,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:56:42+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Köln gegen Leverkusen - das Rheinland-Duell",
+   "tagesschau in 100 Sekunden"
+  ],
+  "ok": true
+ },
+ {
+  "id": "zeit",
+  "url": "https://newsfeed.zeit.de/index",
+  "tarih": "2026-11-08",
+  "ms": 303,
+  "kod": 200,
+  "n": 15,
+  "n_tarihli": 15,
+  "son_haber": "2026-11-08T13:03:37+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Englische Wörter: Schon ein bisschen awkward: Wörter ohne Übersetzung",
+   "Vetorecht von Donald Trump: Der Präsident? Eigentlich überflüssig"
+  ],
+  "ok": true
+ },
+ {
+  "id": "elpais",
+  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+  "tarih": "2026-11-08",
+  "ms": 642,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:05:04+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Ben Shelton - Carlos Alcaraz en directo, la final del Masters 1000 de París en v",
+   "GP de Qatar en directo, la carrera de MotoGP, en vivo | Márquez busca en Lusail "
+  ],
+  "ok": true
+ },
+ {
+  "id": "xinhua",
+  "url": "http://www.xinhuanet.com/english/rss/worldrss.xml",
+  "tarih": "2026-11-08",
+  "ms": 884,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2018-01-23T21:00:00+00:00",
+  "son_gun": 3210,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "chinadaily",
+  "url": "https://www.chinadaily.com.cn/rss/world_rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 436,
+  "kesif": []
+ },
+ {
+  "id": "nhk",
+  "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+  "tarih": "2026-11-08",
+  "ms": 649,
+  "kod": 200,
+  "n": 7,
+  "n_tarihli": 7,
+  "son_haber": "2026-08-08T14:17:32+00:00",
+  "son_gun": 92,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "nhk-world",
+  "url": "https://www3.nhk.or.jp/nhkworld/en/news/feeds/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 618,
+  "kesif": []
+ },
+ {
+  "id": "yonhap",
+  "url": "https://en.yna.co.kr/RSS/news.xml",
+  "tarih": "2026-11-08",
+  "ms": 2184,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T11:41:15+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "U.S. military officials visit HD Hyundai shipyard to assess shipbuilding capabil",
+   "(LEAD) Gov't to review 2 tln-won funding support for firefighting efforts"
+  ],
+  "ok": true
+ },
+ {
+  "id": "tass",
+  "url": "https://tass.com/rss/v2.xml",
+  "tarih": "2026-11-08",
+  "ms": 551,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:56:04+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Zelensky has always been against Trump, peace in Ukraine — RDIF CEO",
+   "Four killed, 88 injured in train crash in Egypt — health ministry"
+  ],
+  "ok": true
+ },
+ {
+  "id": "rt",
+  "url": "https://www.rt.com/rss/news/",
+  "tarih": "2026-11-08",
+  "ms": 1758,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:49:41+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Democrats mull Biden-style pivot on Ukraine – FT",
+   "EU-wide data center protests take aim at Brussels (VIDEOS)"
+  ],
+  "ok": true
+ },
+ {
+  "id": "timesofisrael",
+  "url": "https://www.timesofisrael.com/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 403,
+  "neden": "HTTP Error 403: Forbidden",
+  "ms": 252,
+  "kesif": []
+ },
+ {
+  "id": "haaretz",
+  "url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
+  "tarih": "2026-11-08",
+  "ms": 496,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:00:23+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Unproven claims, lack of evidence: Inside the Shin Bet's election interference p",
+   "Israel's AG: 'Not aware' of evidence of election interference amid Shin Bet prob"
+  ],
+  "ok": true
+ },
+ {
+  "id": "middleeasteye",
+  "url": "https://www.middleeasteye.net/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "kyivindependent",
+  "url": "https://kyivindependent.com/news-archive/rss",
+  "tarih": "2026-11-08",
+  "ms": 595,
+  "kod": 200,
+  "n": 15,
+  "n_tarihli": 15,
+  "son_haber": "2026-11-08T15:01:43+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "3 people, including child, die in Kyiv Oblast from improperly running generator ",
+   "Why this South African decided to build a life in Ukraine — and document it"
+  ],
+  "ok": true
+ },
+ {
+  "id": "euractiv",
+  "url": "https://www.euractiv.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 797,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T12:32:07+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Russian strikes cut power to hundreds of thousands in Ukraine",
+   "Mélenchon fires up his base for Le Pen runoff"
+  ],
+  "ok": true
+ },
+ {
+  "id": "politico-eu",
+  "url": "https://www.politico.eu/feed/",
+  "tarih": "2026-11-08",
+  "ms": 309,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T14:03:28+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Europe will be represented in Abu Dhabi talks on Ukraine, French foreign ministe",
+   "Russian strikes leave 600,000 in the dark in eastern Ukraine"
+  ],
+  "ok": true
+ },
+ {
+  "id": "foreignpolicy",
+  "url": "https://foreignpolicy.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 309,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T21:59:39+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Global AI Stocks React to U.S. Midterm Results",
+   "The U.S. Senate Just Got a Lot Younger"
+  ],
+  "ok": true
+ },
+ {
+  "id": "cfr",
+  "url": "https://www.cfr.org/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 506,
+  "kesif": []
+ },
+ {
+  "id": "crisisgroup",
+  "url": "https://www.crisisgroup.org/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 682,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-10-30T16:15:53+00:00",
+  "son_gun": 8,
+  "ortak": 0.0,
+  "ornek": [
+   "The UAE in Sudan",
+   "The View from Eritrea"
+  ],
+  "ok": true
+ },
+ {
+  "id": "un-news",
+  "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 384,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T12:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "‘For the first time I have my own chair’: Gaza siblings find new freedom",
+   "Afghanistan faces deepening humanitarian crisis amid sweeping rights restriction"
+  ],
+  "ok": true
+ },
+ {
+  "id": "un-news-tr",
+  "url": "https://news.un.org/feed/subscribe/tr/news/all/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 371,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "nato",
+  "url": "https://www.nato.int/cps/en/natohq/news.rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 412,
+  "kesif": []
+ },
+ {
+  "id": "eu-parlamento",
+  "url": "https://www.europarl.europa.eu/rss/doc/top-stories/en.xml",
+  "tarih": "2026-11-08",
+  "ms": 314,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2023-11-08T11:44:00+00:00",
+  "son_gun": 1096,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "eu-komisyon",
+  "url": "https://ec.europa.eu/commission/presscorner/api/rss?language=en",
+  "tarih": "2026-11-08",
+  "ms": 885,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-06T13:25:32+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "Speech by Commissioner Hoekstra at the 22nd Athens Tax Forum",
+   "Speech by Commissioner Lahbib at the InvestFrontier Conference"
+  ],
+  "ok": true
+ },
+ {
+  "id": "us-state",
+  "url": "https://www.state.gov/rss-feed/press-releases/feed/",
+  "tarih": "2026-11-08",
+  "ms": 265,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-06T21:38:21+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Joint Statement on the Launch of Trilateral Technical Planning Groups to Advance",
+   "U.S. Sanctions Cripple Financial Networks Sustaining the Iranian Regime"
+  ],
+  "ok": true
+ },
+ {
+  "id": "us-whitehouse",
+  "url": "https://www.whitehouse.gov/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 483,
+  "kesif": []
+ },
+ {
+  "id": "us-congress",
+  "url": "https://www.congress.gov/rss/most-viewed-bills.xml",
+  "tarih": "2026-11-08",
+  "ms": 271,
+  "kod": 200,
+  "n": 1,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "us-defense",
+  "url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10",
+  "tarih": "2026-11-08",
+  "ms": 2227,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-06T19:40:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Defense Logistics Agency Adds $2 Billion in Critical Material Support to Nationa",
+   "Acting Navy Secretary Visits Blount Island, Observes How It Equips Marines World"
+  ],
+  "ok": true
+ },
+ {
+  "id": "cisa-uyari",
+  "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+  "tarih": "2026-11-08",
+  "ms": 692,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T12:00:00+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Mo"
+  ],
+  "ok": true
+ },
+ {
+  "id": "cisa-haber",
+  "url": "https://www.cisa.gov/news.xml",
+  "tarih": "2026-11-08",
+  "ms": 400,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-05T12:00:00+00:00",
+  "son_gun": 3,
+  "ortak": 0.0,
+  "ornek": [
+   "CISA, FBI, HHS, USDA, and DOT Urge Critical Infrastructure To Strengthen Industr",
+   "CISA Kicks Off Critical Infrastructure Security and Resilience Month 2026"
+  ],
+  "ok": true
+ },
+ {
+  "id": "nist-nvd",
+  "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 806,
+  "kesif": []
+ },
+ {
+  "id": "usom",
+  "url": "https://www.usom.gov.tr/rss/duyuru.rss",
+  "tarih": "2026-11-08",
+  "ms": 1338,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "who",
+  "url": "https://www.who.int/rss-feeds/news-english.xml",
+  "tarih": "2026-11-08",
+  "ms": 372,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-10-10T07:49:45+00:00",
+  "son_gun": 29,
+  "ortak": 0.0,
+  "ornek": [
+   "New WHO technical package to help countries improve health data for COVID-19 res",
+   "COVID-19 disrupting mental health services in most countries, WHO survey"
+  ],
+  "ok": true
+ },
+ {
+  "id": "fed",
+  "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+  "tarih": "2026-11-08",
+  "ms": 365,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-05T16:00:00+00:00",
+  "son_gun": 3,
+  "ortak": 0.0,
+  "ornek": [
+   "Federal Reserve Board announces termination of enforcement action with Allegiant",
+   "Federal Reserve Board announces approval of application by The Bank of Nova Scot"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ecb",
+  "url": "https://www.ecb.europa.eu/rss/press.xml",
+  "tarih": "2026-11-08",
+  "ms": 441,
+  "kod": 200,
+  "n": 15,
+  "n_tarihli": 15,
+  "son_haber": "2026-11-07T14:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Christine Lagarde: Interview with Yomiuri Shimbun",
+   "ECB publishes consolidated banking data for end-June 2026"
+  ],
+  "ok": true
+ },
+ {
+  "id": "imf",
+  "url": "https://www.imf.org/en/News/rss?language=eng",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 403,
+  "neden": "HTTP Error 403: Forbidden",
+  "ms": 335,
+  "kesif": []
+ },
+ {
+  "id": "worldbank",
+  "url": "https://www.worldbank.org/en/news/all?output=rss",
+  "tarih": "2026-11-08",
+  "ms": 273,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "tcmb",
+  "url": "https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Duyurular/Basin/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 3191,
+  "kesif": []
+ },
+ {
+  "id": "tuik",
+  "url": "https://data.tuik.gov.tr/Bulten/RssBulten",
+  "tarih": "2026-11-08",
+  "ms": 488,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "resmigazete",
+  "url": "https://www.resmigazete.gov.tr/rss/gazete.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 206,
+  "kesif": []
+ },
+ {
+  "id": "tbmm",
+  "url": "https://www.tbmm.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ms": 473,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "ysk",
+  "url": "https://www.ysk.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 54] Connection reset by peer>",
+  "ms": 158,
+  "kesif": []
+ },
+ {
+  "id": "btk",
+  "url": "https://www.btk.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ms": 245,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "kvkk",
+  "url": "https://www.kvkk.gov.tr/Rss/Duyurular",
+  "tarih": "2026-11-08",
+  "ms": 1113,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "afad",
+  "url": "https://www.afad.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 507,
+  "kesif": []
+ },
+ {
+  "id": "usgs-deprem",
+  "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.atom",
+  "tarih": "2026-11-08",
+  "ms": 178,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "emsc",
+  "url": "https://www.emsc-csem.org/service/rss/rss.php?typ=emsc",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 594,
+  "kesif": []
+ },
+ {
+  "id": "dismer",
+  "url": "https://www.mfa.gov.tr/rss.tr.mfa",
+  "tarih": "2026-11-08",
+  "ms": 569,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": [
+   "https://www.mfa.gov.tr/en.rss.mfa?45b45ccf-8814-4029-9224-5685e8ca3542",
+   "https://www.mfa.gov.tr/en.rss.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4",
+   "https://www.mfa.gov.tr/en.rss.mfa?7342a8d1-3117-42aa-8ddd-01adb5653889"
+  ]
+ },
+ {
+  "id": "mfa-en",
+  "url": "https://www.mfa.gov.tr/rss.en.mfa",
+  "tarih": "2026-11-08",
+  "ms": 349,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": [
+   "https://www.mfa.gov.tr/en.rss.mfa?45b45ccf-8814-4029-9224-5685e8ca3542",
+   "https://www.mfa.gov.tr/en.rss.mfa?ad9093da-8e71-4678-a1b6-05f297baadc4",
+   "https://www.mfa.gov.tr/en.rss.mfa?7342a8d1-3117-42aa-8ddd-01adb5653889"
+  ]
+ },
+ {
+  "id": "mem",
+  "url": "https://www.meb.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Sayfa BulunamadÄ±",
+  "ms": 1228,
+  "kesif": []
+ },
+ {
+  "id": "saglik-bak",
+  "url": "https://www.saglik.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ms": 226,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "ticaret-bak",
+  "url": "https://ticaret.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ms": 785,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "sanayi-bak",
+  "url": "https://www.sanayi.gov.tr/rss",
+  "tarih": "2026-11-08",
+  "ms": 211,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "imore",
+  "url": "https://www.imore.com/feed",
+  "tarih": "2026-11-08",
+  "ms": 924,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2024-09-25T23:00:00+00:00",
+  "son_gun": 773,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "thehackernews",
+  "url": "https://feeds.feedburner.com/TheHackersNews",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "theinformation",
+  "url": "https://www.theinformation.com/feed",
+  "tarih": "2026-11-08",
+  "ms": 995,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-08T16:00:51+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "How Much More AI Stock Can the Market Absorb?",
+   "Will Democrats Really Crush Data Centers?"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ms-ai",
+  "url": "https://blogs.microsoft.com/ai/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 410,
+  "neden": "HTTP Error 410: Gone",
+  "ms": 506,
+  "kesif": [
+   "https://blogs.microsoft.com/feed/",
+   "https://blogs.microsoft.com/comments/feed/"
+  ]
+ },
+ {
+  "id": "meta-ai",
+  "url": "https://ai.meta.com/blog/rss/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1750,
+  "kesif": []
+ },
+ {
+  "id": "google-ai",
+  "url": "https://blog.google/technology/ai/rss/",
+  "tarih": "2026-11-08",
+  "ms": 1128,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-05T17:00:00+00:00",
+  "son_gun": 2,
+  "ortak": 0.1,
+  "ornek": [
+   "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+   "The latest AI news we announced in October 2026"
+  ],
+  "ok": true
+ },
+ {
+  "id": "apple-ml",
+  "url": "https://machinelearning.apple.com/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 479,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-05T00:00:00+00:00",
+  "son_gun": 3,
+  "ortak": 0.0,
+  "ornek": [
+   "Faster Retrieval for Better, More Efficient RAG",
+   "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior"
+  ],
+  "ok": true
+ },
+ {
+  "id": "anthropic-news",
+  "url": "https://www.anthropic.com/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 548,
+  "kesif": []
+ },
+ {
+  "id": "aws-ml",
+  "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+  "tarih": "2026-11-08",
+  "ms": 542,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-06T18:01:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "SageMaker Inference now supports Multi-Instance GPU to maximize GPU utilization ",
+   "Taxonomy of agentic primitives in Amazon Quick"
+  ],
+  "ok": true
+ },
+ {
+  "id": "nvidia-dev",
+  "url": "https://developer.nvidia.com/blog/feed",
+  "tarih": "2026-11-08",
+  "ms": 485,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T22:20:31+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+   "How NVIDIA DSX MaxLPS Maximizes AI Factory Throughput and Efficiency"
+  ],
+  "ok": true
+ },
+ {
+  "id": "samsung-news",
+  "url": "https://news.samsung.com/global/feed",
+  "tarih": "2026-11-08",
+  "ms": 710,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-05T08:00:00+00:00",
+  "son_gun": 3,
+  "ortak": 0.0,
+  "ornek": [
+   "Beyond the Medal: Samsung Helps Young Athletes Explore What Comes Next at Dakar ",
+   "Upgraded Sleep Apnea Feature Now Available on Galaxy Ring Following Regulatory A"
+  ],
+  "ok": true
+ },
+ {
+  "id": "samsung-tr",
+  "url": "https://news.samsung.com/tr/feed",
+  "tarih": "2026-11-08",
+  "ms": 671,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-09-09T17:10:02+00:00",
+  "son_gun": 59,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "xiaomi-gn",
+  "url": "https://9to5google.com/guides/pixel/feed/",
+  "tarih": "2026-11-08",
+  "ms": 1096,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2017-12-23T19:28:32+00:00",
+  "son_gun": 3241,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "arstechnica-ai",
+  "url": "https://arstechnica.com/ai/feed/",
+  "tarih": "2026-11-08",
+  "ms": 1105,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-06T17:43:02+00:00",
+  "son_gun": 1,
+  "ortak": 0.35,
+  "ornek": [
+   "“Does Meta think we can’t read?” Meta abandons sketchy commercial terms update.",
+   "Could potential AI clones of GTA VI force a quicker official port?"
+  ],
+  "ok": true
+ },
+ {
+  "id": "venturebeat",
+  "url": "https://venturebeat.com/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 429,
+  "neden": "HTTP Error 429: Too Many Requests",
+  "ms": 377,
+  "kesif": []
+ },
+ {
+  "id": "zdnet-ai",
+  "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 909,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T00:00:45+00:00",
+  "son_gun": 1,
+  "ortak": 1.0,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (100%)"
+ },
+ {
+  "id": "9to5toys",
+  "url": "https://9to5toys.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 1258,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:30:38+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Amazon’s early Black Friday Google deals end tonight: $350 off Pixel 11, $100 Pi",
+   "9to5Toys News Weekly recap – Early Black Friday, LEGO Godzilla, Galaxy SmartTag "
+  ],
+  "ok": true
+ },
+ {
+  "id": "anandtech",
+  "url": "https://www.tomshardware.com/feeds/all",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "theverge-ai",
+  "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "krebs2",
+  "url": "https://krebsonsecurity.com/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "schneier",
+  "url": "https://www.schneier.com/feed/atom/",
+  "tarih": "2026-11-08",
+  "ms": 312,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-06T22:05:29+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Friday Squid Blogging: New Jurassic Squid Predecessors",
+   "Pinpointing Location of Videos from Background Airplane Sounds"
+  ],
+  "ok": true
+ },
+ {
+  "id": "sans-isc",
+  "url": "https://isc.sans.edu/rssfeed.xml",
+  "tarih": "2026-11-08",
+  "ms": 451,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T15:44:33+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Scans for Sshole Vulnerability (CVE-2026-123158), (Sun, Nov 8th)",
+   "ISC Stormcast For Friday, November 6th, 2026 https://isc.sans.edu/podcastdetail/"
+  ],
+  "ok": true
+ },
+ {
+  "id": "talos",
+  "url": "https://blog.talosintelligence.com/rss/",
+  "tarih": "2026-11-08",
+  "ms": 435,
+  "kod": 200,
+  "n": 15,
+  "n_tarihli": 15,
+  "son_haber": "2026-11-05T19:00:00+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "Bring a tent, I've got the coffee: Lessons from it-sa",
+   "Appraisal by AI: Model-driven victim prioritization in the VOLTA infostealer"
+  ],
+  "ok": true
+ },
+ {
+  "id": "mandiant",
+  "url": "https://cloudblog.withgoogle.com/topics/threat-intelligence/rss/",
+  "tarih": "2026-11-08",
+  "ms": 2151,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-02T14:00:00+00:00",
+  "son_gun": 6,
+  "ortak": 0.0,
+  "ornek": [
+   "Shutting the Door on the XCPE Botnet",
+   "The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model R"
+  ],
+  "ok": true
+ },
+ {
+  "id": "rest-of-world",
+  "url": "https://restofworld.org/feed/latest",
+  "tarih": "2026-11-08",
+  "ms": 433,
+  "kod": 200,
+  "n": 12,
+  "n_tarihli": 12,
+  "son_haber": "2026-11-05T11:00:00+00:00",
+  "son_gun": 3,
+  "ortak": 0.0,
+  "ornek": [
+   "A rare strike in Taiwan exposes labor unrest beneath the global AI rush",
+   "Startups recalibrate Chinese AI for the West"
+  ],
+  "ok": true
+ },
+ {
+  "id": "techcrunch-ai",
+  "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+  "tarih": "2026-11-08",
+  "ms": 293,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-07T22:07:22+00:00",
+  "son_gun": 0,
+  "ortak": 0.55,
+  "ornek": [
+   "After the midterms, things are looking rocky for Elon Musk and data centers",
+   "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence "
+  ],
+  "ok": true
+ },
+ {
+  "id": "sifted",
+  "url": "https://sifted.eu/feed",
+  "tarih": "2026-11-08",
+  "ms": 843,
+  "kod": 200,
+  "n": 24,
+  "n_tarihli": 24,
+  "son_haber": "2026-11-06T13:36:15+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "Sequoia is leaving London. Should Europe be worried?",
+   "What Sequoia’s London exit means for Europe"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gsmarena-tr",
+  "url": "https://www.gsmarena.com/rss-news-reviews.php3",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "espn2",
+  "url": "https://www.espn.com/espn/rss/news",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "espn-soccer",
+  "url": "https://www.espn.com/espn/rss/soccer/news",
+  "tarih": "2026-11-08",
+  "ms": 242,
+  "kod": 200,
+  "n": 17,
+  "n_tarihli": 17,
+  "son_haber": "2026-11-08T15:19:23+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Tenerife vow to financially support De Miguel's daughter after tragic death",
+   "Dutch derby cancelled after fans block own team's bus from leaving"
+  ],
+  "ok": true
+ },
+ {
+  "id": "athletic",
+  "url": "https://www.nytimes.com/athletic/rss/news/",
+  "tarih": "2026-11-08",
+  "ms": 518,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:04:08+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "NFL Week 9 live scores and updates: Bengals lead Falcons at halftime in Madrid, ",
+   "Manchester United vs Aston Villa live updates: Premier League match latest as Ko"
+  ],
+  "ok": true
+ },
+ {
+  "id": "uefa",
+  "url": "https://www.uefa.com/rssfeed/news/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "The read operation timed out",
+  "ms": 25184,
+  "kesif": []
+ },
+ {
+  "id": "fifa",
+  "url": "https://www.fifa.com/rss-feeds/news",
+  "tarih": "2026-11-08",
+  "ms": 1711,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "nba",
+  "url": "https://www.nba.com/rss/nba_rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 578,
+  "kesif": []
+ },
+ {
+  "id": "f1",
+  "url": "https://www.formula1.com/content/fom-website/en/latest/all.xml",
+  "tarih": "2026-11-08",
+  "ms": 363,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "tarihli kayit yok"
+ },
+ {
+  "id": "atp",
+  "url": "https://www.atptour.com/en/media/rss-feed/xml-feed",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 403,
+  "neden": "HTTP Error 403: Forbidden",
+  "ms": 264,
+  "kesif": []
+ },
+ {
+  "id": "wta",
+  "url": "https://www.wtatennis.com/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 955,
+  "kesif": []
+ },
+ {
+  "id": "olympics",
+  "url": "https://olympics.com/en/rss/news",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "The read operation timed out",
+  "ms": 25155,
+  "kesif": []
+ },
+ {
+  "id": "tff",
+  "url": "https://www.tff.org/Resources/TFF/rss/tffhaber.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 229,
+  "kesif": []
+ },
+ {
+  "id": "tbf",
+  "url": "https://www.tbf.org.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 403,
+  "neden": "HTTP Error 403: Forbidden",
+  "ms": 185,
+  "kesif": []
+ },
+ {
+  "id": "tvf",
+  "url": "https://www.tvf.org.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 841,
+  "kesif": []
+ },
+ {
+  "id": "trtspor",
+  "url": "https://www.trtspor.com.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 271,
+  "kesif": []
+ },
+ {
+  "id": "ntvspor",
+  "url": "https://www.ntvspor.net/rss",
+  "tarih": "2026-11-08",
+  "ms": 237,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "fanatik",
+  "url": "https://www.fanatik.com.tr/rss/anasayfa",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 225,
+  "kesif": []
+ },
+ {
+  "id": "sporx",
+  "url": "https://www.sporx.com/rss/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 276,
+  "kesif": []
+ },
+ {
+  "id": "bein",
+  "url": "https://beinsports.com.tr/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 356,
+  "kesif": []
+ },
+ {
+  "id": "motorsport",
+  "url": "https://www.motorsport.com/rss/all/news/",
+  "tarih": "2026-11-08",
+  "ms": 189,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:59:53+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Justin Allgaier is a Hall of Fame asset, nearing a Hall of Fame resume",
+   "Charles Milesi \"can’t really remember what happened\" in huge WEC crash"
+  ],
+  "ok": true
+ },
+ {
+  "id": "autosport",
+  "url": "https://www.autosport.com/rss/feed/all",
+  "tarih": "2026-11-08",
+  "ms": 543,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T13:29:32+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Can Hamilton and Verstappen fight back for F1 Brazilian GP victory?",
+   "The wet-weather challenges thrown up by Brazilian GP qualifying"
+  ],
+  "ok": true
+ },
+ {
+  "id": "eurosport",
+  "url": "https://www.eurosport.com/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 378,
+  "kesif": []
+ },
+ {
+  "id": "marca",
+  "url": "https://e00-marca.uecdn.es/rss/portada.xml",
+  "tarih": "2026-11-08",
+  "ms": 698,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T08:48:31+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "Los jugadores de la selección y Juanjo Gutiérrez, antes de los cuartos de final.",
+   "Mario Hezonja inicia una entrada a canasta entre Jared McCain Ajay Mitchell."
+  ],
+  "ok": true
+ },
+ {
+  "id": "lequipe",
+  "url": "https://www.lequipe.fr/rss/actu_rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 403,
+  "neden": "HTTP Error 403: Forbidden",
+  "ms": 489,
+  "kesif": []
+ },
+ {
+  "id": "bbc-f1",
+  "url": "https://feeds.bbci.co.uk/sport/formula1/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 499,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T23:53:30+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Qualifying conditions borderline - but Norris and Russell hoping for more rain",
+   "Hamilton & Verstappen to start from back in Brazil"
+  ],
+  "ok": true
+ },
+ {
+  "id": "bbc-tenis",
+  "url": "https://feeds.bbci.co.uk/sport/tennis/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 512,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T21:10:55+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "World number one Rybakina withdraws from WTA Finals",
+   "Alcaraz sets up Shelton rematch in Paris final"
+  ],
+  "ok": true
+ },
+ {
+  "id": "bbc-basket",
+  "url": "https://feeds.bbci.co.uk/sport/basketball/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 438,
+  "kod": 200,
+  "n": 17,
+  "n_tarihli": 17,
+  "son_haber": "2026-11-05T08:39:57+00:00",
+  "son_gun": 3,
+  "ortak": 0.0,
+  "ornek": [
+   "Career-best Wembanyama display seals Spurs win",
+   "Valkyries win WNBA title in their second season"
+  ],
+  "ok": true
+ },
+ {
+  "id": "esports-insider",
+  "url": "https://esportsinsider.com/feed",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 5975,
+  "kesif": []
+ },
+ {
+  "id": "dexerto",
+  "url": "https://www.dexerto.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 972,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:02:26+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Valorant team disqualified for cheating after knocking out Masters champion Derk",
+   "Developer creates script to email Sam Altman about his unused RAM every day"
+  ],
+  "ok": true
+ },
+ {
+  "id": "esa",
+  "url": "https://www.esa.int/rssfeed/Our_Activities/Space_News",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 860,
+  "kesif": []
+ },
+ {
+  "id": "science",
+  "url": "https://www.science.org/rss/news_current.xml",
+  "tarih": "2026-11-08",
+  "ms": 434,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-06T12:35:00+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "AI can track a single bird over time—based solely on its song",
+   "A congressional veteran and a rookie lay out a possible science agenda for Democ"
+  ],
+  "ok": true
+ },
+ {
+  "id": "eurekalert",
+  "url": "https://www.eurekalert.org/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1065,
+  "kesif": []
+ },
+ {
+  "id": "arxiv-ai",
+  "url": "https://rss.arxiv.org/rss/cs.AI",
+  "tarih": "2026-11-08",
+  "ms": 457,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "arxiv-lg",
+  "url": "https://rss.arxiv.org/rss/cs.LG",
+  "tarih": "2026-11-08",
+  "ms": 438,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "biorxiv",
+  "url": "https://connect.biorxiv.org/biorxiv_xml.php?subject=all",
+  "tarih": "2026-11-08",
+  "ms": 971,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T21:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Fatty Acid Synthase Binds Cellular mRNAs and its Depletion Reduces Translational",
+   "Cryo-EM structures of an Acinetobacter baumannii podovirus reveal a canonical ca"
+  ],
+  "ok": true
+ },
+ {
+  "id": "nature-news",
+  "url": "https://www.nature.com/nature.rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "nasa-breaking",
+  "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "spacenews",
+  "url": "https://spacenews.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 361,
+  "kod": 200,
+  "n": 13,
+  "n_tarihli": 13,
+  "son_haber": "2026-11-05T21:45:00+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "CesiumAstro Secures $730 Million in Janus Henderson-Led Series D at a Valuation ",
+   "Cork Takes the Heat So DRACO’s Data Can Survive"
+  ],
+  "ok": true
+ },
+ {
+  "id": "universetoday",
+  "url": "https://www.universetoday.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 524,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-07T08:47:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Our Sun’s Undiscovered Stellar Nemesis Is Still Out There, Says Physicist",
+   "The ELT Can Probe Ultra-Diffuse Galaxies and Their Dark Matter Mysteries"
+  ],
+  "ok": true
+ },
+ {
+  "id": "medicalxpress",
+  "url": "https://medicalxpress.com/rss-feed/",
+  "tarih": "2026-11-08",
+  "ms": 729,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:30:02+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Single iron infusion improved exercise capacity in people with the most common f",
+   "Financial incentives nearly double quit rates among underserved people who smoke"
+  ],
+  "ok": true
+ },
+ {
+  "id": "lancet",
+  "url": "https://www.thelancet.com/rssfeed/lancet_current.xml",
+  "tarih": "2026-11-08",
+  "ms": 473,
+  "kod": 200,
+  "n": 24,
+  "n_tarihli": 24,
+  "son_haber": "2026-11-06T21:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Climate change and health: 10 years on, what next?",
+   "Beyond the models: addressing the catastrophic health threats facing humanity re"
+  ],
+  "ok": true
+ },
+ {
+  "id": "plos",
+  "url": "https://journals.plos.org/plosone/feed/atom",
+  "tarih": "2026-11-08",
+  "ms": 660,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T14:00:00+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "Effects of vitamin D supplementation on vitamin D status and physical performanc",
+   "Tranexamic acid for anemia in women of reproductive age: A systematic review of "
+  ],
+  "ok": true
+ },
+ {
+  "id": "autonews",
+  "url": "https://www.autonews.com/arc/outboundfeeds/rss/?outputType=xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 403,
+  "neden": "HTTP Error 403: Forbidden",
+  "ms": 304,
+  "kesif": []
+ },
+ {
+  "id": "topgear",
+  "url": "https://www.topgear.com/rss/news.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 987,
+  "kesif": []
+ },
+ {
+  "id": "bmwblog",
+  "url": "https://www.bmwblog.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 515,
+  "kod": 200,
+  "n": 15,
+  "n_tarihli": 15,
+  "son_haber": "2026-11-08T09:36:28+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Rolls-Royce Sales Plunge 18% In Q3 As Luxury Brand Struggles In 2026",
+   "MINI Sales Dip In Q3 2026, But The Brand Is Still Having A Good Year"
+  ],
+  "ok": true
+ },
+ {
+  "id": "motortrend",
+  "url": "https://www.motortrend.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 1421,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "autoblog",
+  "url": "https://www.autoblog.com/rss.xml",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 403,
+  "neden": "HTTP Error 403: Forbidden",
+  "ms": 411,
+  "kesif": []
+ },
+ {
+  "id": "evmagazin",
+  "url": "https://www.electrive.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 322,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T11:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "The perfect illusion: our first test drive of the AMG GT 4-Door and SUV",
+   "BYD’s Yangwang U9 Xtreme breaks the 500 km/h barrier"
+  ],
+  "ok": true
+ },
+ {
+  "id": "drivetribe",
+  "url": "https://tr.motor1.com/rss/articles/all/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "otomobilgunlugu",
+  "url": "https://www.otomobilgunlugu.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 914,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "carwow",
+  "url": "https://www.carwow.co.uk/blog/feed",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 765,
+  "kesif": []
+ },
+ {
+  "id": "billboard",
+  "url": "https://www.billboard.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 483,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T11:30:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "NFL Madrid Game Halftime Show 2026: Here’s Where to Watch Manuel Turizo Perform ",
+   "U2 Weigh In on Ed Sheeran and Macklemore Tour Controversy"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ann",
+  "url": "https://www.animenewsnetwork.com/all/rss.xml",
+  "tarih": "2026-11-08",
+  "ms": 811,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T11:00:18+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Spy×Family Anime Gets 4th Season, Theatrical Film in 2027",
+   "Bride of the Barrier Master Anime Streams Videos for Leads Hana Ichise, Saku Ich"
+  ],
+  "ok": true
+ },
+ {
+  "id": "vgc",
+  "url": "https://www.videogameschronicle.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 355,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T13:36:43+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Zelda OOT Remake: Get the Silver and Golden Scales to dive deeper",
+   "Zelda OOT Remake: Full Biggoron’s Sword quest explained"
+  ],
+  "ok": true
+ },
+ {
+  "id": "rockpapershotgun",
+  "url": "https://www.rockpapershotgun.com/feed",
+  "tarih": "2026-11-08",
+  "ms": 492,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T11:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "The Sunday Papers",
+   "Echoes of Mirror's Edge, Dishonored and a dream set in Italy I once had can be f"
+  ],
+  "ok": true
+ },
+ {
+  "id": "pushsquare",
+  "url": "https://www.pushsquare.com/feeds/latest",
+  "tarih": "2026-11-08",
+  "ms": 427,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Opinion: Onimusha vs Phantom Blade Zero - The Insane Sword Fight for Game of the",
+   "God of War Spin-Off Game Seemingly Getting Surprise PS4 Port"
+  ],
+  "ok": true
+ },
+ {
+  "id": "empire",
+  "url": "https://www.empireonline.com/movies/news/feed/",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 583,
+  "kesif": [
+   "https://rss.onebauer.media/api/feed-aggregator?hostname=https://www.empireonline.com"
+  ]
+ },
+ {
+  "id": "indiewire",
+  "url": "https://www.indiewire.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 335,
+  "kod": 200,
+  "n": 12,
+  "n_tarihli": 12,
+  "son_haber": "2026-11-08T14:31:52+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Dylan Skolnick Returning as Co-Director of the Cinema Arts Centre Following Prot",
+   "Eric Bauza’s Final ‘Looney Tunes’ Performance Is ‘Daffy Season,’ Now in Theaters"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ign-tr",
+  "url": "https://tr.ign.com/feed.xml",
+  "tarih": "2026-11-08",
+  "ms": 264,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-10-14T07:10:48+00:00",
+  "son_gun": 25,
+  "ortak": 0.0,
+  "ornek": [
+   "EA Sports FC 27 İnceleme",
+   "Onimusha: Way of the Sword İnceleme"
+  ],
+  "ok": true
+ },
+ {
+  "id": "screenrant",
+  "url": "https://screenrant.com/feed/",
+  "tarih": "2026-11-08",
+  "ms": 863,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T16:01:18+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "The Walking Dead Meets Command & Conquer In New Zombie Survival RTS",
+   "New Horror Book Expands Eisner-Winning Comic Franchise Ahead Of Upcoming Movie"
+  ],
+  "ok": true
+ },
+ {
+  "id": "guardian-culture",
+  "url": "https://www.theguardian.com/culture/rss",
+  "tarih": "2026-11-08",
+  "ms": 707,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:00:43+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "Bluey’s Daley Pearson on how losing his brother inspired his new film: ‘He was t",
+   "Iphigénie en Tauride review – stylised staging of opera of bloodthirsty priestes"
+  ],
+  "ok": true
+ },
+ {
+  "id": "guardian-games",
+  "url": "https://www.theguardian.com/games/rss",
+  "tarih": "2026-11-08",
+  "ms": 338,
+  "kod": 200,
+  "n": 7,
+  "n_tarihli": 7,
+  "son_haber": "2026-11-06T13:00:43+00:00",
+  "son_gun": 2,
+  "ortak": 0.43,
+  "ornek": [
+   "The Legend of Zelda: Ocarina of Time has revived the midnight game launch – but ",
+   "‘It’s so glossy and sexy!’: 10 movies (and one TV show) that inspired Grand Thef"
+  ],
+  "ok": true
+ },
+ {
+  "id": "producthunt",
+  "url": "https://www.producthunt.com/feed",
+  "tarih": "2026-11-08",
+  "ms": 342,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-07T17:52:26+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Agent Clan",
+   "NotchX"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gh-ollama",
+  "url": "https://github.com/ollama/ollama/releases.atom",
+  "tarih": "2026-11-08",
+  "ms": 817,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-06T01:47:18+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "v0.40.15",
+   "v0.40.15-rc2"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gh-llamacpp",
+  "url": "https://github.com/ggml-org/llama.cpp/releases.atom",
+  "tarih": "2026-11-08",
+  "ms": 1159,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T16:04:13+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "b12209",
+   "b12208"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gh-vscode",
+  "url": "https://github.com/microsoft/vscode/releases.atom",
+  "tarih": "2026-11-08",
+  "ms": 627,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-06T10:21:07+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "1.145.2",
+   "1.145.1"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gh-linux",
+  "url": "https://github.com/torvalds/linux/tags.atom",
+  "tarih": "2026-11-08",
+  "ms": 620,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-01T21:26:31+00:00",
+  "son_gun": 6,
+  "ortak": 0.0,
+  "ornek": [
+   "v7.4-rc1",
+   "v7.3"
+  ],
+  "ok": true
+ },
+ {
+  "id": "hn-best",
+  "url": "https://hnrss.org/best",
+  "tarih": "2026-11-08",
+  "ms": 1979,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T11:23:28+00:00",
+  "son_gun": 0,
+  "ortak": 0.52,
+  "ornek": [
+   "Person of Interest",
+   "Goodbye Claude, hello Pi"
+  ],
+  "ok": true
+ },
+ {
+  "id": "lobsters2",
+  "url": "https://lobste.rs/rss",
+  "tarih": "2026-11-08",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "devto",
+  "url": "https://dev.to/feed",
+  "tarih": "2026-11-08",
+  "ms": 347,
+  "kod": 200,
+  "n": 12,
+  "n_tarihli": 12,
+  "son_haber": "2026-11-08T16:04:07+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "As recurring problems become normalized, inefficiencies that exist within the sy",
+   "A 6 GB GPU Runs a 26B LLM at 45 Tokens per Second. How to Test the Claim"
+  ],
+  "ok": true
+ },
+ {
+  "id": "bluesky-news",
+  "url": "https://bsky.app/profile/did:plc:z72i7hdynmk6r22z27h6tvur/rss",
+  "tarih": "2026-11-08",
+  "ms": 843,
+  "kod": 200,
+  "n": 5,
+  "n_tarihli": 5,
+  "son_haber": "2026-11-04T04:03:00+00:00",
+  "son_gun": 4,
+  "ortak": 0.0,
+  "ornek": [
+   "We're seeing 200% of our usual data traffic—and climbing! Thanks to all of you f",
+   "Bluesky’s Election Day feed features 700+ local reporters and newsrooms covering"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trends-de",
+  "url": "https://trends.google.com/trending/rss?geo=DE",
+  "tarih": "2026-11-08",
+  "ms": 1065,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T15:50:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "servus tv",
+   "william, prinz von wales"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trends-fr",
+  "url": "https://trends.google.com/trending/rss?geo=FR",
+  "tarih": "2026-11-08",
+  "ms": 951,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T15:50:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "guyane la première",
+   "man utd – aston villa"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trends-jp",
+  "url": "https://trends.google.com/trending/rss?geo=JP",
+  "tarih": "2026-11-08",
+  "ms": 989,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T15:40:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "マンu 対 アストン・ビラ",
+   "ブレスト 対 リヨン"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trends-kr",
+  "url": "https://trends.google.com/trending/rss?geo=KR",
+  "tarih": "2026-11-08",
+  "ms": 918,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-08T14:20:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "คริสตัลพาเลซ พบ ลิเวอร์พูล",
+   "snow"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-ekonomi",
+  "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 1020,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:30:51+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "BİM 8 - 10 - 13 KASIM 2026 AKTÜEL KATALOĞU: Bu Hafta Ve Gelecek Hafta Hangi Ürün",
+   "Apple'ın eski CEO'sundan şaşırtan İstanbul ziyareti: Tim Cook Bağdat Caddesi'nde"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-dunya",
+  "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 991,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:15:06+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Milyonlarca dolarlık yol açıldıktan 10 gün sonra çöktü",
+   "Cumhuriyetçiler birbirine düştü: Pentagon şefine azil şoku!"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-spor",
+  "url": "https://news.google.com/rss/headlines/section/topic/SPORTS?hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 884,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:28:23+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Canlı Anlatım: Alanyaspor Trabzonspor (Süper Lig maçı)",
+   "İrfan Can Kahveci'den 200. maçına damga! Greenwood, Emre Belözoğlu ile yeniden c"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-bilim",
+  "url": "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 688,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:37:04+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "Kuş zannedenler yanıldı gerçek bambaşka çıktı",
+   "Ümit Yenişehirli yazdı: İnsan çevreye hep hasımdı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-de-welt",
+  "url": "https://news.google.com/rss?hl=de&gl=DE&ceid=DE:de",
+  "tarih": "2026-11-08",
+  "ms": 754,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:02:13+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Der \"Tatort\" im Schnellcheck: Hart wie Marmelade - n-tv.de",
+   "Präsident gibt sich kämpferisch: Trump sieht Midterms als \"riesigen Schritt zurü"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-fr-monde",
+  "url": "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr",
+  "tarih": "2026-11-08",
+  "ms": 1114,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:01:16+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "DIRECT. Masters 1000 de Paris: suivez la finale entre Alcaraz et Shelton en live",
+   "Arabie saoudite : le quartier financier de Riyad attaqué ; deux missiles balisti"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-ar",
+  "url": "https://news.google.com/rss?hl=ar&gl=SA&ceid=SA:ar",
+  "tarih": "2026-11-08",
+  "ms": 792,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:54:28+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "لقاح الإنفلونزا يخفض خطر الزهايمر لدى كبار السن",
+   "الثاني في تاريخه.. اتحاد العاصمة بطلا للسوبر الأفريقي على حساب صنداونز"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-ja",
+  "url": "https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja",
+  "tarih": "2026-11-08",
+  "ms": 331,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:06:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "山林で発見の遺体は石川の２６歳女性、死因は頸部圧迫による急性窒息と判明…監禁容疑で逮捕の男送検",
+   "海岸に導入された「サメ監視用ドローン」に鳥がマジギレ、海に沈める"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-ko",
+  "url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
+  "tarih": "2026-11-08",
+  "ms": 507,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:38:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "[TV조선] 혈관 건강 지키는 관리 비법",
+   "트럼프 \"중간선거 후퇴 두려워말라‥우린 더 강하게 돌아올 것\""
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-zh",
+  "url": "https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+  "tarih": "2026-11-08",
+  "ms": 235,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:40:48+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "埃及国家铁路局派遣重型设备及工程团队前往列车脱轨事故现场",
+   "以色列总统正式授权埃森科特组建新政府"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-politics",
+  "url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-08",
+  "ms": 1043,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:02:27+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "SS United States will be sunk, becoming the world’s largest artificial reef",
+   "How a Mississippi election came down to the clerk’s office"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-defense",
+  "url": "https://news.google.com/rss/search?q=defense+OR+NATO+OR+sanctions&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-08",
+  "ms": 656,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:57:39+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Pistons vs Lakers preview: Best Defense vs best offense",
+   "BYU-Utah Notebook: Cougar defense can’t contain Utes at start, or the end"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-siyaset",
+  "url": "https://news.google.com/rss/search?q=siyaset+OR+TBMM+OR+se%C3%A7im&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 631,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:57:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "Sandıklar kapandı... YENİ Parti'de seçim günü!",
+   "Yeni Parti’de ön seçim heyecanı! Çağatay Güç’ten teşekkür mesajı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-hukuk",
+  "url": "https://news.google.com/rss/search?q=mahkeme+OR+Anayasa+Mahkemesi+OR+yarg%C4%B1tay&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 983,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:02:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Tuvalet molaları takip edilen banka çalışanının tazminat hakkı Yargıtay'da onand",
+   "Tapuda yeni dönem! AYM'den önalım hakkına iptal kararı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-egitim",
+  "url": "https://news.google.com/rss/search?q=e%C4%9Fitim+OR+MEB+OR+YKS+OR+%C3%BCniversite&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 738,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T16:00:37+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "ANTALYA'NIN 128 YILLIK \"KENT HAFIZASI\" EĞİTİM TECRÜBESİNİ GELECEĞE TAŞIYOR",
+   "Kasım ara tatili hangi gün başlıyor, hangi gün sona eriyor? Tatil 9 gün mü olaca"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-savas",
+  "url": "https://news.google.com/rss/search?q=sava%C5%9F+OR+ate%C5%9Fkes+OR+NATO+OR+Ukrayna+OR+Gazze&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 652,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:54:48+00:00",
+  "son_gun": 0,
+  "ortak": 0.2,
+  "ornek": [
+   "Rusya-Ukrayna arasındaki savaş enerji altyapılarına yönelik saldırılar üzerinden",
+   "Fransa, BAE'deki Rusya-Ukrayna görüşmelerine katılacak"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-afet",
+  "url": "https://news.google.com/rss/search?q=deprem+OR+sel+OR+yang%C4%B1n+OR+AFAD&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-08",
+  "ms": 587,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T15:48:37+00:00",
+  "son_gun": 0,
+  "ortak": 0.32,
+  "ornek": [
+   "Muğla'da TOKİ Konutlarında Yangın",
+   "Kovanlık’ta müstakil evde yangın!"
+  ],
+  "ok": true
+ }
+]
