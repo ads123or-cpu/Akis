@@ -47,7 +47,7 @@ ORG_ALIAS = [  # (desen, kurum) — aynı kuruluşun farklı bölüm akışları
     (r'bbc', 'bbc'), (r'\bdw\b|deutsche welle', 'dw'), (r'france ?24', 'france24'), (r'al ?jazeera|aljazeera', 'aljazeera'),
     (r'guardian', 'guardian'), (r'new york times|nytimes|^nyt', 'nyt'), (r'washington post|wapo', 'wapo'), (r'reuters', 'reuters'),
     (r'associated press|^ap$|ap news', 'ap'), (r'\bafp\b|agence france', 'afp'), (r'bloomberg', 'bloomberg'), (r'cnbc', 'cnbc'),
-    (r'euronews', 'euronews'), (r'independent', 'independent'), (r'daily sabah', 'dailysabah'), (r'9to5mac|9to5google', '9to5'),
+    (r'euronews', 'euronews'), (r'^(the )?independent\b', 'independent'), (r'daily sabah', 'dailysabah'), (r'9to5mac|9to5google', '9to5'),
     (r'ars technica|arstechnica|ars$', 'ars'), (r'the verge|theverge|^verge', 'verge'), (r'google', 'googlehaber'), (r'youtube|^yt-', 'youtube'),
     (r'fanatik|a spor|aspor', 'sabah'),
 ]
@@ -58,8 +58,11 @@ def kurum(p, sid):
     ad = re.sub(r'\.(com\.tr|com|net|org|info|tr|co\.uk|de|fr)$', '', (p or '').strip().lower().translate(M.TR))
     for rx, k in ORG_RX:
         if rx.search(ad): return k
+    ham = ad.strip()
     ad = ad.translate(str.maketrans('çğıöşü', 'cgiosu'))
-    return re.sub(r'[^a-z0-9]+', '', ad)[:24] or sid
+    ascii_ = re.sub(r'[^a-z0-9]+', '', ad)[:24]
+    # Latin dışı yayıncı adı (Arapça, CJK…): kaynak kimliğine değil adın kendisine düş; yoksa bir akıştaki tüm yayıncılar tek kurum olurdu
+    return ascii_ or re.sub(r'\s+', '', ham)[:24] or sid
 
 # ------------------------------------------------------------------ çok dilli varlık sözlüğü
 # Aynı varlığın dillerdeki yazımı tek jetona iner; farklı dildeki iki haber ancak ortak varlıklarla eşleşir.
@@ -377,9 +380,9 @@ def kisa_baslik(t, n=62):
 def hook_uret(c, bas, ayrinti):
     """3 açılış cümlesi (kural şablonu; taslaktır). Uydurma iddia içermez: yalnız kümeden hesaplanan değerleri kullanır."""
     t = kisa_baslik(bas['t'])
-    sayi = re.search(r'\d[\d.,]*\s?(?:%|milyar|milyon|bin|TL|dolar|euro|gün|yıl|saat|dakika|km|GB|MP|mAh|kişi)?', bas['t'])
+    sayi = re.search(r'(\d[\d.,]*)\s?(%|milyar|milyon|bin\b|TL\b|dolar|euro|kişi|yaralı|gün|yıl|km\b|GB\b|puan|gol)', bas['t'], re.I)
     h = []
-    if sayi and sayi.group(0).strip(): h.append('%s sayısı bugün gündemin ortasında: %s' % (sayi.group(0).strip(), t))
+    if sayi: h.append('Rakam bu: %s. %s' % (sayi.group(0).strip(), t))     # yalnız birimli sayı (tarih/sıra sayısı hook olmaz)
     else: h.append('3 saniyede özet: %s' % t)
     if ayrinti: h.append('Başlıkta yazmayan ayrıntı: %s' % (ayrinti[:90].rstrip(' .,') + ('…' if len(ayrinti) > 90 else '')))
     else: h.append('Bu haberde herkesin aynı şeyi yazmasının nedeni: %d farklı kaynak, aynı gelişme.' % c['kb'])
@@ -399,6 +402,9 @@ def reels_kart(c, og, bas, simdi):
     aday = [cumle(o['s']) for o in og if o['s'] and (CARPICI.search(o['s']) or re.search(r'\d{2,}', o['s'])) and yeni_mi(cumle(o['s']))]
     aday = aday or [cumle(o['s']) for o in og if o['s'] and yeni_mi(cumle(o['s']))]
     ayrinti = aday[0] if aday else (c['farkli'][0]['t'] if c['farkli'] else '')
+    ayrinti = re.sub(r'\b\d{1,2}[./]\d{1,2}[./]\d{4}\b', '', ayrinti)                       # akış künyesi: tarih
+    ayrinti = re.sub(r'\s+', ' ', ayrinti).strip(' -–·')
+    if len(ayrinti) < 25: ayrinti = ''
     neden = []
     neden.append('%d bağımsız kaynak yazdı' % c['kb'] if c['kb'] >= 2 else 'şu an tek kaynak var')
     if c['h6'] >= 2: neden.append('son 6 saatte %d haber' % c['h6'])

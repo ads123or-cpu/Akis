@@ -38,7 +38,7 @@ Yeni (`akis2.py`):
 - Her adayda: önerilen başlık, 1 cümle özet, neden gündemde, en çarpıcı ayrıntı (başlığı tekrar etmeyen cümle), Türk izleyicisi için önemi, doğrulama durumu (≥2 bağımsız kaynak adlarıyla ya da "DOĞRULANMADI"), görsel/video potansiyeli, 3 hook, anlatım açısı, puan + gerekçe, risk. Hook ve açı **kural şablonudur** (yapay zekâ değil); kümeden hesaplanan değerleri kullanır, uydurma iddia içermez. Not: "Tahmini editoryal değerlendirme, viral garantisi değildir."
 - **Panel uyarısı:** TechTurco panelinin Akış sayfası hâlâ eski `masa.json` Reels listesini (teknoloji ağırlıklı) gösterir; panelin blade ikizi güncellenene kadar yeni Reels yalnız Akış 2.0 sayfasındadır. Panel koduna dokunulmadı (talimat).
 
-## 4. Testler (hepsi geçti: 59 test, `python3 -m unittest discover -s tests -t .`)
+## 4. Testler (hepsi geçti: 62 test, `python3 -m unittest discover -s tests -t .`)
 | Alan | Ne sınandı |
 |---|---|
 | Panel sözleşmesi | `id="snap"` PHP'deki gibi okunuyor (ilk `id="snap"` → `>` → `</script>`), tam bir kez geçiyor, `/*SNAP*/` kalmıyor; `masa.json` üst anahtarlar + küme anahtarları; baseline (bugünkü canlı çıktı) ve üretilen çıktı |
@@ -46,14 +46,14 @@ Yeni (`akis2.py`):
 | Hata yalıtımı | hatalı kaynaklar istisna fırlatmaz, diğerleri çekilir; 304 ardışık hatayı sıfırlar; devre kesici |
 | Kümeleme | aynı olay farklı başlık; farklı olaylar (aynı kişi) birleşmez; Gazze genel haberleri dil ortak diye birleşmez; uzak zaman birleşmez; ikinci geçiş (UFC/Trump) birleşir |
 | Çok dilli | TR/EN/DE deprem; Fransızca/İngilizce aynı başlık; CJK/Arapça jetonları |
-| Bağımsız kaynak | ajans kopyası 1 sayılır; bağımsız anlatım 3; kurum takma adları; kanonik URL |
+| Bağımsız kaynak | ajans kopyası 1 sayılır; bağımsız anlatım 3; kurum takma adları; Latin dışı (Arapça/CJK) yayıncılar ayrı kurum, aynı ad farklı akışta aynı kurum; Kyiv Independent ≠ The Independent; kanonik URL |
 | Reels | siyaset/spor/gündem başlıkları elenmiyor; yalnız dar listedeki içerik niteliği eleniyor; siyaset/spor cezaya tabi değil; uçtan uca 4 profil var |
 | Kaynak durumları | aktif/yavaş/hata/erişim-engelli/güncellenmiyor/devre dışı/beklemede |
 | Kaynak listesi | eski 439'un tümü duruyor, alanlar, ShiftDelete yok, yeni kaynak doğrulama kaydı, ücretli duvar etiketi, Reddit "erken sinyal" |
-| Çıktı | JSON'lar geçerli, ilk yükleme boyutu sınırı, ShiftDelete hiçbir çıktıda yok, sıcak/yükselen konularda ≥2 bağımsız kaynak |
-| İş akışı | adım sırası, `push` yalnız `main`, zincir kopmaz, eşzamanlı çalışma yok, gizli anahtar yok |
+| Çıktı (yayın kapısı) | Yalnız belirlenimci denetimler: JSON geçerli, boyut sınırları, ShiftDelete yayıncı/bağlantı/kaynak alanlarında yok (özet metninde değil), sıcak/yükselen konularda ≥2 bağımsız kaynak, küme/kaynak durumu yapısı. Haber akışına bağlı dağılım denetimleri (4 profil var mı, haber sayısı) `tests/test_dagilim.py`'de ve kapı **değil**: sakin bir gece yayını durdurmasın |
+| İş akışı | **YAML gerçekten ayrıştırılıyor** (Ruby/PyYAML; ilk sürümde bir adım adındaki `: ` YAML'ı bozmuştu, yakalandı ve düzeltildi), adım sırası, `push` yalnız `main`, zincir kopmaz, eşzamanlı çalışma yok, gizli anahtar yok |
 
-**Arayüz (gerçek tarayıcıda, Chrome):** 9 alan + Reels + Kaynaklar + Kaydedilen + Ayarlar hatasız açılıyor (uygulama hatası yok; konsolda yalnız üçüncü taraf bir haber görselinin 402 yanıtı görüldü, görsel hata olunca kaldırılıyor); daha fazla yükle, kaydet/kaldır, gizle/Geri al, J/K, Esc, zaman (1s), dil (TR), alt konu, spor TR/Dünya, arama (genel ve `kaynak:ntv`), içerik durumu, not, Reels işareti, kart görünümü, tema, dış bağlantı `_blank`+`noopener noreferrer`, JSON dışa/içe aktarma gidiş-dönüş, kaynak merkezi durum/tip filtresi, yeni kaynak taslağı, "kaydet" düğmesinin **olmaması**. Bu denetim betik olarak depoya konmadı (elle yürütüldü).
+**Arayüz (gerçek tarayıcıda, Chrome):** 9 alan + Reels + Kaynaklar + Kaydedilen + Ayarlar hatasız açılıyor (uygulama hatası yok; konsolda yalnız üçüncü taraf bir haber görselinin 402 yanıtı görüldü, görsel hata olunca kaldırılıyor); daha fazla yükle, kaydet/kaldır, gizle/Geri al, J/K, Esc, zaman (1s), dil (TR), alt konu, spor TR/Dünya, arama (genel ve `kaynak:ntv`), içerik durumu, not, Reels işareti, kart görünümü, tema, dış bağlantı `_blank`+`noopener noreferrer`, JSON dışa/içe aktarma gidiş-dönüş, kaynak merkezi durum/tip filtresi, yeni kaynak taslağı, "kaydet" düğmesinin **olmaması**. Eski şemayla kaydedilmiş bir konu (bugünkü canlı `masa.json` biçimi) localStorage'a konup Kaydedilenler ve detay paneli açıldı: görünüyor, 6 kaynak listeleniyor, hata yok; eski tema/okundu/gizli anahtarları da okunuyor. Bu arayüz denetimleri betik olarak depoya konmadı (elle yürütüldü).
 
 **Performans (Chrome DevTools, gzip'li yerel sunucu, önbellek kapalı):**
 | Senaryo | FCP | DOMContentLoaded/load | Aktarım |
@@ -68,11 +68,24 @@ FCP başlık çubuğunun boyanmasıdır; içerik `ozet.json` gelince çıkar. Ge
 - **Depo büyümesi (dikkat):** `.git` ≈ 800 MB / 1647 commit; her tur `site/` (feeds.json ≈ 5 MB) commitleniyor. Yeni çıktıyı commitlemedim. Öneri (yapılmadı): durum dosyalarını da commit yerine artefakt/cache ile taşımak.
 - **İş akışı değişiklikleri:** testler → çek → `masa.py` → `akis2.py` → `build.py` → çıktı doğrulama → commit → yayın paketi; doğrulama bozuk üretimi commitlemeden durdurur (önceki site yayında kalır, `tekrar` zinciri `!cancelled()` ile sürer). `push` tetikleyicisi yalnız `main` (gelişme dalı yayın zinciri başlatmasın) ve `akis2.py`/`tests/**` yollarını kapsar. Bu iş akışı **GitHub'da hiç çalıştırılmadı** (yalnız metin testleri + yerel zincir); ilk çalıştırma main'e push sonrası olur.
 
-## 6. Bilinen sınırlar / yapılacaklar
+## 6. Yayına alma (onayınız gerekli) ve geri alma
+`main` bot tarafından ≈9 dakikada bir ilerliyor; `akis-2.0` geride. Onay verirseniz sırası:
+```bash
+cd ~/Developer/Akis
+git fetch origin
+git rebase origin/main            # dal site/ dosyalarına dokunmuyor; temiz geçmeli (site/ yerelde değişiklikli ise önce: git checkout -- site)
+python3 -m unittest discover -s tests -t .
+git push origin akis-2.0:main     # push = yayın
+gh run watch --repo ads123or-cpu/Akis
+```
+İlk çalıştırma aynı zamanda ilk kez Python 3.12'de ve `upload-pages-artifact` yeni düzeniyle çalışır; kırmızı olursa site önceki sürümde kalır (deploy çalışmaz). Panel `masa.json`/`id="snap"` biçimini aynen okumaya devam eder.
+Geri alma: `git revert --no-edit <ilk-akis-2.0-commit>^..<son-akis-2.0-commit>` (ya da `git revert -m` ile birleştirme commit'i) ve push. Not: `yedek-akis-1-2026-11-08` etiketi ve tar.gz yedeği **yalnız bu makinede**; uzak depoya itilmedi (gerekirse `git push origin yedek-akis-1-2026-11-08` ile siz karar verin).
+
+## 7. Bilinen sınırlar / yapılacaklar
 1. TechTurco panelinin Reels ve Gündem sekmesi eski `masa.json`'u okur (yeni Reels paneli yansımaz).
 2. Kümeleme yalnız başlık/özet üzerinde; haber gövdesi çekilmediği için içerik benzerliği yok. Farklı dil birleştirme muhafazakâr (kaçırabilir, yanlış birleştirmez).
 3. "Kişi" araması: lider/şirket/ülke sözlüğüyle (≈60 varlık); keyfi kişi adları başlık/özet metin aramasıyla bulunur.
 4. Zaman penceresi 7 gün; alan başına en güncel 360 konu dosyaya yazılır.
 5. Spor: "Federasyon/lig açıklamaları" süzgeci kaynak adı/başlık ifadesine dayanır; TFF/TBF/TVF resmî akışı bulunamadığı için Google Haberler aramasıdır.
 6. Hızlı kategori çipleri ve mobil alt gezinme tarayıcıda denendi; gerçek telefonda (dokunma, klavye) denenmedi.
-7. Reels hook/açı şablon metnidir; yayından önce editoryal gözden geçirme şart.
+7. Reels hook/açı şablon metnidir; yayından önce editoryal gözden geçirme şart. "Çarpıcı ayrıntı" kaynak özetinden alınır; özet İngilizceyse İngilizce gelir (çeviri yok).

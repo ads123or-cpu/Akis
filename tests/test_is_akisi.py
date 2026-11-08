@@ -18,4 +18,15 @@ class IsAkisi(unittest.TestCase):
         for dosya in ('index.tpl.html', 'fetch_feeds.py', 'akis2.py'):
             t = open(os.path.join(KOK, dosya), encoding='utf-8').read()
             self.assertNotRegex(t, r'(api[_-]?key|secret|token)\s*[:=]\s*["\'][A-Za-z0-9_\-]{16,}', dosya)
+    def test_yaml_gecerli(self):
+        # Düz metin denetimi YAML hatasını yakalamaz (iş akışı bir kez geçersiz çıktı). PyYAML ya da Ruby varsa gerçekten ayrıştır.
+        try:
+            import yaml; y = yaml.safe_load(Y)
+        except ImportError:
+            import shutil, subprocess
+            if not shutil.which('ruby'): self.skipTest('YAML ayrıştırıcı yok')
+            r = subprocess.run(['ruby', '-ryaml', '-e', 'y=YAML.load_file(ARGV[0]); abort("is yok") unless y["jobs"].keys.sort==%w[deploy refresh tekrar]', os.path.join(KOK, '.github', 'workflows', 'refresh.yml')], capture_output=True, text=True)
+            self.assertEqual(r.returncode, 0, r.stderr); return
+        self.assertEqual(sorted(y['jobs']), ['deploy', 'refresh', 'tekrar'])
+
 if __name__ == '__main__': unittest.main()

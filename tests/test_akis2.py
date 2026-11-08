@@ -67,6 +67,12 @@ class Bagimsizlik(unittest.TestCase):
         self.assertEqual(A.kurum('NTV Spor', 'x'), A.kurum('NTV', 'y')); self.assertEqual(A.kurum('DW.com', 'x'), A.kurum('DW Türkçe', 'y'))
         self.assertEqual(A.kurum('BirGün', 'a'), A.kurum('birgun.net', 'b'))
 
+    def test_latin_disi_yayinci_adlari_ayri_kurum(self):
+        self.assertNotEqual(A.kurum('الجزيرة', 'gn-ar'), A.kurum('الشرق الأوسط', 'gn-ar'))
+        self.assertEqual(A.kurum('الجزيرة', 'gn-ar'), A.kurum('الجزيرة', 'bbc-ar'))
+        self.assertNotEqual(A.kurum('朝日新聞', 'gn-ja'), A.kurum('読売新聞', 'gn-ja'))
+        self.assertNotEqual(A.kurum('Kyiv Independent', 'a'), A.kurum('The Independent', 'b'))
+
     def test_kanonik_url(self):
         self.assertEqual(A.kanonik('https://www.example.com/a/b/?utm_source=x&id=3#frag'), A.kanonik('http://example.com/a/b?id=3&fbclid=zz'))
         self.assertEqual(A.kanonik('https://m.site.com/haber/amp'), A.kanonik('https://site.com/haber'))
