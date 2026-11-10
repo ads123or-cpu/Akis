@@ -47,6 +47,15 @@ def parse_et(data):
             elif k in ('description', 'summary', 'content', 'encoded') and len(t) > len(desc): desc = t
             elif k in ('thumbnail', 'content') and c.get('url') and not img and (c.get('medium') in (None, 'image') or 'image' in (c.get('type') or 'image')): img = c.get('url')
             elif k == 'enclosure' and c.get('url') and 'image' in (c.get('type') or ''): img = c.get('url')
+            # Google Trends (ht:) alanları: yaklaşık arama hacmi ve trendi açıklayan haberler
+            elif k == 'approx_traffic':
+                d['tr'] = t; sayi = re.sub(r'\D', '', t)
+                if sayi: d['n'] = int(sayi)
+            elif k == 'picture' and t.startswith('http') and not img: img = t
+            elif k == 'news_item':
+                h = {ln(x.tag): (x.text or '').strip() for x in c}
+                if h.get('news_item_title') and h.get('news_item_url') and not YASAK_YAYINCI.search(h['news_item_url'] + h.get('news_item_source', '')):
+                    d.setdefault('hn', []).append(dict(t=html.unescape(strip(h['news_item_title']))[:160], l=h['news_item_url'], p=h.get('news_item_source', '')))
         if not img:
             m = re.search(r'<img[^>]+src=["\']([^"\']+)', html.unescape(desc))
             if m: img = m.group(1)

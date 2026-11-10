@@ -1,15 +1,16 @@
-# Akış 2.0
+# Akış
 
-Haber merkezi + gündem radarı + Reels konu keşfi. GitHub Actions kaynakları çeker, GitHub Pages yayınlar. Arayüz canlı değildir: üstteki saat **son başarılı veri üretimini** gösterir.
+Haber merkezi + Google Trends + güncelleme radarı + Reels konu keşfi. GitHub Actions kaynakları çeker, GitHub Pages yayınlar. Arayüz canlı değildir: üstteki saat **son başarılı veri üretimini** gösterir.
 
-## Ekranlar
-- **Gündem Merkezi:** sıcak konular (1 s / 6 s / 24 s, en az 2 bağımsız kaynak), yükselen konular (hesap yöntemi ekranda), son gelişmeler.
-- **Çalışma alanları:** Gündem, Teknoloji, Siyaset ve Jeopolitik, Spor, Ekonomi, Bilim ve Uzay, Siber Güvenlik, Otomobil ve Ulaşım, Eğlence/Oyun/Kültür. Alt konu, marka, ülke/lider, dil ve zaman süzgeçleri.
-- **Reels Fikir Radarı:** Teknoloji / Gündem / Siyaset / Spor profilleri, bilim-siber-otomobil-ekonomi-ilginç alt kategorileri; 10 ölçütlü açık puan.
-- **Kaynak Yönetim Merkezi:** durum renkleri, süzgeçler, yeni kaynak taslağı ve doğrulama adımları.
-- **Kaydedilenler:** içerik durumu panosu (Yeni konu … Yayınlandı), notlar, JSON dışa/içe aktarma. Kişisel her şey tarayıcıda (localStorage).
-
-Klavye: `/` ara, `J`/`K` gezin, `Enter` ayrıntı, `O` ilk kaynağı aç, `S` kaydet, `X` ilgisiz (Geri al), `R` Reels adayı, `Esc` kapat.
+## Ekranlar (Akış 3, 2026-11-10)
+- **Bugün:** Google Trends şeridi (Türkiye), öne çıkanlar (1/6/24 sa, en az 2 bağımsız kaynak), takip ettiklerin, yükselen, son gelenler. Sağda: "Aranıyor, yazan az" (trend var, haberimiz yok/tek kaynak), güncelleme radarı özeti, Reels önerileri. "Günün özetini kopyala" gündem + trend + güncellemeleri metin olarak panoya alır.
+- **Akış:** 9 çalışma alanı; zaman, 3+ kaynak, Türkçe, alt konu süzgeçleri; Önemli / En yeni sıralama.
+- **Trendler:** Google Trends (TR, ABD, BK, Almanya, Fransa, Japonya, Kore). Hacim, başlangıç saati, hacim seyri, Google'ın gösterdiği haberler, Akış'taki eşleşen konu, "Bizde yok / az" süzgeci, son 48 saatte sönenler.
+- **Güncellemeler:** iOS, Android, One UI, HyperOS, Windows, WhatsApp, Instagram, Chrome, ChatGPT, Gemini, Claude… ürün bazında; tür: Yayında / Yeni özellik / Arayüz / Beta / Güvenlik / Sızıntı.
+- **Reels:** Teknoloji / Gündem / Siyaset / Spor profilleri, alt kategoriler, 10 ölçütlü puan, hook kopyalama.
+- **Kayıtlı:** iş akışı durumu (Yeni konu … Yayınlandı), notlar, JSON dışa/içe aktarma. **Kaynaklar:** durum, süzgeç, yeni kaynak taslağı.
+- **Ayarlar (⋯):** tema (sistem/açık/koyu), sıkı liste, görseller, takip kelimeleri (vurgu + Bugün'de liste).
+- Kişisel her şey tarayıcıda (localStorage); eski anahtarlar korunur (`akis-kayit/okundu/gizli/ziyaret`, `akis2-not/durum/ayar`).
 
 ## Dosyalar
 | Dosya | İş |
@@ -17,6 +18,7 @@ Klavye: `/` ara, `J`/`K` gezin, `Enter` ayrıntı, `O` ilk kaynağı aç, `S` ka
 | `sources.json` | Kaynak listesi. Eski alanlar (`id,name,lang,cat,url,plat`) + `calisma, tip, ulke, oncelik, nitelik, aktif, dogrulama`. |
 | `fetch_feeds.py` | Kaynakları çeker: ETag/Last-Modified (304), zaman aşımı, devre kesici, spam ve ShiftDelete süzgeci, yanıt süresi. → `site/feeds.json`, `site/kaynak-durum.json` |
 | `masa.py` | **Eski** kümeleme/Reels çıktısı (`site/masa.json`). TechTurco paneli okur; davranışı değişmedi. |
+| `ekler.py` | Google Trends (ht: alanları, `site/trend-gecmis.json` ile ilk görülme/tepe/seri, haber kümesiyle eşleştirme, "bizde yok") ve Güncelleme Radarı (ürün + güncelleme ifadesi aynı başlıkta yakın geçmeli). → `site/data/trendler.json`, `guncellemeler.json` |
 | `akis2.py` | **Yeni** hat: çok dilli kümeleme, bağımsız kaynak sayımı, çalışma alanları, sıcak/yükselen, Reels v2, kaynak durumları. → `site/data/*.json` |
 | `index.tpl.html`, `build.py` | Arayüz. `site/index.html` içindeki `id="snap"` bloğu **yalnız TechTurco paneli içindir**; arayüz onu okumaz, `data/*.json` dosyalarını yükler. |
 | `tools/kaynak_test.py` | Aday kaynağı gerçekten sınar (HTTP, RSS/Atom ayrıştırma, ≥3 tarihli kayıt, ≤45 gün, mevcutlarla kopya oranı). |
@@ -25,7 +27,7 @@ Klavye: `/` ara, `J`/`K` gezin, `Enter` ayrıntı, `O` ilk kaynağı aç, `S` ka
 | `tests/` | `python3 -m unittest discover -s tests -t .` |
 
 ## Veri akışı (parçalı)
-İlk açılış: `index.html` + `data/ozet.json`. Diğerleri tembel: `data/kume-<alan>.json`, `data/reels.json`, `data/kaynaklar.json`, `data/indeks.json` (ilk aramada). `site/data/` git'e girmez (`.gitignore`); her turda üretilir ve yayın paketine girer.
+İlk açılış: `index.html` + `data/ozet.json` (+ arkadan `data/trendler.json`). Diğerleri tembel: `data/guncellemeler.json`, `data/kume-<alan>.json`, `data/reels.json`, `data/kaynaklar.json`, `data/indeks.json` (ilk aramada). `site/data/` git'e girmez (`.gitignore`); her turda üretilir ve yayın paketine girer.
 
 ## Kalıcı kaynak değişikliği
 Statik sayfada “kaydet” yoktur. Yeni kaynak: `tools/kaynak_test.py` → `sources.json` → ana dala gönder → Actions çeker. Kaynak ShiftDelete kullanılmaz (çekim aşamasında süzülür).

@@ -4,6 +4,7 @@ j=json.load(open('site/feeds.json',encoding='utf-8'))
 # tek kotada genel haber hacmi teknolojiyi 30 habere dusuruyordu.
 TEKNO = {'tech', 'samsung', 'ios', 'mac', 'mobil', 'win', 'auto'}
 KOTA = 400
+PANEL_ALAN = {'l', 'd', 't', 's', 'i', 'p', 'c', 'n'}
 # Cince gibi kucuk dillerin haberleri teknoloji kotasinda yeni Turkce/Ingilizce haberin altinda kalip
 # hic girmiyordu; kendi kotalari var.
 KOTA_YABANCI = 60
@@ -23,6 +24,8 @@ for _, k, it in tum:
         tek = (it.get('c') or j['feeds'][k]['cat']) in TEKNO
         if say[tek] >= KOTA: continue
         say[tek] += 1
+    # Panel sozlesmesi: haber kaydinda yalniz bu alanlar (Google Trends'in 'tr' ve 'hn' alanlari panele gitmez)
+    it = {a: b for a, b in it.items() if a in PANEL_ALAN and not (a == 'n' and k.startswith('trends-'))}   # trend hacmi 'n' (HN puani) sanilmasin
     secili.setdefault(k, {**{a: b for a, b in j['feeds'][k].items() if a != 'items'}, 'items': []})['items'].append(it)
 snap={'generated':j['generated'],'saglik':j.get('saglik',{}),'feeds':secili}
 s=json.dumps(snap,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')

@@ -27,9 +27,20 @@ def yasak_ara(n, yol=''):
 @unittest.skipUnless(VAR, 'site/data üretilmemiş')
 class Cikti(unittest.TestCase):
     def test_json_gecerli(self):
-        for a in ['ozet', 'reels', 'kaynaklar', 'indeks'] + ['kume-' + x for x in ALANLAR]: j(a + '.json')
+        for a in ['ozet', 'reels', 'kaynaklar', 'indeks', 'trendler', 'guncellemeler'] + ['kume-' + x for x in ALANLAR]: j(a + '.json')
         o = j('ozet.json')
         for k in ('generated', 'sicak', 'yukselen', 'son', 'sayim', 'yontem', 'kaynak_durum', 'toplam'): self.assertIn(k, o)
+
+    def test_trend_ve_guncelleme(self):
+        t = j('trendler.json'); g = j('guncellemeler.json')
+        for geo in t['sira']:
+            for x in t['ulkeler'][geo]['trendler']:
+                self.assertTrue(x['t']); self.assertIn(x['firsat'], (True, False) if geo in ('TR', 'US', 'GB') else (None,))
+                if x['kume']: self.assertTrue(x['kume']['id'])
+        for u in g['urunler']:
+            self.assertTrue(u['ogeler'])
+            for x in u['ogeler']: self.assertIn(x['tur'], {k['k'] for k in g['turler']})
+        o = j('ozet.json'); self.assertIn('trend_tr', o); self.assertIn('guncelleme_ozet', o)
 
     def test_ilk_yukleme_kucuk(self):
         self.assertLess(os.path.getsize(os.path.join(D, 'ozet.json')), 450 * 1024)

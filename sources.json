@@ -9840,5 +9840,901 @@
 "n": 25,
 "ms": 549
 }
+},
+{
+"id": "anthropic-news",
+"name": "Anthropic Haberleri (Google News)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=Anthropic%20Claude&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 270
+}
+},
+{
+"id": "apple-dev-releases",
+"name": "Apple Developer: Sürümler",
+"lang": "en",
+"cat": "ios",
+"url": "https://developer.apple.com/news/releases/rss/releases.rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi",
+"surum-notu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 354
+}
+},
+{
+"id": "apple-dev-news",
+"name": "Apple Developer News",
+"lang": "en",
+"cat": "ios",
+"url": "https://developer.apple.com/news/rss/news.rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 638
+}
+},
+{
+"id": "android-dev-blog",
+"name": "Android Developers Blog",
+"lang": "en",
+"cat": "tech",
+"url": "https://android-developers.googleblog.com/feeds/posts/default",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 20,
+"ms": 899
+}
+},
+{
+"id": "chrome-releases",
+"name": "Chrome Releases",
+"lang": "en",
+"cat": "tech",
+"url": "https://chromereleases.googleblog.com/feeds/posts/default",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi",
+"surum-notu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 844
+}
+},
+{
+"id": "chrome-blog",
+"name": "Chrome Developers Blog",
+"lang": "en",
+"cat": "tech",
+"url": "https://developer.chrome.com/static/blog/feed.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 441
+}
+},
+{
+"id": "google-workspace-updates",
+"name": "Google Workspace Updates",
+"lang": "en",
+"cat": "tech",
+"url": "https://workspaceupdates.googleblog.com/feeds/posts/default",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi",
+"surum-notu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 898
+}
+},
+{
+"id": "mozilla-blog",
+"name": "Mozilla Blog",
+"lang": "en",
+"cat": "tech",
+"url": "https://blog.mozilla.org/en/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 20,
+"ms": 388
+}
+},
+{
+"id": "ms365-blog",
+"name": "Microsoft 365 Blog",
+"lang": "en",
+"cat": "win",
+"url": "https://www.microsoft.com/en-us/microsoft-365/blog/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 5490
+}
+},
+{
+"id": "ms-edge-blog",
+"name": "Microsoft Edge Blog",
+"lang": "en",
+"cat": "win",
+"url": "https://blogs.windows.com/msedgedev/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 419
+}
+},
+{
+"id": "github-changelog",
+"name": "GitHub Changelog",
+"lang": "en",
+"cat": "tech",
+"url": "https://github.blog/changelog/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "sirket duyurusu",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"resmi",
+"surum-notu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 286
+}
+},
+{
+"id": "netflix-about",
+"name": "Netflix Newsroom (Google News)",
+"lang": "en",
+"cat": "ent",
+"url": "https://news.google.com/rss/search?q=Netflix%20new%20feature%20app%20update&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 200
+}
+},
+{
+"id": "ghacks",
+"name": "gHacks",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.ghacks.net/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 413
+}
+},
+{
+"id": "omgubuntu",
+"name": "OMG! Ubuntu",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.omgubuntu.co.uk/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 18,
+"ms": 230
+}
+},
+{
+"id": "9to5mac-ios",
+"name": "9to5Mac iOS",
+"lang": "en",
+"cat": "ios",
+"url": "https://9to5mac.com/guides/ios/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 1754
+}
+},
+{
+"id": "9to5google-android",
+"name": "9to5Google Android",
+"lang": "en",
+"cat": "tech",
+"url": "https://9to5google.com/guides/android/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 290
+}
+},
+{
+"id": "gizmochina-xiaomi",
+"name": "Gizmochina Xiaomi",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.gizmochina.com/tag/xiaomi/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 330
+}
+},
+{
+"id": "oneplus-community",
+"name": "OnePlus (Google News)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=OnePlus%20OxygenOS%20update&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 231
+}
+},
+{
+"id": "mobilissimo",
+"name": "Mobilissimo",
+"lang": "ro",
+"cat": "tech",
+"url": "https://feeds.feedburner.com/mobilissimo-stiri-telefoane",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "RO",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 15,
+"ms": 348
+}
+},
+{
+"id": "techcrunch-apps",
+"name": "TechCrunch Uygulamalar",
+"lang": "en",
+"cat": "tech",
+"url": "https://techcrunch.com/category/apps/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 20,
+"ms": 161
+}
+},
+{
+"id": "verge-apps",
+"name": "The Verge Uygulamalar",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.theverge.com/rss/apps/index.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 209
+}
+},
+{
+"id": "verge-mobile",
+"name": "The Verge Mobil",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.theverge.com/rss/mobile/index.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 375
+}
+},
+{
+"id": "engadget-mobile",
+"name": "Engadget Mobil (Google News)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=site%3Aengadget.com%20app%20update&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 238
+}
+},
+{
+"id": "tomsguide-phones",
+"name": "Tom's Guide Telefonlar",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.tomsguide.com/feeds/tag/phones",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 575
+}
+},
+{
+"id": "igeeksblog",
+"name": "iGeeksBlog",
+"lang": "en",
+"cat": "ios",
+"url": "https://www.igeeksblog.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 1046
+}
+},
+{
+"id": "macobserver",
+"name": "Mac Observer",
+"lang": "en",
+"cat": "mac",
+"url": "https://www.macobserver.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 173
+}
+},
+{
+"id": "android-tr-gn",
+"name": "Android güncellemesi (TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=Android%20g%C3%BCncellemesi%20OR%20%22One%20UI%22%20OR%20HyperOS%20OR%20%22Android%2017%22&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 237
+}
+},
+{
+"id": "teknoblog",
+"name": "Teknoblog",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.teknoblog.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 10,
+"ms": 375
+}
+},
+{
+"id": "megabayt",
+"name": "Megabayt",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.megabayt.com/rss/news",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 441
+}
+},
+{
+"id": "teknolojioku",
+"name": "Teknolojioku",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.teknolojioku.com/export/rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 278
+}
+},
+{
+"id": "technopat-haber",
+"name": "Technopat Haber",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.technopat.net/haber/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 1000
+}
+},
+{
+"id": "gn-tr-youtube",
+"name": "YouTube / TikTok yeni özellik (TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=YouTube%20yeni%20%C3%B6zellik%20OR%20TikTok%20yeni%20%C3%B6zellik&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 219
+}
+},
+{
+"id": "gn-tr-chatgpt",
+"name": "ChatGPT / Gemini / Claude güncelleme (TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=ChatGPT%20yeni%20%C3%B6zellik%20OR%20Gemini%20g%C3%BCncelleme%20OR%20Claude%20yapay%20zeka&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 196
+}
+},
+{
+"id": "gn-tr-windows-gunc",
+"name": "Windows / Office güncelleme (TR)",
+"lang": "tr",
+"cat": "win",
+"url": "https://news.google.com/rss/search?q=Windows%2011%20g%C3%BCncelleme%20OR%20%22Microsoft%20Office%22%20yeni%20%C3%B6zellik%20OR%20Copilot%20g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 199
+}
+},
+{
+"id": "gn-tr-xiaomi",
+"name": "Xiaomi / HyperOS (TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=HyperOS%20OR%20Xiaomi%20g%C3%BCncelleme%20OR%20Redmi&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 240
+}
+},
+{
+"id": "gn-tr-oyun",
+"name": "Oyun güncellemesi (TR)",
+"lang": "tr",
+"cat": "ent",
+"url": "https://news.google.com/rss/search?q=oyun%20g%C3%BCncellemesi%20OR%20PlayStation%20OR%20Xbox%20OR%20Steam%20yeni&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "eglence",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 231
+}
+},
+{
+"id": "gn-en-rollingout",
+"name": "App rolling out (EN)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=%22rolling%20out%22%20app%20new%20feature&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 202
+}
+},
+{
+"id": "gn-en-redesign",
+"name": "App redesign / new interface (EN)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=app%20redesign%20OR%20%22new%20interface%22%20OR%20%22new%20design%22%20update&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 186
+}
+},
+{
+"id": "gn-en-ios-update",
+"name": "iOS update (EN)",
+"lang": "en",
+"cat": "ios",
+"url": "https://news.google.com/rss/search?q=iOS%20update%20released%20OR%20%22iOS%20beta%22&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 207
+}
+},
+{
+"id": "gn-en-android-update",
+"name": "Android / Pixel update (EN)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=Android%20update%20OR%20%22Pixel%20Drop%22%20OR%20%22One%20UI%22%20OR%20HyperOS&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 236
+}
+},
+{
+"id": "gn-en-whatsapp",
+"name": "WhatsApp / Meta apps feature (EN)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=WhatsApp%20OR%20Instagram%20OR%20Threads%20new%20feature&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 257
+}
+},
+{
+"id": "gn-en-ai-apps",
+"name": "ChatGPT / Gemini / Claude feature (EN)",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=ChatGPT%20OR%20Gemini%20OR%20Claude%20new%20feature%20update&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-10",
+"n": 25,
+"ms": 192
+}
 }
 ]
