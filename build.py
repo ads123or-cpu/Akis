@@ -25,7 +25,7 @@ for _, k, it in tum:
         if say[tek] >= KOTA: continue
         say[tek] += 1
     # Panel sozlesmesi: haber kaydinda yalniz bu alanlar (Google Trends'in 'tr' ve 'hn' alanlari panele gitmez)
-    it = {a: b for a, b in it.items() if a in PANEL_ALAN}
+    it = {a: b for a, b in it.items() if a in PANEL_ALAN and not (a == 'n' and k.startswith('trends-'))}   # trend hacmi 'n' (HN puani) sanilmasin
     secili.setdefault(k, {**{a: b for a, b in j['feeds'][k].items() if a != 'items'}, 'items': []})['items'].append(it)
 snap={'generated':j['generated'],'saglik':j.get('saglik',{}),'feeds':secili}
 s=json.dumps(snap,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')

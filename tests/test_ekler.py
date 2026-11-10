@@ -90,6 +90,10 @@ class TrendGecmisi(unittest.TestCase):
         self.assertEqual(r3['ulkeler']['TR']['trendler'], [])
         self.assertEqual(json.load(open(E.GECMIS))['TR'], {})
 
+    def test_eslestirilmeyen_ulkede_bizde_yok_denmez(self):
+        r = E.trendler_uret({'trends-jp': dict(items=F.parse(TRENDS_RSS))}, [], time.time())
+        self.assertTrue(all(x['firsat'] is None for x in r['ulkeler']['JP']['trendler']))
+
 
 class Guncelleme(unittest.TestCase):
     def tur(self, t, *diger):

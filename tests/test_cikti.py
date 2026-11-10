@@ -35,7 +35,7 @@ class Cikti(unittest.TestCase):
         t = j('trendler.json'); g = j('guncellemeler.json')
         for geo in t['sira']:
             for x in t['ulkeler'][geo]['trendler']:
-                self.assertTrue(x['t']); self.assertIsInstance(x['firsat'], bool)
+                self.assertTrue(x['t']); self.assertIn(x['firsat'], (True, False) if geo in ('TR', 'US', 'GB') else (None,))
                 if x['kume']: self.assertTrue(x['kume']['id'])
         for u in g['urunler']:
             self.assertTrue(u['ogeler'])

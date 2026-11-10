@@ -553,6 +553,7 @@ function ciz(){
 function panelCiz(){
   var p=$('panel');
   if(!S.sec){p.hidden=true;$('perde').hidden=true;document.body.style.overflow='';return}
+  if(S.sec==='__ayar'){ayarAc();return}
   var c=bul(S.sec);
   if(!c){p.hidden=false;p.innerHTML='<div class="p-i"><div class="p-ust"><span class="bos"></span><button class="ik-b" data-act="kapat">'+ik('x')+'</button></div><p class="bilgi">Konu yükleniyor…</p></div>';getir(S.sec);return}
   var ust=p.scrollTop,ayni=p.dataset.id===S.sec;
@@ -590,6 +591,7 @@ function kayitTaslak(){var ad=$('n-ad').value.trim(),u=$('n-url').value.trim();i
 function ayarAc(){
   S.sec='__ayar';var p=$('panel');p.hidden=false;p.dataset.id='__ayar';$('perde').hidden=false;
   p.innerHTML='<div class="p-i"><div class="p-ust"><b style="color:var(--yaz);font-size:15px">Ayarlar</b><span class="bos"></span><button class="ik-b" data-act="kapat">'+ik('x')+'</button></div>'+
+  '<div class="p-b">Bölümler</div><div class="eylem">'+SAYFALAR.map(function(x){return'<a class="dg" href="#/'+x[0]+'">'+x[1]+'</a>'}).join('')+'</div>'+
   '<div class="p-b">Görünüm</div><div class="arac"><span class="seg">'+[['','Sistem'],['acik','Açık'],['koyu','Koyu']].map(function(t){return'<button data-act="tema" data-v="'+t[0]+'" class="'+(ayar.tema===t[0]?'on':'')+'">'+t[1]+'</button>'}).join('')+'</span></div>'+
   '<div class="arac"><button class="tg'+(ayar.yogun?' on':'')+'" data-act="yogun">Sıkı liste</button><button class="tg'+(ayar.gorsel?' on':'')+'" data-act="gorsel">Görseller</button></div>'+
   '<div class="p-b">Takip kelimeleri</div><p class="bilgi" style="margin:0 0 6px">Virgülle ayırın. Eşleşen haberler vurgulanır ve Bugün sayfasında ayrı listelenir.</p><textarea class="not" id="takipG" placeholder="Apple, Togg, Galatasaray, yapay zekâ">'+esc((ayar.takip||[]).join(', '))+'</textarea><button class="dg ana-d" style="margin-top:8px" data-act="takipKaydet">Kaydet</button>'+

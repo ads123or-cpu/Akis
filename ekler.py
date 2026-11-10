@@ -5,6 +5,7 @@ from datetime import datetime
 import masa as M
 
 GECMIS = 'site/trend-gecmis.json'      # trendin ilk görüldüğü an, tepe hacmi, hacim serisi (commitlenir, küçük)
+ESLESEN_ULKE = {'TR', 'US', 'GB'}
 ULKE_AD = {'TR': 'Türkiye', 'US': 'ABD', 'GB': 'Birleşik Krallık', 'DE': 'Almanya', 'FR': 'Fransa', 'JP': 'Japonya', 'KR': 'Güney Kore'}
 SPOR_TREND = re.compile(r"\s(vs\.?|–|-)\s|\bmaçı?\b|\bfc\b|\bspor\b|galatasaray|fenerbahçe|beşiktaş|trabzonspor|uefa|şampiyonlar ligi|uluslar ligi|süper lig|nba|nfl|premier league|la liga|serie a|bundesliga|f1|formula", re.I)
 
@@ -77,13 +78,14 @@ def trendler_uret(feeds, kumeler, simdi):
         lst = []
         for k, h in g.items():
             if simdi - h['son'] > 48 * 3600: continue
-            c, puan = trend_eslestir(h, yakin) if geo == 'TR' or geo in ('US', 'GB') else (None, 0)
+            denendi = geo in ESLESEN_ULKE   # diğer ülkelerin trendleri haberlerle eşleştirilmez: 'bizde yok' denemez
+            c, puan = trend_eslestir(h, yakin) if denendi else (None, 0)
             alan = (c['alanlar'][0] if c and c.get('alanlar') else ('spor' if SPOR_TREND.search(h['t'] + ' ' + ' '.join(x['t'] for x in h['hn'][:2])) else 'gundem'))
             onceki = h['seri'][-2][1] if len(h['seri']) > 1 else 0
             lst.append(dict(t=h['t'], tr=h.get('tr', ''), n=h['seri'][-1][1] if h['seri'] else 0, tepe=h['tepe'], ilk=h['ilk'], son=h['son'], aktif=k in aktif,
                             artis=(h['seri'][-1][1] > onceki > 0), seri=h['seri'][-12:], l=h['l'], i=h.get('i'), hn=h['hn'], alan=alan,
                             kume=dict(id=c['id'], t=c['t'], kb=c['kb'], son=c['son'], alanlar=c['alanlar']) if c else None, eslesme=puan,
-                            firsat=(c is None or c['kb'] <= 1)))
+                            firsat=(c is None or c['kb'] <= 1) if denendi else None))
         lst.sort(key=lambda x: (not x['aktif'], -x['n'], -x['ilk']))
         ulkeler[geo] = dict(ad=ULKE_AD.get(geo, geo), trendler=lst[:40], guncel=max((h['son'] for h in g.values()), default=0))
         # 48 saatten eski trendleri geçmişten at
