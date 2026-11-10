@@ -16,6 +16,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ekler as E  # Akış 3: Google Trends ve Güncelleme Radarı
 import masa as M   # sozcuk/kok yardımcıları ve STOP listesi eski hattan alınır
 
 SAAT = 168                     # kümelemeye giren haber yaşı (saat)
@@ -472,7 +473,7 @@ def main():
     n72 = Counter()
     for sid, f in j['feeds'].items():
         s = src.get(sid, {})
-        if s.get('nitelik') and 'erken-sinyal' in s['nitelik'] and 'trends' in sid: continue   # trend sayfaları ayrı (Reels trendleri)
+        if sid.startswith('trends-'): continue   # Google Trends haber değil, arama sinyali: ayrı işlenir (ekler.trendler_uret)
         for it in f['items']:
             l = it.get('l'); t = (it.get('t') or '').strip()
             if not l or not t or not it.get('d'): continue
@@ -628,8 +629,17 @@ def main():
     # arama dizini
     idx = [dict(id=c['id'], t=c['t'], s=c['s'][:70], son=c['son'], kb=c['kb'], a=c['alanlar'], d=c['diller'], k=c['kaynaklar'][:5], e=sorted(set(c['liderler']) | set(c['markalar']) | set(c['ulkeler'])), cat=c['cat']) for c in sorted(tum, key=lambda c: -c['son'])[:2600]]
     yaz('indeks.json', dict(generated=j['generated'], kayitlar=idx))
+    # Akış 3 ekleri: Google Trends ve Güncelleme Radarı
+    trend = E.trendler_uret(j['feeds'], tum, simdi)
+    yaz('trendler.json', dict(generated=j['generated'], **trend))
+    gunc = E.guncellemeler_uret(tum, simdi)
+    yaz('guncellemeler.json', dict(generated=j['generated'], **gunc))
+    tr_tr = (trend['ulkeler'].get('TR') or {}).get('trendler', [])
     ozet = dict(generated=j['generated'], uretim=datetime.now(timezone.utc).isoformat(), saglik=j.get('saglik', {}), kaynak_durum=dict(durum_say),
                 sicak=sicak, yukselen=yuk, son=son, sayim=sayim, alanlar=[dict(k=a, ad=ALAN_AD[a]) for a in ALANLAR],
+                alt_ad=dict(ALT_AD, **dict(GUNDEM_ALT)),
+                trend_tr=[{k: v for k, v in x.items() if k not in ('hn', 'i')} | dict(hn=x['hn'][:1]) for x in tr_tr if x['aktif']][:15],
+                guncelleme_ozet=[dict(k=u['k'], ad=u['ad'], n=u['n'], n24=u['n24'], son=u['son'], ilk=u['ogeler'][0]['t']) for u in gunc['urunler'][:12]],
                 reels_ilk=[dict(id=r['id'], t=r['t'], puan=r['puan'], profil=r['profil'], kb=r['kb']) for r in reels_json[:6]],
                 toplam=dict(haber=len(ogeler), kume=len(cikti), cok_kaynakli=sum(1 for c in tum if c['kb'] >= 3)),
                 yontem=dict(

@@ -1,0 +1,1005 @@
+[
+ {
+  "id": "apple-dev-releases",
+  "url": "https://developer.apple.com/news/releases/rss/releases.rss",
+  "tarih": "2026-11-10",
+  "ms": 354,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-09T18:00:00+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "iOS 27.2.1 (24B91034)",
+   "iOS 27.2.1 (24B156)"
+  ],
+  "ok": true
+ },
+ {
+  "id": "apple-dev-news",
+  "url": "https://developer.apple.com/news/rss/news.rss",
+  "tarih": "2026-11-10",
+  "ms": 638,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T17:00:12+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Announcing the Swift Student Challenge 2027",
+   "Hello Developer: November 2026"
+  ],
+  "ok": true
+ },
+ {
+  "id": "android-dev-blog",
+  "url": "https://android-developers.googleblog.com/feeds/posts/default",
+  "tarih": "2026-11-10",
+  "ms": 899,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-10T17:35:22.231000+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Powering Seamless Player Sign-In: Introducing the Open-Source Sign in with Googl",
+   "What’s new in intelligent apps at the Android Developer Summit"
+  ],
+  "ok": true
+ },
+ {
+  "id": "chrome-releases",
+  "url": "https://chromereleases.googleblog.com/feeds/posts/default",
+  "tarih": "2026-11-10",
+  "ms": 844,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T05:45:27.885000+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Beta Channel Update for ChromeOS / ChromeOS Flex",
+   "Chrome for Android Update"
+  ],
+  "ok": true
+ },
+ {
+  "id": "chrome-blog",
+  "url": "https://developer.chrome.com/static/blog/feed.xml",
+  "tarih": "2026-11-10",
+  "ms": 441,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-10-07T07:00:00+00:00",
+  "son_gun": 34,
+  "ortak": 0.0,
+  "ornek": [
+   "What's New in WebGPU (Chrome 155-156)",
+   "Shipping JPEG XL in Chrome"
+  ],
+  "ok": true
+ },
+ {
+  "id": "google-workspace-updates",
+  "url": "https://workspaceupdates.googleblog.com/feeds/posts/default",
+  "tarih": "2026-11-10",
+  "ms": 898,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T16:32:49.471000+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Schedule meetings in a single click from conversations in Google Chat",
+   "Pause and schedule automated workflows with the new “Wait until” step in Workspa"
+  ],
+  "ok": true
+ },
+ {
+  "id": "google-play-blog",
+  "url": "https://medium.com/feed/androiddevelopers",
+  "tarih": "2026-11-10",
+  "ms": 489,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2025-12-19T23:33:51+00:00",
+  "son_gun": 325,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "telegram-blog",
+  "url": "https://telegram.org/blog/rss",
+  "tarih": "2026-11-10",
+  "ms": 585,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "mozilla-blog",
+  "url": "https://blog.mozilla.org/en/feed/",
+  "tarih": "2026-11-10",
+  "ms": 388,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-10T14:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Firefox’s free built-in VPN uncaps data limit through January 2027",
+   "Five Firefox updates you might have missed, and a look ahead"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ms365-blog",
+  "url": "https://www.microsoft.com/en-us/microsoft-365/blog/feed/",
+  "tarih": "2026-11-10",
+  "ms": 5490,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-10-27T16:00:00+00:00",
+  "son_gun": 14,
+  "ortak": 0.0,
+  "ornek": [
+   "The AI advantage your company can keep",
+   "Bringing CRM into the flow of work and agents into business process for sales an"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ms-edge-blog",
+  "url": "https://blogs.windows.com/msedgedev/feed/",
+  "tarih": "2026-11-10",
+  "ms": 419,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-09T16:55:05+00:00",
+  "son_gun": 1,
+  "ortak": 0.4,
+  "ornek": [
+   "Shop faster and save money with built-in tools in Microsoft Edge",
+   "Discover more of what matters, every time you open a new tab in Microsoft Edge"
+  ],
+  "ok": true
+ },
+ {
+  "id": "samsung-news-tr",
+  "url": "https://news.samsung.com/tr/feed",
+  "tarih": "2026-11-10",
+  "ms": 304,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-09-09T17:10:02+00:00",
+  "son_gun": 62,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "anthropic-news",
+  "url": "https://news.google.com/rss/search?q=Anthropic%20Claude&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 270,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T19:32:14+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Anthropic Launches Workplace AI Tools Including Claude Sheets",
+   "Microsoft Stock Falls On Anthropic’s Challenge To Office Software"
+  ],
+  "ok": true
+ },
+ {
+  "id": "github-changelog",
+  "url": "https://github.blog/changelog/feed/",
+  "tarih": "2026-11-10",
+  "ms": 286,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-10T17:04:10+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "C++ language server now auto-configures MSBuild builds",
+   "Dependabot alerts will pause on inactive repositories"
+  ],
+  "ok": true
+ },
+ {
+  "id": "spotify-news",
+  "url": "https://newsroom.spotify.com/feed/",
+  "tarih": "2026-11-10",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "netflix-about",
+  "url": "https://news.google.com/rss/search?q=Netflix%20new%20feature%20app%20update&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 200,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-09T17:00:11+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Netflix Is Now Putting Full Episodes of PAW Patrol, Gabby's Dollhouse, and Other",
+   "Netflix’s new AI feature comes with a catch for subscribers"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ghacks",
+  "url": "https://www.ghacks.net/feed/",
+  "tarih": "2026-11-10",
+  "ms": 413,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T16:01:41+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Samsung Rolls Out One UI 9 Watch With Wear OS 7 to the Galaxy Watch 8 and Galaxy",
+   "Firefox's Free Built-In VPN Gets Unlimited Data From November 10 Through January"
+  ],
+  "ok": true
+ },
+ {
+  "id": "omgubuntu",
+  "url": "https://www.omgubuntu.co.uk/feed",
+  "tarih": "2026-11-10",
+  "ms": 230,
+  "kod": 200,
+  "n": 18,
+  "n_tarihli": 18,
+  "son_haber": "2026-11-09T23:59:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Firefox 160 release brings new floating ‘mini window’ mode",
+   "Extension Manager 0.7 released with new (and fixed) features"
+  ],
+  "ok": true
+ },
+ {
+  "id": "9to5mac-ios",
+  "url": "https://9to5mac.com/guides/ios/feed/",
+  "tarih": "2026-11-10",
+  "ms": 1754,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T21:58:30+00:00",
+  "son_gun": 3,
+  "ortak": 0.04,
+  "ornek": [
+   "iOS 27.3: New features, release date, more",
+   "Everything new in iOS 27.3 beta 1 so far"
+  ],
+  "ok": true
+ },
+ {
+  "id": "9to5google-android",
+  "url": "https://9to5google.com/guides/android/feed/",
+  "tarih": "2026-11-10",
+  "ms": 290,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-08T14:00:00+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "Android tablets are back, but are they for you?",
+   "Google Find Hub rolls out ‘Notify when left behind’ tracker alerts on Android"
+  ],
+  "ok": true
+ },
+ {
+  "id": "9to5google-pixel",
+  "url": "https://9to5google.com/guides/pixel/feed/",
+  "tarih": "2026-11-10",
+  "ms": 265,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2017-12-23T19:28:32+00:00",
+  "son_gun": 3244,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "9to5google-apps",
+  "url": "https://9to5google.com/guides/app/feed/",
+  "tarih": "2026-11-10",
+  "ms": 1420,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2018-05-01T15:34:50+00:00",
+  "son_gun": 3115,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "macrumors-ios",
+  "url": "https://feeds.macrumors.com/MacRumors-iOS",
+  "tarih": "2026-11-10",
+  "ms": 134,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-10T17:53:26+00:00",
+  "son_gun": 0,
+  "ortak": 0.9,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (90%)"
+ },
+ {
+  "id": "appleinsider-ios",
+  "url": "https://appleinsider.com/rss/topic/ios",
+  "tarih": "2026-11-10",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 392,
+  "kesif": []
+ },
+ {
+  "id": "androidauthority-apps",
+  "url": "https://www.androidauthority.com/apps/feed/",
+  "tarih": "2026-11-10",
+  "ms": 818,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T19:00:51+00:00",
+  "son_gun": 0,
+  "ortak": 0.92,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (92%)"
+ },
+ {
+  "id": "xda-phones",
+  "url": "https://www.xda-developers.com/feed/phones/",
+  "tarih": "2026-11-10",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 655,
+  "kesif": []
+ },
+ {
+  "id": "gizmochina-xiaomi",
+  "url": "https://www.gizmochina.com/tag/xiaomi/feed/",
+  "tarih": "2026-11-10",
+  "ms": 330,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-04T23:42:54+00:00",
+  "son_gun": 5,
+  "ortak": 0.0,
+  "ornek": [
+   "Xiaomi launches Mijia Smart Waist Massager 2 with dual-sided heating and 110-min",
+   "Stable HyperOS 4 rollout begins: 33 out of 82 devices scheduled for early Novemb"
+  ],
+  "ok": true
+ },
+ {
+  "id": "oneplus-community",
+  "url": "https://news.google.com/rss/search?q=OnePlus%20OxygenOS%20update&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 231,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-09T06:55:14+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Is ColorOS 17 Replacing OxygenOS 16 On OnePlus Phones? Here's What Changes",
+   "OnePlus Shares ColorOS 17 Rollout Plan For November, Starting With OnePlus 13R"
+  ],
+  "ok": true
+ },
+ {
+  "id": "mobilissimo",
+  "url": "https://feeds.feedburner.com/mobilissimo-stiri-telefoane",
+  "tarih": "2026-11-10",
+  "ms": 348,
+  "kod": 200,
+  "n": 15,
+  "n_tarihli": 15,
+  "son_haber": "2026-11-10T17:25:16+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Anthropic lansează Claude Fable 5.2 și Mythos 5.2: AI care scrie programe, proie",
+   "Ce aduce LG în Las Vegas la CES 2027? Compania a primit deja primele premii - mo"
+  ],
+  "ok": true
+ },
+ {
+  "id": "notebookcheck-news",
+  "url": "https://www.notebookcheck.net/News.152.100.html",
+  "tarih": "2026-11-10",
+  "ms": 1493,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T19:16:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.96,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (96%)"
+ },
+ {
+  "id": "techcrunch-apps",
+  "url": "https://techcrunch.com/category/apps/feed/",
+  "tarih": "2026-11-10",
+  "ms": 161,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-10T17:30:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.25,
+  "ornek": [
+   "Anthropic launches Claude Meetings to turn workplace discussions into plans and ",
+   "Sundrop turns your endless baby photos into recaps, time lapses, and more — with"
+  ],
+  "ok": true
+ },
+ {
+  "id": "verge-apps",
+  "url": "https://www.theverge.com/rss/apps/index.xml",
+  "tarih": "2026-11-10",
+  "ms": 209,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-10T17:43:49+00:00",
+  "son_gun": 0,
+  "ortak": 0.1,
+  "ornek": [
+   "Ableton Live 13 announced with a step sequencer, new drum synth, and more",
+   "Medium is launching a new note-taking app called TK"
+  ],
+  "ok": true
+ },
+ {
+  "id": "verge-mobile",
+  "url": "https://www.theverge.com/rss/mobile/index.xml",
+  "tarih": "2026-11-10",
+  "ms": 375,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-10T17:36:39+00:00",
+  "son_gun": 0,
+  "ortak": 0.1,
+  "ornek": [
+   "Google Fi is bringing back multiple cell network support for better coverage",
+   "Starlink Mobile: All the news on SpaceX’s major mobile carrier ambitions"
+  ],
+  "ok": true
+ },
+ {
+  "id": "engadget-mobile",
+  "url": "https://news.google.com/rss/search?q=site%3Aengadget.com%20app%20update&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 238,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T17:30:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Anthropic Takes On Google And Microsoft With Claude Sheets",
+   "What Is The Difference Between Rest Mode And Shutdown For Your PlayStation 5?"
+  ],
+  "ok": true
+ },
+ {
+  "id": "tomsguide-phones",
+  "url": "https://www.tomsguide.com/feeds/tag/phones",
+  "tarih": "2026-11-10",
+  "ms": 575,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T19:01:07+00:00",
+  "son_gun": 0,
+  "ortak": 0.16,
+  "ornek": [
+   "Your Pixel just got a ton of new features — here's what dropped and how they wor",
+   "I tested the Google Pixel Tag and it’s the most findable tracker for Android pho"
+  ],
+  "ok": true
+ },
+ {
+  "id": "pocketnow",
+  "url": "https://pocketnow.com/feed/",
+  "tarih": "2026-11-10",
+  "ms": 608,
+  "kod": 200,
+  "n": 5,
+  "n_tarihli": 5,
+  "son_haber": "2024-06-07T11:00:15+00:00",
+  "son_gun": 886,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "droid-life",
+  "url": "https://www.droid-life.com/feed/",
+  "tarih": "2026-11-10",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "mspoweruser",
+  "url": "https://mspoweruser.com/feed/",
+  "tarih": "2026-11-10",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protoco",
+  "ms": 119,
+  "kesif": []
+ },
+ {
+  "id": "igeeksblog",
+  "url": "https://www.igeeksblog.com/feed/",
+  "tarih": "2026-11-10",
+  "ms": 1046,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-10T14:46:55+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Fortnite Treasure Hunters: Every vault location on the Battle Royale island",
+   "Fortnite Treasure Hunters: How to check the number of chests you’ve opened"
+  ],
+  "ok": true
+ },
+ {
+  "id": "macobserver",
+  "url": "https://www.macobserver.com/feed/",
+  "tarih": "2026-11-10",
+  "ms": 173,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T17:20:02+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Apple’s Original iPod Turns 25 Today, Here’s How It Changed Music Forever",
+   "Apple Maps Could Soon Include Parking Time in Your Arrival Estimates"
+  ],
+  "ok": true
+ },
+ {
+  "id": "android-tr-gn",
+  "url": "https://news.google.com/rss/search?q=Android%20g%C3%BCncellemesi%20OR%20%22One%20UI%22%20OR%20HyperOS%20OR%20%22Android%2017%22&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 237,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T13:28:06+00:00",
+  "son_gun": 0,
+  "ortak": 0.32,
+  "ornek": [
+   "One UI 9 Watch ABD'de Galaxy Watch 8'e geldi",
+   "One UI 10 \"Tarihteki en Büyük Değişimi\" Getirecek!"
+  ],
+  "ok": true
+ },
+ {
+  "id": "teknoblog",
+  "url": "https://www.teknoblog.com/feed/",
+  "tarih": "2026-11-10",
+  "ms": 375,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-10T19:43:07+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Geforce RTX 5070 kullanıcısı daha eriyen bağlantı sorunu bildirdi",
+   "Motorola, Android 17 beta kaydını 14 modele daha açtı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "megabayt",
+  "url": "https://www.megabayt.com/rss/news",
+  "tarih": "2026-11-10",
+  "ms": 441,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T17:38:36+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Hangi bilgisayar size göre? Kullanım alışkanlıklarınıza göre en doğru seçim rehb",
+   "GTA 6 için geri sayım başladı: Dev dosya boyutu ve ön yükleme detayları belli ol"
+  ],
+  "ok": true
+ },
+ {
+  "id": "teknolojioku",
+  "url": "https://www.teknolojioku.com/export/rss",
+  "tarih": "2026-11-10",
+  "ms": 278,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T15:33:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "BYD'nin Hollanda ofislerine baskın: Land Rover'dan kopyalama suçlaması",
+   "iPhone Duo'ya rakip geliyor! Motorola Razr Flex 27 ortaya çıktı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "teknokulis",
+  "url": "https://news.google.com/rss/search?q=site%3Ateknokulis.com&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 206,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "donanimarsivi",
+  "url": "https://www.donanimarsivi.com/feed/",
+  "tarih": "2026-11-10",
+  "ms": 611,
+  "kod": 200,
+  "n": 12,
+  "n_tarihli": 12,
+  "son_haber": "2026-11-09T15:17:01+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "GTA 6’nın Ana Menü Müziği Ön Yüklemelerle Birlikte Ortaya Çıktı",
+   "PlayStation Plus Kataloğuna Eklenecek İki Yeni Oyun Erkenden Duyuruldu"
+  ],
+  "ok": true
+ },
+ {
+  "id": "technopat-haber",
+  "url": "https://www.technopat.net/haber/feed/",
+  "tarih": "2026-11-10",
+  "ms": 1000,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T18:15:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Samsung Galaxy AI ücretli oluyor! Abonelik fiyatı ve özellikleri ortaya çıktı",
+   "NASA, Ay üssünü inşa edecek şirketleri seçti"
+  ],
+  "ok": true
+ },
+ {
+  "id": "pchocasi",
+  "url": "https://pchocasi.com.tr/feed/",
+  "tarih": "2026-11-10",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 543,
+  "kesif": []
+ },
+ {
+  "id": "iphonedestek",
+  "url": "https://news.google.com/rss/search?q=iOS%20g%C3%BCncellemesi%20yeni%20%C3%B6zellik%20iPhone&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 238,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T19:37:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.76,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (76%)"
+ },
+ {
+  "id": "gn-tr-whatsapp",
+  "url": "https://news.google.com/rss/search?q=WhatsApp%20yeni%20%C3%B6zellik%20OR%20WhatsApp%20g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 217,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T08:02:35+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "WhatsApp'ta yeni dolandırıcılık tuzağı! Yapay zekayla yazışmaları taklit edip pa",
+   "WhatsApp’ta tüm dengeleri değiştiren güncelleme: Bunu yapmayan hesabına erişemey"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-instagram2",
+  "url": "https://news.google.com/rss/search?q=Instagram%20yeni%20%C3%B6zellik%20OR%20Threads%20yeni%20%C3%B6zellik%20OR%20Instagram%20g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 197,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-10-01T07:00:00+00:00",
+  "son_gun": 40,
+  "ortak": 0.0,
+  "ornek": [
+   "Instagram'a beklenen özellik geldi: Story görüntülemelerinde yeni dönem - CNBC-e",
+   "Instagram ve WhatsApp'a yeni özellik: Yapay zekayla görsel üretme dönemi"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-youtube",
+  "url": "https://news.google.com/rss/search?q=YouTube%20yeni%20%C3%B6zellik%20OR%20TikTok%20yeni%20%C3%B6zellik&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 219,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T13:16:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "X'te video paylaşımında yeni özellik: Videoların istediğiniz bölümünü kesip payl",
+   "X’e iki yeni özellik geldi :Ekran görüntüsü ve video klipleri alınabilecek"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-chatgpt",
+  "url": "https://news.google.com/rss/search?q=ChatGPT%20yeni%20%C3%B6zellik%20OR%20Gemini%20g%C3%BCncelleme%20OR%20Claude%20yapay%20zeka&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 196,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-06T15:07:32+00:00",
+  "son_gun": 4,
+  "ortak": 0.0,
+  "ornek": [
+   "Gemini, ChatGPT ve Claude Sergen Yalçın'ın Milli Takım Kadrosunu Tek Tek Notladı",
+   "Yapay zekaya bunları yazıyorsanız hemen durun! Finans uzmanları uyardı: Bir sani"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-windows-gunc",
+  "url": "https://news.google.com/rss/search?q=Windows%2011%20g%C3%BCncelleme%20OR%20%22Microsoft%20Office%22%20yeni%20%C3%B6zellik%20OR%20Copilot%20g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 199,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-09T18:04:21+00:00",
+  "son_gun": 1,
+  "ortak": 0.16,
+  "ornek": [
+   "Windows 11, Üçüncü Taraf Uygulamaların Güncelleme Bildirimlerini Tek Merkezde To",
+   "Windows 11 Kasım Güncellemesi ile 11 Yeni Özellik Geliyor"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-xiaomi",
+  "url": "https://news.google.com/rss/search?q=HyperOS%20OR%20Xiaomi%20g%C3%BCncelleme%20OR%20Redmi&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 240,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T10:56:39+00:00",
+  "son_gun": 0,
+  "ortak": 0.16,
+  "ornek": [
+   "Xiaomi'nin 10.000 mAh Bataryalı Yeni Modeli Redmi K100 Ultra Sızdırıldı!",
+   "HyperOS 4 Güncellemesi Hangi Xiaomi Modellerine Gelecek?"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-samsung",
+  "url": "https://news.google.com/rss/search?q=%22One%20UI%22%20OR%20Samsung%20g%C3%BCncelleme%20OR%20Galaxy%20g%C3%BCncelleme&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 242,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T13:28:06+00:00",
+  "son_gun": 0,
+  "ortak": 0.28,
+  "ornek": [
+   "One UI 9 Watch ABD'de Galaxy Watch 8'e geldi",
+   "Samsung Galaxy A34 İçin One UI 9.0 Güncellemesi Dağıtılmaya Başlandı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-operator",
+  "url": "https://news.google.com/rss/search?q=Turkcell%20OR%20Vodafone%20OR%20%22T%C3%BCrk%20Telekom%22%20OR%20e-Devlet%20yeni%20hizmet&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 197,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-10-16T07:00:00+00:00",
+  "son_gun": 25,
+  "ortak": 0.0,
+  "ornek": [
+   "e-Devlet’te yeni hizmet: Günde 1 rapor ücretsiz",
+   "Müşteri deneyiminde yeni yaklaşım: Turkcell Çözüm Gücü"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-oyun",
+  "url": "https://news.google.com/rss/search?q=oyun%20g%C3%BCncellemesi%20OR%20PlayStation%20OR%20Xbox%20OR%20Steam%20yeni&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-10",
+  "ms": 231,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T18:17:38+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Steam Deck oyunlarının ortalama FPS değerleri artık Steam'de görüntülenebiliyor!",
+   "Steam Deck Mağazasında Oyunlar İçin FPS Verisi Gösterilmeye Başlandı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-rollingout",
+  "url": "https://news.google.com/rss/search?q=%22rolling%20out%22%20app%20new%20feature&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 202,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T19:22:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Venmo's newest feature is supposed to make it easier to split lunch. So, we test",
+   "WhatsApp to Bring a New Contacts Tab for iOS as Feature Reportedly Starts Rollin"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-redesign",
+  "url": "https://news.google.com/rss/search?q=app%20redesign%20OR%20%22new%20interface%22%20OR%20%22new%20design%22%20update&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 186,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T08:53:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "PlugShare's Big Redesign Finally Brings Dark Mode to Its EV Charging App",
+   "Google Messages homepage redesign: Pinned chat avatars, bottom search, corner Ge"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-ios-update",
+  "url": "https://news.google.com/rss/search?q=iOS%20update%20released%20OR%20%22iOS%20beta%22&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 207,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T17:03:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Apple’s iOS 27.2.1 update fixes two iMessage group chat flaws",
+   "iOS 27.2.1 Released: Supported iPhones and How to Update"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-android-update",
+  "url": "https://news.google.com/rss/search?q=Android%20update%20OR%20%22Pixel%20Drop%22%20OR%20%22One%20UI%22%20OR%20HyperOS&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 236,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T19:09:32+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Pixel 10 with Gemini Intelligence, custom widgets and more in our November Pixel",
+   "November Pixel Drop brings Gemini Intelligence to Pixel 10 and puts Pixel Tag on"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-whatsapp",
+  "url": "https://news.google.com/rss/search?q=WhatsApp%20OR%20Instagram%20OR%20Threads%20new%20feature&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 257,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-10T16:50:34+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "WhatsApp Plans Payments, Loans and AI Features Under New Chief Kunal Shah",
+   "Samsung to Introduce Call Recording for WhatsApp in New Update"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-ai-apps",
+  "url": "https://news.google.com/rss/search?q=ChatGPT%20OR%20Gemini%20OR%20Claude%20new%20feature%20update&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-10",
+  "ms": 192,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-04T17:02:44+00:00",
+  "son_gun": 6,
+  "ortak": 0.0,
+  "ornek": [
+   "Introducing Images 2.6 I n t r o d u c i n g I m a g e s 2 6",
+   "GPT-6 and Intelligent UI for everyone"
+  ],
+  "ok": true
+ }
+]

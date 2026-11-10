@@ -8,7 +8,7 @@ on:
   workflow_dispatch:          # Actions sekmesinden elle de çalıştırılabilir
   push:
     branches: [main]            # gelistirme dallari yayin zincirini baslatmasin
-    paths: [sources.json, fetch_feeds.py, masa.py, akis2.py, index.tpl.html, build.py, tests/**, .github/workflows/refresh.yml]
+    paths: [sources.json, fetch_feeds.py, masa.py, akis2.py, ekler.py, index.tpl.html, build.py, tests/**, .github/workflows/refresh.yml]
 permissions:
   contents: write
   actions: write
@@ -25,7 +25,7 @@ jobs:
         run: python -m unittest discover -s tests -t .
       - run: python fetch_feeds.py
       - run: python masa.py          # eski cikti (masa.json): TechTurco paneli okur
-      - run: python akis2.py         # yeni arayuzun parcali verisi (site/data/*.json)
+      - run: python akis2.py         # yeni arayuzun parcali verisi (site/data/*.json), Google Trends ve Guncelleme Radari (ekler.py)
       - run: python build.py         # site/index.html (+ panelin okudugu id="snap" blogu)
       - name: "Cikti dogrulama (bozuk uretim commitlenmez, onceki site yayinda kalir)"
         run: python -m unittest tests.test_sozlesme tests.test_cikti -v

@@ -36,13 +36,13 @@ if (mod === 'ekran') {
   c.kapat();
 } else if (mod === 'olcum') {
   const c = await ac(); const sonuc = {};
-  for (const [ad, ol, cpu, ag, url] of [['masaustu', MASA, 1, null, '/#/merkez'], ['mobil-4x-cpu-4g', MOBIL, 4, { latency: 150, downloadThroughput: 1.6e6 / 8, uploadThroughput: 0.75e6 / 8 }, '/#/merkez'], ['mobil-reels', MOBIL, 4, { latency: 150, downloadThroughput: 1.6e6 / 8, uploadThroughput: 0.75e6 / 8 }, '/#/reels']]) {
+  for (const [ad, ol, cpu, ag, url] of [['masaustu', MASA, 1, null, '/#/bugun'], ['mobil-4x-cpu-4g', MOBIL, 4, { latency: 150, downloadThroughput: 1.6e6 / 8, uploadThroughput: 0.75e6 / 8 }, '/#/bugun'], ['mobil-reels', MOBIL, 4, { latency: 150, downloadThroughput: 1.6e6 / 8, uploadThroughput: 0.75e6 / 8 }, '/#/reels']]) {
     await c.cmd('Network.enable'); await c.cmd('Emulation.setCPUThrottlingRate', { rate: cpu });
     await c.cmd('Network.emulateNetworkConditions', ag ? { offline: false, ...ag } : { offline: false, latency: 0, downloadThroughput: -1, uploadThroughput: -1 });
     await git(c, B + url, ol, 9000);
     const bayt = c.olay.filter(o => o.method === 'Network.loadingFinished').reduce((a, o) => a + (o.params.encodedDataLength || 0), 0);
     const istek = c.olay.filter(o => o.method === 'Network.requestWillBeSent').length;
-    const m = await calis(c, `JSON.stringify({fcp:(performance.getEntriesByName('first-contentful-paint')[0]||{}).startTime,dcl:performance.timing.domContentLoadedEventEnd-performance.timing.navigationStart,load:performance.timing.loadEventEnd-performance.timing.navigationStart,icerik:document.querySelectorAll('.sk,.sat,.rk').length,dom:document.getElementsByTagName('*').length})`);
+    const m = await calis(c, `JSON.stringify({fcp:(performance.getEntriesByName('first-contentful-paint')[0]||{}).startTime,dcl:performance.timing.domContentLoadedEventEnd-performance.timing.navigationStart,load:performance.timing.loadEventEnd-performance.timing.navigationStart,icerik:document.querySelectorAll('.sat,.rk,.tr-s').length,dom:document.getElementsByTagName('*').length})`);
     sonuc[ad] = { ...JSON.parse(m), aktarilan_kb: Math.round(bayt / 1024), istek }; await c.cmd('Emulation.setCPUThrottlingRate', { rate: 1 });
   }
   console.log(JSON.stringify(sonuc, null, 1)); c.kapat();
