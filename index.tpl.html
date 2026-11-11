@@ -316,7 +316,7 @@ function indeksYukle(){if(D.indeks)return Promise.resolve(D.indeks);return getJ(
 function bul(id){return TREG[id]||REG[id]||kayit[id]||null}
 
 /* ---------- durum ---------- */
-var S={sayfa:'bugun',alan:'gundem',alt:'',zaman:'24',cok:false,tr:false,sira:'onem',adet:40,pen:'6',geo:'TR',tfil:'hepsi',urun:'',tur:'',profil:'hepsi',ralt:'',radet:20,kdur:'',kq:'',kfil:'',sec:null,imlec:-1,ara:false,araSec:0,geri:null};
+var S={sayfa:'bugun',alan:'gundem',alt:'',zaman:'24',cok:false,tr:false,sira:'onem',adet:40,pen:'6',geo:'TR',tfil:'hepsi',urun:'',tur:'',dil:'',profil:'hepsi',ralt:'',radet:20,kdur:'',kq:'',kfil:'',sec:null,imlec:-1,ara:false,araSec:0,geri:null};
 
 /* ---------- işaretler ---------- */
 var takipRx=null;
@@ -336,9 +336,10 @@ function satir(c,o){
   var img=c.i&&ayar.gorsel?'<img class="sat-g" loading="lazy" decoding="async" referrerpolicy="no-referrer" src="'+esc(c.i)+'" alt="" onerror="this.remove()">':'';
   var ozet=o.ozet&&c.s&&fold(c.s).indexOf(fold(c.t).slice(0,40))!==0?'<p class="sat-o">'+esc(ozetTemiz(c.s))+'</p>':'';
   var urun=o.urun&&c.urunAd?'<span>'+esc(c.urunAd)+'</span>':'';
+  var dilE=o.dilEt&&c.dil?'<span class="et" title="'+(c.dil==='tr'?'Türkçe haber':'Yabancı dilde haber')+'">'+esc(String(c.dil).toUpperCase())+'</span>':'';
   return '<article class="sat'+(o.buyuk?' buyuk':'')+(o.sikis?' sikis':'')+(okundu[c.id]?' ok':'')+(S.sec===c.id?' secili':'')+'" data-id="'+c.id+'">'+yeni+img+
    '<div class="sat-m"><h3 class="sat-t">'+vurgu(c.t)+'</h3>'+ozet+
-   '<div class="sat-a">'+tur+urun+kb+'<span class="kn">'+kaynakEt(c)+'</span><span>'+ago(c.son)+'</span>'+al+(durum[c.id]?'<span class="et vr">'+DURUM_AD[durum[c.id].d]+'</span>':'')+'</div></div>'+
+   '<div class="sat-a">'+tur+dilE+urun+kb+'<span class="kn">'+kaynakEt(c)+'</span><span>'+ago(c.son)+'</span>'+al+(durum[c.id]?'<span class="et vr">'+DURUM_AD[durum[c.id].d]+'</span>':'')+'</div></div>'+
    '<div class="sat-e"><button class="ik-b gz" data-act="gizle" data-id="'+c.id+'" aria-label="İlgisiz, gizle" title="İlgisiz (X)">'+ik('x')+'</button><button class="ik-b'+(kayit[c.id]?' on':'')+'" data-act="kaydet" data-id="'+c.id+'" aria-label="Kaydet" title="Kaydet (S)">'+ik('kayit')+'</button></div></article>';
 }
 function liste(arr,o){var h=arr.map(function(c){return satir(c,o)}).join('');return h?'<div class="liste">'+h+'</div>':'<div class="bosluk">Bu süzgeçte haber yok.</div>'}
@@ -425,12 +426,17 @@ function sayfaGunc(){
   var j=D.gunc;
   if(!j){guncYukle().then(ciz).catch(hata);return iskelet(8)}
   var h='<div class="duzen tek"><div><div class="bas"><div><h1>Güncelleme radarı</h1><p>İşletim sistemi, uygulama ve arayüz güncellemeleri · son '+j.gun+' gün</p></div></div>';
-  h+='<div class="cipler"><button class="cip'+(!S.urun?' on':'')+'" data-act="urun" data-v="">Tümü</button>'+j.urunler.map(function(u){return'<button class="cip'+(S.urun===u.k?' on':'')+'" data-act="urun" data-v="'+u.k+'">'+esc(u.ad)+' <small>'+(u.n24||u.n)+'</small></button>'}).join('')+'</div>';
-  h+='<div class="arac"><span class="seg"><button data-act="tur" data-v="" class="'+(!S.tur?'on':'')+'">Hepsi</button>'+j.turler.map(function(t){return'<button data-act="tur" data-v="'+t.k+'" class="'+(S.tur===t.k?'on':'')+'">'+esc(t.ad)+'</button>'}).join('')+'</span></div>';
+  // Dil süzgeci: '' hepsi, 'tr' Türkçe, 'yab' Türkçe olmayan. Ürün ve dil sayaçları süzgece göre hesaplanır.
+  var dilUy=function(x){return!S.dil||(S.dil==='tr'?x.dil==='tr':x.dil!=='tr')};
+  var dilSay={'':0,tr:0,yab:0};j.urunler.forEach(function(u){u.ogeler.forEach(function(x){if(S.tur&&x.tur!==S.tur)return;if(S.urun&&u.k!==S.urun)return;dilSay['']++;if(x.dil==='tr')dilSay.tr++;else dilSay.yab++})});
+  var gec=Date.now()/1000;
+  h+='<div class="cipler"><button class="cip'+(!S.urun?' on':'')+'" data-act="urun" data-v="">Tümü</button>'+j.urunler.map(function(u){var f=u.ogeler.filter(dilUy);if(S.dil&&!f.length&&S.urun!==u.k)return'';var n24=f.filter(function(x){return gec-x.son<86400}).length;return'<button class="cip'+(S.urun===u.k?' on':'')+'" data-act="urun" data-v="'+u.k+'">'+esc(u.ad)+' <small>'+(n24||f.length)+'</small></button>'}).join('')+'</div>';
+  h+='<div class="arac"><span class="seg"><button data-act="tur" data-v="" class="'+(!S.tur?'on':'')+'">Hepsi</button>'+j.turler.map(function(t){return'<button data-act="tur" data-v="'+t.k+'" class="'+(S.tur===t.k?'on':'')+'">'+esc(t.ad)+'</button>'}).join('')+'</span>'+
+    '<span class="seg" role="group" aria-label="Dil"><button data-act="dil" data-v="" class="'+(!S.dil?'on':'')+'">Tüm diller <small>'+dilSay['']+'</small></button><button data-act="dil" data-v="tr" class="'+(S.dil==='tr'?'on':'')+'">Türkçe <small>'+dilSay.tr+'</small></button><button data-act="dil" data-v="yab" class="'+(S.dil==='yab'?'on':'')+'">Yabancı <small>'+dilSay.yab+'</small></button></span></div>';
   var us=S.urun?j.urunler.filter(function(u){return u.k===S.urun}):j.urunler;
-  var l=[];us.forEach(function(u){u.ogeler.forEach(function(x){if(!S.tur||x.tur===S.tur)l.push(x)})});
+  var l=[];us.forEach(function(u){u.ogeler.forEach(function(x){if((!S.tur||x.tur===S.tur)&&dilUy(x))l.push(x)})});
   l.sort(function(a,b){return b.son-a.son});
-  h+=liste(l.slice(0,S.adet),{tur:true,urun:!S.urun,ozet:!ayar.yogun});
+  h+=liste(l.slice(0,S.adet),{tur:true,urun:!S.urun,ozet:!ayar.yogun,dilEt:true});
   if(l.length>S.adet)h+='<button class="daha" data-act="daha">Daha fazla göster ('+(l.length-S.adet)+')</button>';
   h+='<p class="bilgi" style="margin-top:20px">'+esc(j.not_)+'</p>';
   return h+'</div></div>';
@@ -647,7 +653,7 @@ document.addEventListener('click',function(e){
   else if(a==='zaman'){S.zaman=v;S.adet=40;ciz()}else if(a==='cok'){S.cok=!S.cok;S.adet=40;ciz()}else if(a==='trf'){S.tr=!S.tr;S.adet=40;ciz()}
   else if(a==='sira'){S.sira=v;ciz()}else if(a==='daha'){S.adet+=40;ciz()}else if(a==='rdaha'){S.radet+=20;ciz()}
   else if(a==='geo'){S.geo=v;history.replaceState(null,'','#/trend/'+v);ciz()}else if(a==='tfil'){S.tfil=v;ciz()}
-  else if(a==='urun'){S.urun=v;S.adet=40;history.replaceState(null,'','#/guncelleme'+(v?'?u='+v:''));ciz()}else if(a==='tur'){S.tur=v;S.adet=40;ciz()}
+  else if(a==='urun'){S.urun=v;S.adet=40;history.replaceState(null,'','#/guncelleme'+(v?'?u='+v:''));ciz()}else if(a==='tur'){S.tur=v;S.adet=40;ciz()}else if(a==='dil'){S.dil=v;S.adet=40;ciz()}
   else if(a==='profil'){S.profil=v;S.radet=20;ciz()}else if(a==='ralt'){S.ralt=v;S.radet=20;ciz()}
   else if(a==='kfil'){S.kfil=v;ciz()}else if(a==='kdur'){S.kdur=S.kdur===v?'':v;ciz()}
   else if(a==='disa')disa();else if(a==='brif')brif();else if(a==='n-uret')kayitTaslak();
