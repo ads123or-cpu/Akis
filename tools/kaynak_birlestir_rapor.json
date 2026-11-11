@@ -1,47 +1,52 @@
 {
  "eklenen": [
-  "anthropic-news",
-  "apple-dev-releases",
-  "apple-dev-news",
-  "android-dev-blog",
-  "chrome-releases",
-  "chrome-blog",
-  "google-workspace-updates",
-  "mozilla-blog",
-  "ms365-blog",
-  "ms-edge-blog",
-  "github-changelog",
-  "netflix-about",
-  "ghacks",
-  "omgubuntu",
-  "9to5mac-ios",
-  "9to5google-android",
-  "gizmochina-xiaomi",
-  "oneplus-community",
-  "mobilissimo",
-  "techcrunch-apps",
-  "verge-apps",
-  "verge-mobile",
-  "engadget-mobile",
-  "tomsguide-phones",
-  "igeeksblog",
-  "macobserver",
-  "android-tr-gn",
-  "teknoblog",
-  "megabayt",
-  "teknolojioku",
-  "technopat-haber",
-  "gn-tr-youtube",
-  "gn-tr-chatgpt",
-  "gn-tr-windows-gunc",
-  "gn-tr-xiaomi",
-  "gn-tr-oyun",
-  "gn-en-rollingout",
-  "gn-en-redesign",
-  "gn-en-ios-update",
-  "gn-en-android-update",
-  "gn-en-whatsapp",
-  "gn-en-ai-apps"
+  "notebookcheck-news",
+  "sammyguru",
+  "samsung-newsroom-global2",
+  "androidsage",
+  "gn-oneui-tr",
+  "gn-oneui-9-tr",
+  "gn-galaxy-tr",
+  "gn-galaxy-s-tr",
+  "gn-fold-tr",
+  "gn-oneui-en",
+  "gn-galaxy-en",
+  "gn-samsung-security-en",
+  "9to5mac-iphone",
+  "9to5mac-apple-watch",
+  "9to5mac-ipad",
+  "9to5mac-vision",
+  "daringfireball",
+  "iosgods-news",
+  "appleworld-today",
+  "tidbits",
+  "appleosophy",
+  "gn-ios27-tr",
+  "gn-iphone-tr",
+  "gn-iphone18-tr",
+  "gn-ipados-tr",
+  "gn-apple-intel-tr",
+  "gn-apple-tr",
+  "gn-iphone-en",
+  "gn-ios-beta-en",
+  "gn-apple-watch-en",
+  "gn-airpods-en",
+  "googleblog-android",
+  "googleblog-pixel",
+  "googleblog-gemini",
+  "xiaomiui",
+  "telefonhaberleri",
+  "gn-android17-tr",
+  "gn-pixel-tr",
+  "gn-xiaomi-tr",
+  "gn-oppo-tr",
+  "gn-telefon-tr",
+  "gn-uygulama-tr",
+  "gn-pixel-en",
+  "gn-xiaomi-en",
+  "gn-android-en",
+  "gn-smartphone-en",
+  "gn-app-update-en"
  ],
  "atlanan": [
   [
@@ -401,10 +406,6 @@
    "HTTP Error 404: Not Found"
   ],
   [
-   "notebookcheck-news",
-   "mevcut akislarla kopya (96%)"
-  ],
-  [
    "pocketnow",
    "45 gunden eski (guncellenmiyor)"
   ],
@@ -423,6 +424,58 @@
   [
    "iphonedestek",
    "mevcut akislarla kopya (76%)"
+  ],
+  [
+   "samsung-newsroom-us",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "samsung-members",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "macrumors-iphone",
+   "3 kayittan az"
+  ],
+  [
+   "patentlyapple",
+   "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protoco"
+  ],
+  [
+   "appleinsider-iphone",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "iphonehacks",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "apple-support-releases",
+   "3 kayittan az"
+  ],
+  [
+   "merlininkutusu",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "iphoneturkiye",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "applemagazine",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "nothing-community",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "honor-news",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "gsmarena-blog",
+   "45 gunden eski (guncellenmiyor)"
   ]
  ]
 }

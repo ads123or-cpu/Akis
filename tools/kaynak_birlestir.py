@@ -58,11 +58,11 @@ def main():
     mevcut_id = {s['id'] for s in src}; mevcut_url = {s['url'] for s in src}
     # Aday listeleri ve test sonuclari
     adaylar = {}
-    for f in ('adaylar.py', 'adaylar2.py', 'adaylar3.py'):
+    for f in ('adaylar.py', 'adaylar2.py', 'adaylar3.py', 'adaylar4.py'):
         sp = importlib.util.spec_from_file_location('a', os.path.join(KOK, 'tools', f)); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
         for a in m.A: adaylar[a[0]] = a
     sonuc = {}
-    for f in ('kaynak_test_sonuc.json', 'kaynak_test_sonuc2.json', 'kaynak_test_sonuc3.json'):
+    for f in ('kaynak_test_sonuc.json', 'kaynak_test_sonuc2.json', 'kaynak_test_sonuc3.json', 'kaynak_test_sonuc4.json'):
         for r in json.load(open(os.path.join(KOK, 'tools', f), encoding='utf-8')): sonuc[r['id']] = r
     RED = set(open(os.path.join(KOK, 'tools', 'kaynak_red.txt')).read().split()) if os.path.exists(os.path.join(KOK, 'tools', 'kaynak_red.txt')) else set()
     # Agdan erisilemedigi icin test edilemeyen ama bilinen RSS adresleri: aktif eklenir, durum 'bekliyor' (Actions ilk cekisi dogrular)
