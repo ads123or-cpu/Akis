@@ -51,7 +51,7 @@ A = [
     u('cn-infoq', 'InfoQ 中国', 'zh', 'CN', 'https://www.infoq.cn/feed'),
     u('cn-appinn', '小众软件', 'zh', 'CN', 'https://www.appinn.com/feed/'),
     u('cn-iplaysoft', '异次元软件世界', 'zh', 'CN', 'https://feed.iplaysoft.com/'),
-    u('cn-dgtle', '数字尾巴', 'zh', 'CN', 'https://www.dgtle.com/rss/dgtle.xml'),
+    # u('cn-dgtle', '数字尾巴', 'zh', 'CN', 'https://www.dgtle.com/rss/dgtle.xml'),  # GitHub sunucularindan cekilemedi, cikarildi
     u('cn-v2ex', 'V2EX', 'zh', 'CN', 'https://www.v2ex.com/index.xml', tip='topluluk/trend'),
     u('cn-sina-tech', '新浪科技', 'zh', 'CN', 'https://rss.sina.com.cn/tech/rollnews.xml'),
     u('cn-ithome-it', 'IT之家 IT资讯', 'zh', 'CN', 'https://www.ithome.com/rss/'),
@@ -70,7 +70,7 @@ A = [
     u('tw-technews', '科技新報 TechNews', 'zh', 'TW', 'https://technews.tw/feed/'),
     u('tw-cool3c', '癮科技 Cool3c', 'zh', 'TW', 'https://www.cool3c.com/rss'),
     u('tw-applealmond', '蘋果仁', 'zh', 'TW', 'https://applealmond.com/feed', cat='ios'),
-    u('tw-sogi', 'SOGI 手機王', 'zh', 'TW', 'https://www.sogi.com.tw/rss/news_rss.xml'),
+    # u('tw-sogi', 'SOGI 手機王', 'zh', 'TW', 'https://www.sogi.com.tw/rss/news_rss.xml'),  # GitHub sunucularindan cekilemedi, cikarildi
     u('tw-eprice', 'ePrice 比價王', 'zh', 'TW', 'https://www.eprice.com.tw/news/rss.xml'),
     u('hk-unwire', 'unwire.hk 流動日報', 'zh', 'HK', 'https://unwire.hk/feed/'),
     u('hk-unwirepro', 'Unwire.pro', 'zh', 'HK', 'https://unwire.pro/feed/'),
@@ -133,7 +133,7 @@ A = [
     # --- İtalyanca
     u('it-hdblog', 'HDblog', 'it', 'IT', 'https://www.hdblog.it/feed/'),
     u('it-hwupgrade', 'Hardware Upgrade', 'it', 'IT', 'https://www.hwupgrade.it/rss_hwup.xml'),
-    u('it-macitynet', 'Macitynet', 'it', 'IT', 'https://www.macitynet.it/feed/', cat='ios'),
+    # u('it-macitynet', 'Macitynet', 'it', 'IT', 'https://www.macitynet.it/feed/', cat='ios'),  # GitHub sunucularindan cekilemedi, cikarildi
     u('it-ispazio', 'iSpazio', 'it', 'IT', 'https://www.ispazio.net/feed', cat='ios'),
     u('it-tuttoandroid', 'TuttoAndroid', 'it', 'IT', 'https://www.tuttoandroid.net/feed/'),
     # --- Rusça / Ukraynaca

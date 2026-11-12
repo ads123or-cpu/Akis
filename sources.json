@@ -12428,26 +12428,6 @@
 }
 },
 {
-"id": "cn-dgtle",
-"name": "数字尾巴",
-"lang": "zh",
-"cat": "tech",
-"url": "https://www.dgtle.com/rss/dgtle.xml",
-"plat": "web",
-"calisma": "tekno",
-"tip": "uzman teknoloji",
-"ulke": "CN",
-"oncelik": 2,
-"nitelik": [],
-"aktif": true,
-"dogrulama": {
-"durum": "gecti",
-"tarih": "2026-11-12",
-"n": 25,
-"ms": 2951
-}
-},
-{
 "id": "cn-v2ex",
 "name": "V2EX",
 "lang": "zh",
@@ -12693,26 +12673,6 @@
 "tarih": "2026-11-12",
 "n": 20,
 "ms": 709
-}
-},
-{
-"id": "tw-sogi",
-"name": "SOGI 手機王",
-"lang": "zh",
-"cat": "tech",
-"url": "https://www.sogi.com.tw/rss/news_rss.xml",
-"plat": "web",
-"calisma": "tekno",
-"tip": "uzman teknoloji",
-"ulke": "TW",
-"oncelik": 2,
-"nitelik": [],
-"aktif": true,
-"dogrulama": {
-"durum": "gecti",
-"tarih": "2026-11-12",
-"n": 25,
-"ms": 1214
 }
 },
 {
@@ -13615,26 +13575,6 @@
 "tarih": "2026-11-12",
 "n": 20,
 "ms": 376
-}
-},
-{
-"id": "it-macitynet",
-"name": "Macitynet",
-"lang": "it",
-"cat": "ios",
-"url": "https://www.macitynet.it/feed/",
-"plat": "web",
-"calisma": "tekno",
-"tip": "uzman teknoloji",
-"ulke": "IT",
-"oncelik": 2,
-"nitelik": [],
-"aktif": true,
-"dogrulama": {
-"durum": "gecti",
-"tarih": "2026-11-12",
-"n": 24,
-"ms": 316
 }
 },
 {
