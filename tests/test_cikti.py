@@ -42,6 +42,20 @@ class Cikti(unittest.TestCase):
             for x in u['ogeler']: self.assertIn(x['tur'], {k['k'] for k in g['turler']})
         o = j('ozet.json'); self.assertIn('trend_tr', o); self.assertIn('guncelleme_ozet', o)
 
+    def test_diller(self):
+        # Akış 4: dil başına dosya; Türkçe/İngilizce dışı diller alan dosyalarında da yer bulur (dil süzgeci boş kalmasın)
+        dl = j('diller.json')['diller']; o = j('ozet.json')
+        self.assertTrue(dl); self.assertEqual([x['k'] for x in o['diller']], [x['k'] for x in dl])
+        alan = {a: j('kume-%s.json' % a)['kumeler'] for a in ALANLAR}
+        for x in dl:
+            f = j('dil-%s.json' % x['k']); self.assertLessEqual(len(f['kumeler']), 150)
+            self.assertLess(os.path.getsize(os.path.join(D, 'dil-%s.json' % x['k'])), 700 * 1024)
+            self.assertTrue(all(c['dil'] == x['k'] for c in f['kumeler']), x['k'])
+            if x['k'] in ('tr', 'en'): continue
+            for a in ALANLAR:
+                m = sum(1 for c in f['kumeler'] if a in c['alanlar'])
+                self.assertGreaterEqual(sum(1 for c in alan[a] if c['dil'] == x['k']), min(12, m), (x['k'], a))
+
     def test_ilk_yukleme_kucuk(self):
         self.assertLess(os.path.getsize(os.path.join(D, 'ozet.json')), 450 * 1024)
         for x in ALANLAR: self.assertLess(os.path.getsize(os.path.join(D, 'kume-%s.json' % x)), 1100 * 1024)

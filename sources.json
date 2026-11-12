@@ -11742,5 +11742,2419 @@
 "n": 25,
 "ms": 579
 }
+},
+{
+"id": "gnt-cn",
+"name": "Google News Teknoloji: Çin",
+"lang": "zh",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "CN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 933
+}
+},
+{
+"id": "gnt-tw",
+"name": "Google News Teknoloji: Tayvan",
+"lang": "zh",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TW",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 18,
+"ms": 769
+}
+},
+{
+"id": "gnt-hk",
+"name": "Google News Teknoloji: Hong Kong",
+"lang": "zh",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-HK&gl=HK&ceid=HK:zh-Hant",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "HK",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1206
+}
+},
+{
+"id": "gnt-jp",
+"name": "Google News Teknoloji: Japonya",
+"lang": "ja",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ja&gl=JP&ceid=JP:ja",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "JP",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1043
+}
+},
+{
+"id": "gnt-kr",
+"name": "Google News Teknoloji: Güney Kore",
+"lang": "ko",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "KR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1152
+}
+},
+{
+"id": "gnt-de",
+"name": "Google News Teknoloji: Almanya",
+"lang": "de",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=de&gl=DE&ceid=DE:de",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "DE",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 517
+}
+},
+{
+"id": "gnt-fr",
+"name": "Google News Teknoloji: Fransa",
+"lang": "fr",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=fr&gl=FR&ceid=FR:fr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "FR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 982
+}
+},
+{
+"id": "gnt-es",
+"name": "Google News Teknoloji: İspanya",
+"lang": "es",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=es&gl=ES&ceid=ES:es",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "ES",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 863
+}
+},
+{
+"id": "gnt-mx",
+"name": "Google News Teknoloji: Latin Amerika",
+"lang": "es",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=es-419&gl=MX&ceid=MX:es-419",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "MX",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1016
+}
+},
+{
+"id": "gnt-it",
+"name": "Google News Teknoloji: İtalya",
+"lang": "it",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=it&gl=IT&ceid=IT:it",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "IT",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 698
+}
+},
+{
+"id": "gnt-ru",
+"name": "Google News Teknoloji: Rusya",
+"lang": "ru",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ru&gl=RU&ceid=RU:ru",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "RU",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1110
+}
+},
+{
+"id": "gnt-br",
+"name": "Google News Teknoloji: Brezilya",
+"lang": "pt",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "BR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1059
+}
+},
+{
+"id": "gnt-in-hi",
+"name": "Google News Teknoloji: Hindistan (Hintçe)",
+"lang": "hi",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=hi&gl=IN&ceid=IN:hi",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "IN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1137
+}
+},
+{
+"id": "gnt-in",
+"name": "Google News Teknoloji: Hindistan",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-IN&gl=IN&ceid=IN:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "IN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1421
+}
+},
+{
+"id": "gnt-vn",
+"name": "Google News Teknoloji: Vietnam",
+"lang": "vi",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=vi&gl=VN&ceid=VN:vi",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "VN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 915
+}
+},
+{
+"id": "gnt-id",
+"name": "Google News Teknoloji: Endonezya",
+"lang": "id",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=id&gl=ID&ceid=ID:id",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "ID",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 919
+}
+},
+{
+"id": "gnt-pl",
+"name": "Google News Teknoloji: Polonya",
+"lang": "pl",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=pl&gl=PL&ceid=PL:pl",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "PL",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 847
+}
+},
+{
+"id": "gnt-nl",
+"name": "Google News Teknoloji: Hollanda",
+"lang": "nl",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=nl&gl=NL&ceid=NL:nl",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "NL",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 625
+}
+},
+{
+"id": "gnt-ar",
+"name": "Google News Teknoloji: Arap dünyası",
+"lang": "ar",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ar&gl=SA&ceid=SA:ar",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "SA",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 955
+}
+},
+{
+"id": "gnt-gb",
+"name": "Google News Teknoloji: Birleşik Krallık",
+"lang": "en",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-GB&gl=GB&ceid=GB:en",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "GB",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 987
+}
+},
+{
+"id": "gnt-tr",
+"name": "Google News Teknoloji: Türkiye",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 665
+}
+},
+{
+"id": "gnt-ua",
+"name": "Google News Teknoloji: Ukrayna",
+"lang": "uk",
+"cat": "tech",
+"url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=uk&gl=UA&ceid=UA:uk",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "UA",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 693
+}
+},
+{
+"id": "cn-ifanr",
+"name": "爱范儿 ifanr",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.ifanr.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1622
+}
+},
+{
+"id": "cn-sspai",
+"name": "少数派 sspai",
+"lang": "zh",
+"cat": "tech",
+"url": "https://sspai.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 1638
+}
+},
+{
+"id": "cn-tmtpost",
+"name": "钛媒体",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.tmtpost.com/rss.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 19,
+"ms": 3509
+}
+},
+{
+"id": "cn-geekpark",
+"name": "极客公园",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.geekpark.net/rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 16777
+}
+},
+{
+"id": "cn-solidot",
+"name": "Solidot",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.solidot.org/index.rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 2906
+}
+},
+{
+"id": "cn-qbitai",
+"name": "量子位",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.qbitai.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 2726
+}
+},
+{
+"id": "cn-oschina",
+"name": "开源中国",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.oschina.net/news/rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 4234
+}
+},
+{
+"id": "cn-infoq",
+"name": "InfoQ 中国",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.infoq.cn/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1579
+}
+},
+{
+"id": "cn-appinn",
+"name": "小众软件",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.appinn.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 1710
+}
+},
+{
+"id": "cn-iplaysoft",
+"name": "异次元软件世界",
+"lang": "zh",
+"cat": "tech",
+"url": "https://feed.iplaysoft.com/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 783
+}
+},
+{
+"id": "cn-dgtle",
+"name": "数字尾巴",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.dgtle.com/rss/dgtle.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 2951
+}
+},
+{
+"id": "cn-v2ex",
+"name": "V2EX",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.v2ex.com/index.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "topluluk/trend",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 387
+}
+},
+{
+"id": "cn-ruanyifeng",
+"name": "阮一峰 科技爱好者周刊",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.ruanyifeng.com/blog/atom.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "CN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 3,
+"ms": 547
+}
+},
+{
+"id": "gn-cn-huawei",
+"name": "华为 HarmonyOS (Google News)",
+"lang": "zh",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=%E5%8D%8E%E4%B8%BA%20%E9%B8%BF%E8%92%99%20OR%20HarmonyOS&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "CN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 617
+}
+},
+{
+"id": "gn-cn-xiaomi",
+"name": "小米 澎湃OS (Google News)",
+"lang": "zh",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=%E5%B0%8F%E7%B1%B3%20%E6%BE%8E%E6%B9%83OS%20OR%20%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "CN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 548
+}
+},
+{
+"id": "gn-cn-ai",
+"name": "中国 AI 大模型 (Google News)",
+"lang": "zh",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=%E5%A4%A7%E6%A8%A1%E5%9E%8B%20DeepSeek%20OR%20%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE%20OR%20%E8%B1%86%E5%8C%85%20OR%20Kimi&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "CN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 469
+}
+},
+{
+"id": "gn-cn-iphone",
+"name": "iPhone (Çince) (Google News)",
+"lang": "zh",
+"cat": "ios",
+"url": "https://news.google.com/rss/search?q=iPhone%20iOS%20%E6%9B%B4%E6%96%B0&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "CN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 670
+}
+},
+{
+"id": "tw-techbang",
+"name": "T客邦",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.techbang.com/posts.rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TW",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 12,
+"ms": 1903
+}
+},
+{
+"id": "tw-kocpc",
+"name": "電腦王阿達",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.kocpc.com.tw/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TW",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 1957
+}
+},
+{
+"id": "tw-inside",
+"name": "INSIDE 硬塞",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.inside.com.tw/feed/rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TW",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 1996
+}
+},
+{
+"id": "tw-technews",
+"name": "科技新報 TechNews",
+"lang": "zh",
+"cat": "tech",
+"url": "https://technews.tw/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TW",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1369
+}
+},
+{
+"id": "tw-cool3c",
+"name": "癮科技 Cool3c",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.cool3c.com/rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TW",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 1670
+}
+},
+{
+"id": "tw-applealmond",
+"name": "蘋果仁",
+"lang": "zh",
+"cat": "ios",
+"url": "https://applealmond.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TW",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 709
+}
+},
+{
+"id": "tw-sogi",
+"name": "SOGI 手機王",
+"lang": "zh",
+"cat": "tech",
+"url": "https://www.sogi.com.tw/rss/news_rss.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "TW",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1214
+}
+},
+{
+"id": "hk-unwire",
+"name": "unwire.hk 流動日報",
+"lang": "zh",
+"cat": "tech",
+"url": "https://unwire.hk/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "HK",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 1344
+}
+},
+{
+"id": "hk-unwirepro",
+"name": "Unwire.pro",
+"lang": "zh",
+"cat": "tech",
+"url": "https://unwire.pro/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "HK",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 781
+}
+},
+{
+"id": "jp-itmedia",
+"name": "ITmedia NEWS",
+"lang": "ja",
+"cat": "tech",
+"url": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1526
+}
+},
+{
+"id": "jp-itmedia-mobile",
+"name": "ITmedia Mobile",
+"lang": "ja",
+"cat": "tech",
+"url": "https://rss.itmedia.co.jp/rss/2.0/mobile.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1239
+}
+},
+{
+"id": "jp-gigazine",
+"name": "GIGAZINE",
+"lang": "ja",
+"cat": "tech",
+"url": "https://gigazine.net/news/rss_2.0/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1301
+}
+},
+{
+"id": "jp-impress-iw",
+"name": "INTERNET Watch",
+"lang": "ja",
+"cat": "tech",
+"url": "https://internet.watch.impress.co.jp/data/rss/1.0/iw/feed.rdf",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1656
+}
+},
+{
+"id": "jp-impress-ktw",
+"name": "ケータイ Watch",
+"lang": "ja",
+"cat": "tech",
+"url": "https://k-tai.watch.impress.co.jp/data/rss/1.0/ktw/feed.rdf",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1631
+}
+},
+{
+"id": "jp-impress-pcw",
+"name": "PC Watch",
+"lang": "ja",
+"cat": "tech",
+"url": "https://pc.watch.impress.co.jp/data/rss/1.0/pcw/feed.rdf",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 2310
+}
+},
+{
+"id": "jp-gizmodo",
+"name": "ギズモード・ジャパン",
+"lang": "ja",
+"cat": "tech",
+"url": "https://www.gizmodo.jp/index.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1066
+}
+},
+{
+"id": "jp-gori",
+"name": "gori.me",
+"lang": "ja",
+"cat": "ios",
+"url": "https://gori.me/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 12,
+"ms": 1383
+}
+},
+{
+"id": "jp-ascii",
+"name": "ASCII.jp",
+"lang": "ja",
+"cat": "tech",
+"url": "https://ascii.jp/rss.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 970
+}
+},
+{
+"id": "jp-publickey",
+"name": "Publickey",
+"lang": "ja",
+"cat": "tech",
+"url": "https://www.publickey1.jp/atom.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 540
+}
+},
+{
+"id": "jp-sumahoinfo",
+"name": "すまほん!!",
+"lang": "ja",
+"cat": "tech",
+"url": "https://smhn.info/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 11,
+"ms": 535
+}
+},
+{
+"id": "kr-zdnet",
+"name": "ZDNet Korea",
+"lang": "ko",
+"cat": "tech",
+"url": "https://feeds.feedburner.com/zdkorea",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 637
+}
+},
+{
+"id": "kr-bloter",
+"name": "블로터",
+"lang": "ko",
+"cat": "tech",
+"url": "https://www.bloter.net/rss/allArticle.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1731
+}
+},
+{
+"id": "kr-etnews",
+"name": "전자신문",
+"lang": "ko",
+"cat": "tech",
+"url": "https://rss.etnews.com/Section901.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1907
+}
+},
+{
+"id": "kr-itworld",
+"name": "ITWorld Korea",
+"lang": "ko",
+"cat": "tech",
+"url": "https://www.itworld.co.kr/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1247
+}
+},
+{
+"id": "kr-aitimes",
+"name": "AI타임스",
+"lang": "ko",
+"cat": "tech",
+"url": "https://www.aitimes.com/rss/allArticle.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 2106
+}
+},
+{
+"id": "kr-byline",
+"name": "바이라인네트워크",
+"lang": "ko",
+"cat": "tech",
+"url": "https://byline.network/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 553
+}
+},
+{
+"id": "kr-theelec",
+"name": "디일렉",
+"lang": "ko",
+"cat": "tech",
+"url": "https://www.thelec.kr/rss/allArticle.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "KR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1698
+}
+},
+{
+"id": "gn-kr-galaxy",
+"name": "갤럭시 One UI (Google News)",
+"lang": "ko",
+"cat": "samsung",
+"url": "https://news.google.com/rss/search?q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%20OR%20%EC%9B%90UI&hl=ko&gl=KR&ceid=KR:ko",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "KR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 626
+}
+},
+{
+"id": "de-heise",
+"name": "heise online",
+"lang": "de",
+"cat": "tech",
+"url": "https://www.heise.de/rss/heise-atom.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 330
+}
+},
+{
+"id": "de-golem",
+"name": "Golem.de",
+"lang": "de",
+"cat": "tech",
+"url": "https://rss.golem.de/rss.php?feed=RSS2.0",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 978
+}
+},
+{
+"id": "de-computerbase",
+"name": "ComputerBase",
+"lang": "de",
+"cat": "tech",
+"url": "https://www.computerbase.de/rss/news.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 410
+}
+},
+{
+"id": "de-caschy",
+"name": "Caschys Blog",
+"lang": "de",
+"cat": "tech",
+"url": "https://stadt-bremerhaven.de/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 485
+}
+},
+{
+"id": "de-winfuture",
+"name": "WinFuture",
+"lang": "de",
+"cat": "tech",
+"url": "https://static.winfuture.de/feeds/WinFuture-News-rss2.0.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 275
+}
+},
+{
+"id": "de-mobiflip",
+"name": "Mobiflip",
+"lang": "de",
+"cat": "tech",
+"url": "https://www.mobiflip.de/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1545
+}
+},
+{
+"id": "de-iphoneticker",
+"name": "iphone-ticker.de",
+"lang": "de",
+"cat": "ios",
+"url": "https://www.iphone-ticker.de/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 646
+}
+},
+{
+"id": "de-macerkopf",
+"name": "Macerkopf",
+"lang": "de",
+"cat": "ios",
+"url": "https://www.macerkopf.de/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 456
+}
+},
+{
+"id": "de-t3n",
+"name": "t3n",
+"lang": "de",
+"cat": "tech",
+"url": "https://t3n.de/rss.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 365
+}
+},
+{
+"id": "de-netzpolitik",
+"name": "netzpolitik.org",
+"lang": "de",
+"cat": "tech",
+"url": "https://netzpolitik.org/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 649
+}
+},
+{
+"id": "fr-frandroid",
+"name": "Frandroid",
+"lang": "fr",
+"cat": "tech",
+"url": "https://www.frandroid.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 282
+}
+},
+{
+"id": "fr-numerama",
+"name": "Numerama",
+"lang": "fr",
+"cat": "tech",
+"url": "https://www.numerama.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 295
+}
+},
+{
+"id": "fr-01net",
+"name": "01net",
+"lang": "fr",
+"cat": "tech",
+"url": "https://www.01net.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 421
+}
+},
+{
+"id": "fr-macg",
+"name": "MacGeneration",
+"lang": "fr",
+"cat": "mac",
+"url": "https://rss.macg.co",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 779
+}
+},
+{
+"id": "fr-jdg",
+"name": "Journal du Geek",
+"lang": "fr",
+"cat": "tech",
+"url": "https://www.journaldugeek.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 420
+}
+},
+{
+"id": "fr-clubic",
+"name": "Clubic",
+"lang": "fr",
+"cat": "tech",
+"url": "https://www.clubic.com/feed/news.rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 644
+}
+},
+{
+"id": "fr-presse-citron",
+"name": "Presse-citron",
+"lang": "fr",
+"cat": "tech",
+"url": "https://www.presse-citron.net/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 478
+}
+},
+{
+"id": "fr-phonandroid",
+"name": "Phonandroid",
+"lang": "fr",
+"cat": "tech",
+"url": "https://www.phonandroid.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 782
+}
+},
+{
+"id": "es-xataka",
+"name": "Xataka",
+"lang": "es",
+"cat": "tech",
+"url": "https://feeds.weblogssl.com/xataka2",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 732
+}
+},
+{
+"id": "es-applesfera",
+"name": "Applesfera",
+"lang": "es",
+"cat": "ios",
+"url": "https://feeds.weblogssl.com/applesfera",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 796
+}
+},
+{
+"id": "es-genbeta",
+"name": "Genbeta",
+"lang": "es",
+"cat": "tech",
+"url": "https://feeds.weblogssl.com/genbeta",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 16,
+"ms": 856
+}
+},
+{
+"id": "es-hipertextual",
+"name": "Hipertextual",
+"lang": "es",
+"cat": "tech",
+"url": "https://hipertextual.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 732
+}
+},
+{
+"id": "es-andro4all",
+"name": "Andro4all",
+"lang": "es",
+"cat": "tech",
+"url": "https://andro4all.com/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 905
+}
+},
+{
+"id": "it-hdblog",
+"name": "HDblog",
+"lang": "it",
+"cat": "tech",
+"url": "https://www.hdblog.it/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IT",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 376
+}
+},
+{
+"id": "it-macitynet",
+"name": "Macitynet",
+"lang": "it",
+"cat": "ios",
+"url": "https://www.macitynet.it/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IT",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 24,
+"ms": 316
+}
+},
+{
+"id": "it-ispazio",
+"name": "iSpazio",
+"lang": "it",
+"cat": "ios",
+"url": "https://www.ispazio.net/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IT",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 506
+}
+},
+{
+"id": "it-tuttoandroid",
+"name": "TuttoAndroid",
+"lang": "it",
+"cat": "tech",
+"url": "https://www.tuttoandroid.net/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IT",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 12,
+"ms": 416
+}
+},
+{
+"id": "ru-habr",
+"name": "Хабр",
+"lang": "ru",
+"cat": "tech",
+"url": "https://habr.com/ru/rss/news/?fl=ru",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 687
+}
+},
+{
+"id": "ru-ixbt",
+"name": "iXBT.com",
+"lang": "ru",
+"cat": "tech",
+"url": "https://www.ixbt.com/export/news.rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 870
+}
+},
+{
+"id": "ru-3dnews",
+"name": "3DNews",
+"lang": "ru",
+"cat": "tech",
+"url": "https://3dnews.ru/news/rss/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 650
+}
+},
+{
+"id": "ru-ferra",
+"name": "Ferra.ru",
+"lang": "ru",
+"cat": "tech",
+"url": "https://www.ferra.ru/exports/rss.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 957
+}
+},
+{
+"id": "ru-appleinsider",
+"name": "AppleInsider.ru",
+"lang": "ru",
+"cat": "ios",
+"url": "https://appleinsider.ru/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1578
+}
+},
+{
+"id": "ru-androidinsider",
+"name": "AndroidInsider.ru",
+"lang": "ru",
+"cat": "tech",
+"url": "https://androidinsider.ru/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1975
+}
+},
+{
+"id": "ua-itc",
+"name": "ITC.ua",
+"lang": "uk",
+"cat": "tech",
+"url": "https://itc.ua/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "UA",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 878
+}
+},
+{
+"id": "ua-dou",
+"name": "DOU",
+"lang": "uk",
+"cat": "tech",
+"url": "https://dou.ua/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "UA",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 5,
+"ms": 240
+}
+},
+{
+"id": "br-olhardigital",
+"name": "Olhar Digital",
+"lang": "pt",
+"cat": "tech",
+"url": "https://olhardigital.com.br/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "BR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 668
+}
+},
+{
+"id": "br-macmagazine",
+"name": "MacMagazine",
+"lang": "pt",
+"cat": "ios",
+"url": "https://macmagazine.com.br/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "BR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 343
+}
+},
+{
+"id": "br-canaltech",
+"name": "Canaltech",
+"lang": "pt",
+"cat": "tech",
+"url": "https://canaltech.com.br/rss/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "BR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1464
+}
+},
+{
+"id": "br-tudocelular",
+"name": "TudoCelular",
+"lang": "pt",
+"cat": "tech",
+"url": "https://www.tudocelular.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "BR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 334
+}
+},
+{
+"id": "in-gadgets360",
+"name": "Gadgets 360",
+"lang": "en",
+"cat": "tech",
+"url": "https://feeds.feedburner.com/gadgets360-latest",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 663
+}
+},
+{
+"id": "in-beebom",
+"name": "Beebom",
+"lang": "en",
+"cat": "tech",
+"url": "https://beebom.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 550
+}
+},
+{
+"id": "in-gizbot",
+"name": "Gizbot",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.gizbot.com/rss/gizbot-fb.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 603
+}
+},
+{
+"id": "in-medianama",
+"name": "MediaNama",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.medianama.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 6697
+}
+},
+{
+"id": "vn-tinhte",
+"name": "Tinh tế",
+"lang": "vi",
+"cat": "tech",
+"url": "https://tinhte.vn/rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "VN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 2254
+}
+},
+{
+"id": "vn-genk",
+"name": "GenK",
+"lang": "vi",
+"cat": "tech",
+"url": "https://genk.vn/rss/home.rss",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "VN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 2506
+}
+},
+{
+"id": "pl-antyweb",
+"name": "Antyweb",
+"lang": "pl",
+"cat": "tech",
+"url": "https://antyweb.pl/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "PL",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 593
+}
+},
+{
+"id": "pl-spidersweb",
+"name": "Spider's Web",
+"lang": "pl",
+"cat": "tech",
+"url": "https://spidersweb.pl/feed",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "PL",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1407
+}
+},
+{
+"id": "nl-tweakers",
+"name": "Tweakers",
+"lang": "nl",
+"cat": "tech",
+"url": "https://tweakers.net/feeds/mixed.xml",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "NL",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 547
+}
+},
+{
+"id": "nl-androidplanet",
+"name": "Android Planet",
+"lang": "nl",
+"cat": "tech",
+"url": "https://www.androidplanet.nl/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "NL",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1065
+}
+},
+{
+"id": "ar-aitnews",
+"name": "البوابة العربية للأخبار التقنية",
+"lang": "ar",
+"cat": "tech",
+"url": "https://aitnews.com/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "SA",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 10,
+"ms": 541
+}
+},
+{
+"id": "ar-unlimit",
+"name": "عالم التقنية",
+"lang": "ar",
+"cat": "tech",
+"url": "https://www.tech-wd.com/wd/feed/",
+"plat": "web",
+"calisma": "tekno",
+"tip": "uzman teknoloji",
+"ulke": "SA",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 843
+}
 }
 ]

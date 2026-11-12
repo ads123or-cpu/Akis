@@ -25,6 +25,15 @@ ALANLAR = ['gundem', 'tekno', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'o
 ALAN_AD = {'gundem': 'Gündem Radarı', 'tekno': 'Teknoloji Radarı', 'siyaset': 'Siyaset ve Jeopolitik', 'spor': 'Spor', 'ekonomi': 'Ekonomi ve Finans',
            'bilim': 'Bilim ve Uzay', 'siber': 'Siber Güvenlik', 'oto': 'Otomobil ve Ulaşım', 'eglence': 'Eğlence, Oyun, Kültür'}
 KUME_ALAN_SINIR = 360          # alan başına dosyaya yazılan küme sayısı
+# Türkçe/İngilizce dışındaki diller çoğunlukla tek kaynaklı kalır ve önem sıralamasında 360'ın altına düşer;
+# her alan dosyasında her dile ayrıca bu kadar yer ayrılır (Akış'taki dil süzgeci boş kalmasın).
+DIL_AYRILAN = 12
+DIL_DOSYA_SINIR = 150          # dil-XX.json başına küme
+DIL_AD = {'tr': ('Türkçe', 'Türkçe'), 'en': ('English', 'İngilizce'), 'zh': ('中文', 'Çince'), 'ja': ('日本語', 'Japonca'),
+          'ko': ('한국어', 'Korece'), 'de': ('Deutsch', 'Almanca'), 'fr': ('Français', 'Fransızca'), 'es': ('Español', 'İspanyolca'),
+          'it': ('Italiano', 'İtalyanca'), 'ru': ('Русский', 'Rusça'), 'uk': ('Українська', 'Ukraynaca'), 'pt': ('Português', 'Portekizce'),
+          'ar': ('العربية', 'Arapça'), 'hi': ('हिन्दी', 'Hintçe'), 'vi': ('Tiếng Việt', 'Vietnamca'), 'id': ('Bahasa Indonesia', 'Endonezce'),
+          'pl': ('Polski', 'Lehçe'), 'nl': ('Nederlands', 'Felemenkçe'), 'ro': ('Română', 'Rumence')}
 
 # ------------------------------------------------------------------ kimlik / URL
 IZ_PARAM = re.compile(r'^(utm_|fbclid|gclid|mc_|ref$|ref_|source$|cmpid|ocid|at_|igshid|spm|share)', re.I)
@@ -589,6 +598,11 @@ def main():
         # alan içi sıralama: yakın zamanda güncellenen ve çok kaynaklı öne
         lst.sort(key=lambda c: -(min(c['kb'], 10) * 2 + c['h6'] * 1.5 + c['h24'] * .3) * math.exp(-(simdi - c['son']) / 3600 / 14))
         sec = lst[:KUME_ALAN_SINIR]
+        var = {c['id'] for c in sec}
+        ayrilan = Counter()
+        for c in lst[KUME_ALAN_SINIR:]:
+            if c['dil'] in ('tr', 'en') or ayrilan[c['dil']] >= DIL_AYRILAN or c['id'] in var: continue
+            ayrilan[c['dil']] += 1; sec.append(c)
         alan_json[a] = sec
     def yaz(ad, nesne):
         with open(os.path.join(CIKTI, ad), 'w', encoding='utf-8') as f: json.dump(nesne, f, ensure_ascii=False, separators=(',', ':'))
@@ -629,6 +643,18 @@ def main():
     # arama dizini
     idx = [dict(id=c['id'], t=c['t'], s=c['s'][:70], son=c['son'], kb=c['kb'], a=c['alanlar'], d=c['diller'], k=c['kaynaklar'][:5], e=sorted(set(c['liderler']) | set(c['markalar']) | set(c['ulkeler'])), cat=c['cat']) for c in sorted(tum, key=lambda c: -c['son'])[:2600]]
     yaz('indeks.json', dict(generated=j['generated'], kayitlar=idx))
+    # Akış 4: dil başına dosya (Dünya ekranı) ve dil özeti
+    kay_dil = Counter(k['dil'] for k in kay if k['aktif'] and not k['id'].startswith('trends-'))
+    dil_say = Counter(c['dil'] for c in tum)
+    dil_ozet = []
+    for d, n in dil_say.most_common():
+        lst = sorted([c for c in tum if c['dil'] == d], key=lambda c: -(min(c['kb'], 10) * 2 + c['h6'] * 1.5 + c['h24'] * .3 + 1) * math.exp(-(simdi - c['son']) / 3600 / 10))[:DIL_DOSYA_SINIR]
+        ad, tr_ad = DIL_AD.get(d, (d.upper(), d.upper()))
+        alan_n = Counter(a for c in tum if c['dil'] == d for a in c['alanlar'])
+        dil_ozet.append(dict(k=d, ad=ad, tr=tr_ad, n=n, n24=sum(1 for c in tum if c['dil'] == d and simdi - c['son'] < 86400), kaynak=kay_dil.get(d, 0),
+                             alanlar=dict(alan_n), ilk=[dict(id=c['id'], t=c['t'], kb=c['kb'], son=c['son']) for c in lst[:3]]))
+        yaz('dil-%s.json' % d, dict(generated=j['generated'], dil=d, ad=ad, tr=tr_ad, kumeler=[sade(c) for c in lst]))
+    yaz('diller.json', dict(generated=j['generated'], diller=dil_ozet))
     # Akış 3 ekleri: Google Trends ve Güncelleme Radarı
     trend = E.trendler_uret(j['feeds'], tum, simdi)
     yaz('trendler.json', dict(generated=j['generated'], **trend))
@@ -640,6 +666,7 @@ def main():
                 alt_ad=dict(ALT_AD, **dict(GUNDEM_ALT)),
                 trend_tr=[{k: v for k, v in x.items() if k not in ('hn', 'i')} | dict(hn=x['hn'][:1]) for x in tr_tr if x['aktif']][:15],
                 guncelleme_ozet=[dict(k=u['k'], ad=u['ad'], n=u['n'], n24=u['n24'], son=u['son'], ilk=u['ogeler'][0]['t']) for u in gunc['urunler'][:12]],
+                diller=[{k: v for k, v in x.items() if k != 'alanlar'} for x in dil_ozet],
                 reels_ilk=[dict(id=r['id'], t=r['t'], puan=r['puan'], profil=r['profil'], kb=r['kb']) for r in reels_json[:6]],
                 toplam=dict(haber=len(ogeler), kume=len(cikti), cok_kaynakli=sum(1 for c in tum if c['kb'] >= 3)),
                 yontem=dict(

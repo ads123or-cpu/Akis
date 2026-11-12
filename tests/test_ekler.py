@@ -130,6 +130,10 @@ class Arayuz(unittest.TestCase):
         for s in ("'trendler'", "'guncellemeler'", "'kume-'", "'reels'", "'kaynaklar'", "'indeks'", '#/trend', '#/guncelleme'):
             self.assertIn(s, self.T, s)
 
+    def test_diller_ve_ceviri(self):
+        for x in ("'dil-'", '#/dunya', 'translate.google.com/translate?sl=auto&tl=tr&u=', "data-act=\"trf\"", 'cevir:false'):
+            self.assertIn(x, self.T, x)
+
     def test_dis_baglanti_guvenli(self):
         import re
         for a in re.findall(r'target="_blank"[^>]*', self.T): self.assertIn('noopener', a)

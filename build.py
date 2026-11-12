@@ -7,7 +7,8 @@ KOTA = 400
 PANEL_ALAN = {'l', 'd', 't', 's', 'i', 'p', 'c', 'n'}
 # Cince gibi kucuk dillerin haberleri teknoloji kotasinda yeni Turkce/Ingilizce haberin altinda kalip
 # hic girmiyordu; kendi kotalari var.
-KOTA_YABANCI = 60
+KOTA_YABANCI = 240       # Turkce/Ingilizce disi toplam
+KOTA_DIL = 24            # dil basina: cok kaynakli Cince digerlerini bogmasin
 tum = []
 for k, f in j['feeds'].items():
     for it in f.get('items', []):
@@ -16,10 +17,12 @@ tum.sort(key=lambda x: x[0], reverse=True)
 secili = {}
 say = {True: 0, False: 0}
 yabanci = 0
+dil_say = {}
 for _, k, it in tum:
-    if j['feeds'][k].get('lang') not in ('tr', 'en'):
-        if yabanci >= KOTA_YABANCI: continue
-        yabanci += 1
+    dl = j['feeds'][k].get('lang')
+    if dl not in ('tr', 'en'):
+        if yabanci >= KOTA_YABANCI or dil_say.get(dl, 0) >= KOTA_DIL: continue
+        yabanci += 1; dil_say[dl] = dil_say.get(dl, 0) + 1
     else:
         tek = (it.get('c') or j['feeds'][k]['cat']) in TEKNO
         if say[tek] >= KOTA: continue

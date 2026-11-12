@@ -1,52 +1,123 @@
 {
  "eklenen": [
-  "notebookcheck-news",
-  "sammyguru",
-  "samsung-newsroom-global2",
-  "androidsage",
-  "gn-oneui-tr",
-  "gn-oneui-9-tr",
-  "gn-galaxy-tr",
-  "gn-galaxy-s-tr",
-  "gn-fold-tr",
-  "gn-oneui-en",
-  "gn-galaxy-en",
-  "gn-samsung-security-en",
-  "9to5mac-iphone",
-  "9to5mac-apple-watch",
-  "9to5mac-ipad",
-  "9to5mac-vision",
-  "daringfireball",
-  "iosgods-news",
-  "appleworld-today",
-  "tidbits",
-  "appleosophy",
-  "gn-ios27-tr",
-  "gn-iphone-tr",
-  "gn-iphone18-tr",
-  "gn-ipados-tr",
-  "gn-apple-intel-tr",
-  "gn-apple-tr",
-  "gn-iphone-en",
-  "gn-ios-beta-en",
-  "gn-apple-watch-en",
-  "gn-airpods-en",
-  "googleblog-android",
-  "googleblog-pixel",
-  "googleblog-gemini",
-  "xiaomiui",
-  "telefonhaberleri",
-  "gn-android17-tr",
-  "gn-pixel-tr",
-  "gn-xiaomi-tr",
-  "gn-oppo-tr",
-  "gn-telefon-tr",
-  "gn-uygulama-tr",
-  "gn-pixel-en",
-  "gn-xiaomi-en",
-  "gn-android-en",
-  "gn-smartphone-en",
-  "gn-app-update-en"
+  "gnt-cn",
+  "gnt-tw",
+  "gnt-hk",
+  "gnt-jp",
+  "gnt-kr",
+  "gnt-de",
+  "gnt-fr",
+  "gnt-es",
+  "gnt-mx",
+  "gnt-it",
+  "gnt-ru",
+  "gnt-br",
+  "gnt-in-hi",
+  "gnt-in",
+  "gnt-vn",
+  "gnt-id",
+  "gnt-pl",
+  "gnt-nl",
+  "gnt-ar",
+  "gnt-gb",
+  "gnt-tr",
+  "gnt-ua",
+  "cn-ifanr",
+  "cn-sspai",
+  "cn-tmtpost",
+  "cn-geekpark",
+  "cn-solidot",
+  "cn-qbitai",
+  "cn-oschina",
+  "cn-infoq",
+  "cn-appinn",
+  "cn-iplaysoft",
+  "cn-dgtle",
+  "cn-v2ex",
+  "cn-ruanyifeng",
+  "gn-cn-huawei",
+  "gn-cn-xiaomi",
+  "gn-cn-ai",
+  "gn-cn-iphone",
+  "tw-techbang",
+  "tw-kocpc",
+  "tw-inside",
+  "tw-technews",
+  "tw-cool3c",
+  "tw-applealmond",
+  "tw-sogi",
+  "hk-unwire",
+  "hk-unwirepro",
+  "jp-itmedia",
+  "jp-itmedia-mobile",
+  "jp-gigazine",
+  "jp-impress-iw",
+  "jp-impress-ktw",
+  "jp-impress-pcw",
+  "jp-gizmodo",
+  "jp-gori",
+  "jp-ascii",
+  "jp-publickey",
+  "jp-sumahoinfo",
+  "kr-zdnet",
+  "kr-bloter",
+  "kr-etnews",
+  "kr-itworld",
+  "kr-aitimes",
+  "kr-byline",
+  "kr-theelec",
+  "gn-kr-galaxy",
+  "de-heise",
+  "de-golem",
+  "de-computerbase",
+  "de-caschy",
+  "de-winfuture",
+  "de-mobiflip",
+  "de-iphoneticker",
+  "de-macerkopf",
+  "de-t3n",
+  "de-netzpolitik",
+  "fr-frandroid",
+  "fr-numerama",
+  "fr-01net",
+  "fr-macg",
+  "fr-jdg",
+  "fr-clubic",
+  "fr-presse-citron",
+  "fr-phonandroid",
+  "es-xataka",
+  "es-applesfera",
+  "es-genbeta",
+  "es-hipertextual",
+  "es-andro4all",
+  "it-hdblog",
+  "it-macitynet",
+  "it-ispazio",
+  "it-tuttoandroid",
+  "ru-habr",
+  "ru-ixbt",
+  "ru-3dnews",
+  "ru-ferra",
+  "ru-appleinsider",
+  "ru-androidinsider",
+  "ua-itc",
+  "ua-dou",
+  "br-olhardigital",
+  "br-macmagazine",
+  "br-canaltech",
+  "br-tudocelular",
+  "in-gadgets360",
+  "in-beebom",
+  "in-gizbot",
+  "in-medianama",
+  "vn-tinhte",
+  "vn-genk",
+  "pl-antyweb",
+  "pl-spidersweb",
+  "nl-tweakers",
+  "nl-androidplanet",
+  "ar-aitnews",
+  "ar-unlimit"
  ],
  "atlanan": [
   [
@@ -476,6 +547,110 @@
   [
    "gsmarena-blog",
    "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "cn-36kr",
+   "3 kayittan az"
+  ],
+  [
+   "cn-huxiu",
+   "The read operation timed out"
+  ],
+  [
+   "cn-jiqizhixin",
+   "3 kayittan az"
+  ],
+  [
+   "cn-leiphone",
+   "HTTP Error 502: Bad Gateway"
+  ],
+  [
+   "cn-pingwest",
+   "3 kayittan az"
+  ],
+  [
+   "cn-sina-tech",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "cn-gamersky",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "cn-chinaz",
+   "3 kayittan az"
+  ],
+  [
+   "tw-ithome",
+   "tarihli kayit yok"
+  ],
+  [
+   "tw-eprice",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "hk-ezone",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "jp-iphonemania",
+   "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protoco"
+  ],
+  [
+   "jp-mynavi",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "jp-gadget-gate",
+   "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  ],
+  [
+   "kr-ddaily",
+   "3 kayittan az"
+  ],
+  [
+   "de-allaboutsamsung",
+   "The read operation timed out"
+  ],
+  [
+   "fr-igen",
+   "3 kayittan az"
+  ],
+  [
+   "es-xatakandroid",
+   "45 gunden eski (guncellenmiyor)"
+  ],
+  [
+   "es-xatakamx",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "it-hwupgrade",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "br-tecnoblog",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "br-tecmundo",
+   "Remote end closed connection without response"
+  ],
+  [
+   "in-91mobiles",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "in-digit",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "id-detikinet",
+   "[Errno 54] Connection reset by peer"
+  ],
+  [
+   "id-kompastekno",
+   "HTTP Error 404: Not Found"
   ]
  ]
 }
