@@ -307,7 +307,7 @@ function ik(id,c){return '<svg class="i'+(c?' '+c:'')+'"><use href="#i-'+id+'"/>
 function kisalt(o,n){var k=Object.keys(o);if(k.length>n){k.sort(function(a,b){return(o[a].ts||o[a])-(o[b].ts||o[b])});k.slice(0,k.length-n).forEach(function(x){delete o[x]})}}
 var ALAN={gundem:'Gündem',tekno:'Teknoloji',siyaset:'Siyaset',spor:'Spor',ekonomi:'Ekonomi',bilim:'Bilim',siber:'Siber',oto:'Otomobil',eglence:'Eğlence'};
 var ALANLAR=Object.keys(ALAN);
-var DIL={tr:['Türkçe','Türkçe'],en:['English','İngilizce'],zh:['中文','Çince'],ja:['日本語','Japonca'],ko:['한국어','Korece'],de:['Deutsch','Almanca'],fr:['Français','Fransızca'],es:['Español','İspanyolca'],it:['Italiano','İtalyanca'],ru:['Русский','Rusça'],uk:['Українська','Ukraynaca'],pt:['Português','Portekizce'],ar:['العربية','Arapça'],hi:['हिन्दी','Hintçe'],vi:['Tiếng Việt','Vietnamca'],id:['Indonesia','Endonezce'],pl:['Polski','Lehçe'],nl:['Nederlands','Felemenkçe'],ro:['Română','Rumence']};
+var DIL={tr:['Türkçe','Türkçe'],en:['English','İngilizce'],zh:['中文','Çince'],ja:['日本語','Japonca'],ko:['한국어','Korece'],de:['Deutsch','Almanca'],fr:['Français','Fransızca'],es:['Español','İspanyolca'],it:['Italiano','İtalyanca'],ru:['Русский','Rusça'],uk:['Українська','Ukraynaca'],pt:['Português','Portekizce'],ar:['العربية','Arapça'],hi:['हिन्दी','Hintçe'],vi:['Tiếng Việt','Vietnamca'],id:['Indonesia','Endonezce'],pl:['Polski','Lehçe'],nl:['Nederlands','Felemenkçe'],ro:['Română','Rumence'],he:['עברית','İbranice'],el:['Ελληνικά','Yunanca'],fa:['فارسی','Farsça']};
 function dilAd(d){return(DIL[d]||[String(d||'').toUpperCase()])[0]}
 function dilTr(d){return(DIL[d]||[0,String(d||'').toUpperCase()])[1]}
 function cevirU(u){return'https://translate.google.com/translate?sl=auto&tl=tr&u='+encodeURIComponent(u)}
@@ -332,7 +332,7 @@ function temaUygula(){var r=document.documentElement;if(ayar.tema)r.dataset.tema
 temaUygula();
 
 /* ---------- veri ---------- */
-var D={ozet:null,alan:{},dil:{},reels:null,kaynak:null,indeks:null,trend:null,gunc:null};
+var D={ozet:null,alan:{},dil:{},kisi:{},reels:null,kaynak:null,indeks:null,trend:null,gunc:null};
 var REG={},TREG={},yukleniyor={};
 function reg(c){if(!c||!c.id)return c;var e=REG[c.id];if(e){for(var k in c){if(c[k]!=null&&!(k==='og'&&e.og&&e.og.length>=(c.og||[]).length))e[k]=c[k]}return e}REG[c.id]=c;return c}
 function getJ(ad){
@@ -350,9 +350,12 @@ function guncYukle(){if(D.gunc)return Promise.resolve(D.gunc);return getJ('gunce
 function kaynakYukle(){if(D.kaynak)return Promise.resolve(D.kaynak);return getJ('kaynaklar').then(function(j){D.kaynak=j;return j})}
 function indeksYukle(){if(D.indeks)return Promise.resolve(D.indeks);return getJ('indeks').then(function(j){D.indeks=j;return j})}
 function bul(id){return TREG[id]||REG[id]||kayit[id]||null}
+/* kişisel masa (Pırıl Cennet · Dünya masası): ayrı kaynak listesi, ayrı veri dosyası; ana akışla karışmaz. Kimlikler 'pc:' önekli. */
+var KISI={piril:{ad:'Pırıl Cennet',kisa:'Pırıl'}};
+function kisiYukle(p){if(D.kisi[p])return Promise.resolve(D.kisi[p]);return getJ('kisisel/'+p).then(function(j){j.kumeler=j.kumeler.map(function(c){c.id='pc:'+c.id;c.kisi=p;return reg(c)});D.kisi[p]=j;return j})}
 
 /* ---------- durum ---------- */
-var S={sayfa:'bugun',alan:'gundem',alt:'',zaman:'24',cok:false,tr:'',dl:'',dalan:'',dsira:'onem',sira:'onem',adet:40,pen:'6',geo:'TR',tfil:'hepsi',urun:'',tur:'',dil:'',profil:'hepsi',ralt:'',radet:20,kdur:'',kq:'',kfil:'',sec:null,imlec:-1,ara:false,araSec:0,geri:null};
+var S={sayfa:'bugun',alan:'gundem',alt:'',zaman:'24',cok:false,tr:'',dl:'',dalan:'',dsira:'onem',pdl:'',pkonu:'',psira:'onem',ptr:false,pkay:false,sira:'onem',adet:40,pen:'6',geo:'TR',tfil:'hepsi',urun:'',tur:'',dil:'',profil:'hepsi',ralt:'',radet:20,kdur:'',kq:'',kfil:'',sec:null,imlec:-1,ara:false,araSec:0,geri:null};
 
 /* ---------- işaretler ---------- */
 var takipRx=null;
@@ -476,6 +479,31 @@ function sayfaDunya(){
   h+=liste(l.slice(0,S.adet),{ozet:!ayar.yogun,dilYok:true});
   if(l.length>S.adet)h+='<button class="daha" data-act="daha">Daha fazla göster ('+(l.length-S.adet)+')</button>';
   return h+'</div></div>';
+}
+function sayfaKisi(){
+  var p=S.sayfa,K=KISI[p],j=D.kisi[p];
+  if(!j){kisiYukle(p).then(ciz).catch(hata);return'<div class="duzen tek"><div>'+iskelet(6)+'</div></div>'}
+  var h='<div class="duzen tek"><div><div class="bas"><div><h1>'+esc(j.ad)+' <span class="bilgi" style="font-weight:500">· '+esc(j.masa)+'</span></h1><p>'+j.toplam.kaynak+' yabancı kaynak, '+j.diller.length+' dil. Yalnız yabancı dilde haberler; Türkçe haber ve ana akışın kaynakları buraya girmez.</p></div><span class="bos"></span><button class="tg'+(ayar.profil===p?' on':'')+'" data-act="pvars" data-v="'+p+'" title="Bu tarayıcıda Akış açılınca doğrudan bu masa gelsin">Açılışta bu masa</button></div>';
+  var dl=j.diller;if(S.pdl&&!dl.some(function(x){return x.k===S.pdl}))S.pdl='';
+  var dn={};j.kumeler.forEach(function(c){if(!gizli[c.id])dn[c.dil]=(dn[c.dil]||0)+1});
+  h+='<div class="cipler"><button class="cip'+(!S.pdl?' on':'')+'" data-act="pdl" data-v="">Tüm diller <small>'+j.kumeler.length+'</small></button>'+dl.filter(function(x){return dn[x.k]}).map(function(x){return'<button class="cip'+(S.pdl===x.k?' on':'')+'" data-act="pdl" data-v="'+x.k+'" title="'+esc(x.tr)+' · son 24 saatte '+x.n24+' konu"><span lang="'+x.k+'">'+esc(dilAd(x.k))+'</span> <small>'+dn[x.k]+'</small></button>'}).join('')+'</div>';
+  var l=j.kumeler.filter(function(c){return!gizli[c.id]&&(!S.pdl||c.dil===S.pdl)});
+  var kn={};l.forEach(function(c){(c.konu||[]).forEach(function(k){kn[k]=(kn[k]||0)+1})});
+  if(S.pkonu&&!kn[S.pkonu])S.pkonu='';
+  var KAD={};(j.konular||[]).forEach(function(x){KAD[x.k]=x.ad});
+  h+='<div class="arac"><span class="seg">'+[['onem','Önemli'],['yeni','En yeni']].map(function(x){return'<button data-act="psira" data-v="'+x[0]+'" class="'+(S.psira===x[0]?'on':'')+'">'+x[1]+'</button>'}).join('')+'</span><button class="tg'+(ayar.cevir?' on':'')+'" data-act="cevir" title="Haberi aç düğmesi ve O kısayolu haberi Google Çeviri ile Türkçe açar">'+ik('cevir')+'Türkçe aç</button><button class="tg'+(S.ptr?' on':'')+'" data-act="ptr" title="Yabancı basında Türkiye geçen konular">Türkiye geçenler</button><span class="bos"></span><button class="tg'+(S.pkay?' on':'')+'" data-act="pkay">Kaynaklarım ('+j.toplam.kaynak+')</button></div>';
+  if(S.pkay)return h+kisiKaynak(j)+'</div></div>';
+  h+='<div class="cipler"><button class="cip'+(!S.pkonu?' on':'')+'" data-act="pkonu" data-v="">Tümü <small>'+l.length+'</small></button>'+Object.keys(kn).sort(function(a,b){return kn[b]-kn[a]}).map(function(k){return'<button class="cip'+(S.pkonu===k?' on':'')+'" data-act="pkonu" data-v="'+k+'">'+esc(KAD[k]||k)+' <small>'+kn[k]+'</small></button>'}).join('')+'</div>';
+  l=l.filter(function(c){return(!S.pkonu||(c.konu||[]).indexOf(S.pkonu)>=0)&&(!S.ptr||c.tr_ilgili)});
+  if(S.psira==='yeni')l=l.slice().sort(function(x,y){return y.son-x.son});
+  h+=liste(l.slice(0,S.adet),{ozet:!ayar.yogun,alanYok:true,dilEt:true});
+  if(l.length>S.adet)h+='<button class="daha" data-act="daha">Daha fazla göster ('+(l.length-S.adet)+')</button>';
+  return h+'</div></div>';
+}
+function kisiKaynak(j){
+  var DA={aktif:'çalışıyor',yavas:'yavaş',bekliyor:'beklemede',hata:'hata',sessiz:'sessiz',pasif:'kapalı'};
+  var g={};j.kaynaklar.forEach(function(k){(g[k.dil]=g[k.dil]||[]).push(k)});
+  return Object.keys(g).sort(function(a,b){return g[b].length-g[a].length}).map(function(d){return'<div class="blok-b" style="margin-top:18px"><h2>'+esc(dilAd(d))+' <span class="bilgi" style="font-weight:500">'+esc(dilTr(d))+' · '+g[d].length+'</span></h2></div><div class="kay">'+g[d].map(function(k){return'<a href="'+esc(k.url)+'" target="_blank" rel="noopener"><span class="kp">'+esc(k.ad)+'</span><span class="kt">'+esc((k.ulke||'')+' · '+(k.tip||'')+' · 72 saatte '+k.haber72+' haber · '+(DA[k.durum]||k.durum))+'</span></a>'}).join('')+'</div>'}).join('');
 }
 function sayfaTrend(){
   var j=D.trend;
@@ -607,9 +635,11 @@ function trendDetay(t){
 }
 
 /* ---------- çizim ---------- */
+function kisiSekme(){var p=S.sayfa==='piril'||ayar.profil==='piril'?'piril':'';return p?[[p,KISI[p].ad,'dunya']]:[]}
 function sekmeCiz(){
-  $('sekme').innerHTML=SAYFALAR.map(function(p){return'<a href="#/'+p[0]+'" class="'+(S.sayfa===p[0]?'on':'')+'">'+p[1]+(p[0]==='kayit'&&Object.keys(kayit).length?' <span class="bilgi">'+Object.keys(kayit).length+'</span>':'')+'</a>'}).join('');
-  $('altNav').innerHTML=SAYFALAR.filter(function(p){return p[2]&&p[0]!=='guncelleme'}).map(function(p){return'<a href="#/'+p[0]+'" class="'+(S.sayfa===p[0]?'on':'')+'">'+ik(p[2])+p[1]+'</a>'}).join('');
+  var KS=kisiSekme();
+  $('sekme').innerHTML=KS.concat(SAYFALAR).map(function(p){return'<a href="#/'+p[0]+'" class="'+(S.sayfa===p[0]?'on':'')+'">'+p[1]+(p[0]==='kayit'&&Object.keys(kayit).length?' <span class="bilgi">'+Object.keys(kayit).length+'</span>':'')+'</a>'}).join('');
+  $('altNav').innerHTML=KS.concat(SAYFALAR).filter(function(p){return p[2]&&p[0]!=='guncelleme'&&!(KS.length&&p[0]==='dunya')}).map(function(p){return'<a href="#/'+p[0]+'" class="'+(S.sayfa===p[0]?'on':'')+'">'+ik(p[2])+p[1]+'</a>'}).join('');
 }
 function saatCiz(){
   var o=D.ozet;if(!o)return;var g=Date.parse(o.generated)/1000,d=simdi()-g;
@@ -619,7 +649,7 @@ function saatCiz(){
 }
 function ciz(){
   sekmeCiz();saatCiz();
-  var f={bugun:sayfaBugun,akis:sayfaAkis,dunya:sayfaDunya,trend:sayfaTrend,guncelleme:sayfaGunc,reels:sayfaReels,kayit:sayfaKayit,kaynak:sayfaKaynak}[S.sayfa]||sayfaBugun;
+  var f={bugun:sayfaBugun,akis:sayfaAkis,dunya:sayfaDunya,piril:sayfaKisi,trend:sayfaTrend,guncelleme:sayfaGunc,reels:sayfaReels,kayit:sayfaKayit,kaynak:sayfaKaynak}[S.sayfa]||sayfaBugun;
   var y=window.scrollY;$('ana').innerHTML=f();
   if(S._sayfaDegisti){window.scrollTo(0,0);S._sayfaDegisti=false}else window.scrollTo(0,y);
   imlecUygula();panelCiz();
@@ -643,6 +673,7 @@ function getir(id){
   var c=REG[id],al=c&&(c.alanlar||c.a);
   var p=al&&al.length?alanYukle(al[0]):indeksYukle().then(function(ix){var r=ix.kayitlar.filter(function(x){return x.id===id})[0];if(r){reg(Object.assign({kaynaklar:r.k,alanlar:r.a},r));return alanYukle(r.a[0])}});
   if(id.indexOf('tr:')===0)p=trendYukle();
+  else if(id.indexOf('pc:')===0)p=kisiYukle('piril');
   else p=Promise.resolve(p).then(function(){var y=REG[id];if((!y||!y.og)&&c&&yabanci(c))return dilYukle(c.dil)});
   Promise.resolve(p).then(function(){var y=bul(id);if(S.sec===id){if(y&&!y.og&&y.id.indexOf('tr:')!==0){var e=$('ogYuk');if(e)e.textContent='Kaynak listesi bu konuda yok.';if(!$('panel').dataset.id||$('panel').dataset.id!==id)panelCiz()}else panelCiz()}}).catch(function(){var e=$('ogYuk');if(e)e.textContent='Yüklenemedi.'});
 }
@@ -695,12 +726,13 @@ function araAcSec(id){var x=(S._ara||[]).filter(function(y){return y.id===id})[0
 /* ---------- yönlendirme ---------- */
 function rota(){
   var h=location.hash.replace(/^#\/?/,''),p=h.split('?'),yol=p[0].split('/'),q=new URLSearchParams(p[1]||'');
-  var s=yol[0]||'bugun';if(!SAYFALAR.some(function(x){return x[0]===s}))s='bugun';
+  var s=yol[0]||(ayar.profil&&KISI[ayar.profil]?ayar.profil:'bugun');if(!SAYFALAR.some(function(x){return x[0]===s})&&!KISI[s])s='bugun';
   if(s!==S.sayfa){S.sayfa=s;S.adet=40;S.imlec=-1;S._sayfaDegisti=true}
   if(s==='akis'&&yol[1]&&ALAN[yol[1]]&&yol[1]!==S.alan){S.alan=yol[1];S.alt='';S.adet=40;S.imlec=-1;S._sayfaDegisti=true}
   if(s==='guncelleme'&&q.get('u')!=null)S.urun=q.get('u');
   if(s==='trend'&&yol[1])S.geo=yol[1].toUpperCase();
   if(s==='dunya'&&yol[1]&&yol[1]!==S.dl){S.dl=yol[1];S.dalan='';S.adet=40}
+  if(KISI[s]&&(yol[1]||'')!==S.pdl){S.pdl=yol[1]||'';S.adet=40}
   var k=q.get('k');if(!k)S._push=false;S.sec=k||null;if(k)okunduYap(k);
   ciz();
 }
@@ -723,7 +755,9 @@ document.addEventListener('click',function(e){
   else if(a==='paylas'){var c2=bul(id);if(c2&&navigator.share)navigator.share({title:c2.t,url:c2.l}).catch(function(){})}
   else if(a==='pen'){S.pen=v;ciz()}
   else if(a==='zaman'){S.zaman=v;S.adet=40;ciz()}else if(a==='cok'){S.cok=!S.cok;S.adet=40;ciz()}else if(a==='trf'){S.tr=v;S.adet=40;ciz()}
-  else if(a==='dl'){S.dl=v;S.dalan='';S.adet=40;history.replaceState(null,'','#/dunya/'+v);ciz()}else if(a==='dalan'){S.dalan=v;S.adet=40;ciz()}else if(a==='dsira'){S.dsira=v;ciz()}
+  else if(a==='dl'){S.dl=v;S.dalan='';S.adet=40;history.replaceState(null,'','#/dunya/'+v);ciz()}else if(a==='dalan'){S.dalan=v;S.adet=40;ciz()}
+  else if(a==='pdl'){S.pdl=v;S.adet=40;history.replaceState(null,'','#/'+S.sayfa+(v?'/'+v:''));ciz()}else if(a==='pkonu'){S.pkonu=v;S.adet=40;ciz()}else if(a==='psira'){S.psira=v;ciz()}else if(a==='ptr'){S.ptr=!S.ptr;S.adet=40;ciz()}else if(a==='pkay'){S.pkay=!S.pkay;ciz()}
+  else if(a==='pvars'){ayar.profil=ayar.profil===v?'':v;yaz('akis2-ayar',ayar);toast(ayar.profil?'Bu tarayıcıda Akış açılınca bu masa gelir':'Açılış sayfası yeniden Bugün');ciz()}else if(a==='dsira'){S.dsira=v;ciz()}
   else if(a==='cevir'){ayar.cevir=!ayar.cevir;yaz('akis2-ayar',ayar);toast(ayar.cevir?'Yabancı haberler Türkçe çeviriyle açılacak':'Haberler orijinal dilinde açılacak');if(S.sec==='__ayar')ayarAc();else ciz()}
   else if(a==='sira'){S.sira=v;ciz()}else if(a==='daha'){S.adet+=40;ciz()}else if(a==='rdaha'){S.radet+=20;ciz()}
   else if(a==='geo'){S.geo=v;history.replaceState(null,'','#/trend/'+v);ciz()}else if(a==='tfil'){S.tfil=v;ciz()}
@@ -771,7 +805,7 @@ function hata(e){$('ana').innerHTML='<div class="bosluk">Veri yüklenemedi ('+es
 function tazelik(){
   fetch('data/ozet.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(o){if(D.ozet&&o.generated!==D.ozet.generated)$('yeniVeri').hidden=false}).catch(function(){});
 }
-$('yeniVeri').onclick=function(){$('yeniVeri').hidden=true;yukleniyor={};D={ozet:null,alan:{},dil:{},reels:null,kaynak:null,indeks:null,trend:null,gunc:null};REG={};TREG={};Object.keys(kayit).forEach(function(id){});ozetYukle().then(function(){oncekiZiyaret=oncekiZiyaret;ciz()}).catch(hata)};
+$('yeniVeri').onclick=function(){$('yeniVeri').hidden=true;yukleniyor={};D={ozet:null,alan:{},dil:{},kisi:{},reels:null,kaynak:null,indeks:null,trend:null,gunc:null};REG={};TREG={};Object.keys(kayit).forEach(function(id){});ozetYukle().then(function(){oncekiZiyaret=oncekiZiyaret;ciz()}).catch(hata)};
 setInterval(function(){saatCiz();if(!document.hidden)tazelik()},180000);
 document.addEventListener('visibilitychange',function(){if(!document.hidden){saatCiz();tazelik()}});
 ozetYukle().then(function(){rota();trendYukle().catch(function(){})}).catch(hata);

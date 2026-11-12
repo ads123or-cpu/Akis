@@ -366,9 +366,20 @@ YASAK_YAYINCI = re.compile(r'shift\s*delete|shiftdelete', re.I)
 def yasak_mi(it):
     return bool(YASAK_YAYINCI.search((it.get('p') or '') + ' ' + (it.get('l') or '') + ' ' + (it.get('t') or '')[-40:]))
 
-def main():
-    sources = [s for s in json.load(open('sources.json')) if not YASAK_YAYINCI.search(s['id'] + s['name'] + s['url'])]
-    try: old = json.load(open('site/feeds.json')).get('feeds', {})
+# Kişisel alanlar (ör. Pırıl Cennet): ayrı kaynak listesi, ayrı durum/akış/görsel dosyası. Ana dosyalara dokunmaz.
+def profil_yollari(profil):
+    k = 'site/kisisel/%s' % profil
+    return dict(kaynak='kisisel/%s/sources.json' % profil, cikti=k + '/feeds.json', durum=k + '/kaynak-durum.json', gorsel=k + '/gorsel.json')
+
+def main(profil=None):
+    global DURUM_DOSYASI, GORSEL_DOSYA
+    kaynak_yol, cikti_yol = 'sources.json', 'site/feeds.json'
+    if profil:
+        y = profil_yollari(profil)
+        kaynak_yol, cikti_yol, DURUM_DOSYASI, GORSEL_DOSYA = y['kaynak'], y['cikti'], y['durum'], y['gorsel']
+        import os; os.makedirs(os.path.dirname(cikti_yol), exist_ok=True)
+    sources = [s for s in json.load(open(kaynak_yol)) if not YASAK_YAYINCI.search(s['id'] + s['name'] + s['url'])]
+    try: old = json.load(open(cikti_yol)).get('feeds', {})
     except Exception: old = {}
     try: durum = json.load(open(DURUM_DOSYASI))
     except Exception: durum = {}
@@ -426,7 +437,9 @@ def main():
     saglik = dict(kaynak=len(sources), basarili=len(feeds) - sum(1 for f in feeds.values() if f.get('bayat')), bayat=sum(1 for f in feeds.values() if f.get('bayat')), basarisiz=sum(1 for _, e in failed if e != 'beklemede'), beklemede=len(beklemede))
     gecerli = {s['id'] for s in sources}
     json.dump({k: v for k, v in durum.items() if k in gecerli}, open(DURUM_DOSYASI, 'w'), ensure_ascii=False, indent=1, sort_keys=True)
-    json.dump(dict(generated=now, saglik=saglik, feeds=feeds), open('site/feeds.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    json.dump(dict(generated=now, saglik=saglik, feeds=feeds), open(cikti_yol, 'w'), ensure_ascii=False, separators=(',', ':'))
     print(f"{len(feeds)} kaynak, {n} haber, {len(failed)} başarısız", *failed, sep='\n  ')
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    import sys
+    main(sys.argv[sys.argv.index('--profil') + 1] if '--profil' in sys.argv else None)

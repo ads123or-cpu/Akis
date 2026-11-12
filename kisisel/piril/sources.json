@@ -1,0 +1,2445 @@
+[
+{
+"id": "pc-reuters",
+"name": "Reuters World (Google News)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=when%3A1d%20site%3Areuters.com/world%20&hl=en-US&gl=US&ceid=US:en",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"ajans"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 713
+}
+},
+{
+"id": "pc-ap",
+"name": "AP World (Google News)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=when%3A1d%20site%3Aapnews.com%20&hl=en-US&gl=US&ceid=US:en",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"ajans"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 0
+}
+},
+{
+"id": "pc-gnw-us",
+"name": "Google News Dünya: ABD (EN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 821
+}
+},
+{
+"id": "pc-gnw-gb",
+"name": "Google News Dünya: Birleşik Krallık (EN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-GB&gl=GB&ceid=GB:en",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1299
+}
+},
+{
+"id": "pc-gnw-de",
+"name": "Google News Dünya: Almanya",
+"lang": "de",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=de&gl=DE&ceid=DE:de",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "DE",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1273
+}
+},
+{
+"id": "pc-gnw-fr",
+"name": "Google News Dünya: Fransa",
+"lang": "fr",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=fr&gl=FR&ceid=FR:fr",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "FR",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1369
+}
+},
+{
+"id": "pc-gnw-es",
+"name": "Google News Dünya: İspanya",
+"lang": "es",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=es&gl=ES&ceid=ES:es",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "ES",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1532
+}
+},
+{
+"id": "pc-gnw-mx",
+"name": "Google News Dünya: Latin Amerika",
+"lang": "es",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=es-419&gl=MX&ceid=MX:es-419",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "MX",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1415
+}
+},
+{
+"id": "pc-gnw-it",
+"name": "Google News Dünya: İtalya",
+"lang": "it",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=it&gl=IT&ceid=IT:it",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "IT",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 813
+}
+},
+{
+"id": "pc-gnw-br",
+"name": "Google News Dünya: Brezilya",
+"lang": "pt",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=pt-BR&gl=BR&ceid=BR:pt-419",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "BR",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1385
+}
+},
+{
+"id": "pc-gnw-ru",
+"name": "Google News Dünya: Rusya",
+"lang": "ru",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=ru&gl=RU&ceid=RU:ru",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "RU",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1291
+}
+},
+{
+"id": "pc-gnw-ar",
+"name": "Google News Dünya: Arap dünyası",
+"lang": "ar",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=ar&gl=SA&ceid=SA:ar",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "SA",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1316
+}
+},
+{
+"id": "pc-gnw-jp",
+"name": "Google News Dünya: Japonya",
+"lang": "ja",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=ja&gl=JP&ceid=JP:ja",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "JP",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1202
+}
+},
+{
+"id": "pc-gnw-kr",
+"name": "Google News Dünya: Güney Kore",
+"lang": "ko",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=ko&gl=KR&ceid=KR:ko",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "KR",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1734
+}
+},
+{
+"id": "pc-gnw-tw",
+"name": "Google News Dünya: Tayvan",
+"lang": "zh",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TW",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 771
+}
+},
+{
+"id": "pc-gnw-ua",
+"name": "Google News Dünya: Ukrayna",
+"lang": "uk",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=uk&gl=UA&ceid=UA:uk",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "UA",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1208
+}
+},
+{
+"id": "pc-gnw-pl",
+"name": "Google News Dünya: Polonya",
+"lang": "pl",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=pl&gl=PL&ceid=PL:pl",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "PL",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1054
+}
+},
+{
+"id": "pc-gnw-nl",
+"name": "Google News Dünya: Hollanda",
+"lang": "nl",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=nl&gl=NL&ceid=NL:nl",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "NL",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1045
+}
+},
+{
+"id": "pc-gnw-il",
+"name": "Google News Dünya: İsrail",
+"lang": "he",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=he&gl=IL&ceid=IL:he",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "IL",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1098
+}
+},
+{
+"id": "pc-gnw-gr",
+"name": "Google News Dünya: Yunanistan",
+"lang": "el",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=el&gl=GR&ceid=GR:el",
+"plat": "web",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "GR",
+"oncelik": 1,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1087
+}
+},
+{
+"id": "pc-bbc-mundo",
+"name": "BBC Mundo",
+"lang": "es",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/mundo/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 292
+}
+},
+{
+"id": "pc-elmundo",
+"name": "El Mundo Internacional",
+"lang": "es",
+"cat": "world",
+"url": "https://e00-elmundo.uecdn.es/elmundo/rss/internacional.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 257
+}
+},
+{
+"id": "pc-elpais-int",
+"name": "El País Internacional",
+"lang": "es",
+"cat": "world",
+"url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 21,
+"ms": 572
+}
+},
+{
+"id": "pc-infobae",
+"name": "Infobae",
+"lang": "es",
+"cat": "world",
+"url": "https://www.infobae.com/arc/outboundfeeds/rss/",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "AR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 479
+}
+},
+{
+"id": "pc-dw-es",
+"name": "DW Español",
+"lang": "es",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-sp-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 300
+}
+},
+{
+"id": "pc-france24-es",
+"name": "France 24 Español",
+"lang": "es",
+"cat": "world",
+"url": "https://www.france24.com/es/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 24,
+"ms": 365
+}
+},
+{
+"id": "pc-ansa",
+"name": "ANSA Mondo",
+"lang": "it",
+"cat": "world",
+"url": "https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "IT",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 549
+}
+},
+{
+"id": "pc-repubblica",
+"name": "la Repubblica Esteri",
+"lang": "it",
+"cat": "world",
+"url": "https://www.repubblica.it/rss/esteri/rss2.0.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IT",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 288
+}
+},
+{
+"id": "pc-bbc-br",
+"name": "BBC News Brasil",
+"lang": "pt",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 358
+}
+},
+{
+"id": "pc-folha",
+"name": "Folha Mundo",
+"lang": "pt",
+"cat": "world",
+"url": "https://feeds.folha.uol.com.br/mundo/rss091.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "BR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 2295
+}
+},
+{
+"id": "pc-dw-br",
+"name": "DW Brasil",
+"lang": "pt",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-br-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 305
+}
+},
+{
+"id": "pc-bbc-ru",
+"name": "BBC Русская служба",
+"lang": "ru",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/russian/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 367
+}
+},
+{
+"id": "pc-meduza",
+"name": "Meduza",
+"lang": "ru",
+"cat": "world",
+"url": "https://meduza.io/rss/all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "LV",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1048
+}
+},
+{
+"id": "pc-dw-ru",
+"name": "DW на русском",
+"lang": "ru",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-ru-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 302
+}
+},
+{
+"id": "pc-kommersant",
+"name": "Коммерсантъ Мир",
+"lang": "ru",
+"cat": "world",
+"url": "https://www.kommersant.ru/RSS/section-world.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 1263
+}
+},
+{
+"id": "pc-bbc-ua",
+"name": "BBC News Україна",
+"lang": "uk",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/ukrainian/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 19,
+"ms": 268
+}
+},
+{
+"id": "pc-pravda-ua",
+"name": "Українська правда",
+"lang": "uk",
+"cat": "world",
+"url": "https://www.pravda.com.ua/rss/",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "UA",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 255
+}
+},
+{
+"id": "pc-bbc-fa",
+"name": "BBC فارسی",
+"lang": "fa",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/persian/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 229
+}
+},
+{
+"id": "pc-bbc-hi",
+"name": "BBC हिंदी",
+"lang": "hi",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/hindi/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 238
+}
+},
+{
+"id": "pc-spiegel-ausland",
+"name": "Spiegel Ausland",
+"lang": "de",
+"cat": "world",
+"url": "https://www.spiegel.de/ausland/index.rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 380
+}
+},
+{
+"id": "pc-faz",
+"name": "FAZ Politik",
+"lang": "de",
+"cat": "world",
+"url": "https://www.faz.net/rss/aktuell/politik/",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 244
+}
+},
+{
+"id": "pc-sz",
+"name": "Süddeutsche Politik",
+"lang": "de",
+"cat": "world",
+"url": "https://rss.sueddeutsche.de/rss/Politik",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 15,
+"ms": 651
+}
+},
+{
+"id": "pc-nzz",
+"name": "NZZ International",
+"lang": "de",
+"cat": "world",
+"url": "https://www.nzz.ch/international.rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "CH",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 332
+}
+},
+{
+"id": "pc-lemonde-int",
+"name": "Le Monde International",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.lemonde.fr/international/rss_full.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 377
+}
+},
+{
+"id": "pc-figaro",
+"name": "Le Figaro International",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.lefigaro.fr/rss/figaro_international.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 263
+}
+},
+{
+"id": "pc-rfi",
+"name": "RFI",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.rfi.fr/fr/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 23,
+"ms": 923
+}
+},
+{
+"id": "pc-liberation",
+"name": "Libération Monde",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.liberation.fr/arc/outboundfeeds/rss-all/category/international/?outputType=xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 821
+}
+},
+{
+"id": "pc-skynewsarabia",
+"name": "سكاي نيوز عربية",
+"lang": "ar",
+"cat": "world",
+"url": "https://www.skynewsarabia.com/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "AE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 341
+}
+},
+{
+"id": "pc-aawsat",
+"name": "الشرق الأوسط",
+"lang": "ar",
+"cat": "world",
+"url": "https://aawsat.com/feed",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 363
+}
+},
+{
+"id": "pc-asahi",
+"name": "朝日新聞",
+"lang": "ja",
+"cat": "world",
+"url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 639
+}
+},
+{
+"id": "pc-yna-int",
+"name": "연합뉴스 국제",
+"lang": "ko",
+"cat": "world",
+"url": "https://www.yna.co.kr/rss/international.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "KR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 2277
+}
+},
+{
+"id": "pc-rfi-zh",
+"name": "RFI 中文",
+"lang": "zh",
+"cat": "world",
+"url": "https://www.rfi.fr/cn/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 286
+}
+},
+{
+"id": "pc-kathimerini",
+"name": "Καθημερινή",
+"lang": "el",
+"cat": "world",
+"url": "https://www.kathimerini.gr/infeeds/rss/nx-rss-feed.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 991
+}
+},
+{
+"id": "pc-tvn24",
+"name": "TVN24 Świat",
+"lang": "pl",
+"cat": "world",
+"url": "https://tvn24.pl/swiat.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "PL",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 333
+}
+},
+{
+"id": "pc-nos",
+"name": "NOS Buitenland",
+"lang": "nl",
+"cat": "world",
+"url": "https://feeds.nos.nl/nosnieuwsbuitenland",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "NL",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 20,
+"ms": 1406
+}
+},
+{
+"id": "pc-ynet",
+"name": "ynet",
+"lang": "he",
+"cat": "world",
+"url": "https://www.ynet.co.il/Integration/StoryRss2.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IL",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-12",
+"n": 25,
+"ms": 924
+}
+},
+{
+"id": "pc-bbc-world",
+"name": "BBC World",
+"lang": "en",
+"cat": "world",
+"url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-guardian",
+"name": "The Guardian",
+"lang": "en",
+"cat": "world",
+"url": "https://www.theguardian.com/world/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-aljazeera",
+"name": "Al Jazeera",
+"lang": "en",
+"cat": "world",
+"url": "https://www.aljazeera.com/xml/rss/all.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "QA",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-npr",
+"name": "NPR",
+"lang": "en",
+"cat": "world",
+"url": "https://feeds.npr.org/1001/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-nyt",
+"name": "New York Times",
+"lang": "en",
+"cat": "world",
+"url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
+},
+{
+"id": "pc-sky",
+"name": "Sky News",
+"lang": "en",
+"cat": "world",
+"url": "https://feeds.skynews.com/feeds/rss/world.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-wapo",
+"name": "Washington Post",
+"lang": "en",
+"cat": "world",
+"url": "https://feeds.washingtonpost.com/rss/world",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
+},
+{
+"id": "pc-dw-en",
+"name": "DW English",
+"lang": "en",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-en-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-france24-en",
+"name": "France 24",
+"lang": "en",
+"cat": "world",
+"url": "https://www.france24.com/en/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-axios",
+"name": "Axios",
+"lang": "en",
+"cat": "world",
+"url": "https://api.axios.com/feed/",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-abc-au",
+"name": "ABC Australia",
+"lang": "en",
+"cat": "world",
+"url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "AU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-cbs",
+"name": "CBS News",
+"lang": "en",
+"cat": "world",
+"url": "https://www.cbsnews.com/latest/rss/main",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-scmp",
+"name": "SCMP",
+"lang": "en",
+"cat": "world",
+"url": "https://www.scmp.com/rss/91/feed",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "HK",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-japantimes",
+"name": "Japan Times",
+"lang": "en",
+"cat": "world",
+"url": "https://www.japantimes.co.jp/feed/",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "JP",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-mee",
+"name": "Middle East Eye",
+"lang": "en",
+"cat": "world",
+"url": "https://www.middleeasteye.net/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-toi",
+"name": "Times of India",
+"lang": "en",
+"cat": "world",
+"url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-thehindu",
+"name": "The Hindu",
+"lang": "en",
+"cat": "world",
+"url": "https://www.thehindu.com/news/national/feeder/default.rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-straitstimes",
+"name": "Straits Times",
+"lang": "en",
+"cat": "world",
+"url": "https://www.straitstimes.com/news/world/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "SG",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-abc-news",
+"name": "ABC News",
+"lang": "en",
+"cat": "world",
+"url": "https://abcnews.go.com/abcnews/topstories",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-nbc",
+"name": "NBC News",
+"lang": "en",
+"cat": "world",
+"url": "https://feeds.nbcnews.com/nbcnews/public/news",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-foxnews",
+"name": "Fox News",
+"lang": "en",
+"cat": "world",
+"url": "https://moxie.foxnews.com/google-publisher/latest.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-latimes",
+"name": "LA Times",
+"lang": "en",
+"cat": "world",
+"url": "https://www.latimes.com/world-nation/rss2.0.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-nyt-world",
+"name": "NYT World",
+"lang": "en",
+"cat": "world",
+"url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true
+},
+{
+"id": "pc-euronews-en",
+"name": "Euronews",
+"lang": "en",
+"cat": "world",
+"url": "https://www.euronews.com/rss?format=mrss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "EU",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-independent",
+"name": "The Independent",
+"lang": "en",
+"cat": "world",
+"url": "https://www.independent.co.uk/news/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-politico",
+"name": "Politico",
+"lang": "en",
+"cat": "world",
+"url": "https://rss.politico.com/politics-news.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-ndtv-en",
+"name": "NDTV",
+"lang": "en",
+"cat": "world",
+"url": "https://feeds.feedburner.com/ndtvnews-top-stories",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-indiatoday",
+"name": "India Today",
+"lang": "en",
+"cat": "world",
+"url": "https://www.indiatoday.in/rss/1206578",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-breakingdefense",
+"name": "Breaking Defense",
+"lang": "en",
+"cat": "world",
+"url": "https://breakingdefense.com/feed/",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-twz",
+"name": "The War Zone",
+"lang": "en",
+"cat": "world",
+"url": "https://www.twz.com/feed",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true
+},
+{
+"id": "pc-france24-fr",
+"name": "France 24 Français",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.france24.com/fr/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 336
+}
+},
+{
+"id": "pc-france24-ar",
+"name": "France 24 العربية",
+"lang": "ar",
+"cat": "world",
+"url": "https://www.france24.com/ar/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 354
+}
+},
+{
+"id": "pc-dw-de",
+"name": "DW Deutsch",
+"lang": "de",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-de-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 512
+}
+},
+{
+"id": "pc-dw-ar",
+"name": "DW عربية",
+"lang": "ar",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-ar-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 501
+}
+},
+{
+"id": "pc-dw-zh",
+"name": "DW 中文",
+"lang": "zh",
+"cat": "world",
+"url": "https://rss.dw.com/rdf/rss-chi-all",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 503
+}
+},
+{
+"id": "pc-bbc-zh",
+"name": "BBC 中文",
+"lang": "zh",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 826
+}
+},
+{
+"id": "pc-bbc-ar",
+"name": "BBC عربي",
+"lang": "ar",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 24,
+"ms": 396
+}
+},
+{
+"id": "pc-aljazeera-ar",
+"name": "الجزيرة",
+"lang": "ar",
+"cat": "world",
+"url": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "QA",
+"oncelik": 2,
+"nitelik": [
+"yayin-grubu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 343
+}
+},
+{
+"id": "pc-wsj-world",
+"name": "Wall Street Journal",
+"lang": "en",
+"cat": "world",
+"url": "https://feeds.a.dowjones.com/rss/RSSWorldNews",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "bekliyor",
+"tarih": "2026-11-08",
+"not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
+}
+},
+{
+"id": "pc-lemonde",
+"name": "Le Monde",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.lemonde.fr/rss/une.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 16,
+"ms": 378
+}
+},
+{
+"id": "pc-spiegel",
+"name": "Der Spiegel",
+"lang": "de",
+"cat": "world",
+"url": "https://www.spiegel.de/schlagzeilen/index.rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 292
+}
+},
+{
+"id": "pc-tagesschau",
+"name": "Tagesschau",
+"lang": "de",
+"cat": "world",
+"url": "https://www.tagesschau.de/index~rss2.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 521
+}
+},
+{
+"id": "pc-zeit",
+"name": "Die Zeit",
+"lang": "de",
+"cat": "world",
+"url": "https://newsfeed.zeit.de/index",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 15,
+"ms": 303
+}
+},
+{
+"id": "pc-elpais",
+"name": "El País",
+"lang": "es",
+"cat": "world",
+"url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "ES",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 642
+}
+},
+{
+"id": "pc-yonhap",
+"name": "Yonhap English",
+"lang": "en",
+"cat": "world",
+"url": "https://en.yna.co.kr/RSS/news.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ajans",
+"ulke": "KR",
+"oncelik": 1,
+"nitelik": [
+"ajans"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 2184
+}
+},
+{
+"id": "pc-tass",
+"name": "TASS English",
+"lang": "en",
+"cat": "world",
+"url": "https://tass.com/rss/v2.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ajans",
+"ulke": "RU",
+"oncelik": 1,
+"nitelik": [
+"devlet-ajansi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 551
+}
+},
+{
+"id": "pc-rt",
+"name": "RT",
+"lang": "en",
+"cat": "world",
+"url": "https://www.rt.com/rss/news/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "RU",
+"oncelik": 2,
+"nitelik": [
+"devlet-yayini"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1758
+}
+},
+{
+"id": "pc-haaretz",
+"name": "Haaretz",
+"lang": "en",
+"cat": "world",
+"url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "IL",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 496
+}
+},
+{
+"id": "pc-kyivindependent",
+"name": "Kyiv Independent",
+"lang": "en",
+"cat": "world",
+"url": "https://kyivindependent.com/news-archive/rss",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "UA",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 15,
+"ms": 595
+}
+},
+{
+"id": "pc-euractiv",
+"name": "Euractiv",
+"lang": "en",
+"cat": "world",
+"url": "https://www.euractiv.com/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "BE",
+"oncelik": 2,
+"nitelik": [
+"bagimsiz"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 797
+}
+},
+{
+"id": "pc-politico-eu",
+"name": "Politico Europe",
+"lang": "en",
+"cat": "world",
+"url": "https://www.politico.eu/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "BE",
+"oncelik": 2,
+"nitelik": [
+"ana-akim"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 309
+}
+},
+{
+"id": "pc-foreignpolicy",
+"name": "Foreign Policy",
+"lang": "en",
+"cat": "world",
+"url": "https://foreignpolicy.com/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [
+"ucretli-duvar"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 309
+}
+},
+{
+"id": "pc-crisisgroup",
+"name": "International Crisis Group",
+"lang": "en",
+"cat": "world",
+"url": "https://www.crisisgroup.org/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "BE",
+"oncelik": 1,
+"nitelik": [
+"dusunce-kurulusu"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 682
+}
+},
+{
+"id": "pc-un-news",
+"name": "UN News",
+"lang": "en",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 384
+}
+},
+{
+"id": "pc-eu-komisyon",
+"name": "AB Komisyonu Basın",
+"lang": "en",
+"cat": "world",
+"url": "https://ec.europa.eu/commission/presscorner/api/rss?language=en",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "EU",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 885
+}
+},
+{
+"id": "pc-us-state",
+"name": "ABD Dışişleri",
+"lang": "en",
+"cat": "world",
+"url": "https://www.state.gov/rss-feed/press-releases/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 265
+}
+},
+{
+"id": "pc-us-defense",
+"name": "ABD Savunma Bakanlığı",
+"lang": "en",
+"cat": "world",
+"url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 10,
+"ms": 2227
+}
+},
+{
+"id": "pc-gn-de-welt",
+"name": "Google News: Welt (DE)",
+"lang": "de",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=de&gl=DE&ceid=DE:de",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "DE",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 754
+}
+},
+{
+"id": "pc-gn-fr-monde",
+"name": "Google Actualités (FR)",
+"lang": "fr",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "FR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1114
+}
+},
+{
+"id": "pc-gn-ar",
+"name": "Google أخبار (AR)",
+"lang": "ar",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=ar&gl=SA&ceid=SA:ar",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "SA",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 792
+}
+},
+{
+"id": "pc-gn-ja",
+"name": "Google ニュース (JA)",
+"lang": "ja",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "JP",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 331
+}
+},
+{
+"id": "pc-gn-ko",
+"name": "Google 뉴스 (KO)",
+"lang": "ko",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "KR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 507
+}
+},
+{
+"id": "pc-gn-zh",
+"name": "Google 新闻 (ZH)",
+"lang": "zh",
+"cat": "world",
+"url": "https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "CN",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 235
+}
+},
+{
+"id": "pc-gn-en-politics",
+"name": "Google News: Politics (EN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 1043
+}
+},
+{
+"id": "pc-gn-en-defense",
+"name": "Google News: Defense (EN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=defense+OR+NATO+OR+sanctions&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "siyaset",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 656
+}
+},
+{
+"id": "pc-whitehouse2",
+"name": "Beyaz Saray Haberleri",
+"lang": "en",
+"cat": "world",
+"url": "https://www.whitehouse.gov/news/feed/",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "resmi kurum",
+"ulke": "US",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 744
+}
+},
+{
+"id": "pc-un-ar",
+"name": "UN News Arabic",
+"lang": "ar",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/ar/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 392
+}
+},
+{
+"id": "pc-un-zh",
+"name": "UN News 中文",
+"lang": "zh",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/zh/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 327
+}
+},
+{
+"id": "pc-un-fr",
+"name": "UN News Français",
+"lang": "fr",
+"cat": "world",
+"url": "https://news.un.org/feed/subscribe/fr/news/all/rss.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "uluslararasi kurum",
+"ulke": "INT",
+"oncelik": 1,
+"nitelik": [
+"resmi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-08",
+"n": 25,
+"ms": 343
+}
+}
+]

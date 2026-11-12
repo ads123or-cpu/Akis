@@ -8,7 +8,7 @@ on:
   workflow_dispatch:          # Actions sekmesinden elle de çalıştırılabilir
   push:
     branches: [main]            # gelistirme dallari yayin zincirini baslatmasin
-    paths: [sources.json, fetch_feeds.py, masa.py, akis2.py, ekler.py, index.tpl.html, build.py, tests/**, .github/workflows/refresh.yml]
+    paths: [sources.json, fetch_feeds.py, masa.py, akis2.py, ekler.py, index.tpl.html, build.py, kisisel.py, kisisel/**, tests/**, .github/workflows/refresh.yml]
 permissions:
   contents: write
   actions: write
@@ -27,6 +27,14 @@ jobs:
       - run: python masa.py          # eski cikti (masa.json): TechTurco paneli okur
       - run: python akis2.py         # yeni arayuzun parcali verisi (site/data/*.json), Google Trends ve Guncelleme Radari (ekler.py)
       - run: python build.py         # site/index.html (+ panelin okudugu id="snap" blogu)
+      # Kisisel masa (Piril Cennet, Dunya masasi): ayri kaynak listesi ve ayri dosyalar (site/kisisel/piril, site/data/kisisel).
+      # Ana akisin dosyalarina dokunmaz; bozulursa ana akisin yayini durmaz.
+      - name: "Kisisel masa: Piril kaynaklari"
+        continue-on-error: true
+        run: python fetch_feeds.py --profil piril
+      - name: "Kisisel masa: Piril verisi"
+        continue-on-error: true
+        run: python kisisel.py
       - name: "Cikti dogrulama (bozuk uretim commitlenmez, onceki site yayinda kalir)"
         run: python -m unittest tests.test_sozlesme tests.test_cikti -v
       - name: "Değişiklik varsa kaydet (site/data commitlenmez, .gitignore'da; yalnız durum ve eski çıktılar)"

@@ -33,7 +33,8 @@ DIL_AD = {'tr': ('Türkçe', 'Türkçe'), 'en': ('English', 'İngilizce'), 'zh':
           'ko': ('한국어', 'Korece'), 'de': ('Deutsch', 'Almanca'), 'fr': ('Français', 'Fransızca'), 'es': ('Español', 'İspanyolca'),
           'it': ('Italiano', 'İtalyanca'), 'ru': ('Русский', 'Rusça'), 'uk': ('Українська', 'Ukraynaca'), 'pt': ('Português', 'Portekizce'),
           'ar': ('العربية', 'Arapça'), 'hi': ('हिन्दी', 'Hintçe'), 'vi': ('Tiếng Việt', 'Vietnamca'), 'id': ('Bahasa Indonesia', 'Endonezce'),
-          'pl': ('Polski', 'Lehçe'), 'nl': ('Nederlands', 'Felemenkçe'), 'ro': ('Română', 'Rumence')}
+          'pl': ('Polski', 'Lehçe'), 'nl': ('Nederlands', 'Felemenkçe'), 'ro': ('Română', 'Rumence'),
+          'he': ('עברית', 'İbranice'), 'el': ('Ελληνικά', 'Yunanca'), 'fa': ('فارسی', 'Farsça')}
 
 # ------------------------------------------------------------------ kimlik / URL
 IZ_PARAM = re.compile(r'^(utm_|fbclid|gclid|mc_|ref$|ref_|source$|cmpid|ocid|at_|igshid|spm|share)', re.I)
@@ -471,13 +472,8 @@ def durum_hesapla(s, d, simdi_iso, simdi, n72):
     if (d.get('ms') or 0) > 3000: return 'yavas'
     return 'aktif'
 
-def main():
-    j = json.load(open('site/feeds.json', encoding='utf-8'))
-    src = {s['id']: s for s in json.load(open('sources.json', encoding='utf-8'))}
-    try: dur = json.load(open('site/kaynak-durum.json', encoding='utf-8'))
-    except Exception: dur = {}
-    simdi_dt = datetime.fromisoformat(j['generated']) if j.get('generated') else datetime.now(timezone.utc)
-    simdi = simdi_dt.timestamp(); simdi_iso = simdi_dt.isoformat()
+def ogeler_kur(j, src, simdi):
+    """feeds.json -> tekilleştirilmiş haber öğeleri (kümelemeye girer). Dönüş: (ogeler, kaynak başına 72 sa sayaç)"""
     ogeler, gor = [], set()
     n72 = Counter()
     for sid, f in j['feeds'].items():
@@ -507,8 +503,10 @@ def main():
                      plat=f.get('plat', 'web'), n=it.get('n'), tip=s.get('tip', 'ana akim'), nit=set(s.get('nitelik') or []), cal=s.get('calisma') or 'gundem', ulke=s.get('ulke', ''))
             o['tok'] = tok2(t); o['ent'] = canon_bul(t); o['var'] = M.varlik(t) | {'@' + e for e in o['ent']}
             ogeler.append(o)
-    kumeler = kumele_tam(ogeler)
-    # Büyük kümeleri ve olay bütünlüğünü korumak için: çok büyük kümelerde (>40 haber) yalnız en yakın 40 haber tutulur.
+    return ogeler, n72
+
+def kumeler_kur(kumeler, simdi):
+    """kumele_tam çıktısı -> (küme sözlüğü, öğeler, baş haber) listesi; puanlar dahil."""
     cikti = []
     for k in kumeler:
         og = sorted(k['ogeler'], key=lambda x: -x['z'])
@@ -556,6 +554,18 @@ def main():
         c['yuk'] = dict(yogunluk=yog_s, cesit=cesit, ivme=round(ivme, 2), puan=round(math.log2(1 + yog_s) * math.log2(1 + cesit) * min(ivme, 6), 2) if (kb >= 2 and yog_s >= 2) else 0,
                         ilk_saat=round((simdi - c['ilk']) / 3600, 1))
         cikti.append((c, og, bas))
+    return cikti
+
+def main():
+    j = json.load(open('site/feeds.json', encoding='utf-8'))
+    src = {s['id']: s for s in json.load(open('sources.json', encoding='utf-8'))}
+    try: dur = json.load(open('site/kaynak-durum.json', encoding='utf-8'))
+    except Exception: dur = {}
+    simdi_dt = datetime.fromisoformat(j['generated']) if j.get('generated') else datetime.now(timezone.utc)
+    simdi = simdi_dt.timestamp(); simdi_iso = simdi_dt.isoformat()
+    ogeler, n72 = ogeler_kur(j, src, simdi)
+    kumeler = kumele_tam(ogeler)
+    cikti = kumeler_kur(kumeler, simdi)
     # Reels alanı
     for c, og, bas in cikti:
         pr, alt = profil_bul(c, bas['t'])
@@ -675,7 +685,7 @@ def main():
                     yogunluk='Yoğunluk değişimi: son penceredeki haber sayısı, bir önceki aynı uzunluktaki pencereyle karşılaştırılır.',
                     kume='Aynı olay: başlık/içerik kelime benzerliği ve ortak seyrek özel ad; farklı dillerde ortak varlık (ülke, lider, şirket) ve sayılar, 18 saat içinde. Yalnız başlık benzerliğiyle farklı olaylar birleştirilmez.'))
     yaz('ozet.json', ozet)
-    boy = {f: os.path.getsize(os.path.join(CIKTI, f)) for f in sorted(os.listdir(CIKTI))}
+    boy = {f: os.path.getsize(os.path.join(CIKTI, f)) for f in sorted(os.listdir(CIKTI)) if f.endswith('.json')}
     print('oge', len(ogeler), 'kume', len(cikti), 'cok kaynakli(>=3 bagimsiz)', sum(1 for c in tum if c['kb'] >= 3), 'reels', len(reels_json), 'elenen', dict(elenen_say))
     print({a: v['toplam'] for a, v in sayim.items()})
     print({k: '%dKB' % (v / 1024) for k, v in boy.items()})

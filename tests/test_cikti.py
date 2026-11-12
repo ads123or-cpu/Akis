@@ -61,7 +61,8 @@ class Cikti(unittest.TestCase):
         for x in ALANLAR: self.assertLess(os.path.getsize(os.path.join(D, 'kume-%s.json' % x)), 1100 * 1024)
 
     def test_shiftdelete_kimlik_alanlarinda_yok(self):
-        for f in os.listdir(D): self.assertEqual(list(yasak_ara(j(f))), [], f)
+        for f in os.listdir(D):
+            if f.endswith('.json'): self.assertEqual(list(yasak_ara(j(f))), [], f)
         for f in ('masa.json', 'feeds.json'):
             yol = os.path.join(KOK, 'site', f)
             if os.path.exists(yol): self.assertEqual(list(yasak_ara(json.load(open(yol, encoding='utf-8')))), [], f)
@@ -84,3 +85,17 @@ class Cikti(unittest.TestCase):
             self.assertTrue(s['url'].startswith('http'))
 
 if __name__ == '__main__': unittest.main()
+
+
+P = os.path.join(D, 'kisisel', 'piril.json')
+@unittest.skipUnless(os.path.exists(P), 'kişisel masa üretilmemiş')
+class KisiselCikti(unittest.TestCase):
+    def test_piril_yalniz_yabanci_ve_ayri(self):
+        o = json.load(open(P, encoding='utf-8'))
+        self.assertLess(os.path.getsize(P), 1100 * 1024)
+        for c in o['kumeler']:
+            self.assertNotEqual(c['dil'], 'tr', c['t'])
+            for x in c['og']: self.assertNotEqual(x['d'], 'tr', x['t'])
+        self.assertEqual(list(yasak_ara(o)), [])
+        if VAR:
+            self.assertFalse([k['id'] for k in j('kaynaklar.json')['kaynaklar'] if k['id'].startswith('pc-')])
