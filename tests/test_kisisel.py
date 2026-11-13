@@ -70,6 +70,15 @@ class Arayuz(unittest.TestCase):
         import re
         sek = re.search(r"var SAYFALAR=(\[.*?\]);", self.T).group(1)
         self.assertNotIn('piril', sek)
+    def test_rota_buyuk_kucuk_harf_ve_turkce(self):
+        self.assertIn("s=fold(s)", self.T)
+
+
+class Siralama(unittest.TestCase):
+    def test_eski_buyuk_konu_ustte_kalmaz(self):
+        """Saatlerdir süren konu (son makale yeni) ile yeni çıkan konu: yaş ilk görülmeden de düşmeli."""
+        import inspect
+        self.assertIn("simdi - c['ilk']", inspect.getsource(K.uret))
 
 
 if __name__ == '__main__': unittest.main()

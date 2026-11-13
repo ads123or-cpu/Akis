@@ -35,8 +35,10 @@ def uret(profil):
     cikti = A.kumeler_kur(A.kumele_tam(ogeler), simdi)
     tum = [c for c, _, _ in cikti]
 
+    # Yaş hem son haberden hem ilk görülmeden düşer: yalnız 'son' ile çok kaynaklı büyük bir konu her yeni makaleyle
+    # taze sayılıp saatlerce en üstte kalıyordu ("akış güncellenmiyor" algısı).
     def puan(c):
-        return (min(c['kb'], 10) * 2 + c['h6'] * 1.5 + c['h24'] * .3 + 1) * math.exp(-(simdi - c['son']) / 3600 / 12)
+        return (min(c['kb'], 10) * 2 + c['h6'] * 1.5 + c['h24'] * .3 + 1) * math.exp(-(simdi - c['son']) / 3600 / 12) * math.exp(-(simdi - c['ilk']) / 3600 / 12)
 
     def kart(c):
         return dict(id=c['id'], t=c['t'], s=c['s'][:220], i=c['i'], l=c['l'], dil=c['dil'], diller=c['diller'], ks=c['ks'], kb=c['kb'],
