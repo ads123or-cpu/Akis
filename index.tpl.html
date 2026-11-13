@@ -726,7 +726,7 @@ function araAcSec(id){var x=(S._ara||[]).filter(function(y){return y.id===id})[0
 /* ---------- yönlendirme ---------- */
 function rota(){
   var h=location.hash.replace(/^#\/?/,''),p=h.split('?'),yol=p[0].split('/'),q=new URLSearchParams(p[1]||'');
-  var s=yol[0]||(ayar.profil&&KISI[ayar.profil]?ayar.profil:'bugun');if(!SAYFALAR.some(function(x){return x[0]===s})&&!KISI[s])s='bugun';
+  var s=yol[0];try{s=decodeURIComponent(s)}catch(e){}s=fold(s).replace(/[^a-z0-9-]/g,'');/* #/Piril, #/pırıl, #/PIRIL de ayni sayfaya gitsin */s=s||(ayar.profil&&KISI[ayar.profil]?ayar.profil:'bugun');if(!SAYFALAR.some(function(x){return x[0]===s})&&!KISI[s])s='bugun';
   if(s!==S.sayfa){S.sayfa=s;S.adet=40;S.imlec=-1;S._sayfaDegisti=true}
   if(s==='akis'&&yol[1]&&ALAN[yol[1]]&&yol[1]!==S.alan){S.alan=yol[1];S.alt='';S.adet=40;S.imlec=-1;S._sayfaDegisti=true}
   if(s==='guncelleme'&&q.get('u')!=null)S.urun=q.get('u');
