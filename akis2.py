@@ -176,13 +176,22 @@ ETKI = re.compile(r"özellik|feature|geliyor|geldi|rolling out|gizli|hidden|ipuc
 TURKIYE = re.compile(r"türkiye|türk\b|türkiye'|togg|btk|imei|\btl\b|istanbul|ankara|izmir|baykar|aselsan|turkcell|vodafone tr|türk telekom|erdoğan|tbmm|\bmeb\b|yks|tcmb|bist|galatasaray|fenerbahçe|beşiktaş|trabzonspor|milli takım|turkey|turkish|türkiye'nin", re.I)
 HIKAYE = re.compile(r"neden|nasıl|iddia|sızdı|kaçtı|çöktü|yıkıldı|karşı karşıya|kapışma|çatışma|istifa|tutuklan|yasaklandı|iflas|dönüş|sürpriz|beklenmedik|ilk kez|rekor|krizi|skandal|perde arkası|gerçek yüzü|revealed|why|how|fired|resign|banned|collapse|scandal|comeback|surprise|rivalry|feud|crackdown|ousted|secret", re.I)
 IDDIA = re.compile(r"iddia|söylentiler?|sızıntı|sızdı|rumor|leak|reportedly|allegedly|claims?\b|unconfirmed|doğrulanmadı|kulis", re.I)
+# Viral/iddialı: tuhaf, tartışmalı, "nasıl olur" dedirten konu. Yalnız Reels puanında; masa.py (TechTurco paneli) ortak kalıplarına dokunmaz.
+VIRAL = re.compile(r"tuhaf|garip|gizemli|esrarengiz|viral oldu|sosyal medyada|tepki çekti|tepki yağdı|olay yarattı|tartışma yarattı|gündem oldu|dava açtı|milyarder|yapay zek[aâ]|robot|deepfake|uzaylı|ufo\b|antik|arkeolog|keşfedildi|dünyada ilk|ilk kez|yıl sonra|şaşırtan|şaşırtıcı|rekor|yasakladı|yasaklandı|para cezası|hackl|ifşa|itiraf|şaşkına|bilim insanları|araştırma(ya)? göre|"
+                   r"\bweird|bizarre|strange|odd\b|mysterious|mystery|went viral|goes viral|viral\b|backlash|outrage|sparks? (anger|debate|fury)|controvers|conspiracy|lawsuit|\bsues?\b|sued\b|fined\b|billionaire|\bai\b|artificial intelligence|chatbot|robot|deepfake|alien|\bufo|ancient|archaeolog|discovered|scientists|study (finds|shows)|researchers|world'?s first|first[- ]ever|record[- ]breaking|banned|bans\b|hacked|exposed|caught|secretly|admits?\b|leaked|"
+                   r"seltsam|kurios|verboten|erstmals|rekord|étrange|insolite|interdit|record\b|extraño|insólito|prohib", re.I)
+# Hizmet/SEO sayfaları: her gün aynı kalıpla yazılan liste ve ilanlar. Gerçek deprem/sel haberi bu kalıplara girmez (yalnız "liste", "il il", "ne zaman" sayfaları).
+SERVIS = re.compile(r"hava durumu (tahmin|il il)|il il hava|(hafta sonu|yarın) hava nasıl|namaz vakit|nöbetçi eczane|altın fiyatları (bugün|canlı)|döviz kurları bugün|(son )?depremler listesi|deprem(ler)? (listesi|canlı)|okul(lar)?(ın)? (açılış tarihi|ne zaman açıl)|ara tatil(i)? ne zaman|"
+                    r"mahkemesinden\s*/?\s*başkanlığından|\bilan(ı)? ?:|kura sonuçları|tercih sonuçları (açıklandı|ne zaman)|"
+                    r"weather forecast for|lottery (numbers|results)|powerball numbers|mega millions numbers|wordle (hint|answer)|connections hints?|crossword (answers|clue)|strands hints?", re.I)
 HASSAS = re.compile(r"ölü|öldü|hayatını kaybet|cenaze|katliam|saldırı|bombalı|savaş|terör|tecavüz|taciz|istismar|intihar|killed|dead|massacre|attack|war\b|terror|rape|abuse|suicide", re.I)
 RUTIN = M.RUTIN
 ZAYIF = M.ZAYIF
 # Reels'e HİÇ girmeyenler (yalnız bunlar). Haber türü değil, içerik niteliği: spam/alışveriş/yayın rehberi ve özel kişilerin acısı.
 ELE = [
+ ('servis/SEO sayfasi', SERVIS),
  ('alisveris/indirim', re.compile(r"\b(deals?|coupon|promo code|black friday|prime day|\bsave \$?\d|\d+% off|indirim kodu|kupon|fırsat ürünleri)\b", re.I)),
- ('yayin rehberi', re.compile(r"canlı izle|nereden izlenir|hangi kanalda|şifresiz|how to watch|live stream|watch .{3,40} (free|online)|maç kadrosu|muhtemel 11", re.I)),
+ ('yayin rehberi', re.compile(r"canlı izle|nereden izlenir|hangi kanalda|şifresiz|how to watch|live stream|watch .{3,40} (for )?\W?(free|online)|ways? to watch|maç kadrosu|muhtemel 11", re.I)),
  ('burc/kumar', re.compile(r"burç yorum|günlük burç|horoscope|bahis|casino|jackpot|iddaa tahmin|kesin kupon", re.I)),
  ('ozel kisi trajedisi', re.compile(r"tecavüz|cinsel istismar|taciz|çocuk istismarı|intihar etti|kadın cinayeti|cinayete kurban|cesedi bulundu|rape\b|child abuse|murdered (his|her) (wife|girlfriend|child)", re.I)),
  ('sponsorlu', re.compile(r"\bsponsored\b|işbirliğiyle|advertorial|ücretli içerik", re.I)),
@@ -192,11 +201,13 @@ CEZA = [
  ('rutin sürüm/yama notu', RUTIN, 8, ('tekno', 'siber')),
  ('kurumsal finans dili', re.compile(r"\b(earnings|quarterly|funding round|raises \$|series [abc]\b|valuation|market cap|analyst|bilanço|piyasa değeri|hisse geri alım)\b", re.I), 10, ('tekno',)),
  ('ürün incelemesi/liste', re.compile(r"\breview:|incelemesi|\bbest .{0,30} (of|for)\b|en iyi \d+|haftanın|weekly roundup|podcast|newsletter", re.I), 8, ('tekno', 'oto', 'eglence')),
+ ('sıradan hava uyarısı', re.compile(r"(sağanak|kuvvetli yağış|kar yağışı|fırtına|rüzgar) uyarısı|sarı kod|turuncu kod|meteoroloji(den)? uyar", re.I), 10, ('gundem',)),
  ('yalnızca yerel olay', re.compile(r"\b(mahallesinde|köyünde|ilçesinde|sokakta)\b.*\b(yaralandı|çarpıştı|kavga)\b|işçi servisi|servis aracı kaza", re.I), 10, ('gundem',)),
  ('yalnız ABD pazarı', re.compile(r"\b(us-only|only in the us|yalnızca abd|sadece abd|verizon|t-mobile|at&t|walmart|costco|best buy)\b", re.I), 8, ('tekno',)),
 ]
-KRITER = [('guncellik', 12, 'Güncellik'), ('haber', 12, 'Haber değeri'), ('etki', 12, 'Hayata etki'), ('ozgun', 8, 'Özgünlük'), ('saskin', 10, 'Şaşırtıcılık'), ('hikaye', 10, 'Hikâye potansiyeli'),
-           ('gorsel', 8, 'Görsel malzeme'), ('dogrulama', 12, 'Çok kaynakta doğrulanma'), ('turk', 8, 'Türkçe izleyiciye uygunluk'), ('ilk3', 8, 'İlk 3 saniyede anlatılabilirlik')]
+# Ağırlıklar (toplam 100). Viral ve özgünlük (Türkçede henüz anlatılmamış yabancı konu) öne; Türkçe kaynak sayısı geri planda.
+KRITER = [('guncellik', 10, 'Güncellik'), ('haber', 10, 'Haber değeri'), ('etki', 8, 'Hayata etki'), ('ozgun', 10, 'Özgünlük'), ('saskin', 10, 'Şaşırtıcılık'), ('hikaye', 10, 'Hikâye potansiyeli'),
+           ('gorsel', 8, 'Görsel malzeme'), ('dogrulama', 10, 'Çok kaynakta doğrulanma'), ('turk', 4, 'Türkçe izleyiciye uygunluk'), ('ilk3', 6, 'İlk 3 saniyede anlatılabilirlik'), ('viral', 14, 'Viral potansiyel')]
 
 def cumle(s):
     s = re.sub(r'\s+', ' ', s or '').strip()
@@ -336,7 +347,7 @@ def reels_puanla(c, og, bas, metin, simdi, kay_ad):
     kr['guncellik'] = 10 if yas <= 3 else 8.5 if yas <= 6 else 7 if yas <= 12 else 5 if yas <= 24 else 3 if yas <= 48 else 1.5
     kr['haber'] = min(10, c['h6'] * 1.6 + c['h24'] * .25 + (3 if c['kb'] >= 4 else 0) + (2 if c['resmi'] else 0))
     kr['etki'] = min(10, (6 if ETKI.search(t) else 0) + (3 if ETKI.search(metin) else 0) + (2 if 'turkiye' in c['gundem_alt'] and KURAL['gundem_guclu'].search(t) else 0))
-    kr['ozgun'] = 5 + (2 if c['sadece_yabanci'] and c['kb'] >= 2 else 0) + (1.5 if c['n_tr'] <= 2 and c['kb'] >= 3 else 0) - (3 if RUTIN.search(t) else 0) - (1.5 if c['kb'] >= 8 else 0) + (1 if c['farkli'] else 0)
+    kr['ozgun'] = 5 + (4 if c['sadece_yabanci'] and c['kb'] >= 2 else 0) + (1.5 if c['n_tr'] <= 2 and c['kb'] >= 3 else 0) - (3 if RUTIN.search(t) else 0) - (1.5 if c['kb'] >= 8 else 0) + (1 if c['farkli'] else 0)
     vur = CARPICI.findall(metin)
     kr['saskin'] = min(10, (6 if CARPICI.search(t) else 0) + min(4, len(vur)) + (1 if re.search(r'\d{2,}', t) else 0))
     kr['hikaye'] = min(10, (5 if HIKAYE.search(t) else 0) + (2 if HIKAYE.search(metin) else 0) + min(3, len(og) / 3.0))
@@ -344,6 +355,12 @@ def reels_puanla(c, og, bas, metin, simdi, kay_ad):
     kr['dogrulama'] = 9.5 if c['kb'] >= 4 else 8 if c['kb'] == 3 else 6 if c['kb'] == 2 else (4.5 if c['resmi'] else 1.5)
     kr['turk'] = min(10, (6 if TURKIYE.search(metin) else 0) + min(3, c['n_tr'] * 1.2) + (2 if c['alanlar'] and set(c['alanlar']) & {'tekno', 'ekonomi'} and c['n_tr'] else 0))
     kr['ilk3'] = min(10, (3 if re.search(r'\d', t) else 0) + (3 if CARPICI.search(t) else 0) + (2 if 25 <= len(t) <= 95 else 0) + (2 if len(M.varlik(t)) >= 2 else 0))
+    # Viral: yalnız en az 2 bağımsız kaynakta doğrulanan konu (tek kaynaklı sızıntı/iddia öne çıkmaz); ölüm/savaş dili viral sayılmaz.
+    if c['kb'] >= 2 and not HASSAS.search(t):
+        kat = set(c.get('kategoriler') or [])
+        kr['viral'] = (5 if VIRAL.search(t) else 0) + min(2, len(VIRAL.findall(metin)) * .5) + (2 if kat & {'viral', 'cool', 'sci'} else 0) + (2 if c['sadece_yabanci'] else 0) + (1 if CARPICI.search(t) else 0)
+    else:
+        kr['viral'] = 0
     for a in kr: kr[a] = round(max(0, min(10, kr[a])), 1)
     p = sum(kr[k] * w for k, w, _ in KRITER) / 10.0
     ceza = []
@@ -592,7 +609,7 @@ def main():
     for c, og, bas in reels_son:
         d = reels_kart(c, og, bas, simdi)
         reels_json.append(dict(id=c['id'], t=c['t'], i=c['i'], l=c['l'], profil=c['profil'], alt=c['reels_alt'], alanlar=c['alanlar'], kb=c['kb'], ks=c['ks'], son=c['son'], ilk=c['ilk'], h6=c['h6'],
-                               puan=c['r'], kriter=c['_kr'], ceza=c['_ceza'], diller=c['diller'], kanit=c['kanit'], **d,
+                               puan=c['r'], kriter=c['_kr'], yabanci=c['sadece_yabanci'], ceza=c['_ceza'], diller=c['diller'], kanit=c['kanit'], **d,
                                og=[dict(t=o['t'], l=o['l'], p=o['p'], z=o['z'], d=o['d']) for o in c['og'][:8]]))
     # kümeleri alanlara dağıt
     os.makedirs(CIKTI, exist_ok=True)

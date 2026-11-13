@@ -165,4 +165,17 @@ class KaynakDurumu(unittest.TestCase):
         self.assertEqual(self.d(dict(s, aktif=False), ok), 'devre-disi')
         self.assertEqual(self.d(s, dict(ok, ardisik_basarisiz=1, son_kod=429, bekle_kadar='2027-01-01')), 'beklemede')
 
+
+class ReelsViralVeServis(unittest.TestCase):
+    """Reels: hizmet/SEO sayfaları elenir, gerçek afet haberi elenmez; viral puanı tek kaynaklı ya da ölüm/savaş içerikli konuya verilmez."""
+    def test_servis_sayfasi_elenir_gercek_haber_kalir(self):
+        for t in ('Son Depremler Listesi (13 Kasım 2026): En Son Nerede Deprem Oldu?', 'HAVA DURUMU TAHMİNLERİ İL İL 14 KASIM', 'T.C. İSTANBUL 54. ASLİYE CEZA MAHKEMESİNDEN /BAŞKANLIĞINDAN', 'Kırıkkale Namaz Vakitleri (14 Kasım)'):
+            self.assertTrue(A.SERVIS.search(t), t)
+        for t in ('Malatya’da 5,2 büyüklüğünde deprem', 'Sel felaketi: 3 ilde okullar tatil edildi', 'Mahkeme kararını verdi: tahliye'):
+            self.assertFalse(A.SERVIS.search(t), t)
+    def test_viral_kosullari(self):
+        self.assertTrue(A.VIRAL.search('Influencer banned from marathon after bizarre stunt'))
+        self.assertEqual(sum(w for _, w, _ in A.KRITER), 100)
+        self.assertIn('viral', [k for k, _, _ in A.KRITER])
+
 if __name__ == '__main__': unittest.main()
