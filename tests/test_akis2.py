@@ -178,4 +178,24 @@ class ReelsViralVeServis(unittest.TestCase):
         self.assertEqual(sum(w for _, w, _ in A.KRITER), 100)
         self.assertIn('viral', [k for k, _, _ in A.KRITER])
 
+
+class Videolar(unittest.TestCase):
+    def test_dil_yazidan_ve_tur(self):
+        self.assertEqual(A.video_dil('الرئيس الأمريكي: لا حاجة لواشنطن', 'en'), 'ar')
+        self.assertEqual(A.video_dil('Starship Flight 15 launch', 'en'), 'en')
+        c = dict(alanlar=['gundem'], gundem_alt=['turkiye'])
+        self.assertEqual(A.video_tur(dict(t='Portekiz - Danimarka | MAÇ ÖZETİ', cat='tr', dil='tr'), c), 'diger')
+        self.assertEqual(A.video_tur(dict(t='Pope Leo returns to Peru', cat='world', dil='en'), c), 'dunya')
+        self.assertEqual(A.video_tur(dict(t='Fon dosyasında yeni gelişme', cat='tr', dil='tr'), c), 'turkiye')
+
+    def test_youtube_gecici_hata_uzun_beklemeye_alinmaz(self):
+        import fetch_feeds as F
+        from datetime import datetime, timezone
+        d = {}
+        for _ in range(4): F.durum_guncelle(d, 'yt-x', False, 404, 'HTTP Error 404', None, datetime.now(timezone.utc))
+        self.assertNotIn('bekle_kadar', d['yt-x'])
+        for _ in range(3): F.durum_guncelle(d, 'web-x', False, 404, 'HTTP Error 404', None, datetime.now(timezone.utc))
+        self.assertIn('bekle_kadar', d['web-x'])
+        self.assertTrue(F.youtube_mu('https://www.youtube.com/feeds/videos.xml?channel_id=UC1'))
+
 if __name__ == '__main__': unittest.main()

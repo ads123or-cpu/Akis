@@ -63,7 +63,7 @@ def parse_et(data):
         if img and img.startswith('http'): d['i'] = img
         if not d.get('t') and d.get('s'): d['t'] = d['s'][:110]
         if d.get('t') and d.get('l'):
-            yt = re.search(r'youtube\.com/watch\?v=([\w-]{6,})', d['l'])
+            yt = re.search(r'youtube\.com/(?:watch\?v=|shorts/)([\w-]{6,})', d['l'])
             if yt and not d.get('i'): d['i'] = 'https://i.ytimg.com/vi/%s/hqdefault.jpg' % yt.group(1)
             if 'news.google.com' in d['l']:
                 gn = re.match(r'^(.{15,}) - ([^-]{2,50})$', d['t'])
@@ -222,7 +222,9 @@ def go(s):
     err = 'bos'; kod = None; bekle = None
     ek = {}
     od = ESKI_DURUM.get(s['id']) or {}
-    for attempt in range(2):
+    yt = youtube_mu(s['url'])
+    for attempt in range(YT_DENEME if yt else 2):
+        if yt and attempt: time.sleep(random.uniform(1.0, 2.5))
         try:
             host_wait(s['url'])
             t0 = time.time()
@@ -244,6 +246,12 @@ def go(s):
             err = str(e)[:80]
     return s, [], err, kod, bekle, ek
 
+
+# YouTube kanal RSS'i veri merkezi IP'lerine ara ara 404/500 verir; aynı adres birkaç denemede açılır (14.11.2026: 49 kanalın 47'si
+# "hatalı"ydı, yerelden 2.-5. denemede hepsi geldi). Bu kodlar YouTube için geçici sayılır: daha çok denenir, uzun beklemeye alınmaz.
+YT_DENEME = 5
+YT_GECICI = {404, 500, 502, 503}
+def youtube_mu(url): return 'youtube.com/feeds/' in (url or '')
 
 def retry_after(deger):
     """Retry-After basligi: saniye ya da HTTP tarihi. Okunamazsa None."""
@@ -292,7 +300,9 @@ def durum_guncelle(durum, sid, basarili, kod, hata, retry_sn, simdi, ek=None, n=
         return
     n_ = d.get('ardisik_basarisiz', 0) + 1
     d.update(ardisik_basarisiz=n_, son_hata=simdi.isoformat(), son_kod=kod, hata=hata)
-    if kod == 429 or n_ >= 3:
+    if sid.startswith('yt-') and kod in YT_GECICI:
+        d.pop('bekle_kadar', None)      # geçici YouTube hatası: bir sonraki turda yeniden denenir
+    elif kod == 429 or n_ >= 3:
         d['bekle_kadar'] = (simdi + timedelta(seconds=bekleme_suresi(n_, retry_sn))).isoformat()
     else:
         d.pop('bekle_kadar', None)
@@ -383,6 +393,8 @@ def main(profil=None):
     except Exception: old = {}
     try: durum = json.load(open(DURUM_DOSYASI))
     except Exception: durum = {}
+    for sid, d in durum.items():   # eski turlardan kalan uzun YouTube beklemeleri (geçici 404/500) kaldırılır
+        if sid.startswith('yt-') and d.get('son_kod') in YT_GECICI: d.pop('bekle_kadar', None)
     ESKI_DURUM.update(durum)
     simdi = datetime.now(timezone.utc)
     now = simdi.isoformat(); feeds = {}; failed = []

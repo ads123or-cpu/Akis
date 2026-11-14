@@ -573,6 +573,42 @@ def kumeler_kur(kumeler, simdi):
         cikti.append((c, og, bas))
     return cikti
 
+# ------------------------------------------------------------------ Videolar
+VIDEO_SAAT = 72
+VIDEO_SINIR = 400
+VIDEO_SPOR = re.compile(r"maç özeti|geniş özet|\bgol(ler)?\b|uefa|süper lig|premier league|highlights|\bvs\.? ", re.I)
+VIDEO_TEKNO = {'tech', 'samsung', 'ios', 'mac', 'mobil', 'win', 'auto', 'sci'}
+def video_tur(o, c):
+    """tekno | turkiye | dunya | diger. Kanal kategorisi önce; Türkçe gündem kanalı ya da Türkiye geçen konu 'turkiye'."""
+    if VIDEO_SPOR.search(o['t']): return 'diger'
+    if o['cat'] in VIDEO_TEKNO or set(c['alanlar']) & {'tekno', 'siber', 'bilim'} and o['cat'] not in ('sport', 'ent'): return 'tekno'
+    if o['dil'] == 'tr' and o['cat'] in ('tr', 'eco', 'world') or TURKIYE.search(o['t']) and o['cat'] not in ('sport', 'ent'): return 'turkiye'
+    if o['cat'] in ('world', 'eco'): return 'dunya'
+    return 'diger'
+
+def video_dil(t, dil):
+    """Kanal dili yerine başlığın yazısı: Al Jazeera English gibi kanallar Arapça video da yükler."""
+    for rx, d in ((r'[\u0600-\u06ff]', 'ar'), (r'[\u0400-\u04ff]', 'ru'), (r'[\u3040-\u30ff]', 'ja'), (r'[\uac00-\ud7af]', 'ko'), (r'[\u4e00-\u9fff]', 'zh')):
+        if len(re.findall(rx, t)) >= 4: return d
+    return dil
+
+def videolar_uret(cikti, simdi, generated):
+    """YouTube kanallarının son 72 saatteki videoları. Video, ait olduğu haber kümesine bağlanır: kümede 2+ bağımsız kaynak
+    varsa 'konu' alanı gündemdeki haberi gösterir (videonun konusu başka basında da yazılıyor)."""
+    out = []
+    for c, og, _ in cikti:
+        for o in og:
+            if o['plat'] != 'youtube' or simdi - o['z'] > VIDEO_SAAT * 3600: continue
+            m = re.search(r'(?:[?&]v=|/shorts/)([\w-]{6,})', o['l'])
+            d = dict(id='yt:' + (m.group(1) if m else o['id']), t=o['t'], l=o['l'], i=o['i'] or (m and 'https://i.ytimg.com/vi/%s/hqdefault.jpg' % m.group(1)), kanal=o['kaynak'], sid=o['sid'], dil=video_dil(o['t'], o['dil']), son=int(o['z']), tur=video_tur(o, c))
+            if re.search(r'#shorts?\b|/shorts/', o['t'] + ' ' + o['l'], re.I): d['kisa'] = True
+            if c['kb'] >= 2: d['konu'] = dict(id=c['id'], t=c['t'], kb=c['kb'])
+            out.append(d)
+    out.sort(key=lambda x: -x['son'])
+    out = out[:VIDEO_SINIR]
+    return dict(generated=generated, videolar=out, kanallar=sorted({(v['sid'], v['kanal']) for v in out}),
+                not_='Videolar kanalların kendi YouTube sayfasına bağlanır; içerik hakları kanallara aittir.')
+
 def main():
     j = json.load(open('site/feeds.json', encoding='utf-8'))
     src = {s['id']: s for s in json.load(open('sources.json', encoding='utf-8'))}
@@ -638,6 +674,7 @@ def main():
     yaz('reels.json', dict(generated=j['generated'], adaylar=reels_json, elenen=dict(elenen_say),
                            kriterler=[dict(k=k, w=w, ad=a) for k, w, a in KRITER],
                            not_='Tahmini editoryal değerlendirmedir (kural tabanlı), viral garantisi değildir.'))
+    yaz('videolar.json', videolar_uret(cikti, simdi, j['generated']))
     # ana ekran
     tum = [c for c, _, _ in cikti]
     def ozet_kume(c, w=None):

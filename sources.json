@@ -14096,5 +14096,333 @@
 "n": 15,
 "ms": 843
 }
+},
+{
+"id": "yt-webtekno",
+"name": "Webtekno",
+"lang": "tr",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIw9uiVhJtpzkyQLOOpbjrg",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "bekliyor",
+"tarih": "2026-11-15",
+"not_": "YouTube RSS gecici hata verdi; ilk Actions cekisi dogrular"
+}
+},
+{
+"id": "yt-technopat",
+"name": "Technopat",
+"lang": "tr",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-gs6ml23jQKvLC86LzpQ0g",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 271
+}
+},
+{
+"id": "yt-barisozcan",
+"name": "Barış Özcan",
+"lang": "tr",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCv6jcPwFujuTIwFQ11jt1Yw",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 345
+}
+},
+{
+"id": "yt-tele1",
+"name": "Tele1",
+"lang": "tr",
+"cat": "tr",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCoHnRpOS5rL62jTmSDO5Npw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 490
+}
+},
+{
+"id": "yt-bbcturkce",
+"name": "BBC News Türkçe",
+"lang": "tr",
+"cat": "tr",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCeMQiXmFNTtN3OHlNJxnnUw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 350
+}
+},
+{
+"id": "yt-euronewstr",
+"name": "euronews Türkçe",
+"lang": "tr",
+"cat": "tr",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7nLr-rPOKYhRE4wRZoLxkg",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 240
+}
+},
+{
+"id": "yt-nowhaber",
+"name": "NOW Haber",
+"lang": "tr",
+"cat": "tr",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCi3YX2RoncmqT9GmmoS36cw",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "bekliyor",
+"tarih": "2026-11-15",
+"not_": "YouTube RSS gecici hata verdi; ilk Actions cekisi dogrular"
+}
+},
+{
+"id": "yt-t24",
+"name": "T24",
+"lang": "tr",
+"cat": "tr",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCun2Dl8daN--PBivgQJZn_w",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 300
+}
+},
+{
+"id": "yt-theverge",
+"name": "The Verge",
+"lang": "en",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 248
+}
+},
+{
+"id": "yt-dave2d",
+"name": "Dave2D",
+"lang": "en",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVYamHliCI9rw1tHR1xbkfw",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 307
+}
+},
+{
+"id": "yt-cnet",
+"name": "CNET",
+"lang": "en",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOmcA3f_RrH6b9NmcNa4tdg",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 259
+}
+},
+{
+"id": "yt-techlinked",
+"name": "TechLinked",
+"lang": "en",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCeeFfhMcJa1kjtfZAGskOCA",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "CA",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 272
+}
+},
+{
+"id": "yt-unboxtherapy",
+"name": "Unbox Therapy",
+"lang": "en",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsTcErHg8oDvUnTzoqsYeNw",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "CA",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 478
+}
+},
+{
+"id": "yt-9to5mac",
+"name": "9to5Mac",
+"lang": "en",
+"cat": "tech",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UChjRM_qQAaOAiLNbOGbYcRA",
+"calisma": "tekno",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 386
+}
+},
+{
+"id": "yt-wsjnews",
+"name": "WSJ News",
+"lang": "en",
+"cat": "world",
+"plat": "youtube",
+"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMliswJ7oukCeW35GSayhRA",
+"calisma": "gundem",
+"tip": "video (YouTube)",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"video"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-15",
+"n": 15,
+"ms": 317
+}
 }
 ]
