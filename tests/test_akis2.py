@@ -197,5 +197,15 @@ class Videolar(unittest.TestCase):
         for _ in range(3): F.durum_guncelle(d, 'web-x', False, 404, 'HTTP Error 404', None, datetime.now(timezone.utc))
         self.assertIn('bekle_kadar', d['web-x'])
         self.assertTrue(F.youtube_mu('https://www.youtube.com/feeds/videos.xml?channel_id=UC1'))
+        self.assertEqual(d['yt-x']['ardisik_basarisiz'], 0)          # geçici YouTube hatası sayacı şişirmez
+
+    def test_youtube_429_kisa_bekleme_ve_tavan(self):
+        import fetch_feeds as F
+        from datetime import datetime, timezone, timedelta
+        simdi = datetime.now(timezone.utc); d = {'yt-y': {'ardisik_basarisiz': 40}}
+        F.durum_guncelle(d, 'yt-y', False, 429, 'HTTP Error 429', None, simdi)
+        bk = datetime.fromisoformat(d['yt-y']['bekle_kadar'])
+        self.assertLessEqual(bk - simdi, timedelta(minutes=91))
+        for n in (1, 5, 40, 200): self.assertLessEqual(F.bekleme_suresi(n, None), F.TAVAN_SN)
 
 if __name__ == '__main__': unittest.main()

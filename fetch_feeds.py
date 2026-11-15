@@ -223,8 +223,8 @@ def go(s):
     ek = {}
     od = ESKI_DURUM.get(s['id']) or {}
     yt = youtube_mu(s['url'])
-    for attempt in range(YT_DENEME if yt else 2):
-        if yt and attempt: time.sleep(random.uniform(1.0, 2.5))
+    for attempt in range(2):
+        if yt and attempt: time.sleep(random.uniform(1.5, 3.0))
         try:
             host_wait(s['url'])
             t0 = time.time()
@@ -247,10 +247,13 @@ def go(s):
     return s, [], err, kod, bekle, ek
 
 
-# YouTube kanal RSS'i veri merkezi IP'lerine ara ara 404/500 verir; aynı adres birkaç denemede açılır (14.11.2026: 49 kanalın 47'si
-# "hatalı"ydı, yerelden 2.-5. denemede hepsi geldi). Bu kodlar YouTube için geçici sayılır: daha çok denenir, uzun beklemeye alınmaz.
-YT_DENEME = 5
+# YouTube kanal RSS'i veri merkezi IP'lerine ara ara 404/500 verir (geçici). 14.11.2026'da 5 deneme + her tur yeniden deneme
+# istek fırtınası yarattı, YouTube 429'a geçti (15.11.2026 denetimi). Bu yüzden YouTube ayrı ve SIRAYLA çekilir:
+# kanal başına en çok 2 deneme, kanallar arası 1-2 sn, bir kanal en sık YT_ARALIK_DK'da bir; 429 gelince o tur grup bırakılır.
 YT_GECICI = {404, 500, 502, 503}
+YT_ARALIK_DK = 30
+YT_429_DK = (60, 90)
+YT_BAYAT_SA = 72          # Videolar ekranı 72 saat gösterir: yanıt vermeyen kanalın son iyi kopyası o kadar tutulur
 def youtube_mu(url): return 'youtube.com/feeds/' in (url or '')
 
 def retry_after(deger):
@@ -274,8 +277,8 @@ TAVAN_SN = 24 * 3600
 
 def bekleme_suresi(ardisik, retry_sn):
     if retry_sn: return min(retry_sn, TAVAN_SN)
-    sn = min(TABAN_DK * 60 * (2 ** max(0, ardisik - 1)), TAVAN_SN)
-    return int(sn * random.uniform(1.0, 1.2))
+    sn = TABAN_DK * 60 * (2 ** min(6, max(0, ardisik - 1)))
+    return min(int(sn * random.uniform(1.0, 1.2)), TAVAN_SN)     # tavan rastgele paydan SONRA
 
 def durum_guncelle(durum, sid, basarili, kod, hata, retry_sn, simdi, ek=None, n=None, son_haber=None):
     """Kaynak sagligi: son kontrol, son basari, son haber, yanit suresi (hareketli ortalama), ETag."""
@@ -298,10 +301,14 @@ def durum_guncelle(durum, sid, basarili, kod, hata, retry_sn, simdi, ek=None, n=
         elif d.get('son_haber'): yeni['son_haber'] = d['son_haber']
         durum[sid] = yeni
         return
-    n_ = d.get('ardisik_basarisiz', 0) + 1
+    yt = sid.startswith('yt-')
+    # geçici YouTube 404/500 sayacı şişirmez (şişen sayaç ilk 429'da bekleme süresini doğrudan 24 saate çıkarıyordu)
+    n_ = d.get('ardisik_basarisiz', 0) + (0 if yt and kod in YT_GECICI else 1)
     d.update(ardisik_basarisiz=n_, son_hata=simdi.isoformat(), son_kod=kod, hata=hata)
-    if sid.startswith('yt-') and kod in YT_GECICI:
-        d.pop('bekle_kadar', None)      # geçici YouTube hatası: bir sonraki turda yeniden denenir
+    if yt and kod in YT_GECICI:
+        d.pop('bekle_kadar', None)      # geçici YouTube hatası: kanal YT_ARALIK_DK sonra yeniden denenir
+    elif yt and kod == 429:
+        d['bekle_kadar'] = (simdi + timedelta(minutes=random.uniform(*YT_429_DK))).isoformat()
     elif kod == 429 or n_ >= 3:
         d['bekle_kadar'] = (simdi + timedelta(seconds=bekleme_suresi(n_, retry_sn))).isoformat()
     else:
@@ -393,19 +400,42 @@ def main(profil=None):
     except Exception: old = {}
     try: durum = json.load(open(DURUM_DOSYASI))
     except Exception: durum = {}
-    for sid, d in durum.items():   # eski turlardan kalan uzun YouTube beklemeleri (geçici 404/500) kaldırılır
-        if sid.startswith('yt-') and d.get('son_kod') in YT_GECICI: d.pop('bekle_kadar', None)
-    ESKI_DURUM.update(durum)
     simdi = datetime.now(timezone.utc)
+    uc_sa = (simdi + timedelta(hours=3)).isoformat()
+    for sid, d in durum.items():   # eski formülden kalan uzun YouTube kilitleri (24-29 sa) ve şişmiş sayaçlar düzeltilir
+        if not sid.startswith('yt-'): continue
+        if d.get('son_kod') in YT_GECICI or d.get('bekle_kadar', '') > uc_sa: d.pop('bekle_kadar', None)
+        if d.get('ardisik_basarisiz', 0) > 3: d['ardisik_basarisiz'] = 3
+    ESKI_DURUM.update(durum)
     now = simdi.isoformat(); feeds = {}; failed = []
     # Beklemedeki kaynaklar bu tur cekilmez; eski verisi asagidaki 12 saat kuralina tabidir.
     # aktif=false kaynaklar (devre disi) hic cekilmez ve hata sayilmaz.
     pasif = {s['id'] for s in sources if s.get('aktif') is False}
     beklemede = {s['id'] for s in sources if (durum.get(s['id']) or {}).get('bekle_kadar', '') > now and s['id'] not in pasif}
-    cekilecek = [s for s in sources if s['id'] not in beklemede and s['id'] not in pasif]
-    sonuclar = [(s, [], 'beklemede', None, None, {}) for s in sources if s['id'] in beklemede]
+    # YouTube: en sık YT_ARALIK_DK'da bir; sırası gelmeyen kanal bu tur istenmez (eski kopyası tutulur, hata sayılmaz)
+    yt_sinir = (simdi - timedelta(minutes=YT_ARALIK_DK)).isoformat()
+    ertelenen = {s['id'] for s in sources if youtube_mu(s['url']) and s['id'] not in beklemede and s['id'] not in pasif
+                 and (durum.get(s['id']) or {}).get('son_kontrol', '') > yt_sinir}
+    cekilecek = [s for s in sources if s['id'] not in beklemede and s['id'] not in pasif and s['id'] not in ertelenen]
+    yt_liste = [s for s in cekilecek if youtube_mu(s['url'])]
+    random.shuffle(yt_liste)
+    diger = [s for s in cekilecek if not youtube_mu(s['url'])]
+    sonuclar = [(s, [], 'beklemede', None, None, {}) for s in sources if s['id'] in beklemede or s['id'] in ertelenen]
+    atlanan = set()
+    def yt_sirali():
+        out, dur = [], False
+        for s in yt_liste:
+            if dur:
+                atlanan.add(s['id']); out.append((s, [], 'beklemede', None, None, {})); continue
+            r = go(s); out.append(r)
+            if r[3] == 429: dur = True        # YouTube sınırladı: bu tur kalan kanallar istenmez
+            time.sleep(random.uniform(1.0, 2.0))
+        return out
     with cf.ThreadPoolExecutor(24) as ex:
-        sonuclar += list(ex.map(go, cekilecek))
+        yt_is = ex.submit(yt_sirali)          # YouTube tek iş parçacığında sırayla, diğerleriyle paralel
+        sonuclar += list(ex.map(go, diger))
+        sonuclar += yt_is.result()
+    beklemede = beklemede | ertelenen | atlanan   # aşağıda: durum güncellenmez, eski kopya kuralına girer
     for s, items, err, kod, retry_sn, ek in sonuclar:
             if ek.get('degismedi') and s['id'] in old:
                 # 304: kaynak degismedi. Eski haberler 30 gun kuralina tabi, "bayat" sayilmaz.
@@ -420,6 +450,7 @@ def main(profil=None):
                 # Eski kopya yok ama sunucu 304 dedi (dogrulayici kaldi): bu turu atla, sonraki tur dogrulayicisiz denenir
                 durum.get(s['id'], {}).pop('etag', None); durum.get(s['id'], {}).pop('lm', None)
                 failed.append((s['id'], 'beklemede')); continue
+            ham = bool(items)     # kaynak yanıt verdi; süzgeçten boş çıkması hata değildir
             if items:
                 lim = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
                 items = [i for i in items if not i.get('d') or i['d'] >= lim]
@@ -429,7 +460,7 @@ def main(profil=None):
                 if s['cat'] == 'auto': items = [i for i in items if not ACCIDENT.search(i.get('t', ''))]
                 items = [i for i in items if not spam_mi(i) and not cop_mu(i) and not yasak_mi(i)]
             if s['id'] not in beklemede and s['id'] not in pasif:
-                durum_guncelle(durum, s['id'], bool(items), kod, err, retry_sn, simdi, ek, len(items) if items else 0,
+                durum_guncelle(durum, s['id'], ham, kod, err, retry_sn, simdi, ek, len(items) if items else 0,
                                max((i.get('d') or '' for i in items), default='') if items else None)
             if items:
                 feeds[s['id']] = dict(name=s['name'], lang=s['lang'], cat=s['cat'], plat=s.get('plat') or 'web', url=s['url'], items=items, updated=now)
@@ -439,7 +470,7 @@ def main(profil=None):
                 failed.append((s['id'], err))
                 # Bayat kopya 12 saatten eskiyse dusurulur: kaynak yanit vermediginde
                 # eski haber 'yeni' gibi akisa dolmasin.
-                lim12 = (datetime.now(timezone.utc) - timedelta(hours=12)).isoformat()
+                lim12 = (datetime.now(timezone.utc) - timedelta(hours=YT_BAYAT_SA if youtube_mu(s['url']) else 12)).isoformat()
                 if s['id'] in old:
                     taze = [i for i in old[s['id']].get('items', []) if i.get('d') and i['d'] >= lim12 and not yasak_mi(i)]
                     if taze: feeds[s['id']] = {**old[s['id']], 'items': taze, 'bayat': True}
