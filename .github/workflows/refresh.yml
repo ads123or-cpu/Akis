@@ -42,7 +42,17 @@ jobs:
           git config user.name "akis-bot"
           git config user.email "akis-bot@users.noreply.github.com"
           git add site
-          git diff --cached --quiet || (git commit -m "Akış yenilendi" && git push)
+          # Elle yapılan bir push ile çakışırsa (rejected / cannot lock ref) tur düşmesin: uzak dalı alıp üstüne ekle, 3 kez dene.
+          # Bot yalnız site/ altına yazar, elle gönderimler site/ dosyalarına dokunmaz; rebase çakışırsa iptal edilip adım başarısız olur.
+          if ! git diff --cached --quiet; then
+            git commit -m "Akış yenilendi"
+            for i in 1 2 3; do
+              git push && exit 0
+              git pull --rebase origin main || { git rebase --abort; exit 1; }
+              sleep $((i * 3))
+            done
+            exit 1
+          fi
       # Yayın paketi bu işte, doğrulanmış çıktıdan üretilir (yeniden hesaplama yok, git geçmişi şişmez).
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

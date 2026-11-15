@@ -13,6 +13,8 @@ class IsAkisi(unittest.TestCase):
     def test_zincir_kopmaz(self):
         self.assertIn('if: ${{ !cancelled() }}', Y); self.assertIn('gh workflow run refresh.yml', Y); self.assertIn('cron: "*/30 * * * *"', Y)
     def test_es_zamanli_calisma_yok(self): self.assertIn('concurrency: refresh', Y)
+    def test_push_cakismasinda_rebase(self):
+        self.assertIn('git pull --rebase origin main', Y); self.assertLess(Y.index('git commit -m'), Y.index('git pull --rebase origin main'))
     def test_pages_yalniz_site(self): self.assertIn('path: site', Y)
     def test_gizli_bilgi_yok(self):
         for dosya in ('index.tpl.html', 'fetch_feeds.py', 'akis2.py'):
