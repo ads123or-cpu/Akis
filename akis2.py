@@ -575,7 +575,7 @@ def kumeler_kur(kumeler, simdi):
 
 # ------------------------------------------------------------------ Videolar
 VIDEO_SAAT = 72
-VIDEO_SINIR = 400
+VIDEO_SINIR = 150          # tür başına (tekno/turkiye/dunya/diger): yoğun haber kanalları teknolojiyi dışarı itmesin
 VIDEO_SPOR = re.compile(r"maç özeti|geniş özet|\bgol(ler)?\b|uefa|süper lig|premier league|highlights|\bvs\.? ", re.I)
 VIDEO_TEKNO = {'tech', 'samsung', 'ios', 'mac', 'mobil', 'win', 'auto', 'sci'}
 def video_tur(o, c):
@@ -592,7 +592,17 @@ def video_dil(t, dil):
         if len(re.findall(rx, t)) >= 4: return d
     return dil
 
-def videolar_uret(cikti, simdi, generated):
+def video_saglik(src, dur, simdi):
+    """Videolar başlığı için: etkin YouTube kanallarından kaçı son 3 saatte başarıyla çekildi."""
+    yt = [s for s in src.values() if s.get('plat') == 'youtube' and 'youtube.com/feeds/' in s.get('url', '') and s.get('aktif') is not False]
+    def zt(x):
+        try: return datetime.fromisoformat(x).timestamp()
+        except Exception: return 0
+    guncel = sum(1 for s in yt if simdi - zt((dur.get(s['id']) or {}).get('son_basari', '')) <= 3 * 3600)
+    son = max((zt((dur.get(s['id']) or {}).get('son_kontrol', '')) for s in yt), default=0)
+    return dict(toplam=len(yt), guncel=guncel, son_deneme=int(son) or None)
+
+def videolar_uret(cikti, simdi, generated, saglik=None):
     """YouTube kanallarının son 72 saatteki videoları. Video, ait olduğu haber kümesine bağlanır: kümede 2+ bağımsız kaynak
     varsa 'konu' alanı gündemdeki haberi gösterir (videonun konusu başka basında da yazılıyor)."""
     out = []
@@ -605,8 +615,11 @@ def videolar_uret(cikti, simdi, generated):
             if c['kb'] >= 2: d['konu'] = dict(id=c['id'], t=c['t'], kb=c['kb'])
             out.append(d)
     out.sort(key=lambda x: -x['son'])
-    out = out[:VIDEO_SINIR]
-    return dict(generated=generated, videolar=out, kanallar=sorted({(v['sid'], v['kanal']) for v in out}),
+    say = Counter(); sec = []
+    for v in out:
+        if say[v['tur']] < VIDEO_SINIR: say[v['tur']] += 1; sec.append(v)
+    out = sec
+    return dict(generated=generated, videolar=out, saglik=saglik or {}, kanallar=sorted({(v['sid'], v['kanal']) for v in out}),
                 not_='Videolar kanalların kendi YouTube sayfasına bağlanır; içerik hakları kanallara aittir.')
 
 def main():
@@ -674,7 +687,8 @@ def main():
     yaz('reels.json', dict(generated=j['generated'], adaylar=reels_json, elenen=dict(elenen_say),
                            kriterler=[dict(k=k, w=w, ad=a) for k, w, a in KRITER],
                            not_='Tahmini editoryal değerlendirmedir (kural tabanlı), viral garantisi değildir.'))
-    yaz('videolar.json', videolar_uret(cikti, simdi, j['generated']))
+    yaz('surum.json', dict(generated=j['generated']))   # arayüz tazelik yoklaması için (ozet.json 300 KB yerine birkaç bayt)
+    yaz('videolar.json', videolar_uret(cikti, simdi, j['generated'], video_saglik(src, dur, simdi)))
     # ana ekran
     tum = [c for c, _, _ in cikti]
     def ozet_kume(c, w=None):
