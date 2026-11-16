@@ -21,8 +21,8 @@ import masa as M   # sozcuk/kok yardımcıları ve STOP listesi eski hattan alı
 
 SAAT = 168                     # kümelemeye giren haber yaşı (saat)
 CIKTI = 'site/data'
-ALANLAR = ['gundem', 'tekno', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'eglence']
-ALAN_AD = {'gundem': 'Gündem Radarı', 'tekno': 'Teknoloji Radarı', 'siyaset': 'Siyaset ve Jeopolitik', 'spor': 'Spor', 'ekonomi': 'Ekonomi ve Finans',
+ALANLAR = ['gundem', 'adana', 'tekno', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'eglence']
+ALAN_AD = {'gundem': 'Gündem Radarı', 'adana': 'Adana', 'tekno': 'Teknoloji Radarı', 'siyaset': 'Siyaset ve Jeopolitik', 'spor': 'Spor', 'ekonomi': 'Ekonomi ve Finans',
            'bilim': 'Bilim ve Uzay', 'siber': 'Siber Güvenlik', 'oto': 'Otomobil ve Ulaşım', 'eglence': 'Eğlence, Oyun, Kültür'}
 KUME_ALAN_SINIR = 360          # alan başına dosyaya yazılan küme sayısı
 # Türkçe/İngilizce dışındaki diller çoğunlukla tek kaynaklı kalır ve önem sıralamasında 360'ın altına düşer;
@@ -123,6 +123,8 @@ def tok2(t):
 
 # ------------------------------------------------------------------ çalışma alanı kuralları
 KURAL = {
+ # Adana: il adı, ilçeler (başka anlamı olan Seyhan/Ceyhan/Kozan/İmamoğlu/Aladağ/Feke yalnız "Adana" ile birlikte sayılır), kurum ve kulüpler
+ 'adana': re.compile(r"\badana|yüreğir|sarıçam|karaisalı|pozantı|yumurtalık|tufanbeyli|saimbeyli|incirlik|seyhan barajı|çukurova üniversitesi|adana demirspor|adanaspor|\bçukurova(da|'da|’da)?\b", re.I),
  'siyaset': re.compile(r"erdoğan|cumhurbaşkan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|seçim|siyasi|muhalefet|iktidar|özgür özel|bahçeli|yaptırım|diplomasi|diplomat|zirve|büyükelçi|dışişleri|nato\b|birleşmiş milletler|güvenlik konseyi|trump|biden|harris|putin|zelen|netanyahu|macron|şi cinping|xi jinping|kongre|senato|beyaz saray|kremlin|brüksel|avrupa birliği|\bab\b|israil|filistin|gazze|hamas|hizbullah|iran|suriye|ukrayna|rusya|tayvan|savunma bakan|savunma sanayi|election|parliament|sanction|diplomat|summit|ambassador|president|prime minister|congress|senate|white house|kremlin|nato\b|united nations|security council|ceasefire|ateşkes|treaty|referendum|coalition|opposition party|defen[cs]e minister|sanctions", re.I),
  'savas': re.compile(r"savaş|çatışma|saldırı|füze|hava saldırısı|ateşkes|asker|ordu\b|cephe|işgal|bombardıman|silahlı|terör|drone saldırı|war\b|attack|missile|airstrike|strike|troops|frontline|invasion|military|ceasefire|offensive|bombing|terror", re.I),
  'siber': re.compile(r"siber|güvenlik açığ|sızıntı|veri ihlali|fidye|ransomware|zero-?day|malware|zararlı yazılım|oltalama|phishing|hacker|hack\b|saldırgan|cve-\d|vulnerab|data breach|botnet|exploit|backdoor|apt\d|cyberattack|cyber attack|ddos|kimlik avı|dolandırıcı", re.I),
@@ -140,6 +142,10 @@ RE_SAGLIK = re.compile(r"sağlık|hastane|salgın|aşı\b|ilaç|grip|kanser|teda
 RE_EGITIM = re.compile(r"okul|üniversite|sınav|yks|lgs|meb\b|öğrenci|öğretmen|eğitim|karne|school|university|exam|student|teacher|education", re.I)
 RE_TOPLUM = re.compile(r"toplum|kadın|çocuk|göç|mülteci|yoksulluk|işsiz|emekli|asgari ücret|kira|barınma|şiddet|eşitlik|protesto|grev|society|migrant|refugee|poverty|protest|strike|housing", re.I)
 ALT = {
+ 'adana': [('seyhan', r'seyhan'), ('cukurova', r'çukurova'), ('yuregir', r'yüreğir'), ('saricam', r'sarıçam'), ('ceyhan', r'ceyhan'), ('kozan', r'kozan'),
+           ('imamoglu', r'imamoğlu|İmamoğlu'), ('karatas', r'karataş'), ('karaisali', r'karaisalı'), ('pozanti', r'pozantı'), ('yumurtalik', r'yumurtalık'),
+           ('kuzey-ilceler', r'tufanbeyli|saimbeyli|feke|aladağ'), ('asayis', r'gözaltı|tutuklandı|kaza|yaralandı|öldü|cinayet|operasyon|yangın|polis|jandarma'),
+           ('belediye', r'belediye|başkan|meclis|altyapı|ulaşım|metro|otobüs'), ('ekonomi-adana', r'pamuk|narenciye|çiftçi|hasat|osb|fabrika|ihracat|esnaf|tarım')],
  'tekno': [('apple', r'iphone|ipad|macbook|\bmac\b|ios \d|apple|airpods|vision pro|watchos'), ('samsung', r'samsung|galaxy|one ?ui|exynos'), ('android', r'android|pixel|xiaomi|redmi|huawei|honor|oneplus|oppo|realme|motorola|nothing phone|snapdragon'),
           ('google', r'\bgoogle\b|gemini|chrome|youtube|deepmind|waymo'), ('microsoft', r'microsoft|windows|copilot|xbox|azure|surface'), ('yz', r'yapay zek|chatgpt|openai|claude|anthropic|gemini|grok|deepseek|llm|\bai\b|artificial intelligence|midjourney|sora|copilot|mistral|perplexity'),
           ('telefon', r'telefon|smartphone|iphone|galaxy|pixel|katlanabilir|foldable'), ('bilgisayar', r'bilgisayar|laptop|macbook|notebook|\bpc\b|masaüstü|monitör'), ('cip', r'işlemci|yarı iletken|\bçip|chip|nvidia|\bamd\b|intel\b|qualcomm|tsmc|gpu|rtx|ryzen|snapdragon|dimensity'),
@@ -161,7 +167,8 @@ ALT = {
  'eglence': [('oyun', r'oyun|playstation|xbox|nintendo|steam|gta|game|gaming|epic games|switch 2'), ('film-dizi', r'dizi|film|sinema|fragman|gişe|yönetmen|netflix|disney|hbo|prime video|trailer|box office|movie|series|streaming|oscar|emmy'), ('muzik', r'şarkıcı|albüm|konser|müzik|billboard|grammy|spotify|album|singer|concert|tour\b'), ('kultur', r'sergi|tiyatro|kitap|festival|müze|edebiyat|exhibition|theater|museum|book|festival'), ('internet', r'viral|fenomen|trend|tiktok|youtube|meme|influencer|streamer'), ('anime', r'anime|manga|crunchyroll')],
 }
 ALT_RX = {a: [(k, re.compile(v, re.I)) for k, v in L] for a, L in ALT.items()}
-ALT_AD = {'apple': 'Apple', 'samsung': 'Samsung', 'android': 'Android', 'google': 'Google', 'microsoft': 'Microsoft', 'yz': 'Yapay zekâ', 'telefon': 'Telefon', 'bilgisayar': 'Bilgisayar', 'cip': 'Çip', 'siber': 'Siber', 'sosyal': 'Sosyal medya', 'uygulama': 'Uygulama', 'yazilim': 'Yazılım', 'oyun': 'Oyun', 'oto-tekno': 'Otomobil teknolojisi', 'robotik': 'Robotik', 'giyilebilir': 'Giyilebilir', 'ev': 'Elektrikli araç/batarya',
+ALT_AD = {'seyhan': 'Seyhan', 'cukurova': 'Çukurova', 'yuregir': 'Yüreğir', 'saricam': 'Sarıçam', 'ceyhan': 'Ceyhan', 'kozan': 'Kozan', 'imamoglu': 'İmamoğlu', 'karatas': 'Karataş', 'karaisali': 'Karaisalı', 'pozanti': 'Pozantı', 'yumurtalik': 'Yumurtalık', 'kuzey-ilceler': 'Kuzey ilçeler', 'asayis': 'Asayiş', 'belediye': 'Belediye ve ulaşım', 'ekonomi-adana': 'Tarım ve ekonomi',
+          'apple': 'Apple', 'samsung': 'Samsung', 'android': 'Android', 'google': 'Google', 'microsoft': 'Microsoft', 'yz': 'Yapay zekâ', 'telefon': 'Telefon', 'bilgisayar': 'Bilgisayar', 'cip': 'Çip', 'siber': 'Siber', 'sosyal': 'Sosyal medya', 'uygulama': 'Uygulama', 'yazilim': 'Yazılım', 'oyun': 'Oyun', 'oto-tekno': 'Otomobil teknolojisi', 'robotik': 'Robotik', 'giyilebilir': 'Giyilebilir', 'ev': 'Elektrikli araç/batarya',
           'tr-siyaset': 'Türkiye siyaseti', 'abd': 'ABD', 'avrupa': 'Avrupa', 'cin': 'Çin', 'rusya': 'Rusya-Ukrayna', 'orta-dogu': 'Orta Doğu', 'israil-filistin': 'İsrail-Filistin', 'nato': 'NATO', 'bm': 'BM', 'secim': 'Seçimler', 'kriz': 'Diplomatik kriz', 'yaptirim': 'Yaptırım ve ticaret', 'savunma': 'Savunma',
           'futbol': 'Futbol', 'basketbol': 'Basketbol', 'tenis': 'Tenis', 'f1': 'Formula 1', 'motor': 'Motor sporları', 'voleybol': 'Voleybol', 'olimpiyat': 'Olimpiyat', 'dovus': 'Dövüş sporları', 'espor': 'E-spor', 'transfer': 'Transfer', 'kulup': 'Kulüp', 'milli': 'Milli takımlar',
           'doviz': 'Döviz', 'altin': 'Altın', 'borsa': 'Borsa', 'enflasyon': 'Enflasyon', 'faiz': 'Faiz ve merkez bankaları', 'kripto': 'Kripto', 'enerji': 'Enerji', 'istihdam': 'Maaş ve istihdam', 'sirket': 'Şirket haberleri', 'ticaret': 'Dış ticaret', 'konut': 'Konut',
@@ -296,6 +303,8 @@ def alan_bul(og, bas_metin, say_cal):
         n_rx = len(KURAL[rx].findall(m)); n_k = kay.get(k, 0)
         # kaynak bölümü ve içerik birlikte tanık olmalı: bölüm tek başına ya da tek bir kelime yetmez
         if (n_k >= 2 and n_rx >= 1) or (n_k >= 1 and n_rx >= 2) or n_rx >= 3 or (n_k >= 1 and n_rx >= 1 and k in ('spor', 'oto', 'bilim', 'eglence')): a.add(k)
+    # Adana: yerel kaynaktan gelen ya da metninde Adana geçen haber (ulusal kaynakta da olabilir)
+    if kay.get('adana') or KURAL['adana'].search(m): a.add('adana')
     if KURAL['siber'].search(m): a.add('siber')
     if KURAL['siyaset'].search(m) and (kay.get('siyaset') or kay.get('gundem') or len(KURAL['siyaset'].findall(m)) >= 2): a.add('siyaset')
     # Gündem: genel haber akışı (teknoloji/spor/magazin dışı kalanlar dahil siyaset, toplum, hukuk...)

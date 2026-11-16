@@ -1,0 +1,94 @@
+[
+ {
+  "id": "adanahaber-net",
+  "url": "https://www.adanahaber.net/rss.xml",
+  "tarih": "2026-11-16",
+  "ms": 170,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-15T22:35:12+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Karataş Gençlik Futbol Turnuvası İçin Geri Sayım Başladı",
+   "Kasım ayı SED ödemeleri hesaplara yatırıldı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "yeniadana2",
+  "url": "https://www.yeniadana.net/rss.xml",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 953,
+  "kesif": []
+ },
+ {
+  "id": "haberadana",
+  "url": "https://www.haberadana.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify fai",
+  "ms": 479,
+  "kesif": []
+ },
+ {
+  "id": "adanaolay",
+  "url": "https://www.adanaolay.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 612,
+  "kesif": [
+   "https://www.adanaolay.com/?feed=rss2",
+   "https://www.adanaolay.com/?feed=comments-rss2"
+  ]
+ },
+ {
+  "id": "adanagazetesi",
+  "url": "https://www.adanagazetesi.com.tr/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1483,
+  "kesif": []
+ },
+ {
+  "id": "adanahaberleri",
+  "url": "https://www.adanahaberleri.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 521,
+  "neden": "HTTP Error 521: <none>",
+  "ms": 1564,
+  "kesif": []
+ },
+ {
+  "id": "gunebakis",
+  "url": "https://www.guneybakis.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 380,
+  "kesif": []
+ },
+ {
+  "id": "adanakent",
+  "url": "https://www.adanakenthaber.com/rss",
+  "tarih": "2026-11-16",
+  "ms": 1158,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ }
+]

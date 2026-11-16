@@ -1,0 +1,182 @@
+[
+ {
+  "id": "gnq-adana",
+  "url": "https://news.google.com/rss/search?q=Adana%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-16",
+  "ms": 668,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-16T18:28:34+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Seyhan Devlet Hastanesi’nde kemoterapi ünitesi hizmete girdi: Günde 25 hastaya t",
+   "Alman Büyükelçiliğinden Adana’ya İş Birliği Ziyareti"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gnq-adana-ilce",
+  "url": "https://news.google.com/rss/search?q=(Seyhan%20OR%20%C3%87ukurova%20OR%20Y%C3%BCre%C4%9Fir%20OR%20Sar%C4%B1%C3%A7am%20OR%20Ceyhan%20OR%20Kozan%20OR%20%C4%B0mamo%C4%9Flu%20OR%20Karata%C5%9F%20OR%20Karaisal%C4%B1%20OR%20Pozant%C4%B1%20OR%20Yumurtal%C4%B1k)%20Adana%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-16",
+  "ms": 649,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-16T16:30:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "CHP Seyhan İlçe Teşkilatından Çukurova Belediyesi'ne ziyaret",
+   "Karataş'ta temizlik seferberliği: Cadde ve sokaklar pırıl pırıl oldu"
+  ],
+  "ok": true
+ },
+ {
+  "id": "adanamedya",
+  "url": "https://www.adanamedya.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 5979,
+  "kesif": []
+ },
+ {
+  "id": "5ocak",
+  "url": "https://www.5ocak.com.tr/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 122,
+  "kesif": []
+ },
+ {
+  "id": "yeniadana",
+  "url": "https://www.yeniadana.net/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1360,
+  "kesif": []
+ },
+ {
+  "id": "torosgazetesi",
+  "url": "https://www.torosgazetesi.com.tr/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 5967,
+  "kesif": []
+ },
+ {
+  "id": "ekonomikcozum",
+  "url": "https://www.ekonomikcozum.com.tr/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 136,
+  "kesif": []
+ },
+ {
+  "id": "adanahaber-net",
+  "url": "https://adanahaber.net/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 967,
+  "kesif": [
+   "https://www.adanahaber.net/rss.xml"
+  ]
+ },
+ {
+  "id": "ajansadana",
+  "url": "https://www.ajansadana.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 61] Connection refused>",
+  "ms": 429,
+  "kesif": []
+ },
+ {
+  "id": "bolgegundem",
+  "url": "https://www.bolgegundem.com/rss",
+  "tarih": "2026-11-16",
+  "ms": 1729,
+  "kod": 200,
+  "n": 24,
+  "n_tarihli": 24,
+  "son_haber": "2026-11-16T13:49:35+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Temizlik Filosu Güçlenmeye Devam Ediyor: 16 yeni araç daha hizmete girdi",
+   "Kızılcık Şerbeti'nin \"Pembe\"si ilk kez konuştu: İşte diziden ayrılmasının nedeni"
+  ],
+  "ok": true
+ },
+ {
+  "id": "adana24",
+  "url": "https://www.adana24.com/rss",
+  "tarih": "2026-11-16",
+  "ms": 709,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-16T15:28:09+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Kuyumcuda yemek yerken nefes borusuna yemek kaçtı, Heimlich manevrasıyla hayata ",
+   "İşitme kaybında ilk belirtiler gözden kaçabiliyor"
+  ],
+  "ok": true
+ },
+ {
+  "id": "adanahabermerkezi",
+  "url": "https://www.adanahabermerkezi.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 526,
+  "neden": "HTTP Error 526: <none>",
+  "ms": 820,
+  "kesif": []
+ },
+ {
+  "id": "adanaekspres",
+  "url": "https://www.adanaekspres.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 825,
+  "kesif": []
+ },
+ {
+  "id": "cukurovaexpress",
+  "url": "https://www.cukurovaekspres.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 338,
+  "kesif": []
+ },
+ {
+  "id": "adanahaberci",
+  "url": "https://www.adanahaberci.com/rss",
+  "tarih": "2026-11-16",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+  "ms": 347,
+  "kesif": []
+ }
+]

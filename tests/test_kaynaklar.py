@@ -2,7 +2,7 @@ import json, os, re, unittest
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 S = json.load(open(os.path.join(KOK, 'sources.json'), encoding='utf-8'))
 TIPLER = {'ajans', 'ana akim', 'dogrulama', 'resmi kurum', 'uluslararasi kurum', 'uzman teknoloji', 'bilimsel', 'spor', 'topluluk/trend', 'sirket duyurusu', 'toplayici', 'video (YouTube)'}
-CALISMA = {'gundem', 'tekno', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'eglence'}
+CALISMA = {'gundem', 'adana', 'tekno', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'eglence'}
 
 class Kaynaklar(unittest.TestCase):
     def test_eski_kaynaklar_korundu(self):
