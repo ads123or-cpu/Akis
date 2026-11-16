@@ -125,6 +125,8 @@ def tok2(t):
 KURAL = {
  # Adana: il adı, ilçeler (başka anlamı olan Seyhan/Ceyhan/Kozan/İmamoğlu/Aladağ/Feke yalnız "Adana" ile birlikte sayılır), kurum ve kulüpler
  'adana': re.compile(r"\badana|yüreğir|sarıçam|karaisalı|pozantı|yumurtalık|tufanbeyli|saimbeyli|incirlik|seyhan barajı|çukurova üniversitesi|adana demirspor|adanaspor|\bçukurova(da|'da|’da)?\b", re.I),
+ # Başka anlamı da olan ilçe adları: yalnız Adana kaynaklı haberde sayılır. İmamoğlu yalnız yer ekiyle (İmamoğlu'nda) ilçe sayılır.
+ 'adana_ilce': re.compile(r"\b(seyhan|ceyhan|kozan|karataş|feke|aladağ|çukurova)\b|imamoğlu['’]n(da|dan)\b|İmamoğlu['’]n(da|dan)\b|imamoğlu ilçe", re.I),
  'siyaset': re.compile(r"erdoğan|cumhurbaşkan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|seçim|siyasi|muhalefet|iktidar|özgür özel|bahçeli|yaptırım|diplomasi|diplomat|zirve|büyükelçi|dışişleri|nato\b|birleşmiş milletler|güvenlik konseyi|trump|biden|harris|putin|zelen|netanyahu|macron|şi cinping|xi jinping|kongre|senato|beyaz saray|kremlin|brüksel|avrupa birliği|\bab\b|israil|filistin|gazze|hamas|hizbullah|iran|suriye|ukrayna|rusya|tayvan|savunma bakan|savunma sanayi|election|parliament|sanction|diplomat|summit|ambassador|president|prime minister|congress|senate|white house|kremlin|nato\b|united nations|security council|ceasefire|ateşkes|treaty|referendum|coalition|opposition party|defen[cs]e minister|sanctions", re.I),
  'savas': re.compile(r"savaş|çatışma|saldırı|füze|hava saldırısı|ateşkes|asker|ordu\b|cephe|işgal|bombardıman|silahlı|terör|drone saldırı|war\b|attack|missile|airstrike|strike|troops|frontline|invasion|military|ceasefire|offensive|bombing|terror", re.I),
  'siber': re.compile(r"siber|güvenlik açığ|sızıntı|veri ihlali|fidye|ransomware|zero-?day|malware|zararlı yazılım|oltalama|phishing|hacker|hack\b|saldırgan|cve-\d|vulnerab|data breach|botnet|exploit|backdoor|apt\d|cyberattack|cyber attack|ddos|kimlik avı|dolandırıcı", re.I),
@@ -142,10 +144,13 @@ RE_SAGLIK = re.compile(r"sağlık|hastane|salgın|aşı\b|ilaç|grip|kanser|teda
 RE_EGITIM = re.compile(r"okul|üniversite|sınav|yks|lgs|meb\b|öğrenci|öğretmen|eğitim|karne|school|university|exam|student|teacher|education", re.I)
 RE_TOPLUM = re.compile(r"toplum|kadın|çocuk|göç|mülteci|yoksulluk|işsiz|emekli|asgari ücret|kira|barınma|şiddet|eşitlik|protesto|grev|society|migrant|refugee|poverty|protest|strike|housing", re.I)
 ALT = {
- 'adana': [('seyhan', r'seyhan'), ('cukurova', r'çukurova'), ('yuregir', r'yüreğir'), ('saricam', r'sarıçam'), ('ceyhan', r'ceyhan'), ('kozan', r'kozan'),
-           ('imamoglu', r'imamoğlu|İmamoğlu'), ('karatas', r'karataş'), ('karaisali', r'karaisalı'), ('pozanti', r'pozantı'), ('yumurtalik', r'yumurtalık'),
-           ('kuzey-ilceler', r'tufanbeyli|saimbeyli|feke|aladağ'), ('asayis', r'gözaltı|tutuklandı|kaza|yaralandı|öldü|cinayet|operasyon|yangın|polis|jandarma'),
-           ('belediye', r'belediye|başkan|meclis|altyapı|ulaşım|metro|otobüs'), ('ekonomi-adana', r'pamuk|narenciye|çiftçi|hasat|osb|fabrika|ihracat|esnaf|tarım')],
+ 'adana': [('seyhan', r'\bseyhan\b'), ('cukurova', r'\bçukurova\b'), ('yuregir', r'yüreğir'), ('saricam', r'sarıçam'), ('ceyhan', r'\bceyhan\b'), ('kozan', r'\bkozan'),
+           ('imamoglu', r"imamoğlu['’]n(da|dan)\b|İmamoğlu['’]n(da|dan)\b|imamoğlu ilçe"), ('karatas', r'karataş'), ('karaisali', r'karaisalı'), ('pozanti', r'pozantı'), ('yumurtalik', r'yumurtalık'),
+           ('kuzey-ilceler', r'tufanbeyli|saimbeyli|\bfeke\b|\baladağ'),
+           ('asayis', r'gözaltı|tutukla|kaza(sı|da|ya)?\b|yaralan|hayatını kaybet|\böldü|cinayet|operasyon|yangın|bıçak|silahlı|saldır|jandarma|\bpolis|emniyet|uyuşturucu|hırsız|dolandırıc'),
+           ('belediye', r'belediye|büyükşehir|muhtar|kaymakam|\bvali(lik)?\b|asfalt|altyapı|\bpark(ı|ı|lar)?\b|otogar|toplu taşıma|\bmetro'),
+           ('ekonomi-adana', r'pamuk|narenciye|mandalina|portakal|çiftçi|üretici|hasat|tarım|\bosb\b|aosb|organize sanayi|fabrika|ihracat|yatırım'),
+           ('spor-adana', r'adanaspor|demirspor|futbol|\bmaç|\bgol\b|turnuva|basketbol|voleybol|\blig\b')],
  'tekno': [('apple', r'iphone|ipad|macbook|\bmac\b|ios \d|apple|airpods|vision pro|watchos'), ('samsung', r'samsung|galaxy|one ?ui|exynos'), ('android', r'android|pixel|xiaomi|redmi|huawei|honor|oneplus|oppo|realme|motorola|nothing phone|snapdragon'),
           ('google', r'\bgoogle\b|gemini|chrome|youtube|deepmind|waymo'), ('microsoft', r'microsoft|windows|copilot|xbox|azure|surface'), ('yz', r'yapay zek|chatgpt|openai|claude|anthropic|gemini|grok|deepseek|llm|\bai\b|artificial intelligence|midjourney|sora|copilot|mistral|perplexity'),
           ('telefon', r'telefon|smartphone|iphone|galaxy|pixel|katlanabilir|foldable'), ('bilgisayar', r'bilgisayar|laptop|macbook|notebook|\bpc\b|masaüstü|monitör'), ('cip', r'işlemci|yarı iletken|\bçip|chip|nvidia|\bamd\b|intel\b|qualcomm|tsmc|gpu|rtx|ryzen|snapdragon|dimensity'),
@@ -167,7 +172,7 @@ ALT = {
  'eglence': [('oyun', r'oyun|playstation|xbox|nintendo|steam|gta|game|gaming|epic games|switch 2'), ('film-dizi', r'dizi|film|sinema|fragman|gişe|yönetmen|netflix|disney|hbo|prime video|trailer|box office|movie|series|streaming|oscar|emmy'), ('muzik', r'şarkıcı|albüm|konser|müzik|billboard|grammy|spotify|album|singer|concert|tour\b'), ('kultur', r'sergi|tiyatro|kitap|festival|müze|edebiyat|exhibition|theater|museum|book|festival'), ('internet', r'viral|fenomen|trend|tiktok|youtube|meme|influencer|streamer'), ('anime', r'anime|manga|crunchyroll')],
 }
 ALT_RX = {a: [(k, re.compile(v, re.I)) for k, v in L] for a, L in ALT.items()}
-ALT_AD = {'seyhan': 'Seyhan', 'cukurova': 'Çukurova', 'yuregir': 'Yüreğir', 'saricam': 'Sarıçam', 'ceyhan': 'Ceyhan', 'kozan': 'Kozan', 'imamoglu': 'İmamoğlu', 'karatas': 'Karataş', 'karaisali': 'Karaisalı', 'pozanti': 'Pozantı', 'yumurtalik': 'Yumurtalık', 'kuzey-ilceler': 'Kuzey ilçeler', 'asayis': 'Asayiş', 'belediye': 'Belediye ve ulaşım', 'ekonomi-adana': 'Tarım ve ekonomi',
+ALT_AD = {'seyhan': 'Seyhan', 'cukurova': 'Çukurova', 'yuregir': 'Yüreğir', 'saricam': 'Sarıçam', 'ceyhan': 'Ceyhan', 'kozan': 'Kozan', 'imamoglu': 'İmamoğlu', 'karatas': 'Karataş', 'karaisali': 'Karaisalı', 'pozanti': 'Pozantı', 'yumurtalik': 'Yumurtalık', 'kuzey-ilceler': 'Kuzey ilçeler', 'asayis': 'Asayiş', 'belediye': 'Belediye ve kent', 'ekonomi-adana': 'Tarım ve ekonomi', 'spor-adana': 'Spor',
           'apple': 'Apple', 'samsung': 'Samsung', 'android': 'Android', 'google': 'Google', 'microsoft': 'Microsoft', 'yz': 'Yapay zekâ', 'telefon': 'Telefon', 'bilgisayar': 'Bilgisayar', 'cip': 'Çip', 'siber': 'Siber', 'sosyal': 'Sosyal medya', 'uygulama': 'Uygulama', 'yazilim': 'Yazılım', 'oyun': 'Oyun', 'oto-tekno': 'Otomobil teknolojisi', 'robotik': 'Robotik', 'giyilebilir': 'Giyilebilir', 'ev': 'Elektrikli araç/batarya',
           'tr-siyaset': 'Türkiye siyaseti', 'abd': 'ABD', 'avrupa': 'Avrupa', 'cin': 'Çin', 'rusya': 'Rusya-Ukrayna', 'orta-dogu': 'Orta Doğu', 'israil-filistin': 'İsrail-Filistin', 'nato': 'NATO', 'bm': 'BM', 'secim': 'Seçimler', 'kriz': 'Diplomatik kriz', 'yaptirim': 'Yaptırım ve ticaret', 'savunma': 'Savunma',
           'futbol': 'Futbol', 'basketbol': 'Basketbol', 'tenis': 'Tenis', 'f1': 'Formula 1', 'motor': 'Motor sporları', 'voleybol': 'Voleybol', 'olimpiyat': 'Olimpiyat', 'dovus': 'Dövüş sporları', 'espor': 'E-spor', 'transfer': 'Transfer', 'kulup': 'Kulüp', 'milli': 'Milli takımlar',
@@ -188,7 +193,7 @@ VIRAL = re.compile(r"tuhaf|garip|gizemli|esrarengiz|viral oldu|sosyal medyada|te
                    r"\bweird|bizarre|strange|odd\b|mysterious|mystery|went viral|goes viral|viral\b|backlash|outrage|sparks? (anger|debate|fury)|controvers|conspiracy|lawsuit|\bsues?\b|sued\b|fined\b|billionaire|\bai\b|artificial intelligence|chatbot|robot|deepfake|alien|\bufo|ancient|archaeolog|discovered|scientists|study (finds|shows)|researchers|world'?s first|first[- ]ever|record[- ]breaking|banned|bans\b|hacked|exposed|caught|secretly|admits?\b|leaked|"
                    r"seltsam|kurios|verboten|erstmals|rekord|étrange|insolite|interdit|record\b|extraño|insólito|prohib", re.I)
 # Hizmet/SEO sayfaları: her gün aynı kalıpla yazılan liste ve ilanlar. Gerçek deprem/sel haberi bu kalıplara girmez (yalnız "liste", "il il", "ne zaman" sayfaları).
-SERVIS = re.compile(r"hava durumu (tahmin|il il)|il il hava|(hafta sonu|yarın) hava nasıl|namaz vakit|nöbetçi eczane|altın fiyatları (bugün|canlı)|döviz kurları bugün|(son )?depremler listesi|deprem(ler)? (listesi|canlı)|okul(lar)?(ın)? (açılış tarihi|ne zaman açıl)|ara tatil(i)? ne zaman|"
+SERVIS = re.compile(r"hava durumu (tahmin|il il)|saatlik hava durumu|bugün hava durumu|hava durumu (bugün|yarın|\d+ günlük)|il il hava|(hafta sonu|yarın) hava nasıl|namaz vakit|nöbetçi eczane|altın fiyatları (bugün|canlı)|döviz kurları bugün|(son )?depremler listesi|deprem(ler)? (listesi|canlı)|okul(lar)?(ın)? (açılış tarihi|ne zaman açıl)|ara tatil(i)? ne zaman|"
                     r"mahkemesinden\s*/?\s*başkanlığından|\bilan(ı)? ?:|kura sonuçları|tercih sonuçları (açıklandı|ne zaman)|"
                     r"weather forecast for|lottery (numbers|results)|powerball numbers|mega millions numbers|wordle (hint|answer)|connections hints?|crossword (answers|clue)|strands hints?", re.I)
 HASSAS = re.compile(r"ölü|öldü|hayatını kaybet|cenaze|katliam|saldırı|bombalı|savaş|terör|tecavüz|taciz|istismar|intihar|killed|dead|massacre|attack|war\b|terror|rape|abuse|suicide", re.I)
@@ -303,8 +308,9 @@ def alan_bul(og, bas_metin, say_cal):
         n_rx = len(KURAL[rx].findall(m)); n_k = kay.get(k, 0)
         # kaynak bölümü ve içerik birlikte tanık olmalı: bölüm tek başına ya da tek bir kelime yetmez
         if (n_k >= 2 and n_rx >= 1) or (n_k >= 1 and n_rx >= 2) or n_rx >= 3 or (n_k >= 1 and n_rx >= 1 and k in ('spor', 'oto', 'bilim', 'eglence')): a.add(k)
-    # Adana: yerel kaynaktan gelen ya da metninde Adana geçen haber (ulusal kaynakta da olabilir)
-    if kay.get('adana') or KURAL['adana'].search(m): a.add('adana')
+    # Adana: metninde Adana (il, ilçe, kurum, kulüp) geçen haber. Yerel kaynak tek başına yetmez (yerel siteler ulusal haber de verir);
+    # yerel kaynakta ayrıca başka anlamı olan ilçe adları da (Seyhan, Ceyhan, Kozan…) kabul edilir. Hava durumu/servis sayfaları girmez.
+    if not SERVIS.search(m) and (KURAL['adana'].search(m) or (kay.get('adana') and KURAL['adana_ilce'].search(m))): a.add('adana')
     if KURAL['siber'].search(m): a.add('siber')
     if KURAL['siyaset'].search(m) and (kay.get('siyaset') or kay.get('gundem') or len(KURAL['siyaset'].findall(m)) >= 2): a.add('siyaset')
     # Gündem: genel haber akışı (teknoloji/spor/magazin dışı kalanlar dahil siyaset, toplum, hukuk...)
@@ -314,7 +320,8 @@ def alan_bul(og, bas_metin, say_cal):
     if 'siyaset' in a and not (a & {'gundem'}) and gundem_kay: a.add('gundem')
     if not a:
         top = max(kay, key=kay.get) if kay else 'gundem'
-        a.add(top)
+        # Adana içerik kuralıyla girer; yerel sitenin Adana'yla ilgisiz haberi varsayılan olarak Gündem'e düşer
+        a.add('gundem' if top == 'adana' else top)
     return [x for x in ALANLAR if x in a]
 
 def alt_etiket(alan, m):
@@ -552,7 +559,7 @@ def kumeler_kur(kumeler, simdi):
         yog = max(-100, min(900, yog))
         yog24 = int(round(100 * (h24[0] - h24[2]) / max(1, h24[2]))) if (h24[0] or h24[2]) else 0
         resmi = any('resmi' in o['nit'] for o in og)
-        alt = {a: alt_etiket(a, m_tum) for a in alanlar if a in ALT_RX}
+        alt = {a: alt_etiket(a, metin_bas if a == 'adana' else m_tum) for a in alanlar if a in ALT_RX}
         gimg = bas.get('i') or next((o['i'] for o in sorted(og, key=lambda o: -len(o['tok'] & bas['tok'])) if o.get('i')), None)
         # farklı anlatılan ayrıntılar: ana başlıkla benzerliği düşük başlıklar
         farkli = []
