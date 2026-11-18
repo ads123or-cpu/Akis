@@ -1,0 +1,423 @@
+[
+ {
+  "id": "venturebeat-ai",
+  "url": "https://venturebeat.com/category/ai/feed/",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "kod": 429,
+  "neden": "HTTP Error 429: Too Many Requests",
+  "ms": 522,
+  "kesif": []
+ },
+ {
+  "id": "mittr-ai",
+  "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+  "tarih": "2026-11-18",
+  "ms": 514,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-17T14:39:46+00:00",
+  "son_gun": 0,
+  "ortak": 0.4,
+  "ornek": [
+   "Research Reports",
+   "The open-source movement wants Jensen Huang back"
+  ],
+  "ok": true
+ },
+ {
+  "id": "wired-ai",
+  "url": "https://www.wired.com/feed/tag/ai/latest/rss",
+  "tarih": "2026-11-18",
+  "ms": 774,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-17T22:19:19+00:00",
+  "son_gun": 0,
+  "ortak": 0.5,
+  "ornek": [
+   "Nvidia’s Board Has No Plans to Bring Back Jensen Huang",
+   "Rogue Agents Hacked His Company. Why Is Clément Delangue So Optimistic About AI?"
+  ],
+  "ok": true
+ },
+ {
+  "id": "guardian-ai",
+  "url": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+  "tarih": "2026-11-18",
+  "ms": 491,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-18T00:01:25+00:00",
+  "son_gun": 0,
+  "ortak": 0.45,
+  "ornek": [
+   "Ofqual urges ‘life-altering’ penalties for students who use tech to cheat",
+   "Nvidia doubles revenue as board says it does not intend to reinstate Jensen Huan"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-yz",
+  "url": "https://news.google.com/rss/search?q=yapay%20zeka&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-18",
+  "ms": 362,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T23:23:35+00:00",
+  "son_gun": 0,
+  "ortak": 0.8,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (80%)"
+ },
+ {
+  "id": "rps",
+  "url": "https://www.rockpapershotgun.com/feed",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "pushsquare",
+  "url": "https://www.pushsquare.com/feeds/latest",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "nintendolife",
+  "url": "https://www.nintendolife.com/feeds/latest",
+  "tarih": "2026-11-18",
+  "ms": 1351,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-18T01:05:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Sonic Racing: CrossWorlds Free McLaren Racing Update Adds New Sonic Skin And Mac",
+   "Splatoon 3 Version 12.0.0 Update Out Now, Here Are The Full Patch Notes"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gamerant",
+  "url": "https://gamerant.com/feed/",
+  "tarih": "2026-11-18",
+  "ms": 910,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-18T01:03:41+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Sony Just Broke a Game Awards Record, But Not The Good Kind",
+   "Xbox Game Pass is Losing 8 Games on November 30"
+  ],
+  "ok": true
+ },
+ {
+  "id": "bolumsonu",
+  "url": "https://www.bolumsonucanavari.com/rss",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 420,
+  "kesif": [
+   "https://www.bolumsonucanavari.com/Rss/VideoIncelemeler.htm",
+   "https://www.bolumsonucanavari.com/Rss/OyunVideolari.htm",
+   "https://www.bolumsonucanavari.com/Rss/Oyunlar.htm",
+   "https://www.bolumsonucanavari.com/Rss/Haberler.htm"
+  ]
+ },
+ {
+  "id": "gn-tr-oyun",
+  "url": "https://news.google.com/rss/search?q=%22oyun%22%20(PlayStation%20OR%20Xbox%20OR%20Steam%20OR%20Nintendo)&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-18",
+  "ms": 777,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T23:33:51+00:00",
+  "son_gun": 0,
+  "ortak": 0.24,
+  "ornek": [
+   "XBOX Game Pass kasım 2026 yeni oyunları belli oldu",
+   "XBOX Game Pass Kasım 2026 2. Dalga Oyunları: 8 Yeni Oyun"
+  ],
+  "ok": true
+ },
+ {
+  "id": "therecord",
+  "url": "https://therecord.media/feed",
+  "tarih": "2026-11-18",
+  "ms": 476,
+  "kod": 200,
+  "n": 5,
+  "n_tarihli": 5,
+  "son_haber": "2026-11-17T21:20:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Website management platform Optimizely confirms hackers put malicious code into ",
+   "Kazakh ransomware hacking suspect extradited from Italy"
+  ],
+  "ok": true
+ },
+ {
+  "id": "helpnetsec",
+  "url": "https://www.helpnetsecurity.com/feed/",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "gn-tr-siber",
+  "url": "https://news.google.com/rss/search?q=%22siber%20sald%C4%B1r%C4%B1%22%20OR%20%22veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%22%20OR%20doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-18",
+  "ms": 1068,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T23:11:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.24,
+  "ornek": [
+   "178 büyük internet sitesine siber saldırı: Etkilenen kuruluşların tam listesi aç",
+   "Equinor'un bilişim sistemlerine siber saldırı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "paraanaliz",
+  "url": "https://www.paraanaliz.com/feed/",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 860,
+  "kesif": []
+ },
+ {
+  "id": "marketwatch",
+  "url": "https://feeds.marketwatch.com/marketwatch/topstories/",
+  "tarih": "2026-11-18",
+  "ms": 966,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-17T23:30:00+00:00",
+  "son_gun": 0,
+  "ortak": 1.0,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (100%)"
+ },
+ {
+  "id": "yahoo-fin",
+  "url": "https://finance.yahoo.com/news/rssindex",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 835,
+  "kesif": []
+ },
+ {
+  "id": "ajansspor",
+  "url": "https://ajansspor.com/rss",
+  "tarih": "2026-11-18",
+  "ms": 1269,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T22:09:32+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Uluslar Ligi'nde çeyrek finale yükselen ülkeler",
+   "Danimarka - Norveç: 2-3 Maç sonucu, maç özeti (Yazılı)"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trtspor",
+  "url": "https://www.trtspor.com.tr/rss/anasayfa.rss",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 917,
+  "kesif": []
+ },
+ {
+  "id": "fanatik",
+  "url": "https://www.fanatik.com.tr/rss/anasayfa",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1071,
+  "kesif": []
+ },
+ {
+  "id": "gn-site-halktv",
+  "url": "https://news.google.com/rss/search?q=site:halktv.com.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-18",
+  "ms": 626,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-09T08:00:00+00:00",
+  "son_gun": 8,
+  "ortak": 0.0,
+  "ornek": [
+   "10 Kasım'da Türkiye, Gazi Mustafa Kemal Atatürk'ü anıyor",
+   "Lekelenmeme hakkı | Fikret Bila"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-site-t24",
+  "url": "https://news.google.com/rss/search?q=site:t24.com.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-18",
+  "ms": 321,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T21:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.64,
+  "ok": false,
+  "neden": "mevcut akislarla kopya (64%)"
+ },
+ {
+  "id": "gn-site-duvar",
+  "url": "https://news.google.com/rss/search?q=site:gazeteduvar.com.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-18",
+  "ms": 578,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T15:09:02+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "İstanbul dahil 7 il için kritik uyarı! Zehirlenme riski bile var",
+   "Çekya'da iki tren çarpıştı: Onlarca yolcu yaralandı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-site-technopat",
+  "url": "https://news.google.com/rss/search?q=site:technopat.net&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-18",
+  "ms": 569,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-18T00:31:22+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "Gigabyte B550M DS3H rev 1.5 BIOS güncellemesi sonrası sistem açılmıyor",
+   "Microsoft 2FA kodları telefonda sıfırlanma sonrası erişilemiyor"
+  ],
+  "ok": true
+ },
+ {
+  "id": "ro-digi24",
+  "url": "https://www.digi24.ro/rss",
+  "tarih": "2026-11-18",
+  "ms": 628,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-18T01:23:10+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Un cutremur de magnitudine 5,6 a avut loc în zona seismică Vrancea. Seismul s-a ",
+   "Gheorghe Hagi, după meciul Bosnia-România: „Din păcate, am pierdut, dar cred că "
+  ],
+  "ok": true
+ },
+ {
+  "id": "ro-hotnews",
+  "url": "https://www.hotnews.ro/rss",
+  "tarih": "2026-11-18",
+  "ms": 1000,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-18T01:21:56+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Apelul DSU după cutremurul puternic din România de miercuri noaptea: Păstrați-vă",
+   "Cutremur de 5.3 pe Richter miercuri noaptea în România. IGSU dă valori de 5.6. S"
+  ],
+  "ok": true
+ },
+ {
+  "id": "hi-bbc",
+  "url": "https://feeds.bbci.co.uk/hindi/rss.xml",
+  "tarih": "2026-11-18",
+  "ms": 322,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T16:32:06+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "योगी आदित्यनाथ के 1.27 करोड़ हिंदू वोटर ग़ायब होने के दावे और निर्वाचन आयोग के ज",
+   "सोनिया गांधी की किताब की लॉन्चिंग पर राहुल गांधी ने कौन से किस्से सुनाए?"
+  ],
+  "ok": true
+ },
+ {
+  "id": "id-bbc",
+  "url": "https://feeds.bbci.co.uk/indonesia/rss.xml",
+  "tarih": "2026-11-18",
+  "ms": 386,
+  "kod": 200,
+  "n": 21,
+  "n_tarihli": 21,
+  "son_haber": "2026-11-18T00:38:33+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Dana cadangan pesangon wajib disetor ke pemerintah – 'Kami pekerja takut jadi ko",
+   "Polisi temukan dugaan makar kasus penyadapan Presiden Prabowo – Kapan eks Kapolr"
+  ],
+  "ok": true
+ },
+ {
+  "id": "id-detik",
+  "url": "https://rss.detik.com/index.php/detikcom",
+  "tarih": "2026-11-18",
+  "ok": false,
+  "kod": null,
+  "neden": "[Errno 54] Connection reset by peer",
+  "ms": 1949,
+  "kesif": []
+ },
+ {
+  "id": "bolumsonu",
+  "url": "https://www.bolumsonucanavari.com/Rss/Haberler.htm",
+  "tarih": "2026-11-18",
+  "ms": 410,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "tarihli kayit yok"
+ }
+]

@@ -195,7 +195,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "bianet",
@@ -293,7 +294,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "ensonhaber",
@@ -307,7 +309,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "hurriyet-dunya",
@@ -419,7 +422,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "webrazzi",
@@ -475,7 +479,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "log",
@@ -503,7 +508,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "chip-tr",
@@ -632,7 +638,8 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "9to5mac",
@@ -800,7 +807,8 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "the-decoder",
@@ -809,7 +817,7 @@
 "cat": "sci",
 "url": "https://the-decoder.com/feed/",
 "plat": "web",
-"calisma": "bilim",
+"calisma": "yz",
 "tip": "bilimsel",
 "ulke": "US",
 "oncelik": 2,
@@ -832,7 +840,8 @@
 "nitelik": [
 "sirket-haberi"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "openai",
@@ -841,7 +850,7 @@
 "cat": "sci",
 "url": "https://openai.com/news/rss.xml",
 "plat": "web",
-"calisma": "bilim",
+"calisma": "yz",
 "tip": "sirket duyurusu",
 "ulke": "US",
 "oncelik": 1,
@@ -1515,7 +1524,7 @@
 "cat": "ent",
 "url": "https://www.polygon.com/rss/index.xml",
 "plat": "web",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "US",
 "oncelik": 2,
@@ -1529,7 +1538,7 @@
 "cat": "ent",
 "url": "https://feeds.ign.com/ign/all",
 "plat": "web",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "US",
 "oncelik": 2,
@@ -1543,7 +1552,7 @@
 "cat": "ent",
 "url": "https://kotaku.com/rss",
 "plat": "web",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "US",
 "oncelik": 2,
@@ -1557,7 +1566,7 @@
 "cat": "ent",
 "url": "https://www.pcgamer.com/rss/",
 "plat": "web",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "US",
 "oncelik": 2,
@@ -1712,7 +1721,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: 3 haftadan uzun süredir yeni kayıt yok; 2026-11-18 kapatıldı"
 },
 {
 "id": "ntv-tek",
@@ -1866,7 +1876,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: 3 haftadan uzun süredir yeni kayıt yok; 2026-11-18 kapatıldı"
 },
 {
 "id": "hurriyet-ana",
@@ -2328,7 +2339,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "evrensel",
@@ -2398,7 +2410,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "merlin",
@@ -2407,7 +2420,7 @@
 "cat": "tech",
 "url": "https://www.merlininkazani.com/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "TR",
 "oncelik": 2,
@@ -2454,7 +2467,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "gzt-ent",
@@ -3047,7 +3061,7 @@
 "cat": "tech",
 "url": "https://news.google.com/rss/search?q=oyun%20PlayStation%20Steam%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
 "plat": "gnews",
-"calisma": "tekno",
+"calisma": "oyun",
 "tip": "toplayici",
 "ulke": "TR",
 "oncelik": 3,
@@ -3456,7 +3470,8 @@
 "ulke": "US",
 "oncelik": 3,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "fastco",
@@ -3509,7 +3524,7 @@
 "cat": "tech",
 "url": "https://www.eurogamer.net/feed",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "oyun",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -3994,7 +4009,7 @@
 "cat": "ent",
 "plat": "youtube",
 "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCKy1dAqELo0zrOtPkf0eTMw",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "video (YouTube)",
 "ulke": "US",
 "oncelik": 3,
@@ -4402,7 +4417,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "steam-news",
@@ -4411,7 +4427,7 @@
 "cat": "ent",
 "plat": "web",
 "url": "https://store.steampowered.com/feeds/news/",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "sirket duyurusu",
 "ulke": "US",
 "oncelik": 2,
@@ -4561,7 +4577,8 @@
 "nitelik": [
 "sirket-haberi"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "nvidia-blog",
@@ -4586,7 +4603,7 @@
 "cat": "tech",
 "plat": "web",
 "url": "https://deepmind.google/blog/rss.xml",
-"calisma": "tekno",
+"calisma": "yz",
 "tip": "sirket duyurusu",
 "ulke": "US",
 "oncelik": 2,
@@ -4867,7 +4884,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "rd-futurology",
@@ -4884,7 +4902,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "rd-openai",
@@ -4893,7 +4912,7 @@
 "cat": "tech",
 "plat": "reddit",
 "url": "https://www.reddit.com/r/OpenAI/.rss",
-"calisma": "tekno",
+"calisma": "yz",
 "tip": "topluluk/trend",
 "ulke": "US",
 "oncelik": 3,
@@ -4918,7 +4937,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "rd-localllama",
@@ -4952,7 +4972,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "rd-programming",
@@ -4969,7 +4990,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "rd-nextfuckinglevel",
@@ -4986,7 +5008,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "rd-memes",
@@ -5003,7 +5026,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "rd-kgbtr",
@@ -5037,7 +5061,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "rd-burdurland",
@@ -5054,7 +5079,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine sürekli 429 veriyor, haber gelmiyor; 2026-11-18 kapatıldı"
 },
 {
 "id": "win-central",
@@ -5680,7 +5706,8 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "xiaomitime",
@@ -5817,7 +5844,7 @@
 "cat": "tech",
 "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "yz",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -5901,7 +5928,7 @@
 "cat": "tech",
 "url": "https://www.gamespot.com/feeds/mashup/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "oyun",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -5971,7 +5998,7 @@
 "cat": "tech",
 "url": "https://oyungezer.com.tr/rss",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "TR",
 "oncelik": 2,
@@ -5985,7 +6012,7 @@
 "cat": "tech",
 "url": "https://www.merlininkazani.com/rss",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "TR",
 "oncelik": 2,
@@ -6007,7 +6034,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "ithome",
@@ -6189,7 +6217,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "y-teknodiot",
@@ -6454,7 +6483,7 @@
 "cat": "tech",
 "plat": "gnews",
 "url": "https://news.google.com/rss/search?q=(%C3%BCcretsiz%20OR%20bedava)%20(oyun%20OR%20uygulama%20OR%20\"yapay%20zeka\"%20OR%20abonelik)%20when:1d&hl=tr&gl=TR&ceid=TR:tr",
-"calisma": "tekno",
+"calisma": "oyun",
 "tip": "toplayici",
 "ulke": "TR",
 "oncelik": 3,
@@ -6509,12 +6538,13 @@
 "nitelik": [
 "bagimsiz"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "bekliyor",
 "tarih": "2026-11-08",
 "not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "teyit",
@@ -6837,12 +6867,13 @@
 "nitelik": [
 "ucretli-duvar"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "bekliyor",
 "tarih": "2026-11-08",
 "not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "wsj-tech",
@@ -6858,12 +6889,13 @@
 "nitelik": [
 "ucretli-duvar"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "bekliyor",
 "tarih": "2026-11-08",
 "not_": "Gelistirme ortamindan agla erisilemedi; ilk Actions cekisi dogrular"
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "lemonde",
@@ -7320,13 +7352,14 @@
 "nitelik": [
 "resmi"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 25,
 "ms": 372
-}
+},
+"pasif_neden": "Ölü kaynak: 3 haftadan uzun süredir yeni kayıt yok; 2026-11-18 kapatıldı"
 },
 {
 "id": "fed",
@@ -7403,7 +7436,7 @@
 "cat": "tech",
 "url": "https://blog.google/technology/ai/rss/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "yz",
 "tip": "sirket duyurusu",
 "ulke": "US",
 "oncelik": 2,
@@ -7454,13 +7487,14 @@
 "nitelik": [
 "sirket-haberi"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 20,
 "ms": 542
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "nvidia-dev",
@@ -7476,13 +7510,14 @@
 "nitelik": [
 "sirket-haberi"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 25,
 "ms": 485
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "samsung-news",
@@ -7513,7 +7548,7 @@
 "cat": "tech",
 "url": "https://arstechnica.com/ai/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "yz",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -7667,7 +7702,7 @@
 "cat": "tech",
 "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "yz",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -7718,13 +7753,14 @@
 "nitelik": [
 "ana-akim"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 17,
 "ms": 242
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "athletic",
@@ -8152,7 +8188,7 @@
 "cat": "ent",
 "url": "https://www.videogameschronicle.com/feed/",
 "plat": "web",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "GB",
 "oncelik": 2,
@@ -8174,7 +8210,7 @@
 "cat": "ent",
 "url": "https://www.rockpapershotgun.com/feed",
 "plat": "web",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "GB",
 "oncelik": 2,
@@ -8196,7 +8232,7 @@
 "cat": "ent",
 "url": "https://www.pushsquare.com/feeds/latest",
 "plat": "web",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "ana akim",
 "ulke": "GB",
 "oncelik": 2,
@@ -8247,13 +8283,14 @@
 "nitelik": [
 "uzman"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 25,
 "ms": 264
-}
+},
+"pasif_neden": "Ölü kaynak: 3 haftadan uzun süredir yeni kayıt yok; 2026-11-18 kapatıldı"
 },
 {
 "id": "screenrant",
@@ -8336,13 +8373,14 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 25,
 "ms": 342
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "gh-ollama",
@@ -8359,13 +8397,14 @@
 "erken-sinyal",
 "yazilim-surum"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 10,
 "ms": 817
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "gh-llamacpp",
@@ -8382,13 +8421,14 @@
 "erken-sinyal",
 "yazilim-surum"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 10,
 "ms": 1159
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "gh-vscode",
@@ -8405,13 +8445,14 @@
 "erken-sinyal",
 "yazilim-surum"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 10,
 "ms": 627
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "gh-linux",
@@ -8428,13 +8469,14 @@
 "erken-sinyal",
 "yazilim-surum"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 10,
 "ms": 620
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "hn-best",
@@ -8451,13 +8493,14 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 25,
 "ms": 1979
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "devto",
@@ -8474,13 +8517,14 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-08",
 "n": 12,
 "ms": 347
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "trends-de",
@@ -9878,13 +9922,14 @@
 "resmi",
 "surum-notu"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 25,
 "ms": 354
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "apple-dev-news",
@@ -9900,13 +9945,14 @@
 "nitelik": [
 "resmi"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 25,
 "ms": 638
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "android-dev-blog",
@@ -9922,13 +9968,14 @@
 "nitelik": [
 "resmi"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 20,
 "ms": 899
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "chrome-releases",
@@ -9967,13 +10014,14 @@
 "nitelik": [
 "resmi"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 10,
 "ms": 441
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "google-workspace-updates",
@@ -10034,13 +10082,14 @@
 "nitelik": [
 "resmi"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 10,
 "ms": 5490
-}
+},
+"pasif_neden": "Ölü kaynak: 3 haftadan uzun süredir yeni kayıt yok; 2026-11-18 kapatıldı"
 },
 {
 "id": "ms-edge-blog",
@@ -10079,13 +10128,14 @@
 "resmi",
 "surum-notu"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 10,
 "ms": 286
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "netflix-about",
@@ -10141,13 +10191,14 @@
 "ulke": "GB",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 18,
 "ms": 230
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "9to5mac-ios",
@@ -10467,13 +10518,14 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 25,
 "ms": 278
-}
+},
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "technopat-haber",
@@ -10487,13 +10539,14 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-10",
 "n": 25,
 "ms": 1000
-}
+},
+"pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10-25 ardışık hata); 2026-11-18 kapatıldı"
 },
 {
 "id": "gn-tr-youtube",
@@ -10590,7 +10643,7 @@
 "cat": "ent",
 "url": "https://news.google.com/rss/search?q=oyun%20g%C3%BCncellemesi%20OR%20PlayStation%20OR%20Xbox%20OR%20Steam%20yeni&hl=tr&gl=TR&ceid=TR:tr",
 "plat": "gnews",
-"calisma": "eglence",
+"calisma": "oyun",
 "tip": "toplayici",
 "ulke": "TR",
 "oncelik": 3,
@@ -11067,13 +11120,14 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-11",
 "n": 25,
 "ms": 1850
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "daringfireball",
@@ -11446,7 +11500,7 @@
 "cat": "tech",
 "url": "https://blog.google/products/gemini/rss/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "yz",
 "tip": "sirket duyurusu",
 "ulke": "US",
 "oncelik": 2,
@@ -11493,13 +11547,14 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-11",
 "n": 15,
 "ms": 591
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "gn-android17-tr",
@@ -12359,13 +12414,14 @@
 "ulke": "CN",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-12",
 "n": 25,
 "ms": 4234
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "cn-infoq",
@@ -12379,13 +12435,14 @@
 "ulke": "CN",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-12",
 "n": 20,
 "ms": 1579
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "cn-appinn",
@@ -12439,13 +12496,14 @@
 "ulke": "CN",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-12",
 "n": 25,
 "ms": 387
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "cn-ruanyifeng",
@@ -13629,13 +13687,14 @@
 "ulke": "RU",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-12",
 "n": 25,
 "ms": 687
-}
+},
+"pasif_neden": "Geliştirici/kod haberi: kullanıcı isteğiyle kapatıldı (2026-11-18)"
 },
 {
 "id": "ru-ixbt",
@@ -14111,12 +14170,13 @@
 "nitelik": [
 "video"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "bekliyor",
 "tarih": "2026-11-15",
 "not_": "YouTube RSS gecici hata verdi; ilk Actions cekisi dogrular"
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "yt-technopat",
@@ -14176,13 +14236,14 @@
 "nitelik": [
 "video"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-15",
 "n": 15,
 "ms": 490
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "yt-bbcturkce",
@@ -14242,12 +14303,13 @@
 "nitelik": [
 "video"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "bekliyor",
 "tarih": "2026-11-15",
 "not_": "YouTube RSS gecici hata verdi; ilk Actions cekisi dogrular"
-}
+},
+"pasif_neden": "Ölü kaynak: eklendiğinden beri tek haber üretmedi; 2026-11-18 kapatıldı"
 },
 {
 "id": "yt-t24",
@@ -14533,6 +14595,318 @@
 "tarih": "2026-11-16",
 "n": 24,
 "ms": 1729
+}
+},
+{
+"id": "mittr-ai",
+"name": "MIT Technology Review AI",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+"plat": "web",
+"calisma": "yz",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 10,
+"ms": 514
+}
+},
+{
+"id": "wired-ai",
+"name": "Wired AI",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.wired.com/feed/tag/ai/latest/rss",
+"plat": "web",
+"calisma": "yz",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 10,
+"ms": 774
+}
+},
+{
+"id": "guardian-ai",
+"name": "Guardian AI",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+"plat": "web",
+"calisma": "yz",
+"tip": "ana akim",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 20,
+"ms": 491
+}
+},
+{
+"id": "nintendolife",
+"name": "Nintendo Life",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.nintendolife.com/feeds/latest",
+"plat": "web",
+"calisma": "oyun",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 1351
+}
+},
+{
+"id": "gamerant",
+"name": "Game Rant",
+"lang": "en",
+"cat": "tech",
+"url": "https://gamerant.com/feed/",
+"plat": "web",
+"calisma": "oyun",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 10,
+"ms": 910
+}
+},
+{
+"id": "therecord",
+"name": "The Record",
+"lang": "en",
+"cat": "tech",
+"url": "https://therecord.media/feed",
+"plat": "web",
+"calisma": "siber",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 5,
+"ms": 476
+}
+},
+{
+"id": "gn-tr-siber",
+"name": "Siber güvenlik (Google Haberler, TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=%22siber%20sald%C4%B1r%C4%B1%22%20OR%20%22veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%22%20OR%20doland%C4%B1r%C4%B1c%C4%B1l%C4%B1k&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siber",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 1068
+}
+},
+{
+"id": "ajansspor",
+"name": "Ajansspor",
+"lang": "tr",
+"cat": "sport",
+"url": "https://ajansspor.com/rss",
+"plat": "web",
+"calisma": "spor",
+"tip": "spor",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 1269
+}
+},
+{
+"id": "gn-site-halktv",
+"name": "Halk TV (Google Haberler)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site:halktv.com.tr&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 626
+}
+},
+{
+"id": "gn-site-duvar",
+"name": "Gazete Duvar (Google Haberler)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site:gazeteduvar.com.tr&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "gundem",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 578
+}
+},
+{
+"id": "gn-site-technopat",
+"name": "Technopat (Google Haberler)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=site:technopat.net&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "tekno",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 569
+}
+},
+{
+"id": "ro-digi24",
+"name": "Digi24",
+"lang": "ro",
+"cat": "world",
+"url": "https://www.digi24.ro/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "RO",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 628
+}
+},
+{
+"id": "ro-hotnews",
+"name": "HotNews",
+"lang": "ro",
+"cat": "world",
+"url": "https://www.hotnews.ro/rss",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "RO",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 20,
+"ms": 1000
+}
+},
+{
+"id": "hi-bbc",
+"name": "BBC Hindi",
+"lang": "hi",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/hindi/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "IN",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 25,
+"ms": 322
+}
+},
+{
+"id": "id-bbc",
+"name": "BBC Indonesia",
+"lang": "id",
+"cat": "world",
+"url": "https://feeds.bbci.co.uk/indonesia/rss.xml",
+"plat": "web",
+"calisma": "gundem",
+"tip": "ana akim",
+"ulke": "ID",
+"oncelik": 2,
+"nitelik": [
+"kamu-yayincisi"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-18",
+"n": 21,
+"ms": 386
 }
 }
 ]

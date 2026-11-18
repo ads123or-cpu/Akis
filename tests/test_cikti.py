@@ -6,7 +6,7 @@ KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = os.path.join(KOK, 'site', 'data')
 VAR = os.path.exists(os.path.join(D, 'ozet.json'))
 def j(a): return json.load(open(os.path.join(D, a), encoding='utf-8'))
-ALANLAR = ['gundem', 'tekno', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'eglence']
+ALANLAR = ['gundem', 'tekno', 'yz', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'oyun', 'eglence']
 YASAK = re.compile(r'shift\s*delete', re.I)
 KIMLIK_ALANLARI = {'p', 'kaynak', 'ad', 'l', 'url', 'name', 'id'}   # yayıncı adı, bağlantı, kaynak adı: özet metni DEĞİL
 

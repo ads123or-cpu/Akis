@@ -179,6 +179,39 @@ class ReelsViralVeServis(unittest.TestCase):
         self.assertIn('viral', [k for k, _, _ in A.KRITER])
 
 
+class ReelsSikilik(unittest.TestCase):
+    """2026-11-18: ilan, soru/SEO sayfası ve canlı blog Reels'e girmez; hava/sefer duyurusu ve küçük deprem ağır ceza alır."""
+    def test_yeni_elemeler(self):
+        for t, neden in [('T.C. Bakırköy 11. Asliye Hukuk Mahkemesinden İlan', 'resmi ilan'), ('HBO Max üyelik iptali nasıl yapılır?', 'soru/SEO sayfasi'),
+                         ('EN DÜŞÜK EMEKLİ MAAŞI NE KADAR OLACAK 2027', 'soru/SEO sayfasi'), ('GTA 6 New Zealand time trick: How to play hours early', 'soru/SEO sayfasi'),
+                         ('Dubai - Anadolu Efes maçı kaç kaç bitti, kim yendi?', 'soru/SEO sayfasi'), ('WATCH: Pope Leo leaves Peru', 'canlı blog')]:
+            self.assertEqual(next((a for a, rx in A.ELE if rx.search(t)), None), neden, t)
+    def test_servis_cezasi(self):
+        rx = dict((ad, r) for ad, r, _, _ in A.CEZA)
+        for t in ("18 Kasım Hava Durumu: İstanbul'da fırtına", "BUDO'nun yarınki 12 seferi iptal edildi"): self.assertTrue(rx['sıradan hava/ulaşım duyurusu'].search(t), t)
+        self.assertTrue(rx['küçük deprem'].search("Van Gölü'nde 4,3 büyüklüğünde deprem")); self.assertFalse(rx['küçük deprem'].search('Malatya’da 5,2 büyüklüğünde deprem'))
+    def test_siberia_siber_degil(self):
+        self.assertFalse(A.KURAL['siber'].search('Plane crash in Siberia kills 19'))
+    def test_yz_katman_gundemi_bastirmaz(self):
+        a = A.alan_bul([dict(t='NSA iç ağı çöktü, yapay zekâ şüphesi')], 'NSA iç ağı çöktü, yapay zekâ şüphesi', {'gundem': 3, 'tekno': 1})
+        self.assertIn('gundem', a); self.assertIn('yz', a)
+        a = A.alan_bul([dict(t='OpenAI yeni GPT-6.2 modelini duyurdu')], 'OpenAI yeni GPT-6.2 modelini duyurdu', {'yz': 1})
+        self.assertIn('tekno', a)
+    def test_gelistirici_yanlis_pozitif(self):
+        self.assertFalse(A.GELISTIRICI.search('Skydance cable shakeup: new executives to oversee programming'))
+        self.assertFalse(A.KURAL['yz_guclu'].search('Biliyorum ki bu iş zor'))
+
+
+class Gelistirici(unittest.TestCase):
+    """Kod/geliştirici haberleri akışa girmez; tüketici sürüm ve oyun haberleri girer."""
+    def test_kod_haberi_elenir(self):
+        for t in ('GitHub Copilot artık ücretsiz', 'Python 3.15 released with JIT', 'Claude Code gets new agent mode', 'Linux kernel 7.2 lands', 'VS Code update adds AI'):
+            self.assertTrue(A.GELISTIRICI.search(t), t)
+    def test_tuketici_haberi_kalir(self):
+        for t in ('iOS 27 developer beta 2 is out', 'Chrome 140 güncellemesi yayında', 'Developers of GTA 6 confirm delay', 'Galaxy S27 Ultra sızdı'):
+            self.assertFalse(A.GELISTIRICI.search(t), t)
+
+
 class Videolar(unittest.TestCase):
     def test_dil_yazidan_ve_tur(self):
         self.assertEqual(A.video_dil('الرئيس الأمريكي: لا حاجة لواشنطن', 'en'), 'ar')

@@ -21,9 +21,10 @@ import masa as M   # sozcuk/kok yardımcıları ve STOP listesi eski hattan alı
 
 SAAT = 168                     # kümelemeye giren haber yaşı (saat)
 CIKTI = 'site/data'
-ALANLAR = ['gundem', 'adana', 'tekno', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'eglence']
+ALANLAR = ['gundem', 'adana', 'tekno', 'yz', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'oyun', 'eglence']
 ALAN_AD = {'gundem': 'Gündem Radarı', 'adana': 'Adana', 'tekno': 'Teknoloji Radarı', 'siyaset': 'Siyaset ve Jeopolitik', 'spor': 'Spor', 'ekonomi': 'Ekonomi ve Finans',
-           'bilim': 'Bilim ve Uzay', 'siber': 'Siber Güvenlik', 'oto': 'Otomobil ve Ulaşım', 'eglence': 'Eğlence, Oyun, Kültür'}
+           'bilim': 'Bilim ve Uzay', 'siber': 'Siber Güvenlik', 'oto': 'Otomobil ve Ulaşım', 'eglence': 'Kültür ve Eğlence',
+           'yz': 'Yapay Zekâ', 'oyun': 'Oyun'}
 KUME_ALAN_SINIR = 360          # alan başına dosyaya yazılan küme sayısı
 # Türkçe/İngilizce dışındaki diller çoğunlukla tek kaynaklı kalır ve önem sıralamasında 360'ın altına düşer;
 # her alan dosyasında her dile ayrıca bu kadar yer ayrılır (Akış'taki dil süzgeci boş kalmasın).
@@ -129,13 +130,16 @@ KURAL = {
  'adana_ilce': re.compile(r"\b(seyhan|ceyhan|kozan|karataş|feke|aladağ|çukurova)\b|imamoğlu['’]n(da|dan)\b|İmamoğlu['’]n(da|dan)\b|imamoğlu ilçe", re.I),
  'siyaset': re.compile(r"erdoğan|cumhurbaşkan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|seçim|siyasi|muhalefet|iktidar|özgür özel|bahçeli|yaptırım|diplomasi|diplomat|zirve|büyükelçi|dışişleri|nato\b|birleşmiş milletler|güvenlik konseyi|trump|biden|harris|putin|zelen|netanyahu|macron|şi cinping|xi jinping|kongre|senato|beyaz saray|kremlin|brüksel|avrupa birliği|\bab\b|israil|filistin|gazze|hamas|hizbullah|iran|suriye|ukrayna|rusya|tayvan|savunma bakan|savunma sanayi|election|parliament|sanction|diplomat|summit|ambassador|president|prime minister|congress|senate|white house|kremlin|nato\b|united nations|security council|ceasefire|ateşkes|treaty|referendum|coalition|opposition party|defen[cs]e minister|sanctions", re.I),
  'savas': re.compile(r"savaş|çatışma|saldırı|füze|hava saldırısı|ateşkes|asker|ordu\b|cephe|işgal|bombardıman|silahlı|terör|drone saldırı|war\b|attack|missile|airstrike|strike|troops|frontline|invasion|military|ceasefire|offensive|bombing|terror", re.I),
- 'siber': re.compile(r"siber|güvenlik açığ|sızıntı|veri ihlali|fidye|ransomware|zero-?day|malware|zararlı yazılım|oltalama|phishing|hacker|hack\b|saldırgan|cve-\d|vulnerab|data breach|botnet|exploit|backdoor|apt\d|cyberattack|cyber attack|ddos|kimlik avı|dolandırıcı", re.I),
- 'spor_guclu': re.compile(r"maç|gol\b|futbol|basketbol|voleybol|süper lig|şampiyonlar ligi|teknik direktör|hakem|transfer|milli takım|nba|euroleague|uefa|fifa|olimpiyat|formula ?1|\bf1\b|motogp|tenis|wimbledon|grand slam|\batp\b|\bwta\b|ufc|boks|güreş|espor|e-spor|premier league|la liga|serie a|bundesliga|champions league|football|soccer|basketball|volleyball|tennis|coach|goal\b|stadium|tournament|athlete|olympic|grand prix|galatasaray|fenerbahçe|beşiktaş|trabzonspor", re.I),
+ 'siber': re.compile(r"siber(?!ia)|güvenlik açığ|sızıntı|veri ihlali|fidye|ransomware|zero-?day|malware|zararlı yazılım|oltalama|phishing|hacker|hack\b|saldırgan|cve-\d|vulnerab|data breach|botnet|exploit|backdoor|apt\d|cyberattack|cyber attack|ddos|kimlik avı|dolandırıcı", re.I),
+ 'spor_guclu': re.compile(r"maç|gol\b|futbol|basketbol|voleybol|süper lig|şampiyonlar ligi|teknik direktör|hakem|transfer|milli takım|\bnba\b|euroleague|uefa|fifa|olimpiyat|formula ?1|\bf1\b|motogp|tenis|wimbledon|grand slam|\batp\b|\bwta\b|ufc|boks|güreş|espor|e-spor|premier league|la liga|serie a|bundesliga|champions league|football|soccer|basketball|volleyball|tennis|coach|goal\b|stadium|tournament|athlete|olympic|grand prix|galatasaray|fenerbahçe|beşiktaş|trabzonspor", re.I),
  'ekonomi_guclu': re.compile(r"dolar|euro\b|altın|borsa|bist|enflasyon|faiz|merkez bankası|ekonomi|asgari ücret|emekli maaş|vergi|ihracat|ithalat|bütçe|petrol|akaryakıt|benzin|motorin|konut|kira artış|bitcoin|kripto|\bfed\b|inflation|interest rate|stocks?\b|wall street|gdp|tariff|oil price|currency|ticaret|piyasa|cari açık|işsizlik|unemployment|central bank|recession|ipo\b|nasdaq|s&p", re.I),
  'bilim_guclu': re.compile(r"nasa\b|uzay|gezegen|astronom|teleskop|asteroid|fosil|keşfetti|araştırmacılar|bilim insanları|genetik|\bdna\b|kanser tedavi|iklim değişikliği|kuantum|fizik|evren|mars\b|ay'a|space station|scientists|researchers|study finds|astronomers|physics|biology|quantum|exoplanet|galaxy|black hole|climate|vaccine|clinical trial|peer-reviewed", re.I),
  'oto_guclu': re.compile(r"otomobil|araba\b|otomotiv|elektrikli (araç|otomobil|araba|suv)|togg|tesla|bmw|mercedes|audi|volkswagen|porsche|ferrari|ford\b|fiat|renault|hyundai|toyota|byd\b|şarj istasyon|sürücüsüz|otonom|suv\b|sedan|electric vehicle|\bev\b|self-driving|autonomous|car maker|automaker|recall|lamborghini|mclaren|yeni model|raylı sistem|metro hattı|hızlı tren|havalimanı|thy\b|pegasus|ulaşım|trafik|köprü|otoyol|airline|flight", re.I),
- 'tekno_guclu': re.compile(r"iphone|ipad|macbook|android|samsung|galaxy|xiaomi|huawei|google|pixel|microsoft|windows|openai|chatgpt|claude|gemini|anthropic|yapay zek|artificial intelligence|\bai\b|işlemci|ekran kart|nvidia|intel\b|amd\b|qualcomm|snapdragon|telefon|akıllı|bilgisayar|laptop|yazılım|uygulama|siber|robot|drone|oyun|playstation|xbox|steam|nintendo|teknoloji|whatsapp|instagram|tiktok|youtube|netflix|starlink|spacex|çip|yarı iletken|chip|startup|giyilebilir|akıllı saat|kulaklık|tablet|5g|bulut|veri merkezi|ios \d|one ui", re.I),
- 'eglence_guclu': re.compile(r"dizi|film|sinema|oyuncu|şarkıcı|ünlü|konser|albüm|festival|oscar|gişe|fragman|yönetmen|survivor|masterchef|sanatçı|netflix dizisi|playstation|xbox|nintendo|steam|oyun|game|trailer|box office|movie|series|actor|singer|album|anime|hollywood|billboard|grammy|emmy|video game|viral|fenomen|tiktok", re.I),
+ 'tekno_guclu': re.compile(r"iphone|ipad|macbook|android|samsung|galaxy|xiaomi|huawei|google|pixel|microsoft|windows|openai|chatgpt|claude|gemini|anthropic|yapay zek|artificial intelligence|\bai\b|işlemci|ekran kart|nvidia|intel\b|amd\b|qualcomm|snapdragon|telefon|akıllı|bilgisayar|laptop|yazılım|uygulama|siber(?!ia)|robot|drone|oyun|playstation|xbox|steam|nintendo|teknoloji|whatsapp|instagram|tiktok|youtube|netflix|starlink|spacex|çip|yarı iletken|chip|startup|giyilebilir|akıllı saat|kulaklık|tablet|5g|bulut|veri merkezi|ios \d|one ui", re.I),
+ # Yapay zekâ ve oyun 2026-11-18'de ayrı alan oldu (Teknoloji ve Eğlence içindeki en kalabalık iki konu); oyun artık Eğlence'ye girmez.
+ 'yz_guclu': re.compile(r"yapay zek|chatgpt|openai|claude|anthropic|gemini|grok\b|deepseek|\bllm|büyük dil model|language model|\bai\b|artificial intelligence|midjourney|\bsora\b|copilot|mistral|perplexity|\bgpt-?\d|\bagi\b|chatbot|sohbet robotu|deepfake|künstliche intelligenz|intelligence artificielle|inteligencia artificial|人工智能|生成式|人工知能|인공지능", re.I),
+ 'oyun_guclu': re.compile(r"playstation|\bps5\b|\bps6\b|xbox|nintendo|switch 2|\bsteam\b|\bgta\b|video ?game|videogame|gaming|oyun (dünyası|severler|sektörü|stüdyosu|konsolu)|bilgisayar oyunu|mobil oyun|oyunu\b|oyunun\b|game awards|game pass|epic games|ubisoft|rockstar|bethesda|blizzard|riot games|valorant|fortnite|minecraft|call of duty|battlefield|zelda|pokemon|pokémon|elden ring|\bdlc\b|game (studio|developer|update|trailer|release|director)|games? (industry|studio)|(new|upcoming|indie|mobile|pc|console) games?\b|\bgamers?\b", re.I),
+ 'eglence_guclu': re.compile(r"dizi|film|sinema|oyuncu|şarkıcı|ünlü|konser|albüm|festival|oscar|gişe|fragman|yönetmen|survivor|masterchef|sanatçı|netflix dizisi|trailer|box office|movie|series|actor|singer|album|anime|hollywood|billboard|grammy|emmy|viral|fenomen|tiktok", re.I),
  'gundem_guclu': re.compile(r"cinayet|gözaltı|tutuklandı|soruşturma|dava\b|mahkeme|savcılık|yargıtay|anayasa mahkemesi|hapis|ceza\b|belediye|valilik|yangın|sel\b|deprem|afet|kaza\b|yaralandı|hayatını kaybetti|okul|üniversite|sınav|yks|meb\b|öğrenci|hastane|sağlık bakan|salgın|aşı\b|ilaç|grip|zam\b|maaş|emekli|asgari ücret", re.I),
 }
 RE_HUKUK = re.compile(r"mahkeme|dava\b|savcı|yargıtay|anayasa mahkemesi|hakim|hâkim|tutuklan|beraat|iddianame|court|judge|lawsuit|indict|trial|verdict|sentenc", re.I)
@@ -155,7 +159,7 @@ ALT = {
           ('google', r'\bgoogle\b|gemini|chrome|youtube|deepmind|waymo'), ('microsoft', r'microsoft|windows|copilot|xbox|azure|surface'), ('yz', r'yapay zek|chatgpt|openai|claude|anthropic|gemini|grok|deepseek|llm|\bai\b|artificial intelligence|midjourney|sora|copilot|mistral|perplexity'),
           ('telefon', r'telefon|smartphone|iphone|galaxy|pixel|katlanabilir|foldable'), ('bilgisayar', r'bilgisayar|laptop|macbook|notebook|\bpc\b|masaüstü|monitör'), ('cip', r'işlemci|yarı iletken|\bçip|chip|nvidia|\bamd\b|intel\b|qualcomm|tsmc|gpu|rtx|ryzen|snapdragon|dimensity'),
           ('siber', r'siber|güvenlik açığ|hack|ransomware|veri ihlali|malware|phishing'), ('sosyal', r'instagram|whatsapp|tiktok|x\.com|twitter|facebook|threads|snapchat|telegram|reddit|bluesky|sosyal medya|youtube'), ('uygulama', r'uygulama|\bapp\b|play store|app store|güncelleme|özellik|feature'),
-          ('yazilim', r'yazılım|software|linux|github|windows|macos|\bapi\b|geliştirici|developer|open source|açık kaynak'), ('oyun', r'oyun|playstation|xbox|nintendo|steam|gta|game|gaming|epic games'), ('oto-tekno', r'otonom|sürücüsüz|tesla|togg|elektrikli|autopilot|self-driving'),
+          ('yazilim', r'yazılım|software|windows|macos|işletim sistemi'), ('oyun', r'oyun|playstation|xbox|nintendo|steam|gta|game|gaming|epic games'), ('oto-tekno', r'otonom|sürücüsüz|tesla|togg|elektrikli|autopilot|self-driving'),
           ('robotik', r'robot|insansı|humanoid|drone|boston dynamics|optimus'), ('giyilebilir', r'akıllı saat|giyilebilir|apple watch|galaxy watch|akıllı bileklik|smartwatch|wearable|airpods|kulaklık|smart ring'), ('ev', r'elektrikli araç|elektrikli otomobil|\bev\b|şarj|batarya|battery')],
  'siyaset': [('tr-siyaset', r'erdoğan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|özgür özel|bahçeli|belediye başkan|ekrem imamoğlu|türkiye siyaset|turkish politics'), ('abd', r'\babd\b|amerika|trump|biden|harris|kongre|senato|beyaz saray|washington|\bu\.?s\.?\b|congress|white house'), ('avrupa', r'avrupa|\bab\b|brüksel|almanya|fransa|macron|scholz|merz|ingiltere|starmer|european|\beu\b|brussels|germany|france|britain'),
           ('cin', r'\bçin\b|şi cinping|pekin|tayvan|china|beijing|taiwan|xi jinping'), ('rusya', r'rusya|putin|kremlin|moskova|ukrayna|zelen|russia|moscow|ukraine'), ('orta-dogu', r'orta doğu|suriye|irak|iran|lübnan|yemen|körfez|suudi|katar|middle east|syria|iraq|lebanon|yemen|saudi|gulf'),
@@ -169,7 +173,14 @@ ALT = {
  'bilim': [('uzay', r'nasa|uzay|gezegen|astronom|teleskop|asteroid|mars\b|ay\b|spacex|esa\b|space|planet|galaxy|exoplanet|rocket|artemis|iss\b'), ('saglik', r'sağlık|kanser|aşı|ilaç|tedavi|virüs|salgın|health|cancer|vaccine|drug|disease|clinical|medicine|who\b'), ('iklim', r'iklim|küresel ısınma|sera gazı|buzul|kuraklık|climate|warming|emission|glacier|drought'), ('fizik', r'fizik|kuantum|parçacık|cern|physics|quantum|particle'), ('biyoloji', r'biyoloji|genetik|\bdna\b|fosil|evrim|hayvan|bitki|biology|genetic|fossil|species|evolution'), ('yz-arastirma', r'yapay zek|makine öğren|nöral|machine learning|neural|deep learning|arxiv|llm')],
  'siber': [('acik', r'güvenlik açığ|cve-\d|zero-?day|vulnerab|exploit|patch|yama'), ('fidye', r'fidye|ransomware'), ('veri-ihlali', r'veri ihlali|sızıntı|sızdı|data breach|leak'), ('oltalama', r'oltalama|phishing|dolandırıcı|scam|kimlik avı|smishing'), ('devlet-aktoru', r'apt\d|devlet destekli|state-sponsored|nation-state|lazarus|sandworm|çin bağlantılı|rus bağlantılı'), ('zararli', r'malware|zararlı|trojan|botnet|backdoor|stealer|spyware|casus yazılım')],
  'oto': [('elektrikli', r'elektrikli|\bev\b|şarj|batarya|tesla|byd|togg|electric'), ('marka', r'bmw|mercedes|audi|volkswagen|porsche|ferrari|ford\b|fiat|renault|hyundai|toyota|honda|volvo|skoda|lamborghini|mclaren|nissan'), ('otonom', r'otonom|sürücüsüz|autopilot|fsd|self-driving|robotaxi|waymo'), ('ulasim', r'havalimanı|hızlı tren|metro|köprü|otoyol|thy\b|pegasus|havayolu|airline|flight|railway|airport|ulaşım'), ('yeni-model', r'yeni model|tanıtıldı|unveil|launch|debut|concept|facelift'), ('motorsporu', r'formula ?1|\bf1\b|motogp|ralli')],
- 'eglence': [('oyun', r'oyun|playstation|xbox|nintendo|steam|gta|game|gaming|epic games|switch 2'), ('film-dizi', r'dizi|film|sinema|fragman|gişe|yönetmen|netflix|disney|hbo|prime video|trailer|box office|movie|series|streaming|oscar|emmy'), ('muzik', r'şarkıcı|albüm|konser|müzik|billboard|grammy|spotify|album|singer|concert|tour\b'), ('kultur', r'sergi|tiyatro|kitap|festival|müze|edebiyat|exhibition|theater|museum|book|festival'), ('internet', r'viral|fenomen|trend|tiktok|youtube|meme|influencer|streamer'), ('anime', r'anime|manga|crunchyroll')],
+ 'yz': [('sohbet', r'chatgpt|claude|gemini|grok|copilot|perplexity|deepseek|chatbot|sohbet robotu'), ('yz-sirket', r'openai|anthropic|google deepmind|deepmind|xai\b|meta ai|mistral|nvidia|microsoft'),
+        ('model', r'\bgpt-?\d|model|llm|dil modeli|benchmark|reasoning'), ('gorsel-video', r'sora|midjourney|\bveo\b|görsel üret|video üret|image gen|video gen|deepfake|nano banana'),
+        ('duzenleme', r'yasa|düzenleme|regulation|ai act|telif|copyright|lawsuit|dava|yasak|ban\b|privacy|gizlilik'), ('donanim-yz', r'nvidia|gpu|çip|chip|veri merkez|data center|tpu'),
+        ('is-hayati', r'işsiz|işten çıkar|layoff|jobs?\b|istihdam|meslek|workers?'), ('ajan', r'\bagent|ajan|otonom asistan|browser agent')],
+ 'oyun': [('konsol', r'playstation|ps5|ps6|xbox|nintendo|switch 2'), ('pc-oyun', r'\bsteam\b|\bpc\b|epic games|gpu|ekran kart'), ('mobil-oyun', r'mobil oyun|mobile game|ios oyun|android oyun'),
+          ('gta', r'\bgta\b|grand theft auto|rockstar'), ('cikis', r'çıkış tarihi|release date|launch|ertelendi|delay|fragman|trailer|duyuruldu|announced'),
+          ('ucretsiz', r'ücretsiz|bedava|free\b|game pass|ps plus|epic games store'), ('sektor', r'işten çıkar|layoff|stüdyo|studio|satın al|acquisition|ubisoft|microsoft gaming'), ('espor-oyun', r'espor|e-spor|esports?|turnuva')],
+ 'eglence': [('film-dizi', r'dizi|film|sinema|fragman|gişe|yönetmen|netflix|disney|hbo|prime video|trailer|box office|movie|series|streaming|oscar|emmy'), ('muzik', r'şarkıcı|albüm|konser|müzik|billboard|grammy|spotify|album|singer|concert|tour\b'), ('kultur', r'sergi|tiyatro|kitap|festival|müze|edebiyat|exhibition|theater|museum|book|festival'), ('internet', r'viral|fenomen|trend|tiktok|youtube|meme|influencer|streamer'), ('anime', r'anime|manga|crunchyroll')],
 }
 ALT_RX = {a: [(k, re.compile(v, re.I)) for k, v in L] for a, L in ALT.items()}
 ALT_AD = {'seyhan': 'Seyhan', 'cukurova': 'Çukurova', 'yuregir': 'Yüreğir', 'saricam': 'Sarıçam', 'ceyhan': 'Ceyhan', 'kozan': 'Kozan', 'imamoglu': 'İmamoğlu', 'karatas': 'Karataş', 'karaisali': 'Karaisalı', 'pozanti': 'Pozantı', 'yumurtalik': 'Yumurtalık', 'kuzey-ilceler': 'Kuzey ilçeler', 'asayis': 'Asayiş', 'belediye': 'Belediye ve kent', 'ekonomi-adana': 'Tarım ve ekonomi', 'spor-adana': 'Spor',
@@ -178,7 +189,9 @@ ALT_AD = {'seyhan': 'Seyhan', 'cukurova': 'Çukurova', 'yuregir': 'Yüreğir', '
           'futbol': 'Futbol', 'basketbol': 'Basketbol', 'tenis': 'Tenis', 'f1': 'Formula 1', 'motor': 'Motor sporları', 'voleybol': 'Voleybol', 'olimpiyat': 'Olimpiyat', 'dovus': 'Dövüş sporları', 'espor': 'E-spor', 'transfer': 'Transfer', 'kulup': 'Kulüp', 'milli': 'Milli takımlar',
           'doviz': 'Döviz', 'altin': 'Altın', 'borsa': 'Borsa', 'enflasyon': 'Enflasyon', 'faiz': 'Faiz ve merkez bankaları', 'kripto': 'Kripto', 'enerji': 'Enerji', 'istihdam': 'Maaş ve istihdam', 'sirket': 'Şirket haberleri', 'ticaret': 'Dış ticaret', 'konut': 'Konut',
           'uzay': 'Uzay', 'saglik': 'Sağlık', 'iklim': 'İklim', 'fizik': 'Fizik', 'biyoloji': 'Biyoloji', 'yz-arastirma': 'Yapay zekâ araştırmaları', 'acik': 'Güvenlik açığı', 'fidye': 'Fidye yazılımı', 'veri-ihlali': 'Veri ihlali', 'oltalama': 'Dolandırıcılık/oltalama', 'devlet-aktoru': 'Devlet destekli', 'zararli': 'Zararlı yazılım',
-          'elektrikli': 'Elektrikli', 'marka': 'Markalar', 'otonom': 'Otonom sürüş', 'ulasim': 'Ulaşım', 'yeni-model': 'Yeni model', 'motorsporu': 'Motor sporu', 'film-dizi': 'Film ve dizi', 'muzik': 'Müzik', 'kultur': 'Kültür-sanat', 'internet': 'İnternet fenomenleri', 'anime': 'Anime'}
+          'elektrikli': 'Elektrikli', 'marka': 'Markalar', 'otonom': 'Otonom sürüş', 'ulasim': 'Ulaşım', 'yeni-model': 'Yeni model', 'motorsporu': 'Motor sporu', 'film-dizi': 'Film ve dizi', 'muzik': 'Müzik', 'kultur': 'Kültür-sanat', 'internet': 'İnternet fenomenleri', 'anime': 'Anime',
+          'sohbet': 'Sohbet botları', 'yz-sirket': 'Yapay zekâ şirketleri', 'model': 'Modeller', 'gorsel-video': 'Görsel ve video üretimi', 'duzenleme': 'Hukuk ve düzenleme', 'donanim-yz': 'Çip ve veri merkezi', 'is-hayati': 'İş hayatı', 'ajan': 'Yapay zekâ ajanları',
+          'konsol': 'Konsol', 'pc-oyun': 'PC', 'mobil-oyun': 'Mobil oyun', 'gta': 'GTA 6', 'cikis': 'Çıkış ve duyuru', 'ucretsiz': 'Ücretsiz ve abonelik', 'sektor': 'Sektör', 'espor-oyun': 'E-spor'}
 GUNDEM_ALT = [('turkiye', 'Türkiye'), ('dunya', 'Dünya'), ('siyaset', 'Siyaset'), ('diplomasi', 'Diplomasi'), ('savas', 'Savaş ve güvenlik'), ('ekonomi', 'Ekonomi'), ('toplum', 'Toplum'), ('hukuk', 'Hukuk'), ('afet', 'Afet'), ('saglik', 'Sağlık'), ('egitim', 'Eğitim')]
 RE_DIPLO = re.compile(r"diplomasi|diplomat|büyükelçi|zirve|müzakere|görüşme|dışişleri|ateşkes|anlaşma imza|summit|ambassador|talks|negotiat|treaty|foreign minister", re.I)
 
@@ -207,19 +220,26 @@ ELE = [
  ('burc/kumar', re.compile(r"burç yorum|günlük burç|horoscope|bahis|casino|jackpot|iddaa tahmin|kesin kupon", re.I)),
  ('ozel kisi trajedisi', re.compile(r"tecavüz|cinsel istismar|taciz|çocuk istismarı|intihar etti|kadın cinayeti|cinayete kurban|cesedi bulundu|rape\b|child abuse|murdered (his|her) (wife|girlfriend|child)", re.I)),
  ('sponsorlu', re.compile(r"\bsponsored\b|işbirliğiyle|advertorial|ücretli içerik", re.I)),
+ # 2026-11-18: Reels'e hiç uygun olmayan sayfa türleri (gerçek haber değil, rehber/ilan/canlı akış)
+ ('resmi ilan', re.compile(r"mahkemesi(nden|ne)? (ilan|/)|icra (müdürlüğü|dairesi)(nden)? ilan|ihale ilanı|satış ilanı|satış icra dairesi|icra dairesi$|\bilan(ı)? (olunur|edilir)\b|t\.c\. .{0,40}(müdürlüğü|başkanlığı)ndan\b", re.I)),
+ ('soru/SEO sayfasi', re.compile(r"nasıl (yapılır|iptal edilir|alınır|başvurulur|öğrenilir|sorgulanır|izlenir)|ne zaman (yatacak|yatırılacak|açıklanacak|ödenecek|başlıyor|çıkacak)\??|ne kadar (olacak|oldu)\??|kaç (tl|lira)( olacak| oldu)?\??|saat kaçta|hangi gün|kimdir\??$|nerede oynanacak|how to (play|watch|get|download|fix|cancel)|what time (does|is)|release time|where to (buy|watch|preorder)|everything we know|all we know so far|kaç kaç bitti|kim yendi\??|maç sonucu|(yayınlandı|çıktı|başladı) mı\??|neden yok\??|yeni bölüm (ne zaman|fragman)", re.I)),
+ ('canlı blog', re.compile(r"^(live|canlı|watch|izle)\s*[:|\-–]|live updates|liveblog|live blog|canlı (anlatım|blog)|son dakika gelişmeleri|minute[- ]by[- ]minute", re.I)),
 ]
 # Puan CEZASI (eleme değil): yalnız gerçekten düşük potansiyelli kalıplar. Siyaset/spor/gündem bu listede değildir.
 CEZA = [
  ('rutin sürüm/yama notu', RUTIN, 8, ('tekno', 'siber')),
  ('kurumsal finans dili', re.compile(r"\b(earnings|quarterly|funding round|raises \$|series [abc]\b|valuation|market cap|analyst|bilanço|piyasa değeri|hisse geri alım)\b", re.I), 10, ('tekno',)),
- ('ürün incelemesi/liste', re.compile(r"\breview:|incelemesi|\bbest .{0,30} (of|for)\b|en iyi \d+|haftanın|weekly roundup|podcast|newsletter", re.I), 8, ('tekno', 'oto', 'eglence')),
- ('sıradan hava uyarısı', re.compile(r"(sağanak|kuvvetli yağış|kar yağışı|fırtına|rüzgar) uyarısı|sarı kod|turuncu kod|meteoroloji(den)? uyar", re.I), 10, ('gundem',)),
+ ('ürün incelemesi/liste', re.compile(r"\breview:|incelemesi|\binceleme\b|\bbest .{0,30} (of|for)\b|en iyi \d+|haftanın|weekly roundup|podcast|newsletter", re.I), 8, ('tekno', 'oto', 'eglence')),
+ ('sıradan hava/ulaşım duyurusu', re.compile(r"(sağanak|kuvvetli yağış|yağış|kar yağışı|kar|fırtına|rüzgar|don|sis) (uyarısı|alarmı|geliyor)|sarı kod|turuncu kod|meteoroloji(den)? uyar|hava durumu|sefer(ler)?(i)? iptal|seferleri durdur|vapur seferleri|uçuşlar(ı)? iptal|yollar kapandı|okullar tatil mi", re.I), 30, ('gundem', 'tekno', 'oto')),
+ ('küçük deprem', re.compile(r"\b[1-4][.,]\d+ büyüklüğünde|magnitude[- ][1-4]\.\d|\bm[1-4]\.\d\b", re.I), 30, ('gundem',)),
+ ('rutin adli süreç', re.compile(r"tutuklama talebiyle|hakimliğe sevk|adliyeye sevk|gözaltına alındı|gözaltı kararı|iddianame kabul|duruşma ertelendi|ifade verdi|kayyum atandı|kayyum atanan", re.I), 18, ('gundem', 'ekonomi')),
+ ('magazin/dizi tanıtımı', re.compile(r"başrolde|kadrosuna katıldı|dizisi (geri dönüyor|başlıyor)|kırmızı halı|stil(i)?yle|kombin|premiere look|red carpet|casting", re.I), 14, ('gundem', 'eglence')),
  ('yalnızca yerel olay', re.compile(r"\b(mahallesinde|köyünde|ilçesinde|sokakta)\b.*\b(yaralandı|çarpıştı|kavga)\b|işçi servisi|servis aracı kaza", re.I), 10, ('gundem',)),
  ('yalnız ABD pazarı', re.compile(r"\b(us-only|only in the us|yalnızca abd|sadece abd|verizon|t-mobile|at&t|walmart|costco|best buy)\b", re.I), 8, ('tekno',)),
 ]
 # Ağırlıklar (toplam 100). Viral ve özgünlük (Türkçede henüz anlatılmamış yabancı konu) öne; Türkçe kaynak sayısı geri planda.
-KRITER = [('guncellik', 10, 'Güncellik'), ('haber', 10, 'Haber değeri'), ('etki', 8, 'Hayata etki'), ('ozgun', 10, 'Özgünlük'), ('saskin', 10, 'Şaşırtıcılık'), ('hikaye', 10, 'Hikâye potansiyeli'),
-           ('gorsel', 8, 'Görsel malzeme'), ('dogrulama', 10, 'Çok kaynakta doğrulanma'), ('turk', 4, 'Türkçe izleyiciye uygunluk'), ('ilk3', 6, 'İlk 3 saniyede anlatılabilirlik'), ('viral', 14, 'Viral potansiyel')]
+KRITER = [('guncellik', 10, 'Güncellik'), ('haber', 10, 'Haber değeri'), ('etki', 10, 'Hayata etki'), ('ozgun', 8, 'Özgünlük'), ('saskin', 8, 'Şaşırtıcılık'), ('hikaye', 10, 'Hikâye potansiyeli'),
+           ('gorsel', 6, 'Görsel malzeme'), ('dogrulama', 10, 'Çok kaynakta doğrulanma'), ('turk', 10, 'Türkçe izleyiciye uygunluk'), ('ilk3', 6, 'İlk 3 saniyede anlatılabilirlik'), ('viral', 12, 'Viral potansiyel')]
 
 def cumle(s):
     s = re.sub(r'\s+', ' ', s or '').strip()
@@ -304,10 +324,16 @@ def alan_bul(og, bas_metin, say_cal):
     m = bas_metin
     kay = say_cal
     # kaynak odaklı alanlar (haber sitesinin bölümü / uzman kaynak)
-    for k, rx in (('tekno', 'tekno_guclu'), ('bilim', 'bilim_guclu'), ('ekonomi', 'ekonomi_guclu'), ('spor', 'spor_guclu'), ('oto', 'oto_guclu'), ('eglence', 'eglence_guclu')):
-        n_rx = len(KURAL[rx].findall(m)); n_k = kay.get(k, 0)
+    for k, rx in (('tekno', 'tekno_guclu'), ('bilim', 'bilim_guclu'), ('ekonomi', 'ekonomi_guclu'), ('spor', 'spor_guclu'), ('oto', 'oto_guclu'), ('eglence', 'eglence_guclu'), ('oyun', 'oyun_guclu'), ('yz', 'yz_guclu')):
+        # YZ ve oyun yalnız başlıklardan sayılır (özet metnindeki tek 'AI'/'game' kelimesi alan açmasın)
+        n_rx = len(KURAL[rx].findall(m if k not in ('yz', 'oyun') else ' '.join(o['t'] for o in og[:12]))); n_k = kay.get(k, 0)
+        # YZ ve oyun haberini çoğunlukla genel teknoloji/eğlence siteleri verir: o bölümler de tanık sayılır
+        if k == 'yz': n_k += kay.get('tekno', 0) + kay.get('bilim', 0)
+        if k == 'oyun': n_k += kay.get('tekno', 0) + kay.get('eglence', 0)
         # kaynak bölümü ve içerik birlikte tanık olmalı: bölüm tek başına ya da tek bir kelime yetmez
-        if (n_k >= 2 and n_rx >= 1) or (n_k >= 1 and n_rx >= 2) or n_rx >= 3 or (n_k >= 1 and n_rx >= 1 and k in ('spor', 'oto', 'bilim', 'eglence')): a.add(k)
+        if (n_k >= 2 and n_rx >= 1) or (n_k >= 1 and n_rx >= 2) or n_rx >= 3 or (n_k >= 1 and n_rx >= 1 and k in ('spor', 'oto', 'bilim', 'eglence', 'oyun', 'yz')): a.add(k)
+    # YZ ve oyun ek katmandır: Gündem kuralını ve boş-alan yedeğini etkilemesin diye burada ayrılır, sonda geri eklenir
+    katman = a & {'yz', 'oyun'}; a -= katman
     # Adana: metninde Adana (il, ilçe, kurum, kulüp) geçen haber. Yerel kaynak tek başına yetmez (yerel siteler ulusal haber de verir);
     # yerel kaynakta ayrıca başka anlamı olan ilçe adları da (Seyhan, Ceyhan, Kozan…) kabul edilir. Hava durumu/servis sayfaları girmez.
     if not SERVIS.search(m) and (KURAL['adana'].search(m) or (kay.get('adana') and KURAL['adana_ilce'].search(m))): a.add('adana')
@@ -322,6 +348,9 @@ def alan_bul(og, bas_metin, say_cal):
         top = max(kay, key=kay.get) if kay else 'gundem'
         # Adana içerik kuralıyla girer; yerel sitenin Adana'yla ilgisiz haberi varsayılan olarak Gündem'e düşer
         a.add('gundem' if top == 'adana' else top)
+    a |= katman
+    if 'yz' in a and not a & {'tekno', 'bilim'}: a.add('tekno')   # yapay zekâ haberi Teknoloji'de de görünür
+    if 'oyun' in a and a == {'oyun', 'eglence'} and not KURAL['eglence_guclu'].search(m): a.discard('eglence')
     return [x for x in ALANLAR if x in a]
 
 def alt_etiket(alan, m):
@@ -385,21 +414,42 @@ def reels_puanla(c, og, bas, metin, simdi, kay_ad):
             p -= d; ceza.append(ad)
     if c['kb'] < 2 and not c['resmi'] and c['plat_topluluk']: p -= 6; ceza.append('yalnız topluluk kaynağı (erken sinyal)')
     if c['kb'] < 2 and not c['resmi'] and not c['plat_topluluk']: p -= 3; ceza.append('tek bağımsız kaynak')
+    # Türkiye izleyicisine uzak yabancı yerel haber: Türkçe kaynak yok, Türkiye geçmiyor, büyük ülke/lider/marka da yok
+    genel = set(c['alanlar']) & {'tekno', 'yz', 'bilim', 'oyun', 'eglence', 'oto', 'siber'}
+    if c['sadece_yabanci'] and not TURKIYE.search(metin) and not (c['ulkeler'] or c['liderler'] or c['markalar']) and not genel:
+        p -= 15; ceza.append('Türkiye izleyicisine uzak yabancı yerel haber')
+    if len(re.findall(r"\b[A-ZÇĞİÖŞÜ]{3,}\b", t)) >= 4 and len(re.findall(r"\b[A-ZÇĞİÖŞÜ]{3,}\b", t)) * 2 >= len(t.split()):
+        p -= 10; ceza.append('büyük harfli tık tuzağı başlık')
     elen = None
     for ad, rx in ELE:
         if rx.search(t): elen = ad; break
     return round(max(0, p), 1), kr, ceza, elen
 
+REELS_ESIK = 48        # 2026-11-18: 38'den yükseltildi (187 aday 'aşırı' bulundu)
+REELS_TOPLAM = 90
+REELS_PROFIL = 30
+REELS_GENEL = {'apple', 'google', 'samsung', 'microsoft', 'yeni', 'new', 'turkiye', 'abd', 'trump', 'update', 'guncelleme', 'pro', 'max', 'ultra', 'son', 'dakika'}
+def reels_anahtar(og):
+    """Kümenin hikâye anahtarı: başlıklarda geçen özel adlar + 'iPhone 20' gibi model adları (çok genel olanlar hariç)."""
+    v = set()
+    for o in og[:4]:
+        v |= {x for x in M.varlik(o['t']) if len(x) >= 3 and not x.isdigit()}
+        v |= {(a + ' ' + b).lower() for a, b in re.findall(r"\b([A-Za-z][A-Za-z]{1,12})\s?(\d{1,4})\b", o['t']) if a.lower() not in ('in', 'at', 'on', 'of', 'to', 'for', 'and', 'the', 'top', 'with', 'by')}
+    return v - REELS_GENEL
+
 def profil_bul(c, m):
     pr = []
     a = set(c['alanlar'])
-    if 'tekno' in a or 'siber' in a: pr.append('teknoloji')
+    # profil başlıkla doğrulanır: kaynağın bölümü tek başına profil açmaz
+    if a & {'tekno', 'siber', 'yz', 'oyun'} and (KURAL['tekno_guclu'].search(m) or KURAL['siber'].search(m) or KURAL['yz_guclu'].search(m) or KURAL['oyun_guclu'].search(m)): pr.append('teknoloji')
     if 'gundem' in a or 'ekonomi' in a: pr.append('gundem')
-    if 'siyaset' in a: pr.append('siyaset')
-    if 'spor' in a: pr.append('spor')
+    if 'siyaset' in a and KURAL['siyaset'].search(m): pr.append('siyaset')
+    if 'spor' in a and KURAL['spor_guclu'].search(m): pr.append('spor')
     alt = []
     if 'bilim' in a: alt.append('bilim')
     if 'siber' in a: alt.append('siber')
+    if 'yz' in a: alt.append('yz')
+    if 'oyun' in a: alt.append('oyun')
     if 'oto' in a: alt.append('oto'); pr = pr or ['teknoloji']
     if 'ekonomi' in a: alt.append('ekonomi')
     if 'eglence' in a and not pr: pr.append('gundem')
@@ -505,16 +555,24 @@ def durum_hesapla(s, d, simdi_iso, simdi, n72):
     if (d.get('ms') or 0) > 3000: return 'yavas'
     return 'aktif'
 
+# Geliştirici/kod haberleri akışa girmez (kullanıcı isteği, 2026-11-18). Tüketiciyi ilgilendiren sürüm/beta haberleri (iOS beta, Chrome sürümü) dışarıda kalmaz.
+GELISTIRICI = re.compile(r"\b(github|gitlab|stack ?overflow|npm\b|pypi|rustlang|\brust (\d|dili|language|compiler)|golang|\bgo \d\.\d|python \d|typescript|javascript|kotlin \d|swift \d|\.net \d|node\.?js|\bdeno\b|vue\.?js|react (\d|native)|webassembly|wasm\b|kubernetes|docker|devops|ci/cd|compiler|derleyici|codebase|kod taban|source code|kaynak kod|pull request|open[- ]source (library|framework|tool)|açık kaynak(lı)? (kütüphane|araç|yazılım projesi)|\bsdk\b|\bapi\b.{0,20}(deprecat|update|güncelle)|programlama|programming language|programmers?\b|yazılımcı|coding|kodlama|developer (tool|conference|preview)s?|geliştirici(ler)? (aracı|araçları|konferans|önizleme)|vs ?code|visual studio|xcode|android studio|linux (kernel|çekirde)|\bkernel \d|\bllvm\b|\bgcc\b|copilot (for|in) (vs|visual|github)|claude code|codex (cli|agent|app)|cursor (ai|ide|editor)|vibe[- ]cod|kotlin|flutter|unity engine|unreal engine \d)", re.I)
+
+# Kod terimi geçse de asıl konusu tüketici ürünü olan başlık kalır (ör. 'ChatGPT ve Codex yeni modelle güncellendi', telefonda yapay zekâyla uygulama).
+TUKETICI = re.compile(r"chatgpt|\bgpt-\d|gemini (app|uygulama)|iphone|ipad|galaxy|xiaomi|pixel \d|playstation|xbox|nintendo|\bgta\b|whatsapp|instagram", re.I)
+
 def ogeler_kur(j, src, simdi):
     """feeds.json -> tekilleştirilmiş haber öğeleri (kümelemeye girer). Dönüş: (ogeler, kaynak başına 72 sa sayaç)"""
     ogeler, gor = [], set()
     n72 = Counter()
     for sid, f in j['feeds'].items():
         s = src.get(sid, {})
-        if sid.startswith('trends-'): continue   # Google Trends haber değil, arama sinyali: ayrı işlenir (ekler.trendler_uret)
+        if sid.startswith('trends-'): continue
+        if s.get('aktif') is False: continue   # kapatılan kaynağın eski kayıtları (feeds.json bir tur geriden gelir) akışa girmez   # Google Trends haber değil, arama sinyali: ayrı işlenir (ekler.trendler_uret)
         for it in f['items']:
             l = it.get('l'); t = (it.get('t') or '').strip()
             if not l or not t or not it.get('d'): continue
+            if GELISTIRICI.search(t) and not TUKETICI.search(t): continue
             try: z = datetime.fromisoformat(it['d']).timestamp()
             except Exception: continue
             n72[sid] += 1
@@ -653,22 +711,33 @@ def main():
         pr, alt = profil_bul(c, bas['t'])
         c['profil'] = pr; c['reels_alt'] = alt
     reels = []
-    gorulen_tok = []
+    gorulen_tok = []; gorulen_var = []; konu_say = Counter()
+    # hikâye anahtarındaki yaygın kelimeler (leak, kamera, bakan, fiyatı…) eşleşme sayılmaz: yalnız aday havuzunda seyrek olanlar
+    uygun = [x for x in cikti if x[0]['r'] >= REELS_ESIK and not x[0]['elen'] and (simdi - x[0]['son']) <= 72 * 3600]
+    df = Counter(v for x in uygun for v in reels_anahtar(x[1]))
+    seyrek = lambda s: {v for v in s if df[v] <= max(4, len(uygun) // 40)}
     for c, og, bas in sorted(cikti, key=lambda x: -x[0]['r']):
-        if c['r'] < 38 or c['elen'] or c['kb'] < 1: continue
+        if c['r'] < REELS_ESIK or c['elen'] or c['kb'] < 1: continue
         if (simdi - c['son']) > 72 * 3600: continue
         # aynı olayın ikinci kartı: kümeler zaten birleşik; yine de çok benzer başlık varsa atla
         tk = M.sozcuk(c['t']); tks = {M.kok(w) for w in tk}
         if any(len(tks & q) / max(1, len(tks | q)) >= .5 for q in gorulen_tok[-80:]): continue
-        gorulen_tok.append(tks)
+        # aynı hikâyenin farklı dildeki/anlatımdaki kartı: kümedeki tüm başlıkların özel adları ve model numaraları
+        vs = reels_anahtar(og)
+        if any(len(seyrek(vs & q)) >= 2 for q in gorulen_var): continue
+        # tek konu (GTA 6, iPhone 20, Nvidia…) listeyi doldurmasın: en fazla 2 kart
+        modeller = {v for v in vs if ' ' in v}
+        if any(konu_say[v] >= 2 for v in modeller): continue
+        gorulen_tok.append(tks); gorulen_var.append(vs)
+        for v in modeller: konu_say[v] += 1
         reels.append((c, og, bas))
     # çıktı: reels (profil dengeli: her profilden en fazla 60)
     prof_say = Counter(); reels_son = []
     for c, og, bas in reels:
-        if all(prof_say[p] >= 60 for p in c['profil']): continue
+        if all(prof_say[p] >= REELS_PROFIL for p in c['profil']): continue
         for p in c['profil']: prof_say[p] += 1
         reels_son.append((c, og, bas))
-        if len(reels_son) >= 220: break
+        if len(reels_son) >= REELS_TOPLAM: break
     elenen_say = Counter(c['elen'] for c, _, _ in cikti if c['elen'])
     reels_json = []
     for c, og, bas in reels_son:
