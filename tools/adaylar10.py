@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""Aday kaynaklar (2026-11-20): zayıf alanlar (yz, siber, adana, oto) için Türkçe kaynaklar; ekonomi/spor/siyaset için birkaç aday."""
+G = 'https://news.google.com/rss/search?q=%s&hl=tr&gl=TR&ceid=TR:tr'
+A = [
+('5ocakgazetesi', '5 Ocak Gazetesi', 'tr', 'TR', 'tr', 'adana', 'ana akim', 'https://www.5ocakgazetesi.com/rss', ''),
+('kucuksaat', 'Küçük Saat', 'tr', 'TR', 'tr', 'adana', 'ana akim', 'https://www.kucuksaat.com/rss', ''),
+('otoaktuel', 'Oto Aktüel', 'tr', 'TR', 'auto', 'oto', 'ana akim', 'https://www.otoaktuel.com.tr/rss', ''),
+('diken-yz', 'Diken Yapay Zekâ', 'tr', 'TR', 'tech', 'yz', 'ana akim', 'https://www.diken.com.tr/tag/yapay-zeka/feed/', ''),
+('egirisim-yz', 'egirisim Yapay Zekâ', 'tr', 'TR', 'tech', 'yz', 'ana akim', 'https://www.egirisim.com/category/yapay-zeka/feed/', ''),
+('teknoseyir-yz', 'Teknoseyir Yapay Zekâ', 'tr', 'TR', 'tech', 'yz', 'ana akim', 'https://teknoseyir.com/kategori/yapay-zeka/feed', ''),
+('teknoseyir-yz-ara', 'Teknoseyir yapay zekâ araması', 'tr', 'TR', 'tech', 'yz', 'ana akim', 'https://www.teknoseyir.com/?s=yapay+zeka&feed=rss2', ''),
+('gn-tr-yz-model', 'Yapay zekâ modelleri (GN TR)', 'tr', 'TR', 'tech', 'yz', 'toplayici', G % 'ChatGPT%20OR%20Gemini%20OR%20%22Claude%22%20yapay%20zek%C3%A2%20when%3A2d', 'toplayici'),
+('gn-tr-yz-yasa', 'Yapay zekâ düzenleme ve etik (GN TR)', 'tr', 'TR', 'tech', 'yz', 'toplayici', G % 'yapay%20zek%C3%A2%20d%C3%BCzenleme%20OR%20etik%20OR%20telif%20when%3A3d', 'toplayici'),
+('diken-guvenlik', 'Diken Güvenlik', 'tr', 'TR', 'tech', 'siber', 'ana akim', 'https://www.diken.com.tr/tag/guvenlik/feed/', ''),
+('gn-site-usom', 'USOM (GN site:)', 'tr', 'TR', 'tech', 'siber', 'toplayici', G % 'site%3Ausom.gov.tr%20when%3A30d', 'toplayici'),
+('gn-tr-fidye', 'Fidye yazılımı ve veri sızıntısı (GN TR)', 'tr', 'TR', 'tech', 'siber', 'toplayici', G % 'fidye%20yaz%C4%B1l%C4%B1m%C4%B1%20OR%20%22veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%22%20when%3A3d', 'toplayici'),
+('gn-tr-siber-acik', 'Güvenlik açığı ve yama (GN TR)', 'tr', 'TR', 'tech', 'siber', 'toplayici', G % 'siber%20g%C3%BCvenlik%20a%C3%A7%C4%B1%C4%9F%C4%B1%20OR%20zafiyet%20OR%20phishing%20when%3A3d', 'toplayici'),
+('ntv-ekonomi', 'NTV Ekonomi', 'tr', 'TR', 'eco', 'ekonomi', 'ana akim', 'https://www.ntv.com.tr/ekonomi.rss', ''),
+('sozcu-ekonomi', 'Sözcü Ekonomi', 'tr', 'TR', 'eco', 'ekonomi', 'ana akim', 'https://www.sozcu.com.tr/feeds-rss-category-ekonomi', ''),
+('cnnturk-ekonomi', 'CNN Türk Ekonomi', 'tr', 'TR', 'eco', 'ekonomi', 'ana akim', 'https://www.cnnturk.com/feed/rss/ekonomi/news', ''),
+('haberturk-ekonomi', 'Habertürk Ekonomi', 'tr', 'TR', 'eco', 'ekonomi', 'ana akim', 'https://www.haberturk.com/rss/ekonomi.xml', ''),
+('sabah-ekonomi', 'Sabah Ekonomi', 'tr', 'TR', 'eco', 'ekonomi', 'ana akim', 'https://www.sabah.com.tr/rss/ekonomi.xml', ''),
+('cumhuriyet-siyaset', 'Cumhuriyet Siyaset', 'tr', 'TR', 'tr', 'siyaset', 'ana akim', 'https://www.cumhuriyet.com.tr/rss/siyaset.xml', ''),
+('evrensel', 'Evrensel', 'tr', 'TR', 'tr', 'siyaset', 'ana akim', 'https://www.evrensel.net/rss/haber.xml', ''),
+('birgun', 'BirGün', 'tr', 'TR', 'tr', 'siyaset', 'ana akim', 'https://www.birgun.net/rss/home', ''),
+('aksam-siyaset', 'Akşam', 'tr', 'TR', 'tr', 'siyaset', 'ana akim', 'https://www.aksam.com.tr/rss/rss.asp?cid=2', ''),
+('sabah-spor', 'Sabah Spor', 'tr', 'TR', 'sport', 'spor', 'spor', 'https://www.sabah.com.tr/rss/spor.xml', ''),
+('haberturk-spor', 'Habertürk Spor', 'tr', 'TR', 'sport', 'spor', 'spor', 'https://www.haberturk.com/rss/spor.xml', ''),
+('cnnturk-spor', 'CNN Türk Spor', 'tr', 'TR', 'sport', 'spor', 'spor', 'https://www.cnnturk.com/feed/rss/spor/news', ''),
+('sozcu-spor', 'Sözcü Spor', 'tr', 'TR', 'sport', 'spor', 'spor', 'https://www.sozcu.com.tr/feeds-rss-category-spor', ''),
+('trtspor', 'TRT Spor', 'tr', 'TR', 'sport', 'spor', 'spor', 'https://www.trtspor.com.tr/rss/anasayfa.rss', ''),
+]

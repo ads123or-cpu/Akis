@@ -1,0 +1,328 @@
+[
+ {
+  "id": "5ocakgazetesi",
+  "url": "https://www.5ocakgazetesi.com/rss",
+  "tarih": "2026-11-20",
+  "ms": 1367,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T21:01:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "T.C. ADANA GAYRİMENKUL SATIŞ İCRA DAİRESİ 2026/616 ESAS",
+   "O Küçük Yürekte Kocaman Bir Adanaspor Sevgisi Var"
+  ],
+  "ok": true
+ },
+ {
+  "id": "kucuksaat",
+  "url": "https://www.kucuksaat.com/rss",
+  "tarih": "2026-11-20",
+  "ms": 547,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T18:30:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Çukurova Üniversitesinde 300 kişilik İŞKUR programı: Son başvuru 20 Kasım",
+   "Adana’da Hacı Sabancı anısına özel konser: Biletler tükendi"
+  ],
+  "ok": true
+ },
+ {
+  "id": "otoaktuel",
+  "url": "https://www.otoaktuel.com.tr/rss",
+  "tarih": "2026-11-20",
+  "ms": 1419,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T13:51:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Ford Tourneo Courier’nin Yeni Serisi Courier Blackline",
+   "Yenilenen Lexus NX, 2027' de Türkiye Yollarına Çıkacak"
+  ],
+  "ok": true
+ },
+ {
+  "id": "diken-yz",
+  "url": "https://www.diken.com.tr/tag/yapay-zeka/feed/",
+  "tarih": "2026-11-20",
+  "ms": 464,
+  "kod": 200,
+  "n": 7,
+  "n_tarihli": 7,
+  "son_haber": "2026-04-12T11:09:28+00:00",
+  "son_gun": 221,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "egirisim-yz",
+  "url": "https://www.egirisim.com/category/yapay-zeka/feed/",
+  "tarih": "2026-11-20",
+  "ms": 1297,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": [
+   "https://egirisim.com/feed/",
+   "https://egirisim.com/comments/feed/"
+  ]
+ },
+ {
+  "id": "teknoseyir-yz",
+  "url": "https://teknoseyir.com/kategori/yapay-zeka/feed",
+  "tarih": "2026-11-20",
+  "ms": 1002,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": [
+   "https://teknoseyir.com/feed/podcast"
+  ]
+ },
+ {
+  "id": "teknoseyir-yz-ara",
+  "url": "https://www.teknoseyir.com/?s=yapay+zeka&feed=rss2",
+  "tarih": "2026-11-20",
+  "ms": 1057,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-19T21:38:14+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "15 saat gta6 oynadım çok yeni çıktı diye",
+   "Artık bir video önüme düştüğünde"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-yz-model",
+  "url": "https://news.google.com/rss/search?q=ChatGPT%20OR%20Gemini%20OR%20%22Claude%22%20yapay%20zek%C3%A2%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-20",
+  "ms": 1180,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T22:03:54+00:00",
+  "son_gun": 0,
+  "ortak": 0.28,
+  "ornek": [
+   "Anthropic hisseleri Nasdaq’taki ilk işlem gününde yükseldi",
+   "Google Gemini Mac'te bilgisayar kontrolü sunmaya başladı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-yz-yasa",
+  "url": "https://news.google.com/rss/search?q=yapay%20zek%C3%A2%20d%C3%BCzenleme%20OR%20etik%20OR%20telif%20when%3A3d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-20",
+  "ms": 1048,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T23:46:02+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "Anthropic’in Halka Arzı, Yapay Zekâ Güvenliği ve Sağlık Hizmetleri Konusundaki P",
+   "Mast, NVIDIA ve AMD Yapay Zekâ Çiplerinin Çin’e Lisanslanmasına İlişkin Kayıtlar"
+  ],
+  "ok": true
+ },
+ {
+  "id": "diken-guvenlik",
+  "url": "https://www.diken.com.tr/tag/guvenlik/feed/",
+  "tarih": "2026-11-20",
+  "ms": 449,
+  "kod": 200,
+  "n": 11,
+  "n_tarihli": 11,
+  "son_haber": "2022-02-16T09:59:52+00:00",
+  "son_gun": 1737,
+  "ortak": 0.0,
+  "ok": false,
+  "neden": "45 gunden eski (guncellenmiyor)"
+ },
+ {
+  "id": "gn-site-usom",
+  "url": "https://news.google.com/rss/search?q=site%3Ausom.gov.tr%20when%3A30d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-20",
+  "ms": 752,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "gn-tr-fidye",
+  "url": "https://news.google.com/rss/search?q=fidye%20yaz%C4%B1l%C4%B1m%C4%B1%20OR%20%22veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%22%20when%3A3d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-20",
+  "ms": 987,
+  "kod": 200,
+  "n": 9,
+  "n_tarihli": 9,
+  "son_haber": "2026-11-19T10:11:33+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Што научи Фондот за здравство од „рансомвер“-нападот, ако и понатаму има седум в",
+   "Kendilerini IT uzmanı gibi tanıttılar. 28 şirketten 40,5 milyon dolar fidye aldı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-tr-siber-acik",
+  "url": "https://news.google.com/rss/search?q=siber%20g%C3%BCvenlik%20a%C3%A7%C4%B1%C4%9F%C4%B1%20OR%20zafiyet%20OR%20phishing%20when%3A3d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-20",
+  "ms": 1275,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-20T00:14:34+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "Siber Güvenlik Başkanlığından Siber Dayanıklılık Yönetmeliği Taslağı: Kurumlara ",
+   "Siber Güvenlik Araştırmacısı Ebubekir Bastama: “Telefonları Haftada Bir Yeniden "
+  ],
+  "ok": true
+ },
+ {
+  "id": "ntv-ekonomi",
+  "url": "https://www.ntv.com.tr/ekonomi.rss",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "sozcu-ekonomi",
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-ekonomi",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "cnnturk-ekonomi",
+  "url": "https://www.cnnturk.com/feed/rss/ekonomi/news",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "haberturk-ekonomi",
+  "url": "https://www.haberturk.com/rss/ekonomi.xml",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "sabah-ekonomi",
+  "url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "cumhuriyet-siyaset",
+  "url": "https://www.cumhuriyet.com.tr/rss/siyaset.xml",
+  "tarih": "2026-11-20",
+  "ms": 491,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T21:44:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.24,
+  "ornek": [
+   "Saadet Partili Güneş’ten AKP'ye sert tepki: 'Çiftçi, emekli, emekçi perişan'",
+   "Türkiye dahil 15 ülkeden İsrail'in yerleşim politikalarına ortak tepki"
+  ],
+  "ok": true
+ },
+ {
+  "id": "evrensel",
+  "url": "https://www.evrensel.net/rss/haber.xml",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "birgun",
+  "url": "https://www.birgun.net/rss/home",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "aksam-siyaset",
+  "url": "https://www.aksam.com.tr/rss/rss.asp?cid=2",
+  "tarih": "2026-11-20",
+  "ms": 793,
+  "kod": 200,
+  "n": 20,
+  "n_tarihli": 20,
+  "son_haber": "2026-11-19T11:10:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Başkan Erdoğan fitnecilere karşı uyardı: Dedikoduya, fısıltıya uzağız",
+   "Şam'ın SDG planına Ankara desteği: Bakan Fidan komisyonda açıkladı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "sabah-spor",
+  "url": "https://www.sabah.com.tr/rss/spor.xml",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "haberturk-spor",
+  "url": "https://www.haberturk.com/rss/spor.xml",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "cnnturk-spor",
+  "url": "https://www.cnnturk.com/feed/rss/spor/news",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "sozcu-spor",
+  "url": "https://www.sozcu.com.tr/feeds-rss-category-spor",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "neden": "zaten kayitli"
+ },
+ {
+  "id": "trtspor",
+  "url": "https://www.trtspor.com.tr/rss/anasayfa.rss",
+  "tarih": "2026-11-20",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 517,
+  "kesif": []
+ }
+]

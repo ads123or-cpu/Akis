@@ -21,14 +21,14 @@ import masa as M   # sozcuk/kok yardımcıları ve STOP listesi eski hattan alı
 
 SAAT = 168                     # kümelemeye giren haber yaşı (saat)
 CIKTI = 'site/data'
-ALANLAR = ['gundem', 'adana', 'tekno', 'yz', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'oyun', 'eglence']
+ALANLAR = ['gundem', 'adana', 'tekno', 'yz', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'savunma', 'oto', 'oyun', 'eglence']
 ALAN_AD = {'gundem': 'Gündem Radarı', 'adana': 'Adana', 'tekno': 'Teknoloji Radarı', 'siyaset': 'Siyaset ve Jeopolitik', 'spor': 'Spor', 'ekonomi': 'Ekonomi ve Finans',
            'bilim': 'Bilim ve Uzay', 'siber': 'Siber Güvenlik', 'oto': 'Otomobil ve Ulaşım', 'eglence': 'Kültür ve Eğlence',
-           'yz': 'Yapay Zekâ', 'oyun': 'Oyun'}
+           'yz': 'Yapay Zekâ', 'oyun': 'Oyun', 'savunma': 'Savunma Sanayi'}
 KUME_ALAN_SINIR = 360          # alan başına dosyaya yazılan küme sayısı
 # Türkçe/İngilizce dışındaki diller çoğunlukla tek kaynaklı kalır ve önem sıralamasında 360'ın altına düşer;
 # her alan dosyasında her dile ayrıca bu kadar yer ayrılır (Akış'taki dil süzgeci boş kalmasın).
-DIL_AYRILAN = 12
+DIL_AYRILAN = 6            # 2026-11-20: 12'den indirildi (kume-tekno/gundem 1100 KB sınırına yaklaşıyordu)
 DIL_DOSYA_SINIR = 150          # dil-XX.json başına küme
 DIL_AD = {'tr': ('Türkçe', 'Türkçe'), 'en': ('English', 'İngilizce'), 'zh': ('中文', 'Çince'), 'ja': ('日本語', 'Japonca'),
           'ko': ('한국어', 'Korece'), 'de': ('Deutsch', 'Almanca'), 'fr': ('Français', 'Fransızca'), 'es': ('Español', 'İspanyolca'),
@@ -54,14 +54,14 @@ def kanonik(url):
         return url
 
 ORG_ALIAS = [  # (desen, kurum) — aynı kuruluşun farklı bölüm akışları / yazımları tek kurum sayılır
-    (r'anadolu|^aa$|\baa\b', 'aa'), (r'^trt|trt ', 'trt'), (r'^ntv|ntv ', 'ntv'), (r'hürriyet|hurriyet', 'hurriyet'), (r'milliyet', 'milliyet'),
-    (r'sabah|a haber|ahaber|atv', 'sabah'), (r'sözcü|sozcu', 'sozcu'), (r'habertürk|haberturk', 'haberturk'), (r'cnn ?türk|cnnturk', 'cnnturk'),
+    (r'anadolu (ajans|agency)|^aa$|\baa\b', 'aa'), (r'^trt|trt ', 'trt'), (r'^ntv|ntv ', 'ntv'), (r'\bh[üu]rriyet\b(?! ?(i|haber))', 'hurriyet'), (r'milliyet', 'milliyet'),
+    (r'\bsabah\b|^a ?haber$|^a haber\b|^ahaber|^atv\b', 'sabah'), (r'sözcü|sozcu', 'sozcu'), (r'habertürk|haberturk', 'haberturk'), (r'cnn ?türk|cnnturk', 'cnnturk'),
     (r'bbc', 'bbc'), (r'\bdw\b|deutsche welle', 'dw'), (r'france ?24', 'france24'), (r'al ?jazeera|aljazeera', 'aljazeera'),
     (r'guardian', 'guardian'), (r'new york times|nytimes|^nyt', 'nyt'), (r'washington post|wapo', 'wapo'), (r'reuters', 'reuters'),
-    (r'associated press|^ap$|ap news', 'ap'), (r'\bafp\b|agence france', 'afp'), (r'bloomberg', 'bloomberg'), (r'cnbc', 'cnbc'),
+    (r'associated press|^ap$|ap news', 'ap'), (r'\bafp\b|agence france', 'afp'), (r'bloomberg', 'bloomberg'), (r'cnbc(?!-?e\b)', 'cnbc'),
     (r'euronews', 'euronews'), (r'^(the )?independent\b', 'independent'), (r'daily sabah', 'dailysabah'), (r'9to5mac|9to5google', '9to5'),
     (r'ars technica|arstechnica|ars$', 'ars'), (r'the verge|theverge|^verge', 'verge'), (r'google', 'googlehaber'), (r'youtube|^yt-', 'youtube'),
-    (r'fanatik|a spor|aspor', 'sabah'),
+    (r'fanatik|^a ?spor\b', 'sabah'),
 ]
 ORG_RX = [(re.compile(a, re.I), b) for a, b in ORG_ALIAS]
 AJANS_ISARET = re.compile(r'\((aa|dha|iha|ihlas|anka|reuters|afp|ap|apa|epa)\)|^(aa|dha|iha|reuters|afp|ap)\b|\b(reuters|afp|associated press)\b.{0,12}(reported|dedi|aktardı)', re.I)
@@ -128,18 +128,26 @@ KURAL = {
  'adana': re.compile(r"\badana|yüreğir|sarıçam|karaisalı|pozantı|yumurtalık|tufanbeyli|saimbeyli|incirlik|seyhan barajı|çukurova üniversitesi|adana demirspor|adanaspor|\bçukurova(da|'da|’da)?\b", re.I),
  # Başka anlamı da olan ilçe adları: yalnız Adana kaynaklı haberde sayılır. İmamoğlu yalnız yer ekiyle (İmamoğlu'nda) ilçe sayılır.
  'adana_ilce': re.compile(r"\b(seyhan|ceyhan|kozan|karataş|feke|aladağ|çukurova)\b|imamoğlu['’]n(da|dan)\b|İmamoğlu['’]n(da|dan)\b|imamoğlu ilçe", re.I),
- 'siyaset': re.compile(r"erdoğan|cumhurbaşkan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|seçim|siyasi|muhalefet|iktidar|özgür özel|bahçeli|yaptırım|diplomasi|diplomat|zirve|büyükelçi|dışişleri|nato\b|birleşmiş milletler|güvenlik konseyi|trump|biden|harris|putin|zelen|netanyahu|macron|şi cinping|xi jinping|kongre|senato|beyaz saray|kremlin|brüksel|avrupa birliği|\bab\b|israil|filistin|gazze|hamas|hizbullah|iran|suriye|ukrayna|rusya|tayvan|savunma bakan|savunma sanayi|election|parliament|sanction|diplomat|summit|ambassador|president|prime minister|congress|senate|white house|kremlin|nato\b|united nations|security council|ceasefire|ateşkes|treaty|referendum|coalition|opposition party|defen[cs]e minister|sanctions", re.I),
+ 'siyaset': re.compile(r"erdoğan|cumhurbaşkan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|seçim|siyasi|muhalefet|iktidar|özgür özel|bahçeli|yaptırım|diplomasi|diplomat|zirve|büyükelçi|dışişleri|nato\b|birleşmiş milletler|güvenlik konseyi|trump|biden|harris|putin|zelen|netanyahu|macron|şi cinping|xi jinping|kongre|senato|beyaz saray|kremlin|brüksel|avrupa birliği|\bab\b|israil|filistin|gazze|hamas|hizbullah|\biran(?!\w)|\biran(lı|ian)|\biran['’]|suriye|ukrayna|rusya|tayvan|savunma bakan|savunma sanayi|election|parliament|sanction|diplomat|summit|ambassador|president|prime minister|congress|senate|white house|kremlin|nato\b|united nations|security council|ceasefire|ateşkes|treaty|referendum|coalition|opposition party|defen[cs]e minister|sanctions", re.I),
  'savas': re.compile(r"savaş|çatışma|saldırı|füze|hava saldırısı|ateşkes|asker|ordu\b|cephe|işgal|bombardıman|silahlı|terör|drone saldırı|war\b|attack|missile|airstrike|strike|troops|frontline|invasion|military|ceasefire|offensive|bombing|terror", re.I),
  'siber': re.compile(r"siber(?!ia)|güvenlik açığ|sızıntı|veri ihlali|fidye|ransomware|zero-?day|malware|zararlı yazılım|oltalama|phishing|hacker|hack\b|saldırgan|cve-\d|vulnerab|data breach|botnet|exploit|backdoor|apt\d|cyberattack|cyber attack|ddos|kimlik avı|dolandırıcı", re.I),
- 'spor_guclu': re.compile(r"maç|gol\b|futbol|basketbol|voleybol|süper lig|şampiyonlar ligi|teknik direktör|hakem|transfer|milli takım|\bnba\b|euroleague|uefa|fifa|olimpiyat|formula ?1|\bf1\b|motogp|tenis|wimbledon|grand slam|\batp\b|\bwta\b|ufc|boks|güreş|espor|e-spor|premier league|la liga|serie a|bundesliga|champions league|football|soccer|basketball|volleyball|tennis|coach|goal\b|stadium|tournament|athlete|olympic|grand prix|galatasaray|fenerbahçe|beşiktaş|trabzonspor", re.I),
- 'ekonomi_guclu': re.compile(r"dolar|euro\b|altın|borsa|bist|enflasyon|faiz|merkez bankası|ekonomi|asgari ücret|emekli maaş|vergi|ihracat|ithalat|bütçe|petrol|akaryakıt|benzin|motorin|konut|kira artış|bitcoin|kripto|\bfed\b|inflation|interest rate|stocks?\b|wall street|gdp|tariff|oil price|currency|ticaret|piyasa|cari açık|işsizlik|unemployment|central bank|recession|ipo\b|nasdaq|s&p", re.I),
- 'bilim_guclu': re.compile(r"nasa\b|uzay|gezegen|astronom|teleskop|asteroid|fosil|keşfetti|araştırmacılar|bilim insanları|genetik|\bdna\b|kanser tedavi|iklim değişikliği|kuantum|fizik|evren|mars\b|ay'a|space station|scientists|researchers|study finds|astronomers|physics|biology|quantum|exoplanet|galaxy|black hole|climate|vaccine|clinical trial|peer-reviewed", re.I),
- 'oto_guclu': re.compile(r"otomobil|araba\b|otomotiv|elektrikli (araç|otomobil|araba|suv)|togg|tesla|bmw|mercedes|audi|volkswagen|porsche|ferrari|ford\b|fiat|renault|hyundai|toyota|byd\b|şarj istasyon|sürücüsüz|otonom|suv\b|sedan|electric vehicle|\bev\b|self-driving|autonomous|car maker|automaker|recall|lamborghini|mclaren|yeni model|raylı sistem|metro hattı|hızlı tren|havalimanı|thy\b|pegasus|ulaşım|trafik|köprü|otoyol|airline|flight", re.I),
- 'tekno_guclu': re.compile(r"iphone|ipad|macbook|android|samsung|galaxy|xiaomi|huawei|google|pixel|microsoft|windows|openai|chatgpt|claude|gemini|anthropic|yapay zek|artificial intelligence|\bai\b|işlemci|ekran kart|nvidia|intel\b|amd\b|qualcomm|snapdragon|telefon|akıllı|bilgisayar|laptop|yazılım|uygulama|siber(?!ia)|robot|drone|oyun|playstation|xbox|steam|nintendo|teknoloji|whatsapp|instagram|tiktok|youtube|netflix|starlink|spacex|çip|yarı iletken|chip|startup|giyilebilir|akıllı saat|kulaklık|tablet|5g|bulut|veri merkezi|ios \d|one ui", re.I),
+ 'spor_guclu': re.compile(r"maç|gol\b|futbol|basketbol|voleybol|süper lig|şampiyonlar ligi|teknik direktör|hakem|transfer|milli takım|\bnba\b|euroleague|uefa|fifa|olimpiyat|formula ?1|\bf1\b|motogp|tenis|wimbledon|grand slam|\batp\b|\bwta\b|ufc|boks|güreş|espor|e-spor|premier league|la liga|serie a|bundesliga|champions league|football|soccer|basketball|volleyball|tennis|coach|goal\b|stadium|tournament|athlete|olympic|grand prix|galatasaray|fenerbahçe|beşiktaş|trabzonspor|başakşehir|real madrid|barcelona|atletico|manchester (united|city)|liverpool|bayern|juventus|inter milan|\binter['’](in|e|i)\b|ac milan|\bpsg\b|arsenal|chelsea|tottenham|sözleşmesini uzattı|futbolcu|kaleci|forvet|stoper", re.I),
+ 'ekonomi_guclu': re.compile(r"dolar|euro\b(?!\s?(20\d\d|cup|kupa|league|lig|elemeler))|altın(?!\s?(madalya|top\b|gol|eldiven|krampon|küre|kelebek|portakal|yaş|kız|çocuk))|borsa|bist|enflasyon|faiz|merkez bankası|ekonomi|asgari ücret|emekli maaş|vergi|ihracat|ithalat|bütçe|petrol|akaryakıt|benzin|motorin|konut|kira artış|bitcoin|kripto|\bfed\b|inflation|interest rate|stocks?\b|wall street|gdp|tariff|oil price|currency|ticaret|piyasa|cari açık|işsizlik|unemployment|central bank|recession|ipo\b|nasdaq|s&p", re.I),
+ 'bilim_guclu': re.compile(r"nasa\b|uzay|gezegen|astronom|teleskop|asteroid|fosil|keşfetti|araştırmacılar|bilim insanları|genetik|\bdna\b|kanser tedavi|iklim değişikliği|kuantum|fizik|evren|mars\b|ay'a|space station|scientists|researchers|study finds|astronomers|physics|biology|quantum|exoplanet|(?<!samsung )galax(y|ies)(?!\s?([szamf]\d|z (fold|flip)|tab|buds|watch|fold|flip|ring|book|ai\b|xr\b|unpacked|store|phone|series|ultra|edge|\d))|black hole|climate|vaccine|clinical trial|peer-reviewed", re.I),
+ 'oto_guclu': re.compile(r"otomobil|araba\b|otomotiv|elektrikli (araç|otomobil|araba|suv)|togg|tesla|bmw|mercedes|audi|volkswagen|porsche|ferrari|ford\b|fiat|renault|hyundai|toyota|byd\b|şarj istasyon|sürücüsüz|otonom|suv\b|sedan|electric vehicle|\bevs\b|\bev (charging|charger|battery|sales|maker|market|startup|range|tax|subsid)|self-driving|autonomous|car maker|automaker|recall|lamborghini|mclaren|yeni model|raylı sistem|metro hattı|hızlı tren|havalimanı|thy\b|pegasus|ulaşım|trafik|köprü|otoyol|airline|flight", re.I),
+ 'tekno_guclu': re.compile(r"iphone|ipad|macbook|android|samsung|galaxy|xiaomi|huawei|google|pixel|microsoft|windows|openai|chatgpt|claude|gemini|anthropic|yapay zek|artificial intelligence|\bai\b|işlemci|ekran kart|nvidia|intel\b|amd\b|qualcomm|snapdragon|telefon|akıllı|bilgisayar|laptop|yazılım|uygulama|siber(?!ia)|robot|drone|oyun|playstation|xbox|steam|nintendo|teknoloji|whatsapp|instagram|tiktok|youtube|netflix|starlink|spacex|çip|yarı iletken|chip|startup|giyilebilir|akıllı saat|kulaklık|tablet|5g|bulut|veri merkezi|ios \d|one ui|oneplus|motorola|\boppo\b|realme|\bhonor\b|smartphone|akıllı telefon", re.I),
  # Yapay zekâ ve oyun 2026-11-18'de ayrı alan oldu (Teknoloji ve Eğlence içindeki en kalabalık iki konu); oyun artık Eğlence'ye girmez.
  'yz_guclu': re.compile(r"yapay zek|chatgpt|openai|claude|anthropic|gemini|grok\b|deepseek|\bllm|büyük dil model|language model|\bai\b|artificial intelligence|midjourney|\bsora\b|copilot|mistral|perplexity|\bgpt-?\d|\bagi\b|chatbot|sohbet robotu|deepfake|künstliche intelligenz|intelligence artificielle|inteligencia artificial|人工智能|生成式|人工知能|인공지능", re.I),
  'oyun_guclu': re.compile(r"playstation|\bps5\b|\bps6\b|xbox|nintendo|switch 2|\bsteam\b|\bgta\b|video ?game|videogame|gaming|oyun (dünyası|severler|sektörü|stüdyosu|konsolu)|bilgisayar oyunu|mobil oyun|oyunu\b|oyunun\b|game awards|game pass|epic games|ubisoft|rockstar|bethesda|blizzard|riot games|valorant|fortnite|minecraft|call of duty|battlefield|zelda|pokemon|pokémon|elden ring|\bdlc\b|game (studio|developer|update|trailer|release|director)|games? (industry|studio)|(new|upcoming|indie|mobile|pc|console) games?\b|\bgamers?\b", re.I),
  'eglence_guclu': re.compile(r"dizi|film|sinema|oyuncu|şarkıcı|ünlü|konser|albüm|festival|oscar|gişe|fragman|yönetmen|survivor|masterchef|sanatçı|netflix dizisi|trailer|box office|movie|series|actor|singer|album|anime|hollywood|billboard|grammy|emmy|viral|fenomen|tiktok", re.I),
+ # Savunma sanayi (2026-11-20). İki katman: ÖZEL (şirket, ürün, program, "savunma sanayi") tek başına yeter;
+ # GENEL (füze, savaş uçağı, denizaltı…) en az iki terim ya da savunma kaynağı ister. "savunma" kelimesi tek başına
+ # (futbolda savunma, sanığın savunması) sayılmaz; yalnız sanayi/bakanlık/sistem bağlamında.
+ 'savunma_guclu': re.compile(r"savunma sanayi|savunma (bakan|sistem|teknoloji|şirket|firma|ihracat|proje|harcama|bütçe|tedarik|fuar|sektör|ürün|dev[iı]|alanında|işbirliği|anlaşma|platform|araştırma)|(hava|füze|milli|ulusal|çok katmanlı) savunma|savunma ve havacılık|çelik kubbe|(?-i:\bSSB\b)|savunma sanayii başkan|haluk görgün|aselsan|roketsan|tusaş|havelsan|\bmkek?\b|\bfnss\b|otokar (cobra|arma|altay|tulpar|kaya|savunma|zırhlı)|nurol (makina|ejder|yörük)|\bstm (savunma|kargu|togan)|baykar|bayraktar (tb\d|akıncı|kızılelma|kizilelma)|selçuk bayraktar|akıncı (tiha|siha|iha)|kızılelma|kizilelma|(?-i:\bKAAN\b)|kaan (savaş|uçağı|milli|projesi|motor)|milli muharip uçak|hürjet|hurjet|\banka-?3\b|\bgökbey\b|altay tank|(?-i:\bTCG [A-ZÇĞİÖŞÜ])|anadolu (gemisi|sınıfı)|milgem|\bhisar-?[ao]\b|\bsiper\b (füze|hava|sistem)|korkut (hava|sistem|namlu)|\btayfun (füze|blok)|atmaca (füze|seyir|gemisavar)|\bçakır füze|defen[cs]e (industry|industr|contractor|firm|company|companies|ministry|minister|budget|spending|procurement|deal|export|sector|tech|startup)|defen[cs]e and aerospace|aerospace and defen[cs]e|lockheed|raytheon|\brtx (corp|corporation)|northrop|general dynamics|bae systems|rheinmetall|saab (gripen|globaleye|defen|ab\b)|gripen|dassault|\brafale\b|eurofighter|\bthales\b|\bmbda\b|\bkongsberg\b|\banduril\b|palantir.{0,40}(army|pentagon|military|defen)|loyal wingman", re.I),
+ # platform adları (İHA, F-35, Patriot…): savaş/saldırı haberinde de geçer; saldırı dili varsa tek başına savunma açmaz
+ 'savunma_platform': re.compile(r"(?-i:\bS?İHA(lar|ların|ları|sı|'lar|'ların|'sı)?\b)|\bsiha(lar|sı)?\b|silahlı insansız|insansız (hava|deniz|kara|savaş) (aracı|uçağı|botu)|\bf-?(16|35|47)\b|\bb-21\b|\buav\b|\bucav\b|\bhimars\b|\bpatriot (missile|system|battery|air)|iron dome|\bthaad\b|s-400", re.I),
+ 'savunma_genel': re.compile(r"füze(si|ler|leri)?\b|balistik|seyir füzesi|hava savunma|savaş uçağı|savaş uçakları|savaş gemisi|fırkateyn|korvet|denizaltı|muharip|mühimmat|zırhlı (araç|personel)|obüs|tank(ı|lar|ları)?\b|savaş helikopteri|taarruz helikopteri|donanma|hava kuvvetleri|kara kuvvetleri|deniz kuvvetleri|tatbikat|missiles?\b|ballistic|air defen[cs]e|fighter (jet|aircraft)s?|warships?|frigate|corvette|submarine|munitions?|ammunition|artillery|armou?red vehicle|\btanks?\b|navy|air force|\barmy\b|military (contract|procurement|aircraft|drone)|pentagon|nato (tedarik|procurement|summit|exercise|tatbikat)|military exercise|drills?\b|hypersonic|hipersonik", re.I),
+ 'savunma_saldiri': re.compile(r"saldırı|saldırdı|vurdu|bombard|hayatını kaybetti|öldü|yaralandı|\bstrikes?\b|airstrike|attack|killed|dead\b|wounded|shot down|düşürüldü", re.I),
  'gundem_guclu': re.compile(r"cinayet|gözaltı|tutuklandı|soruşturma|dava\b|mahkeme|savcılık|yargıtay|anayasa mahkemesi|hapis|ceza\b|belediye|valilik|yangın|sel\b|deprem|afet|kaza\b|yaralandı|hayatını kaybetti|okul|üniversite|sınav|yks|meb\b|öğrenci|hastane|sağlık bakan|salgın|aşı\b|ilaç|grip|zam\b|maaş|emekli|asgari ücret", re.I),
 }
 RE_HUKUK = re.compile(r"mahkeme|dava\b|savcı|yargıtay|anayasa mahkemesi|hakim|hâkim|tutuklan|beraat|iddianame|court|judge|lawsuit|indict|trial|verdict|sentenc", re.I)
@@ -160,23 +168,31 @@ ALT = {
           ('telefon', r'telefon|smartphone|iphone|galaxy|pixel|katlanabilir|foldable'), ('bilgisayar', r'bilgisayar|laptop|macbook|notebook|\bpc\b|masaüstü|monitör'), ('cip', r'işlemci|yarı iletken|\bçip|chip|nvidia|\bamd\b|intel\b|qualcomm|tsmc|gpu|rtx|ryzen|snapdragon|dimensity'),
           ('siber', r'siber|güvenlik açığ|hack|ransomware|veri ihlali|malware|phishing'), ('sosyal', r'instagram|whatsapp|tiktok|x\.com|twitter|facebook|threads|snapchat|telegram|reddit|bluesky|sosyal medya|youtube'), ('uygulama', r'uygulama|\bapp\b|play store|app store|güncelleme|özellik|feature'),
           ('yazilim', r'yazılım|software|windows|macos|işletim sistemi'), ('oyun', r'oyun|playstation|xbox|nintendo|steam|gta|game|gaming|epic games'), ('oto-tekno', r'otonom|sürücüsüz|tesla|togg|elektrikli|autopilot|self-driving'),
-          ('robotik', r'robot|insansı|humanoid|drone|boston dynamics|optimus'), ('giyilebilir', r'akıllı saat|giyilebilir|apple watch|galaxy watch|akıllı bileklik|smartwatch|wearable|airpods|kulaklık|smart ring'), ('ev', r'elektrikli araç|elektrikli otomobil|\bev\b|şarj|batarya|battery')],
+          ('robotik', r'robot|insansı|humanoid|drone|boston dynamics|optimus'), ('giyilebilir', r'akıllı saat|giyilebilir|apple watch|galaxy watch|akıllı bileklik|smartwatch|wearable|airpods|kulaklık|smart ring'), ('ev', r'elektrikli araç|elektrikli otomobil|\bevs\b|\bev (charging|charger|battery|sales|maker|market|startup|range|tax|subsid)|şarj|batarya|battery')],
  'siyaset': [('tr-siyaset', r'erdoğan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|özgür özel|bahçeli|belediye başkan|ekrem imamoğlu|türkiye siyaset|turkish politics'), ('abd', r'\babd\b|amerika|trump|biden|harris|kongre|senato|beyaz saray|washington|\bu\.?s\.?\b|congress|white house'), ('avrupa', r'avrupa|\bab\b|brüksel|almanya|fransa|macron|scholz|merz|ingiltere|starmer|european|\beu\b|brussels|germany|france|britain'),
-          ('cin', r'\bçin\b|şi cinping|pekin|tayvan|china|beijing|taiwan|xi jinping'), ('rusya', r'rusya|putin|kremlin|moskova|ukrayna|zelen|russia|moscow|ukraine'), ('orta-dogu', r'orta doğu|suriye|irak|iran|lübnan|yemen|körfez|suudi|katar|middle east|syria|iraq|lebanon|yemen|saudi|gulf'),
+          ('cin', r'\bçin\b|şi cinping|pekin|tayvan|china|beijing|taiwan|xi jinping'), ('rusya', r'rusya|putin|kremlin|moskova|ukrayna|zelen|russia|moscow|ukraine'), ('orta-dogu', r'orta doğu|suriye|\birak\b|\birak[\x27’]|\biran(?!\w)|\biran(lı|ian)|\biran[\x27’]|lübnan|yemen|körfez|suudi|katar|middle east|syria|iraq|lebanon|yemen|saudi|gulf'),
           ('israil-filistin', r'israil|filistin|gazze|hamas|hizbullah|netanyahu|batı şeria|israel|palestin|gaza|hezbollah|west bank'), ('nato', r'\bnato\b'), ('bm', r'birleşmiş milletler|\bbm\b|güvenlik konseyi|united nations|security council|\bun\b'), ('secim', r'seçim|oy\b|sandık|anket|referandum|election|poll\b|ballot|referendum|vote'),
           ('kriz', r'kriz|gerilim|büyükelçi|sınır|ateşkes|müzakere|crisis|tension|ambassador|ceasefire|negotiat'), ('yaptirim', r'yaptırım|ambargo|sanction|embargo|tariff|gümrük'), ('savunma', r'savunma|silah|füze|f-?35|f-?16|tank|donanma|hava kuvvetleri|baykar|aselsan|defen[cs]e|missile|fighter jet|navy|weapon|military')],
  'spor': [('futbol', r'futbol|süper lig|şampiyonlar ligi|avrupa ligi|premier league|la liga|serie a|bundesliga|football|soccer|champions league|galatasaray|fenerbahçe|beşiktaş|trabzonspor|teknik direktör|hakem|maç\b|gol\b'), ('basketbol', r'basketbol|nba|euroleague|basketball|a milli basketbol|tbf'), ('tenis', r'tenis|tennis|wimbledon|roland garros|us open|australian open|\batp\b|\bwta\b'), ('f1', r'formula ?1|\bf1\b|grand prix|verstappen|hamilton|leclerc'),
          ('motor', r'motogp|motorsport|ralli|\bwrc\b|superbike|nascar|indycar|sofuoğlu|tuncer'), ('voleybol', r'voleybol|volleyball|filenin sultanları|vakıfbank|eczacıbaşı|tvf'), ('olimpiyat', r'olimpiyat|olympic|paralimpik|paralympic'), ('dovus', r'ufc|boks|boxing|güreş|wrestling|mma|judo|karate|taekwondo'),
          ('espor', r'espor|e-spor|esports?|league of legends|valorant|counter-strike|dota'), ('transfer', r'transfer|bonservis|sözleşme imzaladı|kiralık|loan deal|signs? (a )?(contract|deal)|here we go'), ('kulup', r'galatasaray|fenerbahçe|beşiktaş|trabzonspor|başakşehir|real madrid|barcelona|manchester|liverpool|bayern|juventus|psg|arsenal|chelsea'), ('milli', r'milli takım|a milli|national team|türkiye milli')],
- 'ekonomi': [('doviz', r'dolar|euro\b|kur\b|döviz|dollar|currency|forex'), ('altin', r'altın|gram altın|ons|gold'), ('borsa', r'borsa|bist|hisse|wall street|nasdaq|stocks?\b|s&p|dow jones'), ('enflasyon', r'enflasyon|tüfe|üfe|inflation|cpi\b'), ('faiz', r'faiz|merkez bankası|tcmb|\bfed\b|ecb|interest rate|central bank'), ('kripto', r'bitcoin|kripto|ethereum|crypto|btc\b|stablecoin'),
+ 'ekonomi': [('doviz', r'dolar|euro\b(?!\s?(20\d\d|cup|kupa|league|lig|elemeler))|kur\b|döviz|dollar|currency|forex'), ('altin', r'altın(?!\s?(madalya|top\b|gol|eldiven|krampon|küre|kelebek|portakal))|gram altın|\bons\b|\bgold\b(?!\s?medal)'), ('borsa', r'borsa|bist|hisse|wall street|nasdaq|stocks?\b|s&p|dow jones'), ('enflasyon', r'enflasyon|tüfe|üfe|inflation|cpi\b'), ('faiz', r'faiz|merkez bankası|tcmb|\bfed\b|ecb|interest rate|central bank'), ('kripto', r'bitcoin|kripto|ethereum|crypto|btc\b|stablecoin'),
              ('enerji', r'petrol|akaryakıt|benzin|motorin|doğalgaz|elektrik zammı|brent|oil|gas price|opec|energy'), ('istihdam', r'asgari ücret|maaş|işsizlik|emekli|zam\b|istihdam|unemployment|wages|jobs report'), ('sirket', r'bilanço|kâr|zarar|şirket|ihale|satın alma|birleşme|earnings|merger|acquisition|revenue|ipo\b'), ('ticaret', r'ihracat|ithalat|ticaret|gümrük|tariff|trade war|export|import'), ('konut', r'konut|kira|tapu|mortgage|housing|rent')],
- 'bilim': [('uzay', r'nasa|uzay|gezegen|astronom|teleskop|asteroid|mars\b|ay\b|spacex|esa\b|space|planet|galaxy|exoplanet|rocket|artemis|iss\b'), ('saglik', r'sağlık|kanser|aşı|ilaç|tedavi|virüs|salgın|health|cancer|vaccine|drug|disease|clinical|medicine|who\b'), ('iklim', r'iklim|küresel ısınma|sera gazı|buzul|kuraklık|climate|warming|emission|glacier|drought'), ('fizik', r'fizik|kuantum|parçacık|cern|physics|quantum|particle'), ('biyoloji', r'biyoloji|genetik|\bdna\b|fosil|evrim|hayvan|bitki|biology|genetic|fossil|species|evolution'), ('yz-arastirma', r'yapay zek|makine öğren|nöral|machine learning|neural|deep learning|arxiv|llm')],
+ 'bilim': [('uzay', r'nasa|uzay|gezegen|astronom|teleskop|asteroid|mars\b|ay\b|spacex|esa\b|space|planet|(?<!samsung )galax(y|ies)(?!\s?([szamf]\d|z (fold|flip)|tab|buds|watch|fold|flip|ring|book|ai\b|xr\b|unpacked|store|phone|series|ultra|edge|\d))|exoplanet|rocket|artemis|iss\b'), ('saglik', r'sağlık|kanser|aşı|ilaç|tedavi|virüs|salgın|health|cancer|vaccine|drug|disease|clinical|medicine|who\b'), ('iklim', r'iklim|küresel ısınma|sera gazı|buzul|kuraklık|climate|warming|emission|glacier|drought'), ('fizik', r'fizik|kuantum|parçacık|cern|physics|quantum|particle'), ('biyoloji', r'biyoloji|genetik|\bdna\b|fosil|evrim|hayvan|bitki|biology|genetic|fossil|species|evolution'), ('yz-arastirma', r'yapay zek|makine öğren|nöral|machine learning|neural|deep learning|arxiv|llm')],
  'siber': [('acik', r'güvenlik açığ|cve-\d|zero-?day|vulnerab|exploit|patch|yama'), ('fidye', r'fidye|ransomware'), ('veri-ihlali', r'veri ihlali|sızıntı|sızdı|data breach|leak'), ('oltalama', r'oltalama|phishing|dolandırıcı|scam|kimlik avı|smishing'), ('devlet-aktoru', r'apt\d|devlet destekli|state-sponsored|nation-state|lazarus|sandworm|çin bağlantılı|rus bağlantılı'), ('zararli', r'malware|zararlı|trojan|botnet|backdoor|stealer|spyware|casus yazılım')],
- 'oto': [('elektrikli', r'elektrikli|\bev\b|şarj|batarya|tesla|byd|togg|electric'), ('marka', r'bmw|mercedes|audi|volkswagen|porsche|ferrari|ford\b|fiat|renault|hyundai|toyota|honda|volvo|skoda|lamborghini|mclaren|nissan'), ('otonom', r'otonom|sürücüsüz|autopilot|fsd|self-driving|robotaxi|waymo'), ('ulasim', r'havalimanı|hızlı tren|metro|köprü|otoyol|thy\b|pegasus|havayolu|airline|flight|railway|airport|ulaşım'), ('yeni-model', r'yeni model|tanıtıldı|unveil|launch|debut|concept|facelift'), ('motorsporu', r'formula ?1|\bf1\b|motogp|ralli')],
+ 'oto': [('elektrikli', r'elektrikli|\bevs\b|\bev (charging|charger|battery|sales|maker|market|startup|range|tax|subsid)|şarj|batarya|tesla|byd|togg|electric'), ('marka', r'bmw|mercedes|audi|volkswagen|porsche|ferrari|ford\b|fiat|renault|hyundai|toyota|honda|volvo|skoda|lamborghini|mclaren|nissan'), ('otonom', r'otonom|sürücüsüz|autopilot|fsd|self-driving|robotaxi|waymo'), ('ulasim', r'havalimanı|hızlı tren|metro|köprü|otoyol|thy\b|pegasus|havayolu|airline|flight|railway|airport|ulaşım'), ('yeni-model', r'yeni model|tanıtıldı|unveil|launch|debut|concept|facelift'), ('motorsporu', r'formula ?1|\bf1\b|motogp|ralli')],
  'yz': [('sohbet', r'chatgpt|claude|gemini|grok|copilot|perplexity|deepseek|chatbot|sohbet robotu'), ('yz-sirket', r'openai|anthropic|google deepmind|deepmind|xai\b|meta ai|mistral|nvidia|microsoft'),
         ('model', r'\bgpt-?\d|model|llm|dil modeli|benchmark|reasoning'), ('gorsel-video', r'sora|midjourney|\bveo\b|görsel üret|video üret|image gen|video gen|deepfake|nano banana'),
         ('duzenleme', r'yasa|düzenleme|regulation|ai act|telif|copyright|lawsuit|dava|yasak|ban\b|privacy|gizlilik'), ('donanim-yz', r'nvidia|gpu|çip|chip|veri merkez|data center|tpu'),
         ('is-hayati', r'işsiz|işten çıkar|layoff|jobs?\b|istihdam|meslek|workers?'), ('ajan', r'\bagent|ajan|otonom asistan|browser agent')],
+ 'savunma': [('yerli', r"aselsan|roketsan|tusaş|havelsan|baykar|bayraktar|\bmkek?\b|\bfnss\b|otokar|nurol|\bstm\b|kızılelma|kizilelma|\bkaan\b|hürjet|hurjet|altay|\btcg\b|milgem|akıncı|\bsiha\b|hisar|siper|korkut|tayfun|atmaca|çelik kubbe|\bssb\b|savunma sanayii başkan|yerli|milli|türk savunma|turkish defen[cs]e|türkiye"),
+              ('hava', r"savaş uçağı|kızılelma|kizilelma|\bkaan\b|hürjet|hurjet|\bf-?(16|35|47)\b|eurofighter|rafale|hava kuvvetleri|helikopter|fighter|aircraft|air force|\bb-21\b|tusaş"),
+              ('deniz', r"\btcg\b|donanma|fırkateyn|korvet|denizaltı|savaş gemisi|milgem|anadolu gemisi|deniz kuvvetleri|navy|warship|frigate|corvette|submarine|naval"),
+              ('kara', r"altay|tank|zırhlı|obüs|kara kuvvetleri|\barmy\b|armou?red|artillery|howitzer|himars"),
+              ('fuze-hava-savunma', r"füze|balistik|hava savunma|çelik kubbe|hisar|siper|korkut|tayfun|missile|ballistic|air defen[cs]e|iron dome|patriot|thaad|s-400|hypersonic|hipersonik"),
+              ('iha', r"\b[sİi]?iha\b|\bsiha|insansız|bayraktar|akıncı|kızılelma|kizilelma|anka|\buav\b|\bucav\b|\bdrones?\b|loyal wingman"),
+              ('ihracat-anlasma', r"ihracat|ihraç|sözleşme|anlaşma|sipariş|satış|tedarik|ihale|teslim|export|contract|deal\b|order|procurement|deliver"),
+              ('uluslararasi', r"lockheed|raytheon|\brtx (corp|corporation)|northrop|general dynamics|bae systems|rheinmetall|\bsaab\b|dassault|eurofighter|thales|mbda|anduril|pentagon|\bnato\b|\babd\b|amerika|\bu\.?s\.?\b|ukrayna|ukraine|rusya|russia|israil|israel|\bçin\b|china|avrupa|europe|yunanistan|greece|hindistan|india|pakistan|tayvan|taiwan|japonya|japan|kore|korea")],
  'oyun': [('konsol', r'playstation|ps5|ps6|xbox|nintendo|switch 2'), ('pc-oyun', r'\bsteam\b|\bpc\b|epic games|gpu|ekran kart'), ('mobil-oyun', r'mobil oyun|mobile game|ios oyun|android oyun'),
           ('gta', r'\bgta\b|grand theft auto|rockstar'), ('cikis', r'çıkış tarihi|release date|launch|ertelendi|delay|fragman|trailer|duyuruldu|announced'),
           ('ucretsiz', r'ücretsiz|bedava|free\b|game pass|ps plus|epic games store'), ('sektor', r'işten çıkar|layoff|stüdyo|studio|satın al|acquisition|ubisoft|microsoft gaming'), ('espor-oyun', r'espor|e-spor|esports?|turnuva')],
@@ -191,6 +207,7 @@ ALT_AD = {'seyhan': 'Seyhan', 'cukurova': 'Çukurova', 'yuregir': 'Yüreğir', '
           'uzay': 'Uzay', 'saglik': 'Sağlık', 'iklim': 'İklim', 'fizik': 'Fizik', 'biyoloji': 'Biyoloji', 'yz-arastirma': 'Yapay zekâ araştırmaları', 'acik': 'Güvenlik açığı', 'fidye': 'Fidye yazılımı', 'veri-ihlali': 'Veri ihlali', 'oltalama': 'Dolandırıcılık/oltalama', 'devlet-aktoru': 'Devlet destekli', 'zararli': 'Zararlı yazılım',
           'elektrikli': 'Elektrikli', 'marka': 'Markalar', 'otonom': 'Otonom sürüş', 'ulasim': 'Ulaşım', 'yeni-model': 'Yeni model', 'motorsporu': 'Motor sporu', 'film-dizi': 'Film ve dizi', 'muzik': 'Müzik', 'kultur': 'Kültür-sanat', 'internet': 'İnternet fenomenleri', 'anime': 'Anime',
           'sohbet': 'Sohbet botları', 'yz-sirket': 'Yapay zekâ şirketleri', 'model': 'Modeller', 'gorsel-video': 'Görsel ve video üretimi', 'duzenleme': 'Hukuk ve düzenleme', 'donanim-yz': 'Çip ve veri merkezi', 'is-hayati': 'İş hayatı', 'ajan': 'Yapay zekâ ajanları',
+          'yerli': 'Yerli projeler', 'hava': 'Hava', 'deniz': 'Deniz', 'kara': 'Kara', 'fuze-hava-savunma': 'Füze ve hava savunma', 'iha': 'İHA/SİHA', 'ihracat-anlasma': 'İhracat ve anlaşmalar', 'uluslararasi': 'Uluslararası',
           'konsol': 'Konsol', 'pc-oyun': 'PC', 'mobil-oyun': 'Mobil oyun', 'gta': 'GTA 6', 'cikis': 'Çıkış ve duyuru', 'ucretsiz': 'Ücretsiz ve abonelik', 'sektor': 'Sektör', 'espor-oyun': 'E-spor'}
 GUNDEM_ALT = [('turkiye', 'Türkiye'), ('dunya', 'Dünya'), ('siyaset', 'Siyaset'), ('diplomasi', 'Diplomasi'), ('savas', 'Savaş ve güvenlik'), ('ekonomi', 'Ekonomi'), ('toplum', 'Toplum'), ('hukuk', 'Hukuk'), ('afet', 'Afet'), ('saglik', 'Sağlık'), ('egitim', 'Eğitim')]
 RE_DIPLO = re.compile(r"diplomasi|diplomat|büyükelçi|zirve|müzakere|görüşme|dışişleri|ateşkes|anlaşma imza|summit|ambassador|talks|negotiat|treaty|foreign minister", re.I)
@@ -297,6 +314,165 @@ def kumele_tam(ogeler):
     finally:
         for o in ogeler: o['var'] = o.pop('var_tam')
 
+# ------------------------------------------------------------------ Akış'a özel üçüncü geçiş (2026-11-20)
+# Büyük olaylar bölünüyordu: 'anthropic' 178 haberde geçince "seyrek" sayılmıyor, olayın onlarca kümesi birleşemiyordu.
+# Tek ad yerine AD ÇİFTİ ayırt edicidir: anthropic+ipo, myanmar+rohingya. masa.birlestir (TechTurco paneli) değişmez.
+KAVRAM = [('#ipo', re.compile(r"\bipo\b|halka arz|halka açıl|börsengang|introduction en bourse|public offering|goes public|went public|first day of trading|首次公开|上市", re.I)),
+          ('#ipo', re.compile(r"stock market debut|nasdaq debut|market debut|wall street (listing|debut)|debut(s|ed)?\b.{0,20}(wall street|nasdaq|nyse)|goes to wall street|borsaya açıl|borsada işlem görmeye", re.I)),
+          ('#soykirim', re.compile(r"soykırım|genocide|génocide|völkermord|genocidio|种族灭绝", re.I)),
+          ('#ateskes', re.compile(r"ateşkes|ceasefire|cessez-le-feu|waffenruhe|停火", re.I))]
+AD_GENEL = {'son dakika', 'breaking', 'video', 'canli', 'live', 'update', 'report', 'new', 'yeni', 'exclusive', 'ozel', 'haber', 'news', 'photo', 'foto', 'galeri', 'watch', 'izle',
+            'ocak', 'subat', 'mart', 'nisan', 'mayis', 'haziran', 'temmuz', 'agustos', 'eylul', 'ekim', 'kasim', 'aralik', 'january', 'february', 'march', 'april', 'may', 'june', 'july',
+            'august', 'september', 'october', 'november', 'december', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'pazartesi', 'sali', 'carsamba',
+            'persembe', 'cuma', 'cumartesi', 'pazar', 'the', 'and', 'for', 'with', 'how', 'why', 'what', 'who', 'this', 'that', 'here', 'after', 'over', 'from', 'are', 'is', 'its', 'his', 'her',
+            'ceo', 'cfo', 'cto', 'coo', 'ai', 'yz', 'ipo', 'us', 'uk', 'eu', 'tv', 'pc', 'app', 'apps', 'says', 'dr', 'prof', 'mr', 'mrs', 'sir', 'inc', 'ltd', 'co', 'corp',
+            'baskan', 'bakan', 'genel', 'cumhurbaskani', 'president', 'minister', 'chief', 'lideri', 'sozcusu',
+            'haberleri', 'haberler', 'gundem', 'spor', 'belediye', 'belediyesi', 'festival', 'festivali', 'universitesi', 'bakanligi', 'komisyonu', 'meclisi',
+            'kupa', 'kupasi', 'lig', 'ligi', 'one', 'ultra', 'pro', 'max', 'plus', 'mini', 'air', 'edition', 'series', 'live', 'canli', 'son', 'dakika'}
+SOZ_RX = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşüÀ-ÿ][\w\-\.]*", re.U)
+ASCII_TR = str.maketrans('çğıöşüâîû', 'cgiosuaiu')
+def _ad_kok(w):
+    w = re.split(r"['’]", w)[0].strip('.-')
+    return w.translate(M.TR).lower().translate(ASCII_TR) if w else ''
+def baslik_bicimi(t):
+    """'cumle' (yalnız özel adlar büyük harfli), 'baslik' (Title Case ya da TÜMÜ BÜYÜK). Title Case başlıkta sıradan kelimeler de büyük harfle başlar."""
+    w = [x for x in SOZ_RX.findall(t) if len(x) >= 4]
+    if not w: return 'cumle'
+    buyuk = sum(1 for x in w if x[0].isupper())
+    return 'baslik' if buyuk >= .6 * len(w) and len(w) >= 3 else 'cumle'
+def ozel_ad_havuzu(basliklar):
+    """Cümle biçimli başlıklarda cümle ortasında büyük harfle yazılan sözcükler: gerçek özel adlar (Title Case başlıklar için sözlük)."""
+    say = Counter()
+    for t in basliklar:
+        if baslik_bicimi(t) != 'cumle': continue
+        for i, w in enumerate(SOZ_RX.findall(t)):
+            if i and w[0].isupper() and len(w) >= 3: say[_ad_kok(w)] += 1
+    return {k for k, n in say.items() if n >= 2 and k not in AD_GENEL}
+def adlar(t, havuz):
+    """Başlıktaki özel adlar; ardışık büyük harfli sözcükler tek ad olur ('real madrid', 'iphone 20', 'dana white'). Kavramlar (#ipo) eklenir."""
+    bic = baslik_bicimi(t)
+    out = set()
+    # noktalama (virgül, iki nokta, tire…) adı böler: "UAD, Myanmar'ı" iki ayrı ad; parçanın ilk sözcüğü cümle başı sayılır
+    for parca in re.split(r"[,:;!?\"“”()\[\]|–—]+|\s-\s|\.\s", t):
+        out |= _parca_adlari(parca, bic, havuz)
+    out = {x for x in out if len(x) >= 3 and not x.isdigit() and x not in AD_GENEL and x not in M.STOP}
+    for ad, rx in KAVRAM:
+        if rx.search(t): out.add(ad)
+    return out
+
+def _parca_adlari(parca, bic, havuz):
+    sozler = parca.split()
+    out, cur = set(), []
+    for i, w in enumerate(sozler):
+        w = w.strip("'‘’`«»„.")
+        if re.fullmatch(r"[^\W\d_]{3,}-[^\W\d_]{3,}(['’]\w+)?", w):     # Anthropic-Börsengang: iki ayrı sözcük
+            out |= _parca_adlari(w.replace('-', ' '), bic, havuz) if not cur else set(); continue
+        if not w: continue
+        k = _ad_kok(w); temiz = re.sub(r"[^\w]", '', w)
+        ad_mi = False
+        if temiz and len(temiz) >= 2:
+            if temiz.isdigit(): ad_mi = bool(cur) and len(temiz) <= 4         # 'iPhone 20', 'S27': yalnız adın devamı
+            elif re.fullmatch(r'\d+(st|nd|rd|th|inci|ıncı|uncu|üncü|nci|ncı|ncu|ncü)', temiz.lower()): ad_mi = False   # 20th: sıra sayısı
+            elif re.search(r'\d', temiz) and re.search(r'[A-Za-z]', temiz): ad_mi = True        # S27, GPT-6, F-35
+            elif temiz.isupper() and len(temiz) >= 2 and bic == 'cumle': ad_mi = True           # IPO, NASA, KAAN
+            elif w[0].islower() and any(ch.isupper() for ch in w[1:3]): ad_mi = True        # iPhone, eSIM
+            elif w[0].isupper():
+                ad_mi = (k in havuz) if (bic == 'baslik' or i == 0) else True
+        if ad_mi and k not in AD_GENEL: cur.append(k)
+        else:
+            if cur: out.add(' '.join(cur)); cur = []
+        if "'" in w or '’' in w:
+            if cur: out.add(' '.join(cur)); cur = []
+    if cur: out.add(' '.join(cur))
+    # cümlede bitişik yazılan iki ad ('Adalet Divanı Myanmar'ı'): uçtaki sözcük tek başına bilinen bir adsa o da ayrıca sayılır
+    for x in list(out):
+        p = x.split()
+        if len(p) >= 3: out |= {w for w in (p[0], p[-1]) if w in havuz}
+    return out
+def ad_ciftleri(ad):
+    """Olay anahtarı: iki ad birlikte. İki ülke/lider/kavram çifti (trump+putin, abd+çin) olayı ayırt etmez, sayılmaz."""
+    out = set()
+    cok = [set(x.split()) for x in ad if ' ' in x]
+    L = sorted(ad)
+    for i in range(len(L)):
+        for j in range(i + 1, len(L)):
+            a, b = L[i], L[j]
+            ca, cb = canon_bul(a), canon_bul(b)
+            if ca and ca == cb: continue                                          # 'apple' + 'iphone': aynı varlık
+            sa, sb = set(a.split()), set(b.split())
+            if any((sa | sb) <= g for g in cok): continue                        # 'real' + 'madrid' / 'real madrid': tek ad
+            genel = lambda x, c: x.startswith('#') or (c and c <= (ULKE | LIDER | {'ab', 'bm', 'nato'}))
+            if genel(a, ca) and genel(b, cb): continue
+            if ca and cb: continue                                                # iki sözlük varlığı (chatgpt+claude, trump+çin): karşılaştırma/konu, olay değil
+            out.add((a, b))
+    return out
+
+def birlestir_akis(kumeler, havuz, pencere=36):
+    """Üçüncü geçiş: ortak ad çifti olan kümeler (36 saat içinde) birleşir. Zincirleme yok: büyükten küçüğe, her küme en çok bir çapaya.
+    Ek tanık şart: aynı dilde başlık benzerliği (j>=.3) ya da iki ayrı ortak çift; diller arası: ortak sayı (sürüm/yıl değil) ya da iki ortak çift;
+    her iki durumda olay kavramı çifti (anthropic+#ipo) tek başına yeter."""
+    for k in kumeler:
+        k['_ad'] = [adlar(o['t'], havuz) for o in k['ogeler'][:30]]
+        k['_tc'] = [ad_ciftleri(a) for a in k['_ad']]
+        k['_cift'] = set().union(*k['_tc']) if k['_tc'] else set()
+        # ortak sayı tanığı: yıl ve sürüm numarası gibi sayılar (One UI 9.5, iOS 27.3) sayılmaz; yoksa bir ürünün tüm haberleri birleşirdi
+        k['_sayi'] = {t for o in k['ogeler'][:12] for t in o['tok'] if t.startswith('n:') and len(t) >= 5 and not re.match(r'n:(20\d\d|\d{1,2}\.\d)$', t)}
+        k['_dil'] = Counter(o['dil'] for o in k['ogeler']).most_common(1)[0][0]
+    # aşırı yaygın çift (ör. bir haftalık savaşın iki tarafı) aday dizinini şişirmesin; olay çiftleri bunun çok altında kalır
+    df = Counter(c for k in kumeler for c in k['_cift'])
+    tavan = max(60, len(kumeler) // 25)
+    sirali = sorted(range(len(kumeler)), key=lambda i: (-len(kumeler[i]['ogeler']), kumeler[i]['son']))
+    capalar, dizin = [], defaultdict(list)
+    def benzer(a, b, ortak):
+        # benzer başlık çifti ortak ad çiftini de taşımalı (aynı kalıplı farklı ürün sayfaları birleşmesin)
+        for x, cx in zip(a['ogeler'][:30], a['_tc']):
+            if not cx & ortak: continue
+            for y, cy in zip(b['ogeler'][:30], b['_tc']):
+                if not cx & cy & ortak: continue
+                u = len(x['tok'] | y['tok'])
+                if u and len(x['tok'] & y['tok']) / u >= .3: return True
+        return False
+    for i in sirali:
+        k = kumeler[i]; hedef = None
+        ciftler = {c for c in k['_cift'] if df[c] <= tavan}
+        aday = Counter(ci for c in ciftler for ci in dizin[c])
+        for ci, n in aday.most_common(20):
+            capa = capalar[ci][0]
+            if abs(capa['son'] - k['son']) > pencere * 3600: continue
+            ortak = capa['_cift'] & ciftler
+            sayi = capa['_sayi'] & k['_sayi']
+            ortak_ad = set().union(*(set(x) for x in ortak))
+            iki = len(ortak_ad) >= 3                                               # en az üç farklı ad iki çiftte buluşuyor
+            # olay kavramı + özel ad çifti (anthropic+#ipo, myanmar+#soykirim) dilden bağımsız yeterli tanıktır
+            kavram = any(x.startswith('#') != y.startswith('#') for x, y in ortak)
+            if capa['_dil'] == k['_dil']: ok = benzer(capa, k, ortak) or iki or kavram
+            else: ok = sayi or iki or kavram
+            if ok: hedef = ci; break
+        if hedef is None:
+            capalar.append((k, [k]))
+            for c in ciftler: dizin[c].append(len(capalar) - 1)
+        else:
+            capalar[hedef][1].append(k)
+    sonuc = []
+    for capa, uyeler in capalar:
+        ana = dict(capa)
+        if len(uyeler) > 1:
+            g, og = set(), []
+            for u in uyeler:
+                for o in u['ogeler']:
+                    if o['l'] not in g: g.add(o['l']); og.append(o)
+            ana['ogeler'] = og
+            ana['tok'] = set().union(*(u['tok'] for u in uyeler))
+            ana['son'] = max(u['son'] for u in uyeler)
+        for x in ('_ad', '_tc', '_cift', '_sayi', '_dil'): ana.pop(x, None)
+        sonuc.append(ana)
+    return sonuc
+
+def kumele_akis(ogeler, havuz=None):
+    """Akış kümelemesi: kumele_tam (masa ile ortak iki geçiş) + ad çifti geçişi."""
+    if havuz is None: havuz = ozel_ad_havuzu([o['t'] for o in ogeler])
+    return birlestir_akis(kumele_tam(ogeler), havuz)
+
 def bagimsiz_say(og):
     """Bağımsız doğrulama sayısı: kurum başına 1; ajans kopyaları ve aynı bültenden türeyenler ilk yayıncıyla bir sayılır.
     Dönüş: (sayı, {öğe_id: kopya_oldugu_kurum})"""
@@ -333,7 +509,23 @@ def alan_bul(og, bas_metin, say_cal):
         # kaynak bölümü ve içerik birlikte tanık olmalı: bölüm tek başına ya da tek bir kelime yetmez
         if (n_k >= 2 and n_rx >= 1) or (n_k >= 1 and n_rx >= 2) or n_rx >= 3 or (n_k >= 1 and n_rx >= 1 and k in ('spor', 'oto', 'bilim', 'eglence', 'oyun', 'yz')): a.add(k)
     # YZ ve oyun ek katmandır: Gündem kuralını ve boş-alan yedeğini etkilemesin diye burada ayrılır, sonda geri eklenir
-    katman = a & {'yz', 'oyun'}; a -= katman
+    # Savunma sanayi (yz gibi katman): özel terim tek başına; genel terim iki tane ya da savunma kaynağıyla. Saldırı/ölüm haberi genel
+    # terimle (füze saldırısı, drone strike) savunmaya girmez; savunma kaynağı ya da özel terim (şirket/ürün) gerekir.
+    bas_t = ' '.join(o['t'] for o in og[:12])
+    sv_o = len(KURAL['savunma_guclu'].findall(bas_t))
+    sv_g = len({mm.group(0).lower() for mm in KURAL['savunma_genel'].finditer(bas_t)}) + len({mm.group(0).lower() for mm in KURAL['savunma_platform'].finditer(bas_t)})
+    sv_p = bool(KURAL['savunma_platform'].search(bas_t))
+    sv_k = kay.get('savunma', 0)
+    saldiri = bool(KURAL['savunma_saldiri'].search(bas_t))
+    if sv_o >= 1 or (sv_k >= 1 and sv_g >= 1) or ((sv_g >= 2 or sv_p) and not saldiri): a.add('savunma')
+    # Spor bölümü baskın küme (en az 3 spor kaynağı, kaynakların %60'ı): içerik kelimesi aranmaz; teknoloji/oyun/eğlence de
+    # yalnız kendi kaynak bölümüyle açılır (futbol metnindeki 'oyun', 'akıllı', 'uygulama' Teknoloji'ye düşürmesin)
+    n_kay = sum(kay.values()) or 1
+    if kay.get('spor', 0) >= 3 and kay.get('spor', 0) >= .6 * n_kay:
+        a.add('spor')
+        for k in ('tekno', 'oyun', 'eglence'):
+            if k in a and not kay.get(k, 0): a.discard(k)
+    katman = a & {'yz', 'oyun', 'savunma'}; a -= katman
     # Adana: metninde Adana (il, ilçe, kurum, kulüp) geçen haber. Yerel kaynak tek başına yetmez (yerel siteler ulusal haber de verir);
     # yerel kaynakta ayrıca başka anlamı olan ilçe adları da (Seyhan, Ceyhan, Kozan…) kabul edilir. Hava durumu/servis sayfaları girmez.
     if not SERVIS.search(m) and (KURAL['adana'].search(m) or (kay.get('adana') and KURAL['adana_ilce'].search(m))): a.add('adana')
@@ -344,10 +536,11 @@ def alan_bul(og, bas_metin, say_cal):
     if gundem_kay and (a - {'siyaset', 'ekonomi', 'siber'} == set() or 'siyaset' in a or KURAL['gundem_guclu'].search(m) or KURAL['savas'].search(m)):
         a.add('gundem')
     if 'siyaset' in a and not (a & {'gundem'}) and gundem_kay: a.add('gundem')
-    if not a:
+    if not a and not ('savunma' in katman and kay.get('savunma')):   # savunma kaynağının savunma haberi yalnız Savunma'da kalabilir
         top = max(kay, key=kay.get) if kay else 'gundem'
         # Adana içerik kuralıyla girer; yerel sitenin Adana'yla ilgisiz haberi varsayılan olarak Gündem'e düşer
-        a.add('gundem' if top == 'adana' else top)
+        # savunma kaynağının (ör. Google Haberler sorgusu) savunmayla ilgisiz haberi de Gündem'e düşer
+        a.add('gundem' if top in ('adana', 'savunma') else top)
     a |= katman
     if 'yz' in a and not a & {'tekno', 'bilim'}: a.add('tekno')   # yapay zekâ haberi Teknoloji'de de görünür
     if 'oyun' in a and a == {'oyun', 'eglence'} and not KURAL['eglence_guclu'].search(m): a.discard('eglence')
@@ -385,6 +578,21 @@ def kanit_etiketi(og):
     return 'haber'
 
 # ------------------------------------------------------------------ Reels
+CARPICI_ZAYIF = re.compile(r"^(leak\w*|finally|surpris\w*|sızdı|sızıntı\w*)$", re.I)
+def carpici_gercek(t):
+    """Başlıkta 'leak', 'finally', 'surprise' dışında gerçek bir şaşırtıcılık kelimesi var mı (rutin sürüm cezası muafiyeti ve içerik kapısı için)."""
+    return any(not CARPICI_ZAYIF.match(m.group(0)) for m in CARPICI.finditer(t))
+
+def icerik_kapisi(c):
+    """Reels içerik kapısı (2026-11-20): hayata etki, gerçek şaşırtıcılık, viral ya da hikâye potansiyelinden biri şart.
+    Yalnız güncellik + çok kaynak + Türkçe uygunluk + görselle 48'i geçen rutin haber (TBMM toplandı, maç hazırlığı) girmesin.
+    İstisna (güçlü kart): 4+ bağımsız kaynaklı siyaset/spor/dünya/savunma/afet olayı ya da 10+ bağımsız kaynaklı her konu."""
+    kr = c['_kr']
+    if kr['etki'] >= 6 or kr['viral'] >= 5 or kr['hikaye'] >= 5 or (kr['saskin'] >= 6 and carpici_gercek(c['t'])): return True
+    a = set(c['alanlar']); ga = set(c['gundem_alt'])
+    if c['kb'] >= 4 and (a & {'siyaset', 'savunma', 'spor'} or ga & {'dunya', 'savas', 'afet', 'diplomasi'}): return True
+    return c['kb'] >= 10
+
 def reels_puanla(c, og, bas, metin, simdi, kay_ad):
     """c: küme özeti. Dönüş: (puan, kriter dict 0-10, gerekçe listesi, elenme nedeni|None, cezalar)"""
     t = bas['t']; yas = (simdi - c['son']) / 3600
@@ -410,8 +618,10 @@ def reels_puanla(c, og, bas, metin, simdi, kay_ad):
     p = sum(kr[k] * w for k, w, _ in KRITER) / 10.0
     ceza = []
     for ad, rx, d, alanlar in CEZA:
-        if set(c['alanlar']) & set(alanlar) and rx.search(t) and not (kr['saskin'] >= 6 and ad.startswith('rutin')):
+        if set(c['alanlar']) & set(alanlar) and rx.search(t) and not (ad.startswith('rutin') and carpici_gercek(t)):
             p -= d; ceza.append(ad)
+    # Yalnız yabancı kaynaklı sızıntı/söylenti, Türkçe kaynağı olan eşdeğer konunun önüne geçmesin (hafif ceza; siyaset/spor rutinine ceza yok)
+    if c['sadece_yabanci'] and IDDIA.search(t): p -= 4; ceza.append('yalnız yabancı kaynaklı sızıntı/söylenti')
     if c['kb'] < 2 and not c['resmi'] and c['plat_topluluk']: p -= 6; ceza.append('yalnız topluluk kaynağı (erken sinyal)')
     if c['kb'] < 2 and not c['resmi'] and not c['plat_topluluk']: p -= 3; ceza.append('tek bağımsız kaynak')
     # Türkiye izleyicisine uzak yabancı yerel haber: Türkçe kaynak yok, Türkiye geçmiyor, büyük ülke/lider/marka da yok
@@ -428,15 +638,19 @@ def reels_puanla(c, og, bas, metin, simdi, kay_ad):
 REELS_ESIK = 48        # 2026-11-18: 38'den yükseltildi (187 aday 'aşırı' bulundu)
 REELS_TOPLAM = 90
 REELS_PROFIL = 30
-REELS_GENEL = {'apple', 'google', 'samsung', 'microsoft', 'yeni', 'new', 'turkiye', 'abd', 'trump', 'update', 'guncelleme', 'pro', 'max', 'ultra', 'son', 'dakika'}
-def reels_anahtar(og):
-    """Kümenin hikâye anahtarı: başlıklarda geçen özel adlar + 'iPhone 20' gibi model adları (çok genel olanlar hariç)."""
-    v = set()
-    for o in og[:4]:
-        v |= {x for x in M.varlik(o['t']) if len(x) >= 3 and not x.isdigit()}
-        v |= {(a + ' ' + b).lower() for a, b in re.findall(r"\b([A-Za-z][A-Za-z]{1,12})\s?(\d{1,4})\b", o['t']) if a.lower() not in ('in', 'at', 'on', 'of', 'to', 'for', 'and', 'the', 'top', 'with', 'by')}
-    return v - REELS_GENEL
+REELS_GENEL = {'apple', 'google', 'samsung', 'microsoft', 'yeni', 'new', 'turkiye', 'abd', 'trump', 'update', 'guncelleme', 'pro', 'max', 'ultra', 'son', 'dakika',
+               'rusya', 'russia', 'cin', 'china', 'dunya', 'world', 'yapay', 'zeka', 'leak', 'design', 'report', 'first', 'erdogan', 'avrupa', 'europe', 'istanbul', 'ankara'}
+def reels_anahtar(og, havuz=frozenset(), bas_t=''):
+    """Kümenin hikâye anahtarı (2026-11-20): başlıklardaki özel adlar (Title Case ve TÜMÜ BÜYÜK başlıkların sıradan kelimeleri değil)
+    ve ad çiftleri. Dönüş: (adlar, ad çiftleri). Tek ortak ad tekrar sayılmaz; ortak ad ÇİFTİ ya da ortak ad + benzer başlık sayılır."""
+    ad, cift = set(), set()
+    for t in ([bas_t] if bas_t else []) + [o['t'] for o in og[:8]]:
+        a = {x for x in adlar(t, havuz) if x not in REELS_GENEL and not x.startswith('#')}
+        a_k = a | {x for x in adlar(t, havuz) if x.startswith('#')}
+        ad |= a; cift |= ad_ciftleri(a_k)
+    return ad, cift
 
+TURKIYE_SAVUNMA = re.compile(r"aselsan|roketsan|tusaş|havelsan|baykar|bayraktar|kızılelma|kizilelma|\bkaan\b|hürjet|hurjet|altay|\btcg\b|milgem|akıncı|\bsiha\b|\bİHA|çelik kubbe|\bssb\b|savunma sanayi|türk|turkish|turkey", re.I)
 def profil_bul(c, m):
     pr = []
     a = set(c['alanlar'])
@@ -451,6 +665,10 @@ def profil_bul(c, m):
     if 'yz' in a: alt.append('yz')
     if 'oyun' in a: alt.append('oyun')
     if 'oto' in a: alt.append('oto'); pr = pr or ['teknoloji']
+    # savunma: yerli şirket/ürün haberi teknoloji, diğerleri (tedarik, uluslararası) gündem profiline
+    if 'savunma' in a:
+        alt.append('savunma')
+        if not pr: pr = ['teknoloji'] if KURAL['savunma_guclu'].search(m) and TURKIYE_SAVUNMA.search(m) else ['gundem']
     if 'ekonomi' in a: alt.append('ekonomi')
     if 'eglence' in a and not pr: pr.append('gundem')
     if c['_kr']['saskin'] >= 7 and ('bilim' in a or 'eglence' in a or 'oto' in a or c['kb'] >= 3): alt.append('ilginc')
@@ -556,7 +774,7 @@ def durum_hesapla(s, d, simdi_iso, simdi, n72):
     return 'aktif'
 
 # Geliştirici/kod haberleri akışa girmez (kullanıcı isteği, 2026-11-18). Tüketiciyi ilgilendiren sürüm/beta haberleri (iOS beta, Chrome sürümü) dışarıda kalmaz.
-GELISTIRICI = re.compile(r"\b(github|gitlab|stack ?overflow|npm\b|pypi|rustlang|\brust (\d|dili|language|compiler)|golang|\bgo \d\.\d|python \d|typescript|javascript|kotlin \d|swift \d|\.net \d|node\.?js|\bdeno\b|vue\.?js|react (\d|native)|webassembly|wasm\b|kubernetes|docker|devops|ci/cd|compiler|derleyici|codebase|kod taban|source code|kaynak kod|pull request|open[- ]source (library|framework|tool)|açık kaynak(lı)? (kütüphane|araç|yazılım projesi)|\bsdk\b|\bapi\b.{0,20}(deprecat|update|güncelle)|programlama|programming language|programmers?\b|yazılımcı|coding|kodlama|developer (tool|conference|preview)s?|geliştirici(ler)? (aracı|araçları|konferans|önizleme)|vs ?code|visual studio|xcode|android studio|linux (kernel|çekirde)|\bkernel \d|\bllvm\b|\bgcc\b|copilot (for|in) (vs|visual|github)|claude code|codex (cli|agent|app)|cursor (ai|ide|editor)|vibe[- ]cod|kotlin|flutter|unity engine|unreal engine \d)", re.I)
+GELISTIRICI = re.compile(r"\b(github|gitlab|stack ?overflow|npm\b|pypi|rustlang|\brust (\d|dili|language|compiler)|golang|\bgo \d\.\d|python \d|typescript|javascript|kotlin \d|swift \d|\.net \d|node\.?js|\bdeno\b|vue\.?js|react (\d|native)|webassembly|wasm\b|kubernetes|docker|devops|ci/cd|compiler|derleyici|codebase|kod taban|source code|kaynak kod|pull request|open[- ]source (library|framework|tool)|açık kaynak(lı)? (kütüphane|araç|yazılım projesi)|\bsdk\b|\bapi\b.{0,20}(deprecat|update|güncelle)|programlama|programming language|programmers?\b|yazılımcı|coding|kodlama|developer (tool|conference|preview)s?|geliştirici(ler)? (aracı|araçları|konferans|önizleme)|vs ?code|visual studio|xcode|android studio|linux (kernel|çekirde)|\bkernel \d|\bllvm\b|\bgcc\b|copilot (for|in) (vs|visual|github)|claude code|codex (cli|agent|app)|cursor (ai|ide|editor)|vibe[- ]cod|kotlin|flutter|unity engine|unreal engine \d|\bphp \d|\bcli\b|developer kit)", re.I)
 
 # Kod terimi geçse de asıl konusu tüketici ürünü olan başlık kalır (ör. 'ChatGPT ve Codex yeni modelle güncellendi', telefonda yapay zekâyla uygulama).
 TUKETICI = re.compile(r"chatgpt|\bgpt-\d|gemini (app|uygulama)|iphone|ipad|galaxy|xiaomi|pixel \d|playstation|xbox|nintendo|\bgta\b|whatsapp|instagram", re.I)
@@ -575,7 +793,7 @@ def ogeler_kur(j, src, simdi):
             if GELISTIRICI.search(t) and not TUKETICI.search(t): continue
             try: z = datetime.fromisoformat(it['d']).timestamp()
             except Exception: continue
-            n72[sid] += 1
+            if simdi - z <= 72 * 3600 and z <= simdi + 300: n72[sid] += 1   # gerçekten son 72 saat (önce akıştaki tüm öğeler sayılıyordu)
             if simdi - z > SAAT * 3600 or z > simdi + 300: continue
             kl = kanonik(l) if 'news.google.com' not in l else l
             anahtar = kl if 'news.google.com' not in l else (re.sub(r'\W+', '', t.lower())[:60] + (it.get('p') or ''))
@@ -632,7 +850,7 @@ def kumeler_kur(kumeler, simdi):
                  plat_topluluk=all(o['plat'] in ('reddit', 'hn') or 'topluluk' in o['nit'] or 'erken-sinyal' in o['nit'] for o in og),
                  ulkeler=sorted(ent_tum & ULKE), liderler=sorted(ent_tum & LIDER), markalar=sorted(ent_tum & MARKA),
                  gundem_alt=gundem_alt(m_tum, ent_tum, bool(tr_og)), kategoriler=sorted({o['cat'] for o in og}))
-        c['og'] = [dict(t=o['t'][:140], l=o['l'], p=o['kaynak'], z=int(o['z']), d=o['dil'], tp=o['tip'], **({'kp': kopya[o['id']]} if o['id'] in kopya else {}))
+        c['og'] = [dict(t=o['t'][:140], l=o['l'], p=o['kaynak'], z=int(o['z']), d=o['dil'], **({'kp': kopya[o['id']]} if o['id'] in kopya else {}))
                    for o in og[:10]]
         # Reels puanı
         p, kr, ceza, elen = reels_puanla(c, og, bas, m_tum, simdi, None)
@@ -704,37 +922,43 @@ def main():
     simdi_dt = datetime.fromisoformat(j['generated']) if j.get('generated') else datetime.now(timezone.utc)
     simdi = simdi_dt.timestamp(); simdi_iso = simdi_dt.isoformat()
     ogeler, n72 = ogeler_kur(j, src, simdi)
-    kumeler = kumele_tam(ogeler)
+    havuz = ozel_ad_havuzu([o['t'] for o in ogeler])
+    kumeler = kumele_akis(ogeler, havuz)
     cikti = kumeler_kur(kumeler, simdi)
     # Reels alanı
     for c, og, bas in cikti:
         pr, alt = profil_bul(c, bas['t'])
         c['profil'] = pr; c['reels_alt'] = alt
     reels = []
-    gorulen_tok = []; gorulen_var = []; konu_say = Counter()
-    # hikâye anahtarındaki yaygın kelimeler (leak, kamera, bakan, fiyatı…) eşleşme sayılmaz: yalnız aday havuzunda seyrek olanlar
-    uygun = [x for x in cikti if x[0]['r'] >= REELS_ESIK and not x[0]['elen'] and (simdi - x[0]['son']) <= 72 * 3600]
-    df = Counter(v for x in uygun for v in reels_anahtar(x[1]))
-    seyrek = lambda s: {v for v in s if df[v] <= max(4, len(uygun) // 40)}
+    gorulen = []; konu_say = Counter(); reels_disi = Counter()
     for c, og, bas in sorted(cikti, key=lambda x: -x[0]['r']):
         if c['r'] < REELS_ESIK or c['elen'] or c['kb'] < 1: continue
         if (simdi - c['son']) > 72 * 3600: continue
-        # aynı olayın ikinci kartı: kümeler zaten birleşik; yine de çok benzer başlık varsa atla
-        tk = M.sozcuk(c['t']); tks = {M.kok(w) for w in tk}
-        if any(len(tks & q) / max(1, len(tks | q)) >= .5 for q in gorulen_tok[-80:]): continue
-        # aynı hikâyenin farklı dildeki/anlatımdaki kartı: kümedeki tüm başlıkların özel adları ve model numaraları
-        vs = reels_anahtar(og)
-        if any(len(seyrek(vs & q)) >= 2 for q in gorulen_var): continue
+        if not icerik_kapisi(c): reels_disi['icerik kapisi'] += 1; continue
+        # aynı olayın ikinci kartı: çok benzer başlık, ortak ad çifti (anthropic+ipo, myanmar+rohingya) ya da ortak ad + benzer başlık
+        toks = [{M.kok(w) for w in M.sozcuk(o['t'])} for o in og[:6]]
+        ad, cift = reels_anahtar(og, havuz, c['t'])
+        # aynı iki liderin (Trump-Putin zirvesi) ikinci kartı da tekrardır; yalnız kartın kendi başlıklarına bakılır (büyük kümenin kıyısındaki haber sayılmaz)
+        lider = set().union(*(canon_bul(t) for t in [c['t']] + [o['t'] for o in og[:4]])) & LIDER
+        def ayni(q):
+            qt, qad, qcift, qlider = q
+            jmax = max((len(x & y) / max(1, len(x | y)) for x in toks for y in qt), default=0)
+            oc = cift & qcift
+            kavram = any(x.startswith('#') or y.startswith('#') for x, y in oc)
+            # ortak olay kavramı çifti (anthropic+#ipo) dil farkında da yeter; diğer ortak çift ya da ad başlık benzerliği ister
+            return (jmax >= .4 or kavram or (bool(oc) and jmax >= .2) or (bool(ad & qad) and jmax >= .25)
+                    or (len(lider & qlider) >= 2 and (bool(ad & qad) or jmax >= .2)))
+        if any(ayni(q) for q in gorulen): reels_disi['tekrar'] += 1; continue
         # tek konu (GTA 6, iPhone 20, Nvidia…) listeyi doldurmasın: en fazla 2 kart
-        modeller = {v for v in vs if ' ' in v}
-        if any(konu_say[v] >= 2 for v in modeller): continue
-        gorulen_tok.append(tks); gorulen_var.append(vs)
+        modeller = {v for v in ad if re.search(r'\d', v) or ' ' in v}
+        if any(konu_say[v] >= 2 for v in modeller): reels_disi['konu siniri'] += 1; continue
+        gorulen.append((toks, ad, cift, lider))
         for v in modeller: konu_say[v] += 1
         reels.append((c, og, bas))
     # çıktı: reels (profil dengeli: her profilden en fazla 60)
     prof_say = Counter(); reels_son = []
     for c, og, bas in reels:
-        if all(prof_say[p] >= REELS_PROFIL for p in c['profil']): continue
+        if all(prof_say[p] >= REELS_PROFIL for p in c['profil']): reels_disi['profil dolu'] += 1; continue
         for p in c['profil']: prof_say[p] += 1
         reels_son.append((c, og, bas))
         if len(reels_son) >= REELS_TOPLAM: break
@@ -747,11 +971,11 @@ def main():
                                og=[dict(t=o['t'], l=o['l'], p=o['p'], z=o['z'], d=o['d']) for o in c['og'][:8]]))
     # kümeleri alanlara dağıt
     os.makedirs(CIKTI, exist_ok=True)
+    # Arayüzün (index.tpl.html) okumadığı alanlar dosyalara yazılmaz (2026-11-20, hız raporu madde 7; grep ile doğrulandı).
+    # Bellekteki küme (ekler.py, kisisel.py) bu alanları kullanmaya devam eder.
+    OKUNMAYAN = {'cat', 'h1', 'h6', 'h24', 'h6o', 'h24o', 'k6', 'k24', 'sicak1', 'sicak6', 'sicak24', 'yog', 'yog24', 'resmi', 'reels_alt'}
     def sade(c):
-        d = {k: v for k, v in c.items() if not k.startswith('_') and k not in ('yuk', 'r', 'elen', 'kategoriler', 'plat_topluluk', 'sadece_yabanci', 'n_tr', 'ulkeler', 'liderler', 'markalar')}
-        d['ul'] = c['ulkeler']; d['ld'] = c['liderler']; d['mk'] = c['markalar']
-        d['yuk'] = c['yuk']['puan']
-        return d
+        return {k: v for k, v in c.items() if not k.startswith('_') and k not in OKUNMAYAN and k not in ('yuk', 'r', 'elen', 'kategoriler', 'plat_topluluk', 'sadece_yabanci', 'n_tr', 'ulkeler', 'liderler', 'markalar')}
     alan_json = {}
     for a in ALANLAR:
         lst = [c for c, _, _ in cikti if a in c['alanlar']]
@@ -777,17 +1001,17 @@ def main():
     # ana ekran
     tum = [c for c, _, _ in cikti]
     def ozet_kume(c, w=None):
-        d = dict(id=c['id'], t=c['t'], s=c['s'][:160], i=c['i'], l=c['l'], dil=c['dil'], ks=c['ks'], kb=c['kb'], ilk=c['ilk'], son=c['son'], h1=c['h1'], h6=c['h6'], h24=c['h24'], yog=c['yog'], yog24=c['yog24'], h6o=c['h6o'], h24o=c['h24o'],
-                 alanlar=c['alanlar'], cat=c['cat'], gundem_alt=c['gundem_alt'], kaynaklar=c['kaynaklar'][:6], resmi=c['resmi'], kanit=c['kanit'], diller=c['diller'])
+        d = dict(id=c['id'], t=c['t'], s=c['s'][:160], i=c['i'], l=c['l'], dil=c['dil'], ks=c['ks'], kb=c['kb'], ilk=c['ilk'], son=c['son'],
+                 alanlar=c['alanlar'], gundem_alt=c['gundem_alt'], kaynaklar=c['kaynaklar'][:6], kanit=c['kanit'], diller=c['diller'])
         return d
     def tam(c, **ek):
-        d = ozet_kume(c); d.update(og=c['og'], farkli=c['farkli'], ul=c['ulkeler'], ld=c['liderler'], mk=c['markalar'], h6o=c['h6o'], h24o=c['h24o'], s=c['s'][:220]); d.update(ek); return d
+        d = ozet_kume(c); d.update(og=c['og'], farkli=c['farkli'], s=c['s'][:220]); d.update(ek); return d
     sicak = {}
     for w in ('1', '6', '24'):
         lst = sorted([c for c in tum if c['sicak' + w] > 0], key=lambda c: -c['sicak' + w])[:12]
         sicak[w] = [tam(c, puan=c['sicak' + w]) for c in lst]
-    yuk = [tam(c, yuk=c['yuk']) for c in sorted([c for c in tum if c['yuk']['puan'] > 0 and c['yuk']['ilk_saat'] <= 48], key=lambda c: -c['yuk']['puan'])[:12]]
-    son = [ozet_kume(c) for c in sorted(tum, key=lambda c: -c['son'])[:120]]
+    yuk = [tam(c) for c in sorted([c for c in tum if c['yuk']['puan'] > 0 and c['yuk']['ilk_saat'] <= 48], key=lambda c: -c['yuk']['puan'])[:12]]
+    son = [ozet_kume(c) for c in sorted(tum, key=lambda c: -c['son'])[:40]]   # Bugün ekranı 24 gösterir; arama indeksi aynı konuları zaten içerir
     # sayılar
     sayim = {a: dict(toplam=sum(1 for c in tum if a in c['alanlar']), son6=sum(1 for c in tum if a in c['alanlar'] and simdi - c['son'] < 6 * 3600), cok_kaynakli=sum(1 for c in tum if a in c['alanlar'] and c['kb'] >= 3)) for a in ALANLAR}
     # kaynaklar
@@ -804,7 +1028,7 @@ def main():
     durum_say = Counter(k['durum'] for k in kay)
     yaz('kaynaklar.json', dict(generated=j['generated'], saglik=j.get('saglik', {}), kaynaklar=kay, durum_say=dict(durum_say)))
     # arama dizini
-    idx = [dict(id=c['id'], t=c['t'], s=c['s'][:70], son=c['son'], kb=c['kb'], a=c['alanlar'], d=c['diller'], k=c['kaynaklar'][:5], e=sorted(set(c['liderler']) | set(c['markalar']) | set(c['ulkeler'])), cat=c['cat']) for c in sorted(tum, key=lambda c: -c['son'])[:2600]]
+    idx = [dict(id=c['id'], t=c['t'], s=c['s'][:70], son=c['son'], kb=c['kb'], a=c['alanlar'], d=c['diller'], k=c['kaynaklar'][:5], e=sorted(set(c['liderler']) | set(c['markalar']) | set(c['ulkeler']))) for c in sorted(tum, key=lambda c: -c['son'])[:2600]]
     yaz('indeks.json', dict(generated=j['generated'], kayitlar=idx))
     # Akış 4: dil başına dosya (Dünya ekranı) ve dil özeti
     kay_dil = Counter(k['dil'] for k in kay if k['aktif'] and not k['id'].startswith('trends-'))
@@ -839,7 +1063,7 @@ def main():
                     kume='Aynı olay: başlık/içerik kelime benzerliği ve ortak seyrek özel ad; farklı dillerde ortak varlık (ülke, lider, şirket) ve sayılar, 18 saat içinde. Yalnız başlık benzerliğiyle farklı olaylar birleştirilmez.'))
     yaz('ozet.json', ozet)
     boy = {f: os.path.getsize(os.path.join(CIKTI, f)) for f in sorted(os.listdir(CIKTI)) if f.endswith('.json')}
-    print('oge', len(ogeler), 'kume', len(cikti), 'cok kaynakli(>=3 bagimsiz)', sum(1 for c in tum if c['kb'] >= 3), 'reels', len(reels_json), 'elenen', dict(elenen_say))
+    print('oge', len(ogeler), 'kume', len(cikti), 'cok kaynakli(>=3 bagimsiz)', sum(1 for c in tum if c['kb'] >= 3), 'reels', len(reels_json), 'elenen', dict(elenen_say), 'reels disi', dict(reels_disi))
     print({a: v['toplam'] for a, v in sayim.items()})
     print({k: '%dKB' % (v / 1024) for k, v in boy.items()})
 

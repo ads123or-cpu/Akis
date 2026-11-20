@@ -1,0 +1,681 @@
+[
+ {
+  "id": "ssb",
+  "url": "https://www.ssb.gov.tr/rss.aspx",
+  "tarih": "2026-11-19",
+  "ms": 3098,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "msb",
+  "url": "https://www.msb.gov.tr/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 302,
+  "neden": "HTTP Error 302: The HTTP server returned a redirect error that would l",
+  "ms": 1570,
+  "kesif": []
+ },
+ {
+  "id": "aselsan",
+  "url": "https://www.aselsan.com/tr/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+  "ms": 411,
+  "kesif": []
+ },
+ {
+  "id": "roketsan",
+  "url": "https://www.roketsan.com.tr/tr/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+  "ms": 21478,
+  "kesif": []
+ },
+ {
+  "id": "tusas",
+  "url": "https://www.tusas.com/rss",
+  "tarih": "2026-11-19",
+  "ms": 2169,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "baykar",
+  "url": "https://baykartech.com/tr/rss/",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 857,
+  "kesif": []
+ },
+ {
+  "id": "baykar2",
+  "url": "https://baykartech.com/tr/feed/",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 854,
+  "kesif": []
+ },
+ {
+  "id": "havelsan",
+  "url": "https://www.havelsan.com/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 6273,
+  "kesif": []
+ },
+ {
+  "id": "gn-site-ssb",
+  "url": "https://news.google.com/rss/search?q=site:ssb.gov.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1018,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-12T12:04:41+00:00",
+  "son_gun": 7,
+  "ortak": 0.0,
+  "ornek": [
+   "T.C. CUMHURBAŞKANLIĞI SAVUNMA SANAYİİ BAŞKANLIĞI PROJE BAZLI SÖZLEŞMELİ PERSONEL",
+   "Proje Bazlı Sözleşmeli Personel Alımı Giriş Sınavı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-site-msb",
+  "url": "https://news.google.com/rss/search?q=site:msb.gov.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1041,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-17T19:03:01+00:00",
+  "son_gun": 2,
+  "ortak": 0.0,
+  "ornek": [
+   "Millî Savunma Bakanı Yaşar Güler ve Dışişleri Bakanı Hakan Fidan, Suriyeli Mevki",
+   "Millî Savunma Bakanı Yaşar Güler, Kuzey Kıbrıs Türk Cumhuriyeti’nin 43’üncü Kuru"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-site-aselsan",
+  "url": "https://news.google.com/rss/search?q=site:aselsan.com&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1470,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-12T20:01:29+00:00",
+  "son_gun": 6,
+  "ortak": 0.0,
+  "ornek": [
+   "Kariyer Sayfamıza Hoş Geldiniz",
+   "a Yetenek MYO - Aselsan"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-site-roketsan",
+  "url": "https://news.google.com/rss/search?q=site:roketsan.com.tr&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1166,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T07:24:27+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "ROKETSAN Yönetim Kurulu Başkanı Basın Açıklaması",
+   "ROKETSAN Dubai Airshow'da"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-site-tusas",
+  "url": "https://news.google.com/rss/search?q=site:tusas.com&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 880,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-10-21T06:31:05+00:00",
+  "son_gun": 29,
+  "ortak": 0.0,
+  "ornek": [
+   "Genel Başvuru - Teknisyen",
+   "Türk Havacılık ve Uzay Sanayii"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-site-baykar",
+  "url": "https://news.google.com/rss/search?q=site:baykartech.com&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1314,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T15:09:07+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "DÜNYA HAVACILIK TARİHİNDE BİR İLK: KIZILELMA ENVANTERE GİRDİ!",
+   "BAYRAKTAR TB2 FPV KAMİKAZE DRONLAR İLE HEDEFİNİ VURDU"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gnq-aselsan",
+  "url": "https://news.google.com/rss/search?q=ASELSAN%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1441,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T19:07:08+00:00",
+  "son_gun": 0,
+  "ortak": 0.04,
+  "ornek": [
+   "19.11.2026 Günün Özeti: Suudi hava savunma talebi ve ALPAY-D testleri gündemde",
+   "ASELSAN'ın EJDERHA sistemi 51 dronu tek tuşla etkisizleştirdi"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gnq-baykar",
+  "url": "https://news.google.com/rss/search?q=Baykar%20OR%20Bayraktar%20OR%20K%C4%B1z%C4%B1lelma%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 881,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T19:03:51+00:00",
+  "son_gun": 0,
+  "ortak": 0.2,
+  "ornek": [
+   "Türkiye’nin ilk insansız savaş uçağı KIZILELMA envantere girdi! İlk 3 uçak güven",
+   "Kızılelma’da ilk teslimatlar yapıldı"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gnq-tusas",
+  "url": "https://news.google.com/rss/search?q=TUSA%C5%9E%20OR%20%22KAAN%22%20OR%20H%C3%BCrjet%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1002,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T18:41:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.08,
+  "ornek": [
+   "TUSAŞ'ta savunma sanayi diplomasisi: İngiliz bakan ziyaret etti!",
+   "Mine İçsel Allıhoroz ve Kaan Allıhoroz’un bebekleri dünyaya geldi"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gnq-roketsan",
+  "url": "https://news.google.com/rss/search?q=ROKETSAN%20OR%20%22%C3%87elik%20Kubbe%22%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 555,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T17:46:29+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "ROKETSAN EREN dolanan mühimmat seri üretime hazır: 100 km menzil",
+   "TÜRK SİHA’SININ OYUN DEĞİŞTİRİCİ GÜCÜ: ROKETSAN EREN DOLANAN MÜHİMMAT"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gnq-ssb",
+  "url": "https://news.google.com/rss/search?q=%22Savunma%20Sanayii%20Ba%C5%9Fkanl%C4%B1%C4%9F%C4%B1%22%20OR%20%22Mill%C3%AE%20Savunma%20Bakanl%C4%B1%C4%9F%C4%B1%22%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 743,
+  "kod": 200,
+  "n": 23,
+  "n_tarihli": 23,
+  "son_haber": "2026-11-19T16:02:34+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "KIZILELMA İnsansız Savaş Uçağı Envantere Girdi ve Güvenlik Güçlerine Teslim Edil",
+   "MSB: Bir haftada 475 kişi sınırda yakalandı - MUDANYA Gazetesi"
+  ],
+  "ok": true
+ },
+ {
+  "id": "savunmatr",
+  "url": "https://www.savunmatr.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 504,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T15:33:15+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Türkiye-Birleşik Krallık Savunma Sanayii Konseyi SSB’de Toplandı",
+   "DÜNYA HAVACILIK TARİHİNDE BİR İLK: KIZILELMA ENVANTERE GİRDİ!"
+  ],
+  "ok": true
+ },
+ {
+  "id": "defensehere-tr",
+  "url": "https://www.defensehere.com/tr/rss",
+  "tarih": "2026-11-19",
+  "ms": 3199,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T18:48:05+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "SAHA İstanbul, NATO EDGE 2026’da Türk savunma sanayisini uluslararası katılımcıl",
+   "Haluk Görgün ve Ahmet Akyol’dan KIZILELMA mesajı: Türk havacılık tarihinde yeni "
+  ],
+  "ok": true
+ },
+ {
+  "id": "turdef-tr",
+  "url": "https://www.turdef.com/tr/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1019,
+  "kesif": []
+ },
+ {
+  "id": "turdef",
+  "url": "https://turdef.com/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1153,
+  "kesif": []
+ },
+ {
+  "id": "siyahgribeyaz",
+  "url": "https://www.savunmahaber.com/feed/",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify fai",
+  "ms": 1769,
+  "kesif": []
+ },
+ {
+  "id": "c4defence",
+  "url": "https://www.c4defence.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 2224,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "msi-dergi",
+  "url": "https://www.savunmahaber.com/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify fai",
+  "ms": 1744,
+  "kesif": []
+ },
+ {
+  "id": "defenceturkey",
+  "url": "https://www.defenceturkey.com/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 2481,
+  "kesif": [
+   "https://defenceturkey.com/rss.xml"
+  ]
+ },
+ {
+  "id": "aa-savunma",
+  "url": "https://news.google.com/rss/search?q=site:aa.com.tr%20savunma%20sanayii&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1148,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T18:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.4,
+  "ornek": [
+   "Küresel halka arz piyasasında işlem büyüklükleri tarihi seviyelere ulaştı",
+   "Cumhurbaşkanı Erdoğan: Bayraktar Kızılelma ile şanlı ordumuzun zaferden zafere k"
+  ],
+  "ok": true
+ },
+ {
+  "id": "turkiyetoday-def",
+  "url": "https://news.google.com/rss/search?q=Turkish%20defense%20industry%20when%3A3d&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-19",
+  "ms": 963,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T18:01:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Türkiye becomes 1st to add unmanned fighter jet to military inventory | Daily Sa",
+   "Turkey moves ahead with Eurofighter deal, discussing F-35s, minister says"
+  ],
+  "ok": true
+ },
+ {
+  "id": "defensenews",
+  "url": "https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml",
+  "tarih": "2026-11-19",
+  "ms": 1893,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T18:59:12+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Pentagon lacks ‘overarching plan’ for munitions production, watchdog warns",
+   "France and Sweden hold first joint nuclear-deterrence exercise"
+  ],
+  "ok": true
+ },
+ {
+  "id": "defenseone",
+  "url": "https://www.defenseone.com/rss/all/",
+  "tarih": "2026-11-19",
+  "ms": 3835,
+  "kod": 200,
+  "n": 22,
+  "n_tarihli": 22,
+  "son_haber": "2026-11-19T14:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Defense Business Brief: Vantor’s Raptor; Hadrian’s foundry, and more",
+   "Appropriators slash Trump’s $17B Golden Dome request in draft bill"
+  ],
+  "ok": true
+ },
+ {
+  "id": "navalnews",
+  "url": "https://www.navalnews.com/feed/",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 503,
+  "neden": "HTTP Error 503: Service Temporarily Unavailable",
+  "ms": 1971,
+  "kesif": []
+ },
+ {
+  "id": "armyrecognition",
+  "url": "https://www.armyrecognition.com/news?format=feed&type=rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1884,
+  "kesif": []
+ },
+ {
+  "id": "armyrecognition2",
+  "url": "https://armyrecognition.com/feed",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1447,
+  "kesif": []
+ },
+ {
+  "id": "janes",
+  "url": "https://www.janes.com/osint-insights/defence-news/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1271,
+  "kesif": []
+ },
+ {
+  "id": "ukdj",
+  "url": "https://ukdefencejournal.org.uk/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1436,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T16:19:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Design for Britain’s new amphibious warship unveiled",
+   "Why collaboration is a strategic capability for defence"
+  ],
+  "ok": true
+ },
+ {
+  "id": "defence-blog",
+  "url": "https://defence-blog.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1154,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T16:32:28+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Doomsday plane trails Air Force One home from China",
+   "CSG shows Karpat medium tank firing on Slovak test range"
+  ],
+  "ok": true
+ },
+ {
+  "id": "thedefensepost",
+  "url": "https://thedefensepost.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1093,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "aviationist",
+  "url": "https://theaviationist.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 381,
+  "kod": 200,
+  "n": 15,
+  "n_tarihli": 15,
+  "son_haber": "2026-11-19T15:00:48+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Bell Completes First MV-75 Fuselage",
+   "First Flight of New Royal Air Force H-47ER Special Ops Chinook"
+  ],
+  "ok": true
+ },
+ {
+  "id": "airforcetimes",
+  "url": "https://www.airandspaceforces.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1159,
+  "kod": 200,
+  "n": 9,
+  "n_tarihli": 9,
+  "son_haber": "2026-11-18T21:51:11+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "‘Holy S—, That’s Tehran!’: B-2 Pilots Tell the Story of Operation Midnight Hamme",
+   "Hegseth Makes Surprise Visit to Venezuela to Strengthen Military Ties"
+  ],
+  "ok": true
+ },
+ {
+  "id": "warontherocks",
+  "url": "https://warontherocks.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1502,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T08:30:45+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "The Ground Beneath the Cloud: Dispersion and Dependency in the Digital Age",
+   "Is Dollar Dominance in Decline?"
+  ],
+  "ok": true
+ },
+ {
+  "id": "eda-news",
+  "url": "https://eda.europa.eu/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 961,
+  "kesif": []
+ },
+ {
+  "id": "nato-news",
+  "url": "https://www.nato.int/cps/rss/en/natohq/rssFeed.xsl/rssFeed.xml",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 729,
+  "kesif": []
+ },
+ {
+  "id": "militarytimes",
+  "url": "https://www.militarytimes.com/arc/outboundfeeds/rss/?outputType=xml",
+  "tarih": "2026-11-19",
+  "ms": 1476,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T18:59:12+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Pentagon lacks ‘overarching plan’ for munitions production, watchdog warns",
+   "How to steal a fighter jet and battle tank in GTA 6"
+  ],
+  "ok": true
+ },
+ {
+  "id": "c4isrnet",
+  "url": "https://www.c4isrnet.com/arc/outboundfeeds/rss/?outputType=xml",
+  "tarih": "2026-11-19",
+  "ms": 1783,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-17T20:31:20+00:00",
+  "son_gun": 1,
+  "ortak": 0.0,
+  "ornek": [
+   "Watch a large aerial drone evacuate a wounded Ukrainian soldier from the front l",
+   "New tools for troops to gun down drones | Defense News Weekly Full Episode 11.17"
+  ],
+  "ok": true
+ },
+ {
+  "id": "opex360",
+  "url": "https://www.opex360.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 2140,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T18:40:57+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Utilisé par la Marine nationale, le Camcopter S100 peut aussi être configuré en ",
+   "La Malaisie envisage de commander 36 canons LG1 de 105 mm supplémentaires à KNDS"
+  ],
+  "ok": true
+ },
+ {
+  "id": "esut",
+  "url": "https://esut.de/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1142,
+  "kod": 200,
+  "n": 6,
+  "n_tarihli": 6,
+  "son_haber": "2026-11-19T17:52:45+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Loitering Munition Virtus und HX-2 bestehen Bundeswehr-Test",
+   "Was hinter Trumps Atom-Deal mit Saudi-Arabien steckt"
+  ],
+  "ok": true
+ },
+ {
+  "id": "gn-en-turkdef",
+  "url": "https://news.google.com/rss/search?q=Bayraktar%20OR%20Baykar%20OR%20%22KAAN%20fighter%22%20OR%20Aselsan%20when%3A3d&hl=en-US&gl=US&ceid=US:en",
+  "tarih": "2026-11-19",
+  "ms": 755,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T18:59:20+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Baykar’s KIZILELMA Enters the Turkish Armed Forces’ Inventory",
+   "World first: Kızılelma enters Türkiye’s military inventory"
+  ],
+  "ok": true
+ }
+]

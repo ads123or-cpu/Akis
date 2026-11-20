@@ -148,6 +148,13 @@ class UcUca(unittest.TestCase):
         self.assertEqual(d[self.K['kaynaklar'][0]['id']], 'aktif')
         self.assertEqual(d[self.K['kaynaklar'][-1]['id']], 'beklemede')     # durum kaydı yok: beklemede
 
+    def test_okunmayan_alanlar_yazilmaz(self):
+        k = json.load(open('site/data/kume-gundem.json'))['kumeler'][0]
+        for f in ('cat', 'h1', 'h6', 'h24', 'h6o', 'h24o', 'k6', 'k24', 'sicak1', 'sicak24', 'yog', 'yog24', 'resmi', 'reels_alt', 'ul', 'ld', 'mk', 'yuk'): self.assertNotIn(f, k, f)
+        self.assertNotIn('tp', k['og'][0]); self.assertLessEqual(len(self.O['son']), 40)
+        self.assertNotIn('cat', json.load(open('site/data/indeks.json'))['kayitlar'][0])
+        for f in ('t', 'kb', 'son', 'og', 'alanlar', 'alt', 'kaynaklar', 'gundem_alt'): self.assertIn(f, k, f)
+
     def test_kume_alanlari(self):
         sp = json.load(open('site/data/kume-spor.json'))['kumeler']; self.assertTrue(any('Galatasaray' in c['t'] for c in sp))
         sy = json.load(open('site/data/kume-siyaset.json'))['kumeler']; self.assertTrue(any('Erdoğan' in c['t'] for c in sy))
@@ -209,6 +216,200 @@ class Gelistirici(unittest.TestCase):
             self.assertTrue(A.GELISTIRICI.search(t), t)
     def test_tuketici_haberi_kalir(self):
         for t in ('iOS 27 developer beta 2 is out', 'Chrome 140 güncellemesi yayında', 'Developers of GTA 6 confirm delay', 'Galaxy S27 Ultra sızdı'):
+            self.assertFalse(A.GELISTIRICI.search(t), t)
+
+
+def ab(t, kay, s=''):
+    """alan_bul kısayolu: tek başlıklı küme, kaynak bölümü sayacı."""
+    return A.alan_bul([dict(t=t)], t + ' ' + s, kay)
+
+class SavunmaAlani(unittest.TestCase):
+    """2026-11-20: Savunma Sanayi alanı. Katmandır (yz gibi): Gündem/Siyaset'i bastırmaz. 'savunma' kelimesi tek başına sayılmaz."""
+    def test_alan_listesi_ve_adlar(self):
+        self.assertEqual(A.ALANLAR[A.ALANLAR.index('siber') + 1], 'savunma')
+        self.assertEqual(A.ALAN_AD['savunma'], 'Savunma Sanayi')
+        for k, _ in A.ALT['savunma']: self.assertIn(k, A.ALT_AD, k)
+        self.assertEqual([k for k, _ in A.ALT['savunma']], ['yerli', 'hava', 'deniz', 'kara', 'fuze-hava-savunma', 'iha', 'ihracat-anlasma', 'uluslararasi'])
+    def test_savunma_haberi(self):
+        for t, kay in [('KIZILELMA envantere girdi, Baykar teslimatı tamamladı', {'gundem': 3}), ('ASELSAN yeni hava savunma sözleşmesi imzaladı', {'ekonomi': 2}),
+                       ('Lockheed Martin wins $2B F-35 contract', {'tekno': 1}), ('Yunanistan yeni fırkateyn ve denizaltı alımını onayladı', {'gundem': 2}),
+                       ('Çelik Kubbe için SİPER teslimatı başladı', {'gundem': 1}), ('TCG Anadolu tatbikata katıldı', {'savunma': 1}),
+                       ('Army tests new missile launcher', {'savunma': 1}), ('Defense industry stocks rally in Europe', {'ekonomi': 2})]:
+            self.assertIn('savunma', ab(t, kay), t)
+    def test_katman_gundemi_bastirmaz(self):
+        a = ab('KIZILELMA envantere girdi, Erdoğan tören düzenledi', {'gundem': 3})
+        self.assertIn('gundem', a); self.assertIn('savunma', a)
+    def test_saldiri_haberi_savunma_degil(self):
+        for t in ('Şehit ailesine İHA saldırısı', "İsrail SİHA ile Gazze'yi vurdu: 4 ölü", 'Drone strike kills 5 in Kharkiv'):
+            self.assertNotIn('savunma', ab(t, {'gundem': 3}), t)
+        for t in ('Ukrayna İHA tedarikini iki katına çıkaracak', 'Polonya F-35 teslim aldı'): self.assertIn('savunma', ab(t, {'gundem': 1}), t)
+        for t, k in (('Korkut Özal açıklama yaptı', {'gundem': 2}), ('Otokar yeni otobüsünü tanıttı', {'oto': 2}), ('Saab 9-3 classic car review', {'oto': 2})):
+            self.assertNotIn('savunma', ab(t, k), t)
+        self.assertTrue(A.TURKIYE_SAVUNMA.search('KAAN ilk uçuşunu yaptı'))
+    def test_savunma_kelimesi_tek_basina_yetmez(self):
+        for t, kay in [('Fenerbahçe savunmada hata yaptı, maç 2-2 bitti', {'spor': 3}), ('Sanığın savunması alındı, mahkeme kararını verdi', {'gundem': 2}),
+                       ('Galatasaray savunma oyuncusu transferi için görüşüyor', {'spor': 2}), ('Kaan Ayhan gol attı', {'spor': 2}),
+                       ("Rusya Kiev'e füze saldırısı düzenledi: 5 ölü", {'gundem': 3}), ('Israeli drone strike kills 3 in Gaza', {'gundem': 2}),
+                       ('WIXOSS TCG to End New Production in February 2027', {'eglence': 1}), ('Nvidia RTX 5080 gaming PC discount', {'tekno': 2})]:
+            self.assertNotIn('savunma', ab(t, kay), t)
+    def test_savunma_kaynagi_ilgisiz_haber_gundeme(self):
+        self.assertEqual(ab('Cevdet Yılmaz Özbekistan Cumhurbaşkanı ile görüştü', {'savunma': 1}), ['gundem'])
+        self.assertEqual(ab('KAAN için yeni teslimat takvimi', {'savunma': 1}), ['savunma'])
+    def test_alt_etiketler(self):
+        self.assertIn('yerli', A.alt_etiket('savunma', 'ROKETSAN Tayfun füzesini test etti'))
+        self.assertIn('fuze-hava-savunma', A.alt_etiket('savunma', 'ROKETSAN Tayfun füzesini test etti'))
+        self.assertIn('deniz', A.alt_etiket('savunma', 'TCG Anadolu yeni görev için limandan ayrıldı'))
+        self.assertIn('uluslararasi', A.alt_etiket('savunma', 'Rheinmetall wins Ukraine ammunition contract'))
+    def test_reels_profili(self):
+        c = dict(alanlar=['savunma'], kb=3, _kr=dict(saskin=0))
+        pr, alt = A.profil_bul(c, 'Baykar KIZILELMA teslimatı tamamladı')
+        self.assertEqual(pr, ['teknoloji']); self.assertIn('savunma', alt)
+        pr, alt = A.profil_bul(c, 'Pentagon approves new frigate procurement plan')
+        self.assertEqual(pr, ['gundem']); self.assertIn('savunma', alt)
+
+
+class BuyukOlay(unittest.TestCase):
+    """2026-11-20: büyük olaylar onlarca kümeye bölünmesin (ad çifti geçişi); farklı olaylar yine birleşmesin."""
+    def test_anthropic_halka_arzi_toplanir(self):
+        ipo_en = ['Anthropic IPO raises record $81.3 billion', 'Anthropic shares close 17% higher on first day of trading', 'Anthropic starts trading on Nasdaq after largest IPO in history',
+                  'Anthropic sets share price at $83 for stock market debut', 'Investors cheer Anthropic IPO as AI demand surges', 'What the Anthropic IPO means for OpenAI',
+                  'Anthropic IPO: employees become millionaires overnight', 'Anthropic market debut beats SpaceX record', 'Analysts split on Anthropic valuation after IPO',
+                  'Anthropic IPO lifts Nvidia and Amazon shares', 'Anthropic pulled off the biggest IPO ever', 'How the Anthropic IPO was priced', 'Anthropic IPO day protest outside office',
+                  'Anthropic debuts on Nasdaq with $2 trillion valuation', 'Anthropic IPO: retail investors face allocation limits', 'Dario Amodei rings Nasdaq bell as Anthropic goes public',
+                  'Anthropic IPO oversubscribed 20 times', 'After Anthropic IPO, what comes next for Claude', 'Anthropic first day of trading ends up 17%', 'Anthropic IPO tops Saudi Aramco record']
+        ipo_tr = ['Anthropic halka arzla 81 milyar dolar topladı', "Anthropic'in halka arzı rekor kırdı", 'Anthropic hisseleri Nasdaq’ta ilk işlem gününde yükseldi',
+                  'Yapay zekâ devi Anthropic halka arz oldu', 'Anthropic halka arzında hisse fiyatı 83 dolar', "Anthropic halka arzı sonrası Nvidia yükseldi",
+                  'Anthropic halka arzı: çalışanlar milyoner oldu', "Claude'un sahibi Anthropic halka arzla borsada", 'Anthropic halka arzına yoğun talep', 'Anthropic halka arzı SpaceX rekorunu geçti']
+        ipo_de = ['Anthropic Börsengang bringt 81 Milliarden Dollar', 'Rekord-Börsengang: Anthropic startet an der Nasdaq', 'Anthropic Börsengang übertrifft Erwartungen',
+                  'Was der Anthropic Börsengang für Anleger bedeutet', 'Anthropic Aktie nach Börsengang 17 Prozent im Plus', 'Anthropic Börsengang: Mitarbeiter werden Millionäre',
+                  'Anthropic Börsengang lässt Nvidia steigen', 'Anthropic Börsengang mit Rekordbewertung', 'Analysten zum Anthropic Börsengang', 'Anthropic Börsengang: Kleinanleger leer ausgegangen']
+        diger = ['Anthropic releases Claude Opus %d.%d with longer memory' % (5, i) for i in range(10)] + \
+                ['Anthropic opens new office in city number %d' % i for i in range(10, 30)] + \
+                ['Anthropic researchers publish safety paper %d on interpretability' % i for i in range(30, 50)] + \
+                ["Anthropic'ten yeni Claude özelliği %d" % i for i in range(50, 60)]
+        ipo = [oge(t, 'en', 'e%d' % i, dk=5 + i * 7) for i, t in enumerate(ipo_en)] + [oge(t, 'tr', 't%d' % i, dk=8 + i * 9) for i, t in enumerate(ipo_tr)] + \
+              [oge(t, 'de', 'd%d' % i, dk=11 + i * 11) for i, t in enumerate(ipo_de)]
+        ilgisiz = [oge(t, 'en' if i < 50 else 'tr', 'x%d' % i, dk=3 + i * 6) for i, t in enumerate(diger)]
+        ks = A.kumele_akis(ipo + ilgisiz)
+        ipo_id = {o['id'] for o in ipo}
+        ipo_kume = [k for k in ks if any(o['id'] in ipo_id for o in k['ogeler'])]
+        self.assertLessEqual(len(ipo_kume), 3, [len(k['ogeler']) for k in ipo_kume])
+        for k in ipo_kume: self.assertFalse([o['t'] for o in k['ogeler'] if o['id'] not in ipo_id])
+    def test_myanmar_iki_dilde_toplanir(self):
+        en = ['ICJ rules Myanmar committed genocide against Rohingya', 'Myanmar committed genocide against its Rohingya minority, UN court rules', 'World court finds Myanmar guilty of Rohingya genocide',
+              'Rohingya refugees celebrate genocide ruling against Myanmar', 'What the Myanmar genocide verdict means for the Rohingya', 'Myanmar junta rejects genocide ruling',
+              'Tears in court as Rohingya vindicated in Myanmar genocide case', 'Gambia hails ICJ verdict on Myanmar genocide', 'Myanmar genocide ruling sets precedent for other cases',
+              'Rohingya genocide: what was said in court', 'Inside a Rohingya camp after the Myanmar genocide ruling', 'Myanmar must pay reparations to Rohingya, court says',
+              'Aung San Suu Kyi era army found responsible for Rohingya genocide', 'Myanmar genocide case: key moments', 'UN chief welcomes Myanmar genocide ruling']
+        tr = ["UAD: Myanmar Arakanlı Müslümanlara soykırım yaptı", "Uluslararası Adalet Divanı Myanmar'ı soykırımdan sorumlu tuttu", "Myanmar soykırım kararı: Arakanlılar sevindi",
+              "Myanmar'a soykırım kararı", "Arakanlı Müslümanlar için tarihi soykırım kararı: Myanmar suçlu bulundu", "Myanmar soykırım davasında karar açıklandı",
+              "Türkiye'den Myanmar soykırım kararına destek", "Myanmar ordusu soykırım kararını reddetti", "Myanmar soykırımı kararı İsrail davasına emsal olabilir", "Gambiya Myanmar soykırım kararını memnuniyetle karşıladı"]
+        og = [oge(t, 'en', 'm%d' % i, dk=10 + i * 20) for i, t in enumerate(en)] + [oge(t, 'tr', 'n%d' % i, dk=15 + i * 25) for i, t in enumerate(tr)]
+        # Önce 25 başlık 8 kümeye bölünüyordu. Kavramı olmayan, başlığı da benzemeyen yan haber ('tazminat ödemeli') ayrı kalabilir.
+        ks = A.kumele_akis(og)
+        self.assertLessEqual(len(ks), 3, [len(k['ogeler']) for k in ks]); self.assertGreaterEqual(max(len(k['ogeler']) for k in ks), 20)
+    def test_ayni_kulup_farkli_oyuncu_birlesmez(self):
+        # üçüncü geçiş ortak kulüp adıyla (tek ad, ad çifti değil) farklı oyuncu haberlerini birleştirmez.
+        # Not: iki başlık neredeyse aynıysa (j>=.5) ilk geçiş zaten birleştirir; o davranış bu düzeltmenin kapsamı dışında.
+        og = [oge('Real Madrid extends Tchouaméni contract until 2032', 'en', 'a'), oge('Arda Güler signs new long-term deal with Real Madrid', 'en', 'b', dk=40),
+              oge('Real Madrid confirm Mbappé injury before derby', 'en', 'c', dk=80)]
+        self.assertEqual(sorted(len(k['ogeler']) for k in A.kumele_akis(og)), [1, 1, 1])
+    def test_iki_lider_cifti_olay_sayilmaz(self):
+        self.assertFalse(A.ad_ciftleri({'trump', 'putin'})); self.assertFalse(A.ad_ciftleri({'chatgpt', 'claude'}))
+        self.assertIn(('#ipo', 'anthropic'), A.ad_ciftleri(A.adlar('Anthropic IPO raises record sum', {'anthropic'})))
+    def test_title_case_siradan_kelime_ad_degil(self):
+        h = A.ozel_ad_havuzu(['Samsung yeni Galaxy Buds tanıttı', 'Apple yeni iPhone için çalışıyor', 'Bugün Apple ve Samsung açıklama yaptı'])
+        self.assertFalse(A.adlar('Galaxy Buds Active Leak Shows Workout Design', h) & {'leak', 'shows', 'design', 'workout'})
+
+
+class ReelsTekrarVeKapi(unittest.TestCase):
+    """2026-11-20: tekrar süzgeci ortak ad ÇİFTİne bakar (Title Case kelimeleri değil); içerik kapısı rutin haberi dışarıda bırakır."""
+    def test_farkli_sizintilar_tekrar_degil(self):
+        h = A.ozel_ad_havuzu(['Apple yeni iPhone için çalışıyor', 'Samsung yeni Galaxy Buds tanıttı', 'Bugün Apple açıklama yaptı'])
+        a1, c1 = A.reels_anahtar([oge('Galaxy Buds Active Leak Shows Workout Design')], h)
+        a2, c2 = A.reels_anahtar([oge('Leak Says Apple Is Developing Two Designs')], h)
+        self.assertFalse(c1 & c2); self.assertFalse(a1 & a2)
+    def test_kizilelma_ve_robot_dansi_ayri(self):
+        h = A.ozel_ad_havuzu(['Türkiye KIZILELMA teslim aldı', "Çin'de robotlar dans etti"])
+        a1, c1 = A.reels_anahtar([oge('KIZILELMA envantere girdi: dünyada bir ilk')], h)
+        a2, c2 = A.reels_anahtar([oge("Çin'de 151 insansı robot aynı anda dans ederek dünya rekoru kırdı")], h)
+        self.assertFalse(c1 & c2)
+    def test_ayni_olay_farkli_dil_tekrar(self):
+        _, c1 = A.reels_anahtar([oge('Anthropic shares jump after record IPO', 'en')], {'anthropic'})
+        _, c2 = A.reels_anahtar([oge("Anthropic halka arzda 81 milyar dolar topladı")], {'anthropic'})
+        self.assertTrue(c1 & c2)
+    def kart(self, **k):
+        kr = dict(etki=0, saskin=0, viral=0, hikaye=0); kr.update(k.pop('kr', {}))
+        c = dict(t=k.pop('t', 'x'), kb=3, alanlar=['gundem'], gundem_alt=['turkiye'], _kr=kr); c.update(k); return c
+    def test_icerik_kapisi(self):
+        self.assertFalse(A.icerik_kapisi(self.kart(t='Fenerbahçe maç hazırlıklarını sürdürdü', alanlar=['spor'], kb=3)))
+        self.assertFalse(A.icerik_kapisi(self.kart(t='Borsa günü düşüşle tamamladı', alanlar=['ekonomi', 'gundem'], kb=3)))
+        self.assertTrue(A.icerik_kapisi(self.kart(t="Hürmüz'de tanker mayına çarptı", kb=4, gundem_alt=['dunya', 'savas'])))
+        self.assertTrue(A.icerik_kapisi(self.kart(t='Yeni vergi düzenlemesi', kr=dict(etki=6))))
+        self.assertTrue(A.icerik_kapisi(self.kart(t='HONOR Türkiye’de üretime başladı', alanlar=['tekno'], kb=11)))
+        # 'leak' tek başına gerçek şaşırtıcılık değil
+        self.assertFalse(A.icerik_kapisi(self.kart(t='Latest leak showcases Motorola Razr Flex colors', alanlar=['tekno'], kr=dict(saskin=6))))
+    def test_yabanci_sizinti_hafif_ceza(self):
+        og = [oge('Galaxy S27 Ultra design leaks in new renders', 'en', 'a'), oge('Galaxy S27 Ultra leak shows new camera', 'en', 'b')]
+        def c(yab): return dict(son=Z0, h6=2, h24=2, kb=2, resmi=False, gundem_alt=['dunya'], sadece_yabanci=yab, n_tr=0 if yab else 2, farkli=[], i=None,
+                                alanlar=['tekno'], kategoriler=['tech'], ulkeler=[], liderler=[], markalar=['samsung'], plat_topluluk=False)
+        for yab in (True, False):
+            _, _, ceza, _ = A.reels_puanla(c(yab), og, og[0], ' '.join(o['t'] for o in og), Z0, None)
+            self.assertEqual('yalnız yabancı kaynaklı sızıntı/söylenti' in ceza, yab)
+        # siyaset/spor rutin haberine ceza yok kararı (2026-11-20) korunur
+        for ad, rx, d, alanlar in A.CEZA: self.assertFalse(set(alanlar) & {'siyaset', 'spor'}, ad)
+
+    def test_leak_finally_rutin_muafiyeti_yok(self):
+        t = 'Motorola Razr Fold finally receives Android 17 stable update'
+        self.assertFalse(A.carpici_gercek(t)); self.assertTrue(A.RUTIN.search(t))
+        self.assertTrue(A.carpici_gercek('Dünyada ilk kez: insansız savaş uçağı envantere girdi'))
+
+
+class YanlisAlan(unittest.TestCase):
+    """2026-11-20: kelime içi ve çok anlamlı eşleşmeler (kumeleme-reels raporu bulgu 5)."""
+    def test_iran_kelime_siniri(self):
+        for t in ("Real Madrid, Tchouaméni'nin sözleşmesini 30 Haziran 2032'ye uzattı", 'Trafiği artıran yol çalışması başladı', 'YKS tarihi Haziran ayında'):
+            self.assertFalse(A.KURAL['siyaset'].search(t), t)
+        for t in ("İran'ın dışişleri bakanı konuştu", 'Iran rejects new sanctions', 'İranlı yetkililer açıkladı'):
+            self.assertTrue(A.KURAL['siyaset'].search(t), t)
+    def test_turkce_ev_oto_degil(self):
+        self.assertNotIn('oto', ab('Ev gençlerinin lideri seçildi', {'gundem': 2}))
+        self.assertFalse(A.KURAL['oto_guclu'].search('Ev gençlerinin lideri seçildi'))
+        self.assertTrue(A.KURAL['oto_guclu'].search('EV sales jump in Europe as EVs get cheaper'))
+    def test_samsung_galaxy_bilim_degil(self):
+        for t in ('Galaxy S27 Ultra kamerası sızdı', 'Samsung Galaxy Buds Active leak', 'Galaxy Z Fold 8 update'):
+            self.assertFalse(A.KURAL['bilim_guclu'].search(t), t); self.assertNotIn('bilim', ab(t, {'tekno': 3}))
+        self.assertTrue(A.KURAL['bilim_guclu'].search('Astronomers find a galaxy older than expected'))
+    def test_euro_2028_ve_altin_madalya_ekonomi_degil(self):
+        for t in ('EURO 2028 kurası çekildi', 'Milli sporcumuz altın madalya kazandı', 'Altın top ödülü sahibini buldu'):
+            self.assertFalse(A.KURAL['ekonomi_guclu'].search(t), t); self.assertNotIn('ekonomi', ab(t, {'spor': 2, 'gundem': 1}))
+        for t in ('Euro rekor kırdı', 'Gram altın 3 bin lirayı aştı'): self.assertTrue(A.KURAL['ekonomi_guclu'].search(t), t)
+    def test_spor_kaynakli_real_madrid(self):
+        t = "Real Madrid, Tchouaméni'nin sözleşmesini 30 Haziran 2032'ye uzattı"
+        s = 'Oyun kurucu akıllı oyunu ve uygulama gücüyle öne çıktı. Apple TV yayınında maçın oyun planı konuşuldu.'
+        a = ab(t, {'spor': 8}, s)
+        self.assertIn('spor', a); self.assertNotIn('tekno', a); self.assertNotIn('siyaset', a)
+
+
+class KaynakDuzeltmeleri(unittest.TestCase):
+    """2026-11-20: kaynak-kalitesi raporu (kurum adı, 72 saat sayacı, geliştirici süzgeci)."""
+    def test_kurum_alt_dize_eslesmez(self):
+        sabah = A.kurum('Sabah', 'x')
+        for p in ('Adana Haber', 'Odatv', 'Dosya Haber', 'Afyon Ana Haber', 'Küçük Saat (Adana Haberleri)', 'Gazeta Spor'): self.assertNotEqual(A.kurum(p, 'x'), sabah, p)
+        for p in ('A Haber', 'atv', 'ATV Haber', 'A Spor', 'Fanatik'): self.assertEqual(A.kurum(p, 'x'), sabah, p)
+        self.assertNotEqual(A.kurum('Kayseri Anadolu Haber', 'x'), A.kurum('AA', 'y')); self.assertEqual(A.kurum('Anadolu Ajansı', 'x'), A.kurum('AA', 'y'))
+        self.assertNotEqual(A.kurum('Haber Hürriyeti', 'x'), A.kurum('Hürriyet', 'y')); self.assertNotEqual(A.kurum('CNBC-e', 'x'), A.kurum('CNBC', 'y'))
+    def test_72_saat_sayaci(self):
+        now = datetime.now(timezone.utc)
+        it = lambda t, saat: dict(t=t, l='https://k.test/%d' % saat, d=(now - timedelta(hours=saat)).isoformat())
+        j = dict(feeds={'k': dict(name='K', lang='tr', cat='tr', items=[it('Bir', 2), it('İki', 50), it('Üç', 100), it('Dört', 300)])})
+        _, n72 = A.ogeler_kur(j, {'k': {'id': 'k'}}, now.timestamp())
+        self.assertEqual(n72['k'], 2)
+    def test_gelistirici_kacaklari(self):
+        for t in ('PHP 8.6 正式发布 新增部分函数应用与流监测 API', "Snapchat'ten yapay zeka asistanlarıyla AR Lens geliştirme aracı: Easy Lens CLI", 'Frames CLI Updated',
+                  'NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab'):
+            self.assertTrue(A.GELISTIRICI.search(t) and not A.TUKETICI.search(t), t)
+        for t in ('Mercedes CLA yeni kasa tanıtıldı', 'iOS 27 developer beta 2 is out', 'Galaxy S27 Ultra sızdı', 'Clinic opens in Adana'):
             self.assertFalse(A.GELISTIRICI.search(t), t)
 
 

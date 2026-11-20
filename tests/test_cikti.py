@@ -6,7 +6,11 @@ KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = os.path.join(KOK, 'site', 'data')
 VAR = os.path.exists(os.path.join(D, 'ozet.json'))
 def j(a): return json.load(open(os.path.join(D, a), encoding='utf-8'))
-ALANLAR = ['gundem', 'tekno', 'yz', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'oto', 'oyun', 'eglence']
+ALANLAR = ['gundem', 'tekno', 'yz', 'siyaset', 'spor', 'ekonomi', 'bilim', 'siber', 'savunma', 'oto', 'oyun', 'eglence']
+# Savunma Sanayi 2026-11-20'de eklendi: eski akis2.py ile üretilmiş yerel site/data'da dosyası yoksa denetlenmez;
+# veriyi üreten sürüm alanı ozet.json'da listeliyorsa dosyası şarttır.
+if VAR and 'savunma' not in {a['k'] for a in json.load(open(os.path.join(D, 'ozet.json'), encoding='utf-8')).get('alanlar', [])}:
+    ALANLAR.remove('savunma')
 YASAK = re.compile(r'shift\s*delete', re.I)
 KIMLIK_ALANLARI = {'p', 'kaynak', 'ad', 'l', 'url', 'name', 'id'}   # yayıncı adı, bağlantı, kaynak adı: özet metni DEĞİL
 
@@ -54,7 +58,7 @@ class Cikti(unittest.TestCase):
             if x['k'] in ('tr', 'en'): continue
             for a in ALANLAR:
                 m = sum(1 for c in f['kumeler'] if a in c['alanlar'])
-                self.assertGreaterEqual(sum(1 for c in alan[a] if c['dil'] == x['k']), min(12, m), (x['k'], a))
+                self.assertGreaterEqual(sum(1 for c in alan[a] if c['dil'] == x['k']), min(6, m), (x['k'], a))   # DIL_AYRILAN 12 -> 6 (2026-11-20)
 
     def test_ilk_yukleme_kucuk(self):
         self.assertLess(os.path.getsize(os.path.join(D, 'ozet.json')), 450 * 1024)

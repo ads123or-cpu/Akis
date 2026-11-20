@@ -1,0 +1,203 @@
+[
+ {
+  "id": "defenceturkey",
+  "url": "https://defenceturkey.com/rss.xml",
+  "tarih": "2026-11-19",
+  "ms": 531,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T00:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "A FIRST IN GLOBAL AVIATION HISTORY: KIZILELMA ENTERS TÜRKIYE'S INVENTORY",
+   "NATO Outlines Digital Transformation and Space Priorities at NATO EDGE 2026 Pres"
+  ],
+  "ok": true
+ },
+ {
+  "id": "navalnews",
+  "url": "https://www.navalnews.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 2058,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T19:05:27+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "U.S. Senate Seeks to Exchange Shipbuilding Funds for More Munitions",
+   "Baltic Workboats Launches EUROGUARD Modular Ship in Estonia"
+  ],
+  "ok": true
+ },
+ {
+  "id": "turdef",
+  "url": "https://turdef.com/feed",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1086,
+  "kesif": []
+ },
+ {
+  "id": "turdef2",
+  "url": "https://www.turdef.com/rss.xml",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 890,
+  "kesif": []
+ },
+ {
+  "id": "nato-news",
+  "url": "https://www.nato.int/cps/en/natohq/news.rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 711,
+  "kesif": []
+ },
+ {
+  "id": "armyrecognition",
+  "url": "https://www.armyrecognition.com/news/army-news?format=feed&type=rss",
+  "tarih": "2026-11-19",
+  "ms": 1525,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T11:19:13+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "U.S. Army HIMARS Rocket Launchers Land Fire and Escape Pacific Island in Just 41",
+   "U.S. Marines Sharpen Camouflaged MADIS Air Defense Tactics for Indo-Pacific Oper"
+  ],
+  "ok": true
+ },
+ {
+  "id": "thedefensepost",
+  "url": "https://www.thedefensepost.com/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1269,
+  "kod": 200,
+  "n": 0,
+  "n_tarihli": 0,
+  "ok": false,
+  "neden": "3 kayittan az",
+  "kesif": []
+ },
+ {
+  "id": "c4defence",
+  "url": "https://www.c4defence.com/rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 864,
+  "kesif": []
+ },
+ {
+  "id": "savunmahaber",
+  "url": "https://savunmahaber.com/feed/",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify fai",
+  "ms": 219,
+  "kesif": []
+ },
+ {
+  "id": "defensehere-en",
+  "url": "https://www.defensehere.com/en/rss",
+  "tarih": "2026-11-19",
+  "ms": 2563,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T13:35:29+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Czechia-based OPTOKON shares introduction video",
+   "Pratt & Whitney develops Valox engines for munitions and drones"
+  ],
+  "ok": true
+ },
+ {
+  "id": "trthaber-savunma",
+  "url": "https://news.google.com/rss/search?q=site:trthaber.com%20savunma%20sanayii&hl=tr&gl=TR&ceid=TR:tr",
+  "tarih": "2026-11-19",
+  "ms": 1626,
+  "kod": 200,
+  "n": 25,
+  "n_tarihli": 25,
+  "son_haber": "2026-11-19T16:59:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.12,
+  "ornek": [
+   "Çin Devlet Başkanı Şi'den, ABD ve Rusya'ya \"barış içinde bir arada yaşama\" mesaj",
+   "\"Elektrifikasyonun 2035'e 35'e ulaşabilmesi fosil yakıtlardan uzaklaştırmayı ger"
+  ],
+  "ok": true
+ },
+ {
+  "id": "eurasiantimes",
+  "url": "https://www.eurasiantimes.com/feed/",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": null,
+  "neden": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protoco",
+  "ms": 463,
+  "kesif": []
+ },
+ {
+  "id": "nationalinterest",
+  "url": "https://en.defence-ua.com/rss/feed.xml",
+  "tarih": "2026-11-19",
+  "ms": 819,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T18:00:00+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Safran’s Naval Decoy Launcher NGDS HK Now Kills Too, 88 Guided 70mm Rockets Adde",
+   "Senate Strips $1.84B From Nuclear Battleship BBG(X), Golden Armada Sunk Before I"
+  ],
+  "ok": true
+ },
+ {
+  "id": "shephard",
+  "url": "https://www.shephardmedia.com/news/feed/",
+  "tarih": "2026-11-19",
+  "ms": 1129,
+  "kod": 200,
+  "n": 10,
+  "n_tarihli": 10,
+  "son_haber": "2026-11-19T16:39:07+00:00",
+  "son_gun": 0,
+  "ortak": 0.0,
+  "ornek": [
+   "Demining companies step up in Ukraine as the size of the challenge becomes clear",
+   "US Navy explores 3D-printed parts for Growler, Poseidon and Arleigh Burke destro"
+  ],
+  "ok": true
+ },
+ {
+  "id": "flightglobal-def",
+  "url": "https://www.flightglobal.com/1182.rss",
+  "tarih": "2026-11-19",
+  "ok": false,
+  "kod": 404,
+  "neden": "HTTP Error 404: Not Found",
+  "ms": 1258,
+  "kesif": []
+ }
+]

@@ -1411,7 +1411,8 @@
 "ulke": "US",
 "oncelik": 3,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine 429 veriyor, haber gelmiyor; 2026-11-20 kapatıldı"
 },
 {
 "id": "trends-us",
@@ -1905,7 +1906,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı içeriği başka kayıt veriyor (denetim 19.11.2026)"
 },
 {
 "id": "milliyet-eko",
@@ -1919,7 +1921,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Ekonomi değil gündem akışı veriyor; gündem kopyası (denetim 19.11.2026)"
 },
 {
 "id": "milliyet-dunya",
@@ -1989,7 +1992,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Boş RSS (830 bayt), 13 gündür haber yok (denetim 19.11.2026)"
 },
 {
 "id": "sabah-ana",
@@ -2841,7 +2845,7 @@
 "cat": "tech",
 "url": "https://www.bleepingcomputer.com/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 1,
@@ -2855,7 +2859,7 @@
 "cat": "tech",
 "url": "https://krebsonsecurity.com/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -3077,7 +3081,7 @@
 "cat": "tr",
 "url": "https://news.google.com/rss/search?q=savunma%20sanayii%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
 "plat": "gnews",
-"calisma": "gundem",
+"calisma": "savunma",
 "tip": "toplayici",
 "ulke": "TR",
 "oncelik": 3,
@@ -3244,7 +3248,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı içeriği başka kayıt veriyor (denetim 19.11.2026)"
 },
 {
 "id": "ntv-otomobil",
@@ -3258,7 +3263,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı URL başka kayıtta (denetim 19.11.2026)"
 },
 {
 "id": "trt-kultur",
@@ -3328,7 +3334,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı içeriği başka kayıt veriyor (denetim 19.11.2026)"
 },
 {
 "id": "aa-kultur",
@@ -3499,7 +3506,8 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı URL başka kayıtta (denetim 19.11.2026)"
 },
 {
 "id": "sciencealert",
@@ -4770,7 +4778,8 @@
 "nitelik": [
 "toplayici"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı içeriği başka kayıt veriyor (denetim 19.11.2026)"
 },
 {
 "id": "gnq-onedio",
@@ -4786,7 +4795,8 @@
 "nitelik": [
 "toplayici"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı içeriği başka kayıt veriyor (denetim 19.11.2026)"
 },
 {
 "id": "gnq-yapayzeka2",
@@ -4811,7 +4821,7 @@
 "cat": "tech",
 "plat": "gnews",
 "url": "https://news.google.com/rss/search?q=siber%20sald%C4%B1r%C4%B1%20OR%20veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%20OR%20hackerlar%20when%3A1d&hl=tr&gl=TR&ceid=TR:tr",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "toplayici",
 "ulke": "TR",
 "oncelik": 3,
@@ -4867,7 +4877,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine 429 veriyor, haber gelmiyor; 2026-11-20 kapatıldı"
 },
 {
 "id": "rd-gadgets",
@@ -4920,7 +4931,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine 429 veriyor, haber gelmiyor; 2026-11-20 kapatıldı"
 },
 {
 "id": "rd-claudeai",
@@ -4955,7 +4967,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine 429 veriyor, haber gelmiyor; 2026-11-20 kapatıldı"
 },
 {
 "id": "rd-apple",
@@ -5044,7 +5057,8 @@
 "erken-sinyal",
 "topluluk"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Reddit Actions IP’sine 429 veriyor, haber gelmiyor; 2026-11-20 kapatıldı"
 },
 {
 "id": "rd-sorun",
@@ -5182,7 +5196,8 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı URL başka kayıtta (denetim 19.11.2026)"
 },
 {
 "id": "ios-macrumors",
@@ -5196,7 +5211,8 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı URL başka kayıtta (denetim 19.11.2026)"
 },
 {
 "id": "ios-appleinsider",
@@ -5210,7 +5226,8 @@
 "ulke": "US",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı URL başka kayıtta (denetim 19.11.2026)"
 },
 {
 "id": "mac-macstories",
@@ -5240,7 +5257,8 @@
 "nitelik": [
 "sirket-haberi"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı URL başka kayıtta (denetim 19.11.2026)"
 },
 {
 "id": "mac-9to5",
@@ -5914,7 +5932,7 @@
 "cat": "tech",
 "url": "https://feeds.feedburner.com/TheHackersNews",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -5942,7 +5960,7 @@
 "cat": "world",
 "url": "https://breakingdefense.com/feed/",
 "plat": "web",
-"calisma": "gundem",
+"calisma": "savunma",
 "tip": "ana akim",
 "ulke": "US",
 "oncelik": 2,
@@ -5956,7 +5974,7 @@
 "cat": "world",
 "url": "https://www.twz.com/feed",
 "plat": "web",
-"calisma": "gundem",
+"calisma": "savunma",
 "tip": "ana akim",
 "ulke": "US",
 "oncelik": 2,
@@ -5970,7 +5988,7 @@
 "cat": "tech",
 "url": "https://www.defenceturk.net/feed",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "savunma",
 "tip": "ana akim",
 "ulke": "TR",
 "oncelik": 2,
@@ -5984,7 +6002,7 @@
 "cat": "tech",
 "url": "https://www.savunmasanayist.com/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "savunma",
 "tip": "ana akim",
 "ulke": "TR",
 "oncelik": 2,
@@ -6017,7 +6035,8 @@
 "ulke": "TR",
 "oncelik": 2,
 "nitelik": [],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Kopya: aynı içeriği başka kayıt veriyor (denetim 19.11.2026)"
 },
 {
 "id": "hn-front",
@@ -6142,7 +6161,7 @@
 "cat": "tech",
 "url": "https://www.malwarebytes.com/blog/feed/index.xml",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -6269,7 +6288,7 @@
 "cat": "tech",
 "url": "https://www.welivesecurity.com/en/rss/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -6297,7 +6316,7 @@
 "cat": "tech",
 "url": "https://www.helpnetsecurity.com/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -6311,7 +6330,7 @@
 "cat": "tech",
 "url": "https://www.securityweek.com/feed/",
 "plat": "web",
-"calisma": "tekno",
+"calisma": "siber",
 "tip": "uzman teknoloji",
 "ulke": "US",
 "oncelik": 2,
@@ -6394,7 +6413,8 @@
 "nitelik": [
 "toplayici"
 ],
-"aktif": true
+"aktif": false,
+"pasif_neden": "Samsung/Android TR sorguları %56-89 tekrar; android-tr-gn kaldı (denetim 19.11.2026)"
 },
 {
 "id": "gn-tr-iphonegizli",
@@ -7278,7 +7298,7 @@
 "cat": "world",
 "url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10",
 "plat": "web",
-"calisma": "siyaset",
+"calisma": "savunma",
 "tip": "resmi kurum",
 "ulke": "US",
 "oncelik": 1,
@@ -10886,13 +10906,14 @@
 "nitelik": [
 "toplayici"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-11",
 "n": 25,
 "ms": 591
-}
+},
+"pasif_neden": "Samsung/Android TR sorguları %56-89 tekrar; android-tr-gn kaldı (denetim 19.11.2026)"
 },
 {
 "id": "gn-oneui-9-tr",
@@ -10930,13 +10951,14 @@
 "nitelik": [
 "toplayici"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-11",
 "n": 25,
 "ms": 564
-}
+},
+"pasif_neden": "Samsung/Android TR sorguları %56-89 tekrar; android-tr-gn kaldı (denetim 19.11.2026)"
 },
 {
 "id": "gn-galaxy-s-tr",
@@ -10952,13 +10974,14 @@
 "nitelik": [
 "toplayici"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-11",
 "n": 25,
 "ms": 578
-}
+},
+"pasif_neden": "Samsung/Android TR sorguları %56-89 tekrar; android-tr-gn kaldı (denetim 19.11.2026)"
 },
 {
 "id": "gn-fold-tr",
@@ -11570,13 +11593,14 @@
 "nitelik": [
 "toplayici"
 ],
-"aktif": true,
+"aktif": false,
 "dogrulama": {
 "durum": "gecti",
 "tarih": "2026-11-11",
 "n": 25,
 "ms": 583
-}
+},
+"pasif_neden": "Samsung/Android TR sorguları %56-89 tekrar; android-tr-gn kaldı (denetim 19.11.2026)"
 },
 {
 "id": "gn-pixel-tr",
@@ -14907,6 +14931,816 @@
 "tarih": "2026-11-18",
 "n": 21,
 "ms": 386
+}
+},
+{
+"id": "gn-site-msb",
+"name": "MSB (Google Haberler)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site:msb.gov.tr&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1041
+}
+},
+{
+"id": "gn-site-roketsan",
+"name": "ROKETSAN (Google Haberler)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=site:roketsan.com.tr&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1166
+}
+},
+{
+"id": "gn-site-baykar",
+"name": "Baykar (Google Haberler)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=site:baykartech.com&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1314
+}
+},
+{
+"id": "gnq-aselsan",
+"name": "ASELSAN haberleri (GN)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=ASELSAN%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1441
+}
+},
+{
+"id": "gnq-baykar",
+"name": "Baykar haberleri (GN)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=Baykar%20OR%20Bayraktar%20OR%20K%C4%B1z%C4%B1lelma%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 881
+}
+},
+{
+"id": "gnq-tusas",
+"name": "TUSAŞ / KAAN haberleri (GN)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=TUSA%C5%9E%20OR%20%22KAAN%22%20OR%20H%C3%BCrjet%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1002
+}
+},
+{
+"id": "gnq-roketsan",
+"name": "ROKETSAN haberleri (GN)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=ROKETSAN%20OR%20%22%C3%87elik%20Kubbe%22%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 555
+}
+},
+{
+"id": "gnq-ssb",
+"name": "SSB / MSB haberleri (GN)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=%22Savunma%20Sanayii%20Ba%C5%9Fkanl%C4%B1%C4%9F%C4%B1%22%20OR%20%22Mill%C3%AE%20Savunma%20Bakanl%C4%B1%C4%9F%C4%B1%22%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 23,
+"ms": 743
+}
+},
+{
+"id": "savunmatr",
+"name": "SavunmaTR",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.savunmatr.com/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 504
+}
+},
+{
+"id": "defensehere-tr",
+"name": "DefenseHere",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.defensehere.com/tr/rss",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 3199
+}
+},
+{
+"id": "aa-savunma",
+"name": "AA Savunma (GN)",
+"lang": "tr",
+"cat": "tr",
+"url": "https://news.google.com/rss/search?q=site:aa.com.tr%20savunma%20sanayii&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1148
+}
+},
+{
+"id": "turkiyetoday-def",
+"name": "Türkiye Today Defense (GN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=Turkish%20defense%20industry%20when%3A3d&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 963
+}
+},
+{
+"id": "defensenews",
+"name": "Defense News",
+"lang": "en",
+"cat": "world",
+"url": "https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 1893
+}
+},
+{
+"id": "defenseone",
+"name": "Defense One",
+"lang": "en",
+"cat": "world",
+"url": "https://www.defenseone.com/rss/all/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 22,
+"ms": 3835
+}
+},
+{
+"id": "ukdj",
+"name": "UK Defence Journal",
+"lang": "en",
+"cat": "world",
+"url": "https://ukdefencejournal.org.uk/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 1436
+}
+},
+{
+"id": "defence-blog",
+"name": "Defence Blog",
+"lang": "en",
+"cat": "world",
+"url": "https://defence-blog.com/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 1154
+}
+},
+{
+"id": "aviationist",
+"name": "The Aviationist",
+"lang": "en",
+"cat": "world",
+"url": "https://theaviationist.com/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "IT",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 15,
+"ms": 381
+}
+},
+{
+"id": "airforcetimes",
+"name": "Air & Space Forces Magazine",
+"lang": "en",
+"cat": "world",
+"url": "https://www.airandspaceforces.com/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 9,
+"ms": 1159
+}
+},
+{
+"id": "warontherocks",
+"name": "War on the Rocks",
+"lang": "en",
+"cat": "world",
+"url": "https://warontherocks.com/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1502
+}
+},
+{
+"id": "c4isrnet",
+"name": "C4ISRNET",
+"lang": "en",
+"cat": "world",
+"url": "https://www.c4isrnet.com/arc/outboundfeeds/rss/?outputType=xml",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "US",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 1783
+}
+},
+{
+"id": "opex360",
+"name": "Zone Militaire",
+"lang": "fr",
+"cat": "world",
+"url": "https://www.opex360.com/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 2140
+}
+},
+{
+"id": "esut",
+"name": "ESUT",
+"lang": "de",
+"cat": "world",
+"url": "https://esut.de/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "DE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 6,
+"ms": 1142
+}
+},
+{
+"id": "gn-en-turkdef",
+"name": "Bayraktar/KAAN (Google News EN)",
+"lang": "en",
+"cat": "world",
+"url": "https://news.google.com/rss/search?q=Bayraktar%20OR%20Baykar%20OR%20%22KAAN%20fighter%22%20OR%20Aselsan%20when%3A3d&hl=en-US&gl=US&ceid=US:en",
+"plat": "gnews",
+"calisma": "savunma",
+"tip": "toplayici",
+"ulke": "US",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 755
+}
+},
+{
+"id": "defenceturkey",
+"name": "Defence Turkey",
+"lang": "en",
+"cat": "tech",
+"url": "https://defenceturkey.com/rss.xml",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 531
+}
+},
+{
+"id": "navalnews",
+"name": "Naval News",
+"lang": "en",
+"cat": "world",
+"url": "https://www.navalnews.com/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "FR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 2058
+}
+},
+{
+"id": "armyrecognition",
+"name": "Army Recognition",
+"lang": "en",
+"cat": "world",
+"url": "https://www.armyrecognition.com/news/army-news?format=feed&type=rss",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "BE",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 25,
+"ms": 1525
+}
+},
+{
+"id": "defensehere-en",
+"name": "DefenseHere (EN)",
+"lang": "en",
+"cat": "tech",
+"url": "https://www.defensehere.com/en/rss",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 2563
+}
+},
+{
+"id": "shephard",
+"name": "Shephard Media",
+"lang": "en",
+"cat": "world",
+"url": "https://www.shephardmedia.com/news/feed/",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "GB",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 1129
+}
+},
+{
+"id": "defence-ua",
+"name": "Defense Express",
+"lang": "en",
+"cat": "world",
+"url": "https://en.defence-ua.com/rss/feed.xml",
+"plat": "web",
+"calisma": "savunma",
+"tip": "uzman teknoloji",
+"ulke": "UA",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-19",
+"n": 10,
+"ms": 819
+}
+},
+{
+"id": "5ocakgazetesi",
+"name": "5 Ocak Gazetesi",
+"lang": "tr",
+"cat": "tr",
+"url": "https://www.5ocakgazetesi.com/rss",
+"plat": "web",
+"calisma": "adana",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 25,
+"ms": 1367
+}
+},
+{
+"id": "kucuksaat",
+"name": "Küçük Saat",
+"lang": "tr",
+"cat": "tr",
+"url": "https://www.kucuksaat.com/rss",
+"plat": "web",
+"calisma": "adana",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 25,
+"ms": 547
+}
+},
+{
+"id": "otoaktuel",
+"name": "Oto Aktüel",
+"lang": "tr",
+"cat": "auto",
+"url": "https://www.otoaktuel.com.tr/rss",
+"plat": "web",
+"calisma": "oto",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 25,
+"ms": 1419
+}
+},
+{
+"id": "teknoseyir-yz-ara",
+"name": "Teknoseyir yapay zekâ araması",
+"lang": "tr",
+"cat": "tech",
+"url": "https://www.teknoseyir.com/?s=yapay+zeka&feed=rss2",
+"plat": "web",
+"calisma": "yz",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 20,
+"ms": 1057
+}
+},
+{
+"id": "gn-tr-yz-model",
+"name": "Yapay zekâ modelleri (GN TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=ChatGPT%20OR%20Gemini%20OR%20%22Claude%22%20yapay%20zek%C3%A2%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "yz",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 25,
+"ms": 1180
+}
+},
+{
+"id": "gn-tr-yz-yasa",
+"name": "Yapay zekâ düzenleme ve etik (GN TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=yapay%20zek%C3%A2%20d%C3%BCzenleme%20OR%20etik%20OR%20telif%20when%3A3d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "yz",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 25,
+"ms": 1048
+}
+},
+{
+"id": "gn-tr-fidye",
+"name": "Fidye yazılımı ve veri sızıntısı (GN TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=fidye%20yaz%C4%B1l%C4%B1m%C4%B1%20OR%20%22veri%20s%C4%B1z%C4%B1nt%C4%B1s%C4%B1%22%20when%3A3d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siber",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 9,
+"ms": 987
+}
+},
+{
+"id": "gn-tr-siber-acik",
+"name": "Güvenlik açığı ve yama (GN TR)",
+"lang": "tr",
+"cat": "tech",
+"url": "https://news.google.com/rss/search?q=siber%20g%C3%BCvenlik%20a%C3%A7%C4%B1%C4%9F%C4%B1%20OR%20zafiyet%20OR%20phishing%20when%3A3d&hl=tr&gl=TR&ceid=TR:tr",
+"plat": "gnews",
+"calisma": "siber",
+"tip": "toplayici",
+"ulke": "TR",
+"oncelik": 3,
+"nitelik": [
+"toplayici"
+],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 25,
+"ms": 1275
+}
+},
+{
+"id": "cumhuriyet-siyaset",
+"name": "Cumhuriyet Siyaset",
+"lang": "tr",
+"cat": "tr",
+"url": "https://www.cumhuriyet.com.tr/rss/siyaset.xml",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 25,
+"ms": 491
+}
+},
+{
+"id": "aksam-siyaset",
+"name": "Akşam",
+"lang": "tr",
+"cat": "tr",
+"url": "https://www.aksam.com.tr/rss/rss.asp?cid=2",
+"plat": "web",
+"calisma": "siyaset",
+"tip": "ana akim",
+"ulke": "TR",
+"oncelik": 2,
+"nitelik": [],
+"aktif": true,
+"dogrulama": {
+"durum": "gecti",
+"tarih": "2026-11-20",
+"n": 20,
+"ms": 793
 }
 }
 ]
