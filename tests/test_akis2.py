@@ -236,6 +236,14 @@ class SavunmaAlani(unittest.TestCase):
                        ('Çelik Kubbe için SİPER teslimatı başladı', {'gundem': 1}), ('TCG Anadolu tatbikata katıldı', {'savunma': 1}),
                        ('Army tests new missile launcher', {'savunma': 1}), ('Defense industry stocks rally in Europe', {'ekonomi': 2})]:
             self.assertIn('savunma', ab(t, kay), t)
+    def test_cami_kubbesi_savunma_degil(self):
+        for t in ('Körfez Mehmet Akif Ersoy Camii’nde 40 Tonluk Çelik Kubbe 400 Tonluk Vinçle Yerine Yerleştirildi!', '40 Tonluk Çelik Kubbe 400 Toluk vinçle yerleştirildi'):
+            self.assertNotIn('savunma', ab(t, {'gundem': 2}), t)
+        self.assertIn('savunma', ab("Çelik Kubbe'ye EJDERHA gücü: tek atışla dronlar bertaraf", {'gundem': 1}))
+    def test_yanlis_birlesmis_kumede_tek_savunma_basligi(self):
+        og = [dict(t='Dışişleri Bakanlığı 2027 bütçesi komisyonda görüşüldü %d' % i) for i in range(8)] + [dict(t='Milli Savunma Bakanlığı bütçesi görüşüldü')]
+        m = ' '.join(o['t'] for o in og)
+        self.assertNotIn('savunma', A.alan_bul(og, m, {'gundem': 5}))
     def test_katman_gundemi_bastirmaz(self):
         a = ab('KIZILELMA envantere girdi, Erdoğan tören düzenledi', {'gundem': 3})
         self.assertIn('gundem', a); self.assertIn('savunma', a)
