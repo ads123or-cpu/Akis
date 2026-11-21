@@ -53,6 +53,31 @@ def kanonik(url):
     except Exception:
         return url
 
+# Google Haberler "Teknoloji" konu akışları (gnt-*) Google'ın kendi sınıflandırmasıdır ve her dilde teknoloji dışı haber de taşır
+# (savaş, günlük yaşam, ekonomi...). Bu akıştan gelen haber, başlığında/özetinde teknoloji belirtisi yoksa teknoloji sayılmaz.
+# Sözlük yabancı dilleri de kapsar (arayüz dili Türkçe/İngilizce dışındaki gerçek teknoloji haberi elenmesin).
+TEKNO_COK = re.compile(r"smartphone|\bphone\b|\bpc\b|laptop|notebook|processor|\bcpu\b|\bgpu\b|chip|semiconductor|software|firmware|\bapp\b|\bapps\b|android|\bios\b|iphone|ipad|macbook|apple|samsung|galaxy|pixel|xiaomi|huawei|oppo|vivo|nvidia|\bamd\b|intel|qualcomm|tsmc|microsoft|windows|google|\bai\b|(?-i:(?<![A-Za-z])(?:AI|KI)(?![A-Za-z]))|\bllm\b|chatgpt|openai|gemini|claude|anthropic|robot|gadget|router|\bkvm\b|data ?center|rechenzentrum|datacenter|power ?station|power bank|projector|proyector|zero-day|vulnerab|kwetsbaarheid|exploit|sicherheitsl|robotaxi|waymo|dram\b|\bhbm\b|memory chip|\bmem[oó]ria|内存|記憶體|存储|ドローン|無人|无人驾驶|自動運転|하이닉스|wi-?fi|bluetooth|5g|battery|\bssd\b|keyboard|headphone|earbuds|smartwatch|vpn|hack|cyber|malware|ransomware|startup|tesla|spacex|starlink|electric (car|vehicle)|\bev\b|console|playstation|xbox|nintendo|steam|gaming|\bgta\b|streaming|netflix|youtube|tiktok|instagram|whatsapp|\bos\b|\bupdate\b|review|teardown|"
+    r"telefon|akıllı|bilgisayar|işlemci|yazılım|uygulama|teknoloji|yapay zek|telekom|turkcell|vodafone|şarj|batarya|kulaklık|oyun|"
+    r"téléphone|ordinateur|processeur|logiciel|écran|numérique|"
+    r"handy|prozessor|rechner|computer|bildschirm|kamera|"
+    r"teléfono|móvil|procesador|ordenador|programa|aplicación|inteligencia artificial|"
+    r"telefono|processore|computer|applicazione|intelligenza artificiale|"
+    r"celular|processador|computador|aplicativo|inteligência artificial|"
+    r"điện thoại|vi xử lý|máy tính|trí tuệ nhân tạo|ứng dụng|"
+    r"телефон|смартфон|процессор|ноутбук|видеокарт|приложени|нейросет|искусственн|"
+    r"手机|手機|芯片|晶片|处理器|處理器|电脑|電腦|软件|軟體|人工智能|人工智慧|鸿蒙|鴻蒙|华为|華為|小米|苹果|蘋果|英伟达|輝達|辉达|电动车|電動車|游戏|遊戲|"
+    r"スマホ|スマートフォン|チップ|半導体|ソフトウェア|アプリ|人工知能|ゲーム|"
+    r"스마트폰|반도체|갤럭시|소프트웨어|앱|인공지능|게임|"
+    r"هاتف|معالج|ذكاء|اصطناعي|تطبيق|حاسوب|روبوت|إنفيديا|انفيديا|الرقائق|رقائق|الألعاب|ألعاب|جي تي إيه|إنترنت|"
+    r"विंडोज|ऑपरेटिंग सिस्टम|स्क्रीन|प्रोजेक्टर|स्मार्टफोन|"
+    r"телефон|процесор|смартфон|штучний інтелект|комп.ютер|"
+    r"smartfon|scroll|aplikacj|komputer|procesor|sztuczn\w+ inteligencj|besturingssysteem|slimme|"
+    r"kirin|snapdragon|exynos|ryzen|geforce|radeon|ps5|ps6|switch 2|\bhdd\b|linux|debian|ubuntu", re.I)
+# Suç/savaş/dava bağlamı: 'drone', 'robot', 'siber' gibi tek başına teknoloji sayılabilen sözcükler bu bağlamda haberi teknolojiye çekmesin
+SUC_BAGLAM = re.compile(r"\bhapis\b|tutuklan|gözaltı|cinayet|\bkaza\b|\bölü\b|\böldü\b|öldürül|yaralan|saldırı|saldırdı|işgal|\bsavaş\b|ateşkes|\bmahkeme|\bdava\b|soruşturma|"
+    r"\bkilled|\bwar\b|\battacks?\b|\battacked\b|airstrike|\barrest|\bcourt\b|\bsentenced|\bprison\b|\bwarship|"
+    r"krieg|angriff|polizei|drohnen|guerra|attacco|ataque|guerre|attaque|война|атак|战争|战事|空袭", re.I)
+
 ORG_ALIAS = [  # (desen, kurum) — aynı kuruluşun farklı bölüm akışları / yazımları tek kurum sayılır
     (r'anadolu (ajans|agency)|^aa$|\baa\b', 'aa'), (r'^trt|trt ', 'trt'), (r'^ntv|ntv ', 'ntv'), (r'\bh[üu]rriyet\b(?! ?(i|haber))', 'hurriyet'), (r'milliyet', 'milliyet'),
     (r'\bsabah\b|^a ?haber$|^a haber\b|^ahaber|^atv\b', 'sabah'), (r'sözcü|sozcu', 'sozcu'), (r'habertürk|haberturk', 'haberturk'), (r'cnn ?türk|cnnturk', 'cnnturk'),
@@ -544,7 +569,11 @@ def alan_bul(og, bas_metin, say_cal):
         if k == 'yz': n_k += kay.get('tekno', 0) + kay.get('bilim', 0)
         if k == 'oyun': n_k += kay.get('tekno', 0) + kay.get('eglence', 0)
         # kaynak bölümü ve içerik birlikte tanık olmalı: bölüm tek başına ya da tek bir kelime yetmez
-        if (n_k >= 2 and n_rx >= 1) or (n_k >= 1 and n_rx >= 2) or n_rx >= 3 or (n_k >= 1 and n_rx >= 1 and k in ('spor', 'oto', 'bilim', 'eglence', 'oyun', 'yz')): a.add(k)
+        kabul = (n_k >= 2 and n_rx >= 1) or (n_k >= 1 and n_rx >= 2) or n_rx >= 3 or (n_k >= 1 and n_rx >= 1 and k in ('spor', 'oto', 'bilim', 'eglence', 'oyun', 'yz'))
+        # Teknoloji'yi yalnız içerik sözcükleri açıyorsa (teknoloji bölümü tanığı yok) ve haber savaş/suç/dava ya da futbol bağlamındaysa
+        # ('drone', 'robot', 'siber' tek başına yetmez) Teknoloji'ye alınmaz
+        if kabul and k == 'tekno' and n_k == 0 and (SUC_BAGLAM.search(m) or KURAL['spor_guclu'].search(m) or KURAL['eglence_guclu'].search(m)): kabul = False
+        if kabul: a.add(k)
     # YZ ve oyun ek katmandır: Gündem kuralını ve boş-alan yedeğini etkilemesin diye burada ayrılır, sonda geri eklenir
     # Savunma sanayi (yz gibi katman): özel terim tek başına; genel terim iki tane ya da savunma kaynağıyla. Saldırı/ölüm haberi genel
     # terimle (füze saldırısı, drone strike) savunmaya girmez; savunma kaynağı ya da özel terim (şirket/ürün) gerekir.
@@ -1010,6 +1039,11 @@ def ogeler_kur(j, src, simdi):
             o = dict(id=hashlib.md5(l.encode()).hexdigest()[:10], t=t, l=l, z=z, s=(it.get('s') or '')[:220], i=it.get('i'), cat=cat, dil=f['lang'], kaynak=p, sid=sid, org=org,
                      plat=f.get('plat', 'web'), n=it.get('n'), tip=s.get('tip', 'ana akim'), nit=set(s.get('nitelik') or []), cal=s.get('calisma') or 'gundem', ulke=s.get('ulke', ''))
             o['tok'] = tok2(t); o['ent'] = canon_bul(t); o['var'] = M.varlik(t) | {'@' + e for e in o['ent']}
+            if o['cal'] == 'tekno' and o['plat'] == 'gnews':
+                # Google Haberler akışları (özellikle gnt-* konu akışları) teknoloji dışı haber de verir: başlıkta teknoloji belirtisi yoksa
+                # ya da haber suç/savaş/dava bağlamındaysa (ör. 'robot süpürge ... hapis') teknoloji tanığı sayılmaz
+                tanik = TEKNO_COK.search(metin) or KURAL['tekno_guclu'].search(metin) or KURAL['yz_guclu'].search(metin) or KURAL['oyun_guclu'].search(metin)
+                if not tanik or (SUC_BAGLAM.search(t) and not KURAL['siber'].search(t)): o['cal'] = 'gundem'
             ogeler.append(o)
     return ogeler, n72
 

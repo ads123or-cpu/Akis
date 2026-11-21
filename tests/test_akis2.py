@@ -574,3 +574,20 @@ class Videolar(unittest.TestCase):
         for n in (1, 5, 40, 200): self.assertLessEqual(F.bekleme_suresi(n, None), F.TAVAN_SN)
 
 if __name__ == '__main__': unittest.main()
+
+class TeknolojiIlgisiz(unittest.TestCase):
+    """2026-11-21: Google konu akışlarından ve 'drone/robot/siber' sözcüklerinden gelen teknoloji dışı haber Teknoloji'ye girmesin."""
+    def test_savas_suc_futbol_teknoloji_degil(self):
+        for t, kay in [("Russian cargo ship hit by drones in Gulf of Finland", {'gundem': 3}), ('Aldatan eşini robot süpürgeyle kaydeden kocaya hapis cezası', {'gundem': 2}),
+                       ('Galatasaray maçı öncesi AEK siber saldırı açıklaması: hackerları suçladı', {'gundem': 3, 'eglence': 1}),
+                       ("MasterChef'te oyun heyecanı: oyun sonrası oyun ödülü kazandı", {'gundem': 1, 'eglence': 1})]:
+            self.assertNotIn('tekno', ab(t, kay), t)
+    def test_gercek_teknoloji_kalir(self):
+        for t, kay in [('Samsung Galaxy Z Fold7 fiyatı düştü', {'tekno': 2}), ('Intel Nova Lake işlemci özellikleri sızdı', {'tekno': 1}),
+                       ('Attackers AI Agents found a zero-day in medical imaging software', {'tekno': 2, 'siber': 1})]:
+            self.assertIn('tekno', ab(t, kay), t)
+    def test_konu_akisi_kaynagi_tanik_ister(self):
+        self.assertIsNotNone(A.TEKNO_COK.search('华为首款鸿蒙AI手机5699元'))
+        self.assertIsNotNone(A.TEKNO_COK.search('Philosoph Dieter Mersch: Warum KI niemals Bewusstsein entwickeln wird'))
+        self.assertIsNone(A.TEKNO_COK.search('Guerra Ucraina-Russia, le notizie in diretta'))
+        self.assertIsNone(A.TEKNO_COK.search('Ayudar al camarero a recoger la mesa parece un gesto amable'))
