@@ -1,6 +1,6 @@
 """Akış 2.0 veri hattı: kümeleme doğruluğu, çok dilli birleştirme, ajans kopyaları, Reels adaleti, uçtan uca çıktı biçimi.
 Veri SENTETİKTİR (testlere özel); gerçek yayın verisi gibi gösterilmez."""
-import json, os, shutil, sys, tempfile, unittest
+import json, os, re, shutil, sys, tempfile, unittest
 from datetime import datetime, timezone, timedelta
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, KOK)
@@ -90,9 +90,124 @@ class ReelsAdalet(unittest.TestCase):
                          ('Günlük burç yorumları 8 Kasım', 'burc/kumar'), ('Kadın cinayeti: cesedi bulundu', 'ozel kisi trajedisi')]:
             self.assertEqual(next((a for a, rx in A.ELE if rx.search(t)), None), neden, t)
 
-    def test_ceza_siyaset_spor_gundemde_uygulanmaz(self):
+    def test_ceza_siyaset_yok_spor_dar(self):
+        # 2026-11-21: Okan "daha az, daha iddialı" istedi. Siyasete ceza yok; sporda yalnız iki dar ceza var ve derbi/büyük maç/skandal muaftır.
         for ad, rx, d, alanlar in A.CEZA:
-            self.assertFalse(set(alanlar) & {'siyaset', 'spor'}, ad)
+            self.assertNotIn('siyaset', alanlar, ad)
+            if 'spor' in alanlar: self.assertIn(ad, SPOR_CEZA, ad)
+        for t in ['Galatasaray Fenerbahçe derbisi öncesi son antrenman', "Şampiyonlar Ligi'nde Galatasaray maç öncesi hazırlıklarını tamamladı", 'Milli takım kamp kadrosu açıklandı',
+                  "Fenerbahçe'den rekor transfer teklifi", 'Derbi öncesi hakem skandalı: maçın hakemi değişti', 'CHP ile AKP arasında asgari ücret tartışması büyüyor',
+                  'Erdoğan Bakü’de Aliyev ile görüştü, enerji anlaşması imzalandı']:
+            self.assertEqual(ceza_bul(t, ['spor', 'siyaset', 'gundem']), [], t)
+        self.assertIn('maç önü/hazırlık haberi', ceza_bul('Fenerbahçe maç hazırlıklarını sürdürdü', ['spor']))
+        self.assertIn('sıradan transfer söylentisi', ceza_bul("Beşiktaş Brezilyalı forvetle ilgileniyor, transfer iddiası", ['spor']))
+
+    def test_rutin_mac_ve_yayin_rehberi_elenir_buyuk_mac_kalir(self):
+        for t in ['Galatasaray 2-1 Samsunspor | Maç Özeti | Aslan, Başakşehir\'de rekor kırdı!', 'Konyaspor 1-0 Kasımpaşa maç özeti', 'Kayserispor, Antalyaspor\'u 2-0 yendi',
+                  'Alanyaspor - Göztepe maç sonucu', "F1 Las Vegas Grand Prix'si Apple TV'de Ücretsiz ve Canlı", 'Dünya Kupası elemeleri hangi kanalda yayınlanacak?',
+                  'Arsenal beat Chelsea 2-1 to go top', 'How to stream the Las Vegas Grand Prix for free']:
+            self.assertIn(ele_bul(t), ('rutin mac ozeti/sonucu', 'yayin rehberi', 'soru/SEO sayfasi'), t)
+        for t in ['Galatasaray Fenerbahçe’yi 3-1 yendi, derbide gol yağmuru', "Şampiyonlar Ligi: Galatasaray 2-1 Juventus maç özeti", 'Milli takım Galler’i 2-0 yendi',
+                  'Beşiktaş 0-3 Trabzonspor: maçta hakem skandalı', 'TBMM’de bütçe tartışması: muhalefet sert tepki gösterdi', 'Avrupa Ligi finalinde Fenerbahçe 1-0 kazandı',
+                  "Netflix Türkiye'de fiyatlara yüzde 40 zam yaptı"]:
+            self.assertIsNone(ele_bul(t), t)
+
+SPOR_CEZA = {'sıradan transfer söylentisi', 'maç önü/hazırlık haberi'}
+def ele_bul(t): return next((a for a, rx in A.ELE if rx.search(t)), None)
+def ceza_bul(t, alanlar):
+    return [ad for ad, rx, d, al in A.CEZA if set(al) & set(alanlar) and rx.search(t) and not (ad in A.CEZA_ISTISNA and A.CEZA_ISTISNA[ad].search(t))]
+
+class ReelsIddiali(unittest.TestCase):
+    """2026-11-21 (tasarım-7 Reels kararı): daha az ve daha iddialı kart; yeni elemeler, iddialı ölçütü, tek cümlelik açı ('aci') ve güç ('guc')."""
+    def test_canli_zayif_ornekler_elenir(self):
+        for t, neden in [("Bursa'da YKS'ye hazırlanan öğrencilere müjde! 12 deneme sınavı ve eğitim desteği ücretsiz", 'yerel duyuru/kurs'),
+                         ('Huawei OSTA O1 Pro tanıtıldı: İşte özellikleri ve fiyatı', 'urun tanitim/fiyat sayfasi'), ('Galaxy A58 price, specs and availability', 'urun tanitim/fiyat sayfasi'),
+                         ('Galatasaray 2-1 Samsunspor | Maç Özeti', 'rutin mac ozeti/sonucu'), ("F1 Las Vegas Grand Prix'si Apple TV'de Ücretsiz ve Canlı", 'yayin rehberi'),
+                         ('Belediyenin ücretsiz kurs kayıtları başladı', 'yerel duyuru/kurs')]:
+            self.assertEqual(ele_bul(t), neden, t)
+        # fiyat skandalı/rekor ve sızıntı tanıtım sayfası sayılmaz
+        for t in ['iPhone 20 Pro Türkiye fiyatı belli oldu: rekor fiyat tepki çekti', 'GTA 6 Türkiye Fiyatı Belli Oldu! PlayStation ve Xbox Sürümleri Dudak Uçuklattı', 'Samsung Galaxy S26 Ultra’nın fiyatı sızdı: 70 bin TL', 'Galaxy S26 Ultra Türkiye fiyatı ortaya çıktı sızıntı']:
+            self.assertIsNone(ele_bul(t), t)
+        # maç sonucu kalıbı yalnız sporda, tanıtım sayfası yalnız teknolojide eler (spor dışı "10-15" aralıkları, "Ekmek fiyatı belli oldu")
+        def elen(t, al):
+            c = dict(son=Z0, h6=1, h24=1, kb=2, resmi=False, gundem_alt=['turkiye'], sadece_yabanci=False, n_tr=2, farkli=[], i=None, alanlar=al, kategoriler=['tr'], ulkeler=[], liderler=[], markalar=[], plat_topluluk=False)
+            return A.reels_puanla(c, [oge(t)], oge(t), t, Z0, None)[3]
+        self.assertIsNone(elen('Memura yüzde 10-15 zam bekleniyor, sendika masada kazandı', ['gundem', 'ekonomi']))
+        # tekil trafik/asayiş haberi ağır ceza alır, cebe dokunan akaryakıt indirimi en güçlü iddialı konu
+        self.assertIn('tekil trafik/kaza/asayiş', ceza_bul("İstanbul Beykoz'da tehlikeli şerit değiştirerek kaza yapan sürücüye 90 bin TL ceza verildi", ['gundem']))
+        self.assertIn('tekil trafik/kaza/asayiş', ceza_bul("Güngören'de temel kazısında toprak kayması: 1 işçi göçük altında kaldı", ['gundem']))
+        self.assertEqual(ceza_bul('Benzin 70 liranın altına düştü: 2,95 TL indirim geldi', ['gundem']), [])
+        self.assertEqual(A.iddiali_bul('Benzin 70 liranın altına düştü: 2,95 TL indirim geldi', ['gundem']), (['cep'], 9))
+        self.assertIsNone(elen('Supreme Court rules 6-3 as Apple wins', ['gundem', 'tekno'])); self.assertIsNone(elen('Ekmek fiyatı belli oldu', ['gundem']))
+        self.assertEqual(elen('Konyaspor 1-0 Kasımpaşa maç özeti', ['spor']), 'rutin mac ozeti/sonucu')
+        self.assertEqual(elen('Huawei OSTA O1 Pro tanıtıldı: İşte özellikleri ve fiyatı', ['tekno']), 'urun tanitim/fiyat sayfasi')
+        self.assertNotIn('buyuk_mac', A.iddiali_bul('Dizinin sezon finali yayınlandı', ['eglence'])[0])
+        self.assertNotIn('buyuk_mac', A.iddiali_bul('Final Fantasy remake geliyor', ['oyun'])[0])
+        # spor istatistiği 'ilk kez' kapıdan geçmez
+        self.assertFalse(A.icerik_kapisi(dict(t='Süper Lig\'de ilk kez "Çoklu Top Sistemi" uygulandı', kb=3, alanlar=['spor'], gundem_alt=[], _kr={})))
+
+    def test_iddiali_kategoriler(self):
+        k = lambda t, al=('gundem',): A.iddiali_bul(t, al)[0]
+        for t, ad in [('Elektriğe yüzde 25 zam geldi', 'cep'), ('Emekli maaşına yeni düzenleme', 'cep'), ('Fed cuts interest rates again', 'cep'), ('Akaryakıt fiyatları yükseldi', 'cep'),
+                      ('Instagram Türkiye’de yasaklandı', 'hukuk'), ('Apple sued over Siri privacy', 'hukuk'), ('Rekabet Kurulu Sony hakkında soruşturma açtı', 'hukuk'),
+                      ('Milyonlarca kullanıcının verileri sızdırıldı', 'guvenlik'), ('Hackers breach Visa contractor', 'guvenlik'),
+                      ('Bakanın sözleri tepki çekti', 'tartisma'), ('CEO resigns after backlash', 'tartisma'), ('Anthropic halka arzı rekor kırdı', 'rekor'),
+                      ('OpenAI raises $40 billion', 'rekor'), ('Dünyada ilk kez insansız savaş uçağı envantere girdi', 'ilk'), ('First-ever image of a black hole jet', 'ilk'),
+                      ('Bilim insanları okyanus dibinde yeni tür keşfetti', 'bilim'), ('Apple vs Google: arama anlaşması davası', 'devler'),
+                      ('OpenAI ile Anthropic arasında yapay zekâ savaşı kızışıyor', 'devler'), ('Galatasaray Fenerbahçe derbisinde gergin anlar', 'buyuk_mac'),
+                      ("Türkiye'de yeni dönem başlıyor", 'turkiye')]:
+            self.assertIn(ad, k(t, ('spor',) if ad == 'buyuk_mac' else ('gundem',)), t)
+        # kelime sınırı ve çok anlamlı kelimeler: yanlış pozitif yok
+        for t, ad in [('Zaman yönetimi için 5 öneri', 'cep'), ('Nizamettin konuştu', 'cep'), ('GTA 6 çıkış tarihi açıklandı', 'ilk'), ('YKS tarihi Haziran ayında', 'ilk'),
+                      ('Penaltı ceza sahası içinde verildi', 'hukuk'), ('İstanbul Asliye Ceza Mahkemesi duruşması', 'hukuk'), ('Concert was recorded live', 'rekor'),
+                      ('New band releases album', 'hukuk'), ('Galaxy S27 leak shows new design', 'guvenlik'), ('İki şirket ortaklık kurdu: Apple ve Google', 'devler'),
+                      ('Yeni iPhone fiyatı', 'cep'), ('Huawei yeni telefonunu tanıttı', 'rekor')]:
+            self.assertNotIn(ad, k(t), t)
+        self.assertEqual(A.iddiali_bul('Hava güzel, park dolu', ('gundem',)), ([], 0))
+        # yalnız spor alanında 'ilk kez/rekor' istatistik dilidir: kapıyı açmaz
+        self.assertLess(A.iddiali_bul("Süper Lig'de ilk kez Çoklu Top Sistemi uygulandı", ['spor'])[1], 6)
+        self.assertGreaterEqual(A.iddiali_bul("Türkiye'nin ihracatında rekor", ['gundem'])[1], 6)
+
+    def test_aci_sayi_uydurmaz_ve_kisa(self):
+        c = dict(alanlar=['gundem'], kb=2, kaynaklar=['GSMArena.com'])
+        for t in ["Türkiye'nin makine ihracatında rekor: 10 ayda 23,7 milyar dolara ulaştı", 'Elektriğe yüzde 25 zam geldi, yeni tarife 1 Aralık’ta başlıyor',
+                  'SON DAKİKA: Instagram Türkiye’de yasaklandı', 'iPhone Air 2 shows off its dual-camera design in another dummy unit leak - GSMArena.com news',
+                  'Bakanın 2026 bütçesi sözleri tepki çekti ve muhalefet milletvekilleri meclis kürsüsünde uzun uzun konuştu, oturum 3 kez ertelendi', 'Hava güzel',
+                  "Türk Telekom'dan COP31'de tarihi rekor: Mavi Bölge'de aynı anda 27 bin 794 cihaz bağlandı ve ağ hiç kesilmedi diye açıklandı"]:
+            a = A.aci_uret(c, dict(t=t))
+            self.assertLessEqual(len(a), A.ACI_SINIR, a)
+            for n in re.findall(r'\d+', a): self.assertIn(n, t, a)
+            self.assertNotIn('GSMArena', a); self.assertNotIn('SON DAKİKA', a)
+            self.assertFalse(re.search(r'\b(\d[\d.,]*|yüzde|bin|milyon|milyar)…$', a), a)      # sonda yetim sayı/birim yok
+        self.assertTrue(A.aci_uret(c, dict(t='Elektriğe yüzde 25 zam geldi')).startswith('Cebinize dokunuyor: '))
+        self.assertEqual(A.aci_etiket_bul(c, dict(t='Elektriğe yüzde 25 zam geldi')), 'Cebinize dokunuyor')
+        # yabancı başlık çevrilmez: etiket + Türkçe konu adı
+        y = A.aci_uret(dict(c, alanlar=['tekno', 'siber'], alt={'tekno': ['siber']}, markalar=['apple']), dict(t='Hackers breach Apple iCloud in 2026 attack', dil='en'))
+        self.assertEqual(y, 'Güvenlik uyarısı: Siber (Apple)')
+        # yabancı gümrük vergisi 'cebinize dokunuyor' denmez; yalanlama 'tartışma büyüyor' denmez (başlıktan fazlası iddia edilmez)
+        self.assertTrue(A.aci_uret(c, dict(t='AB ve Endonezya anlaşması: gümrük vergileri kalkıyor')).startswith('Para gündemi: '))
+        self.assertTrue(A.aci_uret(c, dict(t='Bakanlık iddiayı yalanladı')).startswith('Gerilimli gündem: '))
+        self.assertTrue(A.aci_uret(c, dict(t='TikTok için 25 milyar euroluk satın alma planı')).startswith('Büyük para: '))
+        self.assertTrue(A.aci_uret(c, dict(t='Instagram Türkiye’de yasaklandı')).startswith('Hukuki düğüm: '))
+        self.assertTrue(A.aci_uret(dict(c, kb=3), dict(t='Hava güzel')).startswith('Gündemde: '))
+        self.assertTrue(A.aci_uret(dict(c, kb=9), dict(t='Hava güzel')).startswith('Neden herkes bunu konuşuyor: '))
+        self.assertTrue(A.aci_uret(dict(c, alanlar=['spor']), dict(t='Galatasaray derbide kırmızı kart cezası aldı')).startswith('Büyük maç: '))
+        self.assertEqual([A.guc_bul(p) for p in (90, A.REELS_GUC3, A.REELS_GUC2, A.REELS_GUC2 - .1, 0)], [3, 3, 2, 1, 1])
+
+    def test_profil_ve_toplam_siniri_kesin(self):
+        import random
+        rnd = random.Random(7); cikti = []
+        for i in range(60):
+            t = 'Yasak ' + ' '.join(''.join(rnd.choice('bcdfghklmnprstvz') + rnd.choice('aeiou') for _ in range(4)) for _ in range(5))   # birbirine benzemeyen sentetik başlıklar
+            pr = ['gundem', 'siyaset'] if i < 25 else ['siyaset', 'spor']
+            c = dict(id=str(i), t=t, r=90 - i * .5, elen=None, kb=3, son=Z0, alanlar=['gundem'], gundem_alt=[], profil=pr, _kr={})
+            cikti.append((c, [oge(t, org='o%d' % i)], dict(t=t)))
+        son, disi = A.reels_sec(cikti, frozenset(), Z0)
+        say = {}
+        for c, _, _ in son:
+            for p in c['_reels_profil']: say[p] = say.get(p, 0) + 1
+        self.assertLessEqual(len(son), A.REELS_TOPLAM); self.assertLessEqual(max(say.values()), A.REELS_PROFIL, say)
+        self.assertEqual(say, {'gundem': 15, 'siyaset': 15, 'spor': 15}); self.assertEqual(A.REELS_TOPLAM, 40); self.assertEqual(A.REELS_PROFIL, 15)
 
 class UcUca(unittest.TestCase):
     @classmethod
@@ -140,8 +255,16 @@ class UcUca(unittest.TestCase):
 
     def test_reels_alanlari(self):
         r = self.R['adaylar'][0]
-        for k in ['oneri_baslik', 'ozet', 'neden_gundemde', 'carpici_ayrinti', 'turk_onemi', 'dogrulama', 'gorsel_potansiyel', 'hooklar', 'aci', 'puan', 'puan_gerekce', 'risk', 'kriter']: self.assertIn(k, r)
+        for k in ['oneri_baslik', 'ozet', 'neden_gundemde', 'carpici_ayrinti', 'turk_onemi', 'dogrulama', 'gorsel_potansiyel', 'hooklar', 'aci', 'guc', 'anlatim', 'puan', 'puan_gerekce', 'risk', 'kriter']: self.assertIn(k, r)
         self.assertEqual(len(r['hooklar']), 3); self.assertEqual(sum(w for _, w, _ in A.KRITER), 100); self.assertIn('viral garantisi', self.R['not_'])
+
+    def test_reels_aci_ve_guc(self):
+        # her kartın açısı kısa ve yalnız başlık/özetteki sayıları içerir (özetler '70 bin TL rekor' dese de başlıkta yoksa 'Rekor' öneki gelmez)
+        for r in self.R['adaylar']:
+            self.assertLessEqual(len(r['aci']), A.ACI_SINIR, r['aci']); self.assertIn(r['guc'], (1, 2, 3)); self.assertTrue(r['aci'].startswith(r['aci_etiket'] + ': '), r['aci'])
+            for n in re.findall(r'\d+', r['aci']): self.assertIn(n, r['t'] + ' ' + r['ozet'], r['aci'])
+            if 'rekor' not in r['t'].lower(): self.assertFalse(r['aci'].startswith(('Rekor', 'Kırılan eşik')), r['aci'])
+        self.assertLessEqual(len(self.R['adaylar']), A.REELS_TOPLAM)
 
     def test_kaynak_durumlari(self):
         d = {k['id']: k['durum'] for k in self.K['kaynaklar']}
@@ -364,8 +487,8 @@ class ReelsTekrarVeKapi(unittest.TestCase):
         for yab in (True, False):
             _, _, ceza, _ = A.reels_puanla(c(yab), og, og[0], ' '.join(o['t'] for o in og), Z0, None)
             self.assertEqual('yalnız yabancı kaynaklı sızıntı/söylenti' in ceza, yab)
-        # siyaset/spor rutin haberine ceza yok kararı (2026-11-20) korunur
-        for ad, rx, d, alanlar in A.CEZA: self.assertFalse(set(alanlar) & {'siyaset', 'spor'}, ad)
+        # siyasete ceza yok; sporda yalnız iki dar ceza (2026-11-21, ReelsAdalet.test_ceza_siyaset_yok_spor_dar)
+        for ad, rx, d, alanlar in A.CEZA: self.assertNotIn('siyaset', alanlar, ad); self.assertTrue('spor' not in alanlar or ad in SPOR_CEZA, ad)
 
     def test_leak_finally_rutin_muafiyeti_yok(self):
         t = 'Motorola Razr Fold finally receives Android 17 stable update'
