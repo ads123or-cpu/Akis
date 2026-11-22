@@ -30,5 +30,15 @@ Okan'ın haber merkezi: ~770 RSS kaynağı, çok dilli kümeleme, 12 çalışma 
 - Geliştirici/kod haberi eklenmez (Okan istemiyor; kaynaklar `aktif:false`, başlık süzgeci `GELISTIRICI`).
 - Reels puanı viral garantisi gibi sunulmaz; sahte sayı yazılmaz.
 
+## Okan'a özel "X'te paylaş" (22.11.2026)
+- Haber ayrıntısında ve kart menüsünde "X'te paylaş (@okangules13)": taslak metin + fotoğrafı kopyala + `x.com/intent/post`. Gönderiyi X'te Okan'ın kendi tıklaması yayınlar.
+- **Varsayılan görünmez; Pırıl profilinde/masasında (`pc:` kimlikleri dahil) hiçbir koşulda görünmez.** Ayarlar ekranına, ayar nesnesine ya da herhangi bir listeye eklenmez (bayrak ayrı anahtarda: `akis2-okx`).
+- Açmak: cihazda bir kez `…/Akis/?okan=<kod>`; kapatmak: `?okan=kapat`. Depoda yalnız kodun SHA-256'sı (`OKX_HASH`) var; kod Okan'da. Kod kaybolursa yeni kod üret, hash'i değiştir (`python3 -c "import secrets,hashlib;k=secrets.token_urlsafe(9);print(k,hashlib.sha256(k.encode()).hexdigest())"`) ve kodu yalnız Okan'a söyle, depoya yazma.
+- Site statik ve herkese açık: **X anahtarı/API belirteci sitede ve depoda tutulmaz** (`tests/test_okan_x.py` denetler). Otomatik gönderim gerekiyorsa ayrı, kapalı bir arka uç gerekir; Okan karar verir.
+- Taslak şablondan gelir (`okxTaslak`): sade / özetli / kanca (yer tutuculu) / özel; olgu eklenmez, iddia ise öntakı (`İddia: `) eklenir. Bağlantı ana gönderide değil ilk yanıtta (`okxYanit`).
+- Pencerede 3 sekme: Taslak, Taslaklarım (en çok 50, `akis2-okx-taslak`), Ayarlar (`akis2-okx-ayar`: şablon, kaynak biçimi/sayısı, öntak, yanıt metni, UTM). Hepsi bu cihazda; Pırıl'a görünmez.
+- Kural denetimi (`okxDenetle`): kırmızı hata (yer tutucu, doldurulmamış `{alan}`) varsa "X'te aç" çalışmaz; sarı uyarılar: ana gönderide bağlantı, abartı/etkileşim tuzağı kalıbı, haberin başlık/özetinde olmayan sayı, iddia haberde "iddia" ifadesi yok.
+- Reels şablonu: `araclar/reels-sablonu.html` (kurgu-kit/reels-artifact kopyası, noindex, X ödeme uyarılı); `build.py` onu `site/reels-sablonu.html` yapar (Actions). Akış'tan yalnız Okan modunda bağlanır (haber ayrıntısı, X penceresi, Reels kartı); `?yazi=&marka=&kicker=&tasarim=&rakam=&etiket=&rakam2=&etiket2=&kaynak=&soru=` ile ön dolar. Kapalı başlayan 4 katman: açılış rakamı (tek ya da ikili karşılaştırma), kaynak şeridi, kapanış sorusu, yavaş yakınlaştırma (≤%7); rapor: `inceleme-raporlari/reels-sablon-katmanlar.md`. Hiçbiri açık değilken çıktı kareleri eskisiyle aynı kalmalı. İki kopya (bu ve Claude'daki yayınlanmış sürüm) ayrışabilir: değişikliği ikisine de taşı.
+
 ## Dersler
 (Okan aynı hatayı ikinci kez söylerse kural buraya eklenir.)
