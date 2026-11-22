@@ -59,7 +59,7 @@ class OkanXTest(unittest.TestCase):
     def test_kural_denetimi_hata_ve_uyarilari_var(self):
         s = sablon()
         den = re.search(r"function okxDenetle\(m,c,hay,p\)\{(.*?)\n\}", s, re.S).group(1)
-        for parca in ("yer tutucu", "Doldurulmamış şablon", "Ana gönderide bağlantı", "Etkileşim tuzağı", "bulunmayan sayı", "iddia olarak işaretli"):
+        for parca in ("yer tutucu", "Doldurulmamış şablon", "Ana gönderide bağlantı", "Etkileşim tuzağı", "bulunmayan sayı", "iddia olarak işaretli", "Metinde doğrudan alıntı var", "bağlamı değiştiren bir kesme"):
             self.assertIn(parca, den)
         self.assertIn("s==='hata'", re.search(r"function okxHata\(m\)\{(.*?)\n", s, re.S).group(1))
         # hata varsa X, Facebook sayfası ve Facebook profili açılmaz
@@ -129,6 +129,26 @@ class OkanFacebookTest(unittest.TestCase):
         self.assertIn("d.m=null", pl)
         self.assertIn("yaz('akis2-okx-son',v)", pl)
         self.assertIn("window.confirm", pl)
+
+
+class OkanFotografTest(unittest.TestCase):
+    def test_fotograf_dogrudan_olmazsa_gorsel_servisine_duser_ve_kapatilabilir(self):
+        s = sablon()
+        al = re.search(r"function okxGorselAl\(u,tur\)\{(.*?)\n\}", s, re.S).group(1)
+        self.assertIn("mode:'cors'", al)
+        self.assertIn("https://wsrv.nl/?url='+encodeURIComponent(u)", al)
+        self.assertIn("a.gorselVekil===false", al)
+        self.assertIn("gorselVekil:true", s)
+        # ayarlarda açık ve anlaşılır bir onay kutusu
+        self.assertIn("ck('gorselVekil'", s)
+
+    def test_fotograf_kopyalama_vaadi_kullanici_hareketini_korur_ve_indirme_var(self):
+        s = sablon()
+        kop = re.search(r"function okxGorsel\(u\)\{(.*?)\n\}", s, re.S).group(1)
+        # ClipboardItem'a söz verilir: tıklama izni uzun indirmede kaybolmaz
+        self.assertIn("new ClipboardItem({'image/png':png})", kop)
+        self.assertIn("data-act=\"okxGorInd\"", s)
+        self.assertIn("case'okxGorInd':okxGorselIndir(v)", s)
 
 
 class ReelsSablonuTest(unittest.TestCase):

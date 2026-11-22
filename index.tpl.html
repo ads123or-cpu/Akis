@@ -538,7 +538,7 @@ function okx(c){return okxAcik&&ayar.profil!=='piril'&&S.sayfa!=='piril'&&(!c||S
     if(h===OKX_HASH){yaz('akis2-okx',1);okxAcik=true;toast('Okan modu açıldı');if(typeof sayfaCiz==='function'&&D&&D.ozet)sayfaCiz()}
   }).catch(function(){})
 }catch(e){}})();
-var OKX_VARSAYILAN={sablon:'sade',ozel:'{iddia}{baslik}\n\n{kaynak}',kaynakAc:true,kaynakSay:2,kaynakBicim:'Kaynak: {kaynaklar}',iddiaOn:'İddia: ',yanit:'Haberin tamamı: {link}',utm:true,utmIcerik:'okan-x',normal:true};
+var OKX_VARSAYILAN={sablon:'sade',ozel:'{iddia}{baslik}\n\n{kaynak}',kaynakAc:true,kaynakSay:2,kaynakBicim:'Kaynak: {kaynaklar}',iddiaOn:'İddia: ',yanit:'Haberin tamamı: {link}',utm:true,utmIcerik:'okan-x',normal:true,gorselVekil:true};
 var OKF_VARSAYILAN=Object.assign({},OKX_VARSAYILAN,{sablon:'link',ozel:'{iddia}{baslik}\n\n{kaynak}\n\n{link}',utmIcerik:'okan-fb'});
 var OKX_SABLON={
   sade:['Sade: başlık + kaynak','{iddia}{baslik}\n\n{kaynak}'],
@@ -580,6 +580,8 @@ function okxDenetle(m,c,hay,p){
     if(Array.from(t).length>450)r.push({s:'uyari',m:'Metin 450 karakteri aşıyor; Facebook’ta kısa ve kancalı metin daha iyi gidiyor.'});
     if((t.match(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu)||[]).length>1)r.push({s:'uyari',m:'Birden fazla emoji var; en çok bir tane.'});
   }
+  var al=t.replace(/^Kaynak:.*$/mi,'').match(/["“«][^"”»\n]{3,200}["”»]/);
+  if(al)r.push({s:'uyari',m:'Metinde doğrudan alıntı var ('+al[0].slice(0,50)+(al[0].length>50?'…':'')+'). Sözün öncesini ve sonrasını kaynaktan oku; bağlamı değiştiren bir kesme olmasın (örneğin “… ama” ile başlayan bir söz ya da “karar yok” bilgisi).'});
   if((t.match(/#[\wçğıöşüÇĞİÖŞÜ]+/g)||[]).length>2)r.push({s:'uyari',m:'İkiden fazla etiket (#) var; en çok 1-2 olsun.'});
   if((t.match(/!/g)||[]).length>1)r.push({s:'uyari',m:'Birden fazla ünlem var; haberde abartı gibi okunur.'});
   var ilk=t.split('\n')[0];if(Array.from(ilk).length>180)r.push({s:'uyari',m:'İlk satır çok uzun (180+ karakter); ilk cümle kısa ve somut kanca olmalı.'});
@@ -605,7 +607,7 @@ function okxTaslakHtml(d,a){
   if(onceki)h+='<p class="okx-u">Bu haber daha önce '+(p==='fb'?'Facebook':'X')+' için açıldı: '+esc(new Date(onceki).toLocaleString('tr',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'}))+'</p>';
   if(d.m==null){d.m=okxTaslak(c,a,p);d.m0=d.m}
   h+='<label class="sr" for="okxM" style="position:absolute;left:-9999px">Gönderi metni</label><textarea id="okxM" spellcheck="true">'+esc(d.m)+'</textarea><div class="okx-s"><span id="okxN"></span><span>'+(p==='x'?'@okangules13 hesabı açık olmalı':'Business Suite’te TechTurco sayfası seçili olmalı')+'</span></div><ul class="okx-l" id="okxL" aria-live="polite"></ul>';
-  if(c.i)h+='<img class="okx-g" src="'+esc(c.i)+'" alt="" referrerpolicy="no-referrer" onerror="this.remove()"><p class="okx-k">Haber fotoğrafı kaynağa ait olabilir; kaynak adı metinde kalsın. Kendi görüntün varsa onu yükle.</p><div class="okx-b"><button type="button" class="dg" data-act="okxGor" data-v="'+esc(c.i)+'">'+ik('kopya')+'Fotoğrafı kopyala</button><a class="dg" href="'+esc(c.i)+'" target="_blank" rel="noopener noreferrer">'+ik('dis')+'Fotoğrafı aç</a></div>';
+  if(c.i)h+='<img class="okx-g" src="'+esc(c.i)+'" alt="" referrerpolicy="no-referrer" onerror="this.remove()"><p class="okx-k">Haber fotoğrafı kaynağa ait olabilir; kaynak adı metinde kalsın. Kendi görüntün varsa onu yükle.</p><div class="okx-b"><button type="button" class="dg" data-act="okxGor" data-v="'+esc(c.i)+'">'+ik('kopya')+'Fotoğrafı kopyala</button><button type="button" class="dg" data-act="okxGorInd" data-v="'+esc(c.i)+'">'+ik('kayit')+'Fotoğrafı indir</button><a class="dg" href="'+esc(c.i)+'" target="_blank" rel="noopener noreferrer">'+ik('dis')+'Fotoğrafı aç</a></div>';
   h+='<div class="okx-b">'+(p==='x'?'<button type="button" class="dg ana-d" data-act="okxGit">'+ik('paylas')+'X’te aç</button>':'<button type="button" class="dg ana-d" data-act="okxFbSayfa">'+ik('paylas')+'Sayfa: Business Suite’i aç</button><button type="button" class="dg" data-act="okxFbProfil">'+ik('paylas')+'Kişisel profil: paylaşım penceresi</button>')+'<button type="button" class="dg" data-act="okxKop">'+ik('kopya')+'Metni kopyala</button>'+(c.l?'<button type="button" class="dg" data-act="okxYanit">'+ik('kopya')+(p==='x'?'Yanıtı kopyala':'İlk yorumu kopyala')+'</button>':'')+'<button type="button" class="dg" data-act="okxKaydet">'+ik('kayit')+'Taslağı kaydet</button><button type="button" class="dg" data-act="okxYenile">Şablondan yeniden oluştur</button></div>';
   h+='<div class="okx-b"><a class="dg" href="'+esc(okxReelsUrl(c))+'" target="_blank" rel="noopener">'+ik('reels')+'Reels şablonuyla video yap</a></div>';
   h+=p==='x'?'<p class="okx-k">Başkasının videosuna yalnız yazı eklemek X’te ödeme dışı kalabilir (haberlere göre; X’in resmî metni doğrulanmadı). Ödeme için kendi çekimini ve yorumunu kullan.</p>'
@@ -627,7 +629,7 @@ function okxAyarHtml(a,p){
   if(a.sablon==='ozel')h+='<label class="okx-f"><span>Özel şablon</span><textarea data-ok="ozel" rows="5" maxlength="600">'+esc(a.ozel)+'</textarea></label>';
   else h+='<pre class="okx-ons">'+esc((SB[a.sablon]||SB.sade)[1])+'</pre>';
   h+=ck('kaynakAc','Kaynak satırını ekle')+'<label class="okx-f"><span>Kaç kaynak adı yazılsın</span><select data-ok="kaynakSay">'+sy+'</select></label>'+tx('kaynakBicim','Kaynak satırı biçimi (<code>{kaynaklar}</code>)',60)+tx('iddiaOn','İddia haberlerinin başına eklenen öntakı',20);
-  h+=ck('normal','TÜMÜ BÜYÜK başlıkları normal yaz')+tx('yanit',(p==='fb'?'İlk yorum metni':'İlk yanıt metni')+' (<code>{link}</code>)',120)+ck('utm','TechTurco haberlerinin bağlantısına UTM ekle (utm_source='+(p==='fb'?'facebook':'x')+')')+tx('utmIcerik','UTM içerik etiketi',40);
+  h+=ck('normal','TÜMÜ BÜYÜK başlıkları normal yaz')+tx('yanit',(p==='fb'?'İlk yorum metni':'İlk yanıt metni')+' (<code>{link}</code>)',120)+ck('utm','TechTurco haberlerinin bağlantısına UTM ekle (utm_source='+(p==='fb'?'facebook':'x')+')')+tx('utmIcerik','UTM içerik etiketi',40)+ck('gorselVekil','Fotoğraf doğrudan alınamazsa görsel servisini (wsrv.nl) kullan; yalnız görselin adresi o servise gönderilir');
   h+='<div class="okx-b"><button type="button" class="dg ana-d" data-act="okxYenile">Taslağı bu ayarlarla yeniden oluştur</button><button type="button" class="dg" data-act="okxSifirla">Varsayılana dön</button></div>';
   return h
 }
@@ -703,13 +705,27 @@ $('okxD').addEventListener('change',function(e){
   var a=okxAyar();a[k]=t.type==='checkbox'?t.checked:(k==='kaynakSay'?+t.value:t.value);okxAyarYaz(a);
   if(k==='sablon'&&S._okx)okxCiz()
 });
+/* Fotoğraf: haber siteleri görseli başka siteden okumaya izin vermez (CORS). Doğrudan okuma olmazsa görsel servisi
+   wsrv.nl denenir (yalnız görselin herkese açık adresi gider; Ayarlar'dan kapatılır). */
+function okxGorselAl(u,tur){
+  var a=okxAyar();
+  function al(url){return fetch(url,{mode:'cors',referrerPolicy:'no-referrer'}).then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.blob()})}
+  return al(u).catch(function(e){if(a.gorselVekil===false)throw e;return al('https://wsrv.nl/?url='+encodeURIComponent(u)+'&output='+tur)})
+}
+function okxPng(b){
+  return createImageBitmap(b).then(function(bm){var cv=document.createElement('canvas');cv.width=bm.width;cv.height=bm.height;cv.getContext('2d').drawImage(bm,0,0);return new Promise(function(res,rej){cv.toBlob(function(x){x?res(x):rej(new Error('png'))},'image/png')})})
+}
 function okxGorsel(u){
-  if(!(navigator.clipboard&&window.ClipboardItem&&window.createImageBitmap)){toast('Bu tarayıcı görseli kopyalayamıyor; “Fotoğrafı aç” ile kaydet');return}
-  fetch(u,{mode:'cors',referrerPolicy:'no-referrer'}).then(function(r){if(!r.ok)throw 0;return r.blob()}).then(function(b){return createImageBitmap(b)}).then(function(bm){
-    var cv=document.createElement('canvas');cv.width=bm.width;cv.height=bm.height;cv.getContext('2d').drawImage(bm,0,0);
-    return new Promise(function(res,rej){cv.toBlob(function(x){x?res(x):rej()},'image/png')})
-  }).then(function(png){return navigator.clipboard.write([new ClipboardItem({'image/png':png})])}).then(function(){toast('Fotoğraf kopyalandı: X penceresinde yapıştır (⌘V)')})
-  .catch(function(){toast('Fotoğraf kopyalanamadı (kaynak site izin vermiyor olabilir). “Fotoğrafı aç” ile kaydedip ekle.')})
+  if(!(navigator.clipboard&&window.ClipboardItem&&window.createImageBitmap)){toast('Bu tarayıcı görseli kopyalayamıyor; “Fotoğrafı indir”i kullan');return}
+  toast('Fotoğraf hazırlanıyor…');
+  var png=okxGorselAl(u,'png').then(okxPng);
+  navigator.clipboard.write([new ClipboardItem({'image/png':png})]).then(function(){toast('Fotoğraf kopyalandı: yazı penceresinde yapıştır (⌘V)')})
+  .catch(function(){toast('Fotoğraf kopyalanamadı. “Fotoğrafı indir” ya da “Fotoğrafı aç” ile kaydedip ekle.')})
+}
+function okxGorselIndir(u){
+  toast('Fotoğraf hazırlanıyor…');
+  okxGorselAl(u,'jpg').then(function(b){var x=URL.createObjectURL(b),a=document.createElement('a');a.href=x;a.download='haber-fotografi.'+(/png/.test(b.type)?'png':/webp/.test(b.type)?'webp':'jpg');document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(x)},60000);toast('Fotoğraf indirildi: yazı penceresinde “Medya ekle” ile seç')})
+  .catch(function(){toast('Fotoğraf indirilemedi. “Fotoğrafı aç”a basıp sağ tıklayarak kaydet.')})
 }
 
 var oncekiZiyaret=oku('akis-ziyaret',0)||0;
@@ -1331,6 +1347,7 @@ document.addEventListener('click',function(e){
   case'okxTAc':okxTAc(v);break;
   case'okxTSil':okxTSil(v);break;
   case'okxGor':okxGorsel(v);break;
+  case'okxGorInd':okxGorselIndir(v);break;
   case'mDetay':menuKapat();sec(id);break;
   case'kopya':var c=bul(id);if(c)kopyala(c.t+'\n'+c.l);break;
   case'paylas':var c2=bul(id);if(c2&&navigator.share)navigator.share({title:c2.t,url:c2.l}).catch(function(){});break;
