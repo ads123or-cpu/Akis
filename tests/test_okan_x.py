@@ -49,27 +49,31 @@ class OkanXTest(unittest.TestCase):
 
     def test_taslak_olgu_katmaz_iddia_ve_kaynak_sablondan_gelir(self):
         s = sablon()
-        veri = re.search(r"function okxVeri\(c,a\)\{(.*?)\n\}", s, re.S).group(1)
+        veri = re.search(r"function okxVeri\(c,a,p\)\{(.*?)\n\}", s, re.S).group(1)
         self.assertIn("c.kanit==='iddia'", veri)
         self.assertIn("kaynakBicim", veri)
         # özet yalnız haberin kendi özetidir; kod metin uydurmaz
         self.assertIn("ozetTemiz(c.s)", s)
-        self.assertIn("function okxTaslak(c,a)", s)
+        self.assertIn("function okxTaslak(c,a,p)", s)
 
     def test_kural_denetimi_hata_ve_uyarilari_var(self):
         s = sablon()
-        den = re.search(r"function okxDenetle\(m,c,hay\)\{(.*?)\n\}", s, re.S).group(1)
+        den = re.search(r"function okxDenetle\(m,c,hay,p\)\{(.*?)\n\}", s, re.S).group(1)
         for parca in ("yer tutucu", "Doldurulmamış şablon", "Ana gönderide bağlantı", "Etkileşim tuzağı", "bulunmayan sayı", "iddia olarak işaretli"):
             self.assertIn(parca, den)
-        git = re.search(r"function okxGit\(\)\{(.*?)\n\}", s, re.S).group(1)
-        # hata varsa X açılmaz
-        self.assertIn("s==='hata'", git)
-        self.assertLess(git.index("s==='hata'"), git.index("window.open"))
+        self.assertIn("s==='hata'", re.search(r"function okxHata\(m\)\{(.*?)\n", s, re.S).group(1))
+        # hata varsa X, Facebook sayfası ve Facebook profili açılmaz
+        for ad in ("okxGit", "okxFbSayfa", "okxFbProfil"):
+            gov = re.search(r"function " + ad + r"\(\)\{(.*?)\n\}", s, re.S).group(1)
+            self.assertIn("okxHata(m)", gov, ad)
+            self.assertLess(gov.index("okxHata(m)"), gov.index("window.open"), ad)
 
     def test_ayarlar_ayri_anahtarda_ve_varsayilana_donulur(self):
         s = sablon()
-        self.assertIn("oku('akis2-okx-ayar',{})", s)
-        self.assertIn("yaz('akis2-okx-ayar',{})", s)
+        self.assertIn("oku(okxAnahtar(p,'ayar'),{})", s)
+        self.assertIn("yaz(okxAnahtar(okxP(),'ayar'),{})", s)
+        # X ve Facebook ayrı anahtarlarda: X eski adı korur, Facebook "-fb-" alır
+        self.assertIn("(p==='fb'?'akis2-okx-fb-':'akis2-okx-')+ad", s)
         self.assertNotIn('ayar.okx', s)
         for sb in ("sade", "ozetli", "kanca", "ozel"):
             self.assertRegex(s, sb + r":\['")
@@ -81,7 +85,50 @@ class OkanXTest(unittest.TestCase):
 
     def test_taslaklar_yerel_ve_sinirli(self):
         s = sablon()
-        self.assertIn("yaz('akis2-okx-taslak',tl.slice(0,50))", s)
+        self.assertIn("yaz(okxAnahtar(d.p,'taslak'),tl.slice(0,50))", s)
+
+class OkanFacebookTest(unittest.TestCase):
+    def test_facebook_sablonlari_ve_varsayilani(self):
+        s = sablon()
+        self.assertIn("var OKF_SABLON={", s)
+        self.assertIn("link:['Bağlantılı: başlık + kaynak + haber bağlantısı'", s)
+        self.assertIn("sablon:'link'", s)
+        for sb in ("sade", "kanca", "ozetli"):
+            self.assertIn(sb + ":OKX_SABLON." + sb, s)
+
+    def test_facebook_denetimi_madde_listesi_ve_kisalik(self):
+        s = sablon()
+        den = re.search(r"function okxDenetle\(m,c,hay,p\)\{(.*?)\n\}", s, re.S).group(1)
+        self.assertIn("p==='fb'", den)
+        for parca in ("Madde listesi var", "450 karakteri aşıyor", "Birden fazla emoji"):
+            self.assertIn(parca, den)
+        # ana gönderide bağlantı uyarısı yalnız X için
+        self.assertIn("p==='x'&&/https?:", den)
+
+    def test_facebook_hedefleri_dogru_adrese_gider(self):
+        s = sablon()
+        self.assertIn("https://business.facebook.com/latest/posts/published_posts", s)
+        self.assertIn("https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(pl)", s)
+        self.assertIn("utm_source',p==='fb'?'facebook':'x'", s)
+        prof = re.search(r"function okxFbProfil\(\)\{(.*?)\n\}", s, re.S).group(1)
+        # kişisel profilde bağlantı satırı metinden çıkarılır (kart pencereden gelir)
+        self.assertIn("split(pl).join('')", prof)
+        for ad in ("okxFbSayfa", "okxFbProfil"):
+            gov = re.search(r"function " + ad + r"\(\)\{(.*?)\n\}", s, re.S).group(1)
+            self.assertIn("d.p!=='fb'", gov)
+
+    def test_facebook_taslagina_yalniz_techturco_baglantisi_girer(self):
+        s = sablon()
+        veri = re.search(r"function okxVeri\(c,a,p\)\{(.*?)\n\}", s, re.S).group(1)
+        self.assertIn("p==='fb'&&!okxTechturcoMu(c.l)", veri)
+        self.assertIn("?'':okxLink(c,a,p)", veri)
+
+    def test_platform_degisince_metin_yenilenir_ve_son_secim_saklanir(self):
+        s = sablon()
+        pl = re.search(r"function okxPl\(v\)\{(.*?)\n\}", s, re.S).group(1)
+        self.assertIn("d.m=null", pl)
+        self.assertIn("yaz('akis2-okx-son',v)", pl)
+        self.assertIn("window.confirm", pl)
 
 
 class ReelsSablonuTest(unittest.TestCase):
