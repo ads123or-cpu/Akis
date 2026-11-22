@@ -73,7 +73,7 @@ class OkanXTest(unittest.TestCase):
         self.assertIn("oku(okxAnahtar(p,'ayar'),{})", s)
         self.assertIn("yaz(okxAnahtar(okxP(),'ayar'),{})", s)
         # X ve Facebook ayrı anahtarlarda: X eski adı korur, Facebook "-fb-" alır
-        self.assertIn("(p==='fb'?'akis2-okx-fb-':'akis2-okx-')+ad", s)
+        self.assertIn("(p==='fb'?'akis2-okx-fb-':p==='en'?'akis2-okx-en-':'akis2-okx-')+ad", s)
         self.assertNotIn('ayar.okx', s)
         for sb in ("sade", "ozetli", "kanca", "ozel"):
             self.assertRegex(s, sb + r":\['")
@@ -103,7 +103,7 @@ class OkanFacebookTest(unittest.TestCase):
         for parca in ("Madde listesi var", "450 karakteri aşıyor", "Birden fazla emoji"):
             self.assertIn(parca, den)
         # ana gönderide bağlantı uyarısı yalnız X için
-        self.assertIn("p==='x'&&/https?:", den)
+        self.assertIn("(p==='x'||p==='en')&&/https?:", den)
 
     def test_facebook_hedefleri_dogru_adrese_gider(self):
         s = sablon()
@@ -149,6 +149,70 @@ class OkanFotografTest(unittest.TestCase):
         self.assertIn("new ClipboardItem({'image/png':png})", kop)
         self.assertIn("data-act=\"okxGorInd\"", s)
         self.assertIn("case'okxGorInd':okxGorselIndir(v)", s)
+
+
+class OkanIngilizceTest(unittest.TestCase):
+    def test_ingilizce_sablonlar_ve_etiketler(self):
+        s = sablon()
+        self.assertIn("var OKE_SABLON={", s)
+        # çevrilmemiş başlık yer tutucu kalır: denetim hata verir, gönderilmez
+        self.assertIn("[Çevir: {baslik}]", s)
+        for parca in ("kaynakBicim:'Source: {kaynaklar}'", "iddiaOn:'Claim: '", "yanit:'Full story: {link}'", "utmIcerik:'okan-xen'"):
+            self.assertIn(parca, s)
+        self.assertIn("p==='en'?'akis2-okx-en-'", s)
+        self.assertIn("['en','X (English)']", s)
+
+    def test_ingilizce_denetim_kurallari(self):
+        s = sablon()
+        den = re.search(r"function okxDenetle\(m,c,hay,p\)\{(.*?)\n\}", s, re.S).group(1)
+        for parca in ("Metinde Türkçe karakter var", "like and (share|retweet)", "claim|reportedly|alleged", "p==='en'?null:t.match(OKX_TUZAK)"):
+            self.assertIn(parca, den)
+
+    def test_ingilizce_x_olarak_acilir_facebook_gibi_degil(self):
+        s = sablon()
+        git = re.search(r"function okxGit\(\)\{(.*?)\n\}", s, re.S).group(1)
+        self.assertIn("d.p==='fb'", git)
+        self.assertIn("okxKayit(d.id,d.p)", git)
+        self.assertIn("translate.google.com/?sl=tr", s)
+
+    def test_ingilizce_haber_zaten_ingilizceyse_cevir_yer_tutucusu_olmaz(self):
+        s = sablon()
+        self.assertIn("if(p==='en'&&c.dil==='en')sb=sb.replace('[Çevir: {baslik}]','{baslik}')", s)
+
+
+class OkanOtomatikTaslakTest(unittest.TestCase):
+    def test_aday_secimi_kurallari(self):
+        s = sablon()
+        ad = re.search(r"function okxAdaylar\(\)\{(.*?)\n\}", s, re.S).group(1)
+        for parca in ("!gizli[c.id]", "!yabanci(c)", "!log[c.id]", "!atla[c.id]", ">=2", "<86400", "okx(c)", "slice(0,10)"):
+            self.assertIn(parca, ad)
+
+    def test_yapay_zeka_ya_da_dis_servis_yok_olgu_katmaz(self):
+        s = sablon()
+        blok = s[s.index("/* ---------- Otomatik X taslakları"):s.index("$('okxD').addEventListener('change'")]
+        for yasak in ("anthropic", "openai", "api.", "fetch("):
+            self.assertNotIn(yasak, blok.lower())
+        self.assertIn("yapay zekâ kullanılmaz", blok)
+        # taslak şablondan gelir, kod metin uydurmaz
+        self.assertIn("okxTaslak(c,a,'x')", blok)
+
+    def test_giris_dugmesi_ve_islemler_okx_ile_korunur(self):
+        s = sablon()
+        self.assertIn("'+(okx()?'<button type=\"button\" class=\"dg\" data-act=\"okxOto\">", s)
+        self.assertIn("function okxOto(){if(!okx())return;", s)
+        self.assertIn("function okxOAc(id){if(!okx())return;", s)
+        self.assertIn("var c=bul(id);if(!c||!okx(c))return;okxOKaydet(c)", s)
+
+    def test_olum_ve_siddet_haberleri_hassas_diye_etiketlenir(self):
+        s = sablon()
+        self.assertIn("var OKX_HASSAS=['şehit','hayatını kaybet'", s)
+        self.assertIn("hassas konu: özenli dil kullan", s)
+
+    def test_taslaklar_x_listesine_yazilir_ve_sinirlidir(self):
+        s = sablon()
+        kay = re.search(r"function okxOKaydet\(c\)\{(.*?)\n\}", s, re.S).group(1)
+        self.assertIn("okxAnahtar('x','taslak')", kay)
+        self.assertIn("slice(0,50)", kay)
 
 
 class ReelsSablonuTest(unittest.TestCase):
