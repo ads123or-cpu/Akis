@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="tr" data-yon="b" data-tema="acik">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Akış 8 — Tasarım &amp; Kaynak Merkezi Prototipi</title>
+<style>
+/* ====== ORTAK TEMEL & TOKEN SİSTEMİ ====== */
+:root{
+  --r1:8px;--r2:12px;--r3:16px;--ust:56px;
+  --sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  --serif:ui-serif,"New York",Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  --a-gundem:#c2410c;--a-tekno:#0369a1;--a-yz:#7c3aed;--a-siber:#4d7c0f;
+  --a-savunma:#6b6830;--a-ekonomi:#a16207;--a-spor:#15803d;--a-bilim:#0e7490;--a-yasam:#db2777;
+}
+/* YÖN A — Editoryal Haber Odası (FT / Reuters / Apple News hissi) */
+:root[data-yon=a][data-tema=acik]{
+  --bg:#f8f5ef;--yuz:#fffdf9;--yuz2:#efeae0;--cz:#dfd8cb;--cz2:#cfc6b5;
+  --yaz:#151412;--ik:#545049;--ik2:#736d64;
+  --vr:#0d5c57;--vr-y:#fff;--vr-z:#e3f1ef;
+  --sc:#b42318;--sc-z:#fdeae7;--ye:#126845;--ye-z:#e0f3ea;--sa:#8a5600;--sa-z:#fbf0d9;
+  --font-baslik:var(--serif);--sat-pad:15px 0;--kart-rad:10px;--shadow:0 1px 2px rgb(20 18 14/.05);
+}
+:root[data-yon=a][data-tema=koyu]{
+  --bg:#111110;--yuz:#191816;--yuz2:#23211e;--cz:#2e2b26;--cz2:#3e3a33;
+  --yaz:#f1ede6;--ik:#a8a298;--ik2:#857f76;
+  --vr:#4ecdc4;--vr-y:#072220;--vr-z:#142b29;
+  --sc:#ff8a75;--sc-z:#361c17;--ye:#5cd49c;--ye-z:#132e21;--sa:#f0be5b;--sa-z:#312614;
+  --font-baslik:var(--serif);--sat-pad:15px 0;--kart-rad:10px;--shadow:0 1px 3px rgb(0 0 0/.35);
+}
+/* YÖN B — Modern Komuta Merkezi (Linear / Techmeme / Feedly hissi) */
+:root[data-yon=b][data-tema=acik]{
+  --bg:#f4f5f7;--yuz:#ffffff;--yuz2:#eceef2;--cz:#e1e4ea;--cz2:#cdd2dc;
+  --yaz:#111318;--ik:#4e5564;--ik2:#6f7787;
+  --vr:#0b6b66;--vr-y:#fff;--vr-z:#e3f3f1;
+  --sc:#c4281c;--sc-z:#fce9e7;--ye:#0f764a;--ye-z:#dff4ea;--sa:#925800;--sa-z:#fcf0d8;
+  --font-baslik:var(--sans);--sat-pad:12px 14px;--kart-rad:12px;--shadow:0 1px 3px rgb(17 19 24/.06),0 6px 20px rgb(17 19 24/.04);
+}
+:root[data-yon=b][data-tema=koyu]{
+  --bg:#0b0d11;--yuz:#13161d;--yuz2:#1b2029;--cz:#252b37;--cz2:#333b4a;
+  --yaz:#edf0f5;--ik:#9ca5b5;--ik2:#788296;
+  --vr:#3fd0c2;--vr-y:#06211e;--vr-z:#102b29;
+  --sc:#ff8470;--sc-z:#341a16;--ye:#4fd698;--ye-z:#112f20;--sa:#f2bd52;--sa-z:#312512;
+  --font-baslik:var(--sans);--sat-pad:12px 14px;--kart-rad:12px;--shadow:0 2px 8px rgb(0 0 0/.35);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yaz);font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+a{color:inherit;text-decoration:none}
+.num{font-variant-numeric:tabular-nums}
+
+/* Prototip kontrol şeridi */
+.proto-bar{background:#181b22;color:#e8ecf2;padding:8px 16px;font-size:13px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid #2b313e}
+.proto-bar strong{font-weight:650;letter-spacing:-.01em}
+.proto-seg{display:inline-flex;background:#262c38;border-radius:8px;padding:2px;gap:2px}
+.proto-seg button{padding:5px 11px;border-radius:6px;font-size:12.5px;color:#aeb7c6;font-weight:500}
+.proto-seg button.on{background:#3fd0c2;color:#07201e;font-weight:650}
+.proto-meta{margin-left:auto;font-size:12px;color:#939dad}
+
+/* Üst çubuk */
+.ust{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--yuz) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--cz)}
+.ust-i{max-width:1360px;margin:0 auto;height:var(--ust);padding:0 18px;display:flex;align-items:center;gap:6px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:750;font-size:18px;letter-spacing:-.03em;margin-right:10px}
+.logo-i{width:26px;height:26px;border-radius:8px;background:var(--vr);display:grid;place-items:center}
+.logo-i svg{width:16px;height:16px;stroke:var(--vr-y);stroke-width:2.6;fill:none;stroke-linecap:round}
+.nav{display:flex;gap:2px}
+.nav button{height:36px;padding:0 12px;border-radius:8px;font-size:14.5px;font-weight:550;color:var(--ik);white-space:nowrap}
+.nav button:hover{background:var(--yuz2);color:var(--yaz)}
+.nav button.on{background:var(--vr-z);color:var(--vr)}
+.bos{flex:1}
+.durum-hap{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ik);background:var(--yuz2);padding:5px 10px;border-radius:99px;white-space:nowrap}
+.nokta{width:7px;height:7px;border-radius:50%;background:var(--ye);flex:none}
+.nokta.sa{background:var(--sa)}.nokta.sc{background:var(--sc)}
+.ara{display:flex;align-items:center;gap:8px;height:38px;padding:0 12px;border-radius:10px;background:var(--bg);box-shadow:inset 0 0 0 1px var(--cz);color:var(--ik);font-size:13.5px;min-width:220px}
+.ara kbd{margin-left:auto;font:11px var(--mono);border:1px solid var(--cz2);border-radius:4px;padding:1px 5px}
+
+/* Hızlı kategori şeridi (YENİ: Bugün'den tek tıkla alana geçiş) */
+.kat-bar{background:var(--yuz);border-bottom:1px solid var(--cz)}
+.kat-bar-i{max-width:1360px;margin:0 auto;padding:7px 18px;display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+.kat-bar-i::-webkit-scrollbar{display:none}
+.kat-cip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 11px;border-radius:99px;font-size:13px;font-weight:550;color:var(--ik);background:var(--bg);white-space:nowrap;flex:none;box-shadow:inset 0 0 0 1px var(--cz)}
+.kat-cip:hover{color:var(--yaz);box-shadow:inset 0 0 0 1px var(--cz2)}
+.kat-cip.on{background:var(--yaz);color:var(--bg);box-shadow:none}
+.kat-cip small{opacity:.72;font-size:11.5px}
+.an{width:7px;height:7px;border-radius:50%;display:inline-block;flex:none}
+
+/* Ana ızgara */
+.wrap{max-width:1360px;margin:0 auto;padding:20px 18px 80px}
+.grid-bugun{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start}
+.bas{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 16px;flex-wrap:wrap}
+.bas h1{margin:0;font-family:var(--font-baslik);font-size:28px;line-height:1.12;letter-spacing:-.028em;font-weight:750}
+.bas p{margin:4px 0 0;color:var(--ik);font-size:14px}
+.eylem-grup{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dg{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 13px;border-radius:9px;background:var(--yuz);box-shadow:inset 0 0 0 1px var(--cz);font-size:13.5px;font-weight:560;white-space:nowrap}
+.dg:hover{box-shadow:inset 0 0 0 1px var(--cz2)}
+.dg.ana{background:var(--vr);color:var(--vr-y);box-shadow:none}
+.seg{display:inline-flex;background:var(--yuz2);border-radius:9px;padding:3px;gap:2px}
+.seg button{height:30px;padding:0 11px;border-radius:7px;font-size:13px;color:var(--ik);font-weight:550;white-space:nowrap}
+.seg button.on{background:var(--yuz);color:var(--yaz);box-shadow:0 1px 2px rgb(0 0 0/.1)}
+
+/* Manşet */
+.manset{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px;align-items:center;background:var(--yuz);border-radius:var(--kart-rad);padding:16px;box-shadow:var(--shadow),inset 0 0 0 1px var(--cz);margin-bottom:18px;cursor:pointer}
+:root[data-yon=a] .manset{background:transparent;box-shadow:none;border-radius:0;padding:0 0 20px;border-bottom:2px solid var(--yaz)}
+.manset-g{aspect-ratio:16/10;border-radius:10px;background:linear-gradient(135deg,#1f3a4b,#0b6b66 55%,#274c5e);display:flex;align-items:flex-end;padding:14px;color:#fff;font-size:12px;font-weight:600;letter-spacing:.03em;position:relative;overflow:hidden}
+.manset-g span{background:rgb(0 0 0/.52);backdrop-filter:blur(6px);padding:4px 9px;border-radius:6px}
+.manset h2{margin:6px 0 8px;font-family:var(--font-baslik);font-size:25px;line-height:1.18;letter-spacing:-.022em;font-weight:740}
+.manset p{margin:0;color:var(--ik);font-size:14.5px;line-height:1.48}
+.meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ik);flex-wrap:wrap}
+.meta .kn{color:var(--yaz);font-weight:620}
+.badge{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:620;padding:1px 7px;border-radius:99px;background:var(--yuz2);color:var(--ik)}
+.badge.vr{background:var(--vr-z);color:var(--vr)}
+.badge.ye{background:var(--ye-z);color:var(--ye)}
+.badge.sa{background:var(--sa-z);color:var(--sa)}
+.badge.sc{background:var(--sc-z);color:var(--sc)}
+.badge.dl{border-radius:5px;background:none;box-shadow:inset 0 0 0 1px var(--cz2);font:650 10.5px/1.6 var(--mono);padding:0 5px}
+
+/* Haber satırları */
+.bolum-b{display:flex;align-items:center;justify-content:space-between;margin:22px 0 10px}
+.bolum-b h2{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ik);font-weight:700}
+.bolum-b a{font-size:13px;color:var(--vr);font-weight:600}
+.liste{display:flex;flex-direction:column;gap:0}
+:root[data-yon=b] .liste{background:var(--yuz);border-radius:var(--kart-rad);box-shadow:var(--shadow),inset 0 0 0 1px var(--cz);overflow:hidden}
+.sat{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:14px;padding:var(--sat-pad);border-top:1px solid var(--cz);align-items:center;cursor:pointer;transition:background .12s}
+.sat:first-child{border-top:0}
+.sat:hover{background:var(--yuz2)}
+.sat h3{margin:4px 0 3px;font-family:var(--font-baslik);font-size:16.5px;line-height:1.32;font-weight:650;letter-spacing:-.014em}
+.sat p{margin:0;font-size:13.5px;color:var(--ik);display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.thumb{width:92px;height:62px;border-radius:8px;background:linear-gradient(135deg,var(--yuz2),var(--cz));display:grid;place-items:center;font-size:11px;color:var(--ik2);font-weight:600}
+
+/* Sağ ray */
+.ray{display:flex;flex-direction:column;gap:16px;position:sticky;top:calc(var(--ust) + 60px)}
+.kutu{background:var(--yuz);border-radius:var(--kart-rad);box-shadow:var(--shadow),inset 0 0 0 1px var(--cz);padding:15px 16px}
+.kutu-b{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
+.kutu-b h3{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ik);font-weight:700}
+.kutu-b span{font-size:12.5px;color:var(--vr);font-weight:600}
+.mini-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--cz);font-size:13.5px}
+.mini-row:first-of-type{border-top:0}
+.mini-n{width:54px;font-size:12px;font-weight:650;color:var(--ik);flex:none}
+.mini-t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:530}
+
+/* ====== YENİ KAYNAK MERKEZİ (ÇOK BOYUTLU KATEGORİZASYON) ====== */
+.kaynak-ozet{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.k-stat{background:var(--yuz);border-radius:var(--kart-rad);padding:13px 15px;box-shadow:var(--shadow),inset 0 0 0 1px var(--cz);text-align:left}
+.k-stat b{display:block;font-size:22px;letter-spacing:-.025em;line-height:1.1}
+.k-stat span{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ik);margin-top:4px}
+.k-stat.on{box-shadow:inset 0 0 0 2px var(--vr)}
+
+.filtre-panel{background:var(--yuz);border-radius:var(--kart-rad);padding:14px 16px;box-shadow:var(--shadow),inset 0 0 0 1px var(--cz);margin-bottom:16px;display:flex;flex-direction:column;gap:10px}
+.f-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.f-lbl{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ik2);width:76px;flex:none}
+.f-inp{height:38px;border-radius:9px;border:1px solid var(--cz);background:var(--bg);padding:0 12px;font-size:14px;min-width:240px;flex:1;max-width:360px}
+.cip-row{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.cip{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 11px;border-radius:99px;font-size:12.5px;font-weight:550;background:var(--bg);color:var(--ik);box-shadow:inset 0 0 0 1px var(--cz);white-space:nowrap}
+.cip:hover{color:var(--yaz);box-shadow:inset 0 0 0 1px var(--cz2)}
+.cip.on{background:var(--vr-z);color:var(--vr);box-shadow:inset 0 0 0 1px color-mix(in oklab,var(--vr) 45%,transparent);font-weight:650}
+.cip small{opacity:.72;font-size:11px}
+
+/* Kaynak grup kartları */
+.k-grup{margin-bottom:18px;background:var(--yuz);border-radius:var(--kart-rad);box-shadow:var(--shadow),inset 0 0 0 1px var(--cz);overflow:hidden}
+.k-grup-h{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--yuz2);border-bottom:1px solid var(--cz)}
+.k-grup-h h3{margin:0;font-size:14.5px;font-weight:700;display:flex;align-items:center;gap:8px}
+.k-grup-h .say{font-size:12.5px;color:var(--ik);margin-left:auto}
+.k-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1px;background:var(--cz)}
+.k-item{background:var(--yuz);padding:12px 14px;display:flex;flex-direction:column;gap:5px}
+.k-item:hover{background:var(--bg)}
+.k-item-u{display:flex;align-items:center;gap:6px}
+.k-item-u b{font-size:14px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.k-item-u .oncelik{margin-left:auto;font-size:11px;font-weight:650;padding:1px 6px;border-radius:5px;background:var(--yuz2);color:var(--ik)}
+.k-item-u .oncelik.p1{background:var(--vr-z);color:var(--vr)}
+.k-item-m{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px;color:var(--ik)}
+.k-item-a{display:flex;align-items:center;justify-content:space-between;font-size:11.5px;color:var(--ik2);margin-top:2px}
+
+.gizli{display:none!important}
+@media (max-width:960px){
+  .grid-bugun{grid-template-columns:minmax(0,1fr)}
+  .ray{position:static}
+  .kaynak-ozet{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .nav,.ara,.durum-hap{display:none}
+  .manset{grid-template-columns:minmax(0,1fr);gap:12px}
+  .manset h2{font-size:21px}
+  .sat{grid-template-columns:minmax(0,1fr) 76px;gap:10px}
+  .thumb{width:76px;height:54px}
+  .f-lbl{width:100%}
+  .proto-meta{display:none}
+}
+</style>
+</head>
+<body>
+<div class="proto-bar">
+  <strong>Akış 8 Prototip</strong>
+  <div class="proto-seg" id="yonSeg">
+    <button type="button" data-yon="a">Yön A · Editoryal</button>
+    <button type="button" data-yon="b" class="on">Yön B · Komuta Merkezi</button>
+  </div>
+  <div class="proto-seg" id="temaSeg">
+    <button type="button" data-tema="acik" class="on">Açık</button>
+    <button type="button" data-tema="koyu">Koyu</button>
+  </div>
+  <div class="proto-seg" id="ekranSeg">
+    <button type="button" data-ekran="bugun" class="on">Bugün</button>
+    <button type="button" data-ekran="kaynak">Kaynak Merkezi (Yeni)</button>
+  </div>
+  <span class="proto-meta">Dış kütüphane yok · Sistem fontu · 0 px taşma · ≥44px mobil hedef</span>
+</div>
+
+<header class="ust">
+  <div class="ust-i">
+    <a class="logo" href="#bugun"><span class="logo-i"><svg viewBox="0 0 24 24"><path d="M5 15c3-6 6 3 14-6"/></svg></span>Akış</a>
+    <nav class="nav" id="ustNav">
+      <button type="button" data-ekran="bugun" class="on">Bugün</button>
+      <button type="button" data-ekran="bugun">Akış</button>
+      <button type="button" data-ekran="bugun">Reels</button>
+      <button type="button" data-ekran="bugun">Trendler</button>
+      <button type="button" data-ekran="kaynak">Kaynaklar</button>
+    </nav>
+    <span class="bos"></span>
+    <span class="durum-hap num"><i class="nokta"></i> 4 dk önce · 781/868 kaynak</span>
+    <button class="ara" type="button">Konu, kaynak, kişi ara <kbd>/</kbd></button>
+  </div>
+</header>
+
+<div class="kat-bar">
+  <div class="kat-bar-i">
+    <button class="kat-cip on" type="button">Tümü</button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-gundem)"></i>Gündem <small class="num">173</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-tekno)"></i>Teknoloji <small class="num">344</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-yz)"></i>Yapay Zekâ <small class="num">31</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-siber)"></i>Siber Güvenlik <small class="num">23</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-savunma)"></i>Savunma <small class="num">35</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-ekonomi)"></i>Ekonomi <small class="num">31</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-spor)"></i>Spor <small class="num">41</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-bilim)"></i>Bilim <small class="num">37</small></button>
+    <button class="kat-cip" type="button"><i class="an" style="background:var(--a-yasam)"></i>Yaşam &amp; Oto <small class="num">89</small></button>
+  </div>
+</div>
+
+<!-- EKRAN 1: BUGÜN -->
+<main class="wrap" id="ekran-bugun">
+  <div class="grid-bugun">
+    <div>
+      <div class="bas">
+        <div>
+          <h1>Günaydın</h1>
+          <p class="num">11.356 haber · 273 çok kaynaklı konu · 781 aktif kaynak</p>
+        </div>
+        <div class="eylem-grup">
+          <div class="seg"><button type="button">1 saat</button><button type="button" class="on">6 saat</button><button type="button">24 saat</button></div>
+          <button type="button" class="dg">Günün özetini kopyala</button>
+        </div>
+      </div>
+
+      <article class="manset">
+        <div class="manset-g"><span>ÖNE ÇIKAN · 16 BAĞIMSIZ KAYNAK</span></div>
+        <div>
+          <div class="meta">
+            <i class="an" style="background:var(--a-tekno)"></i>
+            <span class="kn">Bloomberg HT</span>
+            <span class="badge vr num">16 kaynak</span>
+            <span class="num">14 dk</span>
+            <span class="badge dl">TR +3</span>
+          </div>
+          <h2>Avrupa Birliği’nin yeni yapay zekâ şeffaflık kuralları yürürlüğe girdi</h2>
+          <p>Büyük dil modeli geliştiricileri eğitim verisi özetlerini ve güvenlik testlerini kamuoyuna açıklamak zorunda olacak.</p>
+        </div>
+      </article>
+
+      <div class="bolum-b"><h2>Öne çıkan diğer konular</h2><a href="#">Tüm akış →</a></div>
+      <div class="liste">
+        <article class="sat">
+          <div>
+            <div class="meta"><i class="an" style="background:var(--a-gundem)"></i><span class="kn">TRT Haber</span><span class="badge num">13 kaynak</span><span class="num">22 dk</span></div>
+            <h3>Merkez Bankası faiz kararı sonrası piyasalarda ilk tepki</h3>
+            <p>Bankacılık endeksi ve döviz kurlarında gün içi hareketlilik hızlandı.</p>
+          </div>
+          <div class="thumb">16:10</div>
+        </article>
+        <article class="sat">
+          <div>
+            <div class="meta"><i class="an" style="background:var(--a-yz)"></i><span class="kn">The Verge</span><span class="badge vr num">9 kaynak</span><span class="num">38 dk</span><span class="badge dl">EN +2</span></div>
+            <h3>Apple yeni nesil masaüstü işlemcilerinde yerel yapay zekâ hızlandırmasını ikiye katladı</h3>
+            <p>Yeni bellek mimarisi cihaz içi büyük modellerin çalışma süresini yarıya indiriyor.</p>
+          </div>
+          <div class="thumb">16:10</div>
+        </article>
+        <article class="sat">
+          <div>
+            <div class="meta"><i class="an" style="background:var(--a-savunma)"></i><span class="kn">SavunmaSanayiST</span><span class="badge num">8 kaynak</span><span class="num">51 dk</span></div>
+            <h3>KIZILELMA yeni mühimmat entegrasyon uçuşunu başarıyla tamamladı</h3>
+            <p>Test uçuşu yerli radar ve veri bağı sistemleriyle gerçekleştirildi.</p>
+          </div>
+          <div class="thumb">16:10</div>
+        </article>
+        <article class="sat">
+          <div>
+            <div class="meta"><i class="an" style="background:var(--a-siber)"></i><span class="kn">BleepingComputer</span><span class="badge sc num">6 kaynak</span><span class="num">1 sa</span><span class="badge dl">EN</span></div>
+            <h3>Chrome ve Safari için sıfır gün güvenlik yaması acil yayınlandı</h3>
+            <p>Kullanıcıların tarayıcılarını bugün içinde en son sürüme güncellemesi öneriliyor.</p>
+          </div>
+          <div class="thumb">16:10</div>
+        </article>
+      </div>
+    </div>
+
+    <aside class="ray">
+      <div class="kutu">
+        <div class="kutu-b"><h3>Aranıyor, yazan az</h3><span>Trendler →</span></div>
+        <div class="mini-row"><span class="mini-n num">10 bin+</span><span class="mini-t">memur maaşı zam oranı</span><span class="badge sc">yok</span></div>
+        <div class="mini-row"><span class="mini-n num">5 bin+</span><span class="mini-t">resmî gazete kararları</span><span class="badge sa">az</span></div>
+        <div class="mini-row"><span class="mini-n num">2 bin+</span><span class="mini-t">yeni ötv düzenlemesi</span><span class="badge sc">yok</span></div>
+      </div>
+      <div class="kutu">
+        <div class="kutu-b"><h3>Güncelleme radarı</h3><span>Tümü →</span></div>
+        <div class="mini-row"><span class="mini-t"><b>iOS / iPadOS</b> · 26.2 beta 3 yayında</span><span class="badge ye num">25 yeni</span></div>
+        <div class="mini-row"><span class="mini-t"><b>Samsung One UI</b> · Güvenlik yaması</span><span class="badge vr num">12 yeni</span></div>
+        <div class="mini-row"><span class="mini-t"><b>Gemini / Claude</b> · Yeni sesli mod</span><span class="badge num">6 yeni</span></div>
+      </div>
+      <div class="kutu">
+        <div class="kutu-b"><h3>Reels için en iddialı</h3><span>Tümü →</span></div>
+        <div class="mini-row"><span class="mini-t">2 ülkede tamamen yasaklandı: Telegram'ın fişi çekildi</span><span class="badge vr num">8 kay</span></div>
+        <div class="mini-row"><span class="mini-t">Waymo otoyol sürüşlerini askıya aldı</span><span class="badge num">5 kay</span></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- EKRAN 2: YENİ KAYNAK MERKEZİ -->
+<main class="wrap gizli" id="ekran-kaynak">
+  <div class="bas">
+    <div>
+      <h1>Kaynak Merkezi</h1>
+      <p class="num">868 kaynak · 781 aktif · 7 ana kategori · 4 güven katmanı (Varsayılan: önce çalışan çekirdek kaynaklar)</p>
+    </div>
+    <div class="eylem-grup">
+      <div class="seg" id="kGorSeg"><button type="button" class="on">Alana göre gruplu</button><button type="button">Tablo</button></div>
+      <button type="button" class="dg">sources.json ↗</button>
+    </div>
+  </div>
+
+  <div class="kaynak-ozet">
+    <button type="button" class="k-stat on"><b class="num">781</b><span><i class="nokta"></i>Çalışıyor (%90)</span></button>
+    <button type="button" class="k-stat"><b class="num">24</b><span><i class="nokta sa"></i>Yavaş / Beklemede</span></button>
+    <button type="button" class="k-stat"><b class="num">4</b><span><i class="nokta sc"></i>Hata / Engelli</span></button>
+    <button type="button" class="k-stat"><b class="num">59</b><span><i class="nokta" style="background:var(--ik2)"></i>Devre dışı</span></button>
+  </div>
+
+  <div class="filtre-panel">
+    <div class="f-row">
+      <span class="f-lbl">Ara</span>
+      <input class="f-inp" type="search" placeholder="Kaynak adı, alan adı, ülke (ör. Bloomberg, Apple, TR)…">
+      <div class="seg">
+        <button type="button" class="on">Tümü</button>
+        <button type="button">Çekirdek (P1)</button>
+        <button type="button">Standart (P2)</button>
+        <button type="button">Ek (P3)</button>
+      </div>
+    </div>
+    <div class="f-row">
+      <span class="f-lbl">Kategori</span>
+      <div class="cip-row">
+        <button type="button" class="cip on">Tümü <small class="num">868</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-tekno)"></i>Teknoloji <small class="num">344</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-yz)"></i>Yapay Zekâ <small class="num">31</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-siber)"></i>Siber Güvenlik <small class="num">23</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-gundem)"></i>Gündem &amp; Siyaset <small class="num">212</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-savunma)"></i>Savunma <small class="num">35</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-ekonomi)"></i>Ekonomi <small class="num">31</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-spor)"></i>Spor <small class="num">41</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-bilim)"></i>Bilim <small class="num">37</small></button>
+        <button type="button" class="cip"><i class="an" style="background:var(--a-yasam)"></i>Yaşam &amp; Oto <small class="num">89</small></button>
+      </div>
+    </div>
+    <div class="f-row">
+      <span class="f-lbl">Katman</span>
+      <div class="cip-row">
+        <button type="button" class="cip on">Tüm türler</button>
+        <button type="button" class="cip">Birincil &amp; Resmî <small class="num">64</small></button>
+        <button type="button" class="cip">Editoryal &amp; Uzman <small class="num">512</small></button>
+        <button type="button" class="cip">YouTube Video <small class="num">64</small></button>
+        <button type="button" class="cip">Toplayıcı (GN) <small class="num">197</small></button>
+        <button type="button" class="cip">Erken Sinyal / Topluluk <small class="num">31</small></button>
+      </div>
+    </div>
+    <div class="f-row">
+      <span class="f-lbl">Dil / Alt</span>
+      <div class="cip-row">
+        <button type="button" class="cip on">Tüm diller</button>
+        <button type="button" class="cip">Türkçe <small class="num">315</small></button>
+        <button type="button" class="cip">İngilizce <small class="num">408</small></button>
+        <button type="button" class="cip">Diğer 18 dil <small class="num">145</small></button>
+        <button type="button" class="cip">Apple / iOS / Mac <small class="num">57</small></button>
+        <button type="button" class="cip">Android / Samsung <small class="num">45</small></button>
+        <button type="button" class="cip">Windows / PC <small class="num">16</small></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRUP 1: YAPAY ZEKÂ -->
+  <section class="k-grup">
+    <div class="k-grup-h">
+      <h3><i class="an" style="background:var(--a-yz)"></i>Yapay Zekâ <span class="badge vr">Teknoloji'den ayrıştırıldı (+16 kaynak)</span></h3>
+      <span class="say num">31 kaynak · 29 aktif</span>
+    </div>
+    <div class="k-grid">
+      <div class="k-item">
+        <div class="k-item-u"><b>OpenAI News</b><span class="oncelik p1">Çekirdek</span></div>
+        <div class="k-item-m"><span class="badge vr">Şirket duyurusu</span><span class="badge dl">EN · US</span><span class="badge ye">Çalışıyor</span></div>
+        <div class="k-item-a num"><span>72 sa: 6 haber · 310 ms</span><span>4 sa önce</span></div>
+      </div>
+      <div class="k-item">
+        <div class="k-item-u"><b>NVIDIA Blog</b><span class="oncelik p1">Çekirdek</span></div>
+        <div class="k-item-m"><span class="badge vr">Şirket duyurusu</span><span class="badge dl">EN · US</span><span class="badge ye">Çalışıyor</span></div>
+        <div class="k-item-a num"><span>72 sa: 14 haber · 280 ms</span><span>2 sa önce</span></div>
+      </div>
+      <div class="k-item">
+        <div class="k-item-u"><b>AI타임스 (AI Times)</b><span class="oncelik">Standart</span></div>
+        <div class="k-item-m"><span class="badge">Uzman teknoloji</span><span class="badge dl">KO · KR</span><span class="badge ye">Çalışıyor</span></div>
+        <div class="k-item-a num"><span>72 sa: 42 haber · 520 ms</span><span>18 dk önce</span></div>
+      </div>
+      <div class="k-item">
+        <div class="k-item-u"><b>r/ClaudeAI</b><span class="oncelik">Ek</span></div>
+        <div class="k-item-m"><span class="badge sa">Erken sinyal</span><span class="badge dl">EN · US</span><span class="badge sa">Beklemede</span></div>
+        <div class="k-item-a num"><span>Reddit · doğrulanmış sayılmaz</span><span>429 bekleme</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRUP 2: TEKNOLOJİ (ALT ETİKETLİ) -->
+  <section class="k-grup">
+    <div class="k-grup-h">
+      <h3><i class="an" style="background:var(--a-tekno)"></i>Teknoloji <span class="badge">Apple/iOS · Android · Windows alt etiketli</span></h3>
+      <span class="say num">344 kaynak · 312 aktif</span>
+    </div>
+    <div class="k-grid">
+      <div class="k-item">
+        <div class="k-item-u"><b>Apple Newsroom</b><span class="oncelik p1">Çekirdek</span></div>
+        <div class="k-item-m"><span class="badge vr">Şirket duyurusu</span><span class="badge">Apple / iOS</span><span class="badge dl">EN · US</span><span class="badge ye">Çalışıyor</span></div>
+        <div class="k-item-a num"><span>72 sa: 4 haber · 240 ms</span><span>5 sa önce</span></div>
+      </div>
+      <div class="k-item">
+        <div class="k-item-u"><b>9to5Mac</b><span class="oncelik p1">Çekirdek</span></div>
+        <div class="k-item-m"><span class="badge">Uzman teknoloji</span><span class="badge">Apple / iOS</span><span class="badge dl">EN · US</span><span class="badge ye">Çalışıyor</span></div>
+        <div class="k-item-a num"><span>72 sa: 38 haber · 190 ms</span><span>12 dk önce</span></div>
+      </div>
+      <div class="k-item">
+        <div class="k-item-u"><b>SamMobile</b><span class="oncelik">Standart</span></div>
+        <div class="k-item-m"><span class="badge">Uzman teknoloji</span><span class="badge">Android / Samsung</span><span class="badge dl">EN · NL</span><span class="badge ye">Çalışıyor</span></div>
+        <div class="k-item-a num"><span>72 sa: 27 haber · 410 ms</span><span>34 dk önce</span></div>
+      </div>
+      <div class="k-item">
+        <div class="k-item-u"><b>Webtekno</b><span class="oncelik p1">Çekirdek</span></div>
+        <div class="k-item-m"><span class="badge">Uzman teknoloji</span><span class="badge">Genel</span><span class="badge dl">TR · TR</span><span class="badge ye">Çalışıyor</span></div>
+        <div class="k-item-a num"><span>72 sa: 51 haber · 330 ms</span><span>9 dk önce</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const R = document.documentElement;
+function setSeg(id, attr, val) {
+  R.dataset[attr] = val;
+  document.querySelectorAll(`#${id} button`).forEach(b => b.classList.toggle('on', b.dataset[attr] === val));
+}
+document.querySelectorAll('#yonSeg button').forEach(b => b.onclick = () => setSeg('yonSeg', 'yon', b.dataset.yon));
+document.querySelectorAll('#temaSeg button').forEach(b => b.onclick = () => setSeg('temaSeg', 'tema', b.dataset.tema));
+function setEkran(v) {
+  document.getElementById('ekran-bugun').classList.toggle('gizli', v !== 'bugun');
+  document.getElementById('ekran-kaynak').classList.toggle('gizli', v !== 'kaynak');
+  document.querySelectorAll('#ekranSeg button, #ustNav button').forEach(b => {
+    if (b.dataset.ekran) b.classList.toggle('on', b.dataset.ekran === v && (b.closest('#ekranSeg') || b.textContent === (v === 'bugun' ? 'Bugün' : 'Kaynaklar')));
+  });
+}
+document.querySelectorAll('[data-ekran]').forEach(b => b.onclick = () => setEkran(b.dataset.ekran));
+</script>
+</body>
+</html>
