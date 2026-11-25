@@ -72,9 +72,10 @@ TEKNO_COK = re.compile(r"smartphone|\bphone\b|\bpc\b|laptop|notebook|processor|\
     r"विंडोज|ऑपरेटिंग सिस्टम|स्क्रीन|प्रोजेक्टर|स्मार्टफोन|"
     r"телефон|процесор|смартфон|штучний інтелект|комп.ютер|"
     r"smartfon|scroll|aplikacj|komputer|procesor|sztuczn\w+ inteligencj|besturingssysteem|slimme|"
-    r"kirin|snapdragon|exynos|ryzen|geforce|radeon|ps5|ps6|switch 2|\bhdd\b|linux|debian|ubuntu", re.I)
+    r"kirin|snapdragon|exynos|ryzen|geforce|radeon|ps5|ps6|switch 2|\bhdd\b|linux|debian|ubuntu|"
+    r"smart ?glasses|akıllı gözlük|ray-?ban|meta\s+(?:ai|quest|ray-?ban|smart ?glasses|glasses)|(?-i:\bMeta\b)(?!\s+(?:de|del|para|en|do|da|e|que|por|con|es|son|fue|data|analiz)\b)", re.I)
 # Suç/savaş/dava bağlamı: 'drone', 'robot', 'siber' gibi tek başına teknoloji sayılabilen sözcükler bu bağlamda haberi teknolojiye çekmesin
-SUC_BAGLAM = re.compile(r"\bhapis\b|tutuklan|gözaltı|cinayet|\bkaza\b|\bölü\b|\böldü\b|öldürül|yaralan|saldırı|saldırdı|işgal|\bsavaş\b|ateşkes|\bmahkeme|\bdava\b|soruşturma|"
+SUC_BAGLAM = re.compile(r"\bhapis\b|tutuklan|gözaltı|cinayet|\bkaza\b|\bölü\b|\böldü\b|öldürül|hayatını kaybet|yaşamını yitir|yaralan|saldırı|saldırdı|işgal|\bsavaş|ateşkes|\bmahkeme|\bdava\b|soruşturma|"
     r"\bkilled|\bwar\b|\battacks?\b|\battacked\b|airstrike|\barrest|\bcourt\b|\bsentenced|\bprison\b|\bwarship|"
     r"krieg|angriff|polizei|drohnen|guerra|attacco|ataque|guerre|attaque|война|атак|战争|战事|空袭", re.I)
 
@@ -110,7 +111,7 @@ CANON = {
  'gazze': r'gazze|gaza|加沙|غزة|ガザ|가자', 'hamas': r'hamas|哈马斯|حماس', 'suriye': r'suriye|syria|syrie|syrien|叙利亚|سوريا|シリア|시리아',
  'turkiye': r'türkiye|turkey|türkei|turquie|土耳其|تركيا|トルコ|튀르키예|터키', 'almanya': r'almanya|germany|deutschland|allemagne|德国|ألمانيا|ドイツ|독일',
  'fransa': r'fransa|france\b|frankreich|法国|فرنسا|フランス|프랑스', 'ingiltere': r'ingiltere|britain|\buk\b|united kingdom|großbritannien|royaume-uni|英国|بريطانيا|イギリス|영국',
- 'japonya': r'japonya|japan|japon\b|日本|اليابان|일본', 'hindistan': r'hindistan|india|inde\b|indien|印度|الهند|インド|인도',
+ 'japonya': r'japonya|japan|japon\b|日本|اليابان|일본', 'hindistan': r'hindistan|india|\binde\b|indien|印度|الهند|インド|인도',
  'trump': r'trump|特朗普|ترامب|トランプ|트럼프', 'biden': r'biden|拜登|بايدن', 'putin': r'putin|普京|بوتين|プーチン|푸틴', 'zelenski': r'zelen[sc]k|泽连斯基|زيلينسكي',
  'erdogan': r'erdoğan|erdogan|埃尔多安|أردوغان', 'netanyahu': r'netanyahu|内塔尼亚胡|نتنياهو', 'macron': r'macron|马克龙|ماكرون', 'xi': r'şi cinping|xi jinping|习近平|شي جين',
  'nato': r'\bnato\b|北约|الناتو', 'bm': r'\bbm\b|birleşmiş milletler|united nations|\bun\b|nations unies|联合国|الأمم المتحدة|国連', 'ab': r'avrupa birliği|european union|\beu\b|\bab\b|union européenne|欧盟|الاتحاد الأوروبي',
@@ -155,7 +156,7 @@ KURAL = {
  'adana_ilce': re.compile(r"\b(seyhan|ceyhan|kozan|karataş|feke|aladağ|çukurova)\b|imamoğlu['’]n(da|dan)\b|İmamoğlu['’]n(da|dan)\b|imamoğlu ilçe", re.I),
  'siyaset': re.compile(r"erdoğan|cumhurbaşkan|chp\b|akp\b|mhp\b|dem parti|tbmm|meclis|seçim|siyasi|muhalefet|iktidar|özgür özel|bahçeli|yaptırım|diplomasi|diplomat|zirve|büyükelçi|dışişleri|nato\b|birleşmiş milletler|güvenlik konseyi|trump|biden|harris|putin|zelen|netanyahu|macron|şi cinping|xi jinping|kongre|senato|beyaz saray|kremlin|brüksel|avrupa birliği|\bab\b|israil|filistin|gazze|hamas|hizbullah|\biran(?!\w)|\biran(lı|ian)|\biran['’]|suriye|ukrayna|rusya|tayvan|savunma bakan|savunma sanayi|election|parliament|sanction|diplomat|summit|ambassador|president|prime minister|congress|senate|white house|kremlin|nato\b|united nations|security council|ceasefire|ateşkes|treaty|referendum|coalition|opposition party|defen[cs]e minister|sanctions", re.I),
  'savas': re.compile(r"savaş|çatışma|saldırı|füze|hava saldırısı|ateşkes|asker|ordu\b|cephe|işgal|bombardıman|silahlı|terör|drone saldırı|war\b|attack|missile|airstrike|strike|troops|frontline|invasion|military|ceasefire|offensive|bombing|terror", re.I),
- 'siber': re.compile(r"siber(?!ia)|güvenlik açığ|sızıntı|veri ihlali|fidye|ransomware|zero-?day|malware|zararlı yazılım|oltalama|phishing|hacker|hack\b|saldırgan|cve-\d|vulnerab|data breach|botnet|exploit|backdoor|apt\d|cyberattack|cyber attack|ddos|kimlik avı|dolandırıcı", re.I),
+ 'siber': re.compile(r"siber(?!ia)|güvenlik açığ|veri sızıntı|veri ihlali|fidye|ransomware|zero-?day|malware|zararlı yazılım|oltalama|phishing|hacker|(?:cyber|data|account|phone|iphone|android|server|website|system|crypto|bank|wifi|cloud|email|network|app|software)\s+hack\b|\bhack(?:ed|ers?|ing|len\w*|led\w*)\b|saldırgan|cve-\d|vulnerab|data breach|botnet|exploit|backdoor|apt\d|cyberattack|cyber attack|ddos|kimlik avı|(?:siber|dijital|internet|online|yapay zek[aâ]|kripto|iban|kart|hesap|whatsapp|sms|oltalama|telefon.{0,25}(?:uygulama|yazılım|link|sms|casus|hack)).{0,25}dolandırıcı|dolandırıcı\w*.{0,25}(?:yazılım|uygulama|site|link|bağlantı|yapay zek|siber|hesap|kart|kripto)", re.I),
  'spor_guclu': re.compile(r"maç|gol\b|futbol|basketbol|voleybol|süper lig|şampiyonlar ligi|teknik direktör|hakem|transfer|milli takım|\bnba\b|euroleague|uefa|fifa|olimpiyat|formula ?1|\bf1\b|motogp|tenis|wimbledon|grand slam|\batp\b|\bwta\b|ufc|boks|güreş|espor|e-spor|premier league|la liga|serie a|bundesliga|champions league|football|soccer|basketball|volleyball|tennis|coach|goal\b|stadium|tournament|athlete|olympic|grand prix|galatasaray|fenerbahçe|beşiktaş|trabzonspor|başakşehir|real madrid|barcelona|atletico|manchester (united|city)|liverpool|bayern|juventus|inter milan|\binter['’](in|e|i)\b|ac milan|\bpsg\b|arsenal|chelsea|tottenham|sözleşmesini uzattı|futbolcu|kaleci|forvet|stoper", re.I),
  'ekonomi_guclu': re.compile(r"dolar|euro\b(?!\s?(20\d\d|cup|kupa|league|lig|elemeler))|altın(?!\s?(madalya|top\b|gol|eldiven|krampon|küre|kelebek|portakal|yaş|kız|çocuk))|borsa|bist|enflasyon|faiz|merkez bankası|ekonomi|asgari ücret|emekli maaş|vergi|ihracat|ithalat|bütçe|petrol|akaryakıt|benzin|motorin|konut|kira artış|bitcoin|kripto|\bfed\b|inflation|interest rate|stocks?\b|wall street|gdp|tariff|oil price|currency|ticaret|piyasa|cari açık|işsizlik|unemployment|central bank|recession|ipo\b|nasdaq|s&p", re.I),
  'bilim_guclu': re.compile(r"nasa\b|uzay|gezegen|astronom|teleskop|asteroid|fosil|keşfetti|araştırmacılar|bilim insanları|genetik|\bdna\b|kanser tedavi|iklim değişikliği|kuantum|fizik|evren|mars\b|ay'a|space station|scientists|researchers|study finds|astronomers|physics|biology|quantum|exoplanet|(?<!samsung )galax(y|ies)(?!\s?([szamf]\d|z (fold|flip)|tab|buds|watch|fold|flip|ring|book|ai\b|xr\b|unpacked|store|phone|series|ultra|edge|\d))|black hole|climate|vaccine|clinical trial|peer-reviewed", re.I),
@@ -239,7 +240,7 @@ RE_DIPLO = re.compile(r"diplomasi|diplomat|büyükelçi|zirve|müzakere|görüş
 
 # ------------------------------------------------------------------ Reels puan kuralları (v2)
 CARPICI = M.CARPICI
-ETKI = re.compile(r"özellik|feature|geliyor|geldi|rolling out|gizli|hidden|ipucu|nasıl|ücretsiz|free\b|bedava|kapat|silin|dikkat|uyarı|warning|dolandır|scam|phishing|oltalama|güvenlik açığı|vulnerab|sızdı|sızıntı|leak|fiyat|zam\b|indirim|vergi|maaş|emekli|asgari ücret|kira|faiz|yasak|yasa\b|karar|düzenleme|zorunlu|erişim|çöktü|outage|kesinti|deprem|sel\b|uyarısı|alarm|kota|ceza|ehliyet|sınav|okul|tatil|akaryakıt|benzin|elektrik|doğalgaz|ban\b|law\b|rule|tax|price|salary|recall|geri çağır|cuts|layoff|işten çıkar", re.I)
+ETKI = re.compile(r"özellik|feature|geliyor|geldi|rolling out|gizli|hidden|ipucu|nasıl|ücretsiz|free\b|bedava|kapat|silin|dikkat|uyarı|warning|dolandır|scam|phishing|oltalama|güvenlik açığı|vulnerab|sızdı|sızıntı|leak|fiyat|zam\b|indirim|vergi|maaş|emekli|asgari ücret|kira|faiz|yasak|yasa\b|karar|düzenleme|zorunlu|erişim|çöktü|outage|kesinti|deprem|sel\b|uyarısı|alarm|kota|ceza|ehliyet|sınav|okul|tatil|akaryakıt|benzin|elektrik|doğalgaz|ban\b|law\b|rule|tax|price|salary|recall|geri çağır|cuts|layoff|işten çıkar|ücret\w*|harç\w*|tarife\w*|komisyon\w*|\bmtv\b|kredi kartı|pasaport|ehliyet|ikramiye\w*|ödenek\w*|hibe\w*", re.I)
 TURKIYE = re.compile(r"türkiye|türk\b|türkiye'|togg|btk|imei|\btl\b|istanbul|ankara|izmir|baykar|aselsan|turkcell|vodafone tr|türk telekom|erdoğan|tbmm|\bmeb\b|yks|tcmb|bist|galatasaray|fenerbahçe|beşiktaş|trabzonspor|milli takım|turkey|turkish|türkiye'nin", re.I)
 HIKAYE = re.compile(r"neden|nasıl|iddia|sızdı|kaçtı|çöktü|yıkıldı|karşı karşıya|kapışma|çatışma|istifa|tutuklan|yasaklandı|iflas|dönüş|sürpriz|beklenmedik|ilk kez|rekor|krizi|skandal|perde arkası|gerçek yüzü|revealed|why|how|fired|resign|banned|collapse|scandal|comeback|surprise|rivalry|feud|crackdown|ousted|secret", re.I)
 IDDIA = re.compile(r"iddia|söylentiler?|sızıntı|sızdı|rumor|leak|reportedly|allegedly|claims?\b|unconfirmed|doğrulanmadı|kulis", re.I)
@@ -250,7 +251,8 @@ VIRAL = re.compile(r"tuhaf|garip|gizemli|esrarengiz|viral oldu|sosyal medyada|te
 # Hizmet/SEO sayfaları: her gün aynı kalıpla yazılan liste ve ilanlar. Gerçek deprem/sel haberi bu kalıplara girmez (yalnız "liste", "il il", "ne zaman" sayfaları).
 SERVIS = re.compile(r"hava durumu (tahmin|il il)|saatlik hava durumu|bugün hava durumu|hava durumu (bugün|yarın|\d+ günlük)|il il hava|(hafta sonu|yarın) hava nasıl|namaz vakit|nöbetçi eczane|altın fiyatları (bugün|canlı)|döviz kurları bugün|(son )?depremler listesi|deprem(ler)? (listesi|canlı)|okul(lar)?(ın)? (açılış tarihi|ne zaman açıl)|ara tatil(i)? ne zaman|"
                     r"mahkemesinden\s*/?\s*başkanlığından|\bilan(ı)? ?:|kura sonuçları|tercih sonuçları (açıklandı|ne zaman)|"
-                    r"weather forecast for|lottery (numbers|results)|powerball numbers|mega millions numbers|wordle (hint|answer)|connections hints?|crossword (answers|clue)|strands hints?", re.I)
+                    r"weather forecast for|lottery (numbers|results)|powerball numbers|mega millions numbers|wordle (hint|answer)|connections hints?|crossword (answers|clue)|strands hints?|"
+                    r"(?:süper loto|say[ıiI]sal loto|ç[ıiI]lg[ıiI]n say[ıiI]sal|şans topu|on numara)\b|m[iİ]ll[iİ] p[iİ]yango.{0,35}(?:sonuç|çek[iİ]l[iİ]ş|numara|b[iİ]let|sorgula)|\bsorgulama ekran[ıiI]\b|sonuç(?:lar[ıiI])?\s+sorgulama\b", re.I)
 HASSAS = re.compile(r"ölü|öldü|hayatını kaybet|cenaze|katliam|saldırı|bombalı|savaş|terör|tecavüz|taciz|istismar|intihar|killed|dead|massacre|attack|war\b|terror|rape|abuse|suicide", re.I)
 RUTIN = M.RUTIN
 ZAYIF = M.ZAYIF
@@ -268,8 +270,8 @@ ELE = [
  ('ozel kisi trajedisi', re.compile(r"tecavüz|cinsel istismar|taciz|çocuk istismarı|intihar etti|kadın cinayeti|cinayete kurban|cesedi bulundu|rape\b|child abuse|murdered (his|her) (wife|girlfriend|child)", re.I)),
  ('sponsorlu', re.compile(r"\bsponsored\b|işbirliğiyle|advertorial|ücretli içerik", re.I)),
  # 2026-11-18: Reels'e hiç uygun olmayan sayfa türleri (gerçek haber değil, rehber/ilan/canlı akış)
- ('resmi ilan', re.compile(r"mahkemesi(nden|ne)? (ilan|/)|icra (müdürlüğü|dairesi)(nden)? ilan|ihale ilanı|satış ilanı|satış icra dairesi|icra dairesi$|\bilan(ı)? (olunur|edilir)\b|t\.c\. .{0,40}(müdürlüğü|başkanlığı)ndan\b", re.I)),
- ('soru/SEO sayfasi', re.compile(r"nasıl (yapılır|iptal edilir|alınır|başvurulur|öğrenilir|sorgulanır|izlenir|açılır|kullanılır|indirilir|yüklenir)|ne zaman (yatacak|yatırılacak|açıklanacak|ödenecek|başlıyor|çıkacak)\??|ne kadar (olacak|oldu)\??|kaç (tl|lira)( olacak| oldu)?\??|saat kaçta|hangi gün|kimdir\??$|nerede oynanacak|how to (play|watch|get|download|fix|cancel)|what time (does|is)|release time|where to (buy|watch|preorder)|everything we know|all we know so far|kaç kaç bitti|kim yendi\??|maç sonucu|(yayınlandı|çıktı|başladı) mı\??|neden yok\??|yeni bölüm (ne zaman|fragman)", re.I)),
+ ('resmi ilan', re.compile(r"mahkemesi(nden|ne)? (ilan|/)|icra (müdürlüğü|dairesi)(nden)? ilan|ihale ilanı|satış ilanı|satış icra dairesi|icra dairesi$|\bilan(ı)? (olunur|edilir)\b|t\.c\. .{0,40}(müdürlüğü|başkanlığı)ndan\b|\bverg[iİ] da[iİ]res[iİ] müdürlüğü\b(?!.{0,45}\b(?:bask[ıiI]n|yolsuzluk|soruşturma|gözalt[ıiI]|tutuklan|yang[ıiI]n|patlama|protesto|grev|rüşvet|operasyon)\b)|\b\d+\.\s*(?:asl[iİ]ye|sulh|ağ[ıiI]r)\s+(?:hukuk|ceza)\s+mahkemes[iİ]\s*$", re.I)),
+ ('soru/SEO sayfasi', re.compile(r"nasıl (yapılır|iptal edilir|alınır|başvurulur|öğrenilir|sorgulanır|izlenir|açılır|kullanılır|indirilir|yüklenir)|ne zaman (yatacak|yatırılacak|açıklanacak|ödenecek|başlıyor|çıkacak)\??|ne kadar (?:\w+\s+){0,2}(?:olacak|oldu|yap[ıiI]lacak|gelecek|artacak|ver[iİ]lecek|ödenecek|kesilecek|kalacak|al[ıiI]nacak)\??|kaç (tl|lira)( olacak| oldu)?\??|saat kaçta|hangi gün|\bk[iİ]md[iİ]r\b(?:[,?! ]|$)|\bkaç yaş[ıiI]nda(?:yd[ıiI])?\b|\bnerel[iİ]\??\b|\bk[iİ]m k[iİ]md[iİ]r\b|\bb[iİ]yograf[iİ]s[iİ]\b|nerede oynanacak|how to (play|watch|get|download|fix|cancel)|what time (does|is)|release time|where to (buy|watch|preorder)|everything we know|all we know so far|kaç kaç bitti|kim yendi\??|maç sonucu|(yayınlandı|çıktı|başladı) mı\??|neden yok\??|yeni bölüm (ne zaman|fragman)|çöktü mü\b|neden aç[ıiI]lm[ıiI]yor\b|er[iİ]ş[iİ]m sorunu nas[ıiI]l çözülür", re.I)),
  # 2026-11-21 (tasarım-7 Reels kararı): rutin maç özeti/sonucu, tanıtım-fiyat sayfası, yerel kurs/deneme sınavı duyurusu girmez.
  # İstisna kalıbın başındaki (?!...) içinde: derbi, Avrupa kupası, milli maç, final ve skandal elenmez.
  ('rutin mac ozeti/sonucu', re.compile(r"^(?!.*" + BUYUK_MAC.pattern + r"|.*" + SKANDAL.pattern + r")"
@@ -282,7 +284,7 @@ ELE = [
                                           r"tanıtıldı[:!,]?\s*(işte )?(özellikleri|fiyatı|teknik)|(satışa|piyasaya) (sunuldu|çıktı)[:!,]?\s*(işte )?(fiyatı|özellikleri)|teknik özellikleri|"
                                           r"\bprice,? (and )?(specs|specifications|availability|release date)\b|\bspecs,? (and )?price\b|\bfull specs?\b|\bspecs and features\b|launch(es|ed)? with .{0,40}\bprice\b)", re.I | re.S)),
  ('yerel duyuru/kurs', re.compile(r"deneme sınav\w*|\bkurs(u|lar\w*|una|a)?\b.{0,40}\b(başladı|açıldı|kayıt\w*|başvuru\w*)|\b(ücretsiz|yeni) kurs\w*|\bkurs kayıt\w*|halk eğitim\w*|meslek edindirme|etüt merkez\w*|\beğitim desteği\b.{0,30}\bücretsiz|\bücretsiz\b.{0,30}\beğitim desteği", re.I)),
- ('canlı blog', re.compile(r"^(live|canlı|watch|izle)\s*[:|\-–]|live updates|liveblog|live blog|canlı (anlatım|blog)|son dakika gelişmeleri|minute[- ]by[- ]minute", re.I)),
+ ('canlı blog', re.compile(r"^[^\wÇĞİÖŞÜçğıöşü]*(?:live|canl[ıiI]|watch|izle)\s*[:|\-–—]|live updates|liveblog|live blog|canlı (anlatım|blog)|son dakika gelişmeleri|minute[- ]by[- ]minute", re.I)),
 ]
 ELE_ALAN = {'rutin mac ozeti/sonucu': {'spor'}, 'urun tanitim/fiyat sayfasi': {'tekno', 'oto', 'oyun', 'yz'}}
 # Puan CEZASI (eleme değil): yalnız gerçekten düşük potansiyelli kalıplar. Siyaset bu listede değildir.
@@ -320,10 +322,33 @@ KRITER = [('guncellik', 8, 'Güncellik'), ('haber', 8, 'Haber değeri'), ('etki'
            ('gorsel', 4, 'Görsel malzeme'), ('dogrulama', 8, 'Çok kaynakta doğrulanma'), ('turk', 10, 'Türkçe izleyiciye uygunluk'), ('ilk3', 4, 'İlk 3 saniyede anlatılabilirlik'), ('viral', 12, 'Viral potansiyel'),
            ('iddiali', 14, 'İddialı konu')]
 
+_CUMLE_WIRE = re.compile(
+    r"^(?:(?:son dak[iİ]ka|flaş|flas|haber merkez[iİ]|özel haber|ihlas haber ajans[ıiI]|anadolu ajans[ıiI]|aa|iha|İha|dha|anka|reuters|afp|ap)\s*[:|\-–—]+\s*|"
+    r"[A-ZÇĞİÖŞÜ]{3,}\s*\((?:aa|iha|İha|dha|anka)\)\s*[-–—]\s*)",
+    re.I,
+)
+_CUMLE_KISALT = re.compile(r"\b(?:dr|prof|mr|mrs|ms|st|vs|vb|vd|bkz|no|av|gen|alb|yrd|doç|t\.c|u\.s)$", re.I)
+
 def cumle(s):
     s = re.sub(r'\s+', ' ', s or '').strip()
-    m = re.match(r'^(.{25,220}?[.!?])(\s|$)', s)
-    return m.group(1) if m else s[:200]
+    ham_len = len(s)
+    for _ in range(2):
+        s = _CUMLE_WIRE.sub('', s).strip()
+    for m in re.finditer(r'([.!?])(?:\s+([A-ZÇĞİÖŞÜ0-9"\'“«(])|\s*$)', s):
+        pos = m.start()
+        if not (25 <= pos <= 220):
+            continue
+        onc = s[:pos]
+        if m.group(1) == '.' and re.search(r'\b\d{1,2}$', onc) and m.group(2):
+            continue
+        if m.group(1) == '.' and _CUMLE_KISALT.search(onc) and m.group(2):
+            continue
+        return s[:pos + 1]
+    if len(s) > 200:
+        return s[:200].rsplit(' ', 1)[0].rstrip(' ,;:-–')
+    if (ham_len >= 195 or len(s) >= 180) and s and s[-1] not in '.!?"\'”’)':
+        return s.rsplit(' ', 1)[0].rstrip(' ,;:-–') if ' ' in s else s
+    return s
 
 # ------------------------------------------------------------------ kümeleme
 def kumele2(ogeler):
@@ -598,7 +623,8 @@ def alan_bul(og, bas_metin, say_cal):
     # Adana: metninde Adana (il, ilçe, kurum, kulüp) geçen haber. Yerel kaynak tek başına yetmez (yerel siteler ulusal haber de verir);
     # yerel kaynakta ayrıca başka anlamı olan ilçe adları da (Seyhan, Ceyhan, Kozan…) kabul edilir. Hava durumu/servis sayfaları girmez.
     if not SERVIS.search(m) and (KURAL['adana'].search(m) or (kay.get('adana') and KURAL['adana_ilce'].search(m))): a.add('adana')
-    if KURAL['siber'].search(m): a.add('siber')
+    if KURAL['siber'].search(m) and not ((SUC_BAGLAM.search(bas_t) or KURAL['savas'].search(bas_t)) and not re.search(r"siber|hacker|fidye|ransomware|malware|zero-?day|cve-\d|phishing|güvenlik açığ|ddos", bas_t, re.I)):
+        a.add('siber')
     if KURAL['siyaset'].search(m) and (kay.get('siyaset') or kay.get('gundem') or len(KURAL['siyaset'].findall(m)) >= 2): a.add('siyaset')
     # Gündem: genel haber akışı (teknoloji/spor/magazin dışı kalanlar dahil siyaset, toplum, hukuk...)
     gundem_kay = kay.get('gundem', 0) + kay.get('siyaset', 0)
@@ -658,14 +684,21 @@ IDDIALI = [
  ('cep', 'Cebinize dokunuyor', 7, re.compile(
     r"\bzam(lar\w*|lı\w*|land\w*|mı|m[ıa])?\b|\bzamm\w*|\bvergi\w*|\bkdv\b|\bötv\b|\bharç(lar\w*|ı)?\b|\bmaaş\w*|\bemekli(ler|lere|ye|nin|lerin)?\b.{0,25}\b(maaş|zam|ikramiye|bayram|promosyon|artış|ödeme)\w*|\bemeklilik\w*|asgari ücret\w*|\bfaiz\w*|\bkira(sı|ları|lar|ya|da|nın)?\b|"
     r"\bakaryakıt\w*|\bbenzin\w*|\bmotorin\w*|doğal ?gaz\w*|\belektri(k|ğ)\w*\s+(zam|fatura|tarife)\w*|\benflasyon\w*|\bfatura\w*|\bcezası\b.{0,20}\b(tl|lira)\b|"
-    r"\bfiyat\w*\b.{0,30}\b(art\w*|yüksel\w*|düş\w*|zam\w*|uçtu|ucuzla\w*|pahalılaş\w*|el yakıyor|cep yakıyor|rekor\w*|katına)|\b(art\w*|zam\w*|indirim\w*)\b.{0,20}\bfiyat\w*|\bfiyat\w*\b.{0,15}\b(sızdı|sızdırıldı|sızıntı\w*)|\b(akaryakıt|benzin|motorin|mazot|lpg|doğal ?gaz|elektri\w*)\b.{0,40}\b(indirim\w*|zam\w*|geriledi|düştü|ucuzla\w*)|\bindirim\w*\b.{0,30}\b(benzin|motorin|akaryakıt|doğal ?gaz|elektri\w*)|\bfiyat\w*\b.{0,40}\b\d[\d.,]*\s*(bin |milyon )?(tl|lira)\b|"
+    r"\b(?<!halka arz )(?<!hisse )fiyat\w*\b.{0,30}\b(art\w*|yüksel\w*|düş\w*|zam\w*|uçtu|ucuzla\w*|pahalılaş\w*|el yakıyor|cep yakıyor|rekor\w*|katına)|\b(art\w*|zam\w*|indirim\w*)\b.{0,20}\bfiyat\w*|\bfiyat\w*\b.{0,15}\b(sızdı|sızdırıldı|sızıntı\w*)|\b(akaryakıt|benzin|motorin|mazot|lpg|doğal ?gaz|elektri\w*)\b.{0,40}\b(indirim\w*|zam\w*|geriledi|düştü|ucuzla\w*)|\bindirim\w*\b.{0,30}\b(benzin|motorin|akaryakıt|doğal ?gaz|elektri\w*)|\bfiyat\w*\b.{0,40}\b\d[\d.,]*\s*(bin |milyon )?(tl|lira)\b|"
+    r"\b(?:kayıt|pasaport|ehliyet|kimlik|vize|köprü|otoyol|abonelik|üyelik|kargo|servis|okul|kreş|yurt|telefon|otomobil)\s+ücret\w*|"
+    r"\b(?:ücret|harç)\w*\b.{0,25}\b(?:belli oldu|açıklandı|netleşti|arttı|yükseldi|düştü|zam)\b|"
+    r"\b(?:telefon|araç|otomobil|elektrik|doğal ?gaz|su|internet|abonelik|fatura|pasaport|ehliyet|yurt dışı\w*)\b.{0,35}\b(?:maliyet(?:i|leri)|tarife(?:si|ler\w*))\b|"
+    r"\b(?:mtv|ikramiye\w*|ödenek\w*|kota\w*|ihracat sınırı)\b|"
+    r"\b(?:kredi kartı|kmh|konut kredisi|taşıt kredisi|ihtiyaç kredisi)\b.{0,30}\b(?:faiz|oran\w*|limit\w*|aidat\w*|indirim|artış|düzenleme)\b|"
+    r"\b(?:yüzde\s+|%\s?)\d[\d.,]*\s*(?:indirim|hibe|destek|zam|artış)\b|"
     r"\bprice (hikes?|increases?|rises?|jumps?|cuts?)\b|\bprices? (rise|rises|rose|jump\w*|soar\w*|surge\w*|hike\w*|double\w*)\b|\btax(es|ed)?\b|\btariffs?\b|\bsalar(y|ies)\b|\bwages?\b|\binterest rates?\b|\binflation\b|\brent (hike|increase)s?\b", re.I)),
  ('hukuk', 'Yasak ve dava gündemi', 7, re.compile(
     r"\byasa(k|ğ)\w*|\byasakla\w*|\bdava(sı|lar\w*|yı|ya|da|cı)?\b|\bdava aç\w*|\bsoruşturma\w*|\bkovuşturma\w*|\btutuklan\w*|\bhapis\w*|\bmahk[uû]m\w*|\biddianame\w*|"
     r"(?<!asliye )(?<!ağır )\bceza(?!\s*(sahas|mahkeme|alan|vuruş|puan))\w*|\bmühür\w*|\berişim engeli\w*|\bkapatıl(dı|acak)\b|"
     r"\bban(s|ned|ning)?\b|\bsue[sd]?\b|\blawsuits?\b|\bfined\b|\bfines?\b(?= of| for)|\bprobe[sd]?\b|\binvestigation\w*|\bindict\w*|\bantitrust\b|\bconvicted\b|\bsentenced\b|\bjail\w*|\barrested\b", re.I)),
  ('guvenlik', 'Güvenlik uyarısı', 7, re.compile(
-    r"\bhack(?!athon)\w*|siber saldırı\w*|veri sızıntı\w*|\bveriler\w*\b.{0,25}\b(sızdı|sızdırıldı|çalındı|ele geçirildi|satışa)|\bgüvenlik açığı\w*|\bdolandırıc\w*|\boltalama\w*|\bfidye\w*|"
+    r"\bhack(?!athon)\w*|siber saldırı\w*|veri sızıntı\w*|\bveriler\w*\b.{0,25}\b(sızdı|sızdırıldı|çalındı|ele geçirildi|satışa)|\bgüvenlik açığı\w*|\boltalama\w*|\bfidye\w*|"
+    r"(?:siber|dijital|internet|online|yapay zek[aâ]|kripto|iban|kart|hesap|whatsapp|sms|oltalama|yeni|telefon.{0,25}(?:uygulama|yazılım|link|sms|casus|hack)).{0,25}dolandırıc\w*|dolandırıc\w*.{0,25}(?:yazılım|uygulama|site|link|bağlantı|yapay zek|siber|hesap|kart|kripto|uyarı|tuzağ|yöntem)|"
     r"\bcasus\w*|\bgizlilik\w*|\bkvkk\b|zararlı yazılım\w*|"
     r"\bdata breach\w*|\bbreach(es|ed)?\b|\bvulnerabilit\w*|\bzero[- ]day\b|\bransomware\b|\bmalware\b|\bspyware\b|\bphishing\b|\bscam\w*|\bprivacy\b|\bsurveillance\b|\bexploit(s|ed)?\b|\bcyber ?attack\w*", re.I)),
  ('tartisma', 'Tartışma büyüyor', 7, re.compile(
@@ -695,6 +728,8 @@ def iddiali_bul(t, alanlar=(), ent=None):
     ent = canon_bul(t) if ent is None else ent
     if len(ent & MARKA) >= 2 and DEV_CATISMA.search(t): kat.insert(0, ('devler', 7))
     if 'spor' not in alanlar: kat = [(ad, p) for ad, p in kat if ad != 'buyuk_mac']
+    if (SUC_BAGLAM.search(t) or KURAL['savas'].search(t)) and not re.search(r"siber|hacker|fidye|ransomware|malware|zero-?day|cve-\d|phishing|güvenlik açığ|ddos|hesap|şifre|kart", t, re.I):
+        kat = [(ad, p) for ad, p in kat if ad != 'guvenlik']
     kat = [(ad, 9 if ad == 'cep' and ACI_GUCLU['cep'].search(t) else p) for ad, p in kat]      # Türkiye'de cebe dokunan (TL, akaryakıt, maaş, kira…) en güçlü konu
     sadece_spor = set(alanlar) and set(alanlar) <= {'spor'}
     if sadece_spor: kat = [(ad, 3 if ad in ('ilk', 'rekor', 'bilim', 'turkiye') else p) for ad, p in kat]
@@ -707,9 +742,17 @@ def icerik_kapisi(c):
     Hayata etki/viral/hikâye tek başına yetmez: bu ölçütler 'fiyat', 'ücretsiz', 'sınav', 'ilk kez' gibi rutin kelimelerle de açılıyor.
     İstisna (büyük olay): 4+ bağımsız kaynaklı siyaset/savunma/savaş/afet/diplomasi olayı ('dünya' tek başına değil: yabancı teknoloji haberleri de 'dunya' alır) ya da 10+ bağımsız kaynaklı her konu. Spor istisnası yok (derbi/büyük maç iddialı sayılır)."""
     if iddiali_bul(c['t'], c.get('alanlar') or ())[1] >= 6: return True
-    a = set(c['alanlar']); ga = set(c.get('gundem_alt') or ())
+    a = set(c.get('alanlar') or ()); ga = set(c.get('gundem_alt') or ())
     if c['kb'] >= 4 and (a & {'siyaset', 'savunma'} or ga & {'savas', 'afet', 'diplomasi'}): return True
+    kr = c.get('_kr') or {}
+    etki = kr['etki'] if 'etki' in kr else (9 if ETKI.search(c.get('t', '')) else 0)
+    turk = kr['turk'] if 'turk' in kr else min(10, (6 if TURKIYE.search(c.get('t', '')) or 'turkiye' in ga else 0) + min(3, c.get('n_tr', 0) * 1.2))
+    gorsel = kr['gorsel'] if 'gorsel' in kr else ((5 if c.get('i') else 0) + (2 if c.get('resmi') else 0) + (1 if re.search(r'\d', c.get('t', '')) or c.get('markalar') else 0))
+    if c['kb'] >= 3 and etki >= 8 and turk >= 5 and gorsel >= 6 and not (a <= {'spor'}): return True
     return c['kb'] >= 10
+
+KURUMSAL_B2B = re.compile(r"\b(ceo|cfo|cto|yönetim kurulu|board|shareholders?|hissedar\w*|h[iİ]sseler[iİ]|stock|shares|market cap|p[iİ]yasa değeri|valuation|funding|raises \$|halka arz|ipo\b|sat[ıiI]n almayı planlıyor|acquisition|merger|reinstat\w*|göreve döndü|anal[iİ]st\w*|analyst|fitch|moody'?s|s&p|data center|veri merkezi|b2b|enterprise)\b", re.I)
+TUKETICI_ETKI = re.compile(r"\b((?<!halka arz )(?<!hisse )fiyat\w*|zam\w*|indirim\w*|ücret\w*|harç\w*|vergi\w*|maaş\w*|emekli\w*|kira\w*|benzin\w*|motorin\w*|elektrik\w*|yasak\w*|erişim|çöktü|güvenlik açığ|veri ihlali|sızdırıldı|hack\w*|dolandır\w*|iphone|galaxy|whatsapp|instagram|tiktok|youtube|chatgpt|gta)\b", re.I)
 
 def reels_puanla(c, og, bas, metin, simdi, kay_ad):
     """c: küme özeti. Dönüş: (puan, kriter dict 0-10, gerekçe listesi, elenme nedeni|None, cezalar)"""
@@ -722,7 +765,7 @@ def reels_puanla(c, og, bas, metin, simdi, kay_ad):
     vur = CARPICI.findall(metin)
     kr['saskin'] = min(10, (6 if CARPICI.search(t) else 0) + min(4, len(vur)) + (1 if re.search(r'\d{2,}', t) else 0))
     kr['hikaye'] = min(10, (5 if HIKAYE.search(t) else 0) + (2 if HIKAYE.search(metin) else 0) + min(3, len(og) / 3.0))
-    kr['gorsel'] = (6 if c['i'] else 0) + (2 if any(o['plat'] == 'youtube' for o in og) else 0) + (2 if c['resmi'] or len([o for o in og if o['i']]) >= 3 else 0)
+    kr['gorsel'] = (5 if c['i'] else 0) + (2 if any(o['plat'] == 'youtube' for o in og) else 0) + (2 if c['resmi'] or len([o for o in og if o['i']]) >= 3 else 0) + (1 if re.search(r'\d', t) or c['markalar'] else 0)
     kr['dogrulama'] = 9.5 if c['kb'] >= 4 else 8 if c['kb'] == 3 else 6 if c['kb'] == 2 else (4.5 if c['resmi'] else 1.5)
     kr['turk'] = min(10, (6 if TURKIYE.search(metin) else 0) + min(3, c['n_tr'] * 1.2) + (2 if c['alanlar'] and set(c['alanlar']) & {'tekno', 'ekonomi'} and c['n_tr'] else 0))
     kr['iddiali'] = iddiali_bul(t, c['alanlar'])[1]
@@ -744,13 +787,20 @@ def reels_puanla(c, og, bas, metin, simdi, kay_ad):
     # Yalnız yabancı kaynaklı sızıntı/söylenti, Türkçe kaynağı olan eşdeğer konunun önüne geçmesin (hafif ceza; siyaset/spor rutinine ceza yok)
     if c['sadece_yabanci'] and IDDIA.search(t): p -= 4; ceza.append('yalnız yabancı kaynaklı sızıntı/söylenti')
     if c['kb'] < 2 and not c['resmi'] and c['plat_topluluk']: p -= 6; ceza.append('yalnız topluluk kaynağı (erken sinyal)')
-    if c['kb'] < 2 and not c['resmi'] and not c['plat_topluluk']: p -= 3; ceza.append('tek bağımsız kaynak')
+    if c['kb'] < 2 and not c['resmi'] and not c['plat_topluluk']: p -= 12; ceza.append('tek bağımsız kaynak')
     # Türkiye izleyicisine uzak yabancı yerel haber: Türkçe kaynak yok, Türkiye geçmiyor, büyük ülke/lider/marka da yok
     genel = set(c['alanlar']) & {'tekno', 'yz', 'bilim', 'oyun', 'eglence', 'oto', 'siber'}
     if c['sadece_yabanci'] and not TURKIYE.search(metin) and not (c['ulkeler'] or c['liderler'] or c['markalar']) and not genel:
         p -= 15; ceza.append('Türkiye izleyicisine uzak yabancı yerel haber')
     if len(re.findall(r"\b[A-ZÇĞİÖŞÜ]{3,}\b", t)) >= 4 and len(re.findall(r"\b[A-ZÇĞİÖŞÜ]{3,}\b", t)) * 2 >= len(t.split()):
         p -= 10; ceza.append('büyük harfli tık tuzağı başlık')
+    if '?' in t:
+        p -= 18 + (6 if re.search(r'[:\-–—]\s*(?:peki\s+)?(?:nasıl|neden|ne\s+olacak|ne\s+oldu|kim)\s*\?\s*$', t, re.I) else 0)
+        ceza.append('soru başlığı')
+    if KURUMSAL_B2B.search(t) and not TURKIYE.search(t) and not TUKETICI_ETKI.search(t):
+        p -= 12; ceza.append('kurumsal yönetici/B2B haberi')
+    elif KURUMSAL_B2B.search(t) and re.search(r"\b(fitch|moody'?s|s&p|anal[iİ]st\w*|analyst)\b", t, re.I):
+        p -= 8; ceza.append('kurumsal analiz/not tahmini')
     elen = None
     for ad, rx in ELE:
         if ad in ELE_ALAN and not set(c['alanlar']) & ELE_ALAN[ad]: continue      # maç sonucu yalnız sporda, tanıtım sayfası yalnız teknolojide elenir
@@ -779,8 +829,10 @@ def profil_bul(c, m):
     pr = []
     a = set(c['alanlar'])
     # profil başlıkla doğrulanır: kaynağın bölümü tek başına profil açmaz
-    if a & {'tekno', 'siber', 'yz', 'oyun'} and (KURAL['tekno_guclu'].search(m) or KURAL['siber'].search(m) or KURAL['yz_guclu'].search(m) or KURAL['oyun_guclu'].search(m)): pr.append('teknoloji')
-    if 'gundem' in a or 'ekonomi' in a: pr.append('gundem')
+    tekno_m = (KURAL['tekno_guclu'].search(m) or KURAL['siber'].search(m) or KURAL['yz_guclu'].search(m)
+               or KURAL['oyun_guclu'].search(m) or (TEKNO_COK.search(m) and not (SUC_BAGLAM.search(m) and not KURAL['siber'].search(m))))
+    if a & {'tekno', 'siber', 'yz', 'oyun'} and tekno_m: pr.append('teknoloji')
+    if 'gundem' in a or ('ekonomi' in a and ('teknoloji' not in pr or TURKIYE.search(m))): pr.append('gundem')
     if 'siyaset' in a and KURAL['siyaset'].search(m): pr.append('siyaset')
     if 'spor' in a and KURAL['spor_guclu'].search(m): pr.append('spor')
     alt = []
@@ -819,7 +871,7 @@ ACI_ON['devler'] = 'Devler karşı karşıya'
 ACI_KELIME = {'rekor': re.compile(r"\brekor", re.I), 'ilk': re.compile(r"\bilk (kez|defa)\b", re.I), 'tartisma': re.compile(r"\btartışma", re.I), 'hukuk': re.compile(r"\byasa(k|ğ)|\bdava", re.I)}
 ACI_ON2 = {'rekor': 'Kırılan eşik', 'ilk': 'Tarihî adım', 'tartisma': 'Gerilim yükseliyor', 'hukuk': 'Hukuki düğüm'}
 # Güçlü önek yalnız kendi kelime sınıfı eşleşirse; yoksa daha yumuşak (başlıktan fazlasını iddia etmeyen) önek.
-ACI_GUCLU = {'cep': re.compile(r"\b(tl|lira\w*|türkiye\w*|emekli\w*|asgari|memur\w*|sgk|akaryakıt\w*|benzin\w*|motorin\w*|mazot|lpg|doğal ?gaz\w*|elektri\w*|kira\w*|maaş\w*|zam\w*|kdv|ötv|harç\w*|fatura\w*)\b", re.I),
+ACI_GUCLU = {'cep': re.compile(r"\b(tl|lira\w*|türkiye\w*|emekli\w*|asgari|memur\w*|sgk|akaryakıt\w*|benzin\w*|motorin\w*|mazot|lpg|doğal ?gaz\w*|elektri\w*|kira\w*|maaş\w*|zam\w*|kdv|ötv|harç\w*|fatura\w*|ücret\w*|kredi kartı|pasaport|ehliyet|mtv|tarife\w*|indirim\w*|hibe\w*)\b", re.I),
              'tartisma': re.compile(r"\b(tepki\w*|tartışma\w*|polemik\w*|skandal\w*|boykot\w*|protesto\w*|backlash|outrage|controvers\w*|fury|boycott\w*|protest\w*|slam(s|med)?)\b", re.I),
              'rekor': re.compile(r"\b(rekor\w*|record(-breaking)?|all-time high|tarihi zirve\w*|tarihin(in)? en büyü\w*|biggest ever|largest ever)\b", re.I)}
 ACI_YUMUSAK = {'cep': 'Para gündemi', 'tartisma': 'Gerilimli gündem', 'rekor': 'Büyük para'}
@@ -834,6 +886,8 @@ def aci_temiz(t, kaynaklar=()):
     m = re.search(r'\s[-–—]\s([^-–—]{2,45})$', t)
     if m and (re.search(r'\.(com|net|org|tr)\b|\bnews\b|\bhaber', m.group(1), re.I) or any(k and k.lower() in m.group(1).lower() for k in kaynaklar)): t = t[:m.start()]
     for _ in range(2): t = ACI_BAS.sub('', t)
+    t = re.sub(r'\s*[:\-–—]\s*(?:peki\s+)?(?:nasıl|neden|ne\s+olacak|ne\s+oldu|kim)\s*\??\s*$', '', t, flags=re.I)
+    t = t.replace('?', '')
     return t.strip(' .:;,-–')
 
 ACI_YETIM = re.compile(r"^(\d[\d.,]*%?|%\d[\d.,]*|yüzde|bin|milyon|milyar|trilyon|ve|ile|ama|için|da|de|ki|bir|the|and|of|to|a|an|in|on|for|with|after|as|by)$", re.I)
@@ -878,31 +932,419 @@ def guc_bul(p):
     """Puan dilimi -> 1-3 (3 = en güçlü). Dilimler 21.11.2026 canlı veri dağılımına göre seçildi."""
     return 3 if p >= REELS_GUC3 else 2 if p >= REELS_GUC2 else 1
 
+_HOOK_AYLAR = r"(?:ocak|şubat|mart|nisan|may[ıiI]s|haz[ıiI]ran|temmuz|ağustos|eylül|ek[ıiI]m|kas[ıiI]m|aral[ıiI]k|january|february|march|april|may|june|july|august|september|october|november|december)"
+_HOOK_SAYI_RX = re.compile(
+    r"(?:\d[\d.,]*\s+(?:trilyon|milyar|milyon)\s+\d[\d.,]*\s+bin(?:\s+(?:tl|lira\w*|dolar\w*|euro\w*|avro\w*|sterlin\w*))?|"
+    r"\d[\d.,]*\s+bin\s+\d+(?:\s+(?:tl|lira\w*|dolar\w*|kişi\w*|araç\w*|cihaz\w*))?|"
+    r"yüzde\s+\d[\d.,]*|%\s?\d[\d.,]*|\d[\d.,]*\s?%|"
+    r"[\$€£]\s?\d[\d.,]*(?:\s?(?:trillion|billion|million|thousand|bn|m))?\b|"
+    r"\d[\d.,]*\s?(?:(?:trilyon\w*|milyar\w*|milyon\w*|bin(?:[iıuü]n?|e|de|den|lik)?\b)(?:\s+(?:tl|lira\w*|dolar\w*|euro\w*|avro\w*|sterlin\w*))?|tl\b|lira\w*|dolar\w*|euro\w*|avro\w*|sterlin\w*|tümen\w*|kişi\w*|yaralı\w*|şehit\w*|ölü\b|öğretmen\w*|asker\w*|şüpheli\w*|gözaltı\w*|tutuklu\w*|saat\w*|gün\w*|yıl\w*|ilde?\b|ilçe\w*|km\b|gb\b|tb\b|ghz\b|mhz\b|puan\w*|gol\b|percent\b|trillion\b|billion\b|million\b|tracks?\b|hours?\b|days?\b|years?\b)|"
+    r"\d[\d.,]*\s+(?!" + _HOOK_AYLAR + r"\b)[A-Za-zÇĞİÖŞÜçğıöşü]{2,15}\s+(?:asker\w*|kişi\w*|öğretmen\w*|öğrenci\w*|çalışan\w*|vatandaş\w*|yaralı\w*|şüpheli\w*|araç\w*|uçak\w*))",
+    re.I,
+)
+_HOOK_SAYI_EK = [
+    (re.compile(r'\blira(?:yı|ya|nın|lık|dan|da)\b', re.I), 'lira'),
+    (re.compile(r'\bdolar(?:ı|a|ın|lık|dan|da)\b', re.I), 'dolar'),
+    (re.compile(r'\beuro(?:yu|ya|nun|luk|dan|da)\b', re.I), 'euro'),
+    (re.compile(r'\bavro\w*\b', re.I), 'euro'),
+    (re.compile(r'\bsterlin(?:i|e|in|lik|den|de)\b', re.I), 'sterlin'),
+    (re.compile(r'\btrilyon(?:u|a|un|luk)\b', re.I), 'trilyon'),
+    (re.compile(r'\bmilyar(?:ı|a|ın|lık)\b', re.I), 'milyar'),
+    (re.compile(r'\bmilyon(?:u|a|un|luk)\b', re.I), 'milyon'),
+    (re.compile(r'\bbin(?:[iıuü]n?|e|de|den|lik)\b', re.I), 'bin'),
+    (re.compile(r'\bsaat(?:lik|e|ten|i)\b', re.I), 'saat'),
+    (re.compile(r'\bgün(?:lük|e|de|den)\b', re.I), 'gün'),
+    (re.compile(r'\byıl(?:lık|ı|a|da)\b', re.I), 'yıl'),
+    (re.compile(r'\baraçlık\b', re.I), 'araç'),
+    (re.compile(r'\btrillion\b', re.I), 'trilyon'),
+    (re.compile(r'\bbillion\b|\bbn\b', re.I), 'milyar'),
+    (re.compile(r'\bmillion\b', re.I), 'milyon'),
+    (re.compile(r'\bthousand\b', re.I), 'bin'),
+    (re.compile(r'\bpercent\b', re.I), 'yüzde'),
+    (re.compile(r'\bhours?\b', re.I), 'saat'),
+    (re.compile(r'\bdays?\b', re.I), 'gün'),
+    (re.compile(r'\byears?\b', re.I), 'yıl'),
+    (re.compile(r'\btracks?\b', re.I), 'parça'),
+]
+_HOOK_OZEL_AD = {
+    'turkiye': 'Türkiye', 'abd': 'ABD', 'ingiltere': 'İngiltere', 'almanya': 'Almanya',
+    'fransa': 'Fransa', 'cin': 'Çin', 'rusya': 'Rusya', 'ukrayna': 'Ukrayna',
+    'israil': 'İsrail', 'filistin': 'Filistin', 'iran': 'İran', 'suriye': 'Suriye',
+    'japonya': 'Japonya', 'hindistan': 'Hindistan', 'erdogan': 'Erdoğan', 'openai': 'OpenAI', 'spacex': 'SpaceX',
+    'tiktok': 'TikTok', 'togg': 'Togg', 'galatasaray': 'Galatasaray', 'fenerbahce': 'Fenerbahçe',
+    'besiktas': 'Beşiktaş', 'trabzonspor': 'Trabzonspor', 'nba': 'NBA', 'uefa': 'UEFA',
+    'fifa': 'FIFA', 'nato': 'NATO', 'bm': 'BM', 'ab': 'AB', 'fed': 'Fed', 'tcmb': 'TCMB',
+    'youtube': 'YouTube', 'iphone': 'iPhone', 'chatgpt': 'ChatGPT', 'whatsapp': 'WhatsApp',
+}
+_HOOK_EMOJI = re.compile(r'[\U00010000-\U0010ffff\u2600-\u27bf]+')
+_HOOK_YASAK = re.compile(r'\b(?:son dak[iİ]ka|flaş|flas|şok|inanamayacaks[ıiI]n[ıiI]z|arkadaşlar|beğenmey[iİ] unutmay[ıiI]n)\b[:!,\s-]*', re.I)
+_HOOK_DOLGU = re.compile(r'^(?:işte\s+(?:detaylar|o\s+\w+|yeni\s+rakam|ayrıntılar)|peki\s+(?:nasıl|neden|ne\s+olacak))[\s.!]*$', re.I)
+_HOOK_APOS = re.compile(r"['’](?:n?[ıiuü]n|n?[dt][ae]n?|y?[ae]|n?[ıiuü]|l[ıiuü]k?)$", re.I)
+
+def _hook_sayi_bul(s):
+    if not s: return None
+    for m in _HOOK_SAYI_RX.finditer(s):
+        raw = re.sub(r'\s+', ' ', m.group(0)).strip(' .,;:')
+        if re.fullmatch(r'(?:19|20)\d\d\s+(?:yıl\w*|years?)', raw, re.I): continue
+        if re.fullmatch(r'\d+\s*' + _HOOK_AYLAR + r'\w*', raw, re.I): continue
+        if raw.startswith('$'):
+            raw = raw[1:].strip() + ' dolar'
+        elif raw.startswith('€'):
+            raw = raw[1:].strip() + ' euro'
+        elif raw.startswith('£'):
+            raw = raw[1:].strip() + ' sterlin'
+        elif raw.startswith('%'):
+            raw = 'yüzde ' + raw[1:].strip()
+        elif raw.endswith('%'):
+            raw = 'yüzde ' + raw[:-1].strip()
+        for rx, rep in _HOOK_SAYI_EK:
+            raw = rx.sub(rep, raw)
+        raw = re.sub(r'\s+', ' ', raw).strip()
+        if len(raw.split()) <= 5:
+            return raw
+    return None
+
+def _hook_temiz(t, kaynaklar=()):
+    s = _HOOK_EMOJI.sub(' ', t or '')
+    s = aci_temiz(s, kaynaklar)
+    for _ in range(2):
+        s = re.sub(r'\s*[-–|]\s*(?:ihlas haber ajans[ıiI]|anadolu ajans[ıiI]|spor haberleri|aa|iha|İha|dha|anka|galatasaray|fenerbahçe|beşiktaş|trabzonspor)\s*$', '', s, flags=re.I)
+    s = _HOOK_YASAK.sub('', s)
+    s = re.sub(r'^\s*(?:işte|peki)\s+', '', s, flags=re.I)
+    s = re.sub(r'([:!—–|]\s*)(?:işte|peki)\s+', r'\1', s, flags=re.I)
+    return re.sub(r'\s+', ' ', s).strip(' .:;,-–|')
+
+_HOOK_FIIL_VAR = re.compile(
+    r"(?:\b(?:oldu|olacak|geldi|geliyor|gelecek|başladı|başlıyor|bitti|bitiyor|arttı|artıyor|düştü|düşüyor|yükseldi|yükseliyor|"
+    r"verildi|verilecek|yapıldı|yapılacak|alındı|alınacak|edildi|edilecek|açıklandı|netleşti|belirlendi|görüşülecek|"
+    r"yasaklandı|yasakladı|kapatıldı|kapatılacak|sızdı|sızdırıldı|tanıtıldı|duyuruldu|çıktı|girdi|görüldü|gördü|"
+    r"kırdı|kazandı|kaybetti|yenildi|yendi|geçti|bildirdi|paylaştı|yayınlandı|değişti|bekleniyor|planlanıyor|etkiliyor|"
+    r"sürüyor|girebiliyor|yapacağız|edecek|ediyor|kalacak|ödenecek|kesilecek|yapmıştı|sakatlan\w*|edemedi|amadı|bıraktı|itiraf etti|karar aldı)\b|"
+    r"\b(?:açıklama\w*|karar\w*|tepki\w*|yasak\w*|zam\w*|indirim\w*|kota\w*|rekor\w*|ceza\w*|işlem\w*|soruşturma\w*|"
+    r"operasyon\w*|dava\w*|kriz\w*|uyarı\w*|sızıntı\w*|katılım\w*|ihracat\w*|maliyet\w*|ücret\w*|fiyat\w*|vergi\w*|"
+    r"maaş\w*|destek\w*|hibe\w*|gelişme\w*|duyuru\w*|jest\w*|tasarrufu\w*)\b)",
+    re.I,
+)
+
+def _hook_parcalar(temiz_t):
+    out = []
+    for p in re.split(r'\s*(?::\s+|!\s+|\s+\|\s+|\s+[–—]\s+|\.\.\.\s*)', temiz_t):
+        p = re.sub(r'^\s*(?:işte|peki)\s+', '', p, flags=re.I)
+        p = re.sub(r'\s+', ' ', p).strip(' .:;,-–|')
+        if not p or '?' in p or _HOOK_DOLGU.match(p): continue
+        if re.search(r'\s[-–—]\s', p) and not (_HOOK_FIIL_VAR.search(p) or re.search(r'\b\d+[-–]\d+\b', p)):
+            continue
+        if not _HOOK_FIIL_VAR.search(p) and not re.search(r'\b\d+(?:[.,]\d+)?\s*(?:%|tl|lira|dolar|euro|avro|sterlin|bin|milyon|milyar|trilyon)\b', p, re.I):
+            continue
+        if len(p.split()) >= 2:
+            out.append(p)
+    return out
+
+_HOOK_YAB_DUR = {
+    'nicht', 'kein', 'keine', 'warum', 'wie', 'hier', 'more', 'most', 'latest', 'inside', 'every', 'all', 'some', 'many', 'best', 'top',
+    'la', 'el', 'le', 'les', 'los', 'las', 'un', 'une', 'il', 'lo', 'gli', 'der', 'die', 'das', 'ein', 'eine', 'den', 'dem', 'des', 'du', 'del', 'una',
+}
+_HOOK_COKLU_OZEL = (
+    'New York Times', 'New York', 'New Zealand', 'New Jersey', 'New Delhi', 'New Orleans', 'New Mexico',
+    'Los Angeles', 'Las Vegas', 'San Francisco', 'San Diego', 'La Liga', 'El Salvador',
+    'One UI', 'Wall Street', 'White House', 'United States', 'United Kingdom',
+    'European Union', 'South Korea', 'North Korea', 'Saudi Arabia', 'South Africa',
+    'Hong Kong', 'Abu Dhabi', 'Sri Lanka', 'Costa Rica', 'Puerto Rico',
+)
+_HOOK_TR_DUR = {
+    'işte', 'peki', 'tam', 'liste', 'yılında', 'yılı', 'yıl', 'günü', 'ayı', 'ayında', 'haftası', 'saat',
+    'ücret', 'ücreti', 'ücretleri', 'fiyat', 'fiyatı', 'fiyatları', 'harç', 'harçları', 'harcı',
+    'oran', 'oranı', 'oranıyla', 'maaş', 'maaşı', 'maaşları', 'zam', 'zammı', 'vergi', 'vergisi',
+    'tutar', 'tutarı', 'tutarları', 'karar', 'kararı', 'düzenleme', 'düzenlemesi', 'açıklama', 'açıklaması',
+    'gelişme', 'detay', 'detaylar', 'ayrıntı', 'ayrıntılar', 'meslek', 'grubu', 'kayıt', 'kayıtları',
+    'alım', 'alımlar', 'duyuru', 'duyurusu', 'model', 'modelleri', 'modellerinin', 'kamera', 'özellik', 'özellikleri',
+    'hafta', 'haftanın', 'gün', 'günün', 'bölüm', 'bölümü', 'sezon', 'finali', 'başkanı', 'başkanlığı',
+    'yeni', 'eski', 'son', 'ilk', 'tek', 'bir', 'en', 'çok', 'az', 'tüm', 'bütün', 'her', 'bazı', 'diğer',
+    'göre', 'karşı', 'için', 'ile', 'üzerine', 'hakkında', 'kapsamında', 'sonrası', 'öncesi',
+    'belli', 'oldu', 'netleşti', 'açıklandı', 'görüşülecek', 'geliyor', 'geldi', 'başladı', 'başlıyor',
+    'bitti', 'arttı', 'düştü', 'yükseldi', 'verildi', 'yapıldı', 'alındı', 'edildi', 'yasaklandı', 'yasakladı',
+    'kapatıldı', 'sızdı', 'sızdırıldı', 'tanıtıldı', 'duyuruldu', 'çıktı', 'girdi', 'görüldü', 'gördü',
+    'kırdı', 'kazandı', 'kaybetti', 'yenildi', 'yendi', 'geçti', 'bildirdi', 'paylaştı', 'yayınlandı',
+    'değişti', 'bekleniyor', 'planlanıyor', 'etkiliyor', 'sürüyor', 'olacak', 'gelecek', 'yapılacak',
+    'verilecek', 'alınacak', 'ödenecek', 'kesilecek', 'kalacak', 'nasıl', 'neden', 'kadar', 'kim', 'ne',
+    'emekli', 'asgari',
+}
+_HOOK_TR_FIIL_RX = re.compile(
+    r"(?:landı|lendi|tıldı|tildi|tuldu|tüldü|le[sş]ti|la[sş]tı|açıklandı|netleşti|belirlendi|"
+    r"görüşülecek|yapılacak|verilecek|alınacak|edilecek|kapatılacak|ödenecek|kesilecek|"
+    r"geliyor|gidiyor|başlıyor|bitiyor|artıyor|düşüyor|yükseliyor|bekleniyor|planlanıyor|etkiliyor|sürüyor)$",
+    re.I,
+)
+_HOOK_MODEL_MARKA = {
+    'gta', 'iphone', 'ipad', 'macbook', 'playstation', 'ps', 'switch', 'galaxy', 'pixel', 'android', 'ios', 'gpt',
+    'redmi', 'poco', 'xiaomi', 'huawei', 'honor', 'oneplus', 'oppo', 'vivo', 'realme', 'rx', 'rtx', 'gtx', 'm', 'ti', 'byd',
+    'fold', 'flip', 'pro', 'max', 'ultra', 'plus', 'mini', 'air', 'edge', 'note', 'tab', 'watch', 'buds', 'ring', 'book', 'series',
+    'ui', 'one', 'z', 's', 'a', 'gt', 'rs', 'fe', 'se', 'xl', 'xr',
+}
+_HOOK_MODEL_TOKEN = {'fold', 'flip', 'pro', 'max', 'ultra', 'plus', 'mini', 'air', 'edge', 'note', 'tab', 'watch', 'buds', 'ring', 'book', 'series', 'fe', 'se', 'xl', 'xr', 'gt', 'rs', 'ti', 'ui', 'z', 's', 'a', 'm'}
+
+def _hook_ozne(c, bas, temiz_t):
+    tr_dil = bas.get('dil', 'tr') == 'tr'
+    bic = baslik_bicimi(temiz_t)
+    en_canon = None
+    for k, rx in CANON_RX:
+        m = rx.search(temiz_t)
+        if m and (en_canon is None or m.start() < en_canon[0]):
+            en_canon = (m.start(), _HOOK_OZEL_AD.get(k, k.title()))
+    en_ozel = None
+    for m in re.finditer(r'\b([A-ZÇĞİÖŞÜ][A-Za-zÇĞİÖŞÜçğıöşü0-9\-\.]{1,20}(?:\s+(?:[A-ZÇĞİÖŞÜ][A-Za-zÇĞİÖŞÜçğıöşü0-9\-\.]{0,20}|[0-9]{1,2}\b)){0,4})', temiz_t):
+        ham = m.group(1).strip(' .,:;')
+        cand = _HOOK_APOS.sub('', ham)
+        coklu = next((p for p in _HOOK_COKLU_OZEL if cand == p or cand.startswith(p + ' ')), None)
+        if coklu:
+            if coklu == 'One UI' and re.match(r'^One UI \d+\b', cand):
+                cand = re.match(r'^One UI \d+', cand).group(0)
+            else:
+                cand = coklu
+            parca_w = cand.split()
+            w0 = parca_w[0]
+        else:
+            parca_w = cand.split()
+            if tr_dil and len(parca_w) >= 3:
+                while len(parca_w) >= 3 and parca_w[0].translate(M.TR).lower() in (AD_GENEL | _HOOK_TR_DUR):
+                    parca_w.pop(0)
+            if not any(w.translate(M.TR).lower() in _HOOK_MODEL_TOKEN or re.search(r'\d', w) for w in parca_w[1:]):
+                parca_w = parca_w[:3]
+            while len(parca_w) >= 2:
+                wl = parca_w[-1].translate(M.TR).lower()
+                if parca_w[-1].isdigit() and parca_w[-2].translate(M.TR).lower() not in _HOOK_MODEL_MARKA:
+                    parca_w.pop()
+                elif wl in (M.STOP | AD_GENEL | _HOOK_YAB_DUR):
+                    parca_w.pop()
+                elif tr_dil and (wl in _HOOK_TR_DUR or _HOOK_TR_FIIL_RX.search(parca_w[-1]) or re.search(r"l[ae]r(?:[aeıi]|d[ae]n?|[ıiuü]n)?$", parca_w[-1], re.I)):
+                    parca_w.pop()
+                else:
+                    break
+            cand = ' '.join(parca_w)
+            w0 = parca_w[0]
+            w0l = w0.translate(M.TR).lower()
+            candl = cand.translate(M.TR).lower()
+            if w0l in AD_GENEL or w0l in M.STOP or w0l in _HOOK_YAB_DUR or w0l in _HOOK_TR_DUR or candl in AD_GENEL or len(cand) < 2:
+                continue
+        if '-' in cand and any(p and p[0].islower() for p in cand.split('-')[1:]): continue
+        if not coklu and re.fullmatch(r'[A-ZÇĞİÖŞÜ]{2,8}', w0) and ' ' in cand and not re.search(r'\d', cand.split()[1]):
+            cand = w0
+        if re.fullmatch(r'[A-ZÇĞİÖŞÜ]{2,6}', cand) and re.match(r'^\s+(?:[A-ZÇĞİÖŞÜ]\w*\s+)?(?:eski|önceki)\s+(?:başkan|genel\s+başkan|bakan|milletvekili|üye)', temiz_t[m.end():], re.I):
+            continue
+        tam_canon = any(rx.fullmatch(cand) for _, rx in CANON_RX)
+        if tr_dil and ' ' not in cand and not re.fullmatch(r'[A-ZÇĞİÖŞÜ0-9]{2,8}', cand) and not tam_canon:
+            if _HOOK_TR_FIIL_RX.search(w0) or re.search(r"(?:[ıiuü]nd[ae]n?|l[ae]r(?:[aeıi]|d[ae]n?|[ıiuü]n)?|l[ıiuü]ğ[ıiuü])$", w0, re.I):
+                continue
+        if not tr_dil:
+            if not coklu and not tam_canon:
+                if ' ' not in cand and len(cand) >= 14: continue
+                if any(w.translate(M.TR).lower() in (M.STOP | _HOOK_YAB_DUR) for w in cand.split()): continue
+                if bic == 'baslik' and not re.search(r'\d', cand) and not re.fullmatch(r'[A-ZÇĞİÖŞÜ0-9]{2,8}', cand): continue
+        if m.start() == 0 and ' ' not in cand and not re.fullmatch(r'[A-ZÇĞİÖŞÜ0-9]{2,8}', cand) and not tam_canon:
+            if tr_dil and re.search(r'(?:d[ae]|t[ae]|l[ıiuü])$', w0, re.I): continue
+            if tr_dil and bic == 'cumle': continue
+            if not tr_dil and en_canon is not None: continue
+        en_ozel = (m.start(), cand)
+        break
+    if en_ozel:
+        guclu_ozel = tr_dil or any(rx.fullmatch(en_ozel[1]) for _, rx in CANON_RX) or en_ozel[1] in _HOOK_COKLU_OZEL or bool(re.search(r'\d', en_ozel[1])) or bool(re.fullmatch(r'[A-ZÇĞİÖŞÜ0-9]{2,8}', en_ozel[1]))
+        if (guclu_ozel or en_canon is None) and (en_canon is None or en_ozel[0] <= en_canon[0]):
+            return en_ozel[1]
+    if en_canon:
+        return en_canon[1]
+    alanlar = c.get('alanlar') or []
+    alt = c.get('alt') or {}
+    return next((ALT_AD[x] for a in alanlar for x in alt.get(a, []) if x in ALT_AD), None) or next((ALAN_AD[a] for a in alanlar if a in ALAN_AD), 'Gündem')
+
+def _turkce_mi(s):
+    if not s: return False
+    tr_harf = bool(re.search(r'[çğıöşüÇĞİÖŞÜ]', s))
+    yab_stop = len(re.findall(r'\b(?:the|and|with|from|that|this|which|would|could|should|und|der|die|das|mit|für|von|ein|eine|para|con|los|las|una|que|por|een|het|van)\b', s, re.I))
+    if not tr_harf and yab_stop >= 2: return False
+    return tr_harf or bool(re.search(r'\b(?:ve|ile|için|bir|olan|oldu|göre|kadar|yüzde|lira|milyon|milyar|bin|tl)\b', s, re.I))
+
+_SOK_EK = {'u': 'gelişmesi', 'un': 'gelişmenin', 'unu': 'gelişmeyi', 'una': 'gelişmeye', 'unda': 'gelişmede', 'undan': 'gelişmeden', 'ları': 'gelişmeleri', 'ların': 'gelişmelerin', 'lara': 'gelişmelere', 'lardan': 'gelişmelerden', 'a': 'gelişmeye', 'ta': 'gelişmede', 'tan': 'gelişmeden', 'lar': 'gelişmeler'}
+def _tr_ilk_buyuk(s):
+    if not s: return s
+    if s[0] in '"\'“«(' and len(s) > 1 and s[1].islower():
+        return s[0] + _tr_ilk_buyuk(s[1:])
+    if not s[0].islower(): return s
+    if s[0] == 'i': return 'İ' + s[1:]
+    if s[0] == 'ı': return 'I' + s[1:]
+    return s[0].upper() + s[1:]
+
+def _hook_noktala(s):
+    s = re.sub(r'[?…]+|\.{2,}', '', s or '')
+    s = _HOOK_YASAK.sub('', s)
+    s = re.sub(r'\bşok(u|un|unu|una|unda|undan|ları|ların|lara|lardan|a|ta|tan|lar)\b', lambda m: _SOK_EK.get(m.group(1).translate(M.TR).lower(), 'gelişme'), s, flags=re.I)
+    s = re.sub(r'\bşok\w*\b', 'gelişme', s, flags=re.I)
+    s = re.sub(r'\bsana\b', 'size', s, flags=re.I)
+    s = re.sub(r'\s+', ' ', s).strip(' ,;:-–|')
+    s = _tr_ilk_buyuk(s)
+    if s and s[-1] not in '.!': s += '.'
+    return s
+
 def hook_uret(c, bas, ayrinti):
-    """3 açılış cümlesi (kural şablonu; taslaktır). Uydurma iddia içermez: yalnız kümeden hesaplanan değerleri kullanır."""
-    t = kisa_baslik(bas['t'])
-    sayi = re.search(r'(\d[\d.,]*)\s?(%|milyar|milyon|bin\b|TL\b|dolar|euro|kişi|yaralı|gün|yıl|km\b|GB\b|puan|gol)', bas['t'], re.I)
+    """3 açılış cümlesi (konuşma Türkçesi, <=10 sözcük, soru yok). Uydurma sayı/iddia içermez."""
+    temiz_t = _hook_temiz(bas['t'], c.get('kaynaklar') or ())
+    tr_dil = bas.get('dil', 'tr') == 'tr'
+    hassas = bool(HASSAS.search(temiz_t))
+    alanlar = c.get('alanlar') or []
+    kat, _ = iddiali_bul(temiz_t, alanlar)
+    birincil = kat[0] if kat else ''
+    ozne = _hook_ozne(c, bas, temiz_t)
+    konu_kisa = aci_konu(c).split('(')[0].strip()
+    s_t = _hook_sayi_bul(temiz_t)
+    s_ay = _hook_sayi_bul(ayrinti) if ayrinti else None
+    parcalar = _hook_parcalar(temiz_t) if tr_dil else []
+    ay_tr = _turkce_mi(ayrinti)
+    ay_cumleler = []
+    if ay_tr:
+        ay_s = ayrinti.strip()
+        kes = [0]
+        for m in re.finditer(r'([.!])\s+(?=[A-ZÇĞİÖŞÜ0-9"\'“«(])', ay_s):
+            if m.group(1) == '.' and re.search(r'\b\d{1,2}$', ay_s[:m.start()]): continue
+            kes.append(m.start() + 1)
+        kes.append(len(ay_s))
+        for a_i, b_i in zip(kes, kes[1:]):
+            seg = _hook_noktala(ay_s[a_i:b_i].strip())
+            if 4 <= len(seg.split()) <= 10 and '?' not in seg and '…' not in seg:
+                ay_cumleler.append(seg)
+
+    def ekle_uygun(havuz, met):
+        met = _hook_noktala(met)
+        w = met.split()
+        if 3 <= len(w) <= 10 and met not in havuz:
+            havuz.append(met)
+
+    # h[0]: somut sayı veya en keskin tam cümle
+    h0 = []
+    s_ay_met = None
+    if tr_dil:
+        if s_t:
+            dig = re.findall(r'\d+', s_t)
+            tam_p = next((p for p in parcalar if 3 <= len(p.split()) <= 10 and all(d in p for d in dig)), None)
+            if tam_p:
+                ekle_uygun(h0, tam_p)
+            kisa_p = next((p for p in parcalar if 2 <= len(p.split()) <= 10 - len(s_t.split()) and not all(d in p for d in dig)), None)
+            if kisa_p:
+                ekle_uygun(h0, '%s. %s' % (s_t, kisa_p))
+            ekle_uygun(h0, '%s. %s konusunda yeni veri' % (s_t, ozne) if hassas else '%s. %s cephesinde yeni rakam' % (s_t, ozne))
+        for idx_p, p in enumerate(parcalar):
+            pw = p.split()
+            if idx_p == 0 and ':' in temiz_t and len(pw) <= 4 and re.search(r'(?:m[ıiuü]şt[ıiuü]|yordu)$', p, re.I):
+                continue
+            if (len(pw) >= 4 or re.search(r'\d', p)) and len(pw) <= 10:
+                ekle_uygun(h0, p)
+        if not h0 and s_ay and ay_tr:
+            s_ay_met = _hook_noktala('%s. %s konusunda yeni veri' % (s_ay, ozne) if hassas else '%s. %s ayrıntısında öne çıkan rakam' % (s_ay, ozne))
+            ekle_uygun(h0, s_ay_met)
+    else:
+        if s_t:
+            ekle_uygun(h0, '%s. %s konusunda yeni veri' % (s_t, ozne) if hassas else '%s. %s cephesinde yeni gelişme' % (s_t, ozne))
+        elif s_ay:
+            s_ay_met = _hook_noktala('%s. %s için dikkat çeken ayrıntı' % (s_ay, ozne))
+            ekle_uygun(h0, s_ay_met)
+
+    # Konuya/açıya dayalı güvenli açılışlar (h0 yedeği ve h1/h2 havuzu)
+    aci_havuz = []
+    if hassas:
+        ekle_uygun(aci_havuz, '%s hakkında resmî açıklama paylaşıldı' % ozne if re.search(r'hayatını kaybet|vefat|öldü|yaşamını yitir', temiz_t, re.I) else '%s konusunda resmî veriler açıklandı' % ozne)
+        ekle_uygun(aci_havuz, 'Resmî açıklamalara yansıyan son bilgiler')
+        ekle_uygun(aci_havuz, 'Doğrulanmış kaynaklardan gelen güncel bilgiler')
+    else:
+        if birincil == 'cep':
+            ekle_uygun(aci_havuz, '%s gelişmesi doğrudan bütçeyi ilgilendiriyor' % ozne)
+            ekle_uygun(aci_havuz, 'Cebinizdeki hesabı doğrudan ilgilendiren gelişme')
+        elif birincil == 'hukuk':
+            ekle_uygun(aci_havuz, 'Yasak ve yaptırım kararı kuralları değiştiriyor')
+            ekle_uygun(aci_havuz, 'Dava ve yaptırım kararı dikkat çekiyor')
+        elif birincil == 'guvenlik' and ('siber' in alanlar or KURAL['siber'].search(temiz_t)):
+            ekle_uygun(aci_havuz, '%s kullanıcıları için kritik güvenlik uyarısı' % ozne)
+            ekle_uygun(aci_havuz, 'Hesabınız ve güvenliğiniz için önemli ayrıntı')
+        elif birincil == 'tartisma':
+            ekle_uygun(aci_havuz, '%s açıklaması yeni tartışma başlattı' % ozne)
+            ekle_uygun(aci_havuz, 'Kamuoyunda geniş yankı uyandıran gelişme')
+        elif birincil == 'rekor':
+            ekle_uygun(aci_havuz, '%s cephesinde yeni eşik aşıldı' % ozne)
+            ekle_uygun(aci_havuz, 'Daha önce görülmemiş bir seviye kayda geçti')
+        elif birincil == 'ilk':
+            ekle_uygun(aci_havuz, '%s için bir ilk niteliğinde adım' % ozne)
+            ekle_uygun(aci_havuz, 'Alanında ilk kez yaşanan gelişmeye bakalım')
+        elif birincil == 'bilim':
+            ekle_uygun(aci_havuz, '%s araştırmasında dikkat çeken yeni bulgu' % ozne)
+            ekle_uygun(aci_havuz, 'Bilim dünyasında öne çıkan yeni veri')
+        elif birincil == 'buyuk_mac':
+            ekle_uygun(aci_havuz, '%s için kritik maç gelişmesi' % ozne)
+            ekle_uygun(aci_havuz, 'Karşılaşmada dengeleri değiştiren anlar')
+        ekle_uygun(aci_havuz, '%s gündeminde öne çıkan yeni gelişme' % (ozne if tr_dil else konu_kisa))
+        ekle_uygun(aci_havuz, '%s başlığında dikkat çeken önemli ayrıntı' % ozne)
+
     h = []
-    if sayi: h.append('Rakam bu: %s. %s' % (sayi.group(0).strip(), t))     # yalnız birimli sayı (tarih/sıra sayısı hook olmaz)
-    else: h.append('3 saniyede özet: %s' % t)
-    if ayrinti: h.append('Başlıkta yazmayan ayrıntı: %s' % (ayrinti[:90].rstrip(' .,') + ('…' if len(ayrinti) > 90 else '')))
-    else: h.append('Bu haberde herkesin aynı şeyi yazmasının nedeni: %d farklı kaynak, aynı gelişme.' % c['kb'])
-    h.append('%d kaynak yazdı ama Türkçede neredeyse kimse anlatmadı; sana ne etkisi var?' % c['kb'] if c['sadece_yabanci'] else '%d bağımsız kaynak aynı gelişmeyi yazıyor. Peki sana ne etkisi var?' % c['kb'])
-    return h
+    for x in h0 + aci_havuz:
+        if x not in h:
+            h.append(x); break
+    s_ay_kullanildi = bool(h and s_ay_met and h[0] == s_ay_met) or bool(h and s_ay and re.findall(r'\d+', s_ay) and all(d in h[0] for d in re.findall(r'\d+', s_ay)))
+
+    # h[1]: ayrıntı cümlesi, ikincil sayı, ikinci başlık parçası veya yabancı-Türkçe vurgusu
+    h1_aday = []
+    for ac in ay_cumleler:
+        ekle_uygun(h1_aday, ac)
+    if s_ay and not s_ay_kullanildi and (not s_t or set(re.findall(r'\d+', s_ay)) != set(re.findall(r'\d+', s_t))):
+        ekle_uygun(h1_aday, '%s. Açıklanan yeni veri' % s_ay if hassas else '%s. Öne çıkan yeni ayrıntı' % s_ay)
+    for p in parcalar:
+        if 3 <= len(p.split()) <= 10:
+            ekle_uygun(h1_aday, p)
+    if c.get('sadece_yabanci'):
+        ekle_uygun(h1_aday, 'Türkçede henüz anlatılmayan %s gelişmesi' % ozne)
+    for x in h1_aday + aci_havuz:
+        if x not in h:
+            h.append(x); break
+
+    # h[2]: etki / doğrulama düzeyi / izleyici çerçevesi ("siz" dili, soru yok)
+    h2_aday = []
+    if hassas:
+        ekle_uygun(h2_aday, 'Resmî açıklamalara yansıyan son bilgiler')
+        ekle_uygun(h2_aday, 'Doğrulanmış kaynaklardan gelen güncel gelişme')
+    elif IDDIA.search(temiz_t) or c.get('kanit') == 'on-calisma' or c.get('kb', 1) < 2:
+        ekle_uygun(h2_aday, 'Henüz iddia aşamasındaki gelişmeyi yakından izliyoruz')
+    if c.get('sadece_yabanci'):
+        ekle_uygun(h2_aday, 'Yabancı basında öne çıkan %s başlığı' % ozne)
+    for x in h2_aday + aci_havuz + [
+        'Bu gelişme doğrudan günlük hayatınızı etkileyebilir.',
+        'Sürecin arkasındaki kritik ayrıntıyı inceleyelim.',
+        'Gündemin öne çıkan başlığında bilmeniz gereken nokta.',
+    ]:
+        x = _hook_noktala(x)
+        if x not in h and 3 <= len(x.split()) <= 10:
+            h.append(x)
+        if len(h) == 3:
+            break
+    return h[:3]
 
 def reels_kart(c, og, bas, simdi):
     metin = ' '.join(o['t'] + ' ' + o['s'][:100] for o in og)
     kr = c['_kr']; p = c['r']
     yas_saat = (simdi - c['ilk']) / 3600
     k_ad = lambda: ', '.join(c['kaynaklar'][:3])
-    # çarpıcı ayrıntı: sayı/rekor/ilk içeren cümle; yoksa en farklı başlık
+    # çarpıcı ayrıntı: sayı/rekor/ilk içeren cümle; Türkçe başlıkta önce Türkçe özetler aranır ve ortak kök şartı aranır
     bt = {M.kok(w) for w in M.sozcuk(bas['t'])}
+    tr_dil = bas.get('dil', 'tr') == 'tr'
+    bas_kulupler = canon_bul(bas['t']) & {'galatasaray', 'fenerbahce', 'besiktas', 'trabzonspor', 'real', 'barcelona'}
     def yeni_mi(x):
+        if not x or len(x) < 25: return False
+        if re.match(r'^işte\b', x, re.I) and len(x) < 45 and not re.search(r'\d', x): return False
+        if bas_kulupler and not (canon_bul(x) & bas_kulupler): return False
         xt = {M.kok(w) for w in M.sozcuk(x)}
-        return bool(xt) and len(xt & bt) / max(1, len(xt | bt)) < .5          # başlığı tekrarlayan cümle ayrıntı değildir
-    aday = [cumle(o['s']) for o in og if o['s'] and (CARPICI.search(o['s']) or re.search(r'\d{2,}', o['s'])) and yeni_mi(cumle(o['s']))]
-    aday = aday or [cumle(o['s']) for o in og if o['s'] and yeni_mi(cumle(o['s']))]
-    ayrinti = aday[0] if aday else (c['farkli'][0]['t'] if c['farkli'] else '')
+        if not xt: return False
+        ort = len(xt & bt)
+        if tr_dil and ort < 1: return False
+        return ort / max(1, len(xt | bt)) < .5          # başlığı tekrarlayan cümle ayrıntı değildir
+    tr_og = [o for o in og if o.get('dil', 'tr') == 'tr'] if tr_dil else og
+    aday = [cumle(o['s']) for o in tr_og if o['s'] and (CARPICI.search(o['s']) or re.search(r'\d{2,}', o['s'])) and yeni_mi(cumle(o['s']))]
+    aday = aday or [cumle(o['s']) for o in tr_og if o['s'] and yeni_mi(cumle(o['s']))]
+    farkli_aday = [f['t'] for f in c['farkli'] if (not tr_dil or _turkce_mi(f['t'])) and yeni_mi(f['t'])]
+    ayrinti = aday[0] if aday else (farkli_aday[0] if farkli_aday else '')
     ayrinti = re.sub(r'\b\d{1,2}[./]\d{1,2}[./]\d{4}\b', '', ayrinti)                       # akış künyesi: tarih
     ayrinti = re.sub(r'\s+', ' ', ayrinti).strip(' -–·')
     if len(ayrinti) < 25: ayrinti = ''
@@ -924,6 +1366,8 @@ def reels_kart(c, og, bas, simdi):
     if yt: gor.append('YouTube videosu: %s' % yt[0]['kaynak'])
     if c['resmi']: gor.append('resmî kaynak görsel/video paylaşmış olabilir (lisansı kontrol edin)')
     if not gor: gor.append('hazır görsel yok; ekran kaydı, grafik veya stok malzeme gerekir')
+    if re.search(r'\d', bas['t']): gor.append('ekran yazısı için somut rakam var')
+    if c['markalar'] or (set(c['alanlar']) & {'tekno', 'oto', 'oyun', 'yz'}): gor.append('ürün/ekran görüntüsü uygun')
     risk = []
     if c['kb'] < 2: risk.append('Tek kaynak: yayından önce ikinci kaynak bulun')
     if IDDIA.search(metin): risk.append('İddia/sızıntı dili: "iddia ediliyor" çerçevesi kullanın')
@@ -1007,6 +1451,18 @@ GELISTIRICI = re.compile(r"\b(github|gitlab|stack ?overflow|npm\b|pypi|rustlang|
 # Kod terimi geçse de asıl konusu tüketici ürünü olan başlık kalır (ör. 'ChatGPT ve Codex yeni modelle güncellendi', telefonda yapay zekâyla uygulama).
 TUKETICI = re.compile(r"chatgpt|\bgpt-\d|gemini (app|uygulama)|iphone|ipad|galaxy|xiaomi|pixel \d|playstation|xbox|nintendo|\bgta\b|whatsapp|instagram", re.I)
 
+# Loto sonuç/sorgulama sayfaları, çıplak vergi dairesi/mahkeme/icra ilanları ve SEO biyografi kalıpları kümelere de girmez.
+AKIS_COP = re.compile(
+    r"(?:süper loto|say[ıiI]sal loto|ç[ıiI]lg[ıiI]n say[ıiI]sal|şans topu|on numara)\b|"
+    r"m[iİ]ll[iİ] p[iİ]yango.{0,35}(?:sonuç|çek[iİ]l[iİ]ş|numara|b[iİ]let|sorgula)|"
+    r"\bsorgulama ekran[ıiI]\b|sonuç(?:lar[ıiI])?\s+sorgulama\b|"
+    r"\bverg[iİ] da[iİ]res[iİ] müdürlüğü\b(?!.{0,45}\b(?:bask[ıiI]n|yolsuzluk|soruşturma|gözalt[ıiI]|tutuklan|yang[ıiI]n|patlama|protesto|grev|rüşvet|operasyon)\b)|"
+    r"\b\d+\.\s*(?:asl[iİ]ye|sulh|ağ[ıiI]r)\s+(?:hukuk|ceza)\s+mahkemes[iİ]\s*$|"
+    r"\bicra (?:müdürlüğü|dairesi)(?:nden)? ilan\b|"
+    r"\bk[iİ]md[iİ]r,\s*kaç yaş[ıiI]nda\b",
+    re.I,
+)
+
 def ogeler_kur(j, src, simdi):
     """feeds.json -> tekilleştirilmiş haber öğeleri (kümelemeye girer). Dönüş: (ogeler, kaynak başına 72 sa sayaç)"""
     ogeler, gor = [], set()
@@ -1022,6 +1478,7 @@ def ogeler_kur(j, src, simdi):
             try: z = datetime.fromisoformat(it['d']).timestamp()
             except Exception: continue
             if simdi - z <= 72 * 3600 and z <= simdi + 300: n72[sid] += 1   # gerçekten son 72 saat (önce akıştaki tüm öğeler sayılıyordu)
+            if AKIS_COP.search(t): continue
             if simdi - z > SAAT * 3600 or z > simdi + 300: continue
             kl = kanonik(l) if 'news.google.com' not in l else l
             anahtar = kl if 'news.google.com' not in l else (re.sub(r'\W+', '', t.lower())[:60] + (it.get('p') or ''))

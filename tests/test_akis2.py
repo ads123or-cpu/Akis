@@ -573,8 +573,6 @@ class Videolar(unittest.TestCase):
         self.assertLessEqual(bk - simdi, timedelta(minutes=91))
         for n in (1, 5, 40, 200): self.assertLessEqual(F.bekleme_suresi(n, None), F.TAVAN_SN)
 
-if __name__ == '__main__': unittest.main()
-
 class TeknolojiIlgisiz(unittest.TestCase):
     """2026-11-21: Google konu akışlarından ve 'drone/robot/siber' sözcüklerinden gelen teknoloji dışı haber Teknoloji'ye girmesin."""
     def test_savas_suc_futbol_teknoloji_degil(self):
@@ -591,3 +589,324 @@ class TeknolojiIlgisiz(unittest.TestCase):
         self.assertIsNotNone(A.TEKNO_COK.search('Philosoph Dieter Mersch: Warum KI niemals Bewusstsein entwickeln wird'))
         self.assertIsNone(A.TEKNO_COK.search('Guerra Ucraina-Russia, le notizie in diretta'))
         self.assertIsNone(A.TEKNO_COK.search('Ayudar al camarero a recoger la mesa parece un gesto amable'))
+
+
+class ReelsHookKalite(unittest.TestCase):
+    """F4: İlk 3 saniye hookları konuşma Türkçesi, <=10 sözcük, sorusuz, rakamları doğrulanmış ve yabancı başlıkta Türkçe çerçeveli."""
+    def _c(self, **kw):
+        d = dict(id='h1', t='', s='', i='https://img.test/x.jpg', l='https://x.test/1', dil='tr', diller=['tr'],
+                 alanlar=['gundem'], alt={}, kb=4, ks=4, ilk=Z0 - 3600, son=Z0 - 600, h6=2, yog=0,
+                 kaynaklar=['Kaynak A', 'Kaynak B'], resmi=False, kanit='haber', farkli=[], n_tr=4,
+                 sadece_yabanci=False, plat_topluluk=False, ulkeler=[], liderler=[], markalar=[],
+                 gundem_alt=['turkiye'], kategoriler=['tr'], _kr={k: 6 for k, _, _ in A.KRITER}, r=65.0)
+        d.update(kw)
+        return d
+
+    def _denetle_hook(self, h, kaynak_metin):
+        self.assertEqual(len(h), 3, h)
+        self.assertEqual(len(set(h)), 3, h)
+        yasak = ('?', '…', '3 saniyede özet', 'başlıkta yazmayan', 'rakam bu', 'farklı kaynak', 'bağımsız kaynak', 'son dakika', 'flaş', 'şok', 'inanamayacaksınız')
+        for x in h:
+            self.assertLessEqual(len(x.split()), 10, x)
+            self.assertGreaterEqual(len(x.split()), 3, x)
+            xl = x.lower()
+            for y in yasak:
+                self.assertNotIn(y, xl, x)
+            self.assertIsNone(re.search(r'\bsana\b', xl), x)
+            for d in re.findall(r'\d+', x):
+                self.assertIn(d, kaynak_metin, (x, d))
+
+    def test_soru_yasak_ve_uzunluk_siniri(self):
+        ornekler = [
+            (self._c(kb=1, n_tr=1, alanlar=['ekonomi', 'gundem']), dict(t='Emekli Maaşlarına Ne Kadar Zam Yapılacak? | A Haber', s='', dil='tr'), ''),
+            (self._c(kb=1, n_tr=1), dict(t='Bakanlık yeni düzenlemeyi açıkladı: İşte detaylar', s='', dil='tr'), ''),
+            (self._c(kb=6, alanlar=['tekno'], sadece_yabanci=True, n_tr=0, diller=['de'], markalar=['meta']),
+             dict(t='Nicht legal nutzbar: Verbraucherzentrale verklagt Meta und Ray-Ban wegen Smart Glasses', s='', dil='de'),
+             'Die Verbraucherzentrale geht gerichtlich gegen die Anbieter der Ray-Ban Meta Smart Glasses vor.'),
+            (self._c(kb=10, alanlar=['siyaset', 'gundem']), dict(t='TBMM eski Başkanı Hikmet Çetin 89 yaşında hayatını kaybetti', s='', dil='tr'), ''),
+        ]
+        for c, bas, ayr in ornekler:
+            h = A.hook_uret(c, bas, ayr)
+            self._denetle_hook(h, bas['t'] + ' ' + bas.get('s', '') + ' ' + ayr)
+
+    def test_rakam_ve_birim_cikarma_ve_tarih_korumasi(self):
+        vakalar = [
+            ("Dolar/TL'den bir rekor daha geldi: 50,62 lirayı gördü", '', '50,62 lira'),
+            ('Kartlı ödemelerde rekor! Ekim ayında 2,9 trilyon liralık harcama yapıldı', '', '2,9 trilyon lira'),
+            ('2027 Pasaport Ücretleri Netleşti: Harçlara Zam Geliyor', 'Yeniden değerleme oranı 2026 yılı için yüzde 27,83 olarak tespit edildi.', 'yüzde 27,83'),
+            ("Anthropic halka arz fiyatının altına düştü, ANT 83 doların altında", '', '83 dolar'),
+            ('Amazon, yapay zeka girişimi Decart’ı 7,5 milyar dolara satın almayı planlıyor', '', '7,5 milyar dolar'),
+            ('Tidal to ban millions of AI-generated tracks', 'The company expects to purge 29 million tracks starting on December 9.', '29 milyon'),
+            ('New York Bans Car Subscriptions', 'Violators will face civil penalties of up to $250 per violation.', '250 dolar'),
+            ('AMD Radeon RX 9060 XT reaches 4.837 GHz world record', '', '4.837 GHz'),
+            ('2026 Dubai Koşusu’na rekor düzeyde 310 bini aşkın katılım', '', '310 bin'),
+        ]
+        for t, ayr, beklenen in vakalar:
+            dil = 'en' if any(w in t for w in ('Tidal', 'New York', 'AMD')) else 'tr'
+            c = self._c(sadece_yabanci=(dil != 'tr'), n_tr=0 if dil != 'tr' else 3)
+            h = A.hook_uret(c, dict(t=t, s='', dil=dil), ayr)
+            self._denetle_hook(h, t + ' ' + ayr)
+            self.assertIn(beklenen.lower(), ' '.join(h).lower(), (t, h))
+        # 24 Kasım Öğretmenler Günü'nden "24 öğretmen" üretilmemeli; 2026 yılı takvim yılıdır
+        self.assertIsNone(A._hook_sayi_bul('24 Kasım Öğretmenler Günü kutlandı: 2026 yılı mesajları'))
+        h_gun = A.hook_uret(self._c(), dict(t='24 Kasım Öğretmenler Günü kutlandı: yeni mesajlar yayınlandı', s='', dil='tr'), '')
+        self._denetle_hook(h_gun, '24 Kasım Öğretmenler Günü kutlandı: yeni mesajlar yayınlandı')
+        self.assertNotIn('24 öğretmen', ' '.join(h_gun).lower())
+
+    def test_cumle_ve_carpici_ayrinti_kalitesi(self):
+        self.assertEqual(
+            A.cumle("HABER MERKEZİ - Aston Villa ile karşılaşan Galatasaray'da Mario Lemina, 73. dakikada sakatlandı."),
+            "Aston Villa ile karşılaşan Galatasaray'da Mario Lemina, 73. dakikada sakatlandı."
+        )
+        uzun = ' '.join(['kelime'] * 45)
+        kesilen = A.cumle(uzun)
+        self.assertLessEqual(len(kesilen), 200)
+        self.assertTrue(all(w == 'kelime' for w in kesilen.split()))
+        # Türkçe kartta yabancı özet ve alakasız maç/kulüp özeti çarpıcı ayrıntı olmaz
+        bas = oge("Fenerbahçe Medicana - Vasas Obuda | Kadınlar CEV Şampiyonlar Ligi", dil='tr', org='trt')
+        og = [
+            bas,
+            oge("Fenerbahçe Medicana CEV Şampiyonlar Ligi maçında", dil='tr', org='aa',
+                s="CEV Kadınlar Şampiyonlar Ligi D Grubu'nda Eczacıbaşı sahasında 3-0 kazandı."),
+            oge("Fenerbahçe Medicana Vasas Obuda", dil='es', org='es1',
+                s="Puede que el pasado 13 de noviembre tuvieras problemas de conexión."),
+        ]
+        kart = A.reels_kart(self._c(t=bas['t'], alanlar=['spor']), og, bas, Z0)
+        self.assertNotIn('Eczacıbaşı', kart['carpici_ayrinti'])
+        self.assertNotIn('noviembre', kart['carpici_ayrinti'])
+
+
+class ReelsKaliteVeAdalet(unittest.TestCase):
+    """F5, F6, F14: Loto/SEO/ilan elemesi, siber/alan koruması, kb=1 ve kurumsal/soru puan adaleti, profil kotası."""
+    def test_f6_junk_elemesi_ve_korunanlar(self):
+        elenenler = [
+            '24 Kasım Süper Loto Sonuçları Sorgulama Ekranı 2026',
+            'Sayısal Loto çekiliş sonuçları belli oldu',
+            'Şans Topu sonuçları açıklandı',
+            'On Numara kazandıran numaralar',
+            'Milli Piyango yılbaşı çekilişi sonuçları sorgulama',
+            'Hayati Yazıcı istifa mı etti, neden istifa etti? Hayati Yazıcı kimdir, kaç yaşında, nereli?',
+            'HİKMET ÇETİN KİMDİR? Öldü Mü, Kaç Yaşındaydı?',
+            'ANTALYA KURUMLAR VERGİ DAİRESİ MÜDÜRLÜĞÜ',
+            'BARTIN 2. ASLİYE HUKUK MAHKEMESİ',
+            'Emekli Maaşlarına Ne Kadar Zam Yapılacak? | A Haber',
+            'TikTok çöktü mü, neden açılmıyor ve erişim sorunu nasıl çözülür?',
+        ]
+        for t in elenenler:
+            self.assertIsNotNone(ele_bul(t), t)
+        korunanlar = [
+            '2027 IMEI kayıt ücreti belli oldu: İşte yurt dışından telefon getirmenin maliyeti',
+            '2027 Pasaport Ücretleri Netleşti: Yüzde 27,83 Zam Geliyor',
+            'Vergi Dairesi Müdürlüğüne rüşvet operasyonu: 5 gözaltı',
+        ]
+        for t in korunanlar:
+            self.assertIsNone(ele_bul(t), t)
+
+    def test_f6_siber_ve_profil_siniflandirmasi(self):
+        self.assertNotIn('siber', ab("Rosstat veri sızıntısı: Ukrayna'da en az 490.000 Rus askeri öldü", {'gundem': 2}))
+        self.assertNotIn('guvenlik', A.iddiali_bul("Rosstat veri sızıntısı: Ukrayna'da en az 490.000 Rus askeri öldü", ['gundem'])[0])
+        self.assertNotEqual(A.aci_etiket_bul(dict(alanlar=['gundem'], kb=2), dict(t="Rosstat veri sızıntısı: Ukrayna'da en az 490.000 Rus askeri öldü")), 'Güvenlik uyarısı')
+        self.assertNotIn('siber', ab('Late Seinfeld actor Steven Hack shared dreams', {'eglence': 2}))
+        self.assertNotIn('siber', ab('Zonguldak Belediye Meclis Üyesi Dolandırıcılık suçlamasıyla tutuklandı', {'gundem': 2}))
+        # Almanca akıllı gözlük davası teknoloji profiline girmeli
+        c_de = dict(alanlar=['tekno'], _kr=dict(saskin=4))
+        pr_de, _ = A.profil_bul(c_de, 'Nicht legal nutzbar: Verbraucherzentrale verklagt Meta und Ray-Ban wegen Smart Glasses')
+        self.assertIn('teknoloji', pr_de)
+        # Yabancı teknoloji satın alması gündem kotasını doldurmamalı
+        c_ma = dict(alanlar=['tekno', 'yz', 'ekonomi'], _kr=dict(saskin=4))
+        pr_ma, _ = A.profil_bul(c_ma, 'Amazon, yapay zeka girişimi Decart’ı 7,5 milyar dolara satın almayı planlıyor')
+        self.assertEqual(pr_ma, ['teknoloji'])
+
+    def test_f5_puan_ve_icerik_kapisi(self):
+        def puanla(t, kb, alanlar, dil='tr', gundem_alt=('turkiye',), i='https://img.test/a.jpg'):
+            og = [oge(t, dil=dil, org='o%d' % k) for k in range(kb)]
+            c = dict(son=Z0 - 3600, h6=kb, h24=kb, kb=kb, resmi=False, gundem_alt=list(gundem_alt),
+                     sadece_yabanci=(dil != 'tr'), n_tr=kb if dil == 'tr' else 0, farkli=[], i=i,
+                     alanlar=list(alanlar), kategoriler=['tr'], ulkeler=[], liderler=[], markalar=[], plat_topluluk=False)
+            return A.reels_puanla(c, og, og[0], t, Z0, None)
+
+        p_imei, _, c_imei, el_imei = puanla('2027 IMEI kayıt ücreti belli oldu: İşte yurt dışından telefon getirmenin maliyeti', 20, ['gundem', 'tekno'])
+        p_ceo, _, c_ceo, _ = puanla("Nvidia CEO'su Huang, Trump'ın baskısıyla göreve döndüğü iddiasını reddetti", 14, ['siyaset', 'tekno'])
+        p_fitch, _, c_fitch, _ = puanla("Fitch'ten Türkiye ekonomisine mercek: yıl sonu faiz tahmini", 1, ['ekonomi', 'gundem'])
+        p_soru, _, c_soru, _ = puanla('Bu karar kimleri etkileyecek?', 4, ['gundem'])
+        self.assertIsNone(el_imei)
+        self.assertIn('tek bağımsız kaynak', c_fitch)
+        self.assertIn('kurumsal analiz/not tahmini', c_fitch)
+        self.assertIn('kurumsal yönetici/B2B haberi', c_ceo)
+        self.assertIn('soru başlığı', c_soru)
+        self.assertGreater(p_imei, p_ceo + 15)
+        self.assertGreater(p_imei, p_fitch + 15)
+        self.assertLess(p_fitch, A.REELS_ESIK)
+        # Bağımsız icerik_kapisi çağrısı (_kr verilmeden) çekilebilir TR tüketici konularını geçirmeli
+        self.assertTrue(A.icerik_kapisi(dict(t='Sanayide insansı robot geliştiren projelere yüzde 50 hibe geliyor', kb=4, alanlar=['tekno'], gundem_alt=['turkiye'], i='https://img.test/a.jpg', n_tr=4)))
+        self.assertTrue(A.icerik_kapisi(dict(t="THY'den öğretmenlere büyük jest! İç hat uçuşlarında yüzde 20 indirim", kb=3, alanlar=['oto'], gundem_alt=['turkiye'], i='https://img.test/a.jpg', n_tr=3)))
+        self.assertFalse(A.icerik_kapisi(dict(t='Borsa günü düşüşle tamamladı', kb=3, alanlar=['ekonomi', 'gundem'], gundem_alt=['turkiye'], i='https://img.test/a.jpg', n_tr=3)))
+        # Sözleşme: A.CEZA ve kota sabitleri değişmez
+        for ad, _, _, alanlar in A.CEZA:
+            self.assertNotIn('siyaset', alanlar, ad)
+            if 'spor' in alanlar:
+                self.assertIn(ad, SPOR_CEZA, ad)
+        self.assertEqual(A.REELS_TOPLAM, 40)
+        self.assertEqual(A.REELS_PROFIL, 15)
+
+
+class ReelsR2Gerileme(unittest.TestCase):
+    """M2 İterasyon 2 gerileme testleri: özne, s_ay tekrarı, nötr şablonlar, zayıf parçalar, cumle kırpma, F6 canlı/soru/siber."""
+    def _c(self, **kw):
+        d = dict(id='r2', t='', s='', i='https://img.test/x.jpg', l='https://x.test/1', dil='tr', diller=['tr'],
+                 alanlar=['gundem'], alt={}, kb=4, ks=4, ilk=Z0 - 3600, son=Z0 - 600, h6=2, yog=0,
+                 kaynaklar=['Kaynak A', 'Kaynak B'], resmi=False, kanit='haber', farkli=[], n_tr=4,
+                 sadece_yabanci=False, plat_topluluk=False, ulkeler=[], liderler=[], markalar=[],
+                 gundem_alt=['turkiye'], kategoriler=['tr'], _kr={k: 6 for k, _, _ in A.KRITER}, r=65.0)
+        d.update(kw)
+        return d
+
+    def test_ozne_yabanci_ve_coklu_ad(self):
+        # New York M.STOP'a takılmaz, Car Subscriptions For sızmaz
+        t_ny = 'New York Bans Car Subscriptions For Features Your Car Already Has, With Exceptions'
+        self.assertEqual(A._hook_ozne(self._c(alanlar=['oto'], sadece_yabanci=True, n_tr=0), dict(t=t_ny, dil='en'), t_ny), 'New York')
+        h_ny = A.hook_uret(self._c(alanlar=['oto'], sadece_yabanci=True, n_tr=0), dict(t=t_ny, s='', dil='en'), 'Violators face up to $250 per violation.')
+        self.assertIn('New York', ' '.join(h_ny))
+        self.assertNotIn('Car Subscriptions', ' '.join(h_ny))
+
+        # Almanca uzun sözcük Verbraucherzentrale yerine Meta tercih edilir
+        t_de = 'Nicht legal nutzbar: Verbraucherzentrale verklagt Meta und Ray-Ban wegen Smart Glasses'
+        self.assertEqual(A._hook_ozne(self._c(alanlar=['tekno'], sadece_yabanci=True, n_tr=0, markalar=['meta']), dict(t=t_de, dil='de'), t_de), 'Meta')
+
+        # Fransızca / İspanyolca tanım edatları (La, El) özne olmaz
+        for t_yab, dil, kotu in [
+            ("La nouvelle loi française sur l'intelligence artificielle suscite des débats", 'fr', 'La'),
+            ("El banco central de España anuncia nuevas medidas", 'es', 'El'),
+        ]:
+            oz = A._hook_ozne(self._c(sadece_yabanci=True, n_tr=0), dict(t=t_yab, dil=dil), t_yab)
+            self.assertNotIn(oz, ('La', 'El'), t_yab)
+            h = A.hook_uret(self._c(sadece_yabanci=True, n_tr=0), dict(t=t_yab, s='', dil=dil), '')
+            self.assertFalse(any(re.search(r'\b' + kotu + r'\b', x) for x in h), h)
+
+        # Title-case İngilizce fiil yakalanmaz: Virginia Sue SpaceX yerine SpaceX
+        t_sx = 'Oregon and Virginia Sue SpaceX Over Grok Sexual Deepfakes'
+        self.assertEqual(A._hook_ozne(self._c(alanlar=['tekno', 'yz'], sadece_yabanci=True, n_tr=0, markalar=['spacex']), dict(t=t_sx, dil='en'), t_sx), 'SpaceX')
+
+        # Samsung Galaxy Z Fold 9 kısaltılmaz
+        t_fold = 'Samsung Galaxy Z Fold 9 ve Flip 9 modellerinin kamera özellikleri ortaya çıktı'
+        self.assertEqual(A._hook_ozne(self._c(alanlar=['tekno'], markalar=['samsung']), dict(t=t_fold, dil='tr'), t_fold), 'Samsung Galaxy Z Fold 9')
+
+    def test_ozne_turkce_ek_fiil_ve_tbmm(self):
+        # : sonrası İşte ve hal ekli Araçlara / YILINDA / fiiller özne olmaz
+        for t, yasak in [
+            ("Yeniden değerleme oranı belli oldu: İşte 2027'nin yeni ehliyet, pasaport ve kimlik harçları", 'İşte'),
+            ('Tam liste: Araçlara göre 2027 MTV tutarları', 'Araçlara'),
+            ('2027 YILINDA EMEKLİ MAAŞLARI NE KADAR OLACAK', 'YILINDA'),
+            ('2027 Pasaport Ücretleri Netleşti: Harçlara Zam Geliyor', 'Netleşti'),
+        ]:
+            temiz = A._hook_temiz(t)
+            oz = A._hook_ozne(self._c(alanlar=['ekonomi', 'gundem']), dict(t=t, dil='tr'), temiz)
+            self.assertNotIn(yasak, oz, (t, oz))
+
+        # Hikmet Çetin vefatında TBMM yerine Hikmet Çetin öne çıkar
+        t_hc = 'TBMM eski Başkanı ve CHP eski Genel Başkanı Hikmet Çetin 89 yaşında hayatını kaybetti'
+        self.assertEqual(A._hook_ozne(self._c(alanlar=['gundem', 'siyaset']), dict(t=t_hc, dil='tr'), A._hook_temiz(t_hc)), 'Hikmet Çetin')
+
+    def test_s_ay_tekrarsiz_ve_notr_sablonlar(self):
+        # Yabancı haberlerde s_ay hem h[0] hem h[1]'de tekrarlanmaz
+        for t, ayr in [
+            ('Tidal to ban and remove millions of AI-generated tracks', 'The company expects to purge 29 million tracks starting on December 9.'),
+            ('New York Bans Car Subscriptions For Features Your Car Already Has, With Exceptions', 'Violators will face civil penalties of up to $250 per violation.'),
+        ]:
+            h = A.hook_uret(self._c(alanlar=['tekno'], sadece_yabanci=True, n_tr=0), dict(t=t, s='', dil='en'), ayr)
+            sayi_ilk = [re.findall(r'\d+', x) for x in h[:2]]
+            self.assertFalse(sayi_ilk[0] and sayi_ilk[0] == sayi_ilk[1], h)
+
+        # Tersine çeviren 'hakkında yeni dava ve yaptırım süreci' ve erken 'kararı doğrudan bütçenizi etkiliyor' üretilmez
+        for t in [
+            'Kadınlar çağrı yapmıştı: Beyoğlu Kaymakamlığı 25 Kasım Kadına Yönelik Şiddete Karşı Mücadele Günü yürüyüşünü yasakladı',
+            "Türkiye'nin Yasaklı Ormanına Tek Bir Meslek Grubu Girebiliyor: Düşen Ağaçlara Bile Dokunulmuyor",
+            "Ticaret Bakanlığı'ndan Şişli'deki otomotiv servisine cezai işlem",
+            'Emeklilere refah artışı düzenlemesi TBMM Genel Kurulu’nda 20 Aralık’tan sonra görüşülecek',
+        ]:
+            h = A.hook_uret(self._c(alanlar=['gundem', 'siyaset']), dict(t=t, s='', dil='tr'), '')
+            tum = ' '.join(h)
+            self.assertNotIn('hakkında yeni dava ve yaptırım süreci', tum, (t, h))
+            self.assertNotIn('TBMM kararı doğrudan bütçenizi etkiliyor', tum, (t, h))
+
+    def test_zayif_parca_buyuk_harf_ve_sok_kok(self):
+        # Zayıf açılış parçaları h[0] olmaz
+        h_by = A.hook_uret(self._c(), dict(t='Kadınlar çağrı yapmıştı: Beyoğlu Kaymakamlığı yürüyüşü yasakladı', s='', dil='tr'), '')
+        self.assertNotEqual(h_by[0], 'Kadınlar çağrı yapmıştı.')
+        h_tb = A.hook_uret(self._c(alanlar=['siyaset']), dict(t="TBMM Plan ve Bütçe Komisyonu... Bakan Uraloğlu'ndan HGS açıklaması: Usulüne uygun yapılmamış ödemeler iade edilecek", s='', dil='tr'), '')
+        self.assertNotEqual(h_tb[0], 'TBMM Plan ve Bütçe Komisyonu.')
+        h_fb = A.hook_uret(self._c(alanlar=['spor']), dict(t='🔵 Fenerbahçe Medicana - Vasas Obuda | Kadınlar CEV Şampiyonlar Ligi 1. Hafta', s='', dil='tr'), '')
+        self.assertNotIn('Fenerbahçe Medicana - Vasas Obuda', ' '.join(h_fb))
+
+        # Türkçe ilk harf büyütme ve \bşok\w*\b temizliği
+        self.assertEqual(A._hook_noktala('yüzde 27,83. Öne çıkan yeni ayrıntı'), 'Yüzde 27,83. Öne çıkan yeni ayrıntı.')
+        self.assertEqual(A._hook_noktala('işte yeni karar'), 'İşte yeni karar.')
+        self.assertEqual(A._hook_noktala('ısparta gelişmesi'), 'Isparta gelişmesi.')
+        self.assertEqual(A._hook_noktala('bu detayı mutlaka izleyin!'), 'Bu detayı mutlaka izleyin!')
+        self.assertEqual(A._hook_noktala('Şok gelişme! İnanamayacaksınız, arkadaşlar bu detayı mutlaka izleyin!'), 'Gelişme! bu detayı mutlaka izleyin!')
+        sok_temiz = A._hook_noktala('Şokun etkisi sürüyor')
+        self.assertIsNone(re.search(r'\bşok\w*\b', sok_temiz, re.I), sok_temiz)
+
+    def test_cumle_onceden_kesilmis_ozet_kirpar(self):
+        ham_200 = (
+            "Beyoğlu Kaymakamlığı, 25 Kasım Kadına Yönelik Şiddete Karşı Uluslararası Mücadele Günü "
+            "kapsamında ilçe sınırları içerisinde düzenlenmesi planlanan yürüyüş, toplantı ve benzeri etkinliklerin 24 saat sü"
+        )
+        c1 = A.cumle(ham_200)
+        self.assertTrue(c1.endswith('24 saat'), repr(c1))
+        self.assertFalse(c1.endswith('sü'), repr(c1))
+        ham_196 = (
+            "Türkiye siyasetinin önemli isimlerinden, eski Cumhuriyet Halk Partisi (CHP) Genel Başkanı, "
+            "Başbakan Yardımcısı, TBMM Başkanı ve Dışişleri Bakanı Hikmet Çetin, tedavi gördüğü hastanede 89 yaşında yaşam"
+        )
+        c2 = A.cumle(ham_196)
+        self.assertFalse(c2.endswith('yaşam'), repr(c2))
+        self.assertTrue(c2.endswith('89 yaşında'), repr(c2))
+        self.assertEqual(A.cumle('Kısa özet metni burada yer alıyor'), 'Kısa özet metni burada yer alıyor')
+
+    def test_f6_canli_soru_siber_ve_aci_soru_isareti(self):
+        # Emoji/sembol önekli canlı blog elenir; normal 'Canlı...' korunur
+        self.assertEqual(ele_bul('🔴CANLI | Galatasaray - Aston Villa Maç Önü | Nihat Kahveci, Nebil Evren'), 'canlı blog')
+        self.assertEqual(ele_bul('#CANLI | Emekli zammı görüşülüyor'), 'canlı blog')
+        self.assertIsNone(ele_bul('Canlı yayında önemli ekonomik karar açıklandı'))
+
+        # Genişletilmiş soru/SEO fiilleri
+        self.assertEqual(ele_bul('NE KADAR VERGİ ÖDENECEK? YENİ DÜZENLEME'), 'soru/SEO sayfasi')
+
+        # Savaş kaybı ve klasik telefon dolandırıcılığı siber/güvenlik olmaz
+        for t in [
+            "Rosstat veri sızıntısı: Ukrayna cephesinde en az 490.000 Rus askeri hayatını kaybetti",
+            "Pentagon veri sızıntısı: savaşta 120 bin asker yaşamını yitirdi",
+            "Telefon dolandırıcıları 75 yaşındaki vatandaşı 2 milyon lira dolandırdı",
+        ]:
+            self.assertNotIn('siber', ab(t, {'gundem': 2}), t)
+            self.assertNotIn('guvenlik', A.iddiali_bul(t, ['gundem'])[0], t)
+        self.assertIn('siber', ab("Samsung One UI 9.5 ile WhatsApp Dolandırıcılığını Tespit Edecek", {'tekno': 2}))
+
+        # aci_uret '?' bırakmaz ve kb=2 tıklama tuzağı soru başlığı eşiğin altında kalır
+        aci = A.aci_uret(self._c(alanlar=['tekno', 'oyun']), dict(t="GTA 6, Çıkışından Günler Sonra İlk Kez PC'de Çalıştırıldı: Peki Nasıl?", dil='tr'))
+        self.assertNotIn('?', aci)
+        og_q = [oge("GTA 6, Çıkışından Günler Sonra İlk Kez PC'de Çalıştırıldı: Peki Nasıl?", org='o%d' % k) for k in range(2)]
+        c_q = dict(son=Z0 - 3600, h6=2, h24=2, kb=2, resmi=False, gundem_alt=['dunya'], sadece_yabanci=False, n_tr=2,
+                   farkli=[], i='https://img.test/a.jpg', alanlar=['tekno', 'oyun'], kategoriler=['tech'],
+                   ulkeler=[], liderler=[], markalar=[], plat_topluluk=False)
+        p_q, _, ceza_q, _ = A.reels_puanla(c_q, og_q, og_q[0], og_q[0]['t'], Z0, None)
+        self.assertIn('soru başlığı', ceza_q)
+        self.assertLess(p_q, A.REELS_ESIK)
+
+    def test_ogeler_kur_cop_basliklari_eler_gercek_haberi_korur(self):
+        from datetime import datetime, timezone
+        simdi = datetime(2026, 11, 25, 12, 0, tzinfo=timezone.utc)
+        d_str = simdi.isoformat()
+        j = {'feeds': {'test': {'name': 'Test', 'cat': 'tr', 'lang': 'tr', 'plat': 'web', 'items': [
+            {'t': '24 Kasım Süper Loto Sonuçları Sorgulama Ekranı 2026', 'l': 'https://t.test/1', 'd': d_str},
+            {'t': 'ANTALYA KURUMLAR VERGİ DAİRESİ MÜDÜRLÜĞÜ', 'l': 'https://t.test/2', 'd': d_str},
+            {'t': 'AFAD BAŞKANI ÖNDER BOZKURT KİMDİR, KAÇ YAŞINDA, NERELİ?', 'l': 'https://t.test/3', 'd': d_str},
+            {'t': 'Vergi Dairesi Müdürlüğüne rüşvet operasyonu: 5 gözaltı', 'l': 'https://t.test/4', 'd': d_str},
+        ]}}}
+        ogeler, n72 = A.ogeler_kur(j, {'test': {'id': 'test', 'calisma': 'gundem', 'tip': 'ana akim'}}, simdi.timestamp())
+        self.assertEqual(n72['test'], 4)
+        self.assertEqual([o['t'] for o in ogeler], ['Vergi Dairesi Müdürlüğüne rüşvet operasyonu: 5 gözaltı'])
+
+
+if __name__ == '__main__': unittest.main()

@@ -1586,7 +1586,8 @@
     "ulke": "US",
     "oncelik": 1,
     "nitelik": [],
-    "aktif": true
+    "aktif": false,
+    "pasif_neden": "Ölü kaynak: Actions çekiminde boş yanıt (12 ardışık hata, erişim engelli); 2026-11-25 kapatıldı"
   },
   {
     "id": "bbc-sport",
@@ -3992,7 +3993,8 @@
     "nitelik": [
       "video"
     ],
-    "aktif": true
+    "aktif": false,
+    "pasif_neden": "30 günden uzun süredir yeni video yok (son: 2026-10-25); 2026-11-25 kapatıldı"
   },
   {
     "id": "yt-netflix",
@@ -4408,7 +4410,8 @@
     "nitelik": [
       "video"
     ],
-    "aktif": true
+    "aktif": false,
+    "pasif_neden": "30 günden uzun süredir yeni video yok (son: 2026-10-23); 2026-11-25 kapatıldı"
   },
   {
     "id": "lobsters",
@@ -7346,7 +7349,7 @@
     "calisma": "siber",
     "tip": "resmi kurum",
     "ulke": "US",
-    "oncelik": 1,
+    "oncelik": 3,
     "nitelik": [
       "resmi"
     ],
@@ -7964,7 +7967,7 @@
     "name": "Science News (AAAS)",
     "lang": "en",
     "cat": "sci",
-    "url": "https://www.science.org/rss/news_current.xml",
+    "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science",
     "plat": "web",
     "calisma": "bilim",
     "tip": "bilimsel",
@@ -7976,9 +7979,9 @@
     "aktif": true,
     "dogrulama": {
       "durum": "gecti",
-      "tarih": "2026-11-08",
-      "n": 10,
-      "ms": 434
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 543
     }
   },
   {
@@ -9105,7 +9108,7 @@
     "name": "TCMB (Google News site: araması)",
     "lang": "tr",
     "cat": "tr",
-    "url": "https://news.google.com/rss/search?q=site%3Atcmb.gov.tr%20OR%20%22Merkez%20Bankas%C4%B1%22%20faiz%20karar%C4%B1&hl=tr&gl=TR&ceid=TR:tr",
+    "url": "https://news.google.com/rss/search?q=%22Merkez+Bankas%C4%B1%22+OR+TCMB+faiz+OR+enflasyon&hl=tr&gl=TR&ceid=TR:tr",
     "plat": "gnews",
     "calisma": "ekonomi",
     "tip": "toplayici",
@@ -9118,9 +9121,9 @@
     "aktif": true,
     "dogrulama": {
       "durum": "gecti",
-      "tarih": "2026-11-08",
-      "n": 16,
-      "ms": 568
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 934
     }
   },
   {
@@ -10171,13 +10174,14 @@
     "nitelik": [
       "toplayici"
     ],
-    "aktif": true,
+    "aktif": false,
     "dogrulama": {
       "durum": "gecti",
       "tarih": "2026-11-10",
       "n": 25,
       "ms": 200
-    }
+    },
+    "pasif_neden": "Son 30 günde 1 ilgisiz/eski kayıt (n=0); 2026-11-25 kapatıldı"
   },
   {
     "id": "ghacks",
@@ -11504,7 +11508,7 @@
     "calisma": "tekno",
     "tip": "sirket duyurusu",
     "ulke": "US",
-    "oncelik": 2,
+    "oncelik": 3,
     "nitelik": [
       "resmi"
     ],
@@ -15447,13 +15451,14 @@
     "ulke": "FR",
     "oncelik": 2,
     "nitelik": [],
-    "aktif": true,
+    "aktif": false,
     "dogrulama": {
       "durum": "gecti",
       "tarih": "2026-11-19",
       "n": 10,
       "ms": 2058
-    }
+    },
+    "pasif_neden": "Actions çekiminde bağlantı kesiliyor (7 ardışık hata); 2026-11-25 kapatıldı"
   },
   {
     "id": "armyrecognition",
@@ -15607,13 +15612,14 @@
     "ulke": "TR",
     "oncelik": 2,
     "nitelik": [],
-    "aktif": true,
+    "aktif": false,
     "dogrulama": {
       "durum": "gecti",
       "tarih": "2026-11-20",
       "n": 20,
       "ms": 1057
-    }
+    },
+    "pasif_neden": "Ölü kaynak: Actions çekiminde sürekli 403 (erişim engelli, 10 ardışık hata; yerelde >5.6 sn); 2026-11-25 kapatıldı"
   },
   {
     "id": "gn-tr-yz-model",
@@ -15741,6 +15747,2259 @@
       "tarih": "2026-11-20",
       "n": 20,
       "ms": 793
+    }
+  },
+  {
+    "id": "gn-espn",
+    "name": "ESPN (Google News)",
+    "lang": "en",
+    "cat": "sport",
+    "url": "https://news.google.com/rss/search?q=site:espn.com&hl=en-US&gl=US&ceid=US:en",
+    "plat": "gnews",
+    "calisma": "spor",
+    "tip": "toplayici",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "toplayici"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 1062
+    }
+  },
+  {
+    "id": "gn-navalnews",
+    "name": "Naval News (Google News)",
+    "lang": "en",
+    "cat": "world",
+    "url": "https://news.google.com/rss/search?q=site:navalnews.com&hl=en-US&gl=US&ceid=US:en",
+    "plat": "gnews",
+    "calisma": "savunma",
+    "tip": "toplayici",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "toplayici"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 860
+    }
+  },
+  {
+    "id": "science-insider",
+    "name": "Science Insider (Google News)",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://news.google.com/rss/search?q=site:science.org/content/article&hl=en-US&gl=US&ceid=US:en",
+    "plat": "gnews",
+    "calisma": "bilim",
+    "tip": "toplayici",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "toplayici"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 732
+    }
+  },
+  {
+    "id": "gn-netflix-tr",
+    "name": "Netflix Türkiye (Google News)",
+    "lang": "tr",
+    "cat": "ent",
+    "url": "https://news.google.com/rss/search?q=Netflix+dizi+OR+film+OR+zam&hl=tr&gl=TR&ceid=TR:tr",
+    "plat": "gnews",
+    "calisma": "eglence",
+    "tip": "toplayici",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "toplayici"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 898
+    }
+  },
+  {
+    "id": "cukurovametropol",
+    "name": "Çukurova Metropol",
+    "lang": "tr",
+    "cat": "tr",
+    "url": "https://www.cukurovametropol.com.tr/rss",
+    "plat": "web",
+    "calisma": "adana",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "yerel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 321
+    }
+  },
+  {
+    "id": "gunaydin-adana",
+    "name": "Günaydın Adana",
+    "lang": "tr",
+    "cat": "tr",
+    "url": "https://www.gunaydingazetesi.com.tr/rss",
+    "plat": "web",
+    "calisma": "adana",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "yerel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 256
+    }
+  },
+  {
+    "id": "adanapost",
+    "name": "Adanapost",
+    "lang": "tr",
+    "cat": "tr",
+    "url": "https://www.adanapost.com/service/rss.php",
+    "plat": "web",
+    "calisma": "adana",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "yerel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 23,
+      "ms": 296
+    }
+  },
+  {
+    "id": "sabah-adana",
+    "name": "Sabah Adana",
+    "lang": "tr",
+    "cat": "tr",
+    "url": "https://www.sabah.com.tr/rss/adana.xml",
+    "plat": "web",
+    "calisma": "adana",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "yerel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 255
+    }
+  },
+  {
+    "id": "yt-adana-bb",
+    "name": "Adana Büyükşehir Belediyesi",
+    "lang": "tr",
+    "cat": "tr",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9jYvuaKeUtzqFlZflYABVA",
+    "plat": "youtube",
+    "calisma": "adana",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "resmi",
+      "yerel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 336
+    }
+  },
+  {
+    "id": "siberbulten",
+    "name": "Siber Bülten",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://siberbulten.com/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 261
+    }
+  },
+  {
+    "id": "yt-candeger",
+    "name": "Can Değer",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCL1Rp1QrhuRhl-sjP5KYwhw",
+    "plat": "youtube",
+    "calisma": "siber",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 396
+    }
+  },
+  {
+    "id": "infosecurity-mag",
+    "name": "Infosecurity Magazine",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.infosecurity-magazine.com/rss/news/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "GB",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 354
+    }
+  },
+  {
+    "id": "unit42",
+    "name": "Palo Alto Unit 42",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://unit42.paloaltonetworks.com/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "sirket duyurusu",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "sirket-haberi",
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 402
+    }
+  },
+  {
+    "id": "arstechnica-sec",
+    "name": "Ars Technica Security",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://arstechnica.com/security/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 1100
+    }
+  },
+  {
+    "id": "wired-sec",
+    "name": "Wired Security",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.wired.com/feed/category/security/latest/rss",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 382
+    }
+  },
+  {
+    "id": "ncsc-uk",
+    "name": "UK NCSC",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "resmi kurum",
+    "ulke": "GB",
+    "oncelik": 1,
+    "nitelik": [
+      "resmi",
+      "siber-uyari"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 295
+    }
+  },
+  {
+    "id": "turkiye-ai",
+    "name": "Türkiye Yapay Zekâ İnisiyatifi (TRAI)",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://turkiye.ai/feed/",
+    "plat": "web",
+    "calisma": "yz",
+    "tip": "uzman teknoloji",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 573
+    }
+  },
+  {
+    "id": "teknoblog-yz",
+    "name": "Teknoblog Yapay Zekâ",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.teknoblog.com/tag/yapay-zeka/feed/",
+    "plat": "web",
+    "calisma": "yz",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 756
+    }
+  },
+  {
+    "id": "mit-news-ai",
+    "name": "MIT News AI",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://news.mit.edu/rss/topic/artificial-intelligence2",
+    "plat": "web",
+    "calisma": "yz",
+    "tip": "bilimsel",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 454
+    }
+  },
+  {
+    "id": "unite-ai",
+    "name": "Unite.AI",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.unite.ai/feed/",
+    "plat": "web",
+    "calisma": "yz",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 1267
+    }
+  },
+  {
+    "id": "ms-research",
+    "name": "Microsoft Research Blog",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://www.microsoft.com/en-us/research/feed/",
+    "plat": "web",
+    "calisma": "yz",
+    "tip": "sirket duyurusu",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "sirket-haberi",
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 4069
+    }
+  },
+  {
+    "id": "yt-openai",
+    "name": "OpenAI",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A",
+    "plat": "youtube",
+    "calisma": "yz",
+    "tip": "video (YouTube)",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 214
+    }
+  },
+  {
+    "id": "yt-anthropic",
+    "name": "Anthropic",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA",
+    "plat": "youtube",
+    "calisma": "yz",
+    "tip": "video (YouTube)",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 215
+    }
+  },
+  {
+    "id": "yt-deepmind",
+    "name": "Google DeepMind",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCP7jMXSY2xbc3KCAE0MHQ-A",
+    "plat": "youtube",
+    "calisma": "yz",
+    "tip": "video (YouTube)",
+    "ulke": "GB",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 231
+    }
+  },
+  {
+    "id": "yt-ai-explained",
+    "name": "AI Explained",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw",
+    "plat": "youtube",
+    "calisma": "yz",
+    "tip": "video (YouTube)",
+    "ulke": "GB",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 313
+    }
+  },
+  {
+    "id": "yt-matt-wolfe",
+    "name": "Matt Wolfe",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UChpleBmo18P08aKCIgti38g",
+    "plat": "youtube",
+    "calisma": "yz",
+    "tip": "video (YouTube)",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 275
+    }
+  },
+  {
+    "id": "frpnet",
+    "name": "FRPNET",
+    "lang": "tr",
+    "cat": "ent",
+    "url": "https://frpnet.net/feed",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 12,
+      "ms": 395
+    }
+  },
+  {
+    "id": "mobidictum-tr",
+    "name": "Mobidictum Türkiye",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.mobidictum.com/tr/feed/",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "uzman teknoloji",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 6,
+      "ms": 1034
+    }
+  },
+  {
+    "id": "yt-enis-kirazoglu",
+    "name": "Enis Kirazoğlu",
+    "lang": "tr",
+    "cat": "ent",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXin0u5SrVEBjn5LhOoG97A",
+    "plat": "youtube",
+    "calisma": "oyun",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 241
+    }
+  },
+  {
+    "id": "yt-pintipanda",
+    "name": "Pintipanda",
+    "lang": "tr",
+    "cat": "ent",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCuU0qYesQjAT_qXcQJqgV3w",
+    "plat": "youtube",
+    "calisma": "oyun",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 237
+    }
+  },
+  {
+    "id": "yt-tunca-arslan",
+    "name": "Tunca Arslan",
+    "lang": "tr",
+    "cat": "ent",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHLt4nxNwCmkNDevSohf4tA",
+    "plat": "youtube",
+    "calisma": "oyun",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 244
+    }
+  },
+  {
+    "id": "yt-oyungezer",
+    "name": "Oyungezer",
+    "lang": "tr",
+    "cat": "ent",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrTo3HDliaWeHWQeMDCE9Ug",
+    "plat": "youtube",
+    "calisma": "oyun",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 227
+    }
+  },
+  {
+    "id": "playstation-blog",
+    "name": "PlayStation Blog",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://blog.playstation.com/feed/",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "sirket duyurusu",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 1005
+    }
+  },
+  {
+    "id": "xbox-wire",
+    "name": "Xbox Wire",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://news.xbox.com/en-us/feed/",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "sirket duyurusu",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 406
+    }
+  },
+  {
+    "id": "insider-gaming",
+    "name": "Insider Gaming",
+    "lang": "en",
+    "cat": "ent",
+    "url": "https://insider-gaming.com/feed/",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "ana akim",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 861
+    }
+  },
+  {
+    "id": "gematsu",
+    "name": "Gematsu",
+    "lang": "en",
+    "cat": "ent",
+    "url": "https://gematsu.com/feed",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "ana akim",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 558
+    }
+  },
+  {
+    "id": "gamesradar",
+    "name": "GamesRadar+",
+    "lang": "en",
+    "cat": "ent",
+    "url": "https://www.gamesradar.com/all-platforms/news/rss/",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "ana akim",
+    "ulke": "GB",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 402
+    }
+  },
+  {
+    "id": "gamesindustry",
+    "name": "GamesIndustry.biz",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.gamesindustry.biz/feed",
+    "plat": "web",
+    "calisma": "oyun",
+    "tip": "uzman teknoloji",
+    "ulke": "GB",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 385
+    }
+  },
+  {
+    "id": "yt-playstation",
+    "name": "PlayStation",
+    "lang": "en",
+    "cat": "ent",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-2Y8dQb0S6DtpxNgAKoJKA",
+    "plat": "youtube",
+    "calisma": "oyun",
+    "tip": "video (YouTube)",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 294
+    }
+  },
+  {
+    "id": "yt-xbox",
+    "name": "Xbox",
+    "lang": "en",
+    "cat": "ent",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCjBp_7RuDBUYbd1LegWEJ8g",
+    "plat": "youtube",
+    "calisma": "oyun",
+    "tip": "video (YouTube)",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 210
+    }
+  },
+  {
+    "id": "yt-nintendo",
+    "name": "Nintendo of America",
+    "lang": "en",
+    "cat": "ent",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGIY_O-8vW4rfX98KlMkvRg",
+    "plat": "youtube",
+    "calisma": "oyun",
+    "tip": "video (YouTube)",
+    "ulke": "US",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 189
+    }
+  },
+  {
+    "id": "otopark",
+    "name": "Otopark.com",
+    "lang": "tr",
+    "cat": "auto",
+    "url": "https://otopark.com/feed/",
+    "plat": "web",
+    "calisma": "oto",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 1217
+    }
+  },
+  {
+    "id": "arabam-blog",
+    "name": "Arabam.com Blog",
+    "lang": "tr",
+    "cat": "auto",
+    "url": "https://www.arabam.com/blog/rss/",
+    "plat": "web",
+    "calisma": "oto",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 203
+    }
+  },
+  {
+    "id": "sozcu-otomotiv",
+    "name": "Sözcü Otomotiv",
+    "lang": "tr",
+    "cat": "auto",
+    "url": "https://www.sozcu.com.tr/feeds-rss-category-otomotiv",
+    "plat": "web",
+    "calisma": "oto",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 180
+    }
+  },
+  {
+    "id": "yt-dogan-kabak",
+    "name": "Doğan Kabak",
+    "lang": "tr",
+    "cat": "auto",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrVNGRw7QCtmAWtg2t7hrjg",
+    "plat": "youtube",
+    "calisma": "oto",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 232
+    }
+  },
+  {
+    "id": "yt-otopark",
+    "name": "OTOPARK.com",
+    "lang": "tr",
+    "cat": "auto",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGoi3UGQQUd5sEndnoDmC6Q",
+    "plat": "youtube",
+    "calisma": "oto",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 228
+    }
+  },
+  {
+    "id": "yt-sekizsilindir",
+    "name": "Sekizsilindir",
+    "lang": "tr",
+    "cat": "auto",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHLeANrhVQ13NhpAia5tdJw",
+    "plat": "youtube",
+    "calisma": "oto",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 228
+    }
+  },
+  {
+    "id": "yt-togg",
+    "name": "Togg",
+    "lang": "tr",
+    "cat": "auto",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCyJmxE4HojtWsqccwmXgVdw",
+    "plat": "youtube",
+    "calisma": "oto",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 231
+    }
+  },
+  {
+    "id": "auto-autoexpress",
+    "name": "Auto Express",
+    "lang": "en",
+    "cat": "auto",
+    "url": "https://www.autoexpress.co.uk/feeds/all",
+    "plat": "web",
+    "calisma": "oto",
+    "tip": "ana akim",
+    "ulke": "GB",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 1095
+    }
+  },
+  {
+    "id": "auto-cleantechnica",
+    "name": "CleanTechnica",
+    "lang": "en",
+    "cat": "auto",
+    "url": "https://cleantechnica.com/feed/",
+    "plat": "web",
+    "calisma": "oto",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 279
+    }
+  },
+  {
+    "id": "yt-carwow",
+    "name": "carwow",
+    "lang": "en",
+    "cat": "auto",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCUhFaUpnq31m6TNX2VKVSVA",
+    "plat": "youtube",
+    "calisma": "oto",
+    "tip": "video (YouTube)",
+    "ulke": "GB",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 223
+    }
+  },
+  {
+    "id": "btchaber",
+    "name": "BTCHaber",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://www.btchaber.com/feed/",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 420
+    }
+  },
+  {
+    "id": "investing-tr",
+    "name": "Investing.com Türkiye",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://tr.investing.com/rss/news.rss",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 214
+    }
+  },
+  {
+    "id": "foreks-tr",
+    "name": "Foreks Haber",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://www.foreks.com/rss/",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 257
+    }
+  },
+  {
+    "id": "ekoturk",
+    "name": "Ekotürk",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://www.ekoturk.com/feed/",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 231
+    }
+  },
+  {
+    "id": "cumhuriyet-eko2",
+    "name": "Cumhuriyet Ekonomi",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://www.cumhuriyet.com.tr/rss/ekonomi.xml",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 386
+    }
+  },
+  {
+    "id": "boe-news",
+    "name": "Bank of England",
+    "lang": "en",
+    "cat": "eco",
+    "url": "https://www.bankofengland.co.uk/rss/news",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "resmi kurum",
+    "ulke": "GB",
+    "oncelik": 1,
+    "nitelik": [
+      "resmi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 424
+    }
+  },
+  {
+    "id": "investing-en",
+    "name": "Investing.com",
+    "lang": "en",
+    "cat": "eco",
+    "url": "https://www.investing.com/rss/news.rss",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 374
+    }
+  },
+  {
+    "id": "arkeofili",
+    "name": "Arkeofili",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://arkeofili.com/feed/",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 308
+    }
+  },
+  {
+    "id": "bilimvegelecek",
+    "name": "Bilim ve Gelecek",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://bilimvegelecek.com.tr/index.php/feed/",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 1299
+    }
+  },
+  {
+    "id": "gelecekbilimde",
+    "name": "Gelecek Bilimde",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://gelecekbilimde.net/feed/",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 471
+    }
+  },
+  {
+    "id": "sarkac",
+    "name": "Sarkaç (Bilim Akademisi)",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://sarkac.org/feed/",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 606
+    }
+  },
+  {
+    "id": "herkesebilim",
+    "name": "Herkese Bilim Teknoloji",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://www.herkesebilimteknoloji.com/feed",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 2651
+    }
+  },
+  {
+    "id": "gercekbilim",
+    "name": "Gerçek Bilim",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://www.gercekbilim.com/feed/",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 6,
+      "ms": 146
+    }
+  },
+  {
+    "id": "haberturk-saglik",
+    "name": "Habertürk Sağlık",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://www.haberturk.com/rss/saglik.xml",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 416
+    }
+  },
+  {
+    "id": "cnnturk-saglik",
+    "name": "CNN Türk Sağlık",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://www.cnnturk.com/feed/rss/saglik/news",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 365
+    }
+  },
+  {
+    "id": "sozcu-saglik",
+    "name": "Sözcü Sağlık",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://www.sozcu.com.tr/feeds-rss-category-saglik",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 304
+    }
+  },
+  {
+    "id": "yt-bebar-bilim",
+    "name": "Bebar Bilim",
+    "lang": "tr",
+    "cat": "sci",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCDTSUkdlbcgEU-IGH_mHgmw",
+    "plat": "youtube",
+    "calisma": "bilim",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 252
+    }
+  },
+  {
+    "id": "noaa-news",
+    "name": "NOAA",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://www.noaa.gov/rss.xml",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "resmi kurum",
+    "ulke": "US",
+    "oncelik": 1,
+    "nitelik": [
+      "resmi",
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 334
+    }
+  },
+  {
+    "id": "scientificamerican",
+    "name": "Scientific American",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://www.scientificamerican.com/platform/syndication/rss/",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 270
+    }
+  },
+  {
+    "id": "mit-research",
+    "name": "MIT News Research",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://news.mit.edu/rss/research",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 448
+    }
+  },
+  {
+    "id": "arstechnica-sci",
+    "name": "Ars Technica Science",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://arstechnica.com/science/feed/",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "bilimsel",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 953
+    }
+  },
+  {
+    "id": "yt-kurzgesagt",
+    "name": "Kurzgesagt",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q",
+    "plat": "youtube",
+    "calisma": "bilim",
+    "tip": "video (YouTube)",
+    "ulke": "DE",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 292
+    }
+  },
+  {
+    "id": "yt-sabine",
+    "name": "Sabine Hossenfelder",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC1yNl2E66ZzKApQdRuTQ4tw",
+    "plat": "youtube",
+    "calisma": "bilim",
+    "tip": "video (YouTube)",
+    "ulke": "DE",
+    "oncelik": 3,
+    "nitelik": [
+      "video",
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 340
+    }
+  },
+  {
+    "id": "sihirlielma",
+    "name": "Sihirli Elma",
+    "lang": "tr",
+    "cat": "ios",
+    "url": "https://www.sihirlielma.com/feed",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 215
+    }
+  },
+  {
+    "id": "apple-newsroom-tr",
+    "name": "Apple Newsroom Türkiye",
+    "lang": "tr",
+    "cat": "ios",
+    "url": "https://www.apple.com/tr/newsroom/rss-feed.rss",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "sirket duyurusu",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "sirket-haberi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 269
+    }
+  },
+  {
+    "id": "yt-sihirlielma",
+    "name": "Sihirli Elma",
+    "lang": "tr",
+    "cat": "ios",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UClDUBCkfg3IFFZSpQFR9tmg",
+    "plat": "youtube",
+    "calisma": "tekno",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 323
+    }
+  },
+  {
+    "id": "thewindowsclub",
+    "name": "The Windows Club",
+    "lang": "en",
+    "cat": "win",
+    "url": "https://www.thewindowsclub.com/feed",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 5,
+      "ms": 283
+    }
+  },
+  {
+    "id": "yt-webrazzi",
+    "name": "Webrazzi",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC04cPAH-irfZkF6EtFGrhhQ",
+    "plat": "youtube",
+    "calisma": "tekno",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 345
+    }
+  },
+  {
+    "id": "yt-donanimhabertv",
+    "name": "DonanımHaber",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCfIVTpOAjmeKmaiBd3rfwlA",
+    "plat": "youtube",
+    "calisma": "tekno",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 264
+    }
+  },
+  {
+    "id": "bolgegazetesi-adana",
+    "name": "Bölge Gazetesi Adana",
+    "lang": "tr",
+    "cat": "tr",
+    "url": "https://www.bolgegazetesi.com.tr/rss",
+    "plat": "web",
+    "calisma": "adana",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "yerel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 1983
+    }
+  },
+  {
+    "id": "btgunlugu",
+    "name": "BT Günlüğü",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.btgunlugu.com/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 212
+    }
+  },
+  {
+    "id": "turk-internet",
+    "name": "Türk İnternet",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://turk-internet.com/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 12,
+      "ms": 2176
+    }
+  },
+  {
+    "id": "checkpoint-research",
+    "name": "Check Point Research",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://research.checkpoint.com/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "sirket duyurusu",
+    "ulke": "IL",
+    "oncelik": 2,
+    "nitelik": [
+      "sirket-haberi",
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 259
+    }
+  },
+  {
+    "id": "sentinelone-labs",
+    "name": "SentinelLabs",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.sentinelone.com/labs/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "sirket duyurusu",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "sirket-haberi",
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 599
+    }
+  },
+  {
+    "id": "theregister-sec",
+    "name": "The Register Security",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.theregister.com/security/headlines.atom",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "GB",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 1408
+    }
+  },
+  {
+    "id": "csoonline",
+    "name": "CSO Online",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.csoonline.com/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 20,
+      "ms": 540
+    }
+  },
+  {
+    "id": "swipeline",
+    "name": "Swipeline",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://swipeline.co/feed",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 721
+    }
+  },
+  {
+    "id": "egirisim",
+    "name": "egirişim",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.egirisim.com/feed/",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 1112
+    }
+  },
+  {
+    "id": "ieee-ai",
+    "name": "IEEE Spectrum AI",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
+    "plat": "web",
+    "calisma": "yz",
+    "tip": "bilimsel",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 1331
+    }
+  },
+  {
+    "id": "esa-topnews",
+    "name": "ESA (European Space Agency)",
+    "lang": "en",
+    "cat": "sci",
+    "url": "https://www.esa.int/rssfeed/TopNews",
+    "plat": "web",
+    "calisma": "bilim",
+    "tip": "uluslararasi kurum",
+    "ulke": "EU",
+    "oncelik": 1,
+    "nitelik": [
+      "resmi",
+      "bilimsel"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 1370
+    }
+  },
+  {
+    "id": "fintechtime",
+    "name": "Fintechtime",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://fintechtime.com/feed/",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 174
+    }
+  },
+  {
+    "id": "finansingundemi",
+    "name": "Finans Gündem",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://www.finansingundemi.com/rss",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 391
+    }
+  },
+  {
+    "id": "coinkolik",
+    "name": "Coinkolik",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://www.coinkolik.com/feed/",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 414
+    }
+  },
+  {
+    "id": "paratic",
+    "name": "Paratic",
+    "lang": "tr",
+    "cat": "eco",
+    "url": "https://paratic.com/feed/",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "ana akim",
+    "ulke": "TR",
+    "oncelik": 2,
+    "nitelik": [],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 378
+    }
+  },
+  {
+    "id": "bankunderground",
+    "name": "Bank Underground (BoE)",
+    "lang": "en",
+    "cat": "eco",
+    "url": "https://bankunderground.co.uk/feed/",
+    "plat": "web",
+    "calisma": "ekonomi",
+    "tip": "resmi kurum",
+    "ulke": "GB",
+    "oncelik": 1,
+    "nitelik": [
+      "resmi"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 1505
+    }
+  },
+  {
+    "id": "osxdaily",
+    "name": "OS X Daily",
+    "lang": "en",
+    "cat": "mac",
+    "url": "https://osxdaily.com/feed/",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 1129
+    }
+  },
+  {
+    "id": "sixcolors",
+    "name": "Six Colors",
+    "lang": "en",
+    "cat": "mac",
+    "url": "https://feedpress.me/sixcolors",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 1640
+    }
+  },
+  {
+    "id": "pureinfotech",
+    "name": "Pureinfotech",
+    "lang": "en",
+    "cat": "win",
+    "url": "https://pureinfotech.com/feed/",
+    "plat": "web",
+    "calisma": "tekno",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 7,
+      "ms": 1081
+    }
+  },
+  {
+    "id": "yt-ozansihay",
+    "name": "Ozan Sihay",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC4K9hTI2xhhWdNrFt8h1CVw",
+    "plat": "youtube",
+    "calisma": "yz",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 959
+    }
+  },
+  {
+    "id": "yt-mesutcevik",
+    "name": "Mesut Çevik",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOFafpmI_dt8SxisbKniN4A",
+    "plat": "youtube",
+    "calisma": "tekno",
+    "tip": "video (YouTube)",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "video"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 15,
+      "ms": 751
+    }
+  },
+  {
+    "id": "hackread",
+    "name": "HackRead",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.hackread.com/feed/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "GB",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 1820
+    }
+  },
+  {
+    "id": "cybersecuritydive",
+    "name": "Cybersecurity Dive",
+    "lang": "en",
+    "cat": "tech",
+    "url": "https://www.cybersecuritydive.com/feeds/news/",
+    "plat": "web",
+    "calisma": "siber",
+    "tip": "uzman teknoloji",
+    "ulke": "US",
+    "oncelik": 2,
+    "nitelik": [
+      "uzman"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 10,
+      "ms": 512
+    }
+  },
+  {
+    "id": "trthaber-siber-gn",
+    "name": "TRT Haber Siber Güvenlik (GN)",
+    "lang": "tr",
+    "cat": "tech",
+    "url": "https://news.google.com/rss/search?q=site:trthaber.com%20%22siber%20g%C3%BCvenlik%22%20OR%20%22siber%20sald%C4%B1r%C4%B1%22%20when:7d&hl=tr&gl=TR&ceid=TR:tr",
+    "plat": "gnews",
+    "calisma": "siber",
+    "tip": "toplayici",
+    "ulke": "TR",
+    "oncelik": 3,
+    "nitelik": [
+      "toplayici"
+    ],
+    "aktif": true,
+    "dogrulama": {
+      "durum": "gecti",
+      "tarih": "2026-11-25",
+      "n": 25,
+      "ms": 851
     }
   }
 ]
