@@ -1,1199 +1,1143 @@
 {
  "pc-aawsat": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:47:54 GMT",
-  "ms": 155,
+  "etag": "W/\"1795611355\"",
+  "lm": "Wed, 25 Nov 2026 12:55:55 GMT",
+  "ms": 144,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:47:15+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:55:52+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-abc-au": {
   "ardisik_basarisiz": 0,
   "etag": "\"kjugua2m5k1ujk\"",
-  "ms": 168,
+  "ms": 129,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:38:52+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-abc-news": {
   "ardisik_basarisiz": 0,
-  "ms": 216,
+  "ms": 184,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:37:41+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-aljazeera": {
   "ardisik_basarisiz": 0,
   "etag": "W/\"46bdf0a15b1de508f9ac742eab27f9bf\"",
   "lm": "Wed, 25 Nov 2026 12:31:50 GMT",
-  "ms": 134,
+  "ms": 105,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:29:09+00:00",
-  "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kod": 304,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-aljazeera-ar": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"fa3dc903d785e3cf00d89b0d8e940bac\"",
-  "lm": "Wed, 25 Nov 2026 12:43:12 GMT",
-  "ms": 111,
+  "etag": "W/\"2edf0586cd72cd2a1c415c59ba69da01\"",
+  "lm": "Wed, 25 Nov 2026 12:54:36 GMT",
+  "ms": 105,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T09:39:15+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T09:43:35+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-ansa": {
   "ardisik_basarisiz": 0,
-  "ms": 1487,
+  "ms": 1474,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:30:03+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:43:21+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-ap": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 442,
+  "ardisik_basarisiz": 0,
+  "ms": 484,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:37:12+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:53:30+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-asahi": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"6b06d7b6-52fc\"",
-  "lm": "Wed, 25 Nov 2026 12:42:30 GMT",
-  "ms": 164,
+  "etag": "W/\"6b06dafe-52fc\"",
+  "lm": "Wed, 25 Nov 2026 12:56:30 GMT",
+  "ms": 159,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:33:18+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:51:31+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-axios": {
   "ardisik_basarisiz": 0,
   "lm": "Wed, 25 Nov 2026 10:33:26 GMT",
-  "ms": 90,
+  "ms": 82,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T10:33:26+00:00",
   "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-ar": {
   "ardisik_basarisiz": 0,
-  "ms": 219,
+  "ms": 161,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:47:36+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-br": {
   "ardisik_basarisiz": 0,
-  "ms": 221,
+  "ms": 163,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:15:08+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-fa": {
   "ardisik_basarisiz": 0,
-  "ms": 186,
+  "ms": 187,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:36:41+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-hi": {
   "ardisik_basarisiz": 0,
-  "ms": 248,
+  "ms": 180,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:40:14+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:51:22+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-mundo": {
   "ardisik_basarisiz": 0,
-  "ms": 211,
+  "ms": 217,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:31:54+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-ru": {
   "ardisik_basarisiz": 0,
-  "ms": 246,
+  "ms": 262,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:05:11+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-ua": {
   "ardisik_basarisiz": 0,
-  "ms": 237,
+  "ms": 223,
   "n": 17,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:53:45+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-world": {
   "ardisik_basarisiz": 0,
-  "ms": 122,
+  "ms": 104,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:42:11+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-bbc-zh": {
   "ardisik_basarisiz": 0,
-  "ms": 312,
+  "ms": 264,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:18:58+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-breakingdefense": {
   "ardisik_basarisiz": 0,
   "etag": "W/\"2bf9384b6fa9e3e2f4efa2bd4d7f4084\"",
-  "ms": 75,
+  "ms": 65,
   "n": 15,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-24T19:29:09+00:00",
   "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-cbs": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:45:25 GMT",
-  "ms": 51,
+  "lm": "Wed, 25 Nov 2026 12:58:08 GMT",
+  "ms": 44,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:16:17+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:53:15+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-crisisgroup": {
   "ardisik_basarisiz": 0,
   "etag": "W/\"1795476934\"",
   "lm": "Mon, 23 Nov 2026 23:35:34 GMT",
-  "ms": 210,
+  "ms": 198,
   "n": 9,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-20T19:40:21+00:00",
   "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-dw-ar": {
   "ardisik_basarisiz": 0,
-  "ms": 68,
+  "ms": 65,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:39:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-dw-br": {
   "ardisik_basarisiz": 0,
-  "ms": 317,
+  "ms": 355,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:34:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-dw-de": {
   "ardisik_basarisiz": 0,
-  "ms": 97,
+  "ms": 108,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:26:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-dw-en": {
   "ardisik_basarisiz": 0,
-  "ms": 103,
+  "ms": 89,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:39:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-dw-es": {
   "ardisik_basarisiz": 0,
-  "ms": 248,
+  "ms": 377,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:23:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-dw-ru": {
   "ardisik_basarisiz": 0,
-  "ms": 315,
+  "ms": 349,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:20:00+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:48:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-dw-zh": {
   "ardisik_basarisiz": 0,
-  "ms": 190,
+  "ms": 148,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T10:13:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-elmundo": {
   "ardisik_basarisiz": 0,
-  "ms": 215,
+  "ms": 167,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:07:19+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-elpais": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"2a371-Uh57vXWGA5M6lwXmJ4oZjLA1Q9g\"",
+  "etag": "W/\"2aa40-19J/MKH8jHr1xEyyvLwruRH2VwQ\"",
   "ms": 115,
   "n": 23,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:44:56+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:59:23+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-elpais-int": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"553d-un6sF4jcW55bIRy/KZ1PgETrKMU\"",
-  "ms": 205,
+  "etag": "W/\"553d-PN0sb0B5MjwfEabtwHnb5d4yAt8\"",
+  "ms": 156,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:17:17+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-eu-komisyon": {
-  "ardisik_basarisiz": 0,
+  "ardisik_basarisiz": 1,
+  "hata": "The read operation timed out",
   "ms": 1867,
   "n": 10,
   "son_basari": "2026-11-25T12:48:07.165545+00:00",
   "son_haber": "2026-11-25T10:31:44+00:00",
-  "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_hata": "2026-11-25T13:00:31.121969+00:00",
+  "son_kod": null,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-euractiv": {
   "ardisik_basarisiz": 0,
-  "etag": "\"52a5737f8372f8a25ed0a6fadfc856c7-gzip\"",
-  "lm": "Wed, 25 Nov 2026 12:28:25 GMT",
-  "ms": 439,
+  "etag": "\"d431d9e38bc78ecdee8b81c9b1c4b1b2-gzip\"",
+  "lm": "Wed, 25 Nov 2026 12:35:16 GMT",
+  "ms": 423,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:28:25+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-euronews-en": {
   "ardisik_basarisiz": 0,
   "etag": "\"41bb61b187024c2445c04d32932d20c3-gzip\"",
   "lm": "Wed, 25 Nov 2026 12:45:24 GMT",
-  "ms": 258,
+  "ms": 240,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:45:24+00:00",
-  "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kod": 304,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-faz": {
   "ardisik_basarisiz": 0,
-  "ms": 396,
+  "ms": 446,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:27:01+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-figaro": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"a53c7109fb89ca80e2ea834138c11bad\"",
-  "ms": 189,
+  "etag": "W/\"51db0372886e4c629bb0c6355bec2712\"",
+  "ms": 156,
   "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T10:49:14+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-folha": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"fb4999-1f317-661186098cd00\"",
-  "lm": "Wed, 25 Nov 2026 11:46:28 GMT",
-  "ms": 1064,
+  "etag": "W/\"fb76d8-1f48f-66119655e00c0\"",
+  "lm": "Wed, 25 Nov 2026 12:59:23 GMT",
+  "ms": 1085,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T11:43:00+00:00",
-  "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:48:00+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-foreignpolicy": {
   "ardisik_basarisiz": 0,
   "etag": "W/\"13bcf5774a8030aca5243587511076b0\"",
   "lm": "Wed, 25 Nov 2026 11:00:29 GMT",
-  "ms": 58,
+  "ms": 54,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:00:20+00:00",
   "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-foxnews": {
   "ardisik_basarisiz": 0,
-  "etag": "748543a361addea16a298027b56446e9",
-  "ms": 84,
+  "etag": "6c422938c0d6d562490356f6fe5c7e5f",
+  "ms": 96,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:00:37+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:53:06+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-france24-ar": {
   "ardisik_basarisiz": 0,
-  "ms": 148,
+  "ms": 118,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:31:09+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-france24-en": {
   "ardisik_basarisiz": 0,
-  "ms": 54,
+  "ms": 46,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T11:48:37+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:55:47+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-france24-es": {
   "ardisik_basarisiz": 0,
-  "ms": 231,
+  "ms": 189,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:12:15+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-france24-fr": {
   "ardisik_basarisiz": 0,
-  "ms": 106,
+  "ms": 84,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:44:31+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-ar": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 374,
+  "ardisik_basarisiz": 0,
+  "ms": 303,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:11:30+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:33:45+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-de-welt": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 352,
+  "ardisik_basarisiz": 0,
+  "ms": 414,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T12:26:47+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:57:06+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-en-defense": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 430,
+  "ardisik_basarisiz": 0,
+  "ms": 650,
   "n": 24,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T12:30:00+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:50:47+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-en-politics": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 137,
+  "ardisik_basarisiz": 0,
+  "ms": 120,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:24:27+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-fr-monde": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 131,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T12:25:30+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "ardisik_basarisiz": 0,
+  "ms": 102,
+  "n": 24,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:53:29+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-ja": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 201,
+  "ardisik_basarisiz": 0,
+  "ms": 168,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:30:00+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:33:31+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-ko": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 136,
+  "ardisik_basarisiz": 0,
+  "ms": 122,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:52:00+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:52:00+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gn-zh": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 118,
+  "ardisik_basarisiz": 0,
+  "ms": 137,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T12:02:31+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:27:26+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gnw-ar": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 683,
+  "ardisik_basarisiz": 0,
+  "ms": 742,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:12:16+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gnw-br": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 524,
+  "ardisik_basarisiz": 0,
+  "ms": 428,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T09:14:36+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T11:29:21+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gnw-de": {
-  "ardisik_basarisiz": 1,
-  "bekle_kadar": "2026-11-25T12:54:37.100570+00:00",
-  "hata": "HTTP Error 429: Too Many Requests",
-  "ms": 436,
+  "ardisik_basarisiz": 0,
+  "ms": 344,
   "n": 25,
-  "son_basari": "2026-11-25T12:10:51.932941+00:00",
-  "son_haber": "2026-11-25T11:54:13+00:00",
-  "son_hata": "2026-11-25T12:23:34.100570+00:00",
-  "son_kod": 429,
-  "son_kontrol": "2026-11-25T12:23:34.100570+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:15:29+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-gnw-es": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 462,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:36:30+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-fr": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 488,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T10:26:12+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-gb": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 266,
-  "n": 22,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:06:00+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-gr": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 578,
-  "n": 24,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:39:02+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-il": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 360,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:47:10+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-it": {
-  "ardisik_basarisiz": 1,
-  "bekle_kadar": "2026-11-25T12:54:14.100570+00:00",
-  "hata": "HTTP Error 429: Too Many Requests",
-  "ms": 417,
-  "n": 25,
-  "son_basari": "2026-11-25T12:10:51.932941+00:00",
-  "son_haber": "2026-11-25T12:00:21+00:00",
-  "son_hata": "2026-11-25T12:23:34.100570+00:00",
-  "son_kod": 429,
-  "son_kontrol": "2026-11-25T12:23:34.100570+00:00"
- },
- "pc-gnw-jp": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 378,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T12:18:49+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-kr": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 445,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:47:00+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-mx": {
-  "ardisik_basarisiz": 1,
-  "bekle_kadar": "2026-11-25T12:55:41.100570+00:00",
-  "hata": "HTTP Error 429: Too Many Requests",
-  "ms": 532,
-  "n": 24,
-  "son_basari": "2026-11-25T12:10:51.932941+00:00",
-  "son_haber": "2026-11-25T01:53:00+00:00",
-  "son_hata": "2026-11-25T12:23:34.100570+00:00",
-  "son_kod": 429,
-  "son_kontrol": "2026-11-25T12:23:34.100570+00:00"
- },
- "pc-gnw-nl": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
+  "ardisik_basarisiz": 0,
   "ms": 395,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T12:13:28+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-pl": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 503,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T11:32:07+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-ru": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 641,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T10:39:11+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-tw": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 2198,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T10:38:00+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-ua": {
-  "ardisik_basarisiz": 2,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 698,
-  "n": 25,
-  "son_basari": "2026-11-25T11:57:56.597341+00:00",
-  "son_haber": "2026-11-25T10:55:00+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-gnw-us": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 188,
-  "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T10:05:46+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-guardian": {
-  "ardisik_basarisiz": 0,
-  "etag": "W/\"hash5097672070775425779\"",
-  "ms": 74,
-  "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:42:45+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T11:36:30+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
- "pc-haaretz": {
+ "pc-gnw-fr": {
   "ardisik_basarisiz": 0,
-  "ms": 228,
+  "ms": 381,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:31:04+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:37:43+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
- "pc-independent": {
+ "pc-gnw-gb": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"1ca14-Zt7A7ZBNQhubhLDUDrPlj/N7QG8-gzip\"",
-  "ms": 127,
-  "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:39:59+00:00",
+  "ms": 252,
+  "n": 22,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T11:06:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
- "pc-indiatoday": {
+ "pc-gnw-gr": {
   "ardisik_basarisiz": 0,
-  "ms": 389,
-  "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:46:20+00:00",
-  "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
- },
- "pc-infobae": {
-  "ardisik_basarisiz": 0,
-  "etag": "W/\"8fc86-+tIpBiDaIECxjTFsU5/DWSGPK/8\"",
-  "lm": "Wed, 25 Nov 2026 12:47:16 GMT",
-  "ms": 224,
+  "ms": 632,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:43:00+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T11:39:02+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
- "pc-japantimes": {
+ "pc-gnw-il": {
+  "ardisik_basarisiz": 0,
+  "ms": 282,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:11:15+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-it": {
+  "ardisik_basarisiz": 0,
+  "ms": 507,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:52:16+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-jp": {
   "ardisik_basarisiz": 0,
   "ms": 297,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T09:24:41+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-kr": {
+  "ardisik_basarisiz": 0,
+  "ms": 357,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T11:47:00+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-mx": {
+  "ardisik_basarisiz": 0,
+  "ms": 543,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T01:59:31+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-nl": {
+  "ardisik_basarisiz": 0,
+  "ms": 324,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:19:29+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-pl": {
+  "ardisik_basarisiz": 0,
+  "ms": 507,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:12:05+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-ru": {
+  "ardisik_basarisiz": 0,
+  "ms": 484,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T10:39:11+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-tw": {
+  "ardisik_basarisiz": 0,
+  "ms": 1729,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T10:38:00+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-ua": {
+  "ardisik_basarisiz": 0,
+  "ms": 667,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T11:12:00+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-gnw-us": {
+  "ardisik_basarisiz": 0,
+  "ms": 163,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T10:43:00+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-guardian": {
+  "ardisik_basarisiz": 0,
+  "etag": "W/\"hash-1573433843196890389\"",
+  "ms": 70,
+  "n": 24,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:56:35+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-haaretz": {
+  "ardisik_basarisiz": 0,
+  "ms": 193,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:47:25+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-independent": {
+  "ardisik_basarisiz": 0,
+  "etag": "W/\"1c8c2-QKs8s3LYbvIaMklaiaYnZqog4Vw-gzip\"",
+  "ms": 125,
+  "n": 24,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:48:55+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-indiatoday": {
+  "ardisik_basarisiz": 0,
+  "ms": 407,
+  "n": 20,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:46:20+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-infobae": {
+  "ardisik_basarisiz": 0,
+  "etag": "W/\"89ce5-w8G7T9/YcFTZ0nGAwMGJribx8kE\"",
+  "lm": "Wed, 25 Nov 2026 13:00:03 GMT",
+  "ms": 213,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:53:53+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
+ },
+ "pc-japantimes": {
+  "ardisik_basarisiz": 0,
+  "ms": 251,
+  "n": 25,
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:06:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-kathimerini": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"6b06d898-25ad1\"",
-  "lm": "Wed, 25 Nov 2026 12:46:16 GMT",
-  "ms": 558,
+  "etag": "W/\"6b06dab4-25a7d\"",
+  "lm": "Wed, 25 Nov 2026 12:55:16 GMT",
+  "ms": 633,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:44:44+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:53:41+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-kommersant": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"468ef45d87cdd1:0\"",
-  "lm": "Wed, 25 Nov 2026 12:27:00 GMT",
-  "ms": 1650,
+  "etag": "\"6e795575dc7cdd1:0\"",
+  "lm": "Wed, 25 Nov 2026 12:56:59 GMT",
+  "ms": 1590,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:24:56+00:00",
-  "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:55:58+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-kyivindependent": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"464d-x89qspj47o2u7nyGIf0M1X/d/Ps\"",
-  "ms": 367,
+  "etag": "W/\"465f-1zjjQVrFB/eGjuV11RzqjFjy+GA\"",
+  "ms": 374,
   "n": 15,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:59:20+00:00",
-  "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-latimes": {
   "ardisik_basarisiz": 0,
-  "ms": 71,
+  "ms": 56,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:00:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-lemonde": {
   "ardisik_basarisiz": 0,
-  "ms": 44,
+  "ms": 35,
   "n": 16,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:29:26+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:48:05+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-lemonde-int": {
   "ardisik_basarisiz": 0,
-  "ms": 133,
+  "ms": 98,
   "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:29:26+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:48:05+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-liberation": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"b6bf-5CwyJqjuQi6JWc7jAJGx5LqGbU4\"",
-  "lm": "Wed, 25 Nov 2026 12:46:50 GMT",
-  "ms": 686,
+  "etag": "W/\"b6bf-tYDbQ46Sxz2e08ESD+jCHfVKfsQ\"",
+  "lm": "Wed, 25 Nov 2026 12:58:59 GMT",
+  "ms": 570,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:41:20+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-meduza": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:47:12 GMT",
-  "ms": 171,
+  "lm": "Wed, 25 Nov 2026 13:00:29 GMT",
+  "ms": 187,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:30:18+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-mee": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"1795610150\"",
-  "lm": "Wed, 25 Nov 2026 12:35:50 GMT",
-  "ms": 104,
+  "etag": "W/\"1795611460\"",
+  "lm": "Wed, 25 Nov 2026 12:57:40 GMT",
+  "ms": 85,
   "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:08:58+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-nbc": {
   "ardisik_basarisiz": 0,
-  "ms": 139,
+  "ms": 135,
   "n": 21,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:03:54+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:45:58+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-ndtv-en": {
   "ardisik_basarisiz": 0,
   "lm": "Wed, 25 Nov 2026 12:07:42 GMT",
-  "ms": 164,
+  "ms": 168,
   "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:05:32+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-nos": {
   "ardisik_basarisiz": 0,
-  "ms": 785,
+  "ms": 797,
   "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:42:06+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-npr": {
   "ardisik_basarisiz": 0,
-  "ms": 110,
+  "ms": 92,
   "n": 10,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:18:09+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-nyt": {
   "ardisik_basarisiz": 0,
-  "ms": 85,
+  "ms": 73,
   "n": 16,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:36:06+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:48:48+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-nyt-world": {
   "ardisik_basarisiz": 0,
-  "ms": 32,
+  "ms": 29,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:31:34+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-nzz": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:47:51 GMT",
-  "ms": 143,
+  "lm": "Wed, 25 Nov 2026 12:58:14 GMT",
+  "ms": 118,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:21:17+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-politico": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:47:22 GMT",
-  "ms": 57,
+  "lm": "Wed, 25 Nov 2026 13:00:23 GMT",
+  "ms": 51,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T10:45:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-politico-eu": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"ca7eb92cf5e2937b0b0f29cca0b360e9\"",
-  "lm": "Wed, 25 Nov 2026 12:47:10 GMT",
-  "ms": 53,
+  "etag": "W/\"33376a83b1f858f73cab840c9e9b816d\"",
+  "lm": "Wed, 25 Nov 2026 12:57:07 GMT",
+  "ms": 56,
   "n": 10,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:17:58+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-pravda-ua": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:46:41 GMT",
-  "ms": 224,
+  "lm": "Wed, 25 Nov 2026 12:56:39 GMT",
+  "ms": 171,
   "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:39:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-repubblica": {
   "ardisik_basarisiz": 0,
-  "ms": 384,
+  "ms": 329,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:40:03+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-reuters": {
-  "ardisik_basarisiz": 1,
-  "hata": "HTTP Error 503: Service Unavailable",
-  "ms": 397,
+  "ardisik_basarisiz": 0,
+  "ms": 391,
   "n": 25,
-  "son_basari": "2026-11-25T12:35:10.166339+00:00",
-  "son_haber": "2026-11-25T12:03:43+00:00",
-  "son_hata": "2026-11-25T12:48:07.165545+00:00",
-  "son_kod": 503,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:44:50+00:00",
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-rfi": {
   "ardisik_basarisiz": 0,
-  "ms": 152,
+  "ms": 127,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:40:39+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-rfi-zh": {
   "ardisik_basarisiz": 0,
-  "ms": 190,
+  "ms": 144,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:43:50+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-rt": {
   "ardisik_basarisiz": 0,
-  "ms": 2742,
+  "ms": 2810,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T10:45:54+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:50:36+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-scmp": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:47:00 GMT",
-  "ms": 469,
+  "lm": "Wed, 25 Nov 2026 13:00:19 GMT",
+  "ms": 510,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:34:58+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T13:00:08+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-sky": {
   "ardisik_basarisiz": 0,
   "etag": "W/\"664c97be14838dae876177208850ee5b6c5714bdc273f931e758646ea2b905b3\"",
-  "ms": 122,
+  "ms": 108,
   "n": 10,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T09:47:00+00:00",
   "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-skynewsarabia": {
   "ardisik_basarisiz": 0,
-  "ms": 216,
+  "ms": 178,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:14:17+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-spiegel": {
   "ardisik_basarisiz": 0,
-  "ms": 521,
+  "ms": 532,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:29:00+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:50:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-spiegel-ausland": {
   "ardisik_basarisiz": 0,
-  "ms": 494,
+  "ms": 523,
   "n": 20,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:35:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-straitstimes": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"99f8-fCeNZ/tHoqVJtf+9+EYXmye6fh4\"",
-  "ms": 177,
+  "etag": "W/\"9a4b-up+y0slAIp83UiLIdwnR94IC8TE\"",
+  "ms": 153,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:41:47+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:57:02+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-sz": {
   "ardisik_basarisiz": 0,
-  "ms": 381,
+  "ms": 364,
   "n": 15,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:11:52+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-tagesschau": {
   "ardisik_basarisiz": 0,
-  "ms": 706,
+  "ms": 733,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:31:45+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-tass": {
   "ardisik_basarisiz": 0,
-  "ms": 982,
+  "ms": 1081,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:39:06+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:49:56+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-thehindu": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:43:05 GMT",
-  "ms": 57,
+  "lm": "Wed, 25 Nov 2026 12:53:46 GMT",
+  "ms": 51,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:43:57+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:53:46+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-toi": {
   "ardisik_basarisiz": 0,
-  "etag": "\"01cc702483cc0d33fb64ec01a87114a35-gzip\"",
-  "lm": "Wed, 25 Nov 2026 12:33:01 GMT",
-  "ms": 124,
+  "etag": "\"0fa18fb8d30424bfae4a2c8b97b0cc494-gzip\"",
+  "lm": "Wed, 25 Nov 2026 12:46:02 GMT",
+  "ms": 98,
   "n": 24,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:19:55+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:45:07+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-tvn24": {
   "ardisik_basarisiz": 0,
-  "etag": "W/\"74af-IRkXD84hf8lzO+E7aEjzA59ypX8\"",
-  "ms": 211,
+  "etag": "W/\"74a4-lj/czM3I4gTc3eW+djB1thQ8aGI\"",
+  "ms": 269,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:09:33+00:00",
-  "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kod": 200,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-twz": {
   "ardisik_basarisiz": 0,
   "etag": "W/\"fe8803b9929c45f39b2de428e860ad0f\"",
-  "lm": "Wed, 25 Nov 2026 12:41:44 GMT",
-  "ms": 119,
+  "lm": "Wed, 25 Nov 2026 12:55:37 GMT",
+  "ms": 124,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-24T22:39:54+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-un-ar": {
   "ardisik_basarisiz": 0,
-  "ms": 74,
+  "ms": 77,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:00:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-un-fr": {
   "ardisik_basarisiz": 0,
-  "ms": 73,
+  "ms": 67,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-24T12:00:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-un-news": {
   "ardisik_basarisiz": 0,
-  "ms": 69,
+  "ms": 72,
   "n": 23,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-24T12:00:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-un-zh": {
   "ardisik_basarisiz": 0,
-  "ms": 60,
+  "ms": 66,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-24T12:00:00+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-us-defense": {
   "ardisik_basarisiz": 0,
-  "ms": 220,
+  "ms": 207,
   "n": 10,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-24T18:18:42+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-us-state": {
   "ardisik_basarisiz": 0,
   "lm": "Wed, 25 Nov 2026 12:23:47 GMT",
-  "ms": 93,
+  "ms": 81,
   "n": 10,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T01:37:32+00:00",
   "son_kod": 304,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-wapo": {
   "ardisik_basarisiz": 0,
   "ms": 178,
   "n": 12,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T10:04:26+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-whitehouse2": {
   "ardisik_basarisiz": 0,
   "etag": "W/\"f4a8e613f7eead30190cb1212b58f34e\"",
   "lm": "Wed, 25 Nov 2026 12:19:36 GMT",
-  "ms": 60,
+  "ms": 52,
   "n": 23,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:01:00+00:00",
-  "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kod": 304,
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-wsj-world": {
   "ardisik_basarisiz": 18,
@@ -1205,44 +1149,44 @@
  },
  "pc-yna-int": {
   "ardisik_basarisiz": 0,
-  "etag": "1795610911614",
-  "lm": "Wed, 25 Nov 2026 12:47:07 GMT",
-  "ms": 1325,
+  "etag": "1795611632633",
+  "lm": "Wed, 25 Nov 2026 12:59:07 GMT",
+  "ms": 1295,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:30:21+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-ynet": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:45:22 GMT",
-  "ms": 166,
+  "lm": "Wed, 25 Nov 2026 12:58:53 GMT",
+  "ms": 209,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T12:44:05+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-yonhap": {
   "ardisik_basarisiz": 0,
-  "etag": "1795610894332",
-  "lm": "Wed, 25 Nov 2026 12:47:27 GMT",
-  "ms": 1280,
+  "etag": "1795611648714",
+  "lm": "Wed, 25 Nov 2026 12:59:27 GMT",
+  "ms": 1254,
   "n": 25,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
   "son_haber": "2026-11-25T11:17:54+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  },
  "pc-zeit": {
   "ardisik_basarisiz": 0,
-  "lm": "Wed, 25 Nov 2026 12:42:07 GMT",
-  "ms": 66,
+  "lm": "Wed, 25 Nov 2026 12:59:16 GMT",
+  "ms": 72,
   "n": 15,
-  "son_basari": "2026-11-25T12:48:07.165545+00:00",
-  "son_haber": "2026-11-25T12:37:19+00:00",
+  "son_basari": "2026-11-25T13:00:31.121969+00:00",
+  "son_haber": "2026-11-25T12:58:53+00:00",
   "son_kod": 200,
-  "son_kontrol": "2026-11-25T12:48:07.165545+00:00"
+  "son_kontrol": "2026-11-25T13:00:31.121969+00:00"
  }
 }
