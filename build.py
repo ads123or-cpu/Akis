@@ -36,6 +36,6 @@ t=open('index.tpl.html',encoding='utf-8').read()
 open('site/index.html','w',encoding='utf-8').write(t.replace('/*SNAP*/',s))
 print(len(t),len(s), sum(len(v['items']) for v in secili.values()), 'haber')
 # Okan'a ozel araclar (araclar/ -> site/): Reels sablonu. Akis'tan yalniz gizli "Okan modu"nda baglanir; arama motorlarina kapali (noindex).
-for ad in ('reels-sablonu.html',):
+for ad in ('reels-sablonu.html', 'fitplan.html'):
     kaynak = os.path.join('araclar', ad)
     if os.path.exists(kaynak): shutil.copyfile(kaynak, os.path.join('site', ad))
