@@ -7,1130 +7,367 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="FitPlan">
-<title>FitPlan · 4+1 Atletik &amp; Kol Odaklı Program</title>
+<title>FitPlan · Makine Odaklı Atletik & Kol Programı</title>
 <style>
-:root{
-  --bg:#0b0e14;
-  --surface:#131823;
-  --surface-2:#1a2232;
-  --border:rgba(255,255,255,.08);
-  --text:#f3f6fb;
-  --muted:#9aa5b8;
-  --accent:#38bdf8;
-  --accent-2:#22c55e;
-  --warn:#f59e0b;
-  --danger:#ef4444;
-  --purple:#a78bfa;
-  --radius:16px;
-}
+:root{--bg:#0b0e14;--s1:#131823;--s2:#1a2232;--bd:rgba(255,255,255,.08);--tx:#f3f6fb;--mu:#9aa5b8;--gr:#22c55e;--bl:#38bdf8;--or:#f59e0b;--pu:#a78bfa;--rd:#ef4444;--r:16px}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,sans-serif;line-height:1.45;min-height:100vh}
-button,input{font:inherit;color:inherit}
+html,body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;line-height:1.45}
+button,input,select{font:inherit;color:inherit}
 button{cursor:pointer;border:none;background:none}
-.app{max-width:760px;margin:0 auto;padding:16px 16px 104px}
-header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;padding-top:env(safe-area-inset-top)}
-.brand{display:flex;align-items:center;gap:10px}
-.brand-badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#0ea5e9,#22c55e);display:grid;place-items:center;font-weight:800;font-size:18px;color:#061018;box-shadow:0 8px 24px rgba(14,165,233,.28)}
-.brand h1{margin:0;font-size:20px;letter-spacing:-.02em}
-.brand p{margin:0;font-size:12px;color:var(--muted)}
-.week-pill{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:7px 12px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;white-space:nowrap}
-.week-pill strong{color:var(--accent-2)}
-
-.day-strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px;scrollbar-width:none}
-.day-strip::-webkit-scrollbar{display:none}
-.day-btn{flex:0 0 auto;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:10px 14px;text-align:left;min-width:108px;transition:.16s}
-.day-btn .d-num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:6px}
-.day-btn .d-name{font-size:13px;font-weight:600;margin-top:3px;color:var(--text)}
-.day-btn.active{background:linear-gradient(135deg,rgba(56,189,248,.18),rgba(34,197,94,.12));border-color:rgba(56,189,248,.55)}
-.day-btn.active .d-num{color:var(--accent)}
-.opt-tag{font-size:10px;padding:2px 6px;border-radius:999px;background:rgba(167,139,250,.18);color:var(--purple)}
-
-.hero{background:linear-gradient(145deg,#131b2b,#111622);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px}
-.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.hero h2{margin:0 0 4px;font-size:18px;letter-spacing:-.01em}
-.hero p{margin:0;font-size:13px;color:var(--muted)}
-.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.chip{font-size:12px;padding:5px 10px;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);color:var(--text)}
-.chip.accent{background:rgba(56,189,248,.14);border-color:rgba(56,189,248,.35);color:var(--accent)}
-.chip.green{background:rgba(34,197,94,.14);border-color:rgba(34,197,94,.35);color:var(--accent-2)}
-
-.progress-wrap{margin-top:12px}
-.progress-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px}
-.progress-bar{height:8px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0%;transition:width .25s ease}
-
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:12px}
-.warmup-head{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;font-weight:600;font-size:14px}
-.warmup-list{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:13px}
-.warmup-list li{margin-bottom:5px}
-
-.ex-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;transition:border-color .2s}
-.ex-card.done{border-color:rgba(34,197,94,.45)}
-.ex-head{padding:14px;display:flex;gap:12px;align-items:center;cursor:pointer}
-.ex-thumb{width:72px;height:72px;flex:0 0 72px;border-radius:12px;background:#0d1320;border:1px solid var(--border);display:grid;place-items:center;overflow:hidden}
-.ex-info{flex:1;min-width:0}
-.ex-title-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.ex-name{font-size:15px;font-weight:700;margin:0}
-.ex-sub{font-size:12px;color:var(--muted);margin:2px 0 6px}
-.ex-badges{display:flex;flex-wrap:wrap;gap:6px}
-.badge{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--surface-2);color:var(--muted);border:1px solid var(--border)}
-.badge.muscle{color:var(--accent);border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.1)}
-.badge.prev{color:var(--warn);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.1)}
-.ex-chevron{color:var(--muted);font-size:18px;transition:transform .2s}
-.ex-card.open .ex-chevron{transform:rotate(180deg)}
-
-.ex-body{display:none;padding:0 14px 14px;border-top:1px solid var(--border)}
-.ex-card.open .ex-body{display:block}
-.diagram-box{margin:12px 0;background:radial-gradient(circle at 50% 35%,rgba(56,189,248,.10),#0c111c 72%);border:1px solid var(--border);border-radius:14px;padding:12px;display:flex;flex-direction:column;align-items:center}
-.diagram-cap{font-size:11px;color:var(--muted);margin-top:6px;text-align:center}
-
-.sets-box{margin:12px 0}
-.sets-head{display:grid;grid-template-columns:46px 1fr 1fr 48px;gap:8px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:0 4px 6px}
-.set-row{display:grid;grid-template-columns:46px 1fr 1fr 48px;gap:8px;align-items:center;margin-bottom:7px}
-.set-idx{font-size:12px;font-weight:700;color:var(--muted);text-align:center;background:var(--surface-2);padding:8px 0;border-radius:10px}
-.set-input{width:100%;background:#0e1420;border:1px solid var(--border);border-radius:10px;padding:8px 10px;font-size:14px;text-align:center;outline:none}
-.set-input:focus{border-color:var(--accent)}
-.set-check{height:38px;border-radius:10px;border:1px solid var(--border);background:var(--surface-2);display:grid;place-items:center;font-size:16px;font-weight:700;color:var(--muted);transition:.15s}
-.set-check.checked{background:var(--accent-2);border-color:var(--accent-2);color:#04120a}
-
-.detail-grid{display:grid;gap:10px;margin-top:12px}
-.detail-block{background:#0e1420;border:1px solid var(--border);border-radius:12px;padding:11px 12px}
-.detail-block h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent)}
-.detail-block.warn h4{color:var(--warn)}
-.detail-block.tip h4{color:var(--accent-2)}
-.detail-block ol,.detail-block ul{margin:0;padding-left:18px;font-size:13px;color:#d6deec}
-.detail-block li{margin-bottom:4px}
-.detail-block p{margin:0;font-size:13px;color:#d6deec}
-
-.actions-row{display:flex;gap:10px;margin-top:14px}
-.btn-primary{flex:1;background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#041219;font-weight:700;padding:13px 16px;border-radius:13px;font-size:14px;text-align:center}
-.btn-secondary{background:var(--surface-2);border:1px solid var(--border);color:var(--text);font-weight:600;padding:13px 14px;border-radius:13px;font-size:13px}
-
-.timer-banner{position:fixed;left:50%;transform:translateX(-50%);bottom:76px;width:calc(100% - 28px);max-width:728px;background:#101929;border:1px solid rgba(56,189,248,.5);border-radius:16px;padding:10px 14px;display:none;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 14px 36px rgba(0,0,0,.55);z-index:40}
-.timer-banner.show{display:flex}
-.timer-time{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--accent)}
-.timer-label{font-size:12px;color:var(--muted)}
-.timer-btns{display:flex;gap:6px}
-.timer-btns button{padding:7px 11px;border-radius:10px;background:var(--surface-2);border:1px solid var(--border);font-size:12px;font-weight:600}
-
-nav.tabs{position:fixed;left:0;right:0;bottom:0;background:rgba(11,14,20,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--border);padding:8px 12px calc(8px + env(safe-area-inset-bottom));z-index:30}
-.tabs-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.tab-btn{padding:8px 6px;border-radius:12px;color:var(--muted);font-size:12px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:3px}
-.tab-btn.active{color:var(--accent);background:rgba(56,189,248,.12)}
-.tab-ico{font-size:18px;line-height:1}
-
-.section{display:none}
-.section.active{display:block}
-.guide-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:10px}
-.guide-card h3{margin:0 0 5px;font-size:15px}
-.guide-card p{margin:0;font-size:13px;color:var(--muted)}
-.hist-item{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin-bottom:8px}
-.hist-title{font-weight:600;font-size:14px}
-.hist-date{font-size:12px;color:var(--muted)}
-.empty{text-align:center;color:var(--muted);padding:36px 16px;font-size:14px}
-.toast{position:fixed;top:18px;left:50%;transform:translateX(-50%);background:#0f1d17;border:1px solid rgba(34,197,94,.5);color:#bbf7d0;padding:10px 16px;border-radius:999px;font-size:13px;font-weight:600;display:none;z-index:50;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+a{color:inherit;text-decoration:none}
+.app{max-width:760px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 14px 110px}
+h1,h2,h3,h4{margin:0}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#0ea5e9,#22c55e);display:grid;place-items:center;font-weight:800;color:#04121a}
+.top h1{font-size:19px}.top p{margin:0;font-size:12px;color:var(--mu)}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:14px;margin-bottom:12px}
+.card.green{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.3)}
+.card.orange{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.3)}
+.card.blue{background:rgba(56,189,248,.08);border-color:rgba(56,189,248,.3)}
+.card.purple{background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.35)}
+.muted{color:var(--mu)}.small{font-size:12px}.tiny{font-size:11px}
+.row{display:flex;align-items:center;gap:8px}.between{justify-content:space-between}.wrap{flex-wrap:wrap}
+.pill{font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;background:rgba(255,255,255,.08)}
+.pill.g{background:rgba(34,197,94,.16);color:var(--gr)}.pill.b{background:rgba(56,189,248,.16);color:var(--bl)}
+.pill.o{background:rgba(245,158,11,.16);color:var(--or)}.pill.p{background:rgba(167,139,250,.18);color:var(--pu)}
+.weeks{display:flex;gap:3px;margin:10px 0 8px}.weeks i{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.12)}
+.weeks i.past{background:rgba(34,197,94,.4)}.weeks i.now{background:var(--gr)}
+.strip{display:flex;gap:8px;overflow-x:auto;margin-bottom:12px;scrollbar-width:none}.strip::-webkit-scrollbar{display:none}
+.dbtn{flex:0 0 auto;background:var(--s1);border:1px solid var(--bd);border-radius:13px;padding:9px 13px;text-align:left}
+.dbtn b{display:block;font-size:12px}.dbtn span{font-size:11px;color:var(--mu)}
+.dbtn.on{background:var(--gr);border-color:var(--gr);color:#04120a}.dbtn.on span{color:rgba(0,0,0,.7)}
+.bar{height:7px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;background:var(--gr)}
+details.warm{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:14px;padding:12px;margin-bottom:12px}
+details.warm summary{font-weight:700;color:var(--or);cursor:pointer;font-size:14px}
+details.warm ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mu)}
+.ss{font-size:11px;font-weight:700;color:var(--pu);margin:6px 2px}
+.ex{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
+.ex.done{border-color:rgba(34,197,94,.5)}
+.exh{display:flex;gap:10px;align-items:center;padding:10px;cursor:pointer}
+.thumb{position:relative;width:78px;flex:0 0 78px;height:64px;background:rgba(255,255,255,.04);border-radius:11px}
+.thumb svg{width:100%;height:100%}
+.num{position:absolute;bottom:3px;right:3px;font-size:10px;font-weight:800;background:rgba(0,0,0,.75);border-radius:99px;min-width:20px;height:20px;display:grid;place-items:center;padding:0 4px}
+.ex.done .num{background:var(--gr);color:#04120a}
+.exi{flex:1;min-width:0}.exi h3{font-size:15px}.exi .sub{font-size:12px;color:var(--mu);margin-top:2px}
+.up{font-size:11px;font-weight:700;color:var(--gr);margin-top:3px}
+.chev{color:var(--mu);transition:transform .2s}.ex.open .chev{transform:rotate(180deg)}
+.exb{display:none;padding:0 12px 14px;border-top:1px solid var(--bd)}.ex.open .exb{display:block}
+.map{background:rgba(255,255,255,.04);border-radius:14px;padding:10px;margin-top:12px}
+.map svg{width:100%;height:230px;display:block}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--mu);margin-top:6px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.btns{display:flex;flex-direction:column;gap:8px;margin:12px 0}
+.btn{flex:1;padding:11px;border-radius:12px;font-weight:700;font-size:14px;text-align:center}
+.btn.red{background:#dc2626;color:#fff}.btn.gray{background:var(--s2);border:1px solid var(--bd)}
+select.btn{appearance:none;-webkit-appearance:none;width:100%;text-align:left;padding-left:14px}
+.sugg{border-radius:12px;padding:11px 12px;font-size:13px;font-weight:600;margin-bottom:10px}
+.sugg.up{background:rgba(34,197,94,.13);color:#86efac}.sugg.info{background:rgba(56,189,248,.12);color:#7dd3fc}
+.sets .sr{display:grid;grid-template-columns:54px 1fr 1fr 44px;gap:8px;align-items:center;margin-top:7px}
+.sets .hd{font-size:11px;color:var(--mu);text-transform:uppercase}
+.si{font-size:12px;font-weight:700;color:var(--mu)}.si em{display:block;font-style:normal;color:var(--pu);font-size:10px}
+.in{width:100%;background:#0e1420;border:1px solid var(--bd);border-radius:10px;padding:9px;text-align:center;font-size:15px;outline:none}
+.in:focus{border-color:var(--gr)}
+.ck{height:40px;border-radius:10px;border:1px solid var(--bd);background:var(--s2);font-weight:800;color:var(--mu)}
+.ck.on{background:var(--gr);border-color:var(--gr);color:#04120a}
+.pos{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.pos div{border-radius:13px;padding:11px;font-size:13px}
+.pos .a{background:rgba(56,189,248,.12)}.pos .z{background:rgba(34,197,94,.12)}
+.pos b{display:block;font-size:11px;margin-bottom:4px}.pos .a b{color:var(--bl)}.pos .z b{color:var(--gr)}
+.card h4{font-size:13px;margin-bottom:6px}
+.card ul,.card ol{margin:0;padding-left:18px;font-size:13px}.card li{margin-bottom:4px}
+.card p{margin:0;font-size:13px}
+.finish{display:flex;gap:8px;margin-top:8px}
+.finish .btn.go{background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#04121a}
+.timer{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom));width:calc(100% - 28px);max-width:730px;background:#101929;border:1px solid rgba(34,197,94,.5);border-radius:16px;padding:10px 14px;display:none;align-items:center;justify-content:space-between;box-shadow:0 14px 36px rgba(0,0,0,.55);z-index:40}
+.timer.show{display:flex}.timer b{font-size:22px;font-variant-numeric:tabular-nums;color:var(--gr)}
+.timer button{padding:7px 11px;border-radius:10px;background:var(--s2);border:1px solid var(--bd);font-size:12px;font-weight:700;margin-left:6px}
+nav{position:fixed;left:0;right:0;bottom:0;background:rgba(11,14,20,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--bd);padding:8px 12px calc(8px + env(safe-area-inset-bottom));z-index:30}
+nav div{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+nav button{padding:8px;border-radius:12px;color:var(--mu);font-size:12px;font-weight:700}
+nav button.on{color:var(--gr);background:rgba(34,197,94,.12)}
+.sec{display:none}.sec.on{display:block}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--s2);border-radius:10px;padding:3px;margin:8px 0}
+.seg button{padding:7px;border-radius:8px;font-size:13px;font-weight:700;color:var(--mu)}.seg button.on{background:var(--gr);color:#04120a}
+.chips{display:flex;gap:6px;overflow-x:auto;margin:8px 0 10px;scrollbar-width:none}
+.chips button{flex:0 0 auto;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.08);font-size:12px;font-weight:700}
+.chips button.on{background:var(--gr);color:#04120a}
+.hi{display:flex;justify-content:space-between;align-items:center;background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:12px;margin-bottom:8px}
+.toast{position:fixed;top:calc(14px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:#0f1d17;border:1px solid rgba(34,197,94,.5);color:#bbf7d0;padding:10px 16px;border-radius:99px;font-size:13px;font-weight:700;display:none;z-index:50}
 .toast.show{display:block}
-
-/* SVG subtle pulse animation */
-@keyframes pulseGlow{0%,100%{opacity:.55}50%{opacity:1}}
-.muscle-glow{animation:pulseGlow 2.1s ease-in-out infinite}
-@keyframes arrowFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-.arrow-float{animation:arrowFloat 1.8s ease-in-out infinite}
+input[type=date]{background:#0e1420;border:1px solid var(--bd);border-radius:10px;padding:7px 9px;color-scheme:dark}
 </style>
 </head>
 <body>
 <div class="toast" id="toast"></div>
 <div class="app">
-  <header class="top">
-    <div class="brand">
-      <div class="brand-badge">FP</div>
-      <div>
-        <h1>FitPlan</h1>
-        <p>4+1 Gün · Atletik Fit &amp; Kol Odaklı</p>
-      </div>
-    </div>
-    <div class="week-pill">Bu hafta: <strong id="weekCount">0</strong> / 4–5</div>
-  </header>
-
-  <section id="sec-program" class="section active">
-    <div class="day-strip" id="dayStrip"></div>
-    <div class="hero" id="dayHero"></div>
-    <div class="card" id="warmupCard"></div>
-    <div id="exerciseList"></div>
-    <div class="actions-row">
-      <button class="btn-primary" id="finishBtn">Antrenmanı Tamamla ve Kaydet</button>
-      <button class="btn-secondary" id="resetDayBtn">Sıfırla</button>
+  <div class="top">
+    <div class="logo">FP</div>
+    <div><h1>FitPlan</h1><p id="lvl"></p></div>
+  </div>
+  <section class="sec on" id="s-program">
+    <div id="phase"></div>
+    <div class="strip" id="strip"></div>
+    <div id="dayCard"></div>
+    <div id="warm"></div>
+    <div id="list"></div>
+    <div class="finish">
+      <button class="btn go" id="finish">Antrenmanı Bitir ve Kaydet</button>
+      <button class="btn gray" id="reset" style="flex:0 0 auto">Sıfırla</button>
     </div>
   </section>
-
-  <section id="sec-guide" class="section">
-    <div class="hero">
-      <h2>6–8 Aylık Sporcu İçin Atletik &amp; Kol Rehberi</h2>
-      <p>Şişmeden, temiz kas kütlesi ve belirgin omuz/kol oranıyla sürdürülebilir gelişim ilkeleri.</p>
-    </div>
-    <div id="nutritionList"></div>
-    <div class="guide-card">
-      <h3>Haftalık Dağılım Önerisi</h3>
-      <p><strong>4 Gün:</strong> Pazartesi (Gün 1) · Salı (Gün 2) · Perşembe (Gün 3) · Cuma (Gün 4).<br>
-      <strong>5 Gün:</strong> Cumartesi veya Pazar günü 45 dakikalık <strong>Gün 5 (Kol &amp; Yan Omuz)</strong> eklenir.</p>
-    </div>
-    <div class="guide-card">
-      <h3>RPE Nedir?</h3>
-      <p><strong>RPE 8:</strong> Set sonunda "temiz formla 2 tekrar daha çıkarırdım" hissi. <strong>RPE 9:</strong> 1 tekrar kala dur. Bu aralık eklemleri korurken maksimum kas uyarımı verir.</p>
-    </div>
-    <div class="guide-card">
-      <h3>Telefona Uygulama Gibi Ekle</h3>
-      <p>Safari'de alttaki <strong>Paylaş → Ana Ekrana Ekle</strong> (Android'de menü → Ana ekrana ekle) ile tam ekran uygulama gibi kullanabilirsin. Verilerin bu cihazda yerel saklanır.</p>
-    </div>
-  </section>
-
-  <section id="sec-history" class="section">
-    <div class="hero">
-      <h2>Antrenman Geçmişi</h2>
-      <p>Tamamladığın seanslar ve son ağırlık kayıtların bu tarayıcıda saklanır.</p>
-    </div>
-    <div id="historyList"></div>
-  </section>
+  <section class="sec" id="s-guide"></section>
+  <section class="sec" id="s-history"></section>
 </div>
-
-<div class="timer-banner" id="timerBanner">
-  <div>
-    <div class="timer-label" id="timerTitle">Dinlenme Sayacı</div>
-    <div class="timer-time" id="timerClock">01:00</div>
-  </div>
-  <div class="timer-btns">
-    <button id="timerPlus">+15 sn</button>
-    <button id="timerStop">Bitir</button>
-  </div>
+<div class="timer" id="timer">
+  <div><div class="tiny muted">Dinlenme</div><b id="tclock">00:00</b></div>
+  <div><button id="tplus">+15 sn</button><button id="tstop">Bitir</button></div>
 </div>
-
-<nav class="tabs">
-  <div class="tabs-inner">
-    <button class="tab-btn active" data-tab="program"><span class="tab-ico">🏋️</span>Program</button>
-    <button class="tab-btn" data-tab="guide"><span class="tab-ico">📘</span>Rehber</button>
-    <button class="tab-btn" data-tab="history"><span class="tab-ico">📈</span>Geçmiş</button>
-  </div>
-</nav>
-
+<nav><div>
+  <button class="on" data-t="program">🏋️ Program</button>
+  <button data-t="guide">📘 Rehber</button>
+  <button data-t="history">📈 Geçmiş</button>
+</div></nav>
 <script>
-const DAYS = [
-  {
-    id:"day1", dayNumber:1, shortTitle:"Gün 1",
-    title:"Üst Vücut A · Üst Göğüs & Biceps",
-    subtitle:"Tişörtün üstünü dolduran üst göğüs, V-sırt genişliği, yan omuz ve belirgin biceps",
-    durationMin:55, isOptional:false,
-    warmup:[
-      "3 dk hafif yürüyüş veya kürek ile nabzı yükselt.",
-      "2×12 bant/hafif dambıl omuz dış rotasyon + kol çevirme.",
-      "İlk harekette 1×12 çok hafif ağırlıkla ısınma seti yap."
-    ],
-    exercises:[
-      {
-        id:"d1.incline_db", name:"Incline Dumbbell Press", subtitle:"30° eğimli sehpada dambıl pres",
-        primary:"Göğüs", secondary:["Omuz","Triceps"], sets:3, reps:"8–10", restSeconds:90, rpe:"RPE 8", pattern:"inclinePress",
-        steps:[
-          "Sehpayı 30° açıya getir (45° omuza fazla yük bindirir).",
-          "Kürek kemiklerini geriye ve aşağıya sabitle, hafif göğüs aç.",
-          "Dirsekleri gövdeyle 45° açıda tutarak dambılları kontrollü indir (2–3 sn).",
-          "Göğüs hizasından yukarı doğru hafifçe birbirine yaklaştırarak it."
-        ],
-        mistakes:[
-          "Dirsekleri 90° yana açmak (omuz eklemini zorlar).",
-          "Ağırlığı tepede birbirine çarptırmak veya alt noktada zıplatmak."
-        ],
-        breathing:"İndirirken nefes al, iterken kontrollü ver.",
-        tip:"Üst göğüs gelişimi atletik ve fit görünümün anahtarıdır; düz benchten önce yapmak daha iyi sonuç verir."
-      },
-      {
-        id:"d1.lat_pulldown", name:"Lat Pulldown", subtitle:"Omuz genişliğinden biraz açık tutuş",
-        primary:"Sırt", secondary:["Biceps","Ön Kol"], sets:3, reps:"8–12", restSeconds:90, rpe:"RPE 8", pattern:"pulldown",
-        steps:[
-          "Barı omuz genişliğinin yaklaşık 1.2 katı kadar tut, gövdeyi hafif (~15°) geriye yasla.",
-          "Çekişi kollarla değil, dirseklerini kalçana doğru indirerek başlat.",
-          "Barı köprücük kemiğinin hemen üstüne kadar çek ve 1 saniye sıkıştır.",
-          "Kollar tamamen uzanana kadar kontrollü yukarı bırak."
-        ],
-        mistakes:[
-          "Gövdeyi aşırı geriye atıp belden sallanarak çekmek.",
-          "Barı ense arkasına çekmek (omuz sakatlığı riski)."
-        ],
-        breathing:"Çekerken nefes ver, yukarı bırakırken al.",
-        tip:"Ellerini kanca gibi düşün (başparmak üstte olabilir); böylece yük ön koldan sırt kanatlarına geçer."
-      },
-      {
-        id:"d1.seated_row", name:"Seated Cable / Machine Row", subtitle:"Göğüs destekli veya oturarak yatay çekiş",
-        primary:"Sırt", secondary:["Biceps","Omuz"], sets:3, reps:"10–12", restSeconds:75, rpe:"RPE 8", pattern:"row",
-        steps:[
-          "Sırt dik, göğüs açık otur; dar/nötr tutuşu kavra.",
-          "Dirsekleri gövdeye yakın tutarak tutamağı göbek deliğine doğru çek.",
-          "Tepede kürek kemiklerini birbirine yaklaştırıp 1 saniye tut.",
-          "Kontrollü şekilde öne uzanarak sırtı esnet."
-        ],
-        mistakes:[
-          "Omuzları kulaklara doğru kaldırmak (trapez yükü alır).",
-          "Beli öne-arkaya yaylandırmak."
-        ],
-        breathing:"Çekerken ver, uzatırken al.",
-        tip:"Masa başı ve kurgu çalışanlarında dik duruşu en hızlı toparlayan hareket."
-      },
-      {
-        id:"d1.lat_raise", name:"Dumbbell Lateral Raise", subtitle:"Yan omuz açışı (V-formun kalbi)",
-        primary:"Omuz", secondary:[], sets:4, reps:"12–15", restSeconds:60, rpe:"RPE 8.5", pattern:"lateralRaise",
-        steps:[
-          "Dambılları yanlarda tut, dirseklerde çok hafif bükülme bırak.",
-          "Kolları tam yana değil, 15–20° hafif öne (skapular düzlem) kaldır.",
-          "Omuz hizasına gelince 0.5 sn durakla, ağır ağır (2–3 sn) indir."
-        ],
-        mistakes:[
-          "Çok ağır dambıl alıp belden savurmak.",
-          "Omuz hizasını çok geçmek (trapeze biner)."
-        ],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"Fit ve atletik görünmek için ağır benchten çok, temiz formlu yan omuz açışı fark yaratır."
-      },
-      {
-        id:"d1.incline_curl", name:"Incline Dumbbell Curl", subtitle:"45° eğimli sehpada biceps (uzun baş)",
-        primary:"Biceps", secondary:["Ön Kol"], sets:3, reps:"10–12", restSeconds:60, rpe:"RPE 9", pattern:"bicepsCurl",
-        steps:[
-          "Sehpayı 45–60° yatır, sırtını yasla ve kollarını gövdenin hafif gerisine sarkıt.",
-          "Dirseklerini sabit tutarak avuç içleri yukarı bakacak şekilde kaldır.",
-          "Tepede 1 saniye biceps'i sık, inişi 3 saniyede yavaşça yap."
-        ],
-        mistakes:[
-          "Dirsekleri öne doğru savurup omuzdan destek almak.",
-          "Alt noktada kolu tam esnetmeden yarım tekrar yapmak."
-        ],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"Biceps uzun başını gerilmiş pozisyonda çalıştırır; kolun yandan daha dolgun ve tepe yapmış görünmesini sağlar."
-      },
-      {
-        id:"d1.rope_pushdown", name:"Rope Triceps Pushdown", subtitle:"Halatla arka kol itiş",
-        primary:"Triceps", secondary:[], sets:3, reps:"10–12", restSeconds:60, rpe:"RPE 9", pattern:"tricepsExt",
-        steps:[
-          "Dirseklerini kaburgalarına yapıştır, gövde hafif öne eğik.",
-          "Halatı aşağı iterken alt noktada iki ucunu hafifçe dışa doğru aç.",
-          "Dirsekleri oynatmadan 90°'ye kadar kontrollü yukarı çıkar."
-        ],
-        mistakes:[
-          "Ağırlığı vücut ağırlığınla üstüne abanarak itmek.",
-          "Dirsekleri öne-arkaya kaydırmak."
-        ],
-        breathing:"Aşağı iterken ver, yukarı çıkarırken al.",
-        tip:"Kol kalınlığının yaklaşık üçte ikisi triceps kasından gelir; alt noktadaki 1 saniyelik sıkıştırma çok etkilidir."
-      }
-    ]
-  },
-  {
-    id:"day2", dayNumber:2, shortTitle:"Gün 2",
-    title:"Alt Vücut & Core A · Atletik Bacak",
-    subtitle:"Eklem dostu, güçlü ve dengeli bacak + belirgin karın",
-    durationMin:50, isOptional:false,
-    warmup:[
-      "3 dk bisiklet veya yürüyüş.",
-      "2×10 vücut ağırlığı squat + kalça açma (leg swings)."
-    ],
-    exercises:[
-      {
-        id:"d2.bulgarian", name:"Bulgarian Split Squat", subtitle:"Tek bacak atletik squat (veya Leg Press)",
-        primary:"Bacak", secondary:["Karın"], sets:3, reps:"8–10 / bacak", restSeconds:90, rpe:"RPE 8", pattern:"squat",
-        steps:[
-          "Arka ayağın üstünü sehpaya koy, ön ayak yeterince önde olsun.",
-          "Gövdeyi hafif öne eğerek arka dizin yere yaklaşana kadar in.",
-          "Ön ayağın topuğundan güç alarak kontrollü kalk."
-        ],
-        mistakes:[
-          "Ön dizin içe doğru çökmesi.",
-          "Çok dar adım atıp tüm yükü diz kapağına vermek."
-        ],
-        breathing:"İnerken derin nefes al, kalkarken ver.",
-        tip:"Ağır sırt squat'ı olmadan beli koruyarak müthiş atletik bacak ve denge geliştirir."
-      },
-      {
-        id:"d2.rdl", name:"Dumbbell Romanian Deadlift (RDL)", subtitle:"Arka bacak ve kalça menteşesi",
-        primary:"Bacak", secondary:["Sırt","Ön Kol"], sets:3, reps:"8–10", restSeconds:90, rpe:"RPE 8", pattern:"hinge",
-        steps:[
-          "Dizleri çok hafif kır, sırtı tamamen düz kilitle.",
-          "Dambılları bacaklara sürterek kalçanı geriye doğru it.",
-          "Arka bacakta (hamstring) güçlü gerilme hissedince (diz altı hizası) kalçayı sıkarak kalk."
-        ],
-        mistakes:[
-          "Beli kamburlaştırmak.",
-          "Hareketi squat gibi diz bükerek yapmak."
-        ],
-        breathing:"İnerken nefes al ve karnı sık, kalkarken ver.",
-        tip:"Dambıllar bacaklardan uzaklaşmamalı; bel sağlığı ve atletik duruş için vazgeçilmez."
-      },
-      {
-        id:"d2.leg_curl", name:"Seated / Lying Leg Curl", subtitle:"Arka bacak izolasyon",
-        primary:"Bacak", secondary:[], sets:3, reps:"10–12", restSeconds:60, rpe:"RPE 8.5", pattern:"legCurl",
-        steps:[
-          "Makineyi diz ekseniyle hizala, kalçayı koltuğa sabitle.",
-          "Topukları kontrollü çek, en uçta 1 saniye tut, 2–3 saniyede geri aç."
-        ],
-        mistakes:["Kalçayı koltuktan kaldırıp ivmeyle çekmek."],
-        breathing:"Çekerken ver, açarken al.",
-        tip:"Oturarak yapılan (Seated) leg curl hamstring'i daha uzun pozisyonda çalıştırır."
-      },
-      {
-        id:"d2.calf", name:"Standing Calf Raise", subtitle:"Ayakta baldır yükseltme",
-        primary:"Bacak", secondary:[], sets:3, reps:"12–15", restSeconds:45, rpe:"RPE 9", pattern:"calf",
-        steps:[
-          "Topukları en aşağıda 1 saniye esnet (yaylanma yok).",
-          "Parmak ucunda en tepeye çık ve 1 saniye sık."
-        ],
-        mistakes:["Aşil tendonuyla hızlı zıplamak (kas çalışmaz)."],
-        breathing:"Yükselirken ver, inerken al.",
-        tip:"Alt noktadaki 1 saniyelik duraklama baldır gelişimini ikiye katlar."
-      },
-      {
-        id:"d2.cable_crunch", name:"Cable Crunch / Hanging Knee Raise", subtitle:"Ağırlıklı karın sıkıştırma",
-        primary:"Karın", secondary:[], sets:3, reps:"12–15", restSeconds:60, rpe:"RPE 8.5", pattern:"core",
-        steps:[
-          "Kalçayı sabit tut, omurgayı kaburgaları leğen kemiğine yaklaştıracak şekilde yuvarla.",
-          "En altta 1 saniye sık, kontrollü geri açıl."
-        ],
-        mistakes:["Sadece kalçadan eğilip karnı hiç bükmemek."],
-        breathing:"Sıkıştırırken nefesini tamamen boşalt.",
-        tip:"Karın kasları da diğer kaslar gibi dirençle belirginleşir; 100 mekik yerine 3×12 ağırlıklı crunch çok daha etkilidir."
-      },
-      {
-        id:"d2.plank", name:"RKC Plank", subtitle:"Aktif sıkıştırmalı plank",
-        primary:"Karın", secondary:["Omuz"], sets:3, reps:"45 sn", restSeconds:45, rpe:"RPE 8", pattern:"core",
-        steps:[
-          "Dirsekler omuz altında, kalça ve karın aktif sıkılı.",
-          "Dirseklerini ayak parmaklarına doğru çekiyormuş gibi gerilim yarat."
-        ],
-        mistakes:["Beli çukurlaştırmak veya kalçayı çok yukarı kaldırmak."],
-        breathing:"Kısa ve kontrollü nefes alıp ver, nefesini tutma.",
-        tip:"Pasif 3 dakika beklemek yerine aktif gergin 45 saniye çok daha güçlü core verir."
-      }
-    ]
-  },
-  {
-    id:"day3", dayNumber:3, shortTitle:"Gün 3",
-    title:"Üst Vücut B · Omuz, Sırt & Triceps",
-    subtitle:"Yuvarlak omuzlar, dengeli göğüs, arka omuz sağlığı ve kol hacmi",
-    durationMin:55, isOptional:false,
-    warmup:[
-      "3 dk hafif kardiyo + kol çevirme.",
-      "2×12 bant/kablo ile hafif face pull."
-    ],
-    exercises:[
-      {
-        id:"d3.ohp", name:"Seated Dumbbell Shoulder Press", subtitle:"Oturarak dambıl omuz pres",
-        primary:"Omuz", secondary:["Triceps"], sets:3, reps:"8–10", restSeconds:90, rpe:"RPE 8", pattern:"shoulderPress",
-        steps:[
-          "Sehpayı tam 90° değil bir tık yatık (75–80°) ayarla.",
-          "Dirsekleri hafif öne (30°) alarak kulak hizasından yukarı it.",
-          "Tepede dirsekleri sert kilitlemeden kontrollü indir."
-        ],
-        mistakes:["Beli aşırı geriye büküp üst göğüs presine çevirmek."],
-        breathing:"İterken ver, indirirken al.",
-        tip:"Omuz başlarını belirginleştirir ve tüm üst gövdeye atletik çerçeve verir."
-      },
-      {
-        id:"d3.flat_press", name:"Flat Dumbbell / Machine Chest Press", subtitle:"Düz göğüs itiş",
-        primary:"Göğüs", secondary:["Triceps","Omuz"], sets:3, reps:"8–10", restSeconds:90, rpe:"RPE 8", pattern:"flatPress",
-        steps:[
-          "Ayaklar yere sağlam bassın, kürek kemikleri sehpada sabit.",
-          "Ağırlığı göğüs orta hizasına kontrollü indirip güçlü şekilde it."
-        ],
-        mistakes:["Kalçayı sehpadan kaldırmak veya yarım inmek."],
-        breathing:"İndirirken al, iterken ver.",
-        tip:"Makine kullanıyorsan son tekrarlarda güvenli şekilde tükenişe yaklaşabilirsin."
-      },
-      {
-        id:"d3.one_arm_row", name:"Single-Arm Dumbbell Row", subtitle:"Tek kol dambıl sırt çekişi",
-        primary:"Sırt", secondary:["Biceps","Ön Kol"], sets:3, reps:"10–12 / kol", restSeconds:60, rpe:"RPE 8.5", pattern:"row",
-        steps:[
-          "Bir elinle sehpadan destek al, sırt yere paralel ve düz.",
-          "Dambılı göğse değil, hafif yay çizerek kalça cebine doğru çek.",
-          "Aşağıda sırtı tam esneterek 2 saniyede indir."
-        ],
-        mistakes:["Gövdeyi aşırı döndürerek ağırlığı savurmak."],
-        breathing:"Çekerken ver, indirirken al.",
-        tip:"Sağ-sol sırt simetrisini mükemmel dengeler."
-      },
-      {
-        id:"d3.face_pull", name:"Cable Face Pull", subtitle:"Arka omuz ve omuz sağlığı",
-        primary:"Omuz", secondary:["Sırt"], sets:3, reps:"12–15", restSeconds:60, rpe:"RPE 8", pattern:"facePull",
-        steps:[
-          "Kabloyu alın hizasına getir, halatı başparmaklar sana bakacak şekilde tut.",
-          "Halatı yüzüne doğru çekerken ellerini kulakların yanına doğru dışa aç.",
-          "Sonda 'çift biceps pozu' gibi dış rotasyon yapıp 1 sn tut."
-        ],
-        mistakes:["Ağır kilo takıp belden geriye yatmak."],
-        breathing:"Çekerken ver, uzatırken al.",
-        tip:"Omuzu 3 boyutlu gösterir ve kamera karşısında omuzların öne düşmesini engeller."
-      },
-      {
-        id:"d3.overhead_tri", name:"Overhead Cable / DB Triceps Ext.", subtitle:"Baş üstü triceps (uzun baş)",
-        primary:"Triceps", secondary:[], sets:3, reps:"10–12", restSeconds:60, rpe:"RPE 9", pattern:"tricepsExt",
-        steps:[
-          "Kolları başın üzerine al, dirsekleri kulağa yakın sabit tut.",
-          "Ön kolları ensenin arkasına kadar kontrollü indirip esnet.",
-          "Dirsekleri açmadan yukarı doğru tam uzat."
-        ],
-        mistakes:["Dirsekleri iki yana çok açmak veya beli bükmek."],
-        breathing:"Uzatırken ver, indirirken al.",
-        tip:"Araştırmalara göre baş üstü esnetmeli triceps, pushdown'a kıyasla kol hacmini daha hızlı artırır."
-      },
-      {
-        id:"d3.hammer_curl", name:"Hammer Curl (Çekiç)", subtitle:"Brachialis ve ön kol kalınlığı",
-        primary:"Biceps", secondary:["Ön Kol"], sets:3, reps:"10–12", restSeconds:60, rpe:"RPE 9", pattern:"hammerCurl",
-        steps:[
-          "Dambılları avuç içleri birbirine bakacak (nötr) şekilde tut.",
-          "Dirsekleri gövde yanında sabitle, omuz hizasına kaldır.",
-          "2–3 saniyede kontrollü indir."
-        ],
-        mistakes:["Gövdeyi sallayarak ağırlığı yukarı atmak."],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"Tişört giydiğinde kolun dışarıdan en kalın ve atletik görünmesini sağlayan bir numaralı kol hareketi."
-      }
-    ]
-  },
-  {
-    id:"day4", dayNumber:4, shortTitle:"Gün 4",
-    title:"Alt Vücut B & Fit Kondisyon",
-    subtitle:"Bacak formu, yan karın ve kas koruyan yağ yakımı",
-    durationMin:50, isOptional:false,
-    warmup:[
-      "3 dk yürüyüş + kalça/ayak bileği mobilitesi.",
-      "1×12 hafif goblet squat."
-    ],
-    exercises:[
-      {
-        id:"d4.hack_squat", name:"Hack Squat / Goblet Squat", subtitle:"Kontrollü ön bacak squat",
-        primary:"Bacak", secondary:["Karın"], sets:3, reps:"10–12", restSeconds:90, rpe:"RPE 8", pattern:"squat",
-        steps:[
-          "Ayaklar omuz genişliğinde, parmak uçları hafif dışa dönük.",
-          "Sırt dik, kalça diz hizasının hafif altına inene kadar kontrollü alçal.",
-          "Topuk ve orta ayaktan iterek kalk."
-        ],
-        mistakes:["Topukların yerden kalkması veya dizlerin içe kapanması."],
-        breathing:"İnerken al, kalkarken ver.",
-        tip:"Aşırı ağır kiloya çıkmadan temiz tam hareket açıklığı, estetik bacak için yeterlidir."
-      },
-      {
-        id:"d4.leg_ext", name:"Leg Extension", subtitle:"Ön bacak (Quadriceps) netliği",
-        primary:"Bacak", secondary:[], sets:3, reps:"12–15", restSeconds:60, rpe:"RPE 8.5", pattern:"legCurl",
-        steps:[
-          "Koltuk arkasını diz eksenine göre ayarla.",
-          "Bacakları tam düzleştirip tepede 1 saniye sık, 2–3 saniyede indir."
-        ],
-        mistakes:["Ağırlığı tekme atar gibi hızla savurmak."],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"Şort giyildiğinde ön bacağın belirgin ve fit görünmesini sağlar."
-      },
-      {
-        id:"d4.hip_thrust", name:"Hip Thrust / Glute Bridge", subtitle:"Kalça gücü ve bel koruması",
-        primary:"Bacak", secondary:["Karın"], sets:3, reps:"10–12", restSeconds:75, rpe:"RPE 8", pattern:"hinge",
-        steps:[
-          "Kürek kemiklerinin altını sehpaya yasla, dizler tepede 90° olsun.",
-          "Çeneyi hafif göğse eğik tut, kalçayı tam düz çizgiye kaldırıp 1 sn sık."
-        ],
-        mistakes:["Beli aşırı geriye kıvırıp yükü bele vermek."],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"Duruşu düzeltir ve koşu/yürüyüş performansını artırır."
-      },
-      {
-        id:"d4.woodchopper", name:"Cable Woodchopper", subtitle:"Yan karın (Oblique) ve bel inceliği",
-        primary:"Karın", secondary:["Omuz"], sets:3, reps:"12 / yön", restSeconds:45, rpe:"RPE 8", pattern:"core",
-        steps:[
-          "Kabloyu omuz üstü hizasına al, iki elle kavra.",
-          "Kolları düz tutarak gövdeyi çapraz aşağı doğru döndür.",
-          "Kontrollü şekilde başlangıca dön."
-        ],
-        mistakes:["Sadece kollarla çekip gövdeyi hiç döndürmemek."],
-        breathing:"Döndürürken nefes ver.",
-        tip:"Bel bölgesini kalınlaştırmadan atletik yan karın çizgisi verir."
-      },
-      {
-        id:"d4.incline_walk", name:"Eğimli Yürüyüş (Incline Walk)", subtitle:"%10–12 eğim · 4.5–5.0 km/s",
-        primary:"Kondisyon", secondary:["Bacak"], sets:1, reps:"15 dk", restSeconds:0, rpe:"Orta Tempo", pattern:"cardio",
-        steps:[
-          "Koşu bandını %10–12 eğime, hızı 4.5–5.0 km/s'ye ayarla.",
-          "Tutamaklara yaslanmadan dik yürüyüşle 15 dakika tamamla."
-        ],
-        mistakes:["Tutamaklara tutunup eğimi etkisiz hale getirmek."],
-        breathing:"Konuşabilecek ama şarkı söyleyemeyecek (Zone 2) tempoda.",
-        tip:"Kas kütlesini koruyarak yağ oranını düşürmenin en eklem dostu yolu."
-      }
-    ]
-  },
-  {
-    id:"day5", dayNumber:5, shortTitle:"Gün 5 (Ek)",
-    title:"Kol, Yan Omuz & Estetik (Opsiyonel)",
-    subtitle:"Haftada 5. gün gidersen: tişört kollarını ve omuzları zirveye taşıyan 45 dk seans",
-    durationMin:45, isOptional:true,
-    warmup:["3 dk hafif kardiyo + bilek/dirsek/omuz mobilitesi."],
-    exercises:[
-      {
-        id:"d5.ez_curl", name:"EZ-Bar / Cable Biceps Curl", subtitle:"Temel biceps hacmi",
-        primary:"Biceps", secondary:["Ön Kol"], sets:3, reps:"10–12", restSeconds:60, rpe:"RPE 8.5", pattern:"bicepsCurl",
-        steps:[
-          "EZ barı omuz genişliğinde tut, dirsekler yanlarda sabit.",
-          "Bilekleri kırmadan omuz hizasına kaldır, 1 sn sık, yavaşça indir."
-        ],
-        mistakes:["Belden geriye salınım yapmak."],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"EZ bar düz bara göre bileklere çok daha dosttur."
-      },
-      {
-        id:"d5.cable_lat", name:"Single-Arm Cable Lateral Raise", subtitle:"Sabit gerginlikli yan omuz",
-        primary:"Omuz", secondary:[], sets:4, reps:"12–15 / kol", restSeconds:45, rpe:"RPE 9", pattern:"lateralRaise",
-        steps:[
-          "Kabloyu bilek hizasına indir, makineye yan dur.",
-          "Kolu hafif öne (15°) açarak omuz hizasına kadar kontrollü kaldır."
-        ],
-        mistakes:["Vücudu yana eğip ağırlığı ivmeyle fırlatmak."],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"Dambıldan farklı olarak hareketin en alt noktasında bile yan omuzda sürekli gerilim sağlar."
-      },
-      {
-        id:"d5.dips", name:"Triceps Dips (Destekli/Makine)", subtitle:"Güçlü arka kol itiş",
-        primary:"Triceps", secondary:["Göğüs","Omuz"], sets:3, reps:"10–12", restSeconds:75, rpe:"RPE 8.5", pattern:"tricepsExt",
-        steps:[
-          "Gövdeyi olabildiğince dik tut, dirsekleri arkaya doğru bük.",
-          "Üst kol yere paralel olana kadar inip triceps'le yukarı it."
-        ],
-        mistakes:["Omuzları çok aşağı çökertmek (omuz önünü zorlar)."],
-        breathing:"İnerken al, iterken ver.",
-        tip:"Gövde dik kaldıkça yük göğüsten triceps'e geçer."
-      },
-      {
-        id:"d5.bayesian", name:"Bayesian Cable Curl", subtitle:"Kabloda arkadan gerilmiş biceps",
-        primary:"Biceps", secondary:[], sets:3, reps:"12–15", restSeconds:60, rpe:"RPE 9", pattern:"bicepsCurl",
-        steps:[
-          "Kablo makinesine sırtını dön, bir adım öne çık ki kol gövdenin gerisinde kalsın.",
-          "Dirseği arkada sabit tutup ön kolu yukarı bük."
-        ],
-        mistakes:["Dirseği öne taşımak."],
-        breathing:"Çekerken ver, bırakırken al.",
-        tip:"En modern ve en etkili biceps izolasyonlarından biri."
-      },
-      {
-        id:"d5.reverse_curl", name:"Reverse Curl (Ön Kol)", subtitle:"Üstten tutuşla ön kol & bilek",
-        primary:"Ön Kol", secondary:["Biceps"], sets:3, reps:"12–15", restSeconds:45, rpe:"RPE 8.5", pattern:"hammerCurl",
-        steps:[
-          "EZ barı veya kabloyu avuç içleri yere bakacak şekilde tut.",
-          "Bilekleri düz tutarak omuz hizasına kaldır ve kontrollü indir."
-        ],
-        mistakes:["Çok ağır kilo seçip bilekleri geriye kırmak."],
-        breathing:"Kaldırırken ver, indirirken al.",
-        tip:"Saat takılan ön kol bölgesini belirginleştirir; kısa kolluda en dikkat çeken detay!"
-      },
-      {
-        id:"d5.dead_bug", name:"Hanging Leg Raise / Dead Bug", subtitle:"Alt karın kontrolü",
-        primary:"Karın", secondary:[], sets:3, reps:"12–15", restSeconds:45, rpe:"RPE 8", pattern:"core",
-        steps:[
-          "Belini düz tutarak dizlerini/bacaklarını kontrollü yukarı çek.",
-          "İnerken sallanmadan yavaşça indir."
-        ],
-        mistakes:["Bacakları hızla sallayıp momentumla kaldırmak."],
-        breathing:"Yukarı çekerken ver, indirirken al.",
-        tip:"Yavaş tempo (2 sn yukarı, 2 sn aşağı) alt karında anında yanma sağlar."
-      }
-    ]
+const P = {"version":2,"title":"Atletik Fit & Kol Programı","level":"6–8 ay deneyim · makine ağırlıklı","muscles":{"chest":"Göğüs","frontDelt":"Ön omuz","sideDelt":"Yan omuz","rearDelt":"Arka omuz","upperBack":"Üst sırt","lats":"Kanat (lat)","lowerBack":"Bel","biceps":"Biceps","triceps":"Triceps","forearms":"Ön kol","abs":"Karın","obliques":"Yan karın","quads":"Ön bacak","hamstrings":"Arka bacak","glutes":"Kalça","abductors":"Kalça yanı","calves":"Baldır"},"phases":[{"weeks":[1,2],"name":"Uyum","rir":"3 tekrar rezerv","detail":"Makine ayarlarını ve ağırlıklarını öğren. Her seti 3 tekrar daha yapabilecekken bitir. Ağırlıkları not et.","deload":false,"peak":false},{"weeks":[3,4,5],"name":"Gelişim","rir":"1–2 tekrar rezerv","detail":"Asıl büyüme dönemi. Tüm setlerde tekrar aralığının üstüne ulaşınca ağırlığı bir kademe artır.","deload":false,"peak":false},{"weeks":[6,7],"name":"Zirve","rir":"İzolasyonda 0–1 rezerv","detail":"İşaretli hareketlerin son setinde zirve tekniğini (drop set / duraklamalı tekrar) uygula. Temel preslerde form bozulmasın.","deload":false,"peak":true},{"weeks":[8],"name":"Hafif hafta","rir":"4 tekrar rezerv","detail":"Set sayısı yarıya iner, ağırlıkları %10 hafiflet. Eklemler ve sinir sistemi toparlanır; 9. hafta 1. haftadan daha güçlü başlarsın.","deload":true,"peak":false}],"schedule4":["Pzt: Gün 1","Sal: Gün 2","Çar: Dinlen","Per: Gün 3","Cum: Gün 4","Cmt–Paz: Dinlen / yürüyüş"],"schedule5":["Pzt: Gün 1","Sal: Gün 2","Çar: Dinlen","Per: Gün 3","Cum: Gün 4","Cmt: Gün 5 (Kol & Omuz)","Paz: Dinlen"],"principles":[{"title":"Çift ilerleme kuralı","detail":"Örn. 3×8–12. Aynı ağırlıkla her hafta tekrarı artır. Üç setin hepsinde 12'ye ulaştığında ağırlığı bir kademe (makinede genelde 2.5–5 kg) artır ve tekrar 8'den başla. Uygulama bunu sana otomatik söyler."},{"title":"Tekrar rezervi (RIR)","detail":"\"2 rezerv\" = seti bitirdiğinde temiz formla 2 tekrar daha yapabilirdin. Tükenişe her sette gitmek gereksiz yorgunluk yapar; zirve haftalarında yalnız izolasyon hareketlerinde sınıra yaklaş."},{"title":"Tempo","detail":"Ağırlığı 2–3 saniyede indir, kası en gergin noktada 1 saniye tut, kontrollü kaldır. Makinede savurmak kası değil momentumu çalıştırır."},{"title":"Süperset (A1 / A2)","detail":"A1 ve A2 işaretli iki hareketi arka arkaya yap, sonra dinlen. Biceps ile triceps birbirini yormaz; kol çalışması yarı sürede biter."},{"title":"Protein 1.6–2.0 g/kg","detail":"75 kg için günde 120–150 g. Her öğünde avuç içi kadar protein (tavuk, et, balık, yumurta, yoğurt, lor)."},{"title":"Şişmeden kas: hafif fazla kalori","detail":"Günlük ihtiyacın + en fazla 150–250 kcal. Bel ölçün ayda 1 cm'den hızlı artıyorsa kaloriyi azalt."},{"title":"Uyku ve adım","detail":"7.5–8 saat uyku. Günde 8–10 bin adım yağ oranını kas kaybetmeden düşük tutar."}],"days":[{"id":"d1","short":"Gün 1","title":"Üst Vücut A","focus":"Üst göğüs · Sırt genişliği · Biceps","duration":55,"optional":false,"warmup":["5 dk eliptik veya kürek, hafif tempo.","Kablo ile 2×15 hafif face pull (omuzları hazırlar).","İlk harekette 2 ısınma seti: boş/çok hafif ×12, sonra çalışma ağırlığının yarısı ×6."],"exercises":[{"id":"d1.incline_press","name":"Eğimli Göğüs Pres (Makine / Smith)","en":"incline chest press machine","machine":"Incline chest press makinesi veya Smith makinesi + 30° sehpa","primary":["chest"],"secondary":["frontDelt","triceps"],"sets":3,"reps":"6–10","rest":120,"tempo":"İniş 3 sn · altta 1 sn · güçlü it","warmupSets":2,"setup":["Koltuğu, tutamaklar göğsünün üst kısmı (köprücük kemiğinin biraz altı) hizasına gelecek şekilde ayarla.","Smith'te sehpayı 30° aç; bar göğsün üst kısmına insin."],"start":"Sırt yaslanmış, kürek kemikleri geriye-aşağı sıkışık, kollar önde neredeyse düz.","end":"Tutamaklar göğsüne bir yumruk kalana kadar indi, dirsekler gövdeyle ~45° açıda.","steps":["Göğsünü hafif yukarı kaldır, omuzlarını koltuğa bastır.","Tutamakları 3 saniyede göğsüne doğru indir.","Altta 1 saniye bekle, göğsünle iterek kaldır; tepede dirsekleri kilitleme."],"feel":"Göğsün üst kısmında, köprücük kemiğinin altında.","mistakes":["Dirsekleri omuz hizasına kadar yana açmak (omuz ağrısı yapar).","Kalçayı koltuktan kaldırıp beli köprü yapmak."],"breath":"İnerken al, iterken ver.","tip":"Tişörtün üstünü dolduran bölge burasıdır; programın ilk hareketi olması bilinçli.","alternatives":[{"name":"Eğimli Dambıl Pres","en":"incline dumbbell press","note":"Makine doluysa. 30° sehpa, aynı set/tekrar."},{"name":"Kablo Aşağıdan Yukarı Fly","en":"low to high cable fly","note":"Omuz ağrıyorsa daha hafif seçenek, 3×12–15."}]},{"id":"d1.lat_pulldown","name":"Lat Pulldown (Önden Çekiş)","en":"lat pulldown","machine":"Lat pulldown istasyonu","primary":["lats"],"secondary":["biceps","upperBack","forearms"],"sets":3,"reps":"8–12","rest":90,"tempo":"Çek 1 sn · altta 1 sn sık · 3 sn bırak","warmupSets":1,"setup":["Diz pedini, uyluklarını sıkıca sabitleyecek kadar indir.","Barı omuz genişliğinden bir karış geniş tut (ya da nötr V-tutamak)."],"start":"Kollar yukarıda tamamen uzanmış, gövde ~15° geriye yaslı, göğüs açık.","end":"Bar köprücük kemiğinin hemen üstünde, dirsekler kaburgaların yanında aşağıda.","steps":["Önce omuzlarını kulaklarından uzaklaştır (aşağı indir).","Dirseklerini cebine sokar gibi aşağı ve geriye çek.","Altta 1 sn sırtını sık, 3 sn'de kollar tam uzanana kadar bırak."],"feel":"Koltuk altının hemen altında, sırtın yanlarında.","mistakes":["Gövdeyi geriye atıp sallanarak çekmek.","Barı ensenin arkasına indirmek."],"breath":"Çekerken ver, bırakırken al.","tip":"Elini kanca gibi düşün; başparmağı barın üstüne koymak ön kol yerine sırtı çalıştırır.","alternatives":[{"name":"Destekli Barfiks Makinesi","en":"assisted pull up machine","note":"Aynı set/tekrar; destek ağırlığı azaldıkça güçleniyorsun."},{"name":"Tek Kol Kablo Pulldown","en":"single arm cable lat pulldown","note":"Her kol 3×10–12, sağ-sol farkını kapatır."}]},{"id":"d1.chest_row","name":"Göğüs Destekli Row Makinesi","en":"chest supported machine row","machine":"Göğüs pedli row makinesi veya T-bar row","primary":["upperBack","lats"],"secondary":["rearDelt","biceps"],"sets":3,"reps":"8–12","rest":90,"tempo":"Çek · 1 sn sık · 3 sn bırak","warmupSets":0,"setup":["Göğüs pedini, kollar uzandığında tutamaklara ancak yetişecek mesafeye ayarla.","Koltuk yüksekliği: tutamaklar göğsünün alt kısmı hizasında."],"start":"Göğüs pede yapışık, kollar önde uzanmış, kürek kemikleri açık.","end":"Dirsekler gövdenin gerisinde, kürek kemikleri birbirine yaklaşmış.","steps":["Göğsünü pedden ayırmadan dirseklerini geriye sür.","Sonda kürek kemiklerini birbirine sıkıştırıp 1 sn tut.","3 sn'de kontrollü öne uzan, sırtı esnet."],"feel":"Kürek kemiklerinin arasında ve sırt ortasında.","mistakes":["Göğsü pedden kaldırıp gövdeyle çekmek.","Omuzları kulağa doğru kaldırmak."],"breath":"Çekerken ver, bırakırken al.","tip":"Göğüs desteği beli tamamen korur; bütün güç sırta gider. Masa başı duruşunu da düzeltir.","alternatives":[{"name":"Oturarak Kablo Row","en":"seated cable row","note":"V tutamakla, gövde dik kalsın."},{"name":"Tek Kol Dambıl Row","en":"single arm dumbbell row","note":"Sehpaya destekli, her kol 3×10–12."}]},{"id":"d1.pec_deck","name":"Pec Deck (Kelebek Makinesi)","en":"pec deck machine fly","machine":"Pec deck / fly makinesi","primary":["chest"],"secondary":["frontDelt"],"sets":2,"reps":"12–15","rest":60,"tempo":"Kapat · ortada 1 sn sık · 3 sn aç","warmupSets":0,"setup":["Koltuğu, tutamaklar göğüs ortası hizasında olacak şekilde ayarla.","Kolların arkada omuz hizasını aşmayacak başlangıç noktasını seç."],"start":"Kollar yanlarda hafif bükük, göğüs gergin ama omuz zorlanmıyor.","end":"Tutamaklar göğsünün önünde birleşmiş, göğüs sıkışmış.","steps":["Dirsekleri hafif bükük sabitle, büyük bir ağaca sarılır gibi kolları kapat.","Ortada 1 sn göğsünü sık.","3 sn'de kontrollü aç, omuz hizasında dur."],"feel":"Göğsün iç ve orta kısmında.","mistakes":["Kolları çok geriye açıp omuz önünü zorlamak.","Ağırlığı çarparak kapatmak."],"breath":"Kapatırken ver, açarken al.","tip":"Göğse ağır pres eklemeden şekil ve dolgunluk kazandırır.","peak":"Zirve haftalarında son sette drop set: tükenince ağırlığı %30 azalt, hemen 8–10 tekrar daha.","alternatives":[{"name":"Kablo Crossover","en":"cable crossover chest fly","note":"Makaralar omuz hizasında, 2×12–15."}]},{"id":"d1.lat_raise_machine","name":"Yan Omuz Makinesi (Lateral Raise)","en":"lateral raise machine","machine":"Lateral raise makinesi (yoksa kablo)","primary":["sideDelt"],"secondary":[],"sets":3,"reps":"12–20","rest":60,"tempo":"Kaldır 1 sn · tepede 1 sn · 3 sn indir","warmupSets":0,"setup":["Koltuğu, omuz eklemin makinenin dönme noktasıyla aynı hizada olacak şekilde ayarla.","Pedler dirseğinin hemen üstüne gelsin."],"start":"Kollar yanlarda, pedler dirseklere değiyor, omuzlar aşağıda.","end":"Dirsekler omuz hizasına kadar kalkmış.","steps":["Elle değil dirsekle iterek kolları yana kaldır.","Omuz hizasında 1 sn dur; omuzları kulağa çekme.","3 sn'de yavaşça indir, aşağıda gerginliği bırakma."],"feel":"Omuzun dış yan kısmında (tişört kolunun başladığı yer).","mistakes":["Omuz hizasını aşıp trapezi devreye sokmak.","Çok ağır seçip gövdeyi oynatmak."],"breath":"Kaldırırken ver, indirirken al.","tip":"Geniş omuz = ince görünen bel. Fit ve atletik görüntünün bir numaralı kası.","peak":"Zirve haftalarında son sette 20 tam tekrar + kısmi (yarım) tekrarlarla 10 tane daha.","alternatives":[{"name":"Tek Kol Kablo Yan Açış","en":"single arm cable lateral raise","note":"Kablo bilek hizasında, her kol 3×12–15."},{"name":"Dambıl Yan Açış","en":"dumbbell lateral raise","note":"Hafif dambıl, hafif öne eğik."}]},{"id":"d1.preacher_curl","group":"A1","name":"Preacher Curl Makinesi","en":"preacher curl machine","machine":"Preacher (Scott) curl makinesi","primary":["biceps"],"secondary":["forearms"],"sets":3,"reps":"10–12","rest":0,"tempo":"Kaldır · tepede 1 sn sık · 3 sn indir","warmupSets":0,"setup":["Koltuğu, koltuk altın pedin üst kenarına oturacak şekilde ayarla.","Dirseğin makinenin dönme noktasıyla hizalı olsun."],"start":"Kollar neredeyse düz, üst kol pede yapışık.","end":"Tutamaklar omuz önüne gelmiş, biceps tamamen sıkışmış.","steps":["Üst kolu pedden kaldırmadan tutamağı yukarı bük.","Tepede 1 sn biceps'i sık.","3 sn'de kol neredeyse düzleşene kadar indir (tam kilitleme yok)."],"feel":"Kolun ön tarafında, dirseğe yakın alt biceps dahil.","mistakes":["Altta yarım bırakmak (en değerli kısım alt kısım).","Omuzları öne yuvarlayıp yardım almak."],"breath":"Kaldırırken ver, indirirken al.","tip":"Hemen ardından A2'ye geç; ikisini bitirince 75 sn dinlen.","alternatives":[{"name":"EZ Bar Preacher Curl","en":"ez bar preacher curl","note":"Serbest ağırlıkla aynı hareket."},{"name":"Kablo Curl","en":"cable bicep curl","note":"Düz bar tutamak, 3×10–12."}]},{"id":"d1.rope_pushdown","group":"A2","name":"Halatla Triceps Pushdown","en":"rope tricep pushdown","machine":"Kablo istasyonu + halat","primary":["triceps"],"secondary":[],"sets":3,"reps":"10–12","rest":75,"tempo":"İt · altta 1 sn aç · 2 sn bırak","warmupSets":0,"setup":["Makarayı en üste al, halatı tak.","Bir adım geri çekil, dizler hafif bükük."],"start":"Dirsekler kaburgaların yanına yapışık, ön kollar yere paralel.","end":"Kollar aşağıda düz, halat uçları uyluk yanlarına açılmış.","steps":["Dirsekleri yerinden oynatmadan halatı aşağı it.","Altta halatın uçlarını dışa doğru ayır, 1 sn sık.","Ön kollar yere paralel olana kadar kontrollü dön."],"feel":"Kolun arka tarafında.","mistakes":["Dirsekleri öne-arkaya kaydırmak.","Gövdeyle üstüne abanmak."],"breath":"İterken ver, bırakırken al.","tip":"Kol hacminin üçte ikisi triceps'tir; kalın kol için biceps kadar önemli.","alternatives":[{"name":"Düz Bar Pushdown","en":"straight bar tricep pushdown","note":"Daha ağır yüklenebilirsin."},{"name":"Tek Kol Ters Tutuş Pushdown","en":"single arm reverse grip pushdown","note":"Dirsek hassassa."}]}]},{"id":"d2","short":"Gün 2","title":"Alt Vücut A","focus":"Ön bacak · Kalça · Karın","duration":55,"optional":false,"warmup":["5 dk bisiklet.","10 vücut ağırlığı squat + her bacağa 10 bacak sallama.","Leg press / hack squat'ta 2 ısınma seti: hafif ×12, yarım ağırlık ×6."],"exercises":[{"id":"d2.hack_squat","name":"Hack Squat Makinesi","en":"hack squat machine","machine":"Hack squat (yoksa leg press)","primary":["quads"],"secondary":["glutes"],"sets":3,"reps":"8–12","rest":120,"tempo":"İniş 3 sn · altta 1 sn · güçlü kalk","warmupSets":2,"setup":["Omuz pedlerinin altına gir, sırtını tamamen yasla.","Ayaklar platformun ortasında, omuz genişliğinde, parmaklar hafif dışa."],"start":"Bacaklar neredeyse düz (kilitli değil), sırt pede yapışık.","end":"Uyluk platforma paralel ya da biraz altında, dizler ayak parmakları yönünde.","steps":["Güvenlik kollarını aç, karnını sık.","3 sn'de dizlerini bükerek alçal; topuklar platformda kalsın.","Altta 1 sn bekle, tüm ayak tabanıyla iterek kalk."],"feel":"Uyluğun ön kısmında, dizin üstünde.","mistakes":["Dizlerin içe kapanması.","Topukların kalkması veya beli pedden ayırmak."],"breath":"İnmeden önce derin nefes al ve tut, kalkışın ortasında ver.","tip":"Sırt squat'ın bel yükü olmadan atletik ön bacak yapar.","alternatives":[{"name":"Leg Press (ayaklar orta-alçak)","en":"leg press quad focus","note":"Aynı set/tekrar; ayaklar platformun ortasının biraz altında."},{"name":"Smith Squat","en":"smith machine squat","note":"Ayaklar hafif önde."}]},{"id":"d2.seated_leg_curl","name":"Oturarak Leg Curl","en":"seated leg curl","machine":"Seated leg curl makinesi","primary":["hamstrings"],"secondary":["calves"],"sets":3,"reps":"10–12","rest":75,"tempo":"Bük · 1 sn sık · 3 sn aç","warmupSets":0,"setup":["Dizini makinenin dönme noktasıyla hizala.","Uyluk pedini sıkıca indir; ayak pedi aşil tendonunun hemen üstünde."],"start":"Bacaklar önde düz, arka bacak gergin.","end":"Topuklar koltuğun altına doğru çekilmiş.","steps":["Gövdeni hafif öne eğ (arka bacak daha çok gerilir).","Topukları aşağı ve geriye çek, 1 sn sık.","3 sn'de bacaklar düzleşene kadar aç."],"feel":"Uyluğun arka kısmında.","mistakes":["Kalçayı koltuktan kaldırmak.","Hızlı çekip ağırlığı fırlatmak."],"breath":"Çekerken ver, açarken al.","tip":"Oturarak leg curl, yatarak olana göre kası daha uzun pozisyonda çalıştırır ve daha çok büyütür.","alternatives":[{"name":"Yatarak Leg Curl","en":"lying leg curl","note":"Kalçanı pede bastır."}]},{"id":"d2.smith_rdl","name":"Romanian Deadlift (Smith / Dambıl)","en":"smith machine romanian deadlift","machine":"Smith makinesi veya dambıl","primary":["hamstrings","glutes"],"secondary":["lowerBack","forearms"],"sets":3,"reps":"8–10","rest":120,"tempo":"İniş 3 sn · altta gerilme · kalçayla kalk","warmupSets":1,"setup":["Smith'te barı uyluk ortası yüksekliğinden al.","Ayaklar kalça genişliğinde, dizler hafif bükük ve sabit."],"start":"Dik dur, bar uyluklarının önünde, omuzlar geride.","end":"Kalça geride, gövde yere neredeyse paralel, bar diz altında, sırt düz.","steps":["Kalçanı arkadaki duvara değdirmeye çalışır gibi geriye it.","Bar bacaklarına sürtünerek insin; sırtı asla yuvarlama.","Arka bacakta güçlü gerilme hissedince kalçayı sıkıp öne iterek kalk."],"feel":"Arka bacakta gerilme, kalkarken kalçada.","mistakes":["Beli kamburlaştırmak.","Squat gibi dizleri fazla bükmek."],"breath":"İnerken al ve karnı sık, kalkınca ver.","tip":"Bel sağlığı, dik duruş ve atletik arka bacak için en değerli hareket.","alternatives":[{"name":"Dambıl RDL","en":"dumbbell romanian deadlift","note":"Aynı set/tekrar."},{"name":"45° Back Extension (kalça odaklı)","en":"45 degree back extension glute focus","note":"Bel hassassa, 3×12–15."}]},{"id":"d2.leg_extension","name":"Leg Extension","en":"leg extension machine","machine":"Leg extension makinesi","primary":["quads"],"secondary":[],"sets":2,"reps":"12–15","rest":60,"tempo":"Kaldır · tepede 1 sn sık · 3 sn indir","warmupSets":0,"setup":["Sırt pedini, dizin makinenin dönme noktasıyla hizalanacak şekilde ayarla.","Ayak pedi bilek önünde."],"start":"Dizler 90° bükük.","end":"Bacaklar tam düz, ön bacak sıkışmış.","steps":["Yan tutamakları tut, kalçayı koltuğa bastır.","Bacakları düzleştir, tepede 1 sn sık.","3 sn'de indir."],"feel":"Dizin hemen üstünde, ön bacakta.","mistakes":["Tekme atar gibi savurmak."],"breath":"Kaldırırken ver, indirirken al.","tip":"Şort giyince görünen ön bacak çizgisini verir.","peak":"Zirve haftalarında son sette drop set: ağırlığı %30 azalt, hemen 10 tekrar daha.","alternatives":[{"name":"Tek Bacak Leg Extension","en":"single leg extension","note":"Sağ-sol dengesi için."}]},{"id":"d2.abductor","name":"Hip Abductor Makinesi","en":"hip abduction machine","machine":"Abductor (bacak dışa açma) makinesi","primary":["abductors"],"secondary":["glutes"],"sets":2,"reps":"15–20","rest":45,"tempo":"Aç · 1 sn tut · 2 sn kapat","warmupSets":0,"setup":["Pedler dizlerinin dış tarafında.","Gövdeyi hafif öne eğ (kalça yanını daha iyi çalıştırır)."],"start":"Bacaklar kapalı.","end":"Bacaklar sonuna kadar dışa açık.","steps":["Dizlerinle pedleri dışa it.","En açık noktada 1 sn tut.","Ağırlığın düşmesine izin vermeden kapat."],"feel":"Kalçanın yan-üst kısmında.","mistakes":["Ağırlıkları çarptırarak kapatmak."],"breath":"Açarken ver.","tip":"Diz sağlığını korur ve kalçaya atletik yan hat verir.","alternatives":[{"name":"Kablo Yana Bacak Açma","en":"cable hip abduction","note":"Her bacak 2×15."}]},{"id":"d2.calf","name":"Baldır Makinesi (Ayakta)","en":"standing calf raise machine","machine":"Standing calf raise makinesi (yoksa leg press'te)","primary":["calves"],"secondary":[],"sets":3,"reps":"10–15","rest":45,"tempo":"Altta 2 sn esnet · yüksel · tepede 1 sn","warmupSets":0,"setup":["Omuz pedlerinin altına gir, parmak uçların basamağın kenarında."],"start":"Topuklar basamaktan aşağı tamamen sarkmış.","end":"Parmak uçlarında en yüksek nokta.","steps":["Altta 2 sn esnet, yaylanma yok.","Başparmak tarafından iterek en yükseğe çık.","Tepede 1 sn sık, yavaş in."],"feel":"Baldırda.","mistakes":["Hızlı zıplar gibi yarım tekrar."],"breath":"Yükselirken ver.","tip":"Alttaki 2 saniye esnetme gelişimi ciddi artırır.","alternatives":[{"name":"Leg Press'te Baldır","en":"leg press calf raise","note":"Aynı set/tekrar."}]},{"id":"d2.ab_crunch","name":"Karın Makinesi (Ab Crunch)","en":"ab crunch machine","machine":"Ab crunch makinesi veya kablo crunch","primary":["abs"],"secondary":[],"sets":3,"reps":"10–15","rest":60,"tempo":"Bük · 1 sn sık · 2 sn aç","warmupSets":0,"setup":["Koltuğu, tutamaklar omuz hizasında olacak şekilde ayarla."],"start":"Gövde dik, karın gergin.","end":"Kaburgalar kalçaya doğru yaklaşmış, sırt yuvarlak.","steps":["Kollarla değil, karınla öne bük.","En altta nefesi tamamen verip 1 sn sık.","Kontrollü geri açıl."],"feel":"Karnın ön kısmında.","mistakes":["Kollarla çekmek, kalçadan eğilmek."],"breath":"Bükerken nefesini tamamen ver.","tip":"Karın da dirençle gelişir: 100 mekik yerine 3×12 ağırlıklı crunch.","alternatives":[{"name":"Kablo Crunch","en":"kneeling cable crunch","note":"Dizüstü, halatla."}]}]},{"id":"d3","short":"Gün 3","title":"Üst Vücut B","focus":"Omuz · Göğüs · Kol hacmi","duration":55,"optional":false,"warmup":["5 dk kürek veya eliptik.","2×15 hafif reverse pec deck veya face pull.","Omuz preste 2 ısınma seti."],"exercises":[{"id":"d3.shoulder_press","name":"Omuz Pres Makinesi","en":"shoulder press machine","machine":"Shoulder press makinesi (yoksa oturarak dambıl)","primary":["frontDelt","sideDelt"],"secondary":["triceps"],"sets":3,"reps":"6–10","rest":120,"tempo":"İt · 3 sn indir · altta durma","warmupSets":2,"setup":["Koltuğu, tutamaklar omuz hizasının biraz üstünde olacak şekilde ayarla.","Sırt tamamen yaslı."],"start":"Tutamaklar kulak hizasında, dirsekler hafif önde.","end":"Kollar yukarıda neredeyse düz (kilitli değil).","steps":["Karnı sık, sırtı pede bastır.","Tutamakları yukarı it.","3 sn'de kulak hizasına indir."],"feel":"Omuzun ön ve yan kısmında.","mistakes":["Beli geriye bükmek.","Yarım indirmek."],"breath":"İterken ver, inerken al.","tip":"Omuzlara yuvarlak ve dolgun görünüm verir.","alternatives":[{"name":"Oturarak Dambıl Omuz Pres","en":"seated dumbbell shoulder press","note":"Sehpa 80°."},{"name":"Smith Omuz Pres","en":"smith machine shoulder press","note":"Bar çene önünden insin."}]},{"id":"d3.chest_press","name":"Göğüs Pres Makinesi (Düz)","en":"chest press machine","machine":"Seated chest press makinesi","primary":["chest"],"secondary":["triceps","frontDelt"],"sets":3,"reps":"8–12","rest":90,"tempo":"İniş 3 sn · güçlü it","warmupSets":1,"setup":["Koltuğu, tutamaklar göğüs ortası hizasında olacak şekilde ayarla."],"start":"Tutamaklar göğüs yanında, kürek kemikleri sıkışık.","end":"Kollar önde neredeyse düz.","steps":["Göğsü açık tut, omuzları koltuğa bastır.","Göğüsle it.","3 sn'de geri gel."],"feel":"Göğüs ortasında.","mistakes":["Omuzları öne yuvarlamak."],"breath":"İterken ver.","tip":"Makine güvenli olduğu için son setlerde sınıra yaklaşabilirsin.","alternatives":[{"name":"Düz Dambıl Pres","en":"flat dumbbell bench press","note":"Aynı set/tekrar."}]},{"id":"d3.high_row","name":"Tek Kol Kablo Row","en":"single arm cable row","machine":"Kablo istasyonu (makara göğüs hizasında) veya high row makinesi","primary":["lats","upperBack"],"secondary":["biceps","rearDelt"],"sets":3,"reps":"10–12 / kol","rest":60,"tempo":"Çek · 1 sn sık · 3 sn bırak","warmupSets":0,"setup":["Makarayı göğüs hizasına ayarla, tek tutamak tak.","Bir adım geri çekil, ayaklar çapraz."],"start":"Kol önde uzanmış, sırt hafif dönmüş ve gerilmiş.","end":"Dirsek gövdenin gerisinde, tutamak kalça cebi yanında.","steps":["Dirseğini kalça cebine doğru çek.","Sonda 1 sn sık.","Öne uzanırken sırtının gerildiğini hisset."],"feel":"Sırtın yanında ve kürek kemiği çevresinde.","mistakes":["Gövdeyi fazla döndürüp savurmak."],"breath":"Çekerken ver.","tip":"Sağ-sol sırt farkını kapatır.","alternatives":[{"name":"High Row Makinesi","en":"machine high row","note":"3×10–12."},{"name":"Tek Kol Dambıl Row","en":"single arm dumbbell row","note":"Sehpa destekli."}]},{"id":"d3.reverse_pec","name":"Ters Pec Deck (Arka Omuz)","en":"reverse pec deck","machine":"Pec deck makinesi ters oturuş","primary":["rearDelt"],"secondary":["upperBack"],"sets":3,"reps":"12–20","rest":60,"tempo":"Aç · 1 sn tut · 3 sn kapat","warmupSets":0,"setup":["Makineye yüzün dönük otur, göğsün pede yaslı.","Tutamaklar omuz hizasında; kolları öne uzat."],"start":"Kollar önde, avuçlar birbirine bakıyor.","end":"Kollar yanlarda, vücudunla T harfi.","steps":["Kolları düz tutarak yana doğru aç.","Kürek kemiklerini değil, omuzun arkasını hisset.","3 sn'de öne dön."],"feel":"Omuzun arka kısmında.","mistakes":["Çok ağır seçip sırtla çekmek."],"breath":"Açarken ver.","tip":"Omuzları üç boyutlu gösterir ve omuz düşüklüğünü düzeltir.","peak":"Zirve haftalarında son sette drop set.","alternatives":[{"name":"Kablo Face Pull","en":"cable face pull","note":"Halat alın hizasında, 3×15."}]},{"id":"d3.cable_lateral","name":"Tek Kol Kablo Yan Açış","en":"single arm cable lateral raise","machine":"Kablo istasyonu (makara en altta)","primary":["sideDelt"],"secondary":[],"sets":3,"reps":"12–15 / kol","rest":45,"tempo":"Kaldır · 1 sn · 3 sn indir","warmupSets":0,"setup":["Makarayı en alta al, makineye yan dur.","Kabloyu vücudunun önünden ya da arkasından geçir (önden daha kolay)."],"start":"Kol aşağıda, kablo gergin.","end":"Dirsek omuz hizasında.","steps":["Kolu hafif öne açarak yana kaldır.","Tepede 1 sn tut.","3 sn'de indir; altta gerginliği kaybetme."],"feel":"Yan omuzda.","mistakes":["Gövdeyi yana yatırıp savurmak."],"breath":"Kaldırırken ver.","tip":"Kablo, dambılın boş kaldığı alt noktada da kası çalıştırır.","alternatives":[{"name":"Yan Omuz Makinesi","en":"lateral raise machine","note":"3×12–20."}]},{"id":"d3.overhead_triceps","group":"A1","name":"Baş Üstü Kablo Triceps","en":"overhead cable tricep extension","machine":"Kablo istasyonu + halat","primary":["triceps"],"secondary":[],"sets":3,"reps":"10–12","rest":0,"tempo":"Uzat · 3 sn indir · altta esnet","warmupSets":0,"setup":["Makarayı göğüs hizasına al, halatı tak.","Makineye sırtını dön, bir adım öne çık, gövde hafif öne eğik."],"start":"Dirsekler başın yanında, eller ensenin arkasında, triceps gerilmiş.","end":"Kollar başın önünde-üstünde düz.","steps":["Dirsekleri sabit tutarak halatı ileri-yukarı uzat.","Kollar düzken 1 sn sık.","3 sn'de ensenin arkasına kadar indir, esnemeyi hisset."],"feel":"Kolun arkasında, özellikle koltuk altına yakın uzun başta.","mistakes":["Dirsekleri iki yana açmak."],"breath":"Uzatırken ver.","tip":"Araştırmalar baş üstü triceps'in pushdown'dan daha fazla kol hacmi yaptığını gösteriyor. Ardından A2.","alternatives":[{"name":"Dambıl Baş Üstü Triceps","en":"seated overhead dumbbell tricep extension","note":"Oturarak, tek dambıl iki elle."}]},{"id":"d3.rope_hammer","group":"A2","name":"Halatla Hammer Curl","en":"cable rope hammer curl","machine":"Kablo istasyonu (makara en altta) + halat","primary":["biceps","forearms"],"secondary":[],"sets":3,"reps":"10–12","rest":75,"tempo":"Kaldır · 1 sn · 3 sn indir","warmupSets":0,"setup":["Makarayı en alta al, halatı tak.","Avuçlar birbirine bakacak şekilde tut."],"start":"Kollar aşağıda düz, dirsekler yanlarda.","end":"Eller omuz önünde.","steps":["Dirsekleri oynatmadan halatı yukarı bük.","Tepede 1 sn sık.","3 sn'de indir."],"feel":"Biceps'in dış kısmında ve ön kolun üstünde.","mistakes":["Gövdeyi sallamak."],"breath":"Kaldırırken ver.","tip":"Brachialis kasını büyütür; kol yandan bakınca kalın görünür.","alternatives":[{"name":"Dambıl Hammer Curl","en":"dumbbell hammer curl","note":"Aynı set/tekrar."}]}]},{"id":"d4","short":"Gün 4","title":"Alt Vücut B + Kondisyon","focus":"Kalça · Arka bacak · Yan karın · Yağ yakımı","duration":55,"optional":false,"warmup":["5 dk yürüyüş + kalça açma hareketleri.","Hip thrust'ta 2 ısınma seti."],"exercises":[{"id":"d4.hip_thrust","name":"Hip Thrust (Makine / Smith)","en":"hip thrust machine","machine":"Glute drive / hip thrust makinesi veya Smith + sehpa","primary":["glutes"],"secondary":["hamstrings"],"sets":3,"reps":"8–12","rest":90,"tempo":"Kaldır · tepede 2 sn sık · 2 sn indir","warmupSets":2,"setup":["Kürek kemiğinin alt kısmı sehpada/pedde.","Ayakları, tepede dizler 90° olacak mesafeye koy."],"start":"Kalça aşağıda, sırt pedde.","end":"Kalça ile omuz-diz aynı düz çizgide.","steps":["Çeneyi hafif göğse yaklaştır, kaburgaları aşağıda tut.","Topuklardan iterek kalçayı kaldır, tepede 2 sn sık.","2 sn'de indir."],"feel":"Kalçada (bel değil!).","mistakes":["Tepede beli geriye bükmek."],"breath":"Kaldırırken ver.","tip":"Duruşu düzeltir, beli korur, koşu ve sıçrama gücünü artırır.","alternatives":[{"name":"Kalça İtme Makinesi (Glute Kickback)","en":"glute kickback machine","note":"Her bacak 3×12."}]},{"id":"d4.leg_press_high","name":"Leg Press (Ayaklar Yüksek)","en":"leg press high foot placement glutes","machine":"45° leg press","primary":["glutes","hamstrings"],"secondary":["quads"],"sets":3,"reps":"10–15","rest":120,"tempo":"İniş 3 sn · güçlü it","warmupSets":1,"setup":["Ayaklar platformun üst kısmında, omuz genişliğinden biraz geniş.","Sırt ve kalça pede tamamen yaslı."],"start":"Bacaklar neredeyse düz.","end":"Dizler göğse yaklaşmış, kalça pedden kalkmamış.","steps":["Güvenlik kollarını aç.","3 sn'de dizleri göğse doğru indir.","Topuklardan it."],"feel":"Kalça ve arka bacakta.","mistakes":["Altta kalçanın pedden kalkıp belin yuvarlanması.","Tepede dizleri kilitlemek."],"breath":"İnerken al, iterken ver.","tip":"Ayaklar yukarıda olunca yük ön bacaktan kalçaya kayar.","alternatives":[{"name":"Smith Bulgarian Split Squat","en":"smith machine bulgarian split squat","note":"Her bacak 3×8–10."}]},{"id":"d4.lying_leg_curl","name":"Yatarak Leg Curl","en":"lying leg curl","machine":"Lying leg curl makinesi","primary":["hamstrings"],"secondary":["calves"],"sets":3,"reps":"10–12","rest":60,"tempo":"Bük · 1 sn · 3 sn aç","warmupSets":0,"setup":["Dizin pedin kenarının hemen dışında, dönme noktasıyla hizalı.","Ayak pedi aşil tendonunun üstünde."],"start":"Bacaklar düz.","end":"Topuklar kalçaya yaklaşmış.","steps":["Kalçanı pede bastır.","Topukları kalçana doğru çek, 1 sn sık.","3 sn'de aç."],"feel":"Arka bacakta.","mistakes":["Kalçayı havaya kaldırmak."],"breath":"Çekerken ver.","tip":"Gün 2'deki oturarak leg curl ile birlikte arka bacağı iki açıdan çalıştırır.","alternatives":[{"name":"Oturarak Leg Curl","en":"seated leg curl","note":"Aynı set/tekrar."}]},{"id":"d4.woodchopper","name":"Kablo Woodchopper","en":"cable woodchopper high to low","machine":"Kablo istasyonu (makara omuz üstünde)","primary":["obliques"],"secondary":["abs"],"sets":3,"reps":"12 / yön","rest":45,"tempo":"Kontrollü döndür · 2 sn dön","warmupSets":0,"setup":["Makarayı omuz üstüne al, tek tutamağı iki elle tut.","Makineye yan dur, ayaklar omuz genişliğinde."],"start":"Kollar makineye doğru yukarıda uzanmış.","end":"Kollar karşı dizin önüne çapraz inmiş.","steps":["Kolları düz tutarak gövdeni çapraz aşağı döndür.","Arka ayağın topuğunu hafif çevir.","Kontrollü geri dön."],"feel":"Yan karında.","mistakes":["Yalnız kollarla çekmek."],"breath":"Döndürürken ver.","tip":"Beli kalınlaştırmadan atletik yan karın çizgisi verir.","alternatives":[{"name":"Pallof Press","en":"pallof press","note":"3×10 / yön, 2 sn tut."}]},{"id":"d4.incline_walk","name":"Eğimli Yürüyüş","en":"incline treadmill walk","machine":"Koşu bandı","primary":["glutes","calves"],"secondary":["hamstrings"],"sets":1,"reps":"15–20 dk","rest":0,"tempo":"Konuşabileceğin tempo","warmupSets":0,"setup":["Eğim %10–12, hız 4.5–5.0 km/s."],"start":"Dik dur, kollar serbest.","end":"15–20 dakikayı tutunmadan tamamla.","steps":["Tutamaklara yaslanmadan yürü.","Nabız: konuşabilir ama şarkı söyleyemez durumda."],"feel":"Kalça ve baldırda, hafif nefes nefese.","mistakes":["Tutamaklara tutunup eğimi boşa çıkarmak."],"breath":"Burundan düzenli.","tip":"Kası korurken yağ yakmanın en eklem dostu yolu.","alternatives":[{"name":"Merdiven Makinesi","en":"stair climber","note":"12–15 dk orta tempo."},{"name":"Eliptik","en":"elliptical trainer","note":"20 dk orta tempo."}]}]},{"id":"d5","short":"Gün 5","title":"Kol & Omuz (Ek gün)","focus":"Biceps · Triceps · Yan ve arka omuz","duration":45,"optional":true,"warmup":["3 dk eliptik + kol çevirme.","Hafif kablo curl ve pushdown ile 1×15."],"exercises":[{"id":"d5.lat_raise_machine","name":"Yan Omuz Makinesi","en":"lateral raise machine","machine":"Lateral raise makinesi","primary":["sideDelt"],"secondary":[],"sets":4,"reps":"12–20","rest":60,"tempo":"Kaldır · 1 sn · 3 sn indir","warmupSets":0,"setup":["Omuz eklemini dönme noktasıyla hizala."],"start":"Kollar yanlarda.","end":"Dirsekler omuz hizasında.","steps":["Dirsekle iterek kaldır.","1 sn tut.","3 sn'de indir."],"feel":"Yan omuzda.","mistakes":["Omuz hizasını aşmak."],"breath":"Kaldırırken ver.","tip":"Haftalık yan omuz hacmini zirveye taşır.","peak":"Zirve haftalarında son sette drop set iki kez (ağırlığı iki kez azalt).","alternatives":[{"name":"Dambıl Yan Açış","en":"dumbbell lateral raise","note":"4×12–15."}]},{"id":"d5.bayesian","group":"A1","name":"Bayesian Kablo Curl","en":"bayesian cable curl","machine":"Kablo istasyonu (makara en altta)","primary":["biceps"],"secondary":[],"sets":3,"reps":"10–12 / kol","rest":0,"tempo":"Kaldır · 1 sn · 3 sn indir","warmupSets":0,"setup":["Makarayı en alta al, makineye sırtını dön.","Bir adım öne çık; kol gövdenin gerisinde kalsın."],"start":"Kol arkada düz, biceps gerilmiş.","end":"El omuz önünde, dirsek hâlâ geride.","steps":["Dirseği oynatmadan ön kolu yukarı bük.","Tepede 1 sn sık.","3 sn'de arkaya doğru tam aç."],"feel":"Biceps'in tamamında, özellikle altta gerilme.","mistakes":["Dirseği öne taşımak."],"breath":"Kaldırırken ver.","tip":"Biceps'i en gerilmiş pozisyonda çalıştırır; tepe görüntüsü için çok etkili. Ardından A2.","alternatives":[{"name":"Eğimli Sehpada Dambıl Curl","en":"incline dumbbell curl","note":"45° sehpa, 3×10–12."}]},{"id":"d5.dip_machine","group":"A2","name":"Triceps Dip Makinesi","en":"seated dip machine triceps","machine":"Seated dip makinesi veya destekli dip","primary":["triceps"],"secondary":["chest","frontDelt"],"sets":3,"reps":"8–12","rest":75,"tempo":"İt · 1 sn · 3 sn bırak","warmupSets":0,"setup":["Koltuğu, tutamaklar gövde yanında olacak şekilde ayarla."],"start":"Dirsekler 90° bükük, arkada.","end":"Kollar aşağıda düz.","steps":["Gövde dik, dirsekleri geriye doğru tut.","Tutamakları aşağı it, 1 sn sık.","3 sn'de 90°'ye dön."],"feel":"Kolun arkasında.","mistakes":["Omuzları öne düşürmek."],"breath":"İterken ver.","tip":"Triceps için en ağır yüklenebilen hareket.","alternatives":[{"name":"Dar Tutuş Smith Pres","en":"close grip smith machine bench press","note":"3×8–10."}]},{"id":"d5.cable_curl","group":"B1","name":"EZ Tutamak Kablo Curl","en":"ez bar cable curl","machine":"Kablo istasyonu + EZ tutamak","primary":["biceps"],"secondary":["forearms"],"sets":3,"reps":"10–15","rest":0,"tempo":"Kaldır · 1 sn · 2 sn indir","warmupSets":0,"setup":["Makara en altta, EZ tutamak omuz genişliğinde."],"start":"Kollar düz aşağıda.","end":"Tutamak göğüs önünde.","steps":["Dirsekleri yanlarda sabit tut.","Yukarı bük, 1 sn sık.","Kontrollü indir."],"feel":"Biceps'te.","mistakes":["Belden salınım."],"breath":"Kaldırırken ver.","tip":"Ardından B2.","peak":"Zirve haftalarında son sette drop set.","alternatives":[{"name":"EZ Bar Curl","en":"ez bar curl","note":"3×10–12."}]},{"id":"d5.cross_triceps","group":"B2","name":"Tek Kol Kablo Triceps (Çapraz)","en":"single arm cable cross body tricep extension","machine":"Kablo istasyonu (makara üstte), tutamaksız ya da tek tutamak","primary":["triceps"],"secondary":[],"sets":3,"reps":"12–15 / kol","rest":60,"tempo":"Uzat · 1 sn · 2 sn bırak","warmupSets":0,"setup":["Makarayı en üste al, kabloyu karşı elle tut (çapraz)."],"start":"El göğsün önünde, dirsek bükük.","end":"Kol yana-aşağı düz.","steps":["Dirseği sabit tutup kolu dışa-aşağı uzat.","1 sn sık.","Kontrollü geri getir."],"feel":"Triceps'in dış kısmında.","mistakes":["Omuzdan çekmek."],"breath":"Uzatırken ver.","tip":"Triceps'in yan başını hedefler; kolun yandan at nalı şeklini verir.","alternatives":[{"name":"Halatla Pushdown","en":"rope tricep pushdown","note":"3×12–15."}]},{"id":"d5.reverse_curl","name":"Ters Tutuş Kablo Curl (Ön Kol)","en":"reverse grip cable curl","machine":"Kablo istasyonu + düz bar","primary":["forearms"],"secondary":["biceps"],"sets":2,"reps":"12–15","rest":45,"tempo":"Kaldır · 2 sn indir","warmupSets":0,"setup":["Makara en altta, barı avuçlar yere bakacak şekilde tut."],"start":"Kollar aşağıda.","end":"Bar göğüs önünde.","steps":["Bilekleri düz tutarak yukarı bük.","Kontrollü indir."],"feel":"Ön kolun üst kısmında.","mistakes":["Bilekleri geriye kırmak."],"breath":"Kaldırırken ver.","tip":"Kısa kollu tişörtte en çok göze çarpan bölge ön koldur.","alternatives":[{"name":"EZ Bar Ters Curl","en":"ez bar reverse curl","note":"2×12–15."}]},{"id":"d5.face_pull","name":"Kablo Face Pull","en":"cable face pull","machine":"Kablo istasyonu (makara alın hizasında) + halat","primary":["rearDelt"],"secondary":["upperBack"],"sets":2,"reps":"15–20","rest":45,"tempo":"Çek · 1 sn · 2 sn bırak","warmupSets":0,"setup":["Makarayı alın hizasına al, halatı başparmaklar sana bakacak şekilde tut."],"start":"Kollar önde uzanmış.","end":"Eller kulak yanında, dirsekler yukarıda-dışarıda.","steps":["Halatı yüzüne doğru çekerken uçları ayır.","Sonda çift biceps pozu gibi elleri geriye döndür, 1 sn tut.","Kontrollü bırak."],"feel":"Arka omuzda ve üst sırtta.","mistakes":["Ağır seçip belden geriye yatmak."],"breath":"Çekerken ver.","tip":"Omuz sağlığını korur; kamera karşısında dik duruş sağlar.","alternatives":[{"name":"Ters Pec Deck","en":"reverse pec deck","note":"2×15–20."}]}]}],"bodyMap":{"outline":[[50,15,9,11,0],[50,29,5,5,0],[50,60,20,30,0],[50,95,17,10,0],[25,54,6,17,10],[75,54,6,17,-10],[20,86,5,16,8],[80,86,5,16,-8],[41,128,8.5,25,0],[59,128,8.5,25,0],[41,176,6,21,0],[59,176,6,21,0]],"front":{"chest":[[41,47,9,7,0],[59,47,9,7,0]],"frontDelt":[[32,40,5,5,0],[68,40,5,5,0]],"sideDelt":[[27,44,3.5,6,10],[73,44,3.5,6,-10]],"biceps":[[25,56,4.5,10,10],[75,56,4.5,10,-10]],"forearms":[[20,85,4,12,8],[80,85,4,12,-8]],"abs":[[50,71,7,15,0]],"obliques":[[37,74,4,11,0],[63,74,4,11,0]],"quads":[[41,126,7,20,0],[59,126,7,20,0]],"calves":[[41,174,4,12,0],[59,174,4,12,0]]},"back":{"upperBack":[[50,42,13,8,0]],"rearDelt":[[32,41,5,5,0],[68,41,5,5,0]],"sideDelt":[[27,44,3.5,6,10],[73,44,3.5,6,-10]],"lats":[[39,62,7,14,10],[61,62,7,14,-10]],"lowerBack":[[50,82,6,8,0]],"triceps":[[25,55,4.5,10,10],[75,55,4.5,10,-10]],"forearms":[[20,85,4,12,8],[80,85,4,12,-8]],"glutes":[[43,98,8,8,0],[57,98,8,8,0]],"abductors":[[35,93,3.5,6,0],[65,93,3.5,6,0]],"hamstrings":[[41,130,6.5,18,0],[59,130,6.5,18,0]],"calves":[[41,170,5,12,0],[59,170,5,12,0]]}}};
+const K = "fitplan.v2";
+const S = load();
+let dayId = S.dayId || P.days[0].id, openId = null, muscleFilter = null, tEnd = 0, tInt = null;
+
+function load(){
+  let s = null;
+  try { s = JSON.parse(localStorage.getItem(K)); } catch(_) {}
+  s = s || {};
+  s.sets = s.sets || {}; s.last = s.last || {}; s.alt = s.alt || {}; s.history = s.history || [];
+  if(!s.start){ const d = new Date(); d.setHours(0,0,0,0); s.start = d.getTime(); }
+  s.dpw = s.dpw === 5 ? 5 : 4;
+  return s;
+}
+function save(){ S.dayId = dayId; try { localStorage.setItem(K, JSON.stringify(S)); } catch(_) {} }
+function toast(m){ const t = document.getElementById("toast"); t.textContent = m; t.classList.add("show"); clearTimeout(toast.h); toast.h = setTimeout(()=>t.classList.remove("show"), 2600); }
+const $ = id => document.getElementById(id);
+const fmt = v => Number.isInteger(v) ? String(v) : v.toFixed(1);
+const mName = k => P.muscles[k] || k;
+
+function daysSince(){ const n = new Date(); n.setHours(0,0,0,0); return Math.max(0, Math.round((n - S.start)/86400000)); }
+function week(){ return Math.floor(daysSince()/7) % 8 + 1; }
+function cycle(){ return Math.floor(daysSince()/56) + 1; }
+function phase(){ const w = week(); return P.phases.find(p => p.weeks.includes(w)) || P.phases[0]; }
+function nums(s){ return (s.match(/\d+/g) || []).map(Number); }
+function repTop(ex){ const n = nums(ex.reps.split("/")[0]); return n.length ? Math.max(...n) : 10; }
+function repBottom(ex){ const n = nums(ex.reps); return n.length ? n[0] : 10; }
+function effSets(ex){ return phase().deload ? Math.max(1, Math.ceil(ex.sets/2)) : ex.sets; }
+function alt(ex){ return S.alt[ex.id] || 0; }
+function key(ex){ const a = alt(ex); return a ? ex.id + "#" + a : ex.id; }
+function dispName(ex){ const a = alt(ex); return a ? ex.alternatives[a-1].name : ex.name; }
+function videoQ(ex){ const a = alt(ex); return a ? ex.alternatives[a-1].en : ex.en; }
+function videoURL(ex){ return "https://www.youtube.com/results?search_query=" + encodeURIComponent(videoQ(ex) + " proper form"); }
+
+function sets(ex){
+  const n = effSets(ex);
+  const list = (S.sets[key(ex)] || []).slice(0, n);
+  const last = S.last[key(ex)] || [];
+  const lw = Math.max(0, ...last.filter(s => s.kg > 0).map(s => s.kg));
+  while(list.length < n) list.push({kg: lw ? (phase().deload ? Math.round(lw*0.9) : lw) : "", reps: repBottom(ex), done: false});
+  return list;
+}
+function setSet(ex, i, patch){
+  const list = sets(ex); list[i] = {...list[i], ...patch}; S.sets[key(ex)] = list; save();
+}
+function isDone(ex){ return sets(ex).every(s => s.done); }
+function lastSummary(ex){
+  const l = (S.last[key(ex)] || []).filter(s => s.done);
+  return l.length ? l.map(s => s.kg > 0 ? `${fmt(+s.kg)}×${s.reps}` : `${s.reps}`).join(" · ") : null;
+}
+function suggestion(ex){
+  if(phase().deload) return {up:false, t:"Hafif hafta: ağırlığı ~%10 azalt, set sayısı yarıya indi. Tüm tekrarlar rahat olmalı."};
+  const l = (S.last[key(ex)] || []).filter(s => s.done);
+  if(!l.length) return null;
+  const w = Math.max(0, ...l.map(s => +s.kg || 0)), top = repTop(ex);
+  if(l.length >= ex.sets && l.every(s => +s.reps >= top)){
+    return {up:true, t: w > 0 ? `Geçen sefer tüm setlerde ${top} tekrara ulaştın. Bugün bir kademe artır: ${fmt(w)} → ${fmt(w+2.5)} kg ve ${repBottom(ex)} tekrardan başla.` : `Geçen sefer tüm setlerde ${top} tekrara ulaştın. Bugün ağırlık ekle veya tempoyu yavaşlat.`};
   }
-];
-
-const NUTRITION = [
-  {title:"Protein Hedefi: 1.6 – 2.0 g / kg", detail:"Örn. 75 kg için günde 120–150 g protein (tavuk, yumurta, yoğurt, balık, lor). Kol ve omuz şekillenmesi için en kritik sayı budur."},
-  {title:"Temiz Kalori Dengesi", detail:"'Hayvan gibi' şişmeden fit kas yapmak için aşırı bulk yapma: günlük ihtiyacın civarında veya en fazla +150 kcal temiz fazlalıkla ilerle."},
-  {title:"Progressive Overload Kuralı", detail:"Bir harekette hedef tekrar aralığının üstüne (ör. 3×12) temiz formla ulaştığında, sonraki hafta ağırlığı +1.25–2.5 kg artır."},
-  {title:"Uyku ve Toparlanma", detail:"Kas salonda değil, uyurken (7.5–8 saat) büyür. Haftada 4 gün bile düzenli yapıldığında 12 haftada gözle görülür fark çıkar."}
-];
-
-const STORE_KEY = "fitplan.v1";
-const state = loadState();
-let activeDayId = state.activeDayId || "day1";
-let warmupOpen = false;
-let openExId = null;
-let timerSec = 0;
-let timerInterval = null;
-
-function loadState(){
-  try{
-    const raw = localStorage.getItem(STORE_KEY);
-    if(raw) return JSON.parse(raw);
-  }catch(_){}
-  return {activeDayId:"day1", sets:{}, lastWeights:{}, history:[]};
-}
-function saveState(){
-  state.activeDayId = activeDayId;
-  try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(_){}
-}
-function showToast(msg){
-  const el = document.getElementById("toast");
-  el.textContent = msg;
-  el.classList.add("show");
-  clearTimeout(showToast._t);
-  showToast._t = setTimeout(()=>el.classList.remove("show"), 2400);
+  return w > 0 ? {up:false, t:`Bugün yine ${fmt(w)} kg: her sette geçen seferden 1 tekrar fazla hedefle (üst sınır ${top}).`} : null;
 }
 
-function drawDiagram(pattern, primary, size=180){
-  const accent = "#38bdf8", glow = "#22c55e", body = "#cbd5e1", equip = "#64748b";
-  let content = "";
-  switch(pattern){
-    case "inclinePress":
-      content = `
-        <line x1="28" y1="120" x2="108" y2="78" stroke="${equip}" stroke-width="6" stroke-linecap="round"/>
-        <circle cx="98" cy="64" r="10" fill="${body}"/>
-        <line x1="90" y1="74" x2="48" y2="102" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="78" cy="80" r="13" fill="${glow}" opacity=".35" class="muscle-glow"/>
-        <line x1="80" y1="76" x2="80" y2="42" stroke="${body}" stroke-width="6" stroke-linecap="round"/>
-        <rect x="68" y="34" width="24" height="9" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M126 68 L126 32 M118 40 L126 32 L134 40" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "flatPress":
-      content = `
-        <line x1="26" y1="106" x2="132" y2="106" stroke="${equip}" stroke-width="6" stroke-linecap="round"/>
-        <circle cx="116" cy="92" r="10" fill="${body}"/>
-        <line x1="104" y1="96" x2="46" y2="96" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="88" cy="93" r="13" fill="${glow}" opacity=".35" class="muscle-glow"/>
-        <line x1="88" y1="90" x2="88" y2="48" stroke="${body}" stroke-width="6" stroke-linecap="round"/>
-        <rect x="74" y="40" width="28" height="9" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M132 76 L132 42 M124 50 L132 42 L140 50" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "shoulderPress":
-      content = `
-        <line x1="60" y1="126" x2="60" y2="70" stroke="${equip}" stroke-width="6" stroke-linecap="round"/>
-        <circle cx="76" cy="56" r="10" fill="${body}"/>
-        <line x1="76" y1="68" x2="76" y2="112" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="76" cy="70" r="13" fill="${glow}" opacity=".35" class="muscle-glow"/>
-        <path d="M76 72 L52 60 L52 34 M76 72 L100 60 L100 34" stroke="${body}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="42" y="27" width="20" height="8" rx="4" fill="${accent}"/>
-        <rect x="90" y="27" width="20" height="8" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M130 66 L130 32 M122 40 L130 32 L138 40" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "pulldown":
-      content = `
-        <line x1="40" y1="24" x2="120" y2="24" stroke="${accent}" stroke-width="5" stroke-linecap="round"/>
-        <line x1="80" y1="10" x2="80" y2="24" stroke="${equip}" stroke-width="3"/>
-        <circle cx="80" cy="64" r="10" fill="${body}"/>
-        <line x1="80" y1="76" x2="80" y2="120" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <ellipse cx="80" cy="88" rx="18" ry="12" fill="${glow}" opacity=".35" class="muscle-glow"/>
-        <path d="M80 78 L54 54 L48 26 M80 78 L106 54 L112 26" stroke="${body}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path class="arrow-float" d="M132 34 L132 72 M124 64 L132 72 L140 64" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "row":
-      content = `
-        <line x1="24" y1="78" x2="62" y2="78" stroke="${equip}" stroke-width="3" stroke-dasharray="4 3"/>
-        <circle cx="104" cy="48" r="10" fill="${body}"/>
-        <line x1="104" y1="60" x2="104" y2="108" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <line x1="104" y1="108" x2="54" y2="112" stroke="${body}" stroke-width="7" stroke-linecap="round"/>
-        <ellipse cx="104" cy="74" rx="14" ry="13" fill="${glow}" opacity=".35" class="muscle-glow"/>
-        <path d="M104 68 L84 86 L62 78" stroke="${body}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="54" y="70" width="10" height="16" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M46 56 L84 56 M76 48 L84 56 L76 64" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "facePull":
-      content = `
-        <line x1="22" y1="54" x2="72" y2="54" stroke="${equip}" stroke-width="3" stroke-dasharray="4 3"/>
-        <circle cx="104" cy="52" r="10" fill="${body}"/>
-        <line x1="104" y1="64" x2="104" y2="122" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="96" cy="64" r="13" fill="${glow}" opacity=".35" class="muscle-glow"/>
-        <path d="M104 68 L82 62 L72 50" stroke="${body}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="72" cy="54" r="6" fill="${accent}"/>
-        <path class="arrow-float" d="M44 36 L82 36 M74 28 L82 36 L74 44" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "lateralRaise":
-      content = `
-        <circle cx="80" cy="40" r="10" fill="${body}"/>
-        <line x1="80" y1="52" x2="80" y2="112" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="66" cy="58" r="10" fill="${glow}" opacity=".45" class="muscle-glow"/>
-        <circle cx="94" cy="58" r="10" fill="${glow}" opacity=".45" class="muscle-glow"/>
-        <line x1="80" y1="58" x2="32" y2="62" stroke="${body}" stroke-width="6" stroke-linecap="round"/>
-        <line x1="80" y1="58" x2="128" y2="62" stroke="${body}" stroke-width="6" stroke-linecap="round"/>
-        <rect x="24" y="55" width="10" height="14" rx="4" fill="${accent}"/>
-        <rect x="126" y="55" width="10" height="14" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M36 88 Q32 74 36 66 M124 88 Q128 74 124 66" stroke="${accent}" stroke-width="3" fill="none" stroke-linecap="round"/>
-      `;
-      break;
-    case "bicepsCurl":
-    case "hammerCurl":
-      content = `
-        <circle cx="76" cy="36" r="10" fill="${body}"/>
-        <line x1="76" y1="48" x2="76" y2="116" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="88" cy="70" r="12" fill="${glow}" opacity=".45" class="muscle-glow"/>
-        <path d="M76 56 L84 84 L110 64" stroke="${body}" stroke-width="6.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="106" y="54" width="14" height="14" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M122 96 Q132 78 122 60" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      `;
-      break;
-    case "tricepsExt":
-      content = `
-        <circle cx="76" cy="38" r="10" fill="${body}"/>
-        <line x1="76" y1="50" x2="76" y2="116" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="88" cy="68" r="12" fill="${glow}" opacity=".45" class="muscle-glow"/>
-        <path d="M76 58 L90 78 L112 104" stroke="${body}" stroke-width="6.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="106" y="98" width="16" height="10" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M126 68 L126 106 M118 98 L126 106 L134 98" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "squat":
-      content = `
-        <circle cx="84" cy="36" r="10" fill="${body}"/>
-        <line x1="82" y1="48" x2="72" y2="82" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <ellipse cx="86" cy="92" rx="16" ry="12" fill="${glow}" opacity=".4" class="muscle-glow"/>
-        <path d="M72 82 L102 92 L92 124" stroke="${body}" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <line x1="56" y1="126" x2="118" y2="126" stroke="${equip}" stroke-width="4" stroke-linecap="round"/>
-        <path class="arrow-float" d="M40 54 L40 94 M32 86 L40 94 L48 86" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "hinge":
-      content = `
-        <circle cx="110" cy="54" r="10" fill="${body}"/>
-        <line x1="100" y1="60" x2="62" y2="76" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <ellipse cx="66" cy="94" rx="14" ry="16" fill="${glow}" opacity=".4" class="muscle-glow"/>
-        <path d="M62 76 L72 104 L68 126" stroke="${body}" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <line x1="94" y1="64" x2="90" y2="104" stroke="${body}" stroke-width="5.5" stroke-linecap="round"/>
-        <rect x="80" y="102" width="20" height="9" rx="4" fill="${accent}"/>
-        <path class="arrow-float" d="M36 74 L56 74 M44 66 L36 74 L44 82" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "legCurl":
-      content = `
-        <line x1="32" y1="86" x2="104" y2="86" stroke="${equip}" stroke-width="6" stroke-linecap="round"/>
-        <circle cx="54" cy="48" r="10" fill="${body}"/>
-        <line x1="54" y1="60" x2="54" y2="86" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <ellipse cx="86" cy="88" rx="16" ry="11" fill="${glow}" opacity=".4" class="muscle-glow"/>
-        <path d="M54 84 L96 84 L118 112" stroke="${body}" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="118" cy="112" r="7" fill="${accent}"/>
-        <path class="arrow-float" d="M126 78 Q134 98 122 114" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      `;
-      break;
-    case "calf":
-      content = `
-        <line x1="78" y1="26" x2="78" y2="96" stroke="${body}" stroke-width="9" stroke-linecap="round"/>
-        <ellipse cx="72" cy="84" rx="11" ry="16" fill="${glow}" opacity=".45" class="muscle-glow"/>
-        <path d="M78 96 L94 114 L112 114" stroke="${body}" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="74" y="118" width="44" height="10" rx="3" fill="${equip}"/>
-        <path class="arrow-float" d="M44 104 L44 68 M36 76 L44 68 L52 76" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-      break;
-    case "core":
-      content = `
-        <circle cx="44" cy="70" r="10" fill="${body}"/>
-        <line x1="54" y1="74" x2="124" y2="88" stroke="${body}" stroke-width="8" stroke-linecap="round"/>
-        <ellipse cx="86" cy="82" rx="20" ry="11" fill="${glow}" opacity=".45" class="muscle-glow"/>
-        <path d="M58 76 L54 106 L68 106" stroke="${body}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <line x1="30" y1="110" x2="134" y2="110" stroke="${equip}" stroke-width="4" stroke-linecap="round"/>
-      `;
-      break;
-    default:
-      content = `
-        <line x1="24" y1="116" x2="134" y2="90" stroke="${equip}" stroke-width="6" stroke-linecap="round"/>
-        <circle cx="86" cy="34" r="10" fill="${body}"/>
-        <line x1="84" y1="46" x2="78" y2="78" stroke="${body}" stroke-width="7.5" stroke-linecap="round"/>
-        <path d="M78 78 L96 98 M78 78 L62 104" stroke="${body}" stroke-width="6.5" fill="none" stroke-linecap="round"/>
-        <circle cx="80" cy="64" r="11" fill="${glow}" opacity=".4" class="muscle-glow"/>
-        <path class="arrow-float" d="M114 48 L136 42 M126 36 L136 42 L130 52" stroke="${accent}" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      `;
-  }
-  return `<svg width="${size}" height="${Math.round(size*0.85)}" viewBox="0 0 160 136" aria-label="${primary}">${content}</svg>`;
-}
-
-function getSetData(exId, idx){
-  const key = `${exId}.${idx}`;
-  return state.sets[key] || {kg:"", reps:"", done:false};
-}
-function setSetData(exId, idx, patch){
-  const key = `${exId}.${idx}`;
-  const prev = getSetData(exId, idx);
-  state.sets[key] = {...prev, ...patch};
-  if(patch.kg && String(patch.kg).trim() !== ""){
-    state.lastWeights[exId] = String(patch.kg).trim();
-  }
-  saveState();
-}
-
-function startTimer(sec, title){
-  if(!sec || sec <= 0) return;
-  timerSec = sec;
-  document.getElementById("timerTitle").textContent = title ? `Dinlenme · ${title}` : "Dinlenme Sayacı";
-  updateTimerUI();
-  document.getElementById("timerBanner").classList.add("show");
-  clearInterval(timerInterval);
-  timerInterval = setInterval(()=>{
-    timerSec--;
-    if(timerSec <= 0){
-      stopTimer();
-      showToast("Dinlenme bitti, sonraki sete hazırsın!");
-      if(navigator.vibrate) navigator.vibrate([120,80,120]);
-    }else{
-      updateTimerUI();
-    }
-  }, 1000);
-}
-function stopTimer(){
-  clearInterval(timerInterval);
-  timerInterval = null;
-  timerSec = 0;
-  document.getElementById("timerBanner").classList.remove("show");
-}
-function updateTimerUI(){
-  const m = String(Math.floor(timerSec/60)).padStart(2,"0");
-  const s = String(timerSec%60).padStart(2,"0");
-  document.getElementById("timerClock").textContent = `${m}:${s}`;
-}
-
-function countWeekWorkouts(){
-  const now = Date.now();
-  const weekMs = 7 * 24 * 60 * 60 * 1000;
-  return state.history.filter(h => (now - h.ts) <= weekMs).length;
+function bodySVG(primary, secondary, small){
+  const m = P.bodyMap, gap = 20;
+  const el = (e, ox, fill) => `<ellipse cx="${e[0]+ox}" cy="${e[1]}" rx="${e[2]}" ry="${e[3]}" transform="rotate(${e[4]} ${e[0]+ox} ${e[1]})" fill="${fill}"/>`;
+  let out = "";
+  [m.front, m.back].forEach((reg, i) => {
+    const ox = i * (100 + gap);
+    m.outline.forEach(e => out += el(e, ox, "rgba(255,255,255,.10)"));
+    Object.entries(reg).forEach(([mu, shapes]) => {
+      const f = primary.includes(mu) ? "#22c55e" : secondary.includes(mu) ? "rgba(245,158,11,.8)" : "rgba(255,255,255,.13)";
+      shapes.forEach(e => out += el(e, ox, f));
+    });
+    if(!small) out += `<text x="${ox+50}" y="214" text-anchor="middle" font-size="9" font-weight="700" fill="#9aa5b8">${i ? "ARKA" : "ÖN"}</text>`;
+  });
+  return `<svg viewBox="0 0 220 ${small ? 205 : 218}" preserveAspectRatio="xMidYMid meet">${out}</svg>`;
 }
 
 function render(){
-  document.getElementById("weekCount").textContent = countWeekWorkouts();
-  renderDayStrip();
-  renderDayContent();
-  renderNutrition();
-  renderHistory();
+  $("lvl").textContent = P.level;
+  renderPhase($("phase"));
+  renderStrip(); renderDay(); renderGuide(); renderHistory();
 }
-
-function renderDayStrip(){
-  const strip = document.getElementById("dayStrip");
-  strip.innerHTML = DAYS.map(d => `
-    <button class="day-btn ${d.id===activeDayId ? "active" : ""}" data-day="${d.id}">
-      <div class="d-num"><span>${d.shortTitle}</span>${d.isOptional ? '<span class="opt-tag">Ek</span>' : ""}</div>
-      <div class="d-name">${d.title.split("·")[0].trim()}</div>
-    </button>
-  `).join("");
-  strip.querySelectorAll(".day-btn").forEach(btn=>{
-    btn.onclick = ()=>{
-      activeDayId = btn.dataset.day;
-      openExId = null;
-      saveState();
-      render();
-    };
-  });
+function renderPhase(box){
+  const p = phase(), w = week();
+  const cls = p.deload ? "blue" : p.peak ? "orange" : "green";
+  const weekCount = S.history.filter(h => Date.now() - h.ts <= 7*86400000).length;
+  box.innerHTML = `<div class="card ${cls}">
+    <div class="row between"><div><div class="tiny muted" style="font-weight:700">Hafta ${w} / 8 · ${cycle()}. tur</div><h2 style="font-size:20px">${p.name}</h2></div>
+    <div style="text-align:right"><div class="tiny muted">Bu hafta</div><b style="font-size:20px">${weekCount} / ${S.dpw}</b></div></div>
+    <div class="weeks">${[1,2,3,4,5,6,7,8].map(i => `<i class="${i===w?"now":i<w?"past":""}"></i>`).join("")}</div>
+    <div class="small" style="font-weight:700">Yoğunluk: ${p.rir}</div><div class="small muted">${p.detail}</div></div>`;
 }
-
-function renderDayContent(){
-  const day = DAYS.find(d => d.id === activeDayId) || DAYS[0];
-  let totalSets = 0, doneSets = 0;
-  day.exercises.forEach(ex=>{
-    totalSets += ex.sets;
-    for(let i=0;i<ex.sets;i++){
-      if(getSetData(ex.id, i).done) doneSets++;
-    }
-  });
-  const pct = totalSets ? Math.round((doneSets / totalSets) * 100) : 0;
-
-  document.getElementById("dayHero").innerHTML = `
-    <div class="hero-top">
-      <div>
-        <h2>${day.title}</h2>
-        <p>${day.subtitle}</p>
+function renderStrip(){
+  $("strip").innerHTML = P.days.map(d => `<button class="dbtn ${d.id===dayId?"on":""}" data-d="${d.id}"><b>${d.short}${d.optional?" · Ek":""}</b><span>${d.title}</span></button>`).join("");
+  $("strip").querySelectorAll(".dbtn").forEach(b => b.onclick = () => { dayId = b.dataset.d; openId = null; save(); renderStrip(); renderDay(); });
+}
+function curDay(){ return P.days.find(d => d.id === dayId) || P.days[0]; }
+function renderDay(){
+  const d = curDay();
+  const done = d.exercises.filter(isDone).length, pct = Math.round(done / d.exercises.length * 100);
+  $("dayCard").innerHTML = `<div class="card"><div class="row between"><h3 style="font-size:16px">${d.title}</h3><b style="color:var(--gr)" class="small">${done}/${d.exercises.length}</b></div>
+    <div class="small muted" style="margin:3px 0 8px">${d.focus}</div>
+    <div class="row wrap"><span class="pill g">~${d.duration} dk</span><span class="pill b">${d.exercises.length} hareket</span>${d.exercises.some(e=>e.group)?'<span class="pill p">Süperset var</span>':""}</div>
+    <div class="bar"><i style="width:${pct}%"></i></div></div>`;
+  $("warm").innerHTML = `<details class="warm"><summary>🔥 Isınma</summary><ul>${d.warmup.map(w=>`<li>${w}</li>`).join("")}</ul></details>`;
+  const list = $("list");
+  list.innerHTML = d.exercises.map((ex, i) => exCard(ex, i)).join("");
+  bindList(list);
+}
+function exCard(ex, i, noSS){
+  const open = openId === ex.id, done = isDone(ex), sg = suggestion(ex), last = lastSummary(ex), p = phase();
+  const ss = !noSS && ex.group && ex.group.endsWith("1") ? `<div class="ss">Süperset ${ex.group[0]}: iki hareketi arka arkaya yap, sonra dinlen</div>` : "";
+  const a = alt(ex);
+  const sl = sets(ex);
+  const setRows = sl.map((s, j) => `<div class="sr">
+      <div class="si">Set ${j+1}${j===sl.length-1 && p.peak && ex.peak ? "<em>+drop</em>" : ""}</div>
+      <input class="in" inputmode="decimal" placeholder="kg" value="${s.kg}" data-ex="${ex.id}" data-i="${j}" data-f="kg">
+      <input class="in" inputmode="numeric" placeholder="${ex.reps}" value="${s.reps}" data-ex="${ex.id}" data-i="${j}" data-f="reps">
+      <button class="ck ${s.done?"on":""}" data-ck="${ex.id}" data-i="${j}">✓</button></div>`).join("");
+  return `${ss}<article class="ex ${open?"open":""} ${done?"done":""}">
+    <div class="exh" data-open="${ex.id}">
+      <div class="thumb">${bodySVG(ex.primary, ex.secondary, true)}<span class="num">${ex.group || (i+1)}</span></div>
+      <div class="exi"><h3>${dispName(ex)}</h3><div class="sub">${effSets(ex)} × ${ex.reps}${ex.rest?` · ${ex.rest} sn`:""}</div>
+        ${sg && sg.up ? '<div class="up">⬆ Ağırlık artır</div>' : last ? `<div class="up">Son: ${last}</div>` : ""}</div>
+      <div class="chev">⌄</div>
+    </div>
+    <div class="exb">
+      <div class="map">${bodySVG(ex.primary, ex.secondary)}
+        <div class="legend"><span><i class="dot" style="background:#22c55e"></i>Hedef: ${ex.primary.map(mName).join(", ")}</span>${ex.secondary.length?`<span><i class="dot" style="background:#f59e0b"></i>Yardımcı: ${ex.secondary.map(mName).join(", ")}</span>`:""}</div></div>
+      <div style="margin-top:12px">
+        <div class="small muted">⚙️ ${a ? ex.alternatives[a-1].note : ex.machine}</div>
+        <div class="row wrap" style="margin-top:8px"><span class="pill g">${effSets(ex)} set × ${ex.reps}</span>${ex.rest?`<span class="pill b">${ex.rest} sn dinlen</span>`:""}<span class="pill o">${p.rir}</span></div>
+        <div class="tiny muted" style="margin-top:6px">Tempo: ${ex.tempo}</div>
       </div>
-    </div>
-    <div class="meta-row">
-      <span class="chip accent">~${day.durationMin} dk</span>
-      <span class="chip">${day.exercises.length} hareket</span>
-      <span class="chip green">${totalSets} toplam set</span>
-    </div>
-    <div class="progress-wrap">
-      <div class="progress-label"><span>Günlük İlerleme</span><span>${doneSets} / ${totalSets} set (%${pct})</span></div>
-      <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
-    </div>
-  `;
-
-  const wc = document.getElementById("warmupCard");
-  wc.innerHTML = `
-    <button class="warmup-head" id="warmupToggle">
-      <span>🔥 Isınma (${day.warmup.length} adım)</span>
-      <span>${warmupOpen ? "▲" : "▼"}</span>
-    </button>
-    ${warmupOpen ? `<ul class="warmup-list">${day.warmup.map(w=>`<li>${w}</li>`).join("")}</ul>` : ""}
-  `;
-  document.getElementById("warmupToggle").onclick = ()=>{
-    warmupOpen = !warmupOpen;
-    renderDayContent();
-  };
-
-  const list = document.getElementById("exerciseList");
-  list.innerHTML = day.exercises.map(ex=>{
-    const isOpen = openExId === ex.id;
-    let exDone = 0;
-    for(let i=0;i<ex.sets;i++) if(getSetData(ex.id,i).done) exDone++;
-    const allDone = exDone === ex.sets;
-    const prevKg = state.lastWeights[ex.id];
-
-    const setsHtml = Array.from({length:ex.sets}, (_,i)=>{
-      const sd = getSetData(ex.id, i);
-      const placeholderKg = prevKg ? `${prevKg}` : "kg";
-      return `
-        <div class="set-row">
-          <div class="set-idx">S${i+1}</div>
-          <input class="set-input" type="text" inputmode="decimal" placeholder="${placeholderKg}" value="${sd.kg}" data-ex="${ex.id}" data-idx="${i}" data-field="kg" aria-label="Ağırlık kg">
-          <input class="set-input" type="text" inputmode="numeric" placeholder="${ex.reps}" value="${sd.reps}" data-ex="${ex.id}" data-idx="${i}" data-field="reps" aria-label="Tekrar">
-          <button class="set-check ${sd.done ? "checked" : ""}" data-check-ex="${ex.id}" data-check-idx="${i}" data-rest="${ex.restSeconds}" data-name="${ex.name}">✓</button>
-        </div>
-      `;
-    }).join("");
-
-    return `
-      <article class="ex-card ${isOpen ? "open" : ""} ${allDone ? "done" : ""}">
-        <div class="ex-head" data-toggle-ex="${ex.id}">
-          <div class="ex-thumb">${drawDiagram(ex.pattern, ex.primary, 66)}</div>
-          <div class="ex-info">
-            <div class="ex-title-row">
-              <h3 class="ex-name">${ex.name}</h3>
-            </div>
-            <div class="ex-sub">${ex.subtitle}</div>
-            <div class="ex-badges">
-              <span class="badge muscle">${ex.primary}</span>
-              <span class="badge">${ex.sets} × ${ex.reps}</span>
-              <span class="badge">${ex.rpe}</span>
-              ${ex.restSeconds ? `<span class="badge">${ex.restSeconds} sn</span>` : ""}
-              ${prevKg ? `<span class="badge prev">Son: ${prevKg} kg</span>` : ""}
-            </div>
-          </div>
-          <div class="ex-chevron">⌄</div>
-        </div>
-        <div class="ex-body">
-          <div class="diagram-box">
-            ${drawDiagram(ex.pattern, ex.primary, 200)}
-            <div class="diagram-cap">Hedef: <strong>${ex.primary}</strong>${ex.secondary.length ? " · Destek: " + ex.secondary.join(", ") : ""}</div>
-          </div>
-          <div class="sets-box">
-            <div class="sets-head"><div>Set</div><div>Ağırlık (kg)</div><div>Tekrar</div><div>Tamam</div></div>
-            ${setsHtml}
-          </div>
-          <div class="detail-grid">
-            <div class="detail-block">
-              <h4>Nasıl Yapılır?</h4>
-              <ol>${ex.steps.map(s=>`<li>${s}</li>`).join("")}</ol>
-            </div>
-            <div class="detail-block warn">
-              <h4>Sık Yapılan Hatalar</h4>
-              <ul>${ex.mistakes.map(m=>`<li>${m}</li>`).join("")}</ul>
-            </div>
-            <div class="detail-block">
-              <h4>Nefes</h4>
-              <p>${ex.breathing}</p>
-            </div>
-            <div class="detail-block tip">
-              <h4>Koç Notu</h4>
-              <p>${ex.tip}</p>
-            </div>
-          </div>
-        </div>
-      </article>
-    `;
-  }).join("");
-
-  list.querySelectorAll("[data-toggle-ex]").forEach(el=>{
-    el.onclick = ()=>{
-      const id = el.dataset.toggleEx;
-      openExId = (openExId === id) ? null : id;
-      renderDayContent();
-    };
+      <div class="btns">
+        <a class="btn red" href="${videoURL(ex)}" target="_blank" rel="noopener">▶ Videoda izle</a>
+        ${ex.alternatives.length ? `<select class="btn gray" data-alt="${ex.id}"><option value="0" ${a===0?"selected":""}>⇄ Makine dolu mu? Değiştir: ${ex.name}</option>${ex.alternatives.map((x,k)=>`<option value="${k+1}" ${a===k+1?"selected":""}>⇄ ${x.name}</option>`).join("")}</select>` : ""}
+      </div>
+      ${sg ? `<div class="sugg ${sg.up?"up":"info"}">${sg.up?"⬆ ":"ℹ️ "}${sg.t}</div>` : ""}
+      <div class="card sets">
+        <div class="row between"><h4 style="margin:0">Setler</h4>${ex.rest?`<button class="pill b" data-rest="${ex.rest}">Dinlen ${ex.rest} sn</button>`:""}</div>
+        ${ex.warmupSets ? `<div class="small" style="color:var(--or);margin-top:6px">Önce ${ex.warmupSets} ısınma seti yap (sayılmaz): hafif ×12, sonra yarı ağırlık ×6.</div>` : ""}
+        ${ex.group && ex.group.endsWith("1") ? `<div class="small" style="color:var(--pu);margin-top:6px">Bu seti bitirince dinlenmeden ${ex.group[0]}2 hareketine geç.</div>` : ""}
+        <div class="sr hd"><div>Set</div><div>kg</div><div>Tekrar</div><div></div></div>
+        ${setRows}
+        ${last ? `<div class="tiny muted" style="margin-top:8px">Geçen seans: ${last}</div>` : ""}
+      </div>
+      <div class="card blue"><h4 style="color:var(--bl)">🎚 Makine ayarı</h4><ul>${ex.setup.map(s=>`<li>${s}</li>`).join("")}</ul></div>
+      <div class="pos"><div class="a"><b>① BAŞLANGIÇ</b>${ex.start}</div><div class="z"><b>② BİTİŞ</b>${ex.end}</div></div>
+      <div class="card"><h4>Nasıl yapılır</h4><ol>${ex.steps.map(s=>`<li>${s}</li>`).join("")}</ol>
+        <p style="margin-top:10px;color:var(--gr)">👉 Nerede hissetmelisin: ${ex.feel}</p>
+        <p class="small" style="margin-top:6px;color:var(--bl)">Nefes: ${ex.breath}</p></div>
+      <div class="card orange"><h4 style="color:var(--or)">⚠️ Sık yapılan hatalar</h4><ul>${ex.mistakes.map(s=>`<li>${s}</li>`).join("")}</ul>
+        <p class="small" style="margin-top:8px;color:#fde68a">💡 ${ex.tip}</p></div>
+      ${ex.peak ? `<div class="card purple"><h4 style="color:var(--pu)">⚡ ${p.peak ? "Bu hafta uygula: zirve tekniği" : "Zirve tekniği (6–7. hafta)"}</h4><p>${ex.peak}</p></div>` : ""}
+    </div></article>`;
+}
+function findEx(id){ for(const d of P.days) for(const e of d.exercises) if(e.id === id) return e; }
+function rerender(){ renderDay(); if($("s-guide").classList.contains("on")) renderGuide(); }
+function bindList(root){
+  root.querySelectorAll("[data-open]").forEach(el => el.onclick = () => { openId = openId === el.dataset.open ? null : el.dataset.open; rerender(); });
+  root.querySelectorAll("input.in").forEach(inp => inp.oninput = () => {
+    const ex = findEx(inp.dataset.ex), v = inp.value.replace(",", ".");
+    setSet(ex, +inp.dataset.i, {[inp.dataset.f]: inp.dataset.f === "kg" ? (v === "" ? "" : +v || 0) : (+v || 0)});
   });
-  list.querySelectorAll(".set-input").forEach(inp=>{
-    inp.oninput = ()=>{
-      setSetData(inp.dataset.ex, Number(inp.dataset.idx), {[inp.dataset.field]: inp.value});
-    };
+  root.querySelectorAll("[data-ck]").forEach(b => b.onclick = () => {
+    const ex = findEx(b.dataset.ck), i = +b.dataset.i, cur = sets(ex)[i];
+    setSet(ex, i, {done: !cur.done});
+    if(!cur.done && ex.rest) startTimer(ex.rest);
+    rerender();
   });
-  list.querySelectorAll(".set-check").forEach(btn=>{
-    btn.onclick = ()=>{
-      const exId = btn.dataset.checkEx;
-      const idx = Number(btn.dataset.checkIdx);
-      const cur = getSetData(exId, idx);
-      const next = !cur.done;
-      setSetData(exId, idx, {done: next});
-      if(next && Number(btn.dataset.rest) > 0){
-        startTimer(Number(btn.dataset.rest), btn.dataset.name);
-      }
-      renderDayContent();
-    };
-  });
+  root.querySelectorAll("[data-alt]").forEach(s => s.onchange = () => { S.alt[s.dataset.alt] = +s.value; save(); rerender(); });
+  root.querySelectorAll("[data-rest]").forEach(b => b.onclick = () => startTimer(+b.dataset.rest));
 }
 
-function renderNutrition(){
-  document.getElementById("nutritionList").innerHTML = NUTRITION.map(n=>`
-    <div class="guide-card">
-      <h3>${n.title}</h3>
-      <p>${n.detail}</p>
-    </div>
-  `).join("");
+function startTimer(sec){
+  tEnd = Date.now() + sec*1000; $("timer").classList.add("show"); tick();
+  clearInterval(tInt); tInt = setInterval(tick, 500);
 }
+function tick(){
+  const left = Math.ceil((tEnd - Date.now())/1000);
+  if(left <= 0){ stopTimer(); toast("Dinlenme bitti, sıradaki set!"); if(navigator.vibrate) navigator.vibrate([150,80,150]); return; }
+  $("tclock").textContent = String(Math.floor(left/60)).padStart(2,"0") + ":" + String(left%60).padStart(2,"0");
+}
+function stopTimer(){ clearInterval(tInt); tInt = null; $("timer").classList.remove("show"); }
+$("tplus").onclick = () => { tEnd += 15000; tick(); };
+$("tstop").onclick = stopTimer;
 
+$("finish").onclick = () => {
+  const d = curDay(); let vol = 0, done = 0;
+  d.exercises.forEach(ex => {
+    const l = sets(ex);
+    if(l.some(s => s.done)){ S.last[key(ex)] = l; vol += l.filter(s=>s.done).reduce((a,s)=>a+(+s.kg||0)*(+s.reps||0),0); }
+    if(l.every(s => s.done)) done++;
+    delete S.sets[key(ex)];
+  });
+  S.history.push({day: d.short + " · " + d.title, ts: Date.now(), done, total: d.exercises.length, week: week(), vol: Math.round(vol)});
+  save(); stopTimer(); render(); toast("Kaydedildi. Bir sonraki seferde ağırlık önerisi hazır.");
+};
+$("reset").onclick = () => { if(!confirm("Bugünkü set işaretleri silinsin mi?")) return; curDay().exercises.forEach(ex => delete S.sets[key(ex)]); save(); renderDay(); };
+
+function renderGuide(){
+  const g = $("s-guide");
+  const keys = ["chest","upperBack","lats","frontDelt","sideDelt","rearDelt","biceps","triceps","forearms","quads","hamstrings","glutes","abductors","calves","abs","obliques"];
+  const all = P.days.flatMap(d => d.exercises).filter(e => !muscleFilter || e.primary.includes(muscleFilter));
+  const sd = new Date(S.start); const sdv = `${sd.getFullYear()}-${String(sd.getMonth()+1).padStart(2,"0")}-${String(sd.getDate()).padStart(2,"0")}`;
+  g.innerHTML = `<div id="gphase"></div>
+    <div class="card"><h4 style="font-size:15px">Haftalık düzen</h4>
+      <div class="seg"><button data-dpw="4" class="${S.dpw===4?"on":""}">Haftada 4 gün</button><button data-dpw="5" class="${S.dpw===5?"on":""}">Haftada 5 gün</button></div>
+      <ul>${(S.dpw===5?P.schedule5:P.schedule4).map(s=>`<li>${s}</li>`).join("")}</ul>
+      <div class="row between" style="margin-top:10px"><span class="small">Program başlangıcı</span><input type="date" id="sdate" value="${sdv}"></div>
+      <button class="pill g" id="w1" style="margin-top:8px">Bu haftayı 1. hafta yap</button></div>
+    <div class="card"><h4 style="font-size:15px">8 haftalık döngü</h4>${P.phases.map(p=>`<p style="margin-top:8px"><b>Hafta ${p.weeks.join("–")}: ${p.name}</b><br><span class="muted small">${p.detail}</span></p>`).join("")}</div>
+    <h3 style="font-size:16px;margin:16px 2px 8px">Kurallar</h3>
+    ${P.principles.map(t=>`<div class="card"><h4>${t.title}</h4><p class="muted">${t.detail}</p></div>`).join("")}
+    <div class="card"><h4>Telefona uygulama gibi ekle</h4><p class="muted">iPhone Safari: Paylaş → Ana Ekrana Ekle. Android Chrome: menü → Ana ekrana ekle. Kayıtların yalnız bu cihazda saklanır.</p></div>
+    <h3 style="font-size:16px;margin:16px 2px 0">Hareketler (${all.length})</h3>
+    <div class="chips"><button data-m="" class="${!muscleFilter?"on":""}">Tümü</button>${keys.map(k=>`<button data-m="${k}" class="${muscleFilter===k?"on":""}">${mName(k)}</button>`).join("")}</div>
+    <div id="glist">${all.map((e,i)=>exCard(e,i,true)).join("")}</div>`;
+  renderPhase($("gphase"));
+  g.querySelectorAll("[data-dpw]").forEach(b => b.onclick = () => { S.dpw = +b.dataset.dpw; save(); render(); });
+  $("sdate").onchange = e => { if(!e.target.value) return; const [y,m,d] = e.target.value.split("-").map(Number); S.start = new Date(y, m-1, d).getTime(); save(); render(); };
+  $("w1").onclick = () => { const d = new Date(); d.setHours(0,0,0,0); S.start = d.getTime(); save(); render(); toast("Bu hafta 1. hafta oldu."); };
+  g.querySelectorAll("[data-m]").forEach(b => b.onclick = () => { muscleFilter = b.dataset.m || null; renderGuide(); });
+  bindList($("glist"));
+}
 function renderHistory(){
-  const box = document.getElementById("historyList");
-  if(!state.history.length){
-    box.innerHTML = `<div class="empty">Henüz tamamlanmış antrenman yok. Bir günü bitirip "Antrenmanı Tamamla"ya bastığında burada görünür.</div>`;
-    return;
-  }
-  box.innerHTML = state.history.slice().reverse().map(h=>{
-    const dt = new Date(h.ts).toLocaleDateString("tr-TR", {day:"2-digit", month:"long", hour:"2-digit", minute:"2-digit"});
-    return `
-      <div class="hist-item">
-        <div>
-          <div class="hist-title">${h.dayTitle}</div>
-          <div class="hist-date">${dt} · ${h.doneSets}/${h.totalSets} set</div>
-        </div>
-        <span class="chip green">Tamam</span>
-      </div>
-    `;
-  }).join("");
+  const h = $("s-history");
+  const items = S.history.slice().reverse();
+  h.innerHTML = `<div class="card"><h4 style="font-size:15px">Özet</h4><p class="muted">Toplam ${S.history.length} seans · Şu an hafta ${week()} (${phase().name})</p></div>` +
+    (items.length ? items.map(x => `<div class="hi"><div><b class="small">${x.day}</b><div class="tiny muted">${new Date(x.ts).toLocaleDateString("tr-TR",{day:"2-digit",month:"long",hour:"2-digit",minute:"2-digit"})}${x.week?` · H${x.week}`:""}${x.vol?` · ${x.vol} kg hacim`:""}</div></div><span class="pill g">${x.done}/${x.total}</span></div>`).join("")
+      : `<p class="muted" style="text-align:center;padding:30px 10px">Henüz kayıt yok. Bir günü bitirip "Antrenmanı Bitir"e bas.</p>`);
 }
-
-document.getElementById("finishBtn").onclick = ()=>{
-  const day = DAYS.find(d => d.id === activeDayId) || DAYS[0];
-  let totalSets = 0, doneSets = 0;
-  day.exercises.forEach(ex=>{
-    totalSets += ex.sets;
-    for(let i=0;i<ex.sets;i++){
-      if(getSetData(ex.id,i).done) doneSets++;
-    }
-  });
-  state.history.push({dayId:day.id, dayTitle:day.title, doneSets, totalSets, ts:Date.now()});
-  day.exercises.forEach(ex=>{
-    for(let i=0;i<ex.sets;i++){
-      const cur = getSetData(ex.id,i);
-      state.sets[`${ex.id}.${i}`] = {...cur, done:false};
-    }
-  });
-  saveState();
-  stopTimer();
-  render();
-  showToast("Harika! Antrenman geçmişe kaydedildi.");
-};
-
-document.getElementById("resetDayBtn").onclick = ()=>{
-  const day = DAYS.find(d => d.id === activeDayId) || DAYS[0];
-  day.exercises.forEach(ex=>{
-    for(let i=0;i<ex.sets;i++){
-      state.sets[`${ex.id}.${i}`] = {kg:"", reps:"", done:false};
-    }
-  });
-  saveState();
-  renderDayContent();
-  showToast("Günün setleri sıfırlandı.");
-};
-
-document.getElementById("timerPlus").onclick = ()=>{ timerSec += 15; updateTimerUI(); };
-document.getElementById("timerStop").onclick = stopTimer;
-
-document.querySelectorAll(".tab-btn").forEach(btn=>{
-  btn.onclick = ()=>{
-    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
-    document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById("sec-" + btn.dataset.tab).classList.add("active");
-    window.scrollTo({top:0, behavior:"instant"});
-  };
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.remove("on"));
+  document.querySelectorAll(".sec").forEach(x => x.classList.remove("on"));
+  b.classList.add("on"); $("s-" + b.dataset.t).classList.add("on");
+  openId = null; if(b.dataset.t === "guide") renderGuide(); if(b.dataset.t === "program") renderDay();
+  window.scrollTo(0, 0);
 });
-
 render();
 </script>
 </body>
